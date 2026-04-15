@@ -1,0 +1,85 @@
+{
+  "/": [
+    "Lore",
+    "Rules",
+    "Gigs"
+  ],
+  "/Lore": [
+    "Locations",
+    "Organizations",
+    "Cyberpsychosis",
+    "EYE"
+  ],
+  "/Lore/Locations": [
+    "Liverpool"
+  ],
+  "/Lore/Organizations": [
+    "Corporations",
+    "MLA",
+    "PKY"
+  ],
+  "/Lore/Organizations/Corporations": [
+    "Arasaka",
+    "Budget Arms",
+    "CINO",
+    "Constitutional Arms",
+    "Dai Lung",
+    "Eurobank",
+    "Kang Tao",
+    "Kendachi",
+    "Malorian Arms",
+    "Militech",
+    "OTEC",
+    "Petrochem",
+    "Seal GmbH",
+    "Techtronika",
+    "Tsunami Arms",
+    "Wortrac"
+  ],
+  "/Rules": [
+    "CPRED"
+  ],
+  "/Rules/CPRED": [
+    "Combat",
+    "Drugs",
+    "Critical Injuries",
+    "Cyberware",
+    "Difficulty Rating",
+    "Quality"
+  ],
+  "/Rules/CPRED/Combat": [
+    "Combat",
+    "Gun Generator",
+    "Power",
+    "Smart",
+    "Tech"
+  ],
+  "/Rules/CPRED/Drugs": [
+    "Drug Effects",
+    "Black Lace",
+    "Boost",
+    "Drugs",
+    "Omega Blockers",
+    "SynthCoke",
+    "Vaporware",
+    "Weed"
+  ],
+  "/Rules/CPRED/Drugs/Drug Effects": [
+    "Drowsiness",
+    "Hunger",
+    "Psychedelic"
+  ],
+  "/Gigs": [
+    "Eurotour"
+  ],
+  "/Gigs/Eurotour": [
+    "Characters",
+    "Eurotour"
+  ],
+  "/Gigs/Eurotour/Characters": [
+    "Crew"
+  ],
+  "/Gigs/Eurotour/Characters/Crew": [
+    "The Crew"
+  ]
+}
