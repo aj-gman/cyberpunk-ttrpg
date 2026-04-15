@@ -4,6 +4,15 @@
 
 [[Rules/Homebrew\|Homebrewed]] completely from the ground up.
 
+<mark style="background: #fee801;">MAIN RULE:</mark> Cyberware **is activated**. When doing so, it exponentially lowers the [[Rules/CPRED/Difficulty Rating\|Difficulty Rating]] of a relevant roll. Each Cyberware has a [[Rules/CPRED/Quality\|Quality]] value (from 1 to 5) that determines how much the [[Rules/CPRED/Difficulty Rating\|DR]] is lowered by, in [[Rules/CPRED/Difficulty Rating\|DR bands]][^3][^5]. 
+
+Before resolving the check, the player adds +Quality[^8] to his Cyberpsychosis tracker, a [[Rules/Homebrew\|Homebrew]] element marked down under Addiction in the Character Sheet. 
+If the Cyberpsychosis final value is higher than the player's current Humanity (WILL+EMP), they roll a d10 to [[Rules/CPRED/Cyberware#Cyberpsychosis\|determine the consequences]] after attempting their roll. 
+
+<mark style="background: #fee801;">WARNING!</mark> This overwrites standard Cyberware rules, since it modifies how [[Rules/CPRED/Humanity\|Humanity]] is calculated. Apart from [[Rules/CPRED/Cyberware#Exotic Cyberware\|specific edge cases]], most Cyberware only interacts with [[Rules/CPRED/Humanity\|Humanity]] upon usage, not on installation. 
+
+
+
 ### Theoretical Foundations
 *this is game design philosophy. useful for prospecting storytellers*
 
@@ -31,8 +40,6 @@ There are **10 classes of Cyberware**, specifically adapted from Cyberpunk 2077'
 
 [[Rules/CPRED/Quality\|Quality]] is a preexisting stat in [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]], translating how reliable a weapon is, as well as the price range of a given item. In line with this, each Cyberware type has a [[Rules/CPRED/Quality\|Quality]] attribute ranging from **1 to 5**, determining their effectiveness at their given task, their reliability, the impact on the user's [[Rules/CPRED/Humanity\|Humanity]] as well as their market price.
 Higher [[Rules/CPRED/Quality\|Quality]] Cyberware tends to be more effective and reliable, has a smaller impact on Humanity and generally increases its price exponentially;
-
-<mark style="background: #fee801;">MAIN RULE:</mark> Cyberware lowers the [[Rules/CPRED/Difficulty Rating\|Difficulty Rating]][^3] of an applicable task upon activation by the amount of [[Rules/CPRED/Quality\|Quality]] in that Cyberware's Type[^5]. Before resolving the check, the player adds +Quality[^8] to his Cyberpsychosis Tracker, a [[Rules/Homebrew\|Homebrew]] element marked down under Addiction in the Character Sheet. If the Cyberpsychosis Tracker's final value is higher than the player's current WILL+EMP, they roll a d10 to [[Rules/CPRED/Cyberware#Cyberpsychosis\|determine the consequences]] after attempting their actual roll. Otherwise, the check occurs as normal.
 
 ##### Installing Cyberware
 
