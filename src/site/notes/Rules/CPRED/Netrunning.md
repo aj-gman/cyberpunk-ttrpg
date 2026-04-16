@@ -5,7 +5,7 @@
 [[Rules/Homebrew\|Homebrew]]: This entire section is homebrew, based on [The Mist, a hacking supplement](https://mldibbs.itch.io/the-mist) for [The Sprawl](https://www.drivethrurpg.com/en/product/171286/the-sprawl-midnight).
 
 Also see:
-- [[Quickhacking\|Quickhacking]]
+- [[Quickhacks\|Quickhacks]]
 - [[Netrunner Gear\|Netrunner Gear]]
 - [[ICE\|NET Enemies]]
 
@@ -84,10 +84,10 @@ If however you are in the clutches of a Wisp, are in a more secure layer of The 
 	- You take 4d6 damage (ignores armor) in the attempt.
 - 1-6. Pick one of the above consequences... and you’re still in.
 
-### Enemies (ICE)
-[[ICE\|ICE]] are security measures that are installed within every Mist to make it even more challenging to manipulate. Different types of Wisp can take different actions, and present different levels of risk. They will become more dangerous the deeper you push into a particular Mist, or as clocks tick up and you draw notice.
+### Enemies ([[ICE\|ICE]])
+[[ICE\|ICE]] (Intrusion Countermeasures Electronics) are security measures that are installed within every Mist to make it even more challenging to manipulate. Different types of [[ICE\|ICE]] can take different actions, and present different levels of risk. They will become more dangerous the deeper you push into a particular Mist, or as clocks tick up and you draw notice.
 
-ICE usually hides within the environment created by the Mist and, once they detect an intruder, they try to slowly drag them down. They try as much as possible to refrain from active face-to-face conflict. However, once the [[Rules/CPRED/Roles/Netrunner\|Netrunner]] identifies it, they can initiate [[Rules/CPRED/Netrunning#WispER\|Whisper]].
+[[ICE\|ICE]] usually hides within the environment created by the Mist and, once they detect an intruder, they try to slowly drag them down. They try as much as possible to refrain from active face-to-face conflict. However, once the [[Rules/CPRED/Roles/Netrunner\|Netrunner]] identifies it, they can initiate [[Rules/CPRED/Netrunning#WispER\|Whisper]].
 
 #### WHISPER
 - 7+. You EVADE, DESTROY or temporarily DISABLE a Wisp.
@@ -123,6 +123,6 @@ Unlike The Mist, you do not need to Jack-Out, but you do need to gain Access. On
 
 [^2]: a memory (a person, a place, an object, etc.) that has resonant personal meaning, something that will help you remember why you’re here if you start to drift too far. By following your Lighthouse you can usually find your way back to the waking world.
 
-[^3]: a set of actions. white Wisps can only take 1 action, red Wisps can take 2, black Wisps can take 3.
+[^3]: a set of actions. White [[ICE\|ICE]] can only take 1 action, Red [[ICE\|ICE]] can take 2, Black [[ICE\|ICE]] can take 3.
 
 [^4]: If you have been Lost to the Mist, you will no longer be able to wake up, and the owners of The Mist will instantly trace your physical location. You will have to be moved if you don’t want them to cut you off at the source. The only way to escape being Lost is someone else (friends, allies, or hacker mercs) to delve into a version of this Mist that has melded with what trapped you. They can do this by accessing your Cyberdeck or OS directly. From there it’s up to them to find you, defeat what’s keeping you, and pull you out back out again.
