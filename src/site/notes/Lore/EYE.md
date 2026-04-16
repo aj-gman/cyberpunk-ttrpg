@@ -3,7 +3,7 @@
 ---
 
 ![Tech-EYE.jpg\|right\|300](/img/user/Pictures/Tech-EYE.jpg)
-The [[Lore/EYE\|EYE]] is the premier mass surveillance tool made by the [[Gigs/Eurotour/Locations/United Kingdom\|United Kingdom]] government, the [[Lore/Organizations/MLA\|MLA]], in an effort to curb crime. Atop many government buildings, [[Lore/EYE\|EYE]] systems use lasers to pierce through just about anything, scanning for crimes.
+The [[Lore/EYE\|EYE]] is the premier mass surveillance tool made by the [[Eurotour/Locations/United Kingdom\|United Kingdom]] government, the [[Lore/Organizations/MLA\|MLA]], in an effort to curb crime. Atop many government buildings, [[Lore/EYE\|EYE]] systems use lasers to pierce through just about anything, scanning for crimes.
 
 The EYE system was created in collaboration with Taiwan's [[Lore/Organizations/Corporations/Kang Tao\|Kang Tao]] in a diplomatic bind that resulted in the influx of Hong Kong refugees that eventually brought the [[Lore/Organizations/MLA\|MLA]] to power. Initially an [[Orbital Air\|Orbital Air]] prototype constructed during the [[First Corporate War\|First Corporate War]], [[Lore/Organizations/Corporations/Kang Tao\|Kang Tao]]'s upgrades have repurposed it into an information-gathering tool with minimal effort. The process is simple: an AI mind judges everyone's actions (based on their past behaviors) and yields a majority report based on probable consequences. If the then-fugitive is a high-risk target, a [[Lore/Organizations/PKY\|PKY]] squad will be deployed to their location, which is constantly tracked by the [[Lore/EYE\|EYE]] mechanism.
 
