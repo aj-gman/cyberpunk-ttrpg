@@ -17,4 +17,7 @@ Relevant information for the players:
 - [[Rules/CPRED/Quality\|Quality]]
 - [[Rules/CPRED/Cyberware\|Cyberware]]
 
+# Keep Track of the NEWS
+#news
+
 [^1]: Started in early 2026.
