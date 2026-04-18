@@ -69,7 +69,7 @@ Attacker rolls damage. Defender subtracts their SP from the damage. If the resul
 [[Rules/Homebrew\|Homebrew]] based on [Edgerunners Kit](https://rtalsoriangames.com/cyberpunk-edgerunners-mission-kit/) sourcebook for [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]].
 
 ##### [[Rules/CPRED/Combat/Power\|Power]] 
-**These guns are made to penetrate and do serious mayhem.** Upon dealing 5 or more damage (after calculating Armor SP), the weapon deals an additional d6. This can grant [[Rules/CPRED/Critical Injuries\|Critical Injuries]] if there are two 6s.
+**These guns are made to penetrate and do serious mayhem.** Upon dealing 5 or more damage (after calculating Armor SP), the weapon deals an additional d6. This can grant [[Rules/CPRED/Combat/Critical Injuries\|Critical Injuries]] if there are two 6s.
 
 ##### [[Rules/CPRED/Combat/Tech\|Tech]] 
 **Railgun technology allows these weapons to punch through cover.** Uncharged, this gun deals 1d6 less than default. Charging (usually for 1 turn), user can fire through Thin Cover, ignoring half of the target's SP and dealing regular damage.

@@ -10,8 +10,8 @@ Relevant information for the players:
 
 - [[Rules/CPRED/Drugs/Drugs\|Drugs]]
 - [[Rules/Homebrew\|Homebrew]]
-- [[Rules/CPRED/Netrunning\|Netrunning]]
-- [[Rules/CPRED/Combat/Combat\|Combat]] & [[Rules/CPRED/Critical Injuries\|Critical Injuries]]
+- [[Rules/CPRED/Netrunning/Netrunning\|Netrunning]]
+- [[Rules/CPRED/Combat/Combat\|Combat]] & [[Rules/CPRED/Combat/Critical Injuries\|Critical Injuries]]
 
 - [[Rules/CPRED/Difficulty Rating\|Difficulty Rating]]
 - [[Rules/CPRED/Quality\|Quality]]
