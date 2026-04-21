@@ -26,11 +26,11 @@ A starting character may buy as many individual pieces of [[Rules/CPRED/Cyberwar
 
 
 ### Cyberpsychosis
-For more about the in-universe lore of Cyberpsychosis, see [[Lore/Cyberpsychosis\|this page]].
+For more about the in-universe lore of Cyberpsychosis, see [[Lore/Others/Cyberpsychosis\|this page]].
 
 <mark style="background: #fee801;">MAIN RULE:</mark> Mechanically, symptoms of Cyberpsychosis begin manifesting once the player's Cyberpsychosis exceeds their [[Rules/CPRED/Humanity\|Humanity]] (=WILL+EMP). Upon this occurrence, players roll a d10. **If the result is higher than 5, a Cyberpsychosis Symptom occurs.**
 
-The severity of the symptom is proportional to this result: higher values indicate worse symptoms like [[Lore/Cyberpsychosis\|Cy-rage]], while lower values may be something as simple as a nosebleed.
+The severity of the symptom is proportional to this result: higher values indicate worse symptoms like [[Lore/Others/Cyberpsychosis\|Cy-rage]], while lower values may be something as simple as a nosebleed.
 
 The Cyberpsychosis Tracker's value decays over time (1d6/week), when having positive human interaction (1d6-2d6) or when using Cyberpsychosis-specific medication (see [[Rules/CPRED/Drugs/Omega Blockers\|Omega Blockers]]), which can be used in Therapy or as an episode blocker.
 
@@ -74,7 +74,7 @@ Cyberware should not be balanced mechanically with one another. Rather, they sho
 
 ##### Inspiration
 - [The Future is Now, Old Man](https://www.storytellersvault.com/en/product/415807/the-future-is-now-old-man); A WoD supplement for V5 that details Cyberware rules compatible with Discipline-like systems
-- [Cyberpunk: Edgerunners](https://en.wikipedia.org/wiki/Cyberpunk:_Edgerunners); for the depiction of [[Lore/Cyberpsychosis\|Cyberpsychosis]] and the "descent" into it;
+- [Cyberpunk: Edgerunners](https://en.wikipedia.org/wiki/Cyberpunk:_Edgerunners); for the depiction of [[Lore/Others/Cyberpsychosis\|Cyberpsychosis]] and the "descent" into it;
 - [Cyberpunk 2077](https://en.wikipedia.org/wiki/Cyberpunk_2077) for the more seamless integration of mechanical prowess and diversity in Cyberware, especially for combat purposes
 
 Although Cyberpunk 2020 and its newer brother, [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]] are both inspirations and foundational to this module, its very obvious that 2077's more "biology-first" approach is useful, as splitting "neuralware" into 3 enhances the portability of all its moving parts.

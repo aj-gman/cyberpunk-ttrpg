@@ -9,7 +9,7 @@ By the turn of the millenium, Hong Kong refugees, Welsh and Scottish nationalist
 In 2001, the army staged a coup, placing the country into martial law until the situation stabilized. However, by [[2020\|2020]] the Royal Family has scattered, the law has gotten stricter, akin to a feudal dictatorship, and technology has only aided that.
 
 ### Special Operations
-The [[Lore/Organizations/MLA\|MLA]]'s troops are some of the best there are. Although most inner cities only get serviced by the Metropolitan Police (read: cops with handguns and an itchy trigger finger), it only takes one glimpse from the [[Lore/EYE\|EYE]] to get noticed and you might get [[Lore/Organizations/PKY\|a squad]] dispatched to your place and they won't ask questions. 
+The [[Lore/Organizations/MLA\|MLA]]'s troops are some of the best there are. Although most inner cities only get serviced by the Metropolitan Police (read: cops with handguns and an itchy trigger finger), it only takes one glimpse from the [[Lore/Others/EYE\|EYE]] to get noticed and you might get [[Lore/Organizations/PKY\|a squad]] dispatched to your place and they won't ask questions. 
 
 ### Metropolitan Officers
 Due to violent crime rates skyrocketing by 2010, the [[Lore/Organizations/MLA\|MLA]] passed legislation to enable all Officers operating under its rule to carry a firearm, including civil engineers, garbage disposal units and so on. As such, while only **the Police** have the authority to shoot wanted criminals, Officers (of any kind) are encouraged to apply reason to self-defense situations - better a dead civilian than a dead bureaucrat, after all.
