@@ -15,9 +15,9 @@ Set in [[2020\|2020]].
 - [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], Ornament
 
 ### Adventures
-1. [[Eurotour/Adventures/Paper Trail\|Paper Trail]], set in [[Lore/Locations/Liverpool\|Liverpool]], where [[Eurotour/Characters/Crew/The Crew\|The Crew]] tracks down a runaway [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] without causing too much fuss. 
-2. [[Eurotour/Adventures/European Graffiti\|European Graffiti]], the second adventure, sees [[Eurotour/Characters/Crew/The Crew\|The Crew]] descend upon [[Eurotour/Locations/Brussels\|Brussels]], the capital of the [[Lore/Organizations/EEC\|EEC]], looking to score some radical points for [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]]'s image.
-3. [[Eurotour/Adventures/Trapped Animal\|Trapped Animal]] sees [[Eurotour/Characters/Crew/The Crew\|The Crew]] settle down in [[Paris\|Paris]], where they encounter an assassination attempt on [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]].
-4. [[Eurotour/Adventures/Menace in Venice\|Menace in Venice]]
-5. [[Eurotour/Adventures/Touring the Margin\|Touring the Margin]]
-6. [[Eurotour/Adventures/Plundering Praha\|Plundering Praha]]
+1. [[Eurotour/Adventures/1 Paper Trail\|1 Paper Trail]], set in [[Lore/Locations/Liverpool\|Liverpool]], where [[Eurotour/Characters/Crew/The Crew\|The Crew]] tracks down a runaway [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] without causing too much fuss. 
+2. [[Eurotour/Adventures/2 European Graffiti\|2 European Graffiti]], the second adventure, sees [[Eurotour/Characters/Crew/The Crew\|The Crew]] descend upon [[Eurotour/Locations/Brussels\|Brussels]], the capital of the [[Lore/Organizations/EEC\|EEC]], looking to score some radical points for [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]]'s image.
+3. [[Eurotour/Adventures/3 Trapped Animal\|3 Trapped Animal]] sees [[Eurotour/Characters/Crew/The Crew\|The Crew]] settle down in [[Paris\|Paris]], where they encounter an assassination attempt on [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]].
+4. [[Eurotour/Adventures/4 Menace in Venice\|4 Menace in Venice]]
+5. [[Eurotour/Adventures/5 Touring the Margin\|5 Touring the Margin]]
+6. [[Eurotour/Adventures/6 Plundering Praha\|6 Plundering Praha]]

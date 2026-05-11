@@ -47,6 +47,7 @@ Before entering The Mist, it is wise to find a **Lighthouse**[^2].
 	- Your access is restricted: Take -1 ongoing to Mist moves in this system while restricted.
 - **less than ±1 DR.** You’re in, but the MC chooses two of the above.
 
+- Trace: 1
 ### Navigating the Mist
 **You can explore and interact with The Mist using the standard moves** and any moves that you would normally use with your playbook, but there are also some special moves that will help you succeed in this unique environment. 
 Those who enter The Mist typically do so seeking something in particular: a dataset, a system control, etc. Experienced Mist users will assess difficult systems by comparing and contrasting what is shared and what is dissimilar within The Mist they all see.
