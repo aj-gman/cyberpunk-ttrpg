@@ -1,6 +1,7 @@
 {
   "/": [
     "Homepage",
+    "Site Chronicle",
     "Eurotour",
     "Organizations",
     "Others",
@@ -13,10 +14,22 @@
     "Eurotour"
   ],
   "/Eurotour/Characters": [
-    "Crew"
+    "Crew",
+    "France",
+    "Nolasco Family"
   ],
   "/Eurotour/Characters/Crew": [
-    "The Crew"
+    "The Crew",
+    "HEX_PUBLIC",
+    "LAZARUS_PUBLIC",
+    "RAY_PUBLIC"
+  ],
+  "/Eurotour/Characters/France": [
+    "Beatrice Fahida",
+    "Frederic Germain"
+  ],
+  "/Eurotour/Characters/Nolasco Family": [
+    "Nolasco Family"
   ],
   "/Eurotour/Locations": [
     "Frankfurt Airport",
