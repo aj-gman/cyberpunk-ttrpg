@@ -173,43 +173,68 @@ hr {
     box-shadow: 0 0 4px #FEE801;
 }
 /* ==========================================================================
-   LAYOUT ENGINE CONTROLS (FLUID SCREEN-EDGE SIDEBARS)
+   LAYOUT ENGINE CONTROLS (TRUE EDGE-TO-EDGE SIDEBAR FLOW)
    ========================================================================== */
 
-/* 1. Remove all layout bottlenecks and let the main theme containers touch the edges */
-.theme-container, 
-.content-wrapper,
-.site-layout-wrapper,
-#app {
-    max-width: 100% !important; 
+/* 1. Reset the absolute outermost container boundaries to hit the screen edges */
+html, body, #app, .site-layout-wrapper {
     width: 100% !important;
+    max-width: 100% !important;
     margin: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden; /* Prevents the infinite right-scroll glitch */
 }
 
-/* 2. Force the 3-column Grid to scale dynamically from screen-edge to screen-edge */
+/* 2. Break the theme out of its centered box and make it a full-window layout */
+.theme-container, .content-wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 3. Re-engineer the 3-column structural layout grid */
 @media (min-width: 1024px) {
     .site-layout {
         display: grid !important;
+        /* Distributes space across the screen: 
+           Left column gets 17%, Right column gets 17%, 
+           Middle Main Area scales fluidly to fill ALL remaining space in between. */
+        grid-template-columns: 17% 1fr 17% !important; 
         
-        /* '1fr' means "Fractional Unit". 
-           This forces the sidebars to expand fluidly to fill ALL remaining space 
-           to the far-left and far-right edges of the screen, while keeping your 
-           center character sheet wide and perfectly readable.
-        */
-        grid-template-columns: 1fr 4.5fr 1fr !important; 
-        
-        width: 100vw !important;         /* Forces full viewport width */
-        max-width: 100vw !important;
-        gap: 20px;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 15px !important;
         margin: 0 !important;
     }
 
-    /* Target the actual main content element inside the center column */
-    main {
-        max-width: 100% !important;
+    /* 4. Ensure the Left and Right sidebars stick perfectly to the monitor edges */
+    .sidebar.left, 
+    .sidebar-container, 
+    .nav-view {
+        grid-column: 1 !important;
         width: 100% !important;
-        padding: 0 10px !important;    /* Small padding so text doesn't hug sidebars */
     }
+
+    .sidebar.right, 
+    .site-nav-right {
+        grid-column: 3 !important;
+        width: 100% !important;
+    }
+
+    /* 5. Clean up the central text column containing your sheet */
+    main {
+        grid-column: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* 6. Enforce your character sheet iframe to cleanly use 100% of the newly widened center */
+iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none;
 }
