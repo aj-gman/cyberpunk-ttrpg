@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/pky/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/PKY.md","permalink":"/organizations/pky/","dg-note-properties":{}}
 ---
 
 #organization as part of the [[Lore/Organizations/MLA\|MLA]]

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/wortrac/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Wortrac.md","permalink":"/organizations/corporations/wortrac/","dg-note-properties":{}}
 ---
 
 #organization #eurotour 

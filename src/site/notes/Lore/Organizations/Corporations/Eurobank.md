@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/eurobank/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Eurobank.md","permalink":"/organizations/corporations/eurobank/","dg-note-properties":{}}
 ---
 
 #organization 

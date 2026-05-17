@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/dai-lung/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Dai Lung.md","permalink":"/organizations/corporations/dai-lung/","dg-note-properties":{}}
 ---
 
 #corporation 

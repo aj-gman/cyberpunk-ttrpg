@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/seal-gmb-h/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Seal GmbH.md","permalink":"/organizations/corporations/seal-gmb-h/","dg-note-properties":{}}
 ---
 
 #organization #eurotour 

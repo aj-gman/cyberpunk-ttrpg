@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/arasaka/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Arasaka.md","permalink":"/organizations/corporations/arasaka/","dg-note-properties":{}}
 ---
 
 #corporation 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/tsunami-arms/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Tsunami Arms.md","permalink":"/organizations/corporations/tsunami-arms/","dg-note-properties":{}}
 ---
 
 #corporation 

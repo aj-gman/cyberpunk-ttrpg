@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/petrochem/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Petrochem.md","permalink":"/organizations/corporations/petrochem/","dg-note-properties":{}}
 ---
 
 #corporation

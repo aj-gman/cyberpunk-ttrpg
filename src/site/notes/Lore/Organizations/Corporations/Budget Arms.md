@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/budget-arms/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Budget Arms.md","permalink":"/organizations/corporations/budget-arms/","dg-note-properties":{}}
 ---
 
 #corporation 

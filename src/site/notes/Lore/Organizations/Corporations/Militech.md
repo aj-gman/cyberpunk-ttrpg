@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/militech/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Militech.md","permalink":"/organizations/corporations/militech/","dg-note-properties":{}}
 ---
 
 #corporation 

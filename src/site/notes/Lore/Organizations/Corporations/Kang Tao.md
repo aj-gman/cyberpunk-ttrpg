@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/kang-tao/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Kang Tao.md","permalink":"/organizations/corporations/kang-tao/","dg-note-properties":{}}
 ---
 
 #corporation 

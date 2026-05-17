@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/drugs/boost/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Rules/Drugs/Boost.md","permalink":"/rules/drugs/boost/","dg-note-properties":{}}
 ---
 
 A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that (how it looks like, who it is used by and why)

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/drugs/wireheading/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Rules/Drugs/Wireheading.md","permalink":"/rules/drugs/wireheading/","dg-note-properties":{}}
 ---
 
 ## Core
@@ -17,10 +17,10 @@ A standard wire, as found on the streets, is not a precision piece of electronic
 Wires come in varying shapes and sizes, which determines their **Strength**, as well as their availability, safety and general experience. Risky Wires may provide you with a unique experience, but might [[Rules/CPRED/Drugs/Drug Effects/Nerve Degeneration\|fry your brain]] in the process. The best way to do [[Rules/CPRED/Drugs/Wireheading\|Wireheading]] is to not do it at all, but it's benefits are powerful.
 
 ### Main Effect
-- + 1/2 Strength to COOL 
+- +1/2 Strength to COOL 
 - [[Rules/CPRED/Drugs/Drug Effects/Psychedelic\|Psychedelic]]
-- + 1/2 Strength to [[Rules/CPRED/Cyberware/Humanity\|Humanity]] (for a week)
-- - Strength to [[Rules/CPRED/Cyberware/Cyberware#Lowering Cyberpsychosis\|Cyberpsychosis Tracker]]
+- +1/2 Strength to [[Rules/CPRED/Cyberware/Humanity\|Humanity]] (for a week)
+- -Strength to [[Rules/CPRED/Cyberware/Cyberware#Lowering Cyberpsychosis\|Cyberpsychosis Tracker]]
 
 ### Side Effect
 Test Resist Torture/Drugs [[Rules/CPRED/Difficulty Rating\|DR]] relevant to Strength (from [[Rules/CPRED/Difficulty Rating\|DR]] 9 to [[Rules/CPRED/Difficulty Rating\|DR]] 21) or suffer from:

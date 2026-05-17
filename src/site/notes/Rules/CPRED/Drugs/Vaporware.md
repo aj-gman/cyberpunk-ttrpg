@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/drugs/vaporware/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Rules/Drugs/Vaporware.md","permalink":"/rules/drugs/vaporware/","dg-note-properties":{}}
 ---
 
 A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that is smoked in its vapor form, traditionally by [hookah](https://en.wikipedia.org/wiki/Hookah).

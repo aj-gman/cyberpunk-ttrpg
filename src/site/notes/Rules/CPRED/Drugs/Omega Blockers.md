@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/drugs/omega-blockers/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Rules/Drugs/Omega Blockers.md","permalink":"/rules/drugs/omega-blockers/","dg-note-properties":{}}
 ---
 
 A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that comes in form of black pills used for the clinical treatment of [[Lore/Others/Cyberpsychosis\|Cyberpsychosis]][^1]. Prolonged use is associated with Nerve Degeneration, with many pacients ending up bed-ridden or empty-headed.

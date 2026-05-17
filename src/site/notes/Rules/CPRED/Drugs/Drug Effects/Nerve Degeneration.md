@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/drugs/drug-effects/nerve-degeneration/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Rules/Drugs/Drug Effects/Nerve Degeneration.md","permalink":"/rules/drugs/drug-effects/nerve-degeneration/","dg-note-properties":{}}
 ---
 
 Add to your Nerve Degeneration tracker in Addictions on your Character Sheet.

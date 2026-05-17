@@ -1,10 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/netrunning/ice/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Rules/Netrunning/ICE.md","permalink":"/rules/netrunning/ice/","dg-note-properties":{}}
 ---
 
 **Intrusion Countermeasures Electronics**, commonly abbreviated to **ICE**, is a type of [Net](https://cyberpunk.fandom.com/wiki/Net "Net") security in the _[Cyberpunk](https://cyberpunk.fandom.com/wiki/Cyberpunk_series "Cyberpunk series")_ universe.
 
 Every sane [corporation](https://cyberpunk.fandom.com/wiki/Corporation "Corporation") has a crack division of netrunners making sure their [data fortress](https://cyberpunk.fandom.com/wiki/Data_fortress "Data fortress") is well-protected. Meanwhile, every self-respecting netrunner does everything they can to find a backdoor in corporate ICE and gain access to their subnet. Cutting through very thick ICE requires a lot of skill, precision and dumb courage, otherwise you may end up with your synapses fried to a crisp.
+
+A [[Rules/CPRED/Roles/Netrunner\|Netrunner]] can deal with [[Rules/CPRED/Netrunning/ICE\|ICE]] by [[Rules/CPRED/Netrunning/Netrunning#WHISPER\|Whispering]], which means damaging, disabling or even fleeing the [[Rules/CPRED/Netrunning/ICE\|ICE]]. Whenever an [[Rules/CPRED/Netrunning/ICE\|ICE]] attempts to pull the [[Rules/CPRED/Roles/Netrunner\|Netrunner]] [[Rules/CPRED/Netrunning/Netrunning#RESIST\|Into the Mist, they can Resist.]]
 
 ## White ICE
 They appear as an subtle part of the scene the Mist has created around you. They look, listen and are not easily detected.

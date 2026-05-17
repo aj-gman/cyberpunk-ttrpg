@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/malorian-arms/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Malorian Arms.md","permalink":"/organizations/corporations/malorian-arms/","dg-note-properties":{}}
 ---
 
 #corporation 

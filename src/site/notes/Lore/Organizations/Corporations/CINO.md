@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/cino/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/CINO.md","permalink":"/organizations/corporations/cino/","dg-note-properties":{}}
 ---
 
 #organization #eurotour 

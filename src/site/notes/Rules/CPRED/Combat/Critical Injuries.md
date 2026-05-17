@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/combat/critical-injuries/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Rules/Combat/Critical Injuries.md","permalink":"/rules/combat/critical-injuries/","dg-note-properties":{}}
 ---
 
 Critical Injuries are an integral part of [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]]'s [[Rules/CPRED/Combat/Combat\|Combat]] system. 

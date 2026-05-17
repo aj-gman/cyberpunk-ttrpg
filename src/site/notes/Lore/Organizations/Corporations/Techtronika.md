@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/techtronika/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Techtronika.md","permalink":"/organizations/corporations/techtronika/","dg-note-properties":{}}
 ---
 
 #corporation 

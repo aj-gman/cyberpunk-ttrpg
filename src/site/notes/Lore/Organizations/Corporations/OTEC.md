@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/otec/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/OTEC.md","permalink":"/organizations/corporations/otec/","dg-note-properties":{}}
 ---
 
 #organization #eurotour 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/drugs/synth-coke/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Rules/Drugs/SynthCoke.md","permalink":"/rules/drugs/synth-coke/","dg-note-properties":{}}
 ---
 
 A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that comes in little plastic vials of powder. It's purported to be a general enhancer of concentration, awareness and reactions, with the classic cocaine side effects of paranoia and anxiety. Cheap and easy to obtain.

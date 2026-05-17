@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/combat/combat/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Rules/Combat/Combat.md","permalink":"/rules/combat/combat/","dg-note-properties":{}}
 ---
 
 # Ranged Combat

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/kendachi/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Kendachi.md","permalink":"/organizations/corporations/kendachi/","dg-note-properties":{}}
 ---
 
 #corporation 

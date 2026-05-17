@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/organizations/corporations/constitutional-arms/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Corporations/Constitutional Arms.md","permalink":"/organizations/corporations/constitutional-arms/","dg-note-properties":{}}
 ---
 
 #corporation 

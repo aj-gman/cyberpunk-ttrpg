@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/cyberware/cyberware-types/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Rules/Cyberware/Cyberware Types.md","permalink":"/rules/cyberware/cyberware-types/","dg-note-properties":{}}
 ---
 
 ##### Physical, generally noticeable

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/lore/others/eye/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Others/EYE.md","permalink":"/others/eye/","dg-note-properties":{}}
 ---
 
 ![Tech-EYE.jpg\|right\|300](/img/user/Pictures/Tech-EYE.jpg)
