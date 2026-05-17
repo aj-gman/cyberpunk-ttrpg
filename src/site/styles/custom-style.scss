@@ -174,53 +174,72 @@ hr {
 }
 
 /* ==========================================================================
-   16:9 WIDESCREEN FULL-BLEED RESOLUTION OVERHAUL
+   DIGITAL GARDEN 16:9 FULL-WIDTH LIQUID OVERHAUL
    ========================================================================== */
 
-/* 1. Tear down the default centering layout box */
-html, body, .site-layout-wrapper {
+/* 1. Tear down the default max-width container walls globally */
+.site-layout-wrapper {
     width: 100% !important;
     max-width: 100vw !important;
     margin: 0 !important;
     padding: 0 !important;
-    overflow-x: hidden !important;
+    box-sizing: border-box !important;
 }
 
-/* 2. Force the 3-column structure to span the absolute width of the glass */
+/* 2. Re-engineer the main flex container to span the entire screen width */
 .site-layout {
-    display: grid !important;
+    display: flex !important;
+    flex-direction: row !important;
     width: 100% !important;
     max-width: 100vw !important;
+    padding: 0 20px !important; /* Safety padding from screen borders */
     margin: 0 !important;
-    padding: 0 25px !important; /* Adds a clean 25px breathing space away from physical screen bezels */
     box-sizing: border-box !important;
-    
-    /* Lock sidebars to their sizes, force the center column to drink up ALL remaining 16:9 space */
-    grid-template-columns: var(--dg-filetree-width, 250px) 1fr var(--dg-sidebar-max-width, 350px) !important;
-    gap: 40px !important; /* Generous gap so elements never clip or crowd each other */
+    gap: 25px !important; /* Space between sidebars and center sheet */
 }
 
-/* 3. Pin Left Filetree directly against the far-left wall */
+/* 3. FIX THE LEFT SIDEBAR: Account for its absolute layout positioning */
 .filetree-sidebar {
-    position: sticky !important;
-    left: 0 !important;
-    width: var(--dg-filetree-width, 250px) !important;
-    max-width: var(--dg-filetree-width, 250px) !important;
+    position: relative !important; /* Strips the absolute float causing the text bleed */
+    left: auto !important;
+    top: auto !important;
+    flex-shrink: 0 !important;
+    width: var(--dg-filetree-width, 260px) !important;
+    min-width: var(--dg-filetree-width, 260px) !important;
+    max-width: var(--dg-filetree-width, 260px) !important;
     margin: 0 !important;
 }
 
-/* 4. Pin Right Utility Sidebar directly against the far-right wall */
-.sidebar {
-    position: sticky !important;
-    right: 0 !important;
-    width: var(--dg-sidebar-max-width, 350px) !important;
-    max-width: var(--dg-sidebar-max-width, 350px) !important;
-    margin: 0 !important;
-}
-
-/* 5. Unleash the Center Content Matrix Column */
+/* 4. UNLEASH THE CENTER CONTENT: Force it to absorb all remaining widescreen space */
 main.content {
-    width: 100% !important;
-    max-width: 100% !important; /* Allows your character panels to expand fluidly across the wide monitor screen */
-    margin: 0 auto !important;
+    flex-grow: 1 !important; /* Instructs it to fill all empty middle space */
+    width: auto !important;
+    max-width: 100% !important; /* Removes text alignment restrictions */
+    margin: 0 !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+}
+
+/* 5. FIX THE RIGHT SIDEBAR: Pull it out of the bottom stack back onto the right flank */
+.sidebar {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    flex-shrink: 0 !important;
+    width: var(--dg-sidebar-max-width, 360px) !important;
+    min-width: var(--dg-sidebar-max-width, 360px) !important;
+    max-width: var(--dg-sidebar-max-width, 360px) !important;
+    margin: 0 !important;
+}
+
+/* 6. Mobile Responsiveness Fail-Safe */
+@media (max-width: 1024px) {
+    .site-layout {
+        flex-direction: column !important;
+    }
+    .filetree-sidebar, .sidebar {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+    }
 }
