@@ -1,11 +1,19 @@
+/* ==========================================================================
+   DIGITAL GARDEN CUSTOM CYBERPUNK THEME 
+   ========================================================================== */
+
 body {
     /***
       ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
       IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-  /* Change the mini local graph size in the sidebar */
-  --dg-graph-width: 250px;         /* Default is 250px */
-  --dg-graph-height: 500px;        /* Default is 250px */
+    ***/
+    /* Change the mini local graph size in the sidebar */
+    --dg-graph-width: 250px;         /* Default is 250px */
+    --dg-graph-height: 500px;        /* Default is 250px */
+    
+    background-color: var(--background-primary) !important;
+    color: var(--text-normal) !important;
+}
 
 :root {
     /* Main Backgrounds */
@@ -36,17 +44,49 @@ body {
     --graph-line: #2E7381;                      /* Muted Teal lines */
 }
 
-/* --- Global Theme Overrides --- */
+/* --- Navigation & Sidebar Layout --- */
 
-body {
-    background-color: var(--background-primary) !important;
-    color: var(--text-normal) !important;
-}
-
-/* Sidebar / Navigation adjustments */
 .sidebar, .nav-view, .site-nav {
     background-color: var(--background-secondary) !important;
     border-right: 1px solid #39C4B6;            /* Teal structural border */
+}
+
+/* Sidebar/Navigation Links (Electric Turquoise) */
+.nav-view a, 
+.site-nav a, 
+.nav-link,
+.file-title {
+    color: #54C1E6 !important;
+    transition: color 0.2s ease;
+}
+
+/* Hover effect for sidebar links (Yellow) */
+.nav-view a:hover, 
+.site-nav a:hover, 
+.nav-link:hover,
+.file-title:hover {
+    color: #FEE801 !important; 
+    text-shadow: 0 0 8px #FEE801;
+}
+
+/* Folder Titles and Icons (Yellow) */
+.folder-title,
+.folder-icon,
+.nav-folder-title {
+    color: #FEE801 !important;
+}
+
+/* Sidebar Indentation/Connection Lines (Yellow) */
+.folder-container, 
+.nav-folder,
+.file-tree-indent-line {
+    border-left: 1px solid #FEE801 !important;
+}
+
+/* Collapse buttons/arrows */
+.collapse-icon svg {
+    stroke: #FEE801 !important;
+    fill: #FEE801 !important;
 }
 
 /* --- CyberGlow Heading Effects --- */
@@ -66,7 +106,29 @@ h4 {
     text-shadow: 0 0 8px #FFC400, 0 0 2px #FFC400;
 }
 
-/* --- Lists & Markers --- */
+/* --- Note Body Links & Tags --- */
+
+a.internal-link, a.external-link {
+    color: var(--links) !important;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a.internal-link:hover, a.external-link:hover {
+    color: var(--links-hover) !important;
+    text-shadow: 0 0 5px #FEE801;
+}
+
+/* Digital Garden Note Tags */
+.tag {
+    background-color: #9A9F17 !important;
+    color: #000000 !important;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+/* --- Global Elements & Lists --- */
 
 ul {
     list-style-type: disc;
@@ -80,37 +142,7 @@ ol li::marker {
     color: #54C1E6 !important;                  /* Cyan numbered lists */
 }
 
-/* --- Links & Tags --- */
-
-a.internal-link, a.external-link {
-    color: var(--links) !important;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-}
-
-a.internal-link:hover, a.external-link:hover {
-    color: var(--links-hover) !important;
-    text-shadow: 0 0 5px #FEE801;
-}
-
-/* File Explorer Folders */
-.folder-title {
-    color: #9A9F17 !important;                  /* Closed Folder Color */
-}
-.folder-container.is-open > .folder-title {
-    color: #FEE801 !important;                  /* Open Folder Color */
-}
-
-/* Digital Garden Note Tags */
-.tag {
-    background-color: #9A9F17 !important;
-    color: #000000 !important;
-    font-weight: bold;
-    border-radius: 4px;
-    padding: 2px 6px;
-}
-
-/* --- Custom Scrollbar --- */
+/* Custom Scrollbar */
 ::-webkit-scrollbar-thumb {
     background: #FEE801 !important;             /* Yellow scrollbar tracker */
     border-radius: 4px;
@@ -124,49 +156,4 @@ a.internal-link:hover, a.external-link:hover {
 hr {
     border-color: #FEE801 !important;
     box-shadow: 0 0 4px #FEE801;
-}
-    /* Sidebar/Navigation Links */
-.nav-view a, 
-.site-nav a, 
-.nav-link,
-.file-title {
-    color: #54C1E6 !important;
-    transition: color 0.2s ease;
-}
-
-/* Hover effect for sidebar links */
-.nav-view a:hover, 
-.site-nav a:hover, 
-.nav-link:hover,
-.file-title:hover {
-    color: #FEE801 !important; /* Turns yellow on hover */
-    text-shadow: 0 0 8px #FEE801;
-}
-
-/* Folder Titles and Icons */
-.folder-title,
-.folder-icon,
-.nav-folder-title {
-    color: #FEE801 !important;
-}
-
-/* Sidebar Indentation/Connection Lines */
-.folder-container, 
-.nav-folder,
-.file-tree-indent-line {
-    border-left: 1px solid #FEE801 !important;
-}
-
-/* If your template uses collapse buttons/arrows */
-.collapse-icon svg {
-    stroke: #FEE801 !important;
-    fill: #FEE801 !important;
-}
-    .nav-view a, 
-.site-nav a, 
-.nav-link,
-.file-title {
-    color: #54C1E6 !important;
-    transition: color 0.2s ease;
-}
 }
