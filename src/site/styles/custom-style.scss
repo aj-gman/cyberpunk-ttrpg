@@ -181,10 +181,10 @@ body {
 
 .content {
     max-width: calc(100vw - var(--dg-filetree-min-width) - var(--dg-filetree-gap) - var(--dg-sidebar-max-width) - var(--dg-sidebar-gap) - 40px) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: calc(var(--dg-filetree-min-width) + var(--dg-filetree-gap)) !important;
-    padding-right: calc(var(--dg-sidebar-max-width) + var(--dg-sidebar-gap)) !important;
+    margin-left: calc(var(--dg-filetree-min-width) + var(--dg-filetree-gap)) !important;
+    margin-right: calc(var(--dg-sidebar-max-width) + var(--dg-sidebar-gap)) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     box-sizing: border-box !important;
 }
 
