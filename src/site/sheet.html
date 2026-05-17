@@ -1,0 +1,96 @@
+<div class="character-sheet-container">
+  <h3>Character Sheet Manager</h3>
+  
+  <!-- File Import -->
+  <div style="margin-bottom: 20px;">
+    <label for="importFile"><strong>Load Character (.json):</strong></label>
+    <input type="file" id="importFile" accept=".json">
+  </div>
+
+  <hr>
+
+  <!-- Character Fields -->
+  <form id="characterForm">
+    <div>
+      <label>Character Name:</label>
+      <input type="text" id="charName" value="Hero">
+    </div>
+    <br>
+    <div>
+      <label>Strength (STR):</label>
+      <input type="number" id="statStr" value="10">
+    </div>
+    <div>
+      <label>Dexterity (DEX):</label>
+      <input type="number" id="statDex" value="10">
+    </div>
+    <br>
+    <div>
+      <label>Inventory / Notes:</label><br>
+      <textarea id="inventory" rows="4" cols="30">Starting gear...</textarea>
+    </div>
+  </form>
+
+  <hr>
+
+  <!-- File Export -->
+  <button type="button" id="exportBtn" style="padding: 10px 20px; cursor: pointer;">
+    Export / Save Character
+  </button>
+</div>
+
+<script>
+  // --- IMPORT LOGIC ---
+  document.getElementById('importFile').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      try {
+        const characterData = JSON.parse(evt.target.result);
+        
+        // Populate the form fields with the JSON data
+        if(characterData.name) document.getElementById('charName').value = characterData.name;
+        if(characterData.str) document.getElementById('statStr').value = characterData.str;
+        if(characterData.dex) document.getElementById('statDex').value = characterData.dex;
+        if(characterData.inventory) document.getElementById('inventory').value = characterData.inventory;
+        
+        alert("Character loaded successfully!");
+      } catch (error) {
+        alert("Error parsing JSON file. Make sure it's a valid character sheet.");
+      }
+    };
+    reader.readAsText(file);
+  });
+
+  // --- EXPORT LOGIC ---
+  document.getElementById('exportBtn').addEventListener('click', function() {
+    // Gather data from form
+    const characterData = {
+      name: document.getElementById('charName').value,
+      str: parseInt(document.getElementById('statStr').value) || 0,
+      dex: parseInt(document.getElementById('statDex').value) || 0,
+      inventory: document.getElementById('inventory').value,
+      lastSaved: new Date().toISOString()
+    };
+
+    // Convert object to JSON string
+    const jsonString = JSON.stringify(characterData, null, 2);
+    
+    // Create a Blob and trigger download
+    const blob = new Blob([jsonString], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    // Name the file based on the character name
+    a.download = `${characterData.name.replace(/\s+/g, '_')}_sheet.json`;
+    document.body.appendChild(a);
+    a.click();
+    
+    // Clean up
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+</script>
