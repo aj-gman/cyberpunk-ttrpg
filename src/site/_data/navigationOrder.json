@@ -2,10 +2,56 @@
   "/": [
     "Homepage",
     "Site Chronicle",
+    "Rules",
     "Eurotour",
     "Organizations",
-    "Others",
-    "Rules"
+    "Others"
+  ],
+  "/Rules": [
+    "Homebrew",
+    "Combat",
+    "Cyberware",
+    "Drugs",
+    "Netrunning",
+    "Difficulty Rating",
+    "Quality"
+  ],
+  "/Rules/Combat": [
+    "Combat",
+    "Critical Injuries",
+    "Gun Generator",
+    "Power",
+    "Smart",
+    "Tech"
+  ],
+  "/Rules/Cyberware": [
+    "Cyberware",
+    "Cyberware Types",
+    "Humanity"
+  ],
+  "/Rules/Drugs": [
+    "Drug Effects",
+    "Black Lace",
+    "Boost",
+    "Drugs",
+    "Omega Blockers",
+    "SynthCoke",
+    "Vaporware",
+    "Weed",
+    "Wireheading"
+  ],
+  "/Rules/Drugs/Drug Effects": [
+    "Blank",
+    "Drowsiness",
+    "Hunger",
+    "Nerve Degeneration",
+    "Psychedelic"
+  ],
+  "/Rules/Netrunning": [
+    "ICE",
+    "Netrunner Gear",
+    "Netrunning",
+    "Quickhacks"
   ],
   "/Eurotour": [
     "Characters",
@@ -68,51 +114,5 @@
   "/Others": [
     "Cyberpsychosis",
     "EYE"
-  ],
-  "/Rules": [
-    "Homebrew",
-    "Combat",
-    "Cyberware",
-    "Drugs",
-    "Netrunning",
-    "Difficulty Rating",
-    "Quality"
-  ],
-  "/Rules/Combat": [
-    "Combat",
-    "Critical Injuries",
-    "Gun Generator",
-    "Power",
-    "Smart",
-    "Tech"
-  ],
-  "/Rules/Cyberware": [
-    "Cyberware",
-    "Cyberware Types",
-    "Humanity"
-  ],
-  "/Rules/Drugs": [
-    "Drug Effects",
-    "Black Lace",
-    "Boost",
-    "Drugs",
-    "Omega Blockers",
-    "SynthCoke",
-    "Vaporware",
-    "Weed",
-    "Wireheading"
-  ],
-  "/Rules/Drugs/Drug Effects": [
-    "Blank",
-    "Drowsiness",
-    "Hunger",
-    "Nerve Degeneration",
-    "Psychedelic"
-  ],
-  "/Rules/Netrunning": [
-    "ICE",
-    "Netrunner Gear",
-    "Netrunning",
-    "Quickhacks"
   ]
 }
