@@ -3,6 +3,10 @@
    ========================================================================== */
 
 :root {
+   /* layout changes */
+    --dg-content-max-width: 9999px;   /* Remove center column width cap */
+    --dg-sidebar-max-width: 280px;    /* Right sidebar — adjust to taste */
+    --dg-filetree-width: 240px;       /* Left sidebar — adjust to taste */
     /* Main Backgrounds */
     --background-primary: #000000;              /* Pure Dark */
     --background-secondary: #171A39;            /* Deep Cyber Navy */
@@ -171,72 +175,4 @@ ol li::marker {
 hr {
     border-color: #FEE801 !important;
     box-shadow: 0 0 4px #FEE801;
-}
-
-/* ==========================================================================
-   DIGITAL GARDEN 16:9 FULL-WIDTH LIQUID OVERHAUL
-   ========================================================================== */
-
-html, body {
-    max-width: 100% !important;
-}
-
-.site-layout-wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-}
-
-.site-layout {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: flex-start !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 12px !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-    gap: 16px !important;
-}
-
-.filetree-sidebar {
-    position: relative !important;
-    left: auto !important;
-    top: auto !important;
-    flex: 0 0 240px !important;
-    width: 240px !important;
-    margin: 0 !important;
-}
-
-main.content {
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 16px !important;
-    box-sizing: border-box !important;
-}
-
-.sidebar {
-    position: relative !important;
-    right: auto !important;
-    top: auto !important;
-    flex: 0 0 280px !important;
-    width: 280px !important;
-    margin: 0 !important;
-}
-
-@media (max-width: 1024px) {
-    .site-layout {
-        flex-direction: column !important;
-        padding: 0 !important;
-    }
-    .filetree-sidebar,
-    .sidebar {
-        flex: none !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
 }
