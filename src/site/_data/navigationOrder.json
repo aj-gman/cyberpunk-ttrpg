@@ -2,16 +2,12 @@
   "/": [
     "Lore",
     "Rules",
-    "Gigs"
+    "Eurotour",
+    "Homepage"
   ],
   "/Lore": [
-    "Locations",
     "Organizations",
-    "Cyberpsychosis",
-    "EYE"
-  ],
-  "/Lore/Locations": [
-    "Liverpool"
+    "Others"
   ],
   "/Lore/Organizations": [
     "Corporations",
@@ -34,25 +30,32 @@
     "Seal GmbH",
     "Techtronika",
     "Tsunami Arms",
-    "Wortrac"
+    "Wortrac",
+    "SovOil"
+  ],
+  "/Lore/Others": [
+    "Cyberpsychosis",
+    "EYE"
   ],
   "/Rules": [
-    "CPRED"
+    "CPRED",
+    "Homebrew"
   ],
   "/Rules/CPRED": [
     "Combat",
     "Drugs",
-    "Critical Injuries",
     "Cyberware",
     "Difficulty Rating",
-    "Quality"
+    "Quality",
+    "Netrunning"
   ],
   "/Rules/CPRED/Combat": [
     "Combat",
     "Gun Generator",
     "Power",
     "Smart",
-    "Tech"
+    "Tech",
+    "Critical Injuries"
   ],
   "/Rules/CPRED/Drugs": [
     "Drug Effects",
@@ -62,24 +65,47 @@
     "Omega Blockers",
     "SynthCoke",
     "Vaporware",
-    "Weed"
+    "Weed",
+    "Wireheading"
   ],
   "/Rules/CPRED/Drugs/Drug Effects": [
     "Drowsiness",
     "Hunger",
-    "Psychedelic"
+    "Psychedelic",
+    "Blank",
+    "Nerve Degeneration"
   ],
-  "/Gigs": [
-    "Eurotour"
+  "/Rules/CPRED/Cyberware": [
+    "Cyberware",
+    "Cyberware Types",
+    "Humanity"
   ],
-  "/Gigs/Eurotour": [
+  "/Rules/CPRED/Netrunning": [
+    "ICE",
+    "Netrunner Gear",
+    "Netrunning",
+    "Quickhacks"
+  ],
+  "/Eurotour": [
     "Characters",
+    "Locations",
+    "News",
     "Eurotour"
   ],
-  "/Gigs/Eurotour/Characters": [
+  "/Eurotour/Characters": [
     "Crew"
   ],
-  "/Gigs/Eurotour/Characters/Crew": [
+  "/Eurotour/Characters/Crew": [
     "The Crew"
+  ],
+  "/Eurotour/Locations": [
+    "Frankfurt Airport",
+    "Germany",
+    "Liverpool",
+    "Rhine-Ruhr Conurb"
+  ],
+  "/Eurotour/News": [
+    "Glamorous Deaths in the Swiss Alps",
+    "Nomad Rockstars, Beware!"
   ]
 }
