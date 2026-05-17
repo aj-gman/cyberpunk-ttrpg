@@ -2,27 +2,18 @@
    DIGITAL GARDEN CUSTOM CYBERPUNK THEME 
    ========================================================================== */
 
-body {
-    /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-     ***/
-    /* Change the mini local graph size in the sidebar */
-    --dg-graph-width: 250px;         /* Default is 250px */
-    --dg-graph-height: 500px;        /* Default is 250px */
-    
-    background-color: var(--background-primary) !important;
-    color: var(--text-normal) !important;
-}
-
 :root {
     /* Main Backgrounds */
     --background-primary: #000000;              /* Pure Dark */
     --background-secondary: #171A39;            /* Deep Cyber Navy */
     --background-container: #171A39;
 
-    /* GRAPH TEXT FIX: Added semicolon and override flag */
+    /* GRAPH VIEW FIXES */
+    --dg-graph-width: 250px;         
+    --dg-graph-height: 500px;        
     --dg-graph-label-color: #FEE801 !important;
+    --graph-node: #54C1E6;
+    --graph-line: #2E7381;                       /* Muted Teal lines */
 
     /* Layout Engine Structural Overrides */
     --dg-sidebar-bg: #171A39 !important;             /* Deep Cyber Navy for sidebar background */
@@ -46,10 +37,11 @@ body {
     --code-text: #FEE801;
     --table-header-background: #9A9F17;
     --table-header-text: #FEE801;
-    
-    /* Graph View Defaults */
-    --graph-node: #54C1E6;
-    --graph-line: #2E7381;                       /* Muted Teal lines */
+}
+
+body {
+    background-color: var(--background-primary) !important;
+    color: var(--text-normal) !important;
 }
 
 /* Force the sidebar containers and navigation headers to drop the default blue */
@@ -116,7 +108,6 @@ body {
 }
 
 /* --- CyberGlow Heading Effects --- */
-
 h1, h2, h3, h4, h5, h6 {
     color: #FEE801 !important;                  /* ITS Yellow headers */
     font-weight: 700;
@@ -133,7 +124,6 @@ h4 {
 }
 
 /* --- Note Body Links & Tags --- */
-
 a.internal-link, a.external-link {
     color: var(--links) !important;
     text-decoration: none;
@@ -155,7 +145,6 @@ a.internal-link:hover, a.external-link:hover {
 }
 
 /* --- Global Elements & Lists --- */
-
 ul {
     list-style-type: disc;
 }
@@ -182,4 +171,35 @@ ol li::marker {
 hr {
     border-color: #FEE801 !important;
     box-shadow: 0 0 4px #FEE801;
+}
+
+/* ==========================================================================
+   LAYOUT ENGINE CONTROLS (STRETCH MAIN BODY / SHRINK SIDEBARS)
+   ========================================================================== */
+
+/* 1. Expand the central content block completely inside its column */
+.theme-container, 
+.content-wrapper, 
+main {
+    max-width: 100% !important; 
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+/* 2. Adjust Grid layout on desktops (Safely bypasses body/app tag collisions) */
+@media (min-width: 1024px) {
+    .site-layout {
+        display: grid !important;
+        /* Shrinks sidebars to 15% and widens central note column to 70% */
+        grid-template-columns: 15% 70% 15% !important; 
+        gap: 25px;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* 3. Allow your interactive character sheet to dynamically match the fluid grid width */
+iframe {
+    width: 100% !important;
+    border: none;
 }
