@@ -5,8 +5,8 @@
 Picks fron the [[Rules/CPRED/Combat/Combat#Gun Brands\|Brands]], [[Rules/CPRED/Combat/Combat#Core Rules\|Archetypes]] and [[Rules/CPRED/Combat/Combat#Gun Types\|Types]] to produce a randomly-generated [[Rules/CPRED/Combat/Combat#Core Rules\|gun]] and calculate its price. This price is the initial retail price at a certified gun shop, so getting the same gun from a black market dealer might prove more costly (or perhaps cheaper, if the gun has heat).
 
 #### Specificities
-- [[Rules/CPRED/Combat/Smart\|Smart]] weapons are made only by [[Lore/Organizations/Corporations/Arasaka\|Arasaka]] or [[Lore/Organizations/Corporations/Kang Tao\|Kang Tao]];
-- [[Rules/CPRED/Combat/Power\|Power]] & [[Rules/CPRED/Combat/Tech\|Tech]] weapons are made by all companies;
+- [[Rules/CPRED/Combat/Smart Guns\|Smart Guns]] weapons are made only by [[Lore/Organizations/Corporations/Arasaka\|Arasaka]] or [[Lore/Organizations/Corporations/Kang Tao\|Kang Tao]];
+- [[Rules/CPRED/Combat/Power Guns\|Power Guns]] & [[Rules/CPRED/Combat/Tech Guns\|Tech Guns]] weapons are made by all companies;
 - All [[Rules/CPRED/Combat/Combat#Gun Brands\|Brands]] have specific abilities, which can be seen by accessing the Brand's page;
 
 #### Pricing
@@ -16,6 +16,6 @@ Picks fron the [[Rules/CPRED/Combat/Combat#Gun Brands\|Brands]], [[Rules/CPRED/C
 
 
 ### Generator
-<div><div><b>Brand:</b> <a href="Budget Arms" class="internal-link">Budget Arms</a></div><div><b>Archetype:</b> Sniper Rifle</div><div><b>Gun Type:</b> <a href="Tech" class="internal-link">Tech</a></div><div><b>Price:</b> 375 eb</div></div><button class="gun-gen-btn"><span>Regenerate</span></button>
+<div><div><b>Brand:</b> <a href="Techtronika" class="internal-link">Techtronika</a></div><div><b>Archetype:</b> Very Heavy Pistol</div><div><b>Gun Type:</b> <a href="Power" class="internal-link">Power</a></div><div><b>Price:</b> 100 eb</div></div><button class="gun-gen-btn"><span>Regenerate</span></button>
 
 

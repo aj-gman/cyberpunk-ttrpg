@@ -68,13 +68,13 @@ Attacker rolls damage. Defender subtracts their SP from the damage. If the resul
 ### Gun Types
 [[Rules/Homebrew\|Homebrew]] based on [Edgerunners Kit](https://rtalsoriangames.com/cyberpunk-edgerunners-mission-kit/) sourcebook for [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]].
 
-##### [[Rules/CPRED/Combat/Power\|Power]] 
+##### [[Rules/CPRED/Combat/Power Guns\|Power Guns]] 
 **These guns are made to penetrate and do serious mayhem.** Upon dealing 5 or more damage (after calculating Armor SP), the weapon deals an additional d6. This can grant [[Rules/CPRED/Combat/Critical Injuries\|Critical Injuries]] if there are two 6s.
 
-##### [[Rules/CPRED/Combat/Tech\|Tech]] 
+##### [[Rules/CPRED/Combat/Tech Guns\|Tech Guns]] 
 **Railgun technology allows these weapons to punch through cover.** Uncharged, this gun deals 1d6 less than default. Charging (usually for 1 turn), user can fire through Thin Cover, ignoring half of the target's SP and dealing regular damage.
 
-##### [[Rules/CPRED/Combat/Smart\|Smart]]
+##### [[Rules/CPRED/Combat/Smart Guns\|Smart Guns]]
 **Use gyrojet technology to fire caseless, guided ammo at enemies.** Even on a miss, every shot deals minimum damage. User rolls half of the dice pool (rounding down) of the gun's damage. Spending 1 turn for a Called Shot with a [[Rules/CPRED/Cyberware/Cyberware\|Smart Link]] completely negates the penalty (-8).
 
 
