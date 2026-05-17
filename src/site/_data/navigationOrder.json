@@ -1,10 +1,10 @@
 {
   "/": [
+    "Homepage",
     "Eurotour",
     "Organizations",
-    "Lore",
-    "Rules",
-    "Homepage"
+    "Others",
+    "Rules"
   ],
   "/Eurotour": [
     "Characters",
@@ -52,10 +52,7 @@
     "Tsunami Arms",
     "Wortrac"
   ],
-  "/Lore": [
-    "Others"
-  ],
-  "/Lore/Others": [
+  "/Others": [
     "Cyberpsychosis",
     "EYE"
   ],
