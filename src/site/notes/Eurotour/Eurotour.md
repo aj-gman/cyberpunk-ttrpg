@@ -3,7 +3,17 @@
 ---
 
 #gig #eurotour 
-Set in [[2020\|2020]].
+Set in the universe of [[2020\|Cyberpunk 2020]] and ran using the updated [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]] system, the [[Eurotour/Eurotour\|Eurotour]] sees [[Eurotour/Characters/Crew/The Crew\|The Crew]] go through New Europe protecting and working for [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], stateside [[Rules/CPRED/Roles/Rockerboy\|Rockerboy]], anarchist molotov-thrower and anti-corpo mascot. The *"TOTAL ENTROPY TOUR"* means flak from the [[Lore/Organizations/MLA\|MLA]], from the [[Lore/Organizations/EEC\|EEC]], as well as interaction with Eurosolos and Eurogangs, all with their different customs and behaviors.
+
+The opportunity of a lifetime... You've been hired to be the cream of the crop, the best Night City has to offer. You'll protect, assist and support Jack Entropy's exploits, concerts and (bad) habits. Else, you'll be stranded in Europe without an ID. A death sentence. 
+
+Cold chrome, cash, guns. Stateside, your arsenal could melt a small army. However, when in Rome... Europe plays different, so you have to sneak every advantage you can against dangerous foes who want to kill, maim or screw you. 
+
+Entropy's entourage. Spend enough time touring with his crew that you learn their quirks, their bad habits. Develop relationships with each of the crew (Entropy included!) and uncover dark secrets that could shake the tour to its core... 
+
+Eurostyle. Chill music, hot action, Brit streetscum, French goldenkids, rebels, cops, riots, parties, thieves and martyrs. 
+
+Jack in here, smartboy, and see if you can cut it - Eurostyle.
 
 ### Core Crew
 - [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], the Main Man
