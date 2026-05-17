@@ -7,4 +7,122 @@ body {
   --dg-graph-width: 250px;         /* Default is 250px */
   --dg-graph-height: 500px;        /* Default is 250px */
 
+:root {
+    /* Main Backgrounds */
+    --background-primary: #000000;              /* Pure Dark */
+    --background-secondary: #171A39;            /* Deep Cyber Navy */
+    --background-container: #171A39;
+    
+    /* Typography & Accents */
+    --text-normal: #E2E8F0;                     /* Crisp off-white for readability */
+    --text-muted: #9A9F17;                      /* Muted Olive/Yellow-Green from your tags */
+    --text-accent: #FEE801;                     /* High-Voltage Yellow */
+    --text-accent-hover: #54C1E6;               /* Neon Cyan */
+    
+    /* Interactive Elements & UI */
+    --interactive-accent: #FEE801;
+    --links: #54C1E6;                           /* Cyan links */
+    --links-hover: #FEE801;
+    --nav-item-background-hover: #FEE801;
+    
+    /* Code Blocks & Tables */
+    --code-background: #171A39;
+    --code-text: #FEE801;
+    --table-header-background: #9A9F17;
+    --table-header-text: #FEE801;
+    
+    /* Graph View */
+    --graph-node: #54C1E6;
+    --graph-line: #2E7381;                      /* Muted Teal lines */
+}
+
+/* --- Global Theme Overrides --- */
+
+body {
+    background-color: var(--background-primary) !important;
+    color: var(--text-normal) !important;
+}
+
+/* Sidebar / Navigation adjustments */
+.sidebar, .nav-view, .site-nav {
+    background-color: var(--background-secondary) !important;
+    border-right: 1px solid #39C4B6;            /* Teal structural border */
+}
+
+/* --- CyberGlow Heading Effects --- */
+
+h1, h2, h3, h4, h5, h6 {
+    color: #FEE801 !important;                  /* ITS Yellow headers */
+    font-weight: 700;
+}
+
+/* Neon Cyan Glow for H2, H3, H5, H6 */
+h2, h3, h5, h6 {
+    text-shadow: 0 0 8px #0CD0D0, 0 0 2px #0CD0D0;
+}
+
+/* Distinct Orange-Yellow Glow for H4 */
+h4 {
+    text-shadow: 0 0 8px #FFC400, 0 0 2px #FFC400;
+}
+
+/* --- Lists & Markers --- */
+
+ul {
+    list-style-type: disc;
+}
+
+li::marker {
+    color: #54C1E6 !important;                  /* Cyan list markers */
+}
+
+ol li::marker {
+    color: #54C1E6 !important;                  /* Cyan numbered lists */
+}
+
+/* --- Links & Tags --- */
+
+a.internal-link, a.external-link {
+    color: var(--links) !important;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a.internal-link:hover, a.external-link:hover {
+    color: var(--links-hover) !important;
+    text-shadow: 0 0 5px #FEE801;
+}
+
+/* File Explorer Folders */
+.folder-title {
+    color: #9A9F17 !important;                  /* Closed Folder Color */
+}
+.folder-container.is-open > .folder-title {
+    color: #FEE801 !important;                  /* Open Folder Color */
+}
+
+/* Digital Garden Note Tags */
+.tag {
+    background-color: #9A9F17 !important;
+    color: #000000 !important;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar-thumb {
+    background: #FEE801 !important;             /* Yellow scrollbar tracker */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000 !important;
+}
+
+/* Horizontal Rules */
+hr {
+    border-color: #FEE801 !important;
+    box-shadow: 0 0 4px #FEE801;
+    
 }
