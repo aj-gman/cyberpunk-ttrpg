@@ -16,6 +16,6 @@ Vaporware is popular with [[Rules/CPRED/Roles/Netrunner\|'runners]] as **it incr
 - **Alienation & Egotism:** +d6 on [[Rules/CPRED/Cyberware/Cyberware#Cyberpsychosis\|Cyberpsychosis Tracker]]
 - **Test Addiction:** [[Rules/CPRED/Difficulty Rating\|Professional/Heroic]] depending on ingestion ([hookah](https://en.wikipedia.org/wiki/Hookah)/[slap patch](https://en.wikipedia.org/wiki/Transdermal_patch))  
 
-### Cumulative Effects
+### After Effects
 - **After effects:** Hunger (INT-8 or EAT. If eat, suffer from [[Rules/CPRED/Drugs/Drug Effects/Drowsiness\|Drowsiness]], -8 Perception, -4 INT, -2 REF)
 - **Flashbacks** (test COOL or stunned for 1 round, twice per dose taken)

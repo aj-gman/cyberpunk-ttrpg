@@ -10,4 +10,4 @@
 
 
 ## TO DO
-- [ ] Kill Jack Entropy
+- [ ] Clean up certain webpages where links are provided in strange places ([[Rules/CPRED/Combat/Combat\|Combat]]), or hide these links using quote-marking (>)
