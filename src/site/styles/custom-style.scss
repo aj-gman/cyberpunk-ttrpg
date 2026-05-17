@@ -125,4 +125,48 @@ hr {
     border-color: #FEE801 !important;
     box-shadow: 0 0 4px #FEE801;
 }
+    /* Sidebar/Navigation Links */
+.nav-view a, 
+.site-nav a, 
+.nav-link,
+.file-title {
+    color: #54C1E6 !important;
+    transition: color 0.2s ease;
+}
+
+/* Hover effect for sidebar links */
+.nav-view a:hover, 
+.site-nav a:hover, 
+.nav-link:hover,
+.file-title:hover {
+    color: #FEE801 !important; /* Turns yellow on hover */
+    text-shadow: 0 0 8px #FEE801;
+}
+
+/* Folder Titles and Icons */
+.folder-title,
+.folder-icon,
+.nav-folder-title {
+    color: #FEE801 !important;
+}
+
+/* Sidebar Indentation/Connection Lines */
+.folder-container, 
+.nav-folder,
+.file-tree-indent-line {
+    border-left: 1px solid #FEE801 !important;
+}
+
+/* If your template uses collapse buttons/arrows */
+.collapse-icon svg {
+    stroke: #FEE801 !important;
+    fill: #FEE801 !important;
+}
+    .nav-view a, 
+.site-nav a, 
+.nav-link,
+.file-title {
+    color: #54C1E6 !important;
+    transition: color 0.2s ease;
+}
 }
