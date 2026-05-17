@@ -6,56 +6,49 @@
 
 <mark style="background: #fee801;">MAIN RULE:</mark> Cyberware **is activated**. When doing so, it exponentially lowers the [[Rules/CPRED/Difficulty Rating\|Difficulty Rating]] of a relevant roll. Each Cyberware has a [[Rules/CPRED/Quality\|Quality]] value (from 1 to 5) that determines how much the [[Rules/CPRED/Difficulty Rating\|DR]] is lowered by, in [[Rules/CPRED/Difficulty Rating\|DR bands]][^3][^5]. 
 
-Before resolving the check, the player adds +Quality[^8] to his Cyberpsychosis tracker, a [[Rules/Homebrew\|Homebrew]] element marked down under Addiction in the Character Sheet. 
-If the Cyberpsychosis final value is higher than the player's current Humanity (WILL+EMP), they roll a d10 to [[Rules/CPRED/Cyberware#Cyberpsychosis\|determine the consequences]] after attempting their roll. 
+Before resolving the check, the player adds **+[[Rules/CPRED/Quality\|Quality]]**[^8] to his Cyberpsychosis tracker, a [[Rules/Homebrew\|Homebrew]] element marked down under Addiction in the Character Sheet. 
+If the Cyberpsychosis final value is higher than the player's current [[Rules/CPRED/Humanity\|Humanity]] (=WILL+EMP), they roll a d10 to see what [[Cyberpsychosis Symptom\|Cyberpsychosis Symptom]] they experience. 
 
-<mark style="background: #fee801;">WARNING!</mark> This overwrites standard Cyberware rules, since it modifies how [[Rules/CPRED/Humanity\|Humanity]] is calculated. Apart from [[Rules/CPRED/Cyberware#Exotic Cyberware\|specific edge cases]][^24], most Cyberware only interacts with [[Rules/CPRED/Humanity\|Humanity]] upon usage, not on installation. 
+<mark style="background: #fee801;">WARNING!</mark> This overwrites standard Cyberware rules, since it modifies how [[Rules/CPRED/Humanity\|Humanity]] is calculated. Apart from [[Rules/CPRED/Cyberware#Exotic Cyberware\|specific edge cases]][^24], **most Cyberware only interacts with [[Rules/CPRED/Humanity\|Humanity]] upon usage, not on installation.** 
 
-For examples on every Cyberware option, see [[Rules/CPRED/Cyberware Types\|Cyberware Types]].
+> *For examples on every Cyberware option, see [[Rules/CPRED/Cyberware Types\|Cyberware Types]].*
 
 ### Core Rules
-There are **10 classes of Cyberware**, specifically adapted from Cyberpunk 2077's system, which outline the 10 "core powers" that bionic enhancement can grant. Under each class, different Cyberware can be chosen[^6], **up to a maximum of 3 slots per type[^7].** Each class alters the gameplay significantly by itself.
+There are **10 classes of Cyberware**, specifically adapted from Cyberpunk 2077's system, which outline the 10 "core powers" that bionic enhancement can grant. Under each class, different Cyberware can be chosen[^6], **up to a maximum of 3 slots per type[^7].**
 
-Each Cyberware has a [[Rules/CPRED/Quality\|Quality]] attribute ranging from **1 to 5**, determining their effectiveness at their given task.
+**Each Cyberware has a [[Rules/CPRED/Quality\|Quality]] attribute ranging from 1 to 5, determining their effectiveness at their given task.**
 
 ##### Starting Cyberware
-A starting character may buy as many individual pieces of [[Rules/CPRED/Cyberware\|Cyberware]] as they desire, up to their starting eurodollars. **For the starting Cyberware,** use the minimum price in the price bands of [[Rules/CPRED/Quality\|Quality]] to value each implant based on the number of points spent in class, from 50eb (Costly) for [[Rules/CPRED/Quality\|Quality]] 1 to 5000 eb (Luxury) for [[Rules/CPRED/Quality\|Quality]] 5. The price for future implants can vary depending on availability, quality etc., but should still be in the corresponding price range.
+New characters may buy as many individual pieces of [[Rules/CPRED/Cyberware\|Cyberware]] as they desire, up to their starting eurodollars. **For the starting [[Rules/CPRED/Cyberware\|Cyberware]],** use the minimum price in the desired [[Rules/CPRED/Quality\|Quality band]] to value each implant based on the number of points spent in class, from **50eb (Costly) for [[Rules/CPRED/Quality\|Quality]] 1** to **5000 eb (Luxury) for [[Rules/CPRED/Quality\|Quality]] 5.** 
 
 ##### Upgrading Cyberware
 **Upgrading Cyberware** requires going to a proficient [[Rules/CPRED/Roles/Medtechie\|Ripperdoc]] and paying a sum equal to the minimum cost of the [[Rules/CPRED/Quality\|next price band]]. Some [[Rules/CPRED/Roles/Medtechie\|Ripperdocs]] may be specialized in certain types of surgeries, so finding the right one for your needs may be difficult in some places.
 
+##### Acquiring Cyberware
+
 
 ### Cyberpsychosis
-For more about the in-universe lore of Cyberpsychosis, see [[Lore/Others/Cyberpsychosis\|this page]].
+> For more about the lore of *Cyberpsychosis*, see [[Lore/Others/Cyberpsychosis\|this page]].
 
-<mark style="background: #fee801;">MAIN RULE:</mark> Mechanically, symptoms of Cyberpsychosis begin manifesting once the player's Cyberpsychosis exceeds their [[Rules/CPRED/Humanity\|Humanity]] (=WILL+EMP). Upon this occurrence, players roll a d10. **If the result is higher than 5, a Cyberpsychosis Symptom occurs.**
+<mark style="background: #fee801;">MAIN RULE:</mark> Mechanically, symptoms of Cyberpsychosis begin manifesting once the player's **Cyberpsychosis Tracker** exceeds their [[Rules/CPRED/Humanity\|Humanity]] (=WILL+EMP). Upon this occurrence, players roll a d10. **If the result is higher than 5, a [[Cyberpsychosis Symptom\|Cyberpsychosis Symptom]] occurs.**
 
 The severity of the symptom is proportional to this result: higher values indicate worse symptoms like [[Lore/Others/Cyberpsychosis\|Cy-rage]], while lower values may be something as simple as a nosebleed.
 
-The Cyberpsychosis Tracker's value decays over time (1d6/week), when having positive human interaction (1d6-2d6) or when using Cyberpsychosis-specific medication (see [[Rules/CPRED/Drugs/Omega Blockers\|Omega Blockers]]), which can be used in Therapy or as an episode blocker.
+##### Lowering Cyberpsychosis
+- decays naturally over time (1d6/week)
+- decreased through the usage of [[Rules/CPRED/Drugs/Omega Blockers\|Omega Blockers]], a type of drug
+- decreased by going to **Humanity Therapy**
+	- 1d6/session or 3d6/week or 4d6/session in case of emergency therapy procedures
+- decreased by having [[Rules/CPRED/Humanity\|humane interactions]] like talking to a loved one, relaxing, eating a good meal, experiencing love etc.
+- decreased when processing trauma through a **Flashback** scene
 
-- **Optional [[Rules/Homebrew\|Homebrew]] for deeper narrative impact:** the die value determines the strength of a Flashback scene in which the PC either hallucinates something, reminisces about a dead connection or any other element that stirs strong emotions; this can be used to great effect to then explain any strong reaction to the stimuli[^9]
+##### Increasing Cyberpsychosis
+Oftentimes, you'll find yourself pushed over the edge not by the usage of [[Rules/CPRED/Cyberware\|Cyberware]] as outlined in the <mark style="background: #fee801;">Main Rule</mark>, but through the experience of trauma, mental afflictions or drugs.
 
-To keep up with [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]]'s rules:
-- Lowering your Empathy (=Humanity x 10) under 3 still leads to manifestation of Dissociative Disorders symptoms
-- [[Rules/CPRED/Humanity\|Humanity]] loss can still be regained by going to Therapy (2d6/4d6 regain); upon these visits, PCs may also clear 1/2 symptoms depending on the type of Therapy 
-
-##### Symptoms
-These values are based on the d10 rolled if the player, upon adding to their Cyberpsychosis Tracker, exceeds the value of their WILL+EMP.
-
-- **1-4 - nothing**
-- **5 - visible physical damage**
-	- a brief seizure (1-2 turns) or a nosebleed (d6)
-- **6 - withdrawal symptoms** 
-	- scratching, twitching etc. as well as a strong desire to install or use Cyberware; until this need is met, the PC suffers -2 to their COOL and WILL
-- **7 - psychological degradation**
-	- Recurrent nightmares, paranoia, signs of psychosis and even schizotypal behavior, strange beliefs, hallucinations
-- **8 - psycho-physical outburst**
-	- Mild Cy-rage episode, like a verbal conflict, impulsive or aggressive behavior, with immediate control after a brief moment of unawareness
-- **9 - mild physical episode**
-	- Cy-rage episode where severe antisocial behavior is expressed, especially of a violent, aggressive or hostile nature; from this state, the player can struggle to regain control of their character 
-- **10 or greater - severe & violent episode** 
-	- Extreme Cy-rage episode where severe antisocial behavior is expressed, most likely of a violent nature, including hallucinations generated by paranoia; recovery is only possible by shutting down brain functions temporarily (special medication[^10], K.O. or death)
+- using [[Rules/CPRED/Cyberware\|Cyberware]], increased by +[[Rules/CPRED/Quality\|Quality]]
+- installing certain [[Rules/CPRED/Cyberware\|Cyberware]] increased by +[[Rules/CPRED/Quality\|Quality]][^24]
+- taking [[Rules/CPRED/Drugs/Drugs\|Drugs]] and experiencing dehumanizing symptoms (like Paranoia for [[Rules/CPRED/Drugs/SynthCoke\|SynthCoke]])
+- experiencing incredibly stressful/traumatic situations, like war, betrayal, losing a limb, losing a loved one etc.
 
 ### Theoretical Foundations
 *this is game design philosophy. useful for prospecting storytellers*
@@ -95,8 +88,6 @@ Although Cyberpunk 2020 and its newer brother, [[Rules/CPRED/Cyberpunk RED\|Cybe
 
 [^8]: So, when using Kiroshi Deadlock Cyberoptics (Quality 4), the player would add a +4 to the Cyberpsychosis Tracker.
 
-[^9]: See [Maine's hallucinations from Cyberpunk: Edgerunners](https://cyberpunk.fandom.com/wiki/Girl_on_Fire).
-
 [^10]: While [[Lore/Organizations/MAXTAC\|MAXTAC]] could use this on the Cyberpsychos they go up against, in a tactical operation throwing a syringe into a raging maniac's chest isn't quite the most efficient of putting them down.
 
 [^21]: "I try to shatter the glass by using the points I have in Integumentary System. If you'll allow me, my elbow is covered by a thin line of flexible metal, which allows me to break the glass without getting any shards stuck." This would lower the already easy check of Everyday (13) to Simple (9). 
@@ -106,3 +97,5 @@ Although Cyberpunk 2020 and its newer brother, [[Rules/CPRED/Cyberpunk RED\|Cybe
 [^23]: So, upgrading from Arms 3 to 4 with 2 Cyberware installed would cost 1000eb * 2 = 2000eb.
 
 [^24]: In specific situations, like Grafted Muscle & Bone Lace, Cyberware instead substracts its Quality from the user's [[Rules/CPRED/Humanity\|Humanity]] when installed, permanently. Cyberware that behaves like this usually offers "passive" bonuses.
+
+[^25]: 
