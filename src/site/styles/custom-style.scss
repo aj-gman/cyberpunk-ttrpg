@@ -3,11 +3,8 @@ body {
       ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
       IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
    ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+  /* Change the mini local graph size in the sidebar */
+  --dg-graph-width: 500px;         /* Default is 250px */
+  --dg-graph-height: 500px;        /* Default is 250px */
+
 }
