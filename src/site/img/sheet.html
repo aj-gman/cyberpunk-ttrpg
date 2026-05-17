@@ -1,96 +1,569 @@
-<div class="character-sheet-container">
-  <h3>Character Sheet Manager</h3>
-  
-  <!-- File Import -->
-  <div style="margin-bottom: 20px;">
-    <label for="importFile"><strong>Load Character (.json):</strong></label>
-    <input type="file" id="importFile" accept=".json">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberpunk Red Interactive Sheet</title>
+  <style>
+    :root {
+      --bg-color: #0d0f12;
+      --panel-bg: #161920;
+      --accent-color: #ff0055;
+      --neon-cyan: #00f0ff;
+      --text-color: #e2e8f0;
+      --border-color: #2d3748;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 0;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 5px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--panel-bg);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .btn {
+      background: transparent;
+      color: var(--neon-cyan);
+      border: 1px solid var(--neon-cyan);
+      padding: 8px 16px;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background: var(--neon-cyan);
+      color: #000;
+      box-shadow: 0 0 10px var(--neon-cyan);
+    }
+
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      .grid-layout { grid-template-columns: 1fr; }
+    }
+
+    .panel {
+      background: var(--panel-bg);
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* Stats Grid Layout */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .stat-box {
+      background: #222630;
+      border: 1px solid var(--neon-cyan);
+      text-align: center;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .stat-box label {
+      display: block;
+      font-size: 12px;
+      color: var(--neon-cyan);
+      font-weight: bold;
+    }
+    .stat-box input {
+      width: 80%;
+      background: transparent;
+      border: none;
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Skills Table Design matching requested 3-column output */
+    .skills-section h3 {
+      color: var(--neon-cyan);
+      border-bottom: 1px dashed var(--neon-cyan);
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .skills-header, .skill-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 10px;
+      align-items: center;
+      padding: 4px 0;
+    }
+    .skills-header {
+      font-weight: bold;
+      border-bottom: 1px solid var(--border-color);
+      color: #a0aec0;
+      font-size: 11px;
+    }
+    .skill-row {
+      border-bottom: 1px solid #1a202c;
+    }
+    .skill-row input {
+      background: #222630;
+      border: 1px solid var(--border-color);
+      color: white;
+      text-align: center;
+      width: 40px;
+      border-radius: 4px;
+    }
+    .skill-base-val {
+      text-align: center;
+      font-weight: bold;
+      color: var(--neon-cyan);
+    }
+
+    /* Effects Panel checkboxes */
+    .effect-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      background: #2a1b24;
+      padding: 10px;
+      border-left: 4px solid var(--accent-color);
+    }
+    .effect-item input { margin-right: 15px; }
+
+    /* Flex Tables for Cyberware & Gear */
+    textarea, table input, .wide-input {
+      width: 100%;
+      background: #1a1d24;
+      border: 1px solid var(--border-color);
+      color: white;
+      padding: 6px;
+      box-sizing: border-box;
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px;}
+    th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left;}
+    th { background: #1f242e; font-size: 12px;}
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div>
+      <span style="color:var(--accent-color); font-weight:bold;">DATA TERMINAL //</span>
+      <input type="text" id="charName" value="Chome_Runner_77" style="background:transparent; border:none; color:white; font-size:16px; font-weight:bold; border-bottom:1px solid #444;">
+    </div>
+    <div>
+      <label class="btn" style="margin-right: 10px; padding: 7px 15px; display:inline-block;">
+        Import JSON <input type="file" id="importFile" accept=".json" style="display:none;">
+      </label>
+      <button class="btn" id="exportBtn">Export JSON</button>
+    </div>
   </div>
 
-  <hr>
-
-  <!-- Character Fields -->
-  <form id="characterForm">
+  <div class="grid-layout">
+    
     <div>
-      <label>Character Name:</label>
-      <input type="text" id="charName" value="Hero">
-    </div>
-    <br>
-    <div>
-      <label>Strength (STR):</label>
-      <input type="number" id="statStr" value="10">
-    </div>
-    <div>
-      <label>Dexterity (DEX):</label>
-      <input type="number" id="statDex" value="10">
-    </div>
-    <br>
-    <div>
-      <label>Inventory / Notes:</label><br>
-      <textarea id="inventory" rows="4" cols="30">Starting gear...</textarea>
-    </div>
-  </form>
+      <div class="panel">
+        <h2>Core Attributes</h2>
+        <div class="stats-grid">
+          <div class="stat-box"><label>INT</label><input type="number" id="stat-int" value="6"></div>
+          <div class="stat-box"><label>REF</label><input type="number" id="stat-ref" value="6"></div>
+          <div class="stat-box"><label>DEX</label><input type="number" id="stat-dex" value="6"></div>
+          <div class="stat-box"><label>TECH</label><input type="number" id="stat-tech" value="6"></div>
+          <div class="stat-box"><label>COOL</label><input type="number" id="stat-cool" value="6"></div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-box"><label>WILL</label><input type="number" id="stat-will" value="6"></div>
+          <div class="stat-box"><label>LUCK</label><input type="number" id="stat-luck" value="6"></div>
+          <div class="stat-box"><label>MOVE</label><input type="number" id="stat-move" value="6"></div>
+          <div class="stat-box"><label>BODY</label><input type="number" id="stat-body" value="6"></div>
+          <div class="stat-box"><label>EMP</label><input type="number" id="stat-emp" value="6"></div>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:15px;">
+          <div class="stat-box" style="flex:1;"><label>HP (Max)</label><input type="number" id="hp-max" value="40"></div>
+          <div class="stat-box" style="flex:1;"><label>Current HP</label><input type="number" id="hp-curr" value="40"></div>
+          <div class="stat-box" style="flex:1;"><label>Humanity</label><input type="number" id="humanity" value="60"></div>
+        </div>
+      </div>
 
-  <hr>
+      <div class="panel">
+        <h2>Active Status & Effects</h2>
+        <div class="effect-item">
+          <input type="checkbox" id="eff-wounded">
+          <div>
+            <strong>Seriously Wounded</strong><br>
+            <small style="color:#aaa;">-2 to all actions when current HP is below half.</small>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:15px;">
+          <label style="font-size:12px;"><strong>Armor Armor Penalty:</strong></label>
+          <input type="number" id="eff-armor-penalty" value="0" style="width:60px; background:#222630; border:1px solid var(--border-color); color:white; text-align:center;">
+          <small style="color:#aaa;">Applies penalty to REF, DEX, and MOVE.</small>
+        </div>
+      </div>
 
-  <!-- File Export -->
-  <button type="button" id="exportBtn" style="padding: 10px 20px; cursor: pointer;">
-    Export / Save Character
-  </button>
-</div>
-
-<script>
-  // --- IMPORT LOGIC ---
-  document.getElementById('importFile').addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = function(evt) {
-      try {
-        const characterData = JSON.parse(evt.target.result);
+      <div class="panel">
+        <h2>Weapons & Armor Matrix</h2>
+        <h3>Weapons</h3>
+        <table>
+          <thead>
+            <tr><th>Weapon</th><th>Dmg</th><th>Ammo</th><th>ROF</th><th>Notes</th></tr>
+          </thead>
+          <tbody id="weapons-list">
+            <tr>
+              <td><input type="text" class="wide-input" value="Heavy Pistol"></td>
+              <td><input type="text" class="wide-input" value="3d6"></td>
+              <td><input type="text" class="wide-input" value="8"></td>
+              <td><input type="text" class="wide-input" value="2"></td>
+              <td><input type="text" class="wide-input" value="Standard"></td>
+            </tr>
+          </tbody>
+        </table>
         
-        // Populate the form fields with the JSON data
-        if(characterData.name) document.getElementById('charName').value = characterData.name;
-        if(characterData.str) document.getElementById('statStr').value = characterData.str;
-        if(characterData.dex) document.getElementById('statDex').value = characterData.dex;
-        if(characterData.inventory) document.getElementById('inventory').value = characterData.inventory;
+        <h3>Armor Tracking</h3>
+        <table>
+          <thead>
+            <tr><th>Location</th><th>SP Rating</th><th>Current Value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Head</td><td><input type="number" value="11"></td><td><input type="number" value="11"></td></tr>
+            <tr><td>Body</td><td><input type="number" value="11"></td><td><input type="number" value="11"></td></tr>
+            <tr><td>Shield</td><td><input type="number" value="0"></td><td><input type="number" value="0"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h2>Inventory / Gear Manifest</h2>
+        <textarea id="inventory" rows="6" placeholder="Agent, Carryall, Heavy ripstop nylon bags, ammo, cash etc..."></textarea>
+        <h3 style="margin-top:15px;">Notes & Lifepath</h3>
+        <textarea id="notes" rows="4" placeholder="Cultural Origin, Personality traits, Goals..."></textarea>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Skills Grid (3-Column Base Engine)</h2>
+      <div class="skills-header">
+        <div>SKILL NAME (GOVERNING STAT)</div>
+        <div style="text-align:center;">LVL</div>
+        <div style="text-align:center;">STAT</div>
+        <div style="text-align:center;">BASE</div>
+      </div>
+
+      <div class="skills-section">
+        <h3>Awareness Skills</h3>
+        <div class="skill-row" data-stat="will"><div>Concentration (WILL)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Conceal/Reveal Object (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Lip Reading (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Perception (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Tracking (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+      </div>
+
+      <div class="skills-section">
+        <h3>Education Skills</h3>
+        <div class="skill-row" data-stat="int"><div>Language: Streetslang (INT)</div><input type="number" value="2"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Language: Origin (INT)</div><input type="number" value="4"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Accounting (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Animal Handling (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Bureaucracy (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Business (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Composition (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Criminology (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Cryptography (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Deduction (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Education (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Gamble (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Library Search (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Local Expert (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Science (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Tactics (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="int"><div>Wilderness Survival (INT)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+      </div>
+
+      <div class="skills-section">
+        <h3>Control Skills</h3>
+        <div class="skill-row" data-stat="ref"><div>Drive Land Vehicle (REF)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="ref"><div>Pilot Air Vehicle (x2) (REF)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="ref"><div>Pilot Sea Vehicle (REF)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="ref"><div>Riding (REF)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+      </div>
+
+      <div class="skills-section">
+        <h3>Fighting Skills</h3>
+        <div class="skill-row" data-stat="dex"><div>Brawling (DEX)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="dex"><div>Evasion (DEX)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="dex"><div>Martial Arts (x2) (DEX)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="dex"><div>Melee Weapon (DEX)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+      </div>
+
+      <div class="skills-section">
+        <h3>Performance Skills</h3>
+        <div class="skill-row" data-stat="cool"><div>Acting (COOL)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Play Instrument (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Paint/Draw/Sculpt (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+      </div>
+
+      <div class="skills-section">
+        <h3>Ranged Weapon Skills</h3>
+        <div class="skill-row" data-stat="ref"><div>Archery (REF)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="ref"><div>Autofire (x2) (REF)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="ref"><div>Handgun (REF)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="ref"><div>Heavy Weapons (x2) (REF)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="ref"><div>Shoulder Arms (REF)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+      </div>
+
+      <div class="skills-section">
+        <h3>Social Skills</h3>
+        <div class="skill-row" data-stat="cool"><div>Bribery (COOL)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="emp"><div>Conversation (EMP)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="emp"><div>Human Perception (EMP)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="cool"><div>Interrogation (COOL)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="cool"><div>Persuasion (COOL)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="cool"><div>Personal Grooming (COOL)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="cool"><div>Streetwise (COOL)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="cool"><div>Trading (COOL)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="cool"><div>Wardrobe & Style (COOL)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+      </div>
+
+      <div class="skills-section">
+        <h3>Body Skills</h3>
+        <div class="skill-row" data-stat="dex"><div>Athletics (DEX)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="dex"><div>Contortionist (DEX)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="dex"><div>Dance (DEX)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="will"><div>Endurance (WILL)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="will"><div>Resist Torture/Drugs (WILL)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="dex"><div>Stealth (DEX)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+      </div>
+
+      <div class="skills-section">
+        <h3>Technique Skills</h3>
+        <div class="skill-row" data-stat="tech"><div>Air Vehicle Tech (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Basic Tech (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Cybertech (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Demolitions (x2) (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Electronics/Security Tech (x2) (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>First Aid (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Forgery (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Land Vehicle Tech (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Paramedic (x2) (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Photography/Film (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Pick Lock (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Pick Pocket (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Sea Vehicle Tech (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+        <div class="skill-row" data-stat="tech"><div>Weaponstech (TECH)</div><input type="number" value="0"><span>0</span><div class="skill-base-val">0</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:20px;">
+    <h2>Cyberware Implants & Systems</h2>
+    <table id="cyberware-table">
+      <thead>
+        <tr><th style="width:250px;">System Location</th><th>Hardware Manifest / Installed Upgrades / Data Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Neural / Operating System</strong></td><td><input type="text" value="None"></td></tr>
+        <tr><td><strong>Frontal Cortex</strong></td><td><input type="text" value="None"></td></tr>
+        <tr><td><strong>Nervous System</strong></td><td><input type="text" value="None"></td></tr>
+        <tr><td><strong>Face / Cyberoptics / Audio</strong></td><td><input type="text" value="None"></td></tr>
+        <tr><td><strong>Integumentary (Skin)</strong></td><td><input type="text" value="Subdermal Armor (SP 7)"></td></tr>
+        <tr><td><strong>Skeleton</strong></td><td><input type="text" value="None"></td></tr>
+        <tr><td><strong>Circulatory System</strong></td><td><input type="text" value="None"></td></tr>
+        <tr><td><strong>Right Arm / Left Arm</strong></td><td><input type="text" value="None"></td></tr>
+        <tr><td><strong>Right Hand / Left Hand</strong></td><td><input type="text" value="None"></td></tr>
+        <tr><td><strong>Right Leg / Left Leg</strong></td><td><input type="text" value="None"></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // --- REALTIME REACTIVE CALCULATION ENGINE ---
+    function updateSheetMath() {
+      // Fetch Raw Stats
+      const stats = {
+        int: parseInt(document.getElementById('stat-int').value) || 0,
+        ref: parseInt(document.getElementById('stat-ref').value) || 0,
+        dex: parseInt(document.getElementById('stat-dex').value) || 0,
+        tech: parseInt(document.getElementById('stat-tech').value) || 0,
+        cool: parseInt(document.getElementById('stat-cool').value) || 0,
+        will: parseInt(document.getElementById('stat-will').value) || 0,
+        luck: parseInt(document.getElementById('stat-luck').value) || 0,
+        move: parseInt(document.getElementById('stat-move').value) || 0,
+        body: parseInt(document.getElementById('stat-body').value) || 0,
+        emp: parseInt(document.getElementById('stat-emp').value) || 0
+      };
+
+      // Extract Active Status modifiers
+      const armorPenalty = parseInt(document.getElementById('eff-armor-penalty').value) || 0;
+      const isSeriouslyWounded = document.getElementById('eff-wounded').checked;
+
+      // Apply armor penalties directly to physical attributes
+      const processedStats = { ...stats };
+      processedStats.ref = Math.max(0, stats.ref - armorPenalty);
+      processedStats.dex = Math.max(0, stats.dex - armorPenalty);
+      processedStats.move = Math.max(0, stats.move - armorPenalty);
+
+      // Loop over every skill element inside the 3-column UI matrix
+      document.querySelectorAll('.skill-row').forEach(row => {
+        const statKey = row.getAttribute('data-stat');
+        const currentStatValue = processedStats[statKey];
         
-        alert("Character loaded successfully!");
-      } catch (error) {
-        alert("Error parsing JSON file. Make sure it's a valid character sheet.");
-      }
-    };
-    reader.readAsText(file);
-  });
+        // Find input elements inside row
+        const lvlInput = row.querySelector('input');
+        const statDisplay = row.querySelector('span');
+        const baseDisplay = row.querySelector('.skill-base-val');
 
-  // --- EXPORT LOGIC ---
-  document.getElementById('exportBtn').addEventListener('click', function() {
-    // Gather data from form
-    const characterData = {
-      name: document.getElementById('charName').value,
-      str: parseInt(document.getElementById('statStr').value) || 0,
-      dex: parseInt(document.getElementById('statDex').value) || 0,
-      inventory: document.getElementById('inventory').value,
-      lastSaved: new Date().toISOString()
-    };
+        const lvl = parseInt(lvlInput.value) || 0;
+        
+        // Show the active stat value inside the central column
+        statDisplay.innerText = currentStatValue;
 
-    // Convert object to JSON string
-    const jsonString = JSON.stringify(characterData, null, 2);
-    
-    // Create a Blob and trigger download
-    const blob = new Blob([jsonString], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    
-    const a = document.createElement('a');
-    a.href = url;
-    // Name the file based on the character name
-    a.download = `${characterData.name.replace(/\s+/g, '_')}_sheet.json`;
-    document.body.appendChild(a);
-    a.click();
-    
-    // Clean up
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  });
-</script>
+        // Base Action calculation engine
+        let baseValue = lvl + currentStatValue;
+        if (isSeriouslyWounded) {
+          baseValue -= 2;
+        }
+
+        baseDisplay.innerText = baseValue;
+      });
+    }
+
+    // Bind event tracking handlers across the document
+    document.querySelectorAll('input, checkbox').forEach(element => {
+      element.addEventListener('input', updateSheetMath);
+      element.addEventListener('change', updateSheetMath);
+    });
+
+    // Run math instantly upon boot-up
+    window.addEventListener('DOMContentLoaded', updateSheetMath);
+
+    // --- UNIVERSAL IMPORT / EXPORT OPERATIONS ---
+    document.getElementById('exportBtn').addEventListener('click', () => {
+      const dataOut = {
+        metaName: document.getElementById('charName').value,
+        stats: {
+          int: document.getElementById('stat-int').value,
+          ref: document.getElementById('stat-ref').value,
+          dex: document.getElementById('stat-dex').value,
+          tech: document.getElementById('stat-tech').value,
+          cool: document.getElementById('stat-cool').value,
+          will: document.getElementById('stat-will').value,
+          luck: document.getElementById('stat-luck').value,
+          move: document.getElementById('stat-move').value,
+          body: document.getElementById('stat-body').value,
+          emp: document.getElementById('stat-emp').value,
+        },
+        hpMax: document.getElementById('hp-max').value,
+        hpCurr: document.getElementById('hp-curr').value,
+        humanity: document.getElementById('humanity').value,
+        seriouslyWounded: document.getElementById('eff-wounded').checked,
+        armorPenalty: document.getElementById('eff-armor-penalty').value,
+        inventory: document.getElementById('inventory').value,
+        notes: document.getElementById('notes').value,
+        skills: [],
+        cyberware: []
+      };
+
+      // Package Skills
+      document.querySelectorAll('.skill-row').forEach(row => {
+        dataOut.skills.push({
+          name: row.querySelector('div').innerText,
+          lvl: row.querySelector('input').value
+        });
+      });
+
+      // Package Cyberware rows
+      document.querySelectorAll('#cyberware-table tbody tr').forEach(row => {
+        dataOut.cyberware.push({
+          loc: row.querySelector('td strong').innerText,
+          val: row.querySelector('input').value
+        });
+      });
+
+      // Trigger standard file compilation download
+      const blob = new Blob([JSON.stringify(dataOut, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const tempLink = document.createElement('a');
+      tempLink.href = url;
+      tempLink.download = `${dataOut.metaName.replace(/\s+/g, '_')}_cyberpunk_red.json`;
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('importFile').addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        try {
+          const incoming = JSON.parse(evt.target.result);
+          
+          if(incoming.metaName) document.getElementById('charName').value = incoming.metaName;
+          
+          // Re-populate individual core values
+          for (let key in incoming.stats) {
+            const el = document.getElementById(`stat-${key}`);
+            if(el) el.value = incoming.stats[key];
+          }
+
+          if(incoming.hpMax) document.getElementById('hp-max').value = incoming.hpMax;
+          if(incoming.hpCurr) document.getElementById('hp-curr').value = incoming.hpCurr;
+          if(incoming.humanity) document.getElementById('humanity').value = incoming.humanity;
+          if(incoming.seriouslyWounded !== undefined) document.getElementById('eff-wounded').checked = incoming.seriouslyWounded;
+          if(incoming.armorPenalty) document.getElementById('eff-armor-penalty').value = incoming.armorPenalty;
+          if(incoming.inventory) document.getElementById('inventory').value = incoming.inventory;
+          if(incoming.notes) document.getElementById('notes').value = incoming.notes;
+
+          // Hydrate Skill rows back
+          if(incoming.skills) {
+            document.querySelectorAll('.skill-row').forEach(row => {
+              const matchedSkill = incoming.skills.find(s => s.name === row.querySelector('div').innerText);
+              if(matchedSkill) row.querySelector('input').value = matchedSkill.lvl;
+            });
+          }
+
+          // Hydrate Cyberware records back
+          if(incoming.cyberware) {
+            document.querySelectorAll('#cyberware-table tbody tr').forEach(row => {
+              const matchedCyber = incoming.cyberware.find(c => c.loc === row.querySelector('td strong').innerText);
+              if(matchedCyber) row.querySelector('input').value = matchedCyber.val;
+            });
+          }
+
+          updateSheetMath();
+          alert("Systems Loaded! Core Matrix Synced.");
+        } catch (error) {
+          alert("Corrupt JSON structure. Network handshake broken.");
+        }
+      };
+      reader.readAsText(file);
+    });
+  </script>
+</body>
+</html>
