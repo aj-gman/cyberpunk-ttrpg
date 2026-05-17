@@ -1,90 +1,10 @@
 {
   "/": [
+    "Eurotour",
+    "Organizations",
     "Lore",
     "Rules",
-    "Eurotour",
     "Homepage"
-  ],
-  "/Lore": [
-    "Organizations",
-    "Others"
-  ],
-  "/Lore/Organizations": [
-    "Corporations",
-    "MLA",
-    "PKY"
-  ],
-  "/Lore/Organizations/Corporations": [
-    "Arasaka",
-    "Budget Arms",
-    "CINO",
-    "Constitutional Arms",
-    "Dai Lung",
-    "Eurobank",
-    "Kang Tao",
-    "Kendachi",
-    "Malorian Arms",
-    "Militech",
-    "OTEC",
-    "Petrochem",
-    "Seal GmbH",
-    "Techtronika",
-    "Tsunami Arms",
-    "Wortrac",
-    "SovOil"
-  ],
-  "/Lore/Others": [
-    "Cyberpsychosis",
-    "EYE"
-  ],
-  "/Rules": [
-    "CPRED",
-    "Homebrew"
-  ],
-  "/Rules/CPRED": [
-    "Combat",
-    "Drugs",
-    "Cyberware",
-    "Difficulty Rating",
-    "Quality",
-    "Netrunning"
-  ],
-  "/Rules/CPRED/Combat": [
-    "Combat",
-    "Gun Generator",
-    "Power",
-    "Smart",
-    "Tech",
-    "Critical Injuries"
-  ],
-  "/Rules/CPRED/Drugs": [
-    "Drug Effects",
-    "Black Lace",
-    "Boost",
-    "Drugs",
-    "Omega Blockers",
-    "SynthCoke",
-    "Vaporware",
-    "Weed",
-    "Wireheading"
-  ],
-  "/Rules/CPRED/Drugs/Drug Effects": [
-    "Drowsiness",
-    "Hunger",
-    "Psychedelic",
-    "Blank",
-    "Nerve Degeneration"
-  ],
-  "/Rules/CPRED/Cyberware": [
-    "Cyberware",
-    "Cyberware Types",
-    "Humanity"
-  ],
-  "/Rules/CPRED/Netrunning": [
-    "ICE",
-    "Netrunner Gear",
-    "Netrunning",
-    "Quickhacks"
   ],
   "/Eurotour": [
     "Characters",
@@ -107,5 +27,82 @@
   "/Eurotour/News": [
     "Glamorous Deaths in the Swiss Alps",
     "Nomad Rockstars, Beware!"
+  ],
+  "/Organizations": [
+    "Corporations",
+    "MLA",
+    "PKY"
+  ],
+  "/Organizations/Corporations": [
+    "Arasaka",
+    "Budget Arms",
+    "CINO",
+    "Constitutional Arms",
+    "Dai Lung",
+    "Eurobank",
+    "Kang Tao",
+    "Kendachi",
+    "Malorian Arms",
+    "Militech",
+    "OTEC",
+    "Petrochem",
+    "Seal GmbH",
+    "SovOil",
+    "Techtronika",
+    "Tsunami Arms",
+    "Wortrac"
+  ],
+  "/Lore": [
+    "Others"
+  ],
+  "/Lore/Others": [
+    "Cyberpsychosis",
+    "EYE"
+  ],
+  "/Rules": [
+    "Homebrew",
+    "Combat",
+    "Cyberware",
+    "Drugs",
+    "Netrunning",
+    "Difficulty Rating",
+    "Quality"
+  ],
+  "/Rules/Combat": [
+    "Combat",
+    "Critical Injuries",
+    "Gun Generator",
+    "Power",
+    "Smart",
+    "Tech"
+  ],
+  "/Rules/Cyberware": [
+    "Cyberware",
+    "Cyberware Types",
+    "Humanity"
+  ],
+  "/Rules/Drugs": [
+    "Drug Effects",
+    "Black Lace",
+    "Boost",
+    "Drugs",
+    "Omega Blockers",
+    "SynthCoke",
+    "Vaporware",
+    "Weed",
+    "Wireheading"
+  ],
+  "/Rules/Drugs/Drug Effects": [
+    "Blank",
+    "Drowsiness",
+    "Hunger",
+    "Nerve Degeneration",
+    "Psychedelic"
+  ],
+  "/Rules/Netrunning": [
+    "ICE",
+    "Netrunner Gear",
+    "Netrunning",
+    "Quickhacks"
   ]
 }
