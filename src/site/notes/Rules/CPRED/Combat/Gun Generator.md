@@ -16,6 +16,6 @@ Picks fron the [[Rules/CPRED/Combat/Combat#Gun Brands\|Brands]], [[Rules/CPRED/C
 
 
 ### Generator
-<div><div><b>Brand:</b> <a href="Militech" class="internal-link">Militech</a></div><div><b>Archetype:</b> Heavy SMG</div><div><b>Gun Type:</b> <a href="Power" class="internal-link">Power</a></div><div><b>Price:</b> 150 eb</div></div><button class="gun-gen-btn"><span>Regenerate</span></button>
+<div><div><b>Brand:</b> <a href="Militech" class="internal-link">Militech</a></div><div><b>Archetype:</b> Sniper Rifle</div><div><b>Gun Type:</b> <a href="Power" class="internal-link">Power</a></div><div><b>Price:</b> 750 eb</div></div><button class="gun-gen-btn"><span>Regenerate</span></button>
 
 
