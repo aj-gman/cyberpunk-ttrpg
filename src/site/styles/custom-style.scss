@@ -172,3 +172,44 @@ hr {
     border-color: #FEE801 !important;
     box-shadow: 0 0 4px #FEE801;
 }
+/* ==========================================================================
+   LAYOUT ENGINE CONTROLS (FLUID SCREEN-EDGE SIDEBARS)
+   ========================================================================== */
+
+/* 1. Remove all layout bottlenecks and let the main theme containers touch the edges */
+.theme-container, 
+.content-wrapper,
+.site-layout-wrapper,
+#app {
+    max-width: 100% !important; 
+    width: 100% !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* 2. Force the 3-column Grid to scale dynamically from screen-edge to screen-edge */
+@media (min-width: 1024px) {
+    .site-layout {
+        display: grid !important;
+        
+        /* '1fr' means "Fractional Unit". 
+           This forces the sidebars to expand fluidly to fill ALL remaining space 
+           to the far-left and far-right edges of the screen, while keeping your 
+           center character sheet wide and perfectly readable.
+        */
+        grid-template-columns: 1fr 4.5fr 1fr !important; 
+        
+        width: 100vw !important;         /* Forces full viewport width */
+        max-width: 100vw !important;
+        gap: 20px;
+        margin: 0 !important;
+    }
+
+    /* Target the actual main content element inside the center column */
+    main {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 10px !important;    /* Small padding so text doesn't hug sidebars */
+    }
+}
