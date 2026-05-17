@@ -172,34 +172,3 @@ hr {
     border-color: #FEE801 !important;
     box-shadow: 0 0 4px #FEE801;
 }
-
-/* ==========================================================================
-   LAYOUT ENGINE CONTROLS (STRETCH MAIN BODY / SHRINK SIDEBARS)
-   ========================================================================== */
-
-/* 1. Expand the central content block completely inside its column */
-.theme-container, 
-.content-wrapper, 
-main {
-    max-width: 100% !important; 
-    width: 100% !important;
-    margin: 0 auto !important;
-}
-
-/* 2. Adjust Grid layout on desktops (Safely bypasses body/app tag collisions) */
-@media (min-width: 1024px) {
-    .site-layout {
-        display: grid !important;
-        /* Shrinks sidebars to 15% and widens central note column to 70% */
-        grid-template-columns: 15% 70% 15% !important; 
-        gap: 25px;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-}
-
-/* 3. Allow your interactive character sheet to dynamically match the fluid grid width */
-iframe {
-    width: 100% !important;
-    border: none;
-}
