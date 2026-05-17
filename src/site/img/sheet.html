@@ -259,6 +259,85 @@
         </div>
       </div>
 
+<div class="panel">
+  <h2>Combat Telemetry & Armor Matrix</h2>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+    <div class="stat-box" style="border-color: var(--neon-cyan);">
+      <label>HEAD SP</label>
+      <input type="number" id="sp-head" value="11" min="0">
+    </div>
+    <div class="stat-box" style="border-color: var(--neon-cyan);">
+      <label>BODY SP</label>
+      <input type="number" id="sp-body" value="11" min="0">
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+    <div class="stat-box" style="border-color: var(--accent-yellow);">
+      <label>CURRENT HEALTH</label>
+      <input type="number" id="hp-curr" value="40" min="0">
+    </div>
+    <div class="stat-box" style="border-color: #555;">
+      <label>MAX HEALTH (REF)</label>
+      <input type="text" id="hp-max-display" readonly style="color: #888;" placeholder="Calculated">
+    </div>
+  </div>
+
+  <div style="background: #000; padding: 12px; border: 1px dashed var(--danger-red); border-radius: 4px;">
+    <label style="color: var(--danger-red); font-weight: bold; font-size: 11px; display: block; margin-bottom: 5px;">INCOMING DAMAGE COUNTER</label>
+    <div style="display: flex; gap: 10px;">
+      <input type="number" id="dmg-counter" placeholder="0" min="0" style="flex: 1; font-size: 16px; font-weight: bold; text-align: center; border-color: var(--danger-red);">
+      <button class="btn btn-danger" type="button" onclick="resolveIncomingDamage()" style="flex: 1;">Apply Damage</button>
+    </div>
+    <div id="damage-log" style="margin-top: 8px; font-size: 12px; font-weight: bold; text-align: center; text-transform: uppercase; min-height: 15px;"></div>
+  </div>
+</div>
+
+<div class="panel" style="border-color: #a142ff;">
+  <label style="font-weight: bold; color: #a142ff; cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 14px;">
+    <input type="checkbox" id="toggle-netrunner" onchange="toggleNetrunnerModule(this.checked)" style="width: auto;"> 
+    INITIALIZE NETRUNNER CYBERDECK INTERFACE
+  </label>
+</div>
+
+<div id="netrunner-section" class="panel" style="display: none; border-color: #a142ff;">
+  <h2 style="color: #a142ff; border-color: #a142ff;">Netrunner Deck Sub-Processor</h2>
+  
+  <h3 style="color: var(--neon-cyan); font-size: 13px; margin-top: 15px; border-bottom: 1px solid #444;">Deck Hardware Configuration</h3>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
+    <div class="stat-box" style="border-color: #a142ff;"><label>Hardening</label><input type="number" class="net-cfg" id="cfg-hardening" value="0" min="0" max="3"></div>
+    <div class="stat-box" style="border-color: #a142ff;"><label>Firewall</label><input type="number" class="net-cfg" id="cfg-firewall" value="0" min="0" max="3"></div>
+    <div class="stat-box" style="border-color: #a142ff;"><label>Processor</label><input type="number" class="net-cfg" id="cfg-processor" value="0" min="0" max="3"></div>
+    <div class="stat-box" style="border-color: #a142ff;"><label>Stealth</label><input type="number" class="net-cfg" id="cfg-stealth" value="0" min="0" max="3"></div>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+      <h3 style="color: var(--neon-cyan); font-size: 13px; margin: 0; border: none;">Quickhack Memory Slots</h3>
+      <button class="btn" type="button" onclick="addQuickhackSlot()" style="padding: 2px 8px; font-size: 11px; color: #a142ff; border-color: #a142ff;">+ Slot</button>
+    </div>
+    <table>
+      <thead>
+        <tr><th style="width: 80px;">DR Value</th><th>Execution Logs / Notes</th><th style="width: 30px;"></th></tr>
+      </thead>
+      <tbody id="quickhacks-tbody"></tbody>
+    </table>
+  </div>
+
+  <div>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+      <h3 style="color: var(--neon-cyan); font-size: 13px; margin: 0; border: none;">Deck Software Programs Loaded</h3>
+      <button class="btn" type="button" onclick="addProgramSlot()" style="padding: 2px 8px; font-size: 11px; color: #a142ff; border-color: #a142ff;">+ Load Program</button>
+    </div>
+    <table>
+      <thead>
+        <tr><th style="width: 200px;">Program Name</th><th>Subroutine Target Parameters / Notes</th><th style="width: 30px;"></th></tr>
+      </thead>
+      <tbody id="programs-tbody"></tbody>
+    </table>
+  </div>
+</div>
+      
       <div class="panel">
         <h2>Reactive Status Modifier Engine</h2>
         <div class="effects-builder">
@@ -424,6 +503,100 @@
   </div>
 
   <script>
+    // --- COMBAT AND DAMAGE EVALUATION ENGINE ---
+function resolveIncomingDamage() {
+  const dmgCounter = document.getElementById('dmg-counter');
+  const logBox = document.getElementById('damage-log');
+  const damage = parseInt(dmgCounter.value) || 0;
+
+  if (damage <= 0) {
+    logBox.innerText = "No incoming telemetry data.";
+    logBox.style.color = "var(--text-color)";
+    return;
+  }
+
+  // 1. Confirm Targeted Sub-Location
+  const isBody = confirm("Route damage to the BODY?\n\n[OK] = Body Allocation\n[Cancel] = Head Allocation");
+  const targetLocation = isBody ? "body" : "head";
+  
+  const spElement = document.getElementById(`sp-${targetLocation}`);
+  let currentSP = parseInt(spElement.value) || 0;
+
+  // Compute armor bypass penetration values
+  const remainingDamage = damage - currentSP;
+
+  if (remainingDamage <= 0) {
+    // Structural protection absorbed entire kinetic force
+    logBox.innerText = "Armor absorbs damage";
+    logBox.style.color = "var(--neon-cyan)";
+  } else {
+    // Armor breached. Structural ablation required.
+    logBox.innerText = "Armor is ablated";
+    logBox.style.color = "var(--danger-red)";
+
+    // Reduce current tracking health pool
+    const hpCurrElement = document.getElementById('hp-curr');
+    let currentHP = parseInt(hpCurrElement.value) || 0;
+    currentHP = Math.max(0, currentHP - remainingDamage);
+    hpCurrElement.value = currentHP;
+
+    // Check Armor Piercing Multiplier Properties
+    const isArmorPiercing = confirm("Systems Alert: Does the incoming attack asset possess Armor Piercing properties?");
+    const spDeductionValue = isArmorPiercing ? 2 : 1;
+
+    currentSP = Math.max(0, currentSP - spDeductionValue);
+    spElement.value = currentSP;
+  }
+
+  // Reset entry viewport module
+  dmgCounter.value = "";
+  if (typeof updateSheetMath === "function") updateSheetMath();
+}
+
+// --- NETRUNNER CONTEXT INTERFACE MANAGER ---
+function toggleNetrunnerModule(isActive) {
+  const section = document.getElementById('netrunner-section');
+  section.style.display = isActive ? 'block' : 'none';
+}
+
+function addQuickhackSlot(dr="", notes="") {
+  const tbody = document.getElementById('quickhacks-tbody');
+  const tr = document.createElement('tr');
+  tr.className = "net-qh-row";
+  tr.innerHTML = `
+    <td><input type="number" class="qh-dr" value="${dr}" placeholder="0" style="text-align:center;"></td>
+    <td><textarea class="qh-notes" rows="2" placeholder="Quickhack behavior profile...">${notes}</textarea></td>
+    <td style="text-align:center; vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>
+  `;
+  tbody.appendChild(tr);
+}
+
+function addProgramSlot(name="", notes="") {
+  const tbody = document.getElementById('programs-tbody');
+  const tr = document.createElement('tr');
+  tr.className = "net-prog-row";
+  tr.innerHTML = `
+    <td><input type="text" class="prog-name" value="${name}" placeholder="e.g. Sword, Worm"></td>
+    <td><textarea class="prog-notes" rows="2" placeholder="Program memory rules or effect text...">${notes}</textarea></td>
+    <td style="text-align:center; vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>
+  `;
+  tbody.appendChild(tr);
+}
+
+// Hooks to ensure Max Health value mirrors the existing calculated auto-field value instantly
+function synchHealthDisplay() {
+  const autoHpMax = document.getElementById('hp-max');
+  const displayTarget = document.getElementById('hp-max-display');
+  if (autoHpMax && displayTarget) {
+    displayTarget.value = autoHpMax.value;
+  }
+}
+
+// Append background telemetry sync directly inside your standard update looping engine
+document.addEventListener('input', synchHealthDisplay);
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(synchHealthDisplay, 100);
+});
     // System Locations exactly mapped to file specifications
     const cyberGroups = [
       "Operating System", "Frontal Cortex", "Arms", "Hands", 
