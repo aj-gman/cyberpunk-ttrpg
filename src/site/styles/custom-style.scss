@@ -20,6 +20,10 @@ body {
     --background-primary: #000000;              /* Pure Dark */
     --background-secondary: #171A39;            /* Deep Cyber Navy */
     --background-container: #171A39;
+
+    --dg-sidebar-bg: #171A39 !important;             /* Deep Cyber Navy for sidebar background */
+    --dg-background-primary: #000000 !important;     /* Pure Dark for main body */
+    --dg-background-secondary: #171A39 !important;   /* Deep Cyber Navy for secondary panels */
     
     /* Typography & Accents */
     --text-normal: #E2E8F0;                     /* Crisp off-white for readability */
@@ -44,18 +48,24 @@ body {
     --graph-line: #2E7381;                      /* Muted Teal lines */
 }
 
-/* --- Navigation & Sidebar Layout --- */
-
-.sidebar, .nav-view, .site-nav {
-    background-color: var(--background-secondary) !important;
-    border-right: 1px solid #39C4B6;            /* Teal structural border */
+/* Force the sidebar containers and navigation headers to drop the default blue */
+.sidebar, 
+.nav-view, 
+.site-nav,
+.sidebar-container,
+.nav-header {
+    background-color: #171A39 !important;
+    background: #171A39 !important;
+    border-right: 1px solid #39C4B6 !important;     /* Teal structural border */
 }
 
 /* Sidebar/Navigation Links (Electric Turquoise) */
 .nav-view a, 
 .site-nav a, 
 .nav-link,
-.file-title {
+.file-title,
+.nav-file-title,
+.nav-folder-title {
     color: #54C1E6 !important;
     transition: color 0.2s ease;
 }
@@ -64,27 +74,33 @@ body {
 .nav-view a:hover, 
 .site-nav a:hover, 
 .nav-link:hover,
-.file-title:hover {
+.file-title:hover,
+.nav-file-title:hover,
+.nav-folder-title:hover {
     color: #FEE801 !important; 
     text-shadow: 0 0 8px #FEE801;
+    background-color: transparent !important; /* Prevents default blue hover blocks */
 }
 
 /* Folder Titles and Icons (Yellow) */
 .folder-title,
 .folder-icon,
-.nav-folder-title {
+.nav-folder-title,
+.sidebar .folder-title {
     color: #FEE801 !important;
 }
 
 /* Sidebar Indentation/Connection Lines (Yellow) */
 .folder-container, 
 .nav-folder,
-.file-tree-indent-line {
+.file-tree-indent-line,
+.nav-folder-children {
     border-left: 1px solid #FEE801 !important;
 }
 
 /* Collapse buttons/arrows */
-.collapse-icon svg {
+.collapse-icon svg,
+.clickable-icon svg {
     stroke: #FEE801 !important;
     fill: #FEE801 !important;
 }
