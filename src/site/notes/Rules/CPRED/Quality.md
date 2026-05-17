@@ -3,7 +3,7 @@
 ---
 
 In [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]], Quality is measured by the price of a given item (Price Bands). However, Weapon Quality is measured by a three-category system (Poor < Standard < Excellent). 
-[[Rules/CPRED/Cyberware\|Cyberware]] is measured from 1 to 5, starting with Costly (50eb) and ending with Luxury (5000eb).
+[[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] is measured from 1 to 5, starting with Costly (50eb) and ending with Luxury (5000eb).
 
 | Price Bands        | Market Price |
 | :----------------- | :----------: |

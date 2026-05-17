@@ -9,9 +9,9 @@ A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that comes in little plastic 
 - **Strength: 8**
 
 ### Side Effect
-- **Paranoia:** +d6 on [[Rules/CPRED/Cyberware#Cyberpsychosis\|Cyberpsychosis Tracker]]
+- **Paranoia:** +d6 on [[Rules/CPRED/Cyberware/Cyberware#Cyberpsychosis\|Cyberpsychosis Tracker]]
 - **Test Addiction:** [[Rules/CPRED/Difficulty Rating\|Professional]] (17) 
 
 ### After effects
 - **Anxiety, Paranoia**: -4 COOL, Test INT-8 to be able to fall asleep for the next day;
-	- If suffering from lack of sleep, [[Rules/CPRED/Drugs/Drug Effects/Drowsiness\|Drowsiness]];
+	- If suffering from lack of sleep, experience [[Rules/CPRED/Drugs/Drug Effects/Drowsiness\|Drowsiness]];

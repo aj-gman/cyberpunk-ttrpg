@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/rules/cpred/combat/smart/","dg-note-properties":{}}
 ---
 
-**Rule:** Even on a miss, every shot deals minimum damage. User rolls half of the dice pool (rounding down) of the gun's damage. Spending 1 turn for a Called Shot with a [[Rules/CPRED/Cyberware\|Smart Link]] completely negates the penalty (-8).
+**Rule:** Even on a miss, every shot deals minimum damage. User rolls half of the dice pool (rounding down) of the gun's damage. Spending 1 turn for a Called Shot with a [[Rules/CPRED/Cyberware/Cyberware\|Smart Link]] completely negates the penalty (-8).
 
 Smart weapons use gyrojet technology to fire caseless, guided ammo at enemies. This technology was first developed in the 1960s but was unreliable during combat. In [2077](https://cyberpunk.fandom.com/wiki/2077 "2077"), they are efficient and pin-point accurate. Smart weapons are tied to weapon grips and optics to accurately scan and track the movement of targets.
 

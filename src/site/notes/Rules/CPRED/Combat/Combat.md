@@ -75,11 +75,11 @@ Attacker rolls damage. Defender subtracts their SP from the damage. If the resul
 **Railgun technology allows these weapons to punch through cover.** Uncharged, this gun deals 1d6 less than default. Charging (usually for 1 turn), user can fire through Thin Cover, ignoring half of the target's SP and dealing regular damage.
 
 ##### [[Rules/CPRED/Combat/Smart\|Smart]]
-**Use gyrojet technology to fire caseless, guided ammo at enemies.** Even on a miss, every shot deals minimum damage. User rolls half of the dice pool (rounding down) of the gun's damage. Spending 1 turn for a Called Shot with a [[Rules/CPRED/Cyberware\|Smart Link]] completely negates the penalty (-8).
+**Use gyrojet technology to fire caseless, guided ammo at enemies.** Even on a miss, every shot deals minimum damage. User rolls half of the dice pool (rounding down) of the gun's damage. Spending 1 turn for a Called Shot with a [[Rules/CPRED/Cyberware/Cyberware\|Smart Link]] completely negates the penalty (-8).
 
 
 # Melee Weapons
-Although firearms are the most popular choice, melee weapons occupy a niche slot, with knives and blades serving to cut through almost anything with monomolecular blades and blunt objects being a good tool to knock anybody unconscious or ruin some [[Rules/CPRED/Cyberware\|tech]]. Below is an archetype list of melee weapons available in [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]].
+Although firearms are the most popular choice, melee weapons occupy a niche slot, with knives and blades serving to cut through almost anything with monomolecular blades and blunt objects being a good tool to knock anybody unconscious or ruin some [[Rules/CPRED/Cyberware/Cyberware\|tech]]. Below is an archetype list of melee weapons available in [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]].
 
 Melee Weapons cut through armor like butter - when attacking with a melee weapon, the SP value of the defender is reduced by half (rounding down). 
 

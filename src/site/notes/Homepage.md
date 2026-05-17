@@ -15,7 +15,7 @@ Relevant information for the players:
 
 - [[Rules/CPRED/Difficulty Rating\|Difficulty Rating]]
 - [[Rules/CPRED/Quality\|Quality]]
-- [[Rules/CPRED/Cyberware\|Cyberware]]
+- [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]]
 
 # Keep Track of the NEWS
 #news
