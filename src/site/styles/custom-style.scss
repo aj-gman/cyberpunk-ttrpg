@@ -3,10 +3,6 @@
    ========================================================================== */
 
 :root {
-   /* layout changes */
-    --dg-content-max-width: 9999px;   /* Remove center column width cap */
-    --dg-sidebar-max-width: 280px;    /* Right sidebar — adjust to taste */
-    --dg-filetree-width: 240px;       /* Left sidebar — adjust to taste */
     /* Main Backgrounds */
     --background-primary: #000000;              /* Pure Dark */
     --background-secondary: #171A39;            /* Deep Cyber Navy */
@@ -175,4 +171,24 @@ ol li::marker {
 hr {
     border-color: #FEE801 !important;
     box-shadow: 0 0 4px #FEE801;
+}
+
+body {
+    --dg-content-max-width: 9999px;
+    --dg-filetree-gap: 20px;
+    --dg-sidebar-gap: 20px;
+}
+
+.content {
+    max-width: calc(100vw - var(--dg-filetree-min-width) - var(--dg-filetree-gap) - var(--dg-sidebar-max-width) - var(--dg-sidebar-gap) - 40px) !important;
+    margin-left: calc(var(--dg-filetree-min-width) + var(--dg-filetree-gap)) !important;
+    margin-right: calc(var(--dg-sidebar-max-width) + var(--dg-sidebar-gap)) !important;
+}
+
+@media (max-width: 1400px) {
+    .content {
+        max-width: calc(100vw - var(--dg-filetree-width) - 50px) !important;
+        margin-left: calc(var(--dg-filetree-width) + 20px) !important;
+        margin-right: 20px !important;
+    }
 }
