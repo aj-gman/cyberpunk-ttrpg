@@ -172,74 +172,80 @@ hr {
     border-color: #FEE801 !important;
     box-shadow: 0 0 4px #FEE801;
 }
+
 /* ==========================================================================
-   LAYOUT ENGINE CONTROLS (OVERRIDING HARDCODED DIGITAL GARDEN LIMITS)
+   DIGITAL GARDEN SASS LAYOUT OVERRIDES (EDGE-TO-EDGE RESET)
    ========================================================================== */
 
-/* 1. Neutralize the parent window boundaries and completely kill the horizontal scroll bug */
+// 1. Force the absolute root elements to obey strict window viewport widths
 html, 
 body, 
 #app, 
 .site-layout-wrapper {
-    width: 100% !important;
+    width: 100vw !important;
     max-width: 100vw !important;
     margin: 0 !important;
     padding: 0 !important;
-    overflow-x: hidden !important; /* Hard stop for infinite right scrolling */
+    overflow-x: hidden !important; // Absolute block against horizontal right-scrolling
+    box-sizing: border-box !important;
 }
 
-/* 2. Strip out Digital Garden's hardcoded text block margins and constraints */
+// 2. Clear out the built-in Sass flexbox / padding bottlenecks on content blocks
 .theme-container, 
-.content-wrapper,
+.content-wrapper, 
 .content {
-    max-width: 100% !important;
     width: 100% !important;
+    max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    box-sizing: border-box !important;
 }
 
-/* 3. Re-architect the core desktop template grid */
+// 3. Re-compile the structural wrapper into a strict 3-column Grid layout
 @media (min-width: 1024px) {
     .site-layout {
         display: grid !important;
         
-        /* Force explicit structural constraints:
-           Left Sidebar: 16% of screen
-           Right Sidebar: 16% of screen
-           Middle Area: Automatically scales to fit exactly what is left over */
-        grid-template-columns: 16% 1fr 16% !important; 
+        /* Left Sidebar takes 15% of the monitor width.
+           Right Sidebar takes 15% of the monitor width.
+           The '1fr' forces the center column to dynamically scale to fill 
+           EXACTLY what is left over, perfectly binding it to the screen.
+        */
+        grid-template-columns: 15% 1fr 15% !important; 
         
         width: 100% !important;
         max-width: 100% !important;
         gap: 20px !important;
         margin: 0 !important;
+        padding: 0 !important;
         box-sizing: border-box !important;
     }
 
-    /* 4. Force the Sidebars to anchor precisely to the screen margins */
+    // 4. Force the sidebars to occupy 100% of their new 15% grid tracks
     .sidebar, 
     .sidebar-container, 
-    .nav-view {
+    .nav-view,
+    .site-nav-right {
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    /* 5. Force the central note wrapper to stay boxed in track #2 */
+    // 5. Box the central note area cleanly inside grid column #2
     main {
         grid-column: 2 !important;
         width: 100% !important;
-        max-width: 100% !important; /* Prevents text from pushing right */
-        padding: 0 30px !important;  /* Gives your sheet code some breathing room */
+        max-width: 100% !important; 
+        padding: 0 25px !important; // Gives your interactive character sheet breathing room
         box-sizing: border-box !important;
-        overflow-x: hidden !important; 
+        overflow-x: hidden !important; // Safeguard inside the text area
     }
 }
 
-/* 6. Ensure your character sheet iframe respects the boundaries of the middle column */
+// 6. Force your sheet's iframe to calculate its 100% width relative to column #2
 iframe {
     width: 100% !important;
     max-width: 100% !important;
-    border: none;
     box-sizing: border-box !important;
+    border: none;
 }
