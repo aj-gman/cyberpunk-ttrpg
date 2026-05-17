@@ -11,3 +11,4 @@
 
 ## TO DO
 - [ ] Clean up certain webpages where links are provided in strange places ([[Rules/CPRED/Combat/Combat\|Combat]]), or hide these links using quote-marking (>)
+- [ ] Add descriptions to all #role s (currently only [[Rules/CPRED/Roles/Solo\|Solo]])
