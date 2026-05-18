@@ -16,6 +16,6 @@ Picks fron the [[Rules/CPRED/Combat/Combat#Gun Brands\|Brands]], [[Rules/CPRED/C
 
 
 ### Generator
-<div><div><b>Brand:</b> <a href="Militech" class="internal-link">Militech</a></div><div><b>Archetype:</b> Rocket Launcher</div><div><b>Gun Type:</b> <a href="Tech" class="internal-link">Tech</a></div><div><b>Price:</b> 1125 eb</div></div><button class="gun-gen-btn"><span>Regenerate</span></button>
+<div><div><b>Brand:</b> <a href="Dai Lung" class="internal-link">Dai Lung</a></div><div><b>Archetype:</b> Very Heavy Pistol</div><div><b>Gun Type:</b> <a href="Tech" class="internal-link">Tech</a></div><div><b>Price:</b> 75 eb</div></div><button class="gun-gen-btn"><span>Regenerate</span></button>
 
 
