@@ -962,23 +962,22 @@
     });
     
 function previewWikiSearch() {
-    const query = document.getElementById('wiki-search-input').value.trim();
-    if (!query) return;
+  const query = document.getElementById('wiki-search-input').value.trim();
+  if (!query) return;
 
-    const portal = document.getElementById('wiki-hover-portal');
-    const frame = document.getElementById('wiki-frame');
+  const portal = document.getElementById('wiki-hover-portal');
+  const frame = document.getElementById('wiki-frame');
 
-    // Feeds the exact search query into your site's parameter router inside the sandbox portal
-    frame.src = `https://gman-cyberpunk.vercel.app/?search=${encodeURIComponent(query)}`;
-    
-    // Unveils the results overlay instantly
-    portal.style.display = 'flex';
-  }
+  // Routes specifically into the static search template route to trigger the native search UI execution
+  frame.src = `https://gman-cyberpunk.vercel.app/search/?q=${encodeURIComponent(query)}`;
+  
+  portal.style.display = 'flex';
+}
 
-  function closeWikiPortal() {
-    document.getElementById('wiki-hover-portal').style.display = 'none';
-    document.getElementById('wiki-frame').src = ''; // Drops the iframe memory load
-  }
+function closeWikiPortal() {
+  document.getElementById('wiki-hover-portal').style.display = 'none';
+  document.getElementById('wiki-frame').src = '';
+}
   </script>
 </body>
 </html>
