@@ -9,9 +9,21 @@
 	- Updated the Site's CSS to match in colors and vibe to the Obsidian Vault
 - *18.05.2026*
 	- Added a [[z-SITE/Character Sheet\|Character Sheet]] (Work in Progress)
+		Features:
+		- [[Rules/CPRED/Cyberware/Cyberware#Cyberpsychosis\|Cyberpsychosis ]]tracker, [[Rules/CPRED/Cyberware/Humanity\|Humanity]] calculator & full [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] rule implementation
+		- Multiple pages for easy navigation
+		- Armor & Seriously Wounded penalties applied automatically
+		- Damage tracker that ablates armor and removes HP
+		- Pages for notes
 	- Modified margins & padding so website fits on the entire screen instead of defaulting to 4:3
 
 
 ## TO DO
 - [ ] Clean up certain webpages where links are provided in strange places ([[Rules/CPRED/Combat/Combat\|Combat]]), or hide these links using quote-marking (>)
 - [ ] Add descriptions to all #role s (currently only [[Rules/CPRED/Roles/Solo\|Solo]])
+- [ ] [[z-SITE/Character Sheet\|Character Sheet]] needs:
+	- [ ] Reputation (lore or mechanics only?)
+	- [ ] Reputation Events (lore or mechanics only?)
+	- [ ] Improvement Points (?)
+	- [x] make it more pages (Main > Inventory > Cyberware)
+	- [ ] Inventory & Stash
