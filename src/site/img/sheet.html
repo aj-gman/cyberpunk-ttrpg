@@ -292,7 +292,7 @@
       <div>
 
         <div class="panel">
-          <h2>Attributes Matrix</h2>
+          <h2>STATS</h2>
           <div class="stats-row">
             <div class="stat-box"><label>INT</label><input type="number" id="stat-int" value="6"><span class="display-stat-modified" id="mod-int"></span></div>
             <div class="stat-box"><label>REF</label><input type="number" id="stat-ref" value="6"><span class="display-stat-modified" id="mod-ref"></span></div>
@@ -396,8 +396,8 @@
         </div>
 
         <div id="netrunner-section">
-          <h2>NETRUNNER OVERLAY</h2>
-          <h3 style="margin-top:15px;">CYBERDECK CONFIG</h3>
+          <h2>CYBERDECK DIAGNOSTICS</h2>
+          <h3 style="margin-top:15px;">CONFIG</h3>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
             <div class="stat-box"><label>Hardening</label><input type="number" id="cfg-hardening" value="0" min="0" max="3"></div>
             <div class="stat-box"><label>Firewall</label><input type="number" id="cfg-firewall" value="0" min="0" max="3"></div>
@@ -406,7 +406,7 @@
           </div>
           <div style="margin-bottom:20px;">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
-              <h3 style="margin:0;border:none;">Quickhack Memory Slots</h3>
+              <h3 style="margin:0;border:none;">QUICKHACK SLOTS</h3>
               <button class="btn btn-net" type="button" onclick="addQuickhackSlot()" style="padding:2px 8px;font-size:11px;">+ Slot</button>
             </div>
             <table>
@@ -416,7 +416,7 @@
           </div>
           <div>
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
-              <h3 style="margin:0;border:none;">Programs Loaded</h3>
+              <h3 style="margin:0;border:none;">Available Programs</h3>
               <button class="btn btn-net" type="button" onclick="addProgramSlot()" style="padding:2px 8px;font-size:11px;">+ Load</button>
             </div>
             <table>
@@ -429,7 +429,7 @@
       </div>
 
       <div class="panel">
-        <h2>Skills Sub-Processor</h2>
+        <h2>SKILLS</h2>
         
         <div class="skills-master-grid">
 
@@ -528,7 +528,7 @@
           </div>
 
         </div> <div class="skills-header" style="border-bottom: 2px solid var(--accent-yellow); color: var(--accent-yellow); font-size:11px; margin-top:20px;">
-          <div>CUSTOM SKILL MATRIX CREATOR</div>
+          <div>CUSTOM SKILL INSERTER</div>
         </div>
         <div style="display: flex; gap: 6px; margin: 8px 0 0 0; align-items: center; background:#000; padding:8px; border:1px dashed var(--border-color); border-radius:4px;">
           <input type="text" id="custom-skill-name" placeholder="Skill Identifier name..." style="flex: 2; font-size: 11px;">
@@ -555,7 +555,7 @@
     
     <div class="panel">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-        <h2>Inventory Manifest</h2>
+        <h2>INVENTORY & GEAR</h2>
         <button class="btn" type="button" id="addGearBtn">+ Add Item</button>
       </div>
       <div class="currency-panel">
@@ -563,7 +563,7 @@
         <input type="number" id="eurodollars" value="0" style="width:100px;font-weight:bold;color:#fff;border:1px solid #444;text-align:right;padding-right:5px;">
       </div>
       <table style="width:100%;">
-        <thead><tr><th>Item Module</th><th>System Operational Notes</th><th style="width:28px;"></th></tr></thead>
+        <thead><tr><th>Item</th><th>Notes</th><th style="width:28px;"></th></tr></thead>
         <tbody id="gear-tbody"></tbody>
       </table>
     </div>
@@ -571,12 +571,12 @@
 
   <div id="page-cyberware" class="sheet-tab-panel">
     <div class="panel">
-      <h2>Cyberware Implant Matrix (3 Slots Per System Node)</h2>
+      <h2>CYBERWARE</h2>
       <table>
         <thead>
           <tr>
-            <th style="width:160px;">System Node</th>
-            <th>Hardware / Model Name</th>
+            <th style="width:160px;">System Type</th>
+            <th>Model Name</th>
             <th style="width:55px;">Quality</th>
             <th>Notes</th>
           </tr>
