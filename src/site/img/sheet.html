@@ -673,3 +673,156 @@
   </script>
 </body>
 </html>
+
+<div class="cyber-tabs">
+  <!-- Tab Controls -->
+  <input type="radio" name="sheet-tabs" id="tab1" checked>
+  <label for="tab1">Page 1: Main Notes</label>
+  
+  <input type="radio" name="sheet-tabs" id="tab2">
+  <label for="tab2">Page 2: Inventory</label>
+  
+  <input type="radio" name="sheet-tabs" id="tab3">
+  <label for="tab3">Page 3: Cyberware</label>
+
+  <!-- PAGE 1: MAIN NOTES, TELEMETRY & SKILLS -->
+  <div class="tab-content content-page1">
+    
+    <!-- Adjustable Identity Blocks -->
+    <div class="adjustable-box">
+        <h4>Character Identity</h4>
+        <p><strong>Name:</strong> <span contenteditable="true">V</span></p>
+        <p><strong>Notes:</strong> <span contenteditable="true">Click here to write notes directly...</span></p>
+    </div>
+
+    <!-- Telemetry System Flex Grid -->
+    <div class="telemetry-row">
+        
+        <!-- Left Side: Combat Telemetry & Weapons underneath -->
+        <div class="telemetry-left">
+            <div class="adjustable-box" style="width:100%; border-color:#54C1E6;">
+                <h3>Combat Telemetry</h3>
+                <p>HP: 45 / 45</p>
+                <p>SP Armor: 11</p>
+            </div>
+            
+            <!-- Collapsible Weapon Slots -->
+            <details class="cyber-collapse" open>
+                <summary>Weapon Slots</summary>
+                <div style="padding-top: 10px;">
+                    <p>⚔️ <strong>Slot 1:</strong> Malorian Arms 3516 (RNG: 50m)</p>
+                    <p>⚔️ <strong>Slot 2:</strong> Monowire (Thermal Mod)</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Right Side: Status Effects Bar -->
+        <div class="status-effects-bar" style="background:#171A39; border: 1px solid #9A9F17; padding:15px;">
+            <h3>Status Effects</h3>
+            <span class="tag">EMP SHOCK (-2 REF)</span>
+            <span class="tag" style="background-color:#FFC400 !important;">BOOSTERDRUG</span>
+        </div>
+    </div>
+
+    <!-- Interactive Custom Skills Engine -->
+    <div class="skills-container">
+        <h3>Character Skills Matrix</h3>
+        
+        <!-- Example mock STAT baselines used for computation -->
+        <div style="font-size:0.85rem; color:#54C1E6; margin-bottom:10px;">
+            [ core architecture values ] INT: 6 | REF: 8 | DEX: 7 | COOL: 5
+        </div>
+
+        <div class="skills-list" id="skillsList">
+            <div class="skill-row" style="font-weight:bold; color:#FEE801; border-bottom:2px solid #54C1E6;">
+                <div>Skill Name</div>
+                <div>Stat Type</div>
+                <div>Skill Level</div>
+                <div>Total Base</div>
+            </div>
+            <!-- Core system default items -->
+            <div class="skill-row">
+                <div>Handguns</div>
+                <div>REF</div>
+                <div>+4</div>
+                <div style="color:#FEE801">12</div>
+            </div>
+            <div class="skill-row">
+                <div>Evasion</div>
+                <div>DEX</div>
+                <div>+5</div>
+                <div style="color:#FEE801">12</div>
+            </div>
+        </div>
+
+        <!-- System UI Input Engine -->
+        <div class="add-skill-form">
+            <input type="text" id="newSkillName" placeholder="New Skill Name...">
+            <select id="newSkillStat">
+                <option value="INT">INT (6)</option>
+                <option value="REF">REF (8)</option>
+                <option value="DEX">DEX (7)</option>
+                <option value="COOL">COOL (5)</option>
+            </select>
+            <input type="number" id="newSkillLevel" placeholder="Level" min="0" max="10" style="width:70px;">
+            <button onclick="addNewCyberpunkSkill()">+ Add Skill</button>
+        </div>
+    </div>
+
+  </div>
+
+  <!-- PAGE 2: INVENTORY (Inherits Cyberware size dynamics) -->
+  <div class="tab-content content-page2">
+    <div class="adjustable-box" style="width: 100%; min-height: 400px;">
+        <h3>Hardware & Inventory Manifest</h3>
+        <ul>
+            <li>Inflatable Decoy (x2)</li>
+            <li>Heavy Pistol Ammunition (x100)</li>
+            <li>Medscanner Linkup</li>
+        </ul>
+    </div>
+  </div>
+
+  <!-- PAGE 3: CYBERWARE -->
+  <div class="tab-content content-page3">
+    <div class="adjustable-box" style="width: 100%; min-height: 400px;">
+        <h3>Cybernetic Matrix</h3>
+        <ul>
+            <li>Neural Link [Neuralware]</li>
+            <li>Sandevistan MK.V [Speedware]</li>
+            <li>Kiroshi Optics MK.IV [Ocular]</li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<!-- RUNTIME CLIENT CORE INJECTION -->
+<script>
+function addNewCyberpunkSkill() {
+    const name = document.getElementById('newSkillName').value.trim();
+    const stat = document.getElementById('newSkillStat').value;
+    const level = parseInt(document.getElementById('newSkillLevel').value) || 0;
+    
+    if(!name) { alert('Enter a skill classification name.'); return; }
+    
+    // Core Mock Engine Stats dictionary mapping 
+    const statValues = { 'INT': 6, 'REF': 8, 'DEX': 7, 'COOL': 5 };
+    const baseValue = statValues[stat] + level;
+
+    const list = document.getElementById('skillsList');
+    const newRow = document.createElement('div');
+    newRow.className = 'skill-row';
+    newRow.innerHTML = `
+        <div>\${name}</div>
+        <div>\${stat}</div>
+        <div>+\${level}</div>
+        <div style="color:#FEE801">\${baseValue}</div>
+    `;
+    
+    list.appendChild(newRow);
+    
+    // Reset Form Input nodes
+    document.getElementById('newSkillName').value = '';
+    document.getElementById('newSkillLevel').value = '';
+}
+</script>
