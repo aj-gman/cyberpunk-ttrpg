@@ -232,3 +232,157 @@ main {
     }
   }
 }
+
+/* ==========================================================================
+   DIGITAL GARDEN CHARACTER SHEET EXTENSIONS
+   ========================================================================== */
+
+/* --- MULTI-PAGE TABS SYSTEM --- */
+.cyber-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.cyber-tabs input[type="radio"] {
+    display: none;
+}
+.cyber-tabs label {
+    padding: 10px 20px;
+    background: #171A39;
+    color: #54C1E6;
+    border: 1px solid #39C4B6;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+.cyber-tabs input[type="radio"]:checked + label {
+    background: #FEE801;
+    color: #000000;
+    box-shadow: 0 0 10px #FEE801;
+    border-color: #FEE801;
+}
+.tab-content {
+    width: 100%;
+    display: none;
+    padding: 20px;
+    background: #000000;
+    border: 1px solid #39C4B6;
+    margin-top: 5px;
+    box-shadow: inset 0 0 15px rgba(23, 26, 57, 0.6);
+}
+#tab1:checked ~ .content-page1,
+#tab2:checked ~ .content-page2,
+#tab3:checked ~ .content-page3 {
+    display: block;
+}
+
+/* --- TELEMETRY & STATUS GRID LAYOUT --- */
+.telemetry-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 15px;
+}
+@media (max-width: 900px) {
+    .telemetry-row { 
+        grid-template-columns: 1fr; 
+    }
+}
+.telemetry-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* --- ADJUSTABLE DIMENSION BOXES --- */
+.adjustable-box {
+    resize: both;
+    overflow: auto;
+    min-width: 250px;
+    min-height: 120px;
+    border: 1px solid #2E7381;
+    background: #171A39;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+.adjustable-box h3, .adjustable-box h4 {
+    margin-top: 0;
+}
+
+/* --- COLLAPSIBLE CONTAINER (WEAPON SLOTS) --- */
+.cyber-collapse {
+    background: #171A39;
+    border: 1px solid #39C4B6;
+    padding: 10px;
+    border-radius: 2px;
+}
+.cyber-collapse summary {
+    color: #FEE801;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cyber-collapse summary::-webkit-details-marker {
+    display: none;
+}
+.cyber-collapse summary::after {
+    content: " ▽";
+    font-size: 0.8rem;
+    color: #54C1E6;
+}
+.cyber-collapse[open] summary::after {
+    content: " △";
+}
+
+/* --- DYNAMIC SKILLS WIDGET --- */
+.skills-container {
+    background: #171A39;
+    padding: 15px;
+    border: 1px solid #39C4B6;
+    margin-top: 15px;
+}
+.skills-list {
+    margin-bottom: 15px;
+}
+.skill-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px dashed #2E7381;
+    align-items: center;
+}
+.add-skill-form {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    background: #000000;
+    padding: 10px;
+    border: 1px solid #9A9F17;
+}
+.add-skill-form input, .add-skill-form select {
+    background: #171A39;
+    color: #E2E8F0;
+    border: 1px solid #54C1E6;
+    padding: 4px 8px;
+    font-size: 0.9rem;
+}
+.add-skill-form button {
+    background: #FEE801;
+    color: #000000;
+    border: none;
+    padding: 4px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.add-skill-form button:hover {
+    background: #54C1E6;
+}
