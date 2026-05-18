@@ -2,6 +2,8 @@
 {"dg-publish":true,"dg-path":"Rules/Drugs/Boost.md","permalink":"/rules/drugs/boost/","dg-note-properties":{}}
 ---
 
+> [[Rules/CPRED/Quality\|Common Price:]] Everyday (20-50eb)
+
 An original "brain booster" [[Rules/CPRED/Drugs/Drugs\|drug]] which radically enhance a character's INT. Administered through an intramuscular injection, Boost is also unfortunately very addictive and soon regular users find that their body has built up a complete tolerance to the drug, and addicts end up shelling out large sums of cash to keep up a habit that no longer helps them.
 
 ### Main Effect

@@ -2,6 +2,8 @@
 {"dg-publish":true,"dg-path":"Rules/Drugs/SynthCoke.md","permalink":"/rules/drugs/synth-coke/","dg-note-properties":{}}
 ---
 
+> [[Rules/CPRED/Quality\|Common Price:]] Everyday (20-50eb)
+
 A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that comes in little plastic vials of powder. It's purported to be a general enhancer of concentration, awareness and reactions, with the classic cocaine side effects of paranoia and anxiety. Cheap and easy to obtain.
 
 ### Main Effect

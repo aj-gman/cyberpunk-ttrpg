@@ -2,6 +2,8 @@
 {"dg-publish":true,"dg-path":"Rules/Drugs/Black Lace.md","permalink":"/rules/drugs/black-lace/","dg-note-properties":{}}
 ---
 
+> [[Rules/CPRED/Quality\|Common Price:]] Costly (50-100eb)
+
 A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that was made as a speed-enhancing drug which produces severe berzerker tendencies, meant for combat. Usually comes in disposable vapes, as a tar-like liquid (which can also be injected). Oftentimes mixed in with other drugs. 
 
 ### Main Effect

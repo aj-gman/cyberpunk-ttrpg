@@ -2,7 +2,8 @@
 {"dg-publish":true,"dg-path":"Rules/Drugs/Wireheading.md","permalink":"/rules/drugs/wireheading/","dg-note-properties":{}}
 ---
 
-## Core
+> [[Rules/CPRED/Quality\|Common Price:]] Strength-reliant (10-500eb)
+
 Based on [WireHeading in CyberPunk 2020 Homebrew](http://ambient.ca/cpunk/wirehead.html).
 
 The wire, as it has become known, stimulates the pleasure centers of the brain. In the original experiments, rats wired into a pleasure center device would tap their trigger unit relentlessly until they died of starvation. In humans results are only slightly less debilitating.
