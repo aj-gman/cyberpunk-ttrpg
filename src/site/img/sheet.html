@@ -113,70 +113,71 @@
       .main-grid { grid-template-columns: 42% 58%; }
     }
 
-/* Wiki Search Container Placement */
-.wiki-search-wrapper {
+/* Container adjustment */
+.wiki-search-portal-container {
   position: relative;
-  margin-left: auto; /* Pushes the search box cleanly to the right edge */
-  display: inline-block;
+  margin-left: auto; /* Aligns neatly to the right side of your tabs */
 }
 
-/* Hover Trigger Button */
-.wiki-trigger-btn {
-  background: #171A39 !important;
-  color: #54C1E6 !important;
-  border: 1px solid #39C4B6 !important;
-  padding: 6px 16px !important;
-  font-weight: bold;
+/* Style the Search Input to match your sheet matrix */
+#wiki-search-input {
+  width: 160px;
+  padding: 6px;
+  border: 1px solid var(--border-color);
+  background: #000;
+  color: #fff;
+  font-family: 'Lexend', monospace;
+  font-size: 12px;
+  outline: none;
+}
+#wiki-search-input:focus {
+  border-color: var(--accent-yellow);
 }
 
-/* The Hidden Overlay Panel */
-.wiki-hover-overlay {
-  display: none;
+/* Hover/Active Search Results Portal Overlay Panel */
+.wiki-hover-portal {
+  display: none; /* Kept hidden until a keyword is queried */
   position: absolute;
   right: 0;
   top: 100%;
-  margin-top: 5px;
-  background: #171A39;
-  border: 2px solid #FEE801;
-  padding: 10px;
-  z-index: 999;
-  box-shadow: 0 0 15px rgba(254, 232, 1, 0.4);
-  gap: 6px;
-  align-items: center;
-}
-
-/* Show the overlay box instantly on wrapper hover */
-.wiki-search-wrapper:hover .wiki-hover-overlay {
-  display: flex;
-}
-
-/* Internal Search Field Input Box */
-#wiki-search-input {
-  width: 180px;
-  padding: 6px 10px;
-  border: 1px solid #39C4B6;
+  margin-top: 8px;
+  width: 450px;
+  height: 400px;
   background: #000000;
-  color: #FFFFFF;
-  font-family: 'Lexend', monospace;
-  font-size: 13px;
-  outline: none;
+  border: 2px solid var(--accent-yellow);
+  box-shadow: 0 0 20px rgba(254, 232, 1, 0.5);
+  z-index: 1000;
+  flex-direction: column;
 }
 
-#wiki-search-input:focus {
-  border-color: #FEE801;
+/* Portal Title Bar Layout */
+.portal-header {
+  background: var(--panel-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--accent-yellow);
+  letter-spacing: 1px;
+}
+.portal-header button {
+  background: transparent;
+  border: none;
+  color: var(--danger-red);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-/* Mini Go Button Inside Overlay */
-.search-go-btn {
-  padding: 6px 12px !important;
-  background: #000000 !important;
-  border: 1px solid #FEE801 !important;
-  color: #FEE801 !important;
-  font-size: 12px !important;
-}
-.search-go-btn:hover {
-  background: #FEE801 !important;
-  color: #000000 !important;
+/* Embedded Webview Sandbox Frame */
+#wiki-frame {
+  width: 100%;
+  flex-grow: 1;
+  border: none;
+  background: #ffffff; /* Digital Garden default background themes */
 }
     
     /* Stats: 6 per row (5 stats + 1 derived) */
@@ -340,11 +341,18 @@
     <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-inventory', event)">PAGE 2: INVENTORY</button>
     <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-cyberware', event)">PAGE 3: CYBERWARE</button>
     
-    <div class="wiki-search-wrapper">
-      <button class="btn wiki-trigger-btn" type="button">WIKI SEARCH</button>
-      <div class="wiki-hover-overlay">
-        <input type="text" id="wiki-search-input" placeholder="ENTER KEYWORD..." onkeydown="if(event.key === 'Enter') executeWikiSearch()">
-        <button class="btn search-go-btn" type="button" onclick="executeWikiSearch()">GO</button>
+    <div class="wiki-search-portal-container">
+      <div style="display: flex; gap: 5px; align-items: center;">
+        <input type="text" id="wiki-search-input" placeholder="SEARCH WIKI..." onkeydown="if(event.key === 'Enter') previewWikiSearch()">
+        <button class="btn" type="button" onclick="previewWikiSearch()" style="padding: 5px 12px; font-size: 12px;">GO</button>
+      </div>
+
+      <div id="wiki-hover-portal" class="wiki-hover-portal">
+        <div class="portal-header">
+          <span>WIKI LIVE PREVIEW MATRIX</span>
+          <button type="button" onclick="closeWikiPortal()">✕</button>
+        </div>
+        <iframe id="wiki-frame" src=""></iframe>
       </div>
     </div>
   </div>
@@ -924,14 +932,24 @@
       reader.readAsText(file);
     });
     
-function executeWikiSearch() {
-  const query = document.getElementById('wiki-search-input').value.trim();
-  if (!query) return;
+function previewWikiSearch() {
+    const query = document.getElementById('wiki-search-input').value.trim();
+    if (!query) return;
 
-  // Routes directly to your specific live site search pipeline
-  const targetUrl = `https://gman-cyberpunk.vercel.app/?search=${encodeURIComponent(query)}`;
-  window.open(targetUrl, '_blank');
-}
+    const portal = document.getElementById('wiki-hover-portal');
+    const frame = document.getElementById('wiki-frame');
+
+    // Feeds the exact search query into your site's parameter router inside the sandbox portal
+    frame.src = `https://gman-cyberpunk.vercel.app/?search=${encodeURIComponent(query)}`;
+    
+    // Unveils the results overlay instantly
+    portal.style.display = 'flex';
+  }
+
+  function closeWikiPortal() {
+    document.getElementById('wiki-hover-portal').style.display = 'none';
+    document.getElementById('wiki-frame').src = ''; // Drops the iframe memory load
+  }
   </script>
 </body>
 </html>
