@@ -60,29 +60,11 @@
       transition: all 0.2s ease;
       font-family: 'Lexend', monospace;
     }
-    .btn:hover {
-      background: var(--neon-cyan);
-      color: #000;
-      box-shadow: 0 0 10px var(--neon-cyan);
-    }
-    .btn-danger {
-      color: var(--danger-red);
-      border-color: var(--danger-red);
-    }
-    .btn-danger:hover {
-      background: var(--danger-red);
-      color: #fff;
-      box-shadow: 0 0 10px var(--danger-red);
-    }
-    .btn-net {
-      color: var(--net-green);
-      border-color: var(--net-green);
-    }
-    .btn-net:hover {
-      background: var(--net-green);
-      color: #000;
-      box-shadow: 0 0 10px var(--net-green);
-    }
+    .btn:hover { background: var(--neon-cyan); color: #000; box-shadow: 0 0 10px var(--neon-cyan); }
+    .btn-danger { color: var(--danger-red); border-color: var(--danger-red); }
+    .btn-danger:hover { background: var(--danger-red); color: #fff; box-shadow: 0 0 10px var(--danger-red); }
+    .btn-net { color: var(--net-green); border-color: var(--net-green); }
+    .btn-net:hover { background: var(--net-green); color: #000; box-shadow: 0 0 10px var(--net-green); }
 
     .panel {
       background: var(--panel-bg);
@@ -92,7 +74,6 @@
       margin-bottom: 20px;
     }
 
-    /* === MAIN LAYOUT === */
     .main-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -102,44 +83,23 @@
       .main-grid { grid-template-columns: 42% 58%; }
     }
 
-    /* === LEFT COLUMN INTERNAL LAYOUT === */
-    .telemetry-weapons-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-    .telemetry-weapons-row .panel {
-      margin-bottom: 0;
-    }
-
-    .status-inventory-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-    .status-inventory-row .panel {
-      margin-bottom: 0;
-    }
-
-    /* Attributes Grid Layout */
-    .stats-container {
+    /* Stats: 6 per row (5 stats + 1 derived) */
+    .stats-row {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 8px;
-      margin-bottom: 15px;
+      gap: 6px;
+      margin-bottom: 8px;
     }
     .stat-box {
       background: #000;
       border: 1px solid var(--accent-yellow);
       text-align: center;
-      padding: 6px;
+      padding: 5px 4px;
       border-radius: 4px;
     }
     .stat-box label {
       display: block;
-      font-size: 11px;
+      font-size: 10px;
       color: var(--accent-yellow);
       font-weight: bold;
     }
@@ -149,30 +109,29 @@
       border: none;
       color: #fff;
       text-align: center;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: bold;
       font-family: 'Lexend', monospace;
     }
-    .display-stat-modified {
-      font-size: 11px;
-      color: var(--neon-cyan);
-      display: block;
-      margin-top: 2px;
-    }
+    .stat-box.derived { border-color: var(--neon-cyan); }
+    .stat-box.derived label { color: var(--neon-cyan); }
+    .stat-box.derived input { color: var(--neon-cyan); font-size: 13px; }
+    .display-stat-modified { font-size: 10px; color: var(--neon-cyan); display: block; margin-top: 1px; }
 
-    /* === SKILLS === */
+    .two-col-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .two-col-row .panel { margin-bottom: 0; }
+
+    /* Skills */
     .skills-master-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 15px;
     }
-    @media (min-width: 768px) {
-      .skills-master-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 1100px) {
-      .skills-master-grid { grid-template-columns: repeat(4, 1fr); }
-    }
-
     .skills-header, .skill-row {
       display: grid;
       grid-template-columns: 4fr 1.2fr 1.2fr;
@@ -188,184 +147,75 @@
       margin-top: 10px;
     }
     .skill-row { border-bottom: 1px dashed #2e3456; }
-    .skill-row div { font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: bold; }
+    .skill-row div { font-size: 11px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .skill-row input {
-      background: #000;
-      border: 1px solid #444;
-      color: white;
-      text-align: center;
-      width: 100%;
-      font-size: 11px;
-      padding: 2px 0;
-      border-radius: 3px;
-      font-family: 'Lexend', monospace;
-      font-weight: bold;
+      background: #000; border: 1px solid #444; color: white;
+      text-align: center; width: 100%; font-size: 11px; padding: 2px 0;
+      border-radius: 3px; font-family: 'Lexend', monospace; font-weight: 400;
     }
     .skill-base-val { text-align: center; font-weight: bold; color: var(--accent-yellow); font-size: 12px; }
 
-    /* === EFFECTS === */
-    .effects-builder {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 15px;
-    }
-    .effects-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
-    }
+    .effects-builder { display: flex; gap: 8px; margin-bottom: 15px; }
+    .effects-list { display: grid; grid-template-columns: 1fr; gap: 8px; }
     .effect-card {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #000;
-      padding: 8px;
-      border-left: 3px solid var(--neon-cyan);
+      display: flex; justify-content: space-between; align-items: center;
+      background: #000; padding: 8px; border-left: 3px solid var(--neon-cyan);
     }
 
-    /* === CYBERPSYCHOSIS TRACKER === */
     .psychosis-tracker {
-      margin-top: 12px;
-      background: #000;
-      padding: 10px;
-      border: 1px solid #a142ff;
-      border-radius: 4px;
+      margin-top: 12px; background: #000; padding: 10px;
+      border: 1px solid #a142ff; border-radius: 4px;
     }
     .psychosis-tracker label {
-      color: #a142ff;
-      font-weight: bold;
-      font-size: 11px;
-      display: block;
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      color: #a142ff; font-weight: bold; font-size: 11px;
+      display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px;
     }
-    .psychosis-tracker .tracker-row {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    .psychosis-tracker input {
-      flex: 1;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-      border-color: #a142ff;
-      font-family: 'Lexend', monospace;
-    }
-    .psychosis-tracker .humanity-ref {
-      font-size: 11px;
-      color: #888;
-      margin-top: 4px;
-    }
-    #psychosis-input.exceeded {
-      border-color: var(--danger-red) !important;
-      color: var(--danger-red) !important;
-      box-shadow: 0 0 8px var(--danger-red);
-    }
-    #psychosis-warning {
-      font-size: 11px;
-      font-weight: bold;
-      color: var(--danger-red);
-      text-align: center;
-      margin-top: 4px;
-      min-height: 14px;
-      text-transform: uppercase;
-    }
+    .psychosis-tracker .tracker-row { display: flex; gap: 10px; align-items: center; }
+    .psychosis-tracker input { flex: 1; font-size: 16px; font-weight: bold; text-align: center; border-color: #a142ff; font-family: 'Lexend', monospace; }
+    .psychosis-tracker .humanity-ref { font-size: 11px; color: #888; margin-top: 4px; }
+    #psychosis-input.exceeded { border-color: var(--danger-red) !important; color: var(--danger-red) !important; box-shadow: 0 0 8px var(--danger-red); }
+    #psychosis-warning { font-size: 11px; font-weight: bold; color: var(--danger-red); text-align: center; margin-top: 4px; min-height: 14px; text-transform: uppercase; }
 
-    /* === NETRUNNER MODULE (Terminal Green) === */
     .netrunner-toggle-panel {
-      background: var(--net-panel-bg);
-      border: 1px solid var(--net-green-dim);
-      padding: 12px 15px;
-      border-radius: 4px;
-      margin-bottom: 20px;
+      background: var(--net-panel-bg); border: 1px solid var(--net-green-dim);
+      padding: 12px 15px; border-radius: 4px; margin-bottom: 20px;
     }
     .netrunner-toggle-panel label {
-      font-weight: bold;
-      color: var(--net-green);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14px;
+      font-weight: bold; color: var(--net-green); cursor: pointer;
+      display: flex; align-items: center; gap: 10px; font-size: 14px;
       text-shadow: 0 0 6px rgba(0,255,65,0.5);
     }
-
     #netrunner-section {
-      background: var(--net-panel-bg);
-      border: 1px solid var(--net-green);
-      padding: 15px;
-      border-radius: 4px;
-      margin-bottom: 20px;
-      display: none;
+      background: var(--net-panel-bg); border: 1px solid var(--net-green);
+      padding: 15px; border-radius: 4px; margin-bottom: 20px; display: none;
     }
-    #netrunner-section h2 {
-      color: var(--net-green);
-      border-color: var(--net-green);
-      text-shadow: 0 0 8px rgba(0,255,65,0.5);
-    }
-    #netrunner-section h3 {
-      color: var(--net-green-dim);
-      border-color: var(--net-green-dim);
-      font-size: 13px;
-      margin-top: 15px;
-    }
-    #netrunner-section .stat-box {
-      border-color: var(--net-green);
-    }
-    #netrunner-section .stat-box label {
-      color: var(--net-green);
-    }
-    #netrunner-section table th {
-      color: var(--net-green);
-    }
-    #netrunner-section input,
-    #netrunner-section textarea {
-      border-color: #003a10;
-      color: var(--net-green);
-      background: #000e05;
-      font-family: 'Lexend', monospace;
-    }
-    #netrunner-section .btn-net {
-      color: var(--net-green);
-      border-color: var(--net-green);
+    #netrunner-section h2 { color: var(--net-green); border-color: var(--net-green); text-shadow: 0 0 8px rgba(0,255,65,0.5); }
+    #netrunner-section h3 { color: var(--net-green-dim); border-color: var(--net-green-dim); font-size: 13px; margin-top: 15px; }
+    #netrunner-section .stat-box { border-color: var(--net-green); }
+    #netrunner-section .stat-box label { color: var(--net-green); }
+    #netrunner-section table th { color: var(--net-green); }
+    #netrunner-section input, #netrunner-section textarea {
+      border-color: #003a10; color: var(--net-green); background: #000e05; font-family: 'Lexend', monospace;
     }
 
     table { width: 100%; border-collapse: collapse; margin-top: 10px; }
     th, td { border: 1px solid #2e3456; padding: 6px; text-align: left; font-size: 12px; vertical-align: top; }
     th { background: #000; color: var(--neon-cyan); }
-    
+
     input, select {
-      width: 100%;
-      background: #000;
-      border: 1px solid #444;
-      color: white;
-      padding: 4px;
-      box-sizing: border-box;
-      font-family: 'Lexend', monospace;
+      width: 100%; background: #000; border: 1px solid #444;
+      color: white; padding: 4px; box-sizing: border-box; font-family: 'Lexend', monospace;
     }
     textarea {
-      width: 100%;
-      background: #000;
-      border: 1px solid #444;
-      color: white;
-      padding: 4px;
-      box-sizing: border-box;
-      resize: vertical;
-      font-family: 'Lexend', monospace;
-      font-size: 12px;
+      width: 100%; background: #000; border: 1px solid #444;
+      color: white; padding: 4px; box-sizing: border-box;
+      resize: vertical; font-family: 'Lexend', monospace; font-size: 12px;
     }
 
     .currency-panel {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      background: #000;
-      padding: 10px;
-      border: 1px solid var(--accent-yellow);
-      margin-bottom: 12px;
-      border-radius: 4px;
+      display: flex; align-items: center; gap: 15px;
+      background: #000; padding: 10px;
+      border: 1px solid var(--accent-yellow); margin-bottom: 12px; border-radius: 4px;
     }
   </style>
 </head>
@@ -373,11 +223,11 @@
 
   <div class="top-bar">
     <div>
-      <span style="color:var(--accent-yellow); font-weight:bold;">CHROME CORE SYSTEM //</span>
-      <input type="text" id="charHandle" value="Jacked_In_Runner" style="background:transparent; border:none; color:white; font-size:16px; font-weight:bold; border-bottom:1px solid var(--border-color); width:180px;">
+      <span style="color:var(--accent-yellow);font-weight:bold;">CHROME CORE SYSTEM //</span>
+      <input type="text" id="charHandle" value="Jacked_In_Runner" style="background:transparent;border:none;color:white;font-size:16px;font-weight:bold;border-bottom:1px solid var(--border-color);width:180px;">
     </div>
     <div>
-      <label class="btn" style="margin-right: 8px; padding: 5px 10px; display:inline-block;">
+      <label class="btn" style="margin-right:8px;padding:5px 10px;display:inline-block;">
         Load File <input type="file" id="importFile" accept=".json" style="display:none;">
       </label>
       <button class="btn" id="exportBtn">Save File</button>
@@ -385,147 +235,128 @@
   </div>
 
   <div class="main-grid">
-    
     <div>
+
+      <!-- ATTRIBUTES: 2 rows of 6 (5 stats + 1 derived) -->
       <div class="panel">
         <h2>Attributes Matrix</h2>
-        <div class="stats-container">
+        <div class="stats-row">
           <div class="stat-box"><label>INT</label><input type="number" id="stat-int" value="6"><span class="display-stat-modified" id="mod-int"></span></div>
           <div class="stat-box"><label>REF</label><input type="number" id="stat-ref" value="6"><span class="display-stat-modified" id="mod-ref"></span></div>
           <div class="stat-box"><label>DEX</label><input type="number" id="stat-dex" value="6"><span class="display-stat-modified" id="mod-dex"></span></div>
           <div class="stat-box"><label>TECH</label><input type="number" id="stat-tech" value="6"><span class="display-stat-modified" id="mod-tech"></span></div>
           <div class="stat-box"><label>COOL</label><input type="number" id="stat-cool" value="6"><span class="display-stat-modified" id="mod-cool"></span></div>
-          <div class="stat-box" style="border-color: var(--neon-cyan);"><label>HUMANITY</label><input type="text" id="humanity" readonly style="color: var(--neon-cyan);"></div>
+          <div class="stat-box derived"><label>HUMANITY</label><input type="text" id="humanity" readonly></div>
         </div>
-        <div class="stats-container">
+        <div class="stats-row">
           <div class="stat-box"><label>WILL</label><input type="number" id="stat-will" value="6"><span class="display-stat-modified" id="mod-will"></span></div>
           <div class="stat-box"><label>LUCK</label><input type="number" id="stat-luck" value="6"><span class="display-stat-modified" id="mod-luck"></span></div>
           <div class="stat-box"><label>MOVE</label><input type="number" id="stat-move" value="6"><span class="display-stat-modified" id="mod-move"></span></div>
           <div class="stat-box"><label>BODY</label><input type="number" id="stat-body" value="6"><span class="display-stat-modified" id="mod-body"></span></div>
           <div class="stat-box"><label>EMP</label><input type="number" id="stat-emp" value="6"><span class="display-stat-modified" id="mod-emp"></span></div>
-          <div class="stat-box" style="border-color: var(--neon-cyan);"><label>HP MAX</label><input type="text" id="hp-max" readonly style="color: var(--neon-cyan);"></div>
+          <div class="stat-box derived"><label>HP MAX</label><input type="text" id="hp-max" readonly></div>
         </div>
       </div>
 
-      <div class="telemetry-weapons-row">
-
+      <!-- ROW 1: COMBAT + WEAPONS -->
+      <div class="two-col-row">
         <div class="panel">
           <h2>Combat Telemetry</h2>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
-            <div class="stat-box" style="border-color: var(--neon-cyan);">
-              <label>HEAD SP</label>
-              <input type="number" id="sp-head" value="11" min="0">
-            </div>
-            <div class="stat-box" style="border-color: var(--neon-cyan);">
-              <label>BODY SP</label>
-              <input type="number" id="sp-body" value="11" min="0">
-            </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
+            <div class="stat-box" style="border-color:var(--neon-cyan);"><label>HEAD SP</label><input type="number" id="sp-head" value="11" min="0"></div>
+            <div class="stat-box" style="border-color:var(--neon-cyan);"><label>BODY SP</label><input type="number" id="sp-body" value="11" min="0"></div>
           </div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
-            <div class="stat-box" style="border-color: var(--accent-yellow);">
-              <label>CURRENT HEALTH</label>
-              <input type="number" id="hp-curr" value="40" min="0">
-            </div>
-            <div class="stat-box" style="border-color: #555;">
-              <label>MAX HEALTH (REF)</label>
-              <input type="text" id="hp-max-display" readonly style="color: #888;" placeholder="Calculated">
-            </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
+            <div class="stat-box" style="border-color:var(--accent-yellow);"><label>CURRENT HP</label><input type="number" id="hp-curr" value="40" min="0"></div>
+            <div class="stat-box" style="border-color:#555;"><label>MAX HP (AUTO)</label><input type="text" id="hp-max-display" readonly style="color:#888;"></div>
           </div>
-          <div style="background: #000; padding: 12px; border: 1px dashed var(--danger-red); border-radius: 4px;">
-            <label style="color: var(--danger-red); font-weight: bold; font-size: 11px; display: block; margin-bottom: 5px;">INCOMING DAMAGE COUNTER</label>
-            <div style="display: flex; gap: 10px;">
-              <input type="number" id="dmg-counter" placeholder="0" min="0" style="flex: 1; font-size: 16px; font-weight: bold; text-align: center; border-color: var(--danger-red);">
-              <button class="btn btn-danger" type="button" onclick="resolveIncomingDamage()" style="flex: 1;">Apply Damage</button>
+          <div style="background:#000;padding:12px;border:1px dashed var(--danger-red);border-radius:4px;">
+            <label style="color:var(--danger-red);font-weight:bold;font-size:11px;display:block;margin-bottom:5px;">INCOMING DAMAGE</label>
+            <div style="display:flex;gap:10px;">
+              <input type="number" id="dmg-counter" placeholder="0" min="0" style="flex:1;font-size:16px;font-weight:bold;text-align:center;border-color:var(--danger-red);">
+              <button class="btn btn-danger" type="button" onclick="resolveIncomingDamage()" style="flex:1;">Apply</button>
             </div>
-            <div id="damage-log" style="margin-top: 8px; font-size: 12px; font-weight: bold; text-align: center; text-transform: uppercase; min-height: 15px;"></div>
+            <div id="damage-log" style="margin-top:8px;font-size:12px;font-weight:bold;text-align:center;text-transform:uppercase;min-height:15px;"></div>
           </div>
         </div>
 
         <div class="panel">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-            <h2 style="margin:0; border:none; flex-grow:1;">Weapon Slots</h2>
-            <button class="btn" type="button" id="addWeaponBtn">+ Add Slot</button>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <h2 style="margin:0;border:none;flex-grow:1;">Weapon Slots</h2>
+            <button class="btn" type="button" id="addWeaponBtn">+ Add</button>
           </div>
           <table>
             <thead>
-              <tr><th>Weapon</th><th style="width:50px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:30px;"></th></tr>
+              <tr><th>Weapon</th><th style="width:55px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr>
             </thead>
             <tbody id="weapons-tbody"></tbody>
           </table>
         </div>
-
       </div>
 
+      <!-- NETRUNNER TOGGLE -->
       <div class="netrunner-toggle-panel">
         <label>
-          <input type="checkbox" id="toggle-netrunner" onchange="toggleNetrunnerModule(this.checked)" style="width: auto;">
+          <input type="checkbox" id="toggle-netrunner" onchange="toggleNetrunnerModule(this.checked)" style="width:auto;">
           INITIALIZE NETRUNNER CYBERDECK INTERFACE
         </label>
       </div>
 
       <div id="netrunner-section">
         <h2>Netrunner Deck Sub-Processor</h2>
-        
-        <h3 style="margin-top: 15px;">Deck Hardware Configuration</h3>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
-          <div class="stat-box"><label>Hardening</label><input type="number" class="net-cfg" id="cfg-hardening" value="0" min="0" max="3"></div>
-          <div class="stat-box"><label>Firewall</label><input type="number" class="net-cfg" id="cfg-firewall" value="0" min="0" max="3"></div>
-          <div class="stat-box"><label>Processor</label><input type="number" class="net-cfg" id="cfg-processor" value="0" min="0" max="3"></div>
-          <div class="stat-box"><label>Stealth</label><input type="number" class="net-cfg" id="cfg-stealth" value="0" min="0" max="3"></div>
+        <h3 style="margin-top:15px;">Deck Hardware Configuration</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
+          <div class="stat-box"><label>Hardening</label><input type="number" id="cfg-hardening" value="0" min="0" max="3"></div>
+          <div class="stat-box"><label>Firewall</label><input type="number" id="cfg-firewall" value="0" min="0" max="3"></div>
+          <div class="stat-box"><label>Processor</label><input type="number" id="cfg-processor" value="0" min="0" max="3"></div>
+          <div class="stat-box"><label>Stealth</label><input type="number" id="cfg-stealth" value="0" min="0" max="3"></div>
         </div>
-
-        <div style="margin-bottom: 20px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-            <h3 style="margin: 0; border: none;">Quickhack Memory Slots</h3>
-            <button class="btn btn-net" type="button" onclick="addQuickhackSlot()" style="padding: 2px 8px; font-size: 11px;">+ Slot</button>
+        <div style="margin-bottom:20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
+            <h3 style="margin:0;border:none;">Quickhack Memory Slots</h3>
+            <button class="btn btn-net" type="button" onclick="addQuickhackSlot()" style="padding:2px 8px;font-size:11px;">+ Slot</button>
           </div>
           <table>
-            <thead>
-              <tr><th style="width: 80px;">DR Value</th><th>Execution Logs / Notes</th><th style="width: 30px;"></th></tr>
-            </thead>
+            <thead><tr><th style="width:80px;">DR Value</th><th>Notes</th><th style="width:30px;"></th></tr></thead>
             <tbody id="quickhacks-tbody"></tbody>
           </table>
         </div>
-
         <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-            <h3 style="margin: 0; border: none;">Deck Software Programs Loaded</h3>
-            <button class="btn btn-net" type="button" onclick="addProgramSlot()" style="padding: 2px 8px; font-size: 11px;">+ Load Program</button>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
+            <h3 style="margin:0;border:none;">Programs Loaded</h3>
+            <button class="btn btn-net" type="button" onclick="addProgramSlot()" style="padding:2px 8px;font-size:11px;">+ Load</button>
           </div>
           <table>
-            <thead>
-              <tr><th style="width: 200px;">Program Name</th><th>Subroutine Target Parameters / Notes</th><th style="width: 30px;"></th></tr>
-            </thead>
+            <thead><tr><th style="width:180px;">Program</th><th>Notes</th><th style="width:30px;"></th></tr></thead>
             <tbody id="programs-tbody"></tbody>
           </table>
         </div>
       </div>
 
-      <div class="status-inventory-row">
-
+      <!-- ROW 2: STATUS + INVENTORY -->
+      <div class="two-col-row">
         <div class="panel">
           <h2>Status Modifiers</h2>
           <div class="effects-builder">
-            <input type="text" id="effectInput" placeholder="e.g., SynthCoke REF +2, Concentration +2" style="flex:2; font-size:11px;">
+            <input type="text" id="effectInput" placeholder="SynthCoke REF +2, Concentration +2" style="flex:2;font-size:11px;">
             <button class="btn" id="addEffectBtn" type="button">+ Inject</button>
           </div>
           <div class="effects-list">
-            <div class="effect-card" style="border-left-color: var(--danger-red);">
-              <label><input type="checkbox" id="eff-wounded"> <strong>Seriously Wounded</strong> (-2 All Actions)</label>
+            <div class="effect-card" style="border-left-color:var(--danger-red);">
+              <label><input type="checkbox" id="eff-wounded"> <strong>Seriously Wounded</strong> (-2 All)</label>
             </div>
-            <div class="effect-card" style="border-left-color: var(--danger-red);">
-              <div style="display:flex; align-items:center; gap:10px; width:100%;">
+            <div class="effect-card" style="border-left-color:var(--danger-red);">
+              <div style="display:flex;align-items:center;gap:10px;width:100%;">
                 <label style="white-space:nowrap;"><strong>Armor Penalty:</strong></label>
-                <input type="number" id="eff-armor-penalty" value="0" style="width:50px; text-align:center;">
+                <input type="number" id="eff-armor-penalty" value="0" style="width:50px;text-align:center;">
               </div>
             </div>
             <div id="custom-effects-hook"></div>
           </div>
-
           <div class="psychosis-tracker">
             <label>⚠ Cyberpsychosis Tracker</label>
             <div class="tracker-row">
-              <input type="number" id="psychosis-input" value="0" min="0" placeholder="0">
+              <input type="number" id="psychosis-input" value="0" min="0">
             </div>
             <div class="humanity-ref">Humanity threshold: <span id="humanity-threshold">—</span></div>
             <div id="psychosis-warning"></div>
@@ -533,67 +364,68 @@
         </div>
 
         <div class="panel">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-            <h2 style="margin:0; border:none; flex-grow:1;">Inventory</h2>
-            <button class="btn" type="button" id="addGearBtn">+ Add Slot</button>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <h2 style="margin:0;border:none;flex-grow:1;">Inventory</h2>
+            <button class="btn" type="button" id="addGearBtn">+ Add</button>
           </div>
           <div class="currency-panel">
-            <div style="font-weight:bold; color:var(--accent-yellow); font-size:11px; letter-spacing:1px;">€$ :</div>
-            <input type="number" id="eurodollars" value="0" style="width:100px; font-weight:bold; color:#fff; border:1px solid #444; text-align:right; padding-right:5px;">
+            <div style="font-weight:bold;color:var(--accent-yellow);font-size:11px;letter-spacing:1px;">€$ :</div>
+            <input type="number" id="eurodollars" value="0" style="width:100px;font-weight:bold;color:#fff;border:1px solid #444;text-align:right;padding-right:5px;">
           </div>
           <table>
-            <thead>
-              <tr><th>Item</th><th>Notes</th><th style="width:30px;"></th></tr>
-            </thead>
+            <thead><tr><th>Item</th><th>Notes</th><th style="width:28px;"></th></tr></thead>
             <tbody id="gear-tbody"></tbody>
           </table>
         </div>
-
       </div>
+
     </div>
 
+    <!-- RIGHT COLUMN: SKILLS -->
     <div class="panel">
       <h2>Skills Sub-Processor</h2>
       <div class="skills-master-grid">
 
+        <!-- COL 1: Awareness + Ranged + Control + Fighting + Body -->
         <div>
-          <div class="skills-header"><div>Awareness Skills</div><div>LVL</div><div>BASE</div></div>
+          <div class="skills-header"><div>Awareness</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="will" data-skill-name="Concentration"><div>Concentration</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Conceal/Reveal Object"><div>Conceal/Reveal Object</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Lip Reading"><div>Lip Reading</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Perception"><div>Perception</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Tracking"><div>Tracking</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
 
-          <div class="skills-header"><div>Ranged Weapon Skills</div><div>LVL</div><div>BASE</div></div>
+          <div class="skills-header"><div>Ranged Weapons</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="ref" data-skill-name="Heavy Weapons"><div>Heavy Weapons (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="ref" data-skill-name="Shoulder Arms"><div>Shoulder Arms</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="ref" data-skill-name="Archery"><div>Archery</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="ref" data-skill-name="Autofire"><div>Autofire (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="ref" data-skill-name="Handgun"><div>Handgun</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
 
-          <div class="skills-header"><div>Control Skills</div><div>LVL</div><div>BASE</div></div>
+          <div class="skills-header"><div>Control</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="ref" data-skill-name="Drive Land Vehicle"><div>Drive Land Vehicle</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="ref" data-skill-name="Pilot Air Vehicle"><div>Pilot Air Vehicle (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="ref" data-skill-name="Pilot Sea Vehicle"><div>Pilot Sea Vehicle</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="ref" data-skill-name="Riding"><div>Riding</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
 
-          <div class="skills-header"><div>Fighting Skills</div><div>LVL</div><div>BASE</div></div>
+          <div class="skills-header"><div>Fighting</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="dex" data-skill-name="Brawling"><div>Brawling</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="dex" data-skill-name="Evasion"><div>Evasion</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="dex" data-skill-name="Martial Arts"><div>Martial Arts (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="dex" data-skill-name="Melee Weapon"><div>Melee Weapon</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-        </div>
 
-        <div>
-          <div class="skills-header"><div>Body Skills</div><div>LVL</div><div>BASE</div></div>
+          <div class="skills-header"><div>Body</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="dex" data-skill-name="Athletics"><div>Athletics</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="dex" data-skill-name="Contortionist"><div>Contortionist</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="dex" data-skill-name="Dance"><div>Dance</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="will" data-skill-name="Endurance"><div>Endurance</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="will" data-skill-name="Resist Torture/Drugs"><div>Resist Torture/Drugs</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="dex" data-skill-name="Stealth"><div>Stealth</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+        </div>
 
-          <div class="skills-header"><div>Social Skills</div><div>LVL</div><div>BASE</div></div>
+        <!-- COL 2: Social + Performance + ALL Education -->
+        <div>
+          <div class="skills-header"><div>Social</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="cool" data-skill-name="Bribery"><div>Bribery</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="emp" data-skill-name="Conversation"><div>Conversation</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="emp" data-skill-name="Human Perception"><div>Human Perception</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
@@ -602,21 +434,17 @@
           <div class="skill-row" data-stat="cool" data-skill-name="Streetwise"><div>Streetwise</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="cool" data-skill-name="Trading"><div>Trading</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
 
-          <div class="skills-header"><div>Performance Skills</div><div>LVL</div><div>BASE</div></div>
+          <div class="skills-header"><div>Performance</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="cool" data-skill-name="Acting"><div>Acting</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="cool" data-skill-name="Personal Grooming"><div>Personal Grooming</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="cool" data-skill-name="Wardrobe & Style"><div>Wardrobe &amp; Style</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-        </div>
 
-        <div>
-          <div class="skills-header"><div>Education Skills (A)</div><div>LVL</div><div>BASE</div></div>
+          <div class="skills-header"><div>Education</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Language (Streetslang)"><div>Language (Streetslang)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Language (Origin)"><div>Language (Origin)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Accounting"><div>Accounting</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Animal Handling"><div>Animal Handling</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Bureaucracy"><div>Bureaucracy</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-
-          <div class="skills-header"><div>Education Skills (B)</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Business"><div>Business</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Composition"><div>Composition</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Criminology"><div>Criminology</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
@@ -631,8 +459,9 @@
           <div class="skill-row" data-stat="int" data-skill-name="Wilderness Survival"><div>Wilderness Survival</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
         </div>
 
+        <!-- COL 3: ALL Technique -->
         <div>
-          <div class="skills-header"><div>Technique Skills</div><div>LVL</div><div>BASE</div></div>
+          <div class="skills-header"><div>Technique</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Air Vehicle Tech"><div>Air Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Basic Tech"><div>Basic Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Cybertech"><div>Cybertech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
@@ -641,407 +470,203 @@
           <div class="skill-row" data-stat="tech" data-skill-name="First Aid"><div>First Aid</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Forgery"><div>Forgery</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Land Vehicle Tech"><div>Land Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-          <div class="skill-row" data-stat="tech" data-skill-name="Play Instrument"><div>Play Instrument</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Paint/Draw/Sculpt"><div>Paint/Draw/Sculpt</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Paramedic"><div>Paramedic (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Photography/Film"><div>Photography/Film</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Pick Lock"><div>Pick Lock</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Pick Pocket"><div>Pick Pocket</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Play Instrument"><div>Play Instrument</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Sea Vehicle Tech"><div>Sea Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Weaponstech"><div>Weaponstech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
         </div>
 
       </div>
     </div>
-
   </div>
 
+  <!-- CYBERWARE -->
   <div class="panel" style="margin-top:20px;">
     <h2>Cyberware Implant Matrix (3 Slots Per System Node)</h2>
     <table>
       <thead>
-        <tr><th style="width:180px;">System Node</th><th>Hardware Manifest / Model Name</th><th style="width:50px;">Quality</th><th>Data Logging / Notes</th></tr>
+        <tr>
+          <th style="width:160px;">System Node</th>
+          <th>Hardware / Model Name</th>
+          <th style="width:55px;">Quality</th>
+          <th>Notes</th>
+        </tr>
       </thead>
       <tbody id="cyberware-tbody"></tbody>
     </table>
   </div>
 
   <script>
-    // --- COMBAT AND DAMAGE ENGINE ---
     function resolveIncomingDamage() {
-      const dmgCounter = document.getElementById('dmg-counter');
-      const logBox = document.getElementById('damage-log');
-      const damage = parseInt(dmgCounter.value) || 0;
-      if (damage <= 0) { logBox.innerText = "No incoming telemetry data."; logBox.style.color = "var(--text-color)"; return; }
-      const isBody = confirm("Route damage to the BODY?\n\n[OK] = Body\n[Cancel] = Head");
-      const targetLocation = isBody ? "body" : "head";
-      const spElement = document.getElementById(`sp-${targetLocation}`);
-      let currentSP = parseInt(spElement.value) || 0;
-      const remainingDamage = damage - currentSP;
-      if (remainingDamage <= 0) {
-        logBox.innerText = "Armor absorbs damage";
-        logBox.style.color = "var(--neon-cyan)";
-      } else {
-        logBox.innerText = "Armor is ablated";
-        logBox.style.color = "var(--danger-red)";
-        const hpCurrElement = document.getElementById('hp-curr');
-        let currentHP = parseInt(hpCurrElement.value) || 0;
-        currentHP = Math.max(0, currentHP - remainingDamage);
-        hpCurrElement.value = currentHP;
-        const isAP = confirm("Does the attack have Armor Piercing properties?");
-        currentSP = Math.max(0, currentSP - (isAP ? 2 : 1));
-        spElement.value = currentSP;
+      const dmgEl = document.getElementById('dmg-counter');
+      const log = document.getElementById('damage-log');
+      const dmg = parseInt(dmgEl.value)||0;
+      if(dmg<=0){log.innerText="No incoming data.";log.style.color="var(--text-color)";return;}
+      const isBody = confirm("Route to BODY?\n[OK] = Body  [Cancel] = Head");
+      const spEl = document.getElementById(`sp-${isBody?'body':'head'}`);
+      let sp = parseInt(spEl.value)||0;
+      const rem = dmg - sp;
+      if(rem<=0){log.innerText="Armor absorbs damage";log.style.color="var(--neon-cyan)";}
+      else {
+        log.innerText="Armor ablated";log.style.color="var(--danger-red)";
+        const hpEl=document.getElementById('hp-curr');
+        hpEl.value=Math.max(0,(parseInt(hpEl.value)||0)-rem);
+        spEl.value=Math.max(0,sp-(confirm("Armor Piercing?")?2:1));
       }
-      dmgCounter.value = "";
-      if (typeof updateSheetMath === "function") updateSheetMath();
+      dmgEl.value="";updateSheetMath();
     }
 
-    // --- NETRUNNER MODULE ---
-    function toggleNetrunnerModule(isActive) {
-      document.getElementById('netrunner-section').style.display = isActive ? 'block' : 'none';
+    function toggleNetrunnerModule(on){document.getElementById('netrunner-section').style.display=on?'block':'none';}
+
+    function addQuickhackSlot(dr="",notes=""){
+      const tr=document.createElement('tr');tr.className="net-qh-row";
+      tr.innerHTML=`<td><input type="number" class="qh-dr" value="${dr}" placeholder="0" style="text-align:center;"></td><td><textarea class="qh-notes" rows="2">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>`;
+      document.getElementById('quickhacks-tbody').appendChild(tr);
+    }
+    function addProgramSlot(name="",notes=""){
+      const tr=document.createElement('tr');tr.className="net-prog-row";
+      tr.innerHTML=`<td><input type="text" class="prog-name" value="${name}" placeholder="e.g. Sword"></td><td><textarea class="prog-notes" rows="2">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>`;
+      document.getElementById('programs-tbody').appendChild(tr);
     }
 
-    function addQuickhackSlot(dr="", notes="") {
-      const tbody = document.getElementById('quickhacks-tbody');
-      const tr = document.createElement('tr');
-      tr.className = "net-qh-row";
-      tr.innerHTML = `
-        <td><input type="number" class="qh-dr" value="${dr}" placeholder="0" style="text-align:center;"></td>
-        <td><textarea class="qh-notes" rows="2" placeholder="Quickhack behavior profile...">${notes}</textarea></td>
-        <td style="text-align:center; vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>
-      `;
-      tbody.appendChild(tr);
+    function synchHealthDisplay(){
+      const a=document.getElementById('hp-max'),b=document.getElementById('hp-max-display');
+      if(a&&b)b.value=a.value;
     }
+    document.addEventListener('input',synchHealthDisplay);
+    window.addEventListener('DOMContentLoaded',()=>setTimeout(synchHealthDisplay,100));
 
-    function addProgramSlot(name="", notes="") {
-      const tbody = document.getElementById('programs-tbody');
-      const tr = document.createElement('tr');
-      tr.className = "net-prog-row";
-      tr.innerHTML = `
-        <td><input type="text" class="prog-name" value="${name}" placeholder="e.g. Sword, Worm"></td>
-        <td><textarea class="prog-notes" rows="2" placeholder="Program memory rules or effect text...">${notes}</textarea></td>
-        <td style="text-align:center; vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>
-      `;
-      tbody.appendChild(tr);
-    }
-
-    function synchHealthDisplay() {
-      const autoHpMax = document.getElementById('hp-max');
-      const displayTarget = document.getElementById('hp-max-display');
-      if (autoHpMax && displayTarget) displayTarget.value = autoHpMax.value;
-    }
-    document.addEventListener('input', synchHealthDisplay);
-    window.addEventListener('DOMContentLoaded', () => setTimeout(synchHealthDisplay, 100));
-
-    // --- CYBERWARE POPULATION ---
-    const cyberGroups = ["Operating System","Frontal Cortex","Arms","Hands","Circulatory","Face","Skeleton","Integumentary","Legs","Nervous System"];
-    const cyberTbody = document.getElementById('cyberware-tbody');
-    cyberGroups.forEach(group => {
-      for(let i = 1; i <= 3; i++) {
-        const row = document.createElement('tr');
-        row.className = "cyber-row";
-        row.setAttribute('data-group', group);
-        row.setAttribute('data-slot', i);
-        row.innerHTML = `
-          ${i === 1 ? `<td rowspan="3" style="font-weight:bold; color:var(--neon-cyan); vertical-align:middle; background:#0b0d1e;">${group}</td>` : ''}
-          <td><input type="text" class="cy-name" value=""></td>
-          <td><input type="number" class="cy-quality" min="1" max="5" value="1" style="text-align:center;"></td>
-          <td><textarea class="cy-notes" rows="1" placeholder="Add entry notes..."></textarea></td>
-        `;
-        cyberTbody.appendChild(row);
+    // Cyberware
+    ['Operating System','Frontal Cortex','Arms','Hands','Circulatory','Face','Skeleton','Integumentary','Legs','Nervous System'].forEach(group=>{
+      for(let i=1;i<=3;i++){
+        const row=document.createElement('tr');
+        row.className="cyber-row";row.setAttribute('data-group',group);row.setAttribute('data-slot',i);
+        row.innerHTML=`${i===1?`<td rowspan="3" style="font-weight:bold;color:var(--neon-cyan);vertical-align:middle;background:#0b0d1e;">${group}</td>`:''}<td><input type="text" class="cy-name" value=""></td><td><input type="number" class="cy-quality" min="1" max="5" value="1" style="text-align:center;"></td><td><textarea class="cy-notes" rows="1" placeholder="Notes..."></textarea></td>`;
+        document.getElementById('cyberware-tbody').appendChild(row);
       }
     });
 
-    // --- WEAPONS ---
-    const weaponsTbody = document.getElementById('weapons-tbody');
-    function addWeaponSlot(name="", dmg="", rof="", notes="") {
-      const tr = document.createElement('tr');
-      tr.className = "weapon-row";
-      tr.innerHTML = `
-        <td><input type="text" class="wp-name" value="${name}" placeholder="Heavy Pistol"></td>
-        <td><input type="text" class="wp-dmg" value="${dmg}" placeholder="3d6" style="text-align:center;"></td>
-        <td><input type="text" class="wp-rof" value="${rof}" placeholder="2" style="text-align:center;"></td>
-        <td><textarea class="wp-notes" rows="1" placeholder="Notes...">${notes}</textarea></td>
-        <td style="text-align:center; vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove(); updateSheetMath();" style="padding:2px 6px;">X</button></td>
-      `;
-      weaponsTbody.appendChild(tr);
-      tr.querySelectorAll('input, textarea').forEach(i => i.addEventListener('input', updateSheetMath));
+    function addWeaponSlot(name="",dmg="",rof="",notes=""){
+      const tr=document.createElement('tr');tr.className="weapon-row";
+      tr.innerHTML=`<td><input type="text" class="wp-name" value="${name}" placeholder="Heavy Pistol"></td><td><input type="text" class="wp-dmg" value="${dmg}" placeholder="3d6" style="text-align:center;"></td><td><input type="text" class="wp-rof" value="${rof}" placeholder="2" style="text-align:center;"></td><td><textarea class="wp-notes" rows="1" placeholder="Notes...">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>`;
+      document.getElementById('weapons-tbody').appendChild(tr);
+      tr.querySelectorAll('input,textarea').forEach(i=>i.addEventListener('input',updateSheetMath));
     }
-    document.getElementById('addWeaponBtn').addEventListener('click', () => addWeaponSlot());
+    document.getElementById('addWeaponBtn').addEventListener('click',()=>addWeaponSlot());
 
-    // --- GEAR ---
-    const gearTbody = document.getElementById('gear-tbody');
-    function addGearSlot(name="", notes="") {
-      const tr = document.createElement('tr');
-      tr.className = "gear-row";
-      tr.innerHTML = `
-        <td><input type="text" class="gear-name" value="${name}" placeholder="Agent"></td>
-        <td><textarea class="gear-notes" rows="1" placeholder="Item logs...">${notes}</textarea></td>
-        <td style="text-align:center; vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove(); updateSheetMath();" style="padding:2px 6px;">X</button></td>
-      `;
-      gearTbody.appendChild(tr);
-      tr.querySelectorAll('input, textarea').forEach(i => i.addEventListener('input', updateSheetMath));
+    function addGearSlot(name="",notes=""){
+      const tr=document.createElement('tr');tr.className="gear-row";
+      tr.innerHTML=`<td><input type="text" class="gear-name" value="${name}" placeholder="Agent"></td><td><textarea class="gear-notes" rows="1" placeholder="Notes...">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>`;
+      document.getElementById('gear-tbody').appendChild(tr);
+      tr.querySelectorAll('input,textarea').forEach(i=>i.addEventListener('input',updateSheetMath));
     }
-    document.getElementById('addGearBtn').addEventListener('click', () => addGearSlot());
+    document.getElementById('addGearBtn').addEventListener('click',()=>addGearSlot());
 
-    addWeaponSlot("Heavy Pistol", "3d6", "2", "");
-    addGearSlot("Agent", "AI powered smartphone.");
-    addGearSlot("Carryall", "Heavy ripstop nylon bags.");
+    addWeaponSlot("Heavy Pistol","3d6","2","");
+    addGearSlot("Agent","AI powered smartphone.");
+    addGearSlot("Carryall","Heavy ripstop nylon bags.");
 
-    // --- CUSTOM EFFECTS ENGINE ---
-    let customEffectsList = [];
+    let customEffectsList=[];
 
-    document.getElementById('addEffectBtn').addEventListener('click', () => {
-      const inputVal = document.getElementById('effectInput').value.trim();
-      if(!inputVal) return;
-
-      const nameMatch = inputVal.match(/^([^,]+?)(?=\s+[A-Za-z\/&()\s]+\s*[+-]\d|$)/);
-      const name = nameMatch ? nameMatch[1].trim() : "Custom Effect";
-
-      const segments = inputVal.split(',').map(s => s.trim());
-      let modifiers = [];
-      let effectName = null;
-
-      segments.forEach((seg, idx) => {
-        const modMatch = seg.match(/^(.*?)\s*([+-]\d+)\s*$/);
-        if (modMatch) {
-          const target = modMatch[1].trim();
-          const value = parseInt(modMatch[2]);
-          modifiers.push({ target: target, value: value });
-        } else if (idx === 0) {
-          effectName = seg;
-        }
+    document.getElementById('addEffectBtn').addEventListener('click',()=>{
+      const inputVal=document.getElementById('effectInput').value.trim();
+      if(!inputVal)return;
+      const segments=inputVal.split(',').map(s=>s.trim());
+      let modifiers=[],effectName=null;
+      segments.forEach((seg,idx)=>{
+        const m=seg.match(/^(.*?)\s*([+-]\d+)\s*$/);
+        if(m)modifiers.push({target:m[1].trim(),value:parseInt(m[2])});
+        else if(idx===0)effectName=seg;
       });
-
-      if (effectName !== null && modifiers.length > 0) {
-        // structural capture
-      } else if (modifiers.length > 0 && effectName === null) {
-        effectName = modifiers[0].target;
-      }
-
-      if(modifiers.length > 0) {
-        const newEffect = { id: Date.now(), name: effectName || name, modifiers, active: true };
-        customEffectsList.push(newEffect);
-        renderCustomEffects();
-        document.getElementById('effectInput').value = "";
-        updateSheetMath();
-      } else {
-        alert("Parsing Error.\nUse syntax: EffectName STAT +N, SkillName +N\nExamples:\n  SynthCoke REF +2, INT +2\n  BlackLace Concentration +3, Athletics +2");
-      }
+      if(modifiers.length>0){
+        customEffectsList.push({id:Date.now(),name:effectName||modifiers[0].target,modifiers,active:true});
+        renderCustomEffects();document.getElementById('effectInput').value="";updateSheetMath();
+      }else{alert("Parsing Error.\nSyntax: EffectName STAT +N, SkillName +N\nExample: SynthCoke REF +2, Concentration +3");}
     });
 
-    function renderCustomEffects() {
-      const hook = document.getElementById('custom-effects-hook');
-      hook.innerHTML = "";
-      customEffectsList.forEach(eff => {
-        const div = document.createElement('div');
-        div.className = "effect-card";
-        const desc = eff.modifiers.map(m => `${m.value >= 0 ? '+' : ''}${m.value} ${m.target}`).join(', ');
-        div.innerHTML = `
-          <label style="font-size:11px;">
-            <input type="checkbox" data-id="${eff.id}" ${eff.active ? 'checked' : ''} onchange="toggleEffect(${eff.id})">
-            <strong>${eff.name}</strong> (${desc})
-          </label>
-          <button class="btn btn-danger" onclick="deleteEffect(${eff.id})" style="padding:2px 5px; font-size:10px;">Burn</button>
-        `;
+    function renderCustomEffects(){
+      const hook=document.getElementById('custom-effects-hook');hook.innerHTML="";
+      customEffectsList.forEach(eff=>{
+        const div=document.createElement('div');div.className="effect-card";
+        const desc=eff.modifiers.map(m=>`${m.value>=0?'+':''}${m.value} ${m.target}`).join(', ');
+        div.innerHTML=`<label style="font-size:11px;"><input type="checkbox" data-id="${eff.id}" ${eff.active?'checked':''} onchange="toggleEffect(${eff.id})"><strong>${eff.name}</strong> (${desc})</label><button class="btn btn-danger" onclick="deleteEffect(${eff.id})" style="padding:2px 5px;font-size:10px;">Burn</button>`;
         hook.appendChild(div);
       });
     }
+    window.toggleEffect=function(id){const f=customEffectsList.find(e=>e.id===id);if(f)f.active=!f.active;updateSheetMath();};
+    window.deleteEffect=function(id){customEffectsList=customEffectsList.filter(e=>e.id!==id);renderCustomEffects();updateSheetMath();};
 
-    window.toggleEffect = function(id) {
-      const fx = customEffectsList.find(e => e.id === id);
-      if(fx) fx.active = !fx.active;
-      updateSheetMath();
-    };
-    window.deleteEffect = function(id) {
-      customEffectsList = customEffectsList.filter(e => e.id !== id);
-      renderCustomEffects();
-      updateSheetMath();
-    };
-
-    const statAliases = {
-      'INT': 'int', 'REF': 'ref', 'DEX': 'dex', 'TECH': 'tech',
-      'COOL': 'cool', 'WILL': 'will', 'LUCK': 'luck', 'MOVE': 'move',
-      'BODY': 'body', 'EMP': 'emp'
-    };
-
-    // --- MAIN CALCULATION ENGINE ---
-    function updateSheetMath() {
-      const baseStats = {
-        INT: parseInt(document.getElementById('stat-int').value) || 0,
-        REF: parseInt(document.getElementById('stat-ref').value) || 0,
-        DEX: parseInt(document.getElementById('stat-dex').value) || 0,
-        TECH: parseInt(document.getElementById('stat-tech').value) || 0,
-        COOL: parseInt(document.getElementById('stat-cool').value) || 0,
-        WILL: parseInt(document.getElementById('stat-will').value) || 0,
-        LUCK: parseInt(document.getElementById('stat-luck').value) || 0,
-        MOVE: parseInt(document.getElementById('stat-move').value) || 0,
-        BODY: parseInt(document.getElementById('stat-body').value) || 0,
-        EMP: parseInt(document.getElementById('stat-emp').value) || 0
-      };
-
-      for(let key in baseStats) document.getElementById(`mod-${key.toLowerCase()}`).innerText = "";
-
-      const processedStats = { ...baseStats };
-      const skillBonuses = {};
-
-      customEffectsList.forEach(eff => {
-        if(!eff.active) return;
-        eff.modifiers.forEach(mod => {
-          const targetUpper = mod.target.toUpperCase();
-          if(processedStats[targetUpper] !== undefined) {
-            processedStats[targetUpper] += mod.value;
-          } else {
-            const key = mod.target;
-            skillBonuses[key] = (skillBonuses[key] || 0) + mod.value;
-          }
+    function updateSheetMath(){
+      const b={INT:parseInt(document.getElementById('stat-int').value)||0,REF:parseInt(document.getElementById('stat-ref').value)||0,DEX:parseInt(document.getElementById('stat-dex').value)||0,TECH:parseInt(document.getElementById('stat-tech').value)||0,COOL:parseInt(document.getElementById('stat-cool').value)||0,WILL:parseInt(document.getElementById('stat-will').value)||0,LUCK:parseInt(document.getElementById('stat-luck').value)||0,MOVE:parseInt(document.getElementById('stat-move').value)||0,BODY:parseInt(document.getElementById('stat-body').value)||0,EMP:parseInt(document.getElementById('stat-emp').value)||0};
+      for(let k in b)document.getElementById(`mod-${k.toLowerCase()}`).innerText="";
+      const ps={...b};const sb={};
+      customEffectsList.forEach(eff=>{
+        if(!eff.active)return;
+        eff.modifiers.forEach(mod=>{
+          const t=mod.target.toUpperCase();
+          if(ps[t]!==undefined)ps[t]+=mod.value;
+          else sb[mod.target]=(sb[mod.target]||0)+mod.value;
         });
       });
-
-      for(let key in baseStats) {
-        if(processedStats[key] !== baseStats[key]) {
-          document.getElementById(`mod-${key.toLowerCase()}`).innerText = `(${processedStats[key]})`;
-        }
-      }
-
-      const armorPenalty = parseInt(document.getElementById('eff-armor-penalty').value) || 0;
-      if (armorPenalty > 0) {
-        processedStats.REF = Math.max(0, processedStats.REF - armorPenalty);
-        processedStats.DEX = Math.max(0, processedStats.DEX - armorPenalty);
-        processedStats.MOVE = Math.max(0, processedStats.MOVE - armorPenalty);
-        document.getElementById('mod-ref').innerText = `(${processedStats.REF})`;
-        document.getElementById('mod-dex').innerText = `(${processedStats.DEX})`;
-        document.getElementById('mod-move').innerText = `(${processedStats.MOVE})`;
-      }
-
-      const derivedHumanity = processedStats.WILL + processedStats.EMP;
-      const derivedHP = 10 + (5 * Math.ceil((processedStats.BODY + processedStats.WILL) / 2));
-      document.getElementById('humanity').value = derivedHumanity;
-      document.getElementById('hp-max').value = derivedHP;
-
-      const psychosisInput = document.getElementById('psychosis-input');
-      const psychosisWarning = document.getElementById('psychosis-warning');
-      const humanityThresholdEl = document.getElementById('humanity-threshold');
-      const psychosisVal = parseInt(psychosisInput.value) || 0;
-      humanityThresholdEl.innerText = derivedHumanity;
-      if (psychosisVal > derivedHumanity) {
-        psychosisInput.classList.add('exceeded');
-        psychosisWarning.innerText = '⚠ CYBERPSYCHOSIS THRESHOLD EXCEEDED';
-      } else {
-        psychosisInput.classList.remove('exceeded');
-        psychosisWarning.innerText = '';
-      }
-
-      const isSeriouslyWounded = document.getElementById('eff-wounded').checked;
-
-      document.querySelectorAll('.skill-row').forEach(row => {
-        const statKey = row.getAttribute('data-stat').toUpperCase();
-        const skillName = row.getAttribute('data-skill-name') || '';
-        const activeStatValue = processedStats[statKey];
-        const lvlInput = row.querySelector('input');
-        const baseDisplay = row.querySelector('.skill-base-val');
-        const lvl = parseInt(lvlInput.value) || 0;
-        let finalBase = lvl + activeStatValue;
-
-        if (skillBonuses[skillName]) finalBase += skillBonuses[skillName];
-        if (isSeriouslyWounded) finalBase -= 2;
-
-        baseDisplay.innerText = finalBase;
+      for(let k in b)if(ps[k]!==b[k])document.getElementById(`mod-${k.toLowerCase()}`).innerText=`(${ps[k]})`;
+      const ap=parseInt(document.getElementById('eff-armor-penalty').value)||0;
+      if(ap>0){ps.REF=Math.max(0,ps.REF-ap);ps.DEX=Math.max(0,ps.DEX-ap);ps.MOVE=Math.max(0,ps.MOVE-ap);document.getElementById('mod-ref').innerText=`(${ps.REF})`;document.getElementById('mod-dex').innerText=`(${ps.DEX})`;document.getElementById('mod-move').innerText=`(${ps.MOVE})`;}
+      const hum=ps.WILL+ps.EMP;const hpMax=10+(5*Math.ceil((ps.BODY+ps.WILL)/2));
+      document.getElementById('humanity').value=hum;document.getElementById('hp-max').value=hpMax;
+      const pEl=document.getElementById('psychosis-input');const pVal=parseInt(pEl.value)||0;
+      document.getElementById('humanity-threshold').innerText=hum;
+      if(pVal>hum){pEl.classList.add('exceeded');document.getElementById('psychosis-warning').innerText='⚠ CYBERPSYCHOSIS THRESHOLD EXCEEDED';}
+      else{pEl.classList.remove('exceeded');document.getElementById('psychosis-warning').innerText='';}
+      const wounded=document.getElementById('eff-wounded').checked;
+      document.querySelectorAll('.skill-row').forEach(row=>{
+        const stat=row.getAttribute('data-stat').toUpperCase();
+        const sn=row.getAttribute('data-skill-name')||'';
+        const lvl=parseInt(row.querySelector('input').value)||0;
+        let val=lvl+ps[stat];
+        if(sb[sn])val+=sb[sn];
+        if(wounded)val-=2;
+        row.querySelector('.skill-base-val').innerText=val;
       });
     }
 
-    document.addEventListener('input', (e) => {
-      if(e.target.matches('input, select, textarea')) updateSheetMath();
-    });
-    document.addEventListener('change', (e) => {
-      if(e.target.matches('input[type="checkbox"]')) updateSheetMath();
-    });
-    window.addEventListener('DOMContentLoaded', updateSheetMath);
+    document.addEventListener('input',e=>{if(e.target.matches('input,select,textarea'))updateSheetMath();});
+    document.addEventListener('change',e=>{if(e.target.matches('input[type="checkbox"]'))updateSheetMath();});
+    window.addEventListener('DOMContentLoaded',updateSheetMath);
 
-    // --- EXPORT ---
-    document.getElementById('exportBtn').addEventListener('click', () => {
-      const dataPackage = {
-        handle: document.getElementById('charHandle').value,
-        eurodollars: document.getElementById('eurodollars').value,
-        rawStats: {
-          int: document.getElementById('stat-int').value,
-          ref: document.getElementById('stat-ref').value,
-          dex: document.getElementById('stat-dex').value,
-          tech: document.getElementById('stat-tech').value,
-          cool: document.getElementById('stat-cool').value,
-          will: document.getElementById('stat-will').value,
-          luck: document.getElementById('stat-luck').value,
-          move: document.getElementById('stat-move').value,
-          body: document.getElementById('stat-body').value,
-          emp: document.getElementById('stat-emp').value,
-        },
-        wounded: document.getElementById('eff-wounded').checked,
-        armorPenalty: document.getElementById('eff-armor-penalty').value,
-        psychosis: document.getElementById('psychosis-input').value,
-        customEffects: customEffectsList,
-        weapons: [], gear: [], cyberware: [], skills: []
-      };
-
-      document.querySelectorAll('.weapon-row').forEach(row => {
-        dataPackage.weapons.push({ name: row.querySelector('.wp-name').value, dmg: row.querySelector('.wp-dmg').value, rof: row.querySelector('.wp-rof').value, notes: row.querySelector('.wp-notes').value });
-      });
-      document.querySelectorAll('.gear-row').forEach(row => {
-        dataPackage.gear.push({ name: row.querySelector('.gear-name').value, notes: row.querySelector('.gear-notes').value });
-      });
-      document.querySelectorAll('.cyber-row').forEach(row => {
-        dataPackage.cyberware.push({ group: row.getAttribute('data-group'), slot: row.getAttribute('data-slot'), name: row.querySelector('.cy-name').value, quality: row.querySelector('.cy-quality').value, notes: row.querySelector('.cy-notes').value });
-      });
-      document.querySelectorAll('.skill-row').forEach(row => {
-        dataPackage.skills.push({ name: row.getAttribute('data-skill-name'), lvl: row.querySelector('input').value });
-      });
-
-      const blob = new Blob([JSON.stringify(dataPackage, null, 2)], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = `${dataPackage.handle}_cybercore.json`;
-      document.body.appendChild(a); a.click();
-      document.body.removeChild(a); URL.revokeObjectURL(url);
+    document.getElementById('exportBtn').addEventListener('click',()=>{
+      const d={handle:document.getElementById('charHandle').value,eurodollars:document.getElementById('eurodollars').value,rawStats:{int:document.getElementById('stat-int').value,ref:document.getElementById('stat-ref').value,dex:document.getElementById('stat-dex').value,tech:document.getElementById('stat-tech').value,cool:document.getElementById('stat-cool').value,will:document.getElementById('stat-will').value,luck:document.getElementById('stat-luck').value,move:document.getElementById('stat-move').value,body:document.getElementById('stat-body').value,emp:document.getElementById('stat-emp').value},wounded:document.getElementById('eff-wounded').checked,armorPenalty:document.getElementById('eff-armor-penalty').value,psychosis:document.getElementById('psychosis-input').value,customEffects:customEffectsList,weapons:[],gear:[],cyberware:[],skills:[]};
+      document.querySelectorAll('.weapon-row').forEach(r=>d.weapons.push({name:r.querySelector('.wp-name').value,dmg:r.querySelector('.wp-dmg').value,rof:r.querySelector('.wp-rof').value,notes:r.querySelector('.wp-notes').value}));
+      document.querySelectorAll('.gear-row').forEach(r=>d.gear.push({name:r.querySelector('.gear-name').value,notes:r.querySelector('.gear-notes').value}));
+      document.querySelectorAll('.cyber-row').forEach(r=>d.cyberware.push({group:r.getAttribute('data-group'),slot:r.getAttribute('data-slot'),name:r.querySelector('.cy-name').value,quality:r.querySelector('.cy-quality').value,notes:r.querySelector('.cy-notes').value}));
+      document.querySelectorAll('.skill-row').forEach(r=>d.skills.push({name:r.getAttribute('data-skill-name'),lvl:r.querySelector('input').value}));
+      const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(d,null,2)],{type:"application/json"}));a.download=`${d.handle}_cybercore.json`;document.body.appendChild(a);a.click();document.body.removeChild(a);
     });
 
-    // --- IMPORT ---
-    document.getElementById('importFile').addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = function(evt) {
-        try {
-          const inc = JSON.parse(evt.target.result);
-          if(inc.handle) document.getElementById('charHandle').value = inc.handle;
-          if(inc.eurodollars) document.getElementById('eurodollars').value = inc.eurodollars;
-          for (let key in inc.rawStats) { const el = document.getElementById(`stat-${key}`); if(el) el.value = inc.rawStats[key]; }
-          if(inc.wounded !== undefined) document.getElementById('eff-wounded').checked = inc.wounded;
-          if(inc.armorPenalty) document.getElementById('eff-armor-penalty').value = inc.armorPenalty;
-          if(inc.psychosis) document.getElementById('psychosis-input').value = inc.psychosis;
-          if(inc.customEffects) { customEffectsList = inc.customEffects; renderCustomEffects(); }
-
-          weaponsTbody.innerHTML = "";
-          if(inc.weapons) inc.weapons.forEach(w => addWeaponSlot(w.name, w.dmg, w.rof, w.notes));
-          gearTbody.innerHTML = "";
-          if(inc.gear) inc.gear.forEach(g => addGearSlot(g.name, g.notes));
-
-          if(inc.cyberware) {
-            document.querySelectorAll('.cyber-row').forEach(row => {
-              const grp = row.getAttribute('data-group');
-              const slt = row.getAttribute('data-slot');
-              const m = inc.cyberware.find(c => c.group === grp && c.slot == slt);
-              if(m) { row.querySelector('.cy-name').value = m.name || ""; row.querySelector('.cy-quality').value = m.quality || "1"; row.querySelector('.cy-notes').value = m.notes || ""; }
-            });
-          }
-          if(inc.skills) {
-            document.querySelectorAll('.skill-row').forEach(row => {
-              const skillName = row.getAttribute('data-skill-name');
-              const m = inc.skills.find(s => s.name === skillName);
-              if(m) row.querySelector('input').value = m.lvl;
-            });
-          }
-          updateSheetMath();
-          alert("Matrix Connection Restored.");
-        } catch (err) { alert("Decryption Error."); }
+    document.getElementById('importFile').addEventListener('change',e=>{
+      const file=e.target.files[0];if(!file)return;
+      const reader=new FileReader();
+      reader.onload=evt=>{
+        try{
+          const inc=JSON.parse(evt.target.result);
+          if(inc.handle)document.getElementById('charHandle').value=inc.handle;
+          if(inc.eurodollars)document.getElementById('eurodollars').value=inc.eurodollars;
+          for(let k in inc.rawStats){const el=document.getElementById(`stat-${k}`);if(el)el.value=inc.rawStats[k];}
+          if(inc.wounded!==undefined)document.getElementById('eff-wounded').checked=inc.wounded;
+          if(inc.armorPenalty)document.getElementById('eff-armor-penalty').value=inc.armorPenalty;
+          if(inc.psychosis)document.getElementById('psychosis-input').value=inc.psychosis;
+          if(inc.customEffects){customEffectsList=inc.customEffects;renderCustomEffects();}
+          document.getElementById('weapons-tbody').innerHTML="";
+          if(inc.weapons)inc.weapons.forEach(w=>addWeaponSlot(w.name,w.dmg,w.rof,w.notes));
+          document.getElementById('gear-tbody').innerHTML="";
+          if(inc.gear)inc.gear.forEach(g=>addGearSlot(g.name,g.notes));
+          if(inc.cyberware){document.querySelectorAll('.cyber-row').forEach(row=>{const m=inc.cyberware.find(c=>c.group===row.getAttribute('data-group')&&c.slot==row.getAttribute('data-slot'));if(m){row.querySelector('.cy-name').value=m.name||"";row.querySelector('.cy-quality').value=m.quality||"1";row.querySelector('.cy-notes').value=m.notes||"";}});}
+          if(inc.skills){document.querySelectorAll('.skill-row').forEach(row=>{const m=inc.skills.find(s=>s.name===row.getAttribute('data-skill-name'));if(m)row.querySelector('input').value=m.lvl;});}
+          updateSheetMath();alert("Matrix Connection Restored.");
+        }catch(err){alert("Decryption Error.");}
       };
       reader.readAsText(file);
     });
