@@ -3,11 +3,11 @@
 ---
 
 # Ranged Combat
-Access the [[Rules/CPRED/Combat/Gun Generator\|Gun Generator]] here.
+> Access the [[Rules/CPRED/Combat/Gun Generator\|Gun Generator]] here.
 
 ### Core Rules
 **Attacker:** REF + Weapon Skill + d10
-**Defender:** Check [Rules-Range.png](/img/user/Pictures/Rules-Range.png) & [Rules-Range2.png](/img/user/Pictures/Rules-Range2.png). [[Rules/Homebrew\|Homebrew]]: If Attacker beats the Range Table, check if the Defender has Speedware/Reflexware. If so, they can dodge as many hits as you have Quality in those Speedware.
+**Defender:** Check [Range DRs](/img/user/Pictures/Rules-Range.png) & [Autofire DRs](/img/user/Pictures/Rules-Range2.png). [[Rules/Homebrew\|Homebrew]]: If Attacker beats the Range Table, check if the Defender has [[Rules/CPRED/Cyberware/Speedware\|Speedware]]. If so, they can dodge as many hits as you have Quality in those [[Rules/CPRED/Cyberware/Speedware\|Speedware]].
 
 In the Dark Future, everybody has a gun. Loyalty to a brand brings with it bonuses, as well as a translation of quality later down the line. Below is an archetype list of guns available in [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]].
 

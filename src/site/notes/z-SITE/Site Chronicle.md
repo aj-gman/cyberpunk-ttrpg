@@ -14,7 +14,7 @@
 		- Multiple pages for easy navigation
 		- Armor & Seriously Wounded penalties applied automatically
 		- Damage tracker that ablates armor and removes HP
-		- Pages for notes
+		- Inventory & Vehicle notes
 	- Modified margins & padding so website fits on the entire screen instead of defaulting to 4:3
 
 
@@ -25,5 +25,4 @@
 	- [ ] Reputation (lore or mechanics only?)
 	- [ ] Reputation Events (lore or mechanics only?)
 	- [ ] Improvement Points (?)
-	- [x] make it more pages (Main > Inventory > Cyberware)
-	- [ ] Inventory & Stash
+	- [ ] Add [[Rules/CPRED/Drugs/Drug Effects/Nerve Degeneration\|Nerve Degeneration]] as a feature
