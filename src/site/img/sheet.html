@@ -113,6 +113,61 @@
       .main-grid { grid-template-columns: 42% 58%; }
     }
 
+      /* Wiki Search Bar Layout and Design */
+  .wiki-search-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto; /* Pushes search bar to the far right. Remove this line if you want it huddled directly next to the tabs. */
+  }
+  
+  .wiki-search-input {
+    background-color: #000000;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.85rem;
+    outline: none;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+  }
+  
+  .wiki-search-input:focus {
+    border-color: var(--accent-yellow);
+    box-shadow: 0 0 8px rgba(254, 232, 1, 0.4);
+  }
+  
+  .wiki-search-btn {
+    background-color: var(--panel-bg);
+    color: var(--accent-yellow);
+    border: 1px solid var(--accent-yellow);
+    padding: 8px 14px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .wiki-search-btn:hover {
+    background-color: var(--accent-yellow);
+    color: #000000;
+    box-shadow: 0 0 8px var(--accent-yellow);
+  }
+  
+  /* Responsive adjustment for mobile screen dimensions */
+  @media (max-width: 768px) {
+    .wiki-search-container {
+      margin-left: 0;
+      width: 100%;
+      margin-top: 5px;
+    }
+    .wiki-search-input {
+      flex-grow: 1;
+    }
+  }
     /* Stats: 6 per row (5 stats + 1 derived) */
     .stats-row {
       display: grid;
@@ -269,11 +324,17 @@
     </div>
   </div>
 
-  <div class="tab-navigation-bar">
-    <button class="btn tab-trigger-btn active-btn" type="button" onclick="switchTab('page-core', event)">PAGE 1: CORE</button>
-    <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-inventory', event)">PAGE 2: INVENTORY</button>
-    <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-cyberware', event)">PAGE 3: CYBERWARE</button>
+<div class="tab-navigation-bar">
+  <button class="tab-trigger-btn active-tab" onclick="switchTab('stats-skills')">Core Attributes & Skills</button>
+  <button class="tab-trigger-btn" onclick="switchTab('combat-gear')">Combat & Gear</button>
+  <button class="tab-trigger-btn" onclick="switchTab('cyberware-net')">Cyberware & Netrunning</button>
+  <button class="tab-trigger-btn" onclick="switchTab('biography-notes')">Biography & Notes</button>
+  
+  <div class="wiki-search-container">
+    <input type="text" id="wiki-search-input" class="wiki-search-input" placeholder="SEARCH WIKI..." onkeydown="if(event.key === 'Enter') executeWikiSearch()">
+    <button class="wiki-search-btn" onclick="executeWikiSearch()">SEARCH</button>
   </div>
+</div>
 
   <div id="page-core" class="sheet-tab-panel active-view">
     
@@ -849,6 +910,20 @@
       };
       reader.readAsText(file);
     });
+    function executeWikiSearch() {
+  const query = document.getElementById('wiki-search-input').value.trim();
+  if (!query) return; // Ignore if empty
+
+  // METHOD A: Scoped Google Site Search (Highly Recommended for public custom wikis)
+  const searchUrl = `https://www.google.com/search?q=site:gman-cyberpunk.vercel.app+${encodeURIComponent(query)}`;
+  
+  // METHOD B: Internal Wiki Parameter Routing
+  // If your vercel app natively checks query strings, comment out Method A and uncomment one of these options instead:
+  // const searchUrl = `https://gman-cyberpunk.vercel.app/search?q=${encodeURIComponent(query)}`;
+  // const searchUrl = `https://gman-cyberpunk.vercel.app/?search=${encodeURIComponent(query)}`;
+
+  window.open(searchUrl, '_blank');
+}
   </script>
 </body>
 </html>
