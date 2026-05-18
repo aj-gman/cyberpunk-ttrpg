@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyberpunk Red Advanced Core Matrix</title>
+  <title>Cyberpunk Red Advanced Sheet (made with Google Gemini & Claude AI)</title>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -259,7 +259,7 @@
 
   <div class="top-bar">
     <div>
-      <span style="color:var(--accent-yellow);font-weight:bold;">CHROME CORE ARCHITECTURE MATRIX // OPERATIONAL GRID</span>
+      <span style="color:var(--accent-yellow);font-weight:bold;">CYBERPUNK RED CHARACTER SHEET</span>
     </div>
     <div>
       <label class="btn" style="margin-right:8px;padding:5px 10px;display:inline-block;">
@@ -270,18 +270,18 @@
   </div>
 
   <div class="tab-navigation-bar">
-    <button class="btn tab-trigger-btn active-btn" type="button" onclick="switchTab('page-core', event)">PAGE 1: CORE MATRIX & NOTES</button>
-    <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-inventory', event)">PAGE 2: INVENTORY MANIFEST</button>
-    <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-cyberware', event)">PAGE 3: CYBERWARE MATRIX</button>
+    <button class="btn tab-trigger-btn active-btn" type="button" onclick="switchTab('page-core', event)">PAGE 1: CORE</button>
+    <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-inventory', event)">PAGE 2: INVENTORY</button>
+    <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-cyberware', event)">PAGE 3: CYBERWARE</button>
   </div>
 
   <div id="page-core" class="sheet-tab-panel active-view">
     
     <div class="panel adjustable-profile-card">
-      <h2>Identity System Log & Core Notes</h2>
+      <h2>IDENTITY</h2>
       <div style="display: flex; flex-direction: column; gap: 10px; height: calc(100% - 35px);">
         <div style="display: flex; align-items: center; gap: 10px;">
-          <label style="color:var(--accent-yellow); font-weight:bold; font-size:12px; white-space:nowrap;">RUNNER HANDLE:</label>
+          <label style="color:var(--accent-yellow); font-weight:bold; font-size:12px; white-space:nowrap;">HANDLE:</label>
           <input type="text" id="charHandle" value="Jacked_In_Runner" style="background:transparent; border:none; color:white; font-size:15px; font-weight:bold; border-bottom:1px solid var(--border-color); width:100%;">
         </div>
         <textarea id="charNotes" placeholder="Type core note telemetry data directly here..." style="flex: 1; min-height: 50px; width:100%;"></textarea>
@@ -313,10 +313,10 @@
 
         <div class="panel" style="padding-bottom:5px;">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:2px solid var(--accent-yellow);padding-bottom:10px;">
-            <h2 style="margin:0;border:none;padding:0;">Combat & Status Core Systems</h2>
+            <h2 style="margin:0;border:none;padding:0;">HEALTH DIAGNOSTICS</h2>
             <label style="font-weight: bold; color: var(--neon-cyan); cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 11px; background:#000; padding:4px 8px; border:1px solid var(--border-color); border-radius:3px;">
               <input type="checkbox" id="toggle-combat" onchange="document.getElementById('combat-matrix-content').style.display=this.checked?'block':'none'" checked style="width:auto;">
-              INITIALIZE COMBAT OVERLAY
+              INITIALIZE HEALTH OVERLAY
             </label>
           </div>
           
@@ -324,14 +324,14 @@
             <div class="two-col-row">
               
               <div class="panel" style="margin-bottom:0; padding:12px;">
-                <h2 style="font-size:14px;">Combat Telemetry</h2>
+                <h2 style="font-size:14px;">COMBAT TELEMETRY</h2>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
                   <div class="stat-box" style="border-color:var(--neon-cyan);"><label>HEAD SP</label><input type="number" id="sp-head" value="11" min="0"></div>
                   <div class="stat-box" style="border-color:var(--neon-cyan);"><label>BODY SP</label><input type="number" id="sp-body" value="11" min="0"></div>
                 </div>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
-                  <div class="stat-box" style="border-color:var(--accent-yellow);"><label>CURRENT HP</label><input type="number" id="hp-curr" value="40" min="0"></div>
-                  <div class="stat-box" style="border-color:#555;"><label>MAX HP (AUTO)</label><input type="text" id="hp-max-display" readonly style="color:#888;"></div>
+                  <div class="stat-box" style="border-color:var(--accent-yellow);"><label>CURRENT HEALTH</label><input type="number" id="hp-curr" value="40" min="0"></div>
+                  <div class="stat-box" style="border-color:#555;"><label>MAX HEALTH</label><input type="text" id="hp-max-display" readonly style="color:#888;"></div>
                 </div>
                 <div style="background:#000;padding:12px;border:1px dashed var(--danger-red);border-radius:4px;">
                   <label style="color:var(--danger-red);font-weight:bold;font-size:11px;display:block;margin-bottom:5px;">INCOMING DAMAGE</label>
@@ -344,7 +344,7 @@
               </div>
               
               <div class="panel" style="margin-bottom:0; padding:12px;">
-                <h2 style="font-size:14px;">Status Modifiers</h2>
+                <h2 style="font-size:14px;">STATUS EFFECTS</h2>
                 <div class="effects-builder">
                   <input type="text" id="effectInput" placeholder="SynthCoke REF +2, Concentration +2" style="flex:2;font-size:11px;">
                   <button class="btn" id="addEffectBtn" type="button">+ Inject</button>
@@ -380,7 +380,7 @@
               </div>
               <table>
                 <thead>
-                  <tr><th>Weapon</th><th style="width:55px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr>
+                  <tr><th>Weapon</th><th style="width:55px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:13px;"></th></tr>
                 </thead>
                 <tbody id="weapons-tbody"></tbody>
               </table>
@@ -391,13 +391,13 @@
         <div class="netrunner-toggle-panel">
           <label>
             <input type="checkbox" id="toggle-netrunner" onchange="toggleNetrunnerModule(this.checked)" style="width:auto;">
-            INITIALIZE NETRUNNER CYBERDECK INTERFACE
+            INITIALIZE NETRUNNER OVERLAY
           </label>
         </div>
 
         <div id="netrunner-section">
-          <h2>Netrunner Deck Sub-Processor</h2>
-          <h3 style="margin-top:15px;">Deck Hardware Configuration</h3>
+          <h2>NETRUNNER OVERLAY</h2>
+          <h3 style="margin-top:15px;">CYBERDECK CONFIG</h3>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
             <div class="stat-box"><label>Hardening</label><input type="number" id="cfg-hardening" value="0" min="0" max="3"></div>
             <div class="stat-box"><label>Firewall</label><input type="number" id="cfg-firewall" value="0" min="0" max="3"></div>
