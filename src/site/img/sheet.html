@@ -113,13 +113,12 @@
       .main-grid { grid-template-columns: 42% 58%; }
     }
 
-/* Container adjustment */
+/* Container positioning */
 .wiki-search-portal-container {
   position: relative;
-  margin-left: auto; /* Aligns neatly to the right side of your tabs */
+  margin-left: auto;
 }
 
-/* Style the Search Input to match your sheet matrix */
 #wiki-search-input {
   width: 160px;
   padding: 6px;
@@ -134,24 +133,24 @@
   border-color: var(--accent-yellow);
 }
 
-/* 1. Main Outer Window (Forces a clean 16:9 widescreen layout) */
+/* Widescreen Preview Framing HUD Box */
 .wiki-hover-portal {
   display: none; 
   position: absolute;
   right: 0;
   top: 100%;
   margin-top: 8px;
-  width: 640px;          /* Widescreen Width */
-  height: 360px;         /* Widescreen Height (16:9) */
+  width: 640px;          /* Widescreen Width Matrix */
+  height: 400px;         /* Proportional Aspect Height */
   background: #000000;
   border: 2px solid var(--accent-yellow);
   box-shadow: 0 0 25px rgba(254, 232, 1, 0.6);
   z-index: 1000;
   flex-direction: column;
-  overflow: hidden;      /* Crops everything cleanly into the 16:9 box */
+  overflow: hidden;      /* Crops out the oversized canvas scale */
 }
 
-/* Title Bar Header Matrix */
+/* Header UI HUD Bar */
 .portal-header {
   background: var(--panel-bg);
   border-bottom: 1px solid var(--border-color);
@@ -174,7 +173,7 @@
   font-size: 14px;
 }
 
-/* 2. Scaler Sub-Wrapper (Compensates for the scale offset) */
+/* Scale bounding containment system */
 .wiki-frame-wrapper {
   width: 100%;
   height: 100%;
@@ -182,18 +181,18 @@
   position: relative;
 }
 
-/* 3. The Desktop Iframe (Simulating a crisp 1080p desktop canvas layout) */
+/* Desktop Canvas Scale Optimization Rule */
 #wiki-frame {
-  width: 1920px !important;    /* Full Desktop width */
-  height: 1080px !important;   /* Full Desktop height */
+  width: 1440px !important;    /* Simulates native wide desktop view breakpoint */
+  height: 900px !important;     
   border: none;
-  background: #ffffff;
+  background: #000000;
   position: absolute;
   top: 0;
   left: 0;
   
-  /* Scale factor: 640px / 1920px = Exactly 0.333333 */
-  transform: scale(0.333333);
+  /* Scale Factor: 640px / 1440px = ~0.444444 */
+  transform: scale(0.444444);
   transform-origin: top left;
 }
     
@@ -363,6 +362,18 @@
         <input type="text" id="wiki-search-input" placeholder="SEARCH WIKI..." onkeydown="if(event.key === 'Enter') previewWikiSearch()">
         <button class="btn" type="button" onclick="previewWikiSearch()" style="padding: 5px 12px; font-size: 12px;">GO</button>
       </div>
+
+      <div id="wiki-hover-portal" class="wiki-hover-portal">
+        <div class="portal-header">
+          <span>WIKI LIVE PREVIEW MATRIX</span>
+          <button type="button" onclick="closeWikiPortal()">✕</button>
+        </div>
+        <div class="wiki-frame-wrapper">
+          <iframe id="wiki-frame" src=""></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <div id="wiki-hover-portal" class="wiki-hover-portal">
     <div class="portal-header">
