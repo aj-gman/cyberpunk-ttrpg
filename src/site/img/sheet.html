@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyberpunk Red Advanced Sheet (made with Google Gemini & Claude AI)</title>
+  <title>Cyberpunk Red Advanced Sheet</title>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -49,13 +49,14 @@
       border: 1px solid var(--border-color);
     }
 
-    /* Tab Layout Architecture Styles */
+    /* === TAB SYSTEM === */
     .tab-navigation-bar {
       display: flex;
       gap: 10px;
       margin-bottom: 20px;
       border-bottom: 2px solid var(--border-color);
       padding-bottom: 10px;
+      align-items: center;
     }
     .tab-trigger-btn.active-btn {
       background: var(--accent-yellow) !important;
@@ -63,22 +64,74 @@
       box-shadow: 0 0 10px var(--accent-yellow);
       border-color: var(--accent-yellow) !important;
     }
-    .sheet-tab-panel {
+    .sheet-tab-panel { display: none; }
+    .sheet-tab-panel.active-view { display: block; }
+
+    /* === WIKI SEARCH PORTAL === */
+    .wiki-search-portal-container {
+      position: relative;
+      margin-left: auto;
+    }
+    #wiki-search-input {
+      width: 160px;
+      padding: 6px;
+      border: 1px solid var(--border-color);
+      background: #000;
+      color: #fff;
+      font-family: 'Lexend', monospace;
+      font-size: 12px;
+      outline: none;
+    }
+    #wiki-search-input:focus { border-color: var(--accent-yellow); }
+
+    .wiki-hover-portal {
       display: none;
+      position: absolute;
+      right: 0;
+      top: calc(100% + 8px);
+      width: 700px;
+      height: 520px;
+      background: #000;
+      border: 2px solid var(--accent-yellow);
+      box-shadow: 0 0 25px rgba(254, 232, 1, 0.5);
+      z-index: 1000;
+      flex-direction: column;
+      border-radius: 4px;
+      overflow: hidden;
     }
-    .sheet-tab-panel.active-view {
-      display: block;
+    .portal-header {
+      background: var(--panel-bg);
+      border-bottom: 1px solid var(--border-color);
+      padding: 6px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      font-weight: bold;
+      color: var(--accent-yellow);
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+    .portal-header button {
+      background: transparent;
+      border: none;
+      color: var(--danger-red);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 0 4px;
+    }
+    .portal-header button:hover { color: #fff; }
+    /* The iframe fills the portal at 100% — no scaling tricks, just native rendering */
+    #wiki-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #000;
+      flex: 1;
     }
 
-    /* Adjustable Card Module Styling */
-    .adjustable-profile-card {
-      resize: both;
-      overflow: auto;
-      min-width: 320px;
-      min-height: 140px;
-      box-sizing: border-box;
-    }
-
+    /* === BUTTONS === */
     .btn {
       background: transparent;
       color: var(--neon-cyan);
@@ -96,6 +149,7 @@
     .btn-net { color: var(--net-green); border-color: var(--net-green); }
     .btn-net:hover { background: var(--net-green); color: #000; box-shadow: 0 0 10px var(--net-green); }
 
+    /* === PANELS === */
     .panel {
       background: var(--panel-bg);
       border: 1px solid var(--border-color);
@@ -104,6 +158,7 @@
       margin-bottom: 20px;
     }
 
+    /* === LAYOUT === */
     .main-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -113,90 +168,14 @@
       .main-grid { grid-template-columns: 42% 58%; }
     }
 
-/* Container positioning */
-.wiki-search-portal-container {
-  position: relative;
-  margin-left: auto;
-}
+    .two-col-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .two-col-row .panel { margin-bottom: 0; }
 
-#wiki-search-input {
-  width: 160px;
-  padding: 6px;
-  border: 1px solid var(--border-color);
-  background: #000;
-  color: #fff;
-  font-family: 'Lexend', monospace;
-  font-size: 12px;
-  outline: none;
-}
-#wiki-search-input:focus {
-  border-color: var(--accent-yellow);
-}
-
-/* Widescreen Preview Framing HUD Box */
-.wiki-hover-portal {
-  display: none; 
-  position: absolute;
-  right: 0;
-  top: 100%;
-  margin-top: 8px;
-  width: 640px;          /* Widescreen Width Matrix */
-  height: 400px;         /* Proportional Aspect Height */
-  background: #000000;
-  border: 2px solid var(--accent-yellow);
-  box-shadow: 0 0 25px rgba(254, 232, 1, 0.6);
-  z-index: 1000;
-  flex-direction: column;
-  overflow: hidden;      /* Crops out the oversized canvas scale */
-}
-
-/* Header UI HUD Bar */
-.portal-header {
-  background: var(--panel-bg);
-  border-bottom: 1px solid var(--border-color);
-  padding: 6px 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 11px;
-  font-weight: bold;
-  color: var(--accent-yellow);
-  letter-spacing: 1px;
-  z-index: 1002;
-}
-.portal-header button {
-  background: transparent;
-  border: none;
-  color: var(--danger-red);
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-/* Scale bounding containment system */
-.wiki-frame-wrapper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Desktop Canvas Scale Optimization Rule */
-#wiki-frame {
-  width: 1440px !important;    /* Simulates native wide desktop view breakpoint */
-  height: 900px !important;     
-  border: none;
-  background: #000000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-  /* Scale Factor: 640px / 1440px = ~0.444444 */
-  transform: scale(0.444444);
-  transform-origin: top left;
-}
-    
-    /* Stats: 6 per row (5 stats + 1 derived) */
+    /* === STATS === */
     .stats-row {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -210,20 +189,10 @@
       padding: 5px 4px;
       border-radius: 4px;
     }
-    .stat-box label {
-      display: block;
-      font-size: 10px;
-      color: var(--accent-yellow);
-      font-weight: bold;
-    }
+    .stat-box label { display: block; font-size: 10px; color: var(--accent-yellow); font-weight: bold; }
     .stat-box input {
-      width: 90%;
-      background: transparent;
-      border: none;
-      color: #fff;
-      text-align: center;
-      font-size: 15px;
-      font-weight: bold;
+      width: 90%; background: transparent; border: none;
+      color: #fff; text-align: center; font-size: 15px; font-weight: bold;
       font-family: 'Lexend', monospace;
     }
     .stat-box.derived { border-color: var(--neon-cyan); }
@@ -231,14 +200,7 @@
     .stat-box.derived input { color: var(--neon-cyan); font-size: 13px; }
     .display-stat-modified { font-size: 10px; color: var(--neon-cyan); display: block; margin-top: 1px; }
 
-    .two-col-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-    .two-col-row .panel { margin-bottom: 0; }
-
-    /* Skills */
+    /* === SKILLS === */
     .skills-master-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -267,6 +229,7 @@
     }
     .skill-base-val { text-align: center; font-weight: bold; color: var(--accent-yellow); font-size: 12px; }
 
+    /* === STATUS EFFECTS === */
     .effects-builder { display: flex; gap: 8px; margin-bottom: 15px; }
     .effects-list { display: grid; grid-template-columns: 1fr; gap: 8px; }
     .effect-card {
@@ -274,6 +237,7 @@
       background: #000; padding: 8px; border-left: 3px solid var(--neon-cyan);
     }
 
+    /* === CYBERPSYCHOSIS === */
     .psychosis-tracker {
       margin-top: 12px; background: #000; padding: 10px;
       border: 1px solid #a142ff; border-radius: 4px;
@@ -288,6 +252,7 @@
     #psychosis-input.exceeded { border-color: var(--danger-red) !important; color: var(--danger-red) !important; box-shadow: 0 0 8px var(--danger-red); }
     #psychosis-warning { font-size: 11px; font-weight: bold; color: var(--danger-red); text-align: center; margin-top: 4px; min-height: 14px; text-transform: uppercase; }
 
+    /* === NETRUNNER === */
     .netrunner-toggle-panel {
       background: var(--net-panel-bg); border: 1px solid var(--net-green-dim);
       padding: 12px 15px; border-radius: 4px; margin-bottom: 20px;
@@ -310,10 +275,12 @@
       border-color: #003a10; color: var(--net-green); background: #000e05; font-family: 'Lexend', monospace;
     }
 
+    /* === TABLES === */
     table { width: 100%; border-collapse: collapse; margin-top: 10px; }
     th, td { border: 1px solid #2e3456; padding: 6px; text-align: left; font-size: 12px; vertical-align: top; }
     th { background: #000; color: var(--neon-cyan); }
 
+    /* === INPUTS === */
     input, select {
       width: 100%; background: #000; border: 1px solid #444;
       color: white; padding: 4px; box-sizing: border-box; font-family: 'Lexend', monospace;
@@ -323,18 +290,45 @@
       color: white; padding: 4px; box-sizing: border-box;
       font-family: 'Lexend', monospace; font-size: 12px;
     }
-    
-    /* Dedicated class for fields that automatically fit to text size */
+
+    /* Auto-expand textareas (inventory, notes) */
     textarea.auto-expand {
-      overflow: hidden; 
+      overflow: hidden;
       min-height: 28px;
-      resize: vertical; /* Allows manual height adjust just in case, but auto-expands by default */
+      resize: vertical;
+    }
+
+    /* Resizable cells for cyberware and inventory tables */
+    /* The td itself becomes the resize handle host */
+    td.resizable-cell {
+      padding: 0;
+      overflow: hidden;
+    }
+    td.resizable-cell textarea,
+    td.resizable-cell input[type="text"],
+    td.resizable-cell input[type="number"] {
+      width: 100%;
+      height: 100%;
+      min-height: 32px;
+      resize: both;
+      overflow: auto;
+      box-sizing: border-box;
+      padding: 6px;
     }
 
     .currency-panel {
       display: flex; align-items: center; gap: 15px;
       background: #000; padding: 10px;
       border: 1px solid var(--accent-yellow); margin-bottom: 12px; border-radius: 4px;
+    }
+
+    /* Identity card */
+    .adjustable-profile-card {
+      resize: both;
+      overflow: auto;
+      min-width: 320px;
+      min-height: 140px;
+      box-sizing: border-box;
     }
   </style>
 </head>
@@ -352,56 +346,48 @@
     </div>
   </div>
 
-<div class="tab-navigation-bar">
+  <div class="tab-navigation-bar">
     <button class="btn tab-trigger-btn active-btn" type="button" onclick="switchTab('page-core', event)">PAGE 1: CORE</button>
     <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-inventory', event)">PAGE 2: INVENTORY</button>
     <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-cyberware', event)">PAGE 3: CYBERWARE</button>
-    
-    <div class="wiki-search-portal-container">
-      <div style="display: flex; gap: 5px; align-items: center;">
-        <input type="text" id="wiki-search-input" placeholder="SEARCH WIKI..." onkeydown="if(event.key === 'Enter') previewWikiSearch()">
-        <button class="btn" type="button" onclick="previewWikiSearch()" style="padding: 5px 12px; font-size: 12px;">GO</button>
-      </div>
 
+    <!-- WIKI SEARCH -->
+    <div class="wiki-search-portal-container">
+      <div style="display:flex;gap:5px;align-items:center;">
+        <input type="text" id="wiki-search-input" placeholder="SEARCH WIKI..." onkeydown="if(event.key==='Enter')previewWikiSearch()">
+        <button class="btn" type="button" onclick="previewWikiSearch()" style="padding:5px 12px;font-size:12px;">GO</button>
+      </div>
       <div id="wiki-hover-portal" class="wiki-hover-portal">
         <div class="portal-header">
-          <span>WIKI LIVE PREVIEW MATRIX</span>
-          <button type="button" onclick="closeWikiPortal()">✕</button>
+          <span>// WIKI SEARCH PORTAL</span>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span style="color:#888;font-size:10px;font-weight:normal;">Ctrl+K inside frame to search again</span>
+            <button type="button" onclick="closeWikiPortal()">✕ CLOSE</button>
+          </div>
         </div>
-        <div class="wiki-frame-wrapper">
-          <iframe id="wiki-frame" src=""></iframe>
-        </div>
+        <iframe id="wiki-frame" src="" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
       </div>
     </div>
   </div>
 
-<div id="wiki-hover-portal" class="wiki-hover-portal">
-    <div class="portal-header">
-      <span>WIKI LIVE PREVIEW MATRIX</span>
-      <button type="button" onclick="closeWikiPortal()">✕</button>
-    </div>
-    
-    <div class="wiki-frame-wrapper">
-      <iframe id="wiki-frame" src=""></iframe>
-    </div>
-  </div>
-
+  <!-- PAGE 1: CORE -->
   <div id="page-core" class="sheet-tab-panel active-view">
-    
+
     <div class="panel adjustable-profile-card">
       <h2>IDENTITY</h2>
-      <div style="display: flex; flex-direction: column; gap: 10px; height: calc(100% - 35px);">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <label style="color:var(--accent-yellow); font-weight:bold; font-size:12px; white-space:nowrap;">HANDLE:</label>
-          <input type="text" id="charHandle" value="Jacked_In_Runner" style="background:transparent; border:none; color:white; font-size:15px; font-weight:bold; border-bottom:1px solid var(--border-color); width:100%;">
+      <div style="display:flex;flex-direction:column;gap:10px;height:calc(100% - 35px);">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <label style="color:var(--accent-yellow);font-weight:bold;font-size:12px;white-space:nowrap;">HANDLE:</label>
+          <input type="text" id="charHandle" value="Jacked_In_Runner" style="background:transparent;border:none;color:white;font-size:15px;font-weight:bold;border-bottom:1px solid var(--border-color);width:100%;">
         </div>
-        <textarea id="charNotes" placeholder="Type core note telemetry data directly here..." style="flex: 1; min-height: 50px; width:100%;"></textarea>
+        <textarea id="charNotes" class="auto-expand" placeholder="Core note telemetry..." style="flex:1;min-height:50px;width:100%;"></textarea>
       </div>
     </div>
 
     <div class="main-grid">
       <div>
 
+        <!-- STATS -->
         <div class="panel">
           <h2>STATS</h2>
           <div class="stats-row">
@@ -422,19 +408,21 @@
           </div>
         </div>
 
+        <!-- HEALTH DIAGNOSTICS (collapsible) -->
         <div class="panel" style="padding-bottom:5px;">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:2px solid var(--accent-yellow);padding-bottom:10px;">
             <h2 style="margin:0;border:none;padding:0;">HEALTH DIAGNOSTICS</h2>
-            <label style="font-weight: bold; color: var(--neon-cyan); cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 11px; background:#000; padding:4px 8px; border:1px solid var(--border-color); border-radius:3px;">
+            <label style="font-weight:bold;color:var(--neon-cyan);cursor:pointer;display:flex;align-items:center;gap:10px;font-size:11px;background:#000;padding:4px 8px;border:1px solid var(--border-color);border-radius:3px;">
               <input type="checkbox" id="toggle-combat" onchange="document.getElementById('combat-matrix-content').style.display=this.checked?'block':'none'" checked style="width:auto;">
               INITIALIZE HEALTH OVERLAY
             </label>
           </div>
-          
+
           <div id="combat-matrix-content" style="margin-bottom:10px;">
             <div class="two-col-row">
-              
-              <div class="panel" style="margin-bottom:0; padding:12px;">
+
+              <!-- COMBAT TELEMETRY -->
+              <div class="panel" style="margin-bottom:0;padding:12px;">
                 <h2 style="font-size:14px;">COMBAT TELEMETRY</h2>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
                   <div class="stat-box" style="border-color:var(--neon-cyan);"><label>HEAD SP</label><input type="number" id="sp-head" value="11" min="0"></div>
@@ -453,8 +441,9 @@
                   <div id="damage-log" style="margin-top:8px;font-size:12px;font-weight:bold;text-align:center;text-transform:uppercase;min-height:15px;"></div>
                 </div>
               </div>
-              
-              <div class="panel" style="margin-bottom:0; padding:12px;">
+
+              <!-- STATUS EFFECTS -->
+              <div class="panel" style="margin-bottom:0;padding:12px;">
                 <h2 style="font-size:14px;">STATUS EFFECTS</h2>
                 <div class="effects-builder">
                   <input type="text" id="effectInput" placeholder="SynthCoke REF +2, Concentration +2" style="flex:2;font-size:11px;">
@@ -483,15 +472,16 @@
               </div>
 
             </div>
-            
-            <div class="panel" style="margin-top: 15px; margin-bottom:0; padding:12px;">
+
+            <!-- WEAPONS -->
+            <div class="panel" style="margin-top:15px;margin-bottom:0;padding:12px;">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-                <h2 style="margin:0;border:none;font-size:14px;color:var(--accent-yellow);">Weapon Slots</h2>
-                <button class="btn" type="button" id="addWeaponBtn" style="padding:2px 8px; font-size:11px;">+ Add</button>
+                <h2 style="margin:0;border:none;font-size:14px;">WEAPON SLOTS</h2>
+                <button class="btn" type="button" id="addWeaponBtn" style="padding:2px 8px;font-size:11px;">+ Add</button>
               </div>
               <table>
                 <thead>
-                  <tr><th>Weapon</th><th style="width:55px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:13px;"></th></tr>
+                  <tr><th>Weapon</th><th style="width:55px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr>
                 </thead>
                 <tbody id="weapons-tbody"></tbody>
               </table>
@@ -499,6 +489,8 @@
 
           </div>
         </div>
+
+        <!-- NETRUNNER -->
         <div class="netrunner-toggle-panel">
           <label>
             <input type="checkbox" id="toggle-netrunner" onchange="toggleNetrunnerModule(this.checked)" style="width:auto;">
@@ -527,7 +519,7 @@
           </div>
           <div>
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
-              <h3 style="margin:0;border:none;">Available Programs</h3>
+              <h3 style="margin:0;border:none;">AVAILABLE PROGRAMS</h3>
               <button class="btn btn-net" type="button" onclick="addProgramSlot()" style="padding:2px 8px;font-size:11px;">+ Load</button>
             </div>
             <table>
@@ -539,11 +531,12 @@
 
       </div>
 
+      <!-- SKILLS -->
       <div class="panel">
         <h2>SKILLS</h2>
-        
         <div class="skills-master-grid">
 
+          <!-- COL 1: Awareness + Ranged + Control + Fighting + Body -->
           <div>
             <div class="skills-header"><div>Awareness</div><div>LVL</div><div>BASE</div></div>
             <div class="skill-row" data-stat="will" data-skill-name="Concentration"><div>Concentration</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
@@ -578,9 +571,9 @@
             <div class="skill-row" data-stat="will" data-skill-name="Endurance"><div>Endurance</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
             <div class="skill-row" data-stat="will" data-skill-name="Resist Torture/Drugs"><div>Resist Torture/Drugs</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
             <div class="skill-row" data-stat="dex" data-skill-name="Stealth"><div>Stealth</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            
           </div>
 
+          <!-- COL 2: Social + Performance + Education -->
           <div>
             <div class="skills-header"><div>Social</div><div>LVL</div><div>BASE</div></div>
             <div class="skill-row" data-stat="cool" data-skill-name="Bribery"><div>Bribery</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
@@ -616,6 +609,7 @@
             <div class="skill-row" data-stat="int" data-skill-name="Wilderness Survival"><div>Wilderness Survival</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           </div>
 
+          <!-- COL 3: Technique + Custom Skills -->
           <div>
             <div class="skills-header"><div>Technique</div><div>LVL</div><div>BASE</div></div>
             <div class="skill-row" data-stat="tech" data-skill-name="Air Vehicle Tech"><div>Air Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
@@ -634,16 +628,19 @@
             <div class="skill-row" data-stat="tech" data-skill-name="Play Instrument"><div>Play Instrument</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
             <div class="skill-row" data-stat="tech" data-skill-name="Sea Vehicle Tech"><div>Sea Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
             <div class="skill-row" data-stat="tech" data-skill-name="Weaponstech"><div>Weaponstech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            
+
             <div id="custom-skills-hook"></div>
           </div>
 
-        </div> <div class="skills-header" style="border-bottom: 2px solid var(--accent-yellow); color: var(--accent-yellow); font-size:11px; margin-top:20px;">
+        </div>
+
+        <!-- CUSTOM SKILL INSERTER -->
+        <div class="skills-header" style="border-bottom:2px solid var(--accent-yellow);color:var(--accent-yellow);font-size:11px;margin-top:20px;">
           <div>CUSTOM SKILL INSERTER</div>
         </div>
-        <div style="display: flex; gap: 6px; margin: 8px 0 0 0; align-items: center; background:#000; padding:8px; border:1px dashed var(--border-color); border-radius:4px;">
-          <input type="text" id="custom-skill-name" placeholder="Skill Identifier name..." style="flex: 2; font-size: 11px;">
-          <select id="custom-skill-stat" style="flex: 1; font-size: 11px; background:#000; color:#fff; border:1px solid #444; padding:4px;">
+        <div style="display:flex;gap:6px;margin:8px 0 0 0;align-items:center;background:#000;padding:8px;border:1px dashed var(--border-color);border-radius:4px;">
+          <input type="text" id="custom-skill-name" placeholder="Skill name..." style="flex:2;font-size:11px;">
+          <select id="custom-skill-stat" style="flex:1;font-size:11px;background:#000;color:#fff;border:1px solid #444;padding:4px;">
             <option value="int">INT</option>
             <option value="ref">REF</option>
             <option value="dex">DEX</option>
@@ -655,38 +652,39 @@
             <option value="body">BODY</option>
             <option value="emp">EMP</option>
           </select>
-          <button class="btn" type="button" onclick="addNewCustomSkill()" style="padding: 4px 10px; font-size: 11px; white-space: nowrap;">+ Create</button>
+          <button class="btn" type="button" onclick="addNewCustomSkill()" style="padding:4px 10px;font-size:11px;white-space:nowrap;">+ Create</button>
         </div>
 
       </div>
     </div>
   </div>
 
+  <!-- PAGE 2: INVENTORY -->
   <div id="page-inventory" class="sheet-tab-panel">
-    
     <div class="panel">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-        <h2>INVENTORY & GEAR</h2>
+        <h2>INVENTORY &amp; GEAR</h2>
         <button class="btn" type="button" id="addGearBtn">+ Add Item</button>
       </div>
       <div class="currency-panel">
         <div style="font-weight:bold;color:var(--accent-yellow);font-size:11px;letter-spacing:1px;">€$ :</div>
         <input type="number" id="eurodollars" value="0" style="width:100px;font-weight:bold;color:#fff;border:1px solid #444;text-align:right;padding-right:5px;">
       </div>
-      <table style="width:100%;">
+      <table>
         <thead><tr><th>Item</th><th>Notes</th><th style="width:28px;"></th></tr></thead>
         <tbody id="gear-tbody"></tbody>
       </table>
     </div>
   </div>
 
+  <!-- PAGE 3: CYBERWARE -->
   <div id="page-cyberware" class="sheet-tab-panel">
     <div class="panel">
       <h2>CYBERWARE</h2>
       <table>
         <thead>
           <tr>
-            <th style="width:160px;">System Type</th>
+            <th style="width:150px;">System Type</th>
             <th>Model Name</th>
             <th style="width:55px;">Quality</th>
             <th>Notes</th>
@@ -698,286 +696,343 @@
   </div>
 
   <script>
-    // Tab Controller Function
+    // === TAB CONTROLLER ===
     function switchTab(pageId, event) {
-      document.querySelectorAll('.sheet-tab-panel').forEach(panel => panel.classList.remove('active-view'));
-      document.querySelectorAll('.tab-trigger-btn').forEach(btn => btn.classList.remove('active-btn'));
+      document.querySelectorAll('.sheet-tab-panel').forEach(p => p.classList.remove('active-view'));
+      document.querySelectorAll('.tab-trigger-btn').forEach(b => b.classList.remove('active-btn'));
       document.getElementById(pageId).classList.add('active-view');
-      if (event) {
-        event.currentTarget.classList.add('active-btn');
-      }
-    }
-    
-    // Auto-Resize Textarea Controller
-    function autoResizeTextarea(el) {
-      el.style.height = 'auto'; // Reset to calculate new height
-      el.style.height = el.scrollHeight + 'px'; // Set to scrollHeight to fit content perfectly
+      if (event) event.currentTarget.classList.add('active-btn');
     }
 
-    // Custom Skills Processor Injection
-    function addNewCustomSkill(name = "", stat = "", lvl = 0) {
+    // === AUTO-RESIZE TEXTAREAS ===
+    function autoResizeTextarea(el) {
+      el.style.height = 'auto';
+      el.style.height = el.scrollHeight + 'px';
+    }
+
+    // === WIKI SEARCH ===
+    // Strategy: load your garden's search page directly inside the iframe at native size.
+    // The search page is a full SPA that works at 700px width just fine.
+    // We do NOT scale — we just let it render normally.
+    function previewWikiSearch() {
+      const query = document.getElementById('wiki-search-input').value.trim();
+      if (!query) return;
+      const portal = document.getElementById('wiki-hover-portal');
+      const frame = document.getElementById('wiki-frame');
+      // Load the garden root with the search query — the garden's own search JS picks up ?q=
+      // and opens the search overlay automatically via the search button trigger
+      frame.src = `https://gman-cyberpunk.vercel.app/?search=${encodeURIComponent(query)}`;
+      portal.style.display = 'flex';
+      // After load, try to fire the search programmatically inside the frame
+      frame.onload = function() {
+        try {
+          // Attempt to populate and trigger search inside the iframe
+          const fw = frame.contentWindow;
+          const fi = frame.contentDocument || fw.document;
+          // Try Alpine.js search trigger if available
+          const searchInput = fi.querySelector('#dg-search-input, input[type="search"], input[placeholder*="earch"]');
+          if (searchInput) {
+            searchInput.value = query;
+            searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+          }
+        } catch(e) {
+          // Cross-origin may block this — the fallback is Ctrl+K hint in the header
+        }
+      };
+    }
+
+    function closeWikiPortal() {
+      document.getElementById('wiki-hover-portal').style.display = 'none';
+      document.getElementById('wiki-frame').src = '';
+    }
+
+    // Close portal when clicking outside
+    document.addEventListener('click', function(e) {
+      const portal = document.getElementById('wiki-hover-portal');
+      const container = document.querySelector('.wiki-search-portal-container');
+      if (portal.style.display === 'flex' && !container.contains(e.target)) {
+        closeWikiPortal();
+      }
+    });
+
+    // === CUSTOM SKILLS ===
+    function addNewCustomSkill(name="", stat="", lvl=0) {
       const nameInp = document.getElementById('custom-skill-name');
       const statSel = document.getElementById('custom-skill-stat');
-      
       const skillName = name || nameInp.value.trim();
       const targetStat = stat || statSel.value;
-      
       if (!skillName) return;
-
       const row = document.createElement('div');
       row.className = "skill-row custom-skill-injected";
       row.setAttribute('data-stat', targetStat.toLowerCase());
       row.setAttribute('data-skill-name', skillName);
-      row.innerHTML = `
-        <div style="color:var(--neon-cyan); font-weight:bold;">${skillName}*</div>
-        <input type="number" value="${lvl}">
-        <div class="skill-base-val">0</div>
-      `;
-      
+      row.innerHTML = `<div style="color:var(--neon-cyan);font-weight:bold;">${skillName}*</div><input type="number" value="${lvl}"><div class="skill-base-val">0</div>`;
       document.getElementById('custom-skills-hook').appendChild(row);
       row.querySelector('input').addEventListener('input', updateSheetMath);
-      
       if (!name) nameInp.value = "";
       updateSheetMath();
     }
 
+    // === DAMAGE ENGINE ===
     function resolveIncomingDamage() {
       const dmgEl = document.getElementById('dmg-counter');
       const log = document.getElementById('damage-log');
-      const dmg = parseInt(dmgEl.value)||0;
-      if(dmg<=0){log.innerText="No incoming data.";log.style.color="var(--text-color)";return;}
+      const dmg = parseInt(dmgEl.value) || 0;
+      if (dmg <= 0) { log.innerText = "No incoming data."; log.style.color = "var(--text-color)"; return; }
       const isBody = confirm("Route to BODY?\n[OK] = Body  [Cancel] = Head");
-      const spEl = document.getElementById(`sp-${isBody?'body':'head'}`);
-      let sp = parseInt(spEl.value)||0;
+      const spEl = document.getElementById(`sp-${isBody ? 'body' : 'head'}`);
+      let sp = parseInt(spEl.value) || 0;
       const rem = dmg - sp;
-      if(rem<=0){log.innerText="Armor absorbs damage";log.style.color="var(--neon-cyan)";}
-      else {
-        log.innerText="Armor ablated";log.style.color="var(--danger-red)";
-        const hpEl=document.getElementById('hp-curr');
-        hpEl.value=Math.max(0,(parseInt(hpEl.value)||0)-rem);
-        spEl.value=Math.max(0,sp-(confirm("Armor Piercing?")?2:1));
+      if (rem <= 0) {
+        log.innerText = "Armor absorbs damage"; log.style.color = "var(--neon-cyan)";
+      } else {
+        log.innerText = "Armor ablated"; log.style.color = "var(--danger-red)";
+        const hpEl = document.getElementById('hp-curr');
+        hpEl.value = Math.max(0, (parseInt(hpEl.value) || 0) - rem);
+        spEl.value = Math.max(0, sp - (confirm("Armor Piercing?") ? 2 : 1));
       }
-      dmgEl.value="";updateSheetMath();
+      dmgEl.value = ""; updateSheetMath();
     }
 
-    function toggleNetrunnerModule(on){document.getElementById('netrunner-section').style.display=on?'block':'none';}
+    // === NETRUNNER ===
+    function toggleNetrunnerModule(on) { document.getElementById('netrunner-section').style.display = on ? 'block' : 'none'; }
 
-    function addQuickhackSlot(dr="",notes=""){
-      const tr=document.createElement('tr');tr.className="net-qh-row";
-      tr.innerHTML=`<td><input type="number" class="qh-dr" value="${dr}" placeholder="0" style="text-align:center;"></td><td><textarea class="qh-notes" rows="2">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>`;
+    function addQuickhackSlot(dr="", notes="") {
+      const tr = document.createElement('tr'); tr.className = "net-qh-row";
+      tr.innerHTML = `<td><input type="number" class="qh-dr" value="${dr}" placeholder="0" style="text-align:center;"></td><td><textarea class="qh-notes" rows="2">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>`;
       document.getElementById('quickhacks-tbody').appendChild(tr);
     }
-    function addProgramSlot(name="",notes=""){
-      const tr=document.createElement('tr');tr.className="net-prog-row";
-      tr.innerHTML=`<td><input type="text" class="prog-name" value="${name}" placeholder="e.g. Sword"></td><td><textarea class="prog-notes" rows="2">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>`;
+
+    function addProgramSlot(name="", notes="") {
+      const tr = document.createElement('tr'); tr.className = "net-prog-row";
+      tr.innerHTML = `<td><input type="text" class="prog-name" value="${name}" placeholder="e.g. Sword"></td><td><textarea class="prog-notes" rows="2">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>`;
       document.getElementById('programs-tbody').appendChild(tr);
     }
 
-    function synchHealthDisplay(){
-      const a=document.getElementById('hp-max'),b=document.getElementById('hp-max-display');
-      if(a&&b)b.value=a.value;
+    function synchHealthDisplay() {
+      const a = document.getElementById('hp-max'), b = document.getElementById('hp-max-display');
+      if (a && b) b.value = a.value;
     }
-    document.addEventListener('input',synchHealthDisplay);
-    window.addEventListener('DOMContentLoaded',()=>setTimeout(synchHealthDisplay,100));
 
-    // Cyberware Matrix Initialization
-    ['Operating System','Frontal Cortex','Arms','Hands','Circulatory','Face','Skeleton','Integumentary','Legs','Nervous System'].forEach(group=>{
-      for(let i=1;i<=3;i++){
-        const row=document.createElement('tr');
-        row.className="cyber-row";row.setAttribute('data-group',group);row.setAttribute('data-slot',i);
-        row.innerHTML=`${i===1?`<td rowspan="3" style="font-weight:bold;color:var(--neon-cyan);vertical-align:middle;background:#0b0d1e;">${group}</td>`:''}<td><textarea class="cy-name auto-expand" rows="1" placeholder="Hardware..."></textarea></td><td><input type="number" class="cy-quality" min="1" max="5" value="1" style="text-align:center;"></td><td><textarea class="cy-notes auto-expand" rows="1" placeholder="Notes..."></textarea></td>`;
+    // === CYBERWARE ===
+    // Cells use resize:both on the textarea/input directly — no wrapper needed
+    ['Operating System','Frontal Cortex','Arms','Hands','Circulatory','Face','Skeleton','Integumentary','Legs','Nervous System'].forEach(group => {
+      for (let i = 1; i <= 3; i++) {
+        const row = document.createElement('tr');
+        row.className = "cyber-row";
+        row.setAttribute('data-group', group);
+        row.setAttribute('data-slot', i);
+        row.innerHTML = `
+          ${i === 1 ? `<td rowspan="3" style="font-weight:bold;color:var(--neon-cyan);vertical-align:middle;background:#0b0d1e;">${group}</td>` : ''}
+          <td style="padding:2px;"><textarea class="cy-name" rows="1" placeholder="Hardware..." style="resize:both;min-height:28px;width:100%;overflow:auto;"></textarea></td>
+          <td style="padding:2px;"><input type="number" class="cy-quality" min="1" max="5" value="1" style="text-align:center;"></td>
+          <td style="padding:2px;"><textarea class="cy-notes" rows="1" placeholder="Notes..." style="resize:both;min-height:28px;width:100%;overflow:auto;"></textarea></td>
+        `;
         document.getElementById('cyberware-tbody').appendChild(row);
       }
     });
 
-    // Modified Weapon Slots: Now features manual drag resizing for Name & Notes (resize:both)
-    function addWeaponSlot(name="",dmg="",rof="",notes=""){
-      const tr=document.createElement('tr');tr.className="weapon-row";
-      tr.innerHTML=`<td><textarea class="wp-name" rows="1" placeholder="Heavy Pistol" style="resize:both; min-height:28px;">${name}</textarea></td><td><input type="text" class="wp-dmg" value="${dmg}" placeholder="3d6" style="text-align:center;"></td><td><input type="text" class="wp-rof" value="${rof}" placeholder="2" style="text-align:center;"></td><td><textarea class="wp-notes" rows="1" placeholder="Notes..." style="resize:both; min-height:28px;">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>`;
+    // === WEAPONS ===
+    function addWeaponSlot(name="", dmg="", rof="", notes="") {
+      const tr = document.createElement('tr'); tr.className = "weapon-row";
+      tr.innerHTML = `
+        <td style="padding:2px;"><textarea class="wp-name" rows="1" placeholder="Heavy Pistol" style="resize:both;min-height:28px;width:100%;overflow:auto;">${name}</textarea></td>
+        <td><input type="text" class="wp-dmg" value="${dmg}" placeholder="3d6" style="text-align:center;"></td>
+        <td><input type="text" class="wp-rof" value="${rof}" placeholder="2" style="text-align:center;"></td>
+        <td style="padding:2px;"><textarea class="wp-notes" rows="1" placeholder="Notes..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
+        <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>
+      `;
       document.getElementById('weapons-tbody').appendChild(tr);
-      tr.querySelectorAll('input,textarea').forEach(i=>i.addEventListener('input',updateSheetMath));
+      tr.querySelectorAll('input,textarea').forEach(i => i.addEventListener('input', updateSheetMath));
     }
-    document.getElementById('addWeaponBtn').addEventListener('click',()=>addWeaponSlot());
+    document.getElementById('addWeaponBtn').addEventListener('click', () => addWeaponSlot());
 
-    // Modified Gear Slots: Implements dynamic auto-expanding text areas
-    function addGearSlot(name="",notes=""){
-      const tr=document.createElement('tr');tr.className="gear-row";
-      tr.innerHTML=`<td><textarea class="gear-name auto-expand" rows="1" placeholder="Agent">${name}</textarea></td><td><textarea class="gear-notes auto-expand" rows="1" placeholder="Notes...">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>`;
+    // === GEAR ===
+    function addGearSlot(name="", notes="") {
+      const tr = document.createElement('tr'); tr.className = "gear-row";
+      tr.innerHTML = `
+        <td style="padding:2px;"><textarea class="gear-name auto-expand" rows="1" placeholder="Agent" style="resize:both;min-height:28px;width:100%;overflow:auto;">${name}</textarea></td>
+        <td style="padding:2px;"><textarea class="gear-notes auto-expand" rows="1" placeholder="Notes..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
+        <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>
+      `;
       document.getElementById('gear-tbody').appendChild(tr);
-      tr.querySelectorAll('input,textarea').forEach(i=>i.addEventListener('input',updateSheetMath));
-      // Auto-size upon creation
+      tr.querySelectorAll('input,textarea').forEach(i => i.addEventListener('input', updateSheetMath));
       tr.querySelectorAll('.auto-expand').forEach(autoResizeTextarea);
     }
-    document.getElementById('addGearBtn').addEventListener('click',()=>addGearSlot());
+    document.getElementById('addGearBtn').addEventListener('click', () => addGearSlot());
 
-    addWeaponSlot("Heavy Pistol","3d6","2","");
-    addGearSlot("Agent","AI powered smartphone.");
-    addGearSlot("Carryall","Heavy ripstop nylon bags.");
+    addWeaponSlot("Heavy Pistol", "3d6", "2", "");
+    addGearSlot("Agent", "AI powered smartphone.");
+    addGearSlot("Carryall", "Heavy ripstop nylon bags.");
 
-    let customEffectsList=[];
+    // === EFFECTS ENGINE ===
+    let customEffectsList = [];
 
-    document.getElementById('addEffectBtn').addEventListener('click',()=>{
-      const inputVal=document.getElementById('effectInput').value.trim();
-      if(!inputVal)return;
-      const segments=inputVal.split(',').map(s=>s.trim());
-      let modifiers=[],effectName=null;
-      segments.forEach((seg,idx)=>{
-        const m=seg.match(/^(.*?)\s*([+-]\d+)\s*$/);
-        if(m)modifiers.push({target:m[1].trim(),value:parseInt(m[2])});
-        else if(idx===0)effectName=seg;
+    document.getElementById('addEffectBtn').addEventListener('click', () => {
+      const inputVal = document.getElementById('effectInput').value.trim();
+      if (!inputVal) return;
+      const segments = inputVal.split(',').map(s => s.trim());
+      let modifiers = [], effectName = null;
+      segments.forEach((seg, idx) => {
+        const m = seg.match(/^(.*?)\s*([+-]\d+)\s*$/);
+        if (m) modifiers.push({ target: m[1].trim(), value: parseInt(m[2]) });
+        else if (idx === 0) effectName = seg;
       });
-      if(modifiers.length>0){
-        customEffectsList.push({id:Date.now(),name:effectName||modifiers[0].target,modifiers,active:true});
-        renderCustomEffects();document.getElementById('effectInput').value="";updateSheetMath();
-      }else{alert("Parsing Error.\nSyntax: EffectName STAT +N, SkillName +N\nExample: SynthCoke REF +2, Concentration +3");}
+      if (modifiers.length > 0) {
+        customEffectsList.push({ id: Date.now(), name: effectName || modifiers[0].target, modifiers, active: true });
+        renderCustomEffects();
+        document.getElementById('effectInput').value = "";
+        updateSheetMath();
+      } else {
+        alert("Parsing Error.\nSyntax: EffectName STAT +N, SkillName +N\nExample: SynthCoke REF +2, Concentration +3");
+      }
     });
 
-    function renderCustomEffects(){
-      const hook=document.getElementById('custom-effects-hook');hook.innerHTML="";
-      customEffectsList.forEach(eff=>{
-        const div=document.createElement('div');div.className="effect-card";
-        const desc=eff.modifiers.map(m=>`${m.value>=0?'+':''}${m.value} ${m.target}`).join(', ');
-        div.innerHTML=`<label style="font-size:11px;"><input type="checkbox" data-id="${eff.id}" ${eff.active?'checked':''} onchange="toggleEffect(${eff.id})"><strong>${eff.name}</strong> (${desc})</label><button class="btn btn-danger" onclick="deleteEffect(${eff.id})" style="padding:2px 5px;font-size:10px;">Burn</button>`;
+    function renderCustomEffects() {
+      const hook = document.getElementById('custom-effects-hook'); hook.innerHTML = "";
+      customEffectsList.forEach(eff => {
+        const div = document.createElement('div'); div.className = "effect-card";
+        const desc = eff.modifiers.map(m => `${m.value >= 0 ? '+' : ''}${m.value} ${m.target}`).join(', ');
+        div.innerHTML = `<label style="font-size:11px;"><input type="checkbox" data-id="${eff.id}" ${eff.active ? 'checked' : ''} onchange="toggleEffect(${eff.id})"><strong>${eff.name}</strong> (${desc})</label><button class="btn btn-danger" onclick="deleteEffect(${eff.id})" style="padding:2px 5px;font-size:10px;">Burn</button>`;
         hook.appendChild(div);
       });
     }
-    window.toggleEffect=function(id){const f=customEffectsList.find(e=>e.id===id);if(f)f.active=!f.active;updateSheetMath();};
-    window.deleteEffect=function(id){customEffectsList=customEffectsList.filter(e=>e.id!==id);renderCustomEffects();updateSheetMath();};
+    window.toggleEffect = function(id) { const f = customEffectsList.find(e => e.id === id); if (f) f.active = !f.active; updateSheetMath(); };
+    window.deleteEffect = function(id) { customEffectsList = customEffectsList.filter(e => e.id !== id); renderCustomEffects(); updateSheetMath(); };
 
-    function updateSheetMath(){
-      const b={INT:parseInt(document.getElementById('stat-int').value)||0,REF:parseInt(document.getElementById('stat-ref').value)||0,DEX:parseInt(document.getElementById('stat-dex').value)||0,TECH:parseInt(document.getElementById('stat-tech').value)||0,COOL:parseInt(document.getElementById('stat-cool').value)||0,WILL:parseInt(document.getElementById('stat-will').value)||0,LUCK:parseInt(document.getElementById('stat-luck').value)||0,MOVE:parseInt(document.getElementById('stat-move').value)||0,BODY:parseInt(document.getElementById('stat-body').value)||0,EMP:parseInt(document.getElementById('stat-emp').value)||0};
-      for(let k in b)document.getElementById(`mod-${k.toLowerCase()}`).innerText="";
-      const ps={...b};const sb={};
-      customEffectsList.forEach(eff=>{
-        if(!eff.active)return;
-        eff.modifiers.forEach(mod=>{
-          const t=mod.target.toUpperCase();
-          if(ps[t]!==undefined)ps[t]+=mod.value;
-          else sb[mod.target]=(sb[mod.target]||0)+mod.value;
+    // === MAIN CALC ENGINE ===
+    function updateSheetMath() {
+      const b = {
+        INT: parseInt(document.getElementById('stat-int').value)||0,
+        REF: parseInt(document.getElementById('stat-ref').value)||0,
+        DEX: parseInt(document.getElementById('stat-dex').value)||0,
+        TECH: parseInt(document.getElementById('stat-tech').value)||0,
+        COOL: parseInt(document.getElementById('stat-cool').value)||0,
+        WILL: parseInt(document.getElementById('stat-will').value)||0,
+        LUCK: parseInt(document.getElementById('stat-luck').value)||0,
+        MOVE: parseInt(document.getElementById('stat-move').value)||0,
+        BODY: parseInt(document.getElementById('stat-body').value)||0,
+        EMP: parseInt(document.getElementById('stat-emp').value)||0
+      };
+      for (let k in b) document.getElementById(`mod-${k.toLowerCase()}`).innerText = "";
+      const ps = { ...b }; const sb = {};
+      customEffectsList.forEach(eff => {
+        if (!eff.active) return;
+        eff.modifiers.forEach(mod => {
+          const t = mod.target.toUpperCase();
+          if (ps[t] !== undefined) ps[t] += mod.value;
+          else sb[mod.target] = (sb[mod.target] || 0) + mod.value;
         });
       });
-      for(let k in b)if(ps[k]!==b[k])document.getElementById(`mod-${k.toLowerCase()}`).innerText=`(${ps[k]})`;
-      const ap=parseInt(document.getElementById('eff-armor-penalty').value)||0;
-      if(ap>0){ps.REF=Math.max(0,ps.REF-ap);ps.DEX=Math.max(0,ps.DEX-ap);ps.MOVE=Math.max(0,ps.MOVE-ap);document.getElementById('mod-ref').innerText=`(${ps.REF})`;document.getElementById('mod-dex').innerText=`(${ps.DEX})`;document.getElementById('mod-move').innerText=`(${ps.MOVE})`;}
-      const hum=ps.WILL+ps.EMP;const hpMax=10+(5*Math.ceil((ps.BODY+ps.WILL)/2));
-      document.getElementById('humanity').value=hum;document.getElementById('hp-max').value=hpMax;
-      const pEl=document.getElementById('psychosis-input');const pVal=parseInt(pEl.value)||0;
-      document.getElementById('humanity-threshold').innerText=hum;
-      if(pVal>hum){pEl.classList.add('exceeded');document.getElementById('psychosis-warning').innerText='⚠ CYBERPSYCHOSIS THRESHOLD EXCEEDED';}
-      else{pEl.classList.remove('exceeded');document.getElementById('psychosis-warning').innerText='';}
-      const wounded=document.getElementById('eff-wounded').checked;
-      
-      document.querySelectorAll('.skill-row').forEach(row=>{
-        const stat=row.getAttribute('data-stat').toUpperCase();
-        const sn=row.getAttribute('data-skill-name')||'';
-        const lvl=parseInt(row.querySelector('input').value)||0;
-        let val=lvl+ps[stat];
-        if(sb[sn])val+=sb[sn];
-        if(wounded)val-=2;
-        row.querySelector('.skill-base-val').innerText=val;
+      for (let k in b) if (ps[k] !== b[k]) document.getElementById(`mod-${k.toLowerCase()}`).innerText = `(${ps[k]})`;
+      const ap = parseInt(document.getElementById('eff-armor-penalty').value) || 0;
+      if (ap > 0) {
+        ps.REF = Math.max(0, ps.REF - ap); ps.DEX = Math.max(0, ps.DEX - ap); ps.MOVE = Math.max(0, ps.MOVE - ap);
+        document.getElementById('mod-ref').innerText = `(${ps.REF})`;
+        document.getElementById('mod-dex').innerText = `(${ps.DEX})`;
+        document.getElementById('mod-move').innerText = `(${ps.MOVE})`;
+      }
+      const hum = ps.WILL + ps.EMP;
+      const hpMax = 10 + (5 * Math.ceil((ps.BODY + ps.WILL) / 2));
+      document.getElementById('humanity').value = hum;
+      document.getElementById('hp-max').value = hpMax;
+      synchHealthDisplay();
+      const pEl = document.getElementById('psychosis-input'); const pVal = parseInt(pEl.value) || 0;
+      document.getElementById('humanity-threshold').innerText = hum;
+      if (pVal > hum) { pEl.classList.add('exceeded'); document.getElementById('psychosis-warning').innerText = '⚠ CYBERPSYCHOSIS THRESHOLD EXCEEDED'; }
+      else { pEl.classList.remove('exceeded'); document.getElementById('psychosis-warning').innerText = ''; }
+      const wounded = document.getElementById('eff-wounded').checked;
+      document.querySelectorAll('.skill-row').forEach(row => {
+        const stat = row.getAttribute('data-stat').toUpperCase();
+        const sn = row.getAttribute('data-skill-name') || '';
+        const lvl = parseInt(row.querySelector('input').value) || 0;
+        let val = lvl + ps[stat];
+        if (sb[sn]) val += sb[sn];
+        if (wounded) val -= 2;
+        row.querySelector('.skill-base-val').innerText = val;
       });
     }
 
-    // Global listener to handle both math updates and auto-expanding textareas
+    // === GLOBAL EVENT LISTENERS ===
     document.addEventListener('input', e => {
-      if(e.target.matches('input,select,textarea')) updateSheetMath();
-      if(e.target.classList.contains('auto-expand')) autoResizeTextarea(e.target);
+      if (e.target.matches('input,select,textarea')) updateSheetMath();
+      if (e.target.classList.contains('auto-expand')) autoResizeTextarea(e.target);
     });
-    
-    document.addEventListener('change',e=>{if(e.target.matches('input[type="checkbox"]'))updateSheetMath();});
+    document.addEventListener('change', e => { if (e.target.matches('input[type="checkbox"]')) updateSheetMath(); });
     window.addEventListener('DOMContentLoaded', () => {
       updateSheetMath();
-      // Auto-size everything natively on load
       setTimeout(() => document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea), 50);
     });
 
-    document.getElementById('exportBtn').addEventListener('click',()=>{
-      const d={
-        handle:document.getElementById('charHandle').value,
-        notes:document.getElementById('charNotes').value,
-        eurodollars:document.getElementById('eurodollars').value,
-        rawStats:{int:document.getElementById('stat-int').value,ref:document.getElementById('stat-ref').value,dex:document.getElementById('stat-dex').value,tech:document.getElementById('stat-tech').value,cool:document.getElementById('stat-cool').value,will:document.getElementById('stat-will').value,luck:document.getElementById('stat-luck').value,move:document.getElementById('stat-move').value,body:document.getElementById('stat-body').value,emp:document.getElementById('stat-emp').value},
-        wounded:document.getElementById('eff-wounded').checked,
-        armorPenalty:document.getElementById('eff-armor-penalty').value,
-        psychosis:document.getElementById('psychosis-input').value,
-        customEffects:customEffectsList,
-        weapons:[],
-        gear:[],
-        cyberware:[],
-        skills:[]
+    // === EXPORT ===
+    document.getElementById('exportBtn').addEventListener('click', () => {
+      const d = {
+        handle: document.getElementById('charHandle').value,
+        notes: document.getElementById('charNotes').value,
+        eurodollars: document.getElementById('eurodollars').value,
+        rawStats: {
+          int: document.getElementById('stat-int').value, ref: document.getElementById('stat-ref').value,
+          dex: document.getElementById('stat-dex').value, tech: document.getElementById('stat-tech').value,
+          cool: document.getElementById('stat-cool').value, will: document.getElementById('stat-will').value,
+          luck: document.getElementById('stat-luck').value, move: document.getElementById('stat-move').value,
+          body: document.getElementById('stat-body').value, emp: document.getElementById('stat-emp').value
+        },
+        wounded: document.getElementById('eff-wounded').checked,
+        armorPenalty: document.getElementById('eff-armor-penalty').value,
+        psychosis: document.getElementById('psychosis-input').value,
+        customEffects: customEffectsList,
+        weapons: [], gear: [], cyberware: [], skills: []
       };
-      document.querySelectorAll('.weapon-row').forEach(r=>d.weapons.push({name:r.querySelector('.wp-name').value,dmg:r.querySelector('.wp-dmg').value,rof:r.querySelector('.wp-rof').value,notes:r.querySelector('.wp-notes').value}));
-      document.querySelectorAll('.gear-row').forEach(r=>d.gear.push({name:r.querySelector('.gear-name').value,notes:r.querySelector('.gear-notes').value}));
-      document.querySelectorAll('.cyber-row').forEach(r=>d.cyberware.push({group:r.getAttribute('data-group'),slot:r.getAttribute('data-slot'),name:r.querySelector('.cy-name').value,quality:r.querySelector('.cy-quality').value,notes:r.querySelector('.cy-notes').value}));
-      
-      document.querySelectorAll('.skill-row').forEach(r=>d.skills.push({
-        name:r.getAttribute('data-skill-name'),
-        lvl:r.querySelector('input').value,
-        stat:r.getAttribute('data-stat'),
-        custom:r.classList.contains('custom-skill-injected')
-      }));
-      
-      const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(d,null,2)],{type:"application/json"}));a.download=`${d.handle}_cybercore.json`;document.body.appendChild(a);a.click();document.body.removeChild(a);
+      document.querySelectorAll('.weapon-row').forEach(r => d.weapons.push({ name: r.querySelector('.wp-name').value, dmg: r.querySelector('.wp-dmg').value, rof: r.querySelector('.wp-rof').value, notes: r.querySelector('.wp-notes').value }));
+      document.querySelectorAll('.gear-row').forEach(r => d.gear.push({ name: r.querySelector('.gear-name').value, notes: r.querySelector('.gear-notes').value }));
+      document.querySelectorAll('.cyber-row').forEach(r => d.cyberware.push({ group: r.getAttribute('data-group'), slot: r.getAttribute('data-slot'), name: r.querySelector('.cy-name').value, quality: r.querySelector('.cy-quality').value, notes: r.querySelector('.cy-notes').value }));
+      document.querySelectorAll('.skill-row').forEach(r => d.skills.push({ name: r.getAttribute('data-skill-name'), lvl: r.querySelector('input').value, stat: r.getAttribute('data-stat'), custom: r.classList.contains('custom-skill-injected') }));
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(d, null, 2)], { type: "application/json" }));
+      a.download = `${d.handle}_cybercore.json`;
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
     });
 
-    document.getElementById('importFile').addEventListener('change',e=>{
-      const file=e.target.files[0];if(!file)return;
-      const reader=new FileReader();
-      reader.onload=evt=>{
-        try{
-          const inc=JSON.parse(evt.target.result);
-          if(inc.handle)document.getElementById('charHandle').value=inc.handle;
-          if(inc.notes)document.getElementById('charNotes').value=inc.notes;
-          if(inc.eurodollars)document.getElementById('eurodollars').value=inc.eurodollars;
-          for(let k in inc.rawStats){const el=document.getElementById(`stat-${k}`);if(el)el.value=inc.rawStats[k];}
-          if(inc.wounded!==undefined)document.getElementById('eff-wounded').checked=inc.wounded;
-          if(inc.armorPenalty)document.getElementById('eff-armor-penalty').value=inc.armorPenalty;
-          if(inc.psychosis)document.getElementById('psychosis-input').value=inc.psychosis;
-          if(inc.customEffects){customEffectsList=inc.customEffects;renderCustomEffects();}
-          document.getElementById('weapons-tbody').innerHTML="";
-          if(inc.weapons)inc.weapons.forEach(w=>addWeaponSlot(w.name,w.dmg,w.rof,w.notes));
-          document.getElementById('gear-tbody').innerHTML="";
-          if(inc.gear)inc.gear.forEach(g=>addGearSlot(g.name,g.notes));
-          if(inc.cyberware){document.querySelectorAll('.cyber-row').forEach(row=>{const m=inc.cyberware.find(c=>c.group===row.getAttribute('data-group')&&c.slot==row.getAttribute('data-slot'));if(m){row.querySelector('.cy-name').value=m.name||"";row.querySelector('.cy-quality').value=m.quality||"1";row.querySelector('.cy-notes').value=m.notes||"";}});}
-          
-          document.getElementById('custom-skills-hook').innerHTML = "";
-          if(inc.skills){
-            inc.skills.forEach(s=>{
-              let coreRow=Array.from(document.querySelectorAll('.skill-row')).find(r=>r.getAttribute('data-skill-name')===s.name);
-              if(coreRow){
-                coreRow.querySelector('input').value=s.lvl;
-              } else if(s.custom) {
-                addNewCustomSkill(s.name, s.stat, parseInt(s.lvl)||0);
-              }
+    // === IMPORT ===
+    document.getElementById('importFile').addEventListener('change', e => {
+      const file = e.target.files[0]; if (!file) return;
+      const reader = new FileReader();
+      reader.onload = evt => {
+        try {
+          const inc = JSON.parse(evt.target.result);
+          if (inc.handle) document.getElementById('charHandle').value = inc.handle;
+          if (inc.notes) document.getElementById('charNotes').value = inc.notes;
+          if (inc.eurodollars) document.getElementById('eurodollars').value = inc.eurodollars;
+          for (let k in inc.rawStats) { const el = document.getElementById(`stat-${k}`); if (el) el.value = inc.rawStats[k]; }
+          if (inc.wounded !== undefined) document.getElementById('eff-wounded').checked = inc.wounded;
+          if (inc.armorPenalty) document.getElementById('eff-armor-penalty').value = inc.armorPenalty;
+          if (inc.psychosis) document.getElementById('psychosis-input').value = inc.psychosis;
+          if (inc.customEffects) { customEffectsList = inc.customEffects; renderCustomEffects(); }
+          document.getElementById('weapons-tbody').innerHTML = "";
+          if (inc.weapons) inc.weapons.forEach(w => addWeaponSlot(w.name, w.dmg, w.rof, w.notes));
+          document.getElementById('gear-tbody').innerHTML = "";
+          if (inc.gear) inc.gear.forEach(g => addGearSlot(g.name, g.notes));
+          if (inc.cyberware) {
+            document.querySelectorAll('.cyber-row').forEach(row => {
+              const m = inc.cyberware.find(c => c.group === row.getAttribute('data-group') && c.slot == row.getAttribute('data-slot'));
+              if (m) { row.querySelector('.cy-name').value = m.name || ""; row.querySelector('.cy-quality').value = m.quality || "1"; row.querySelector('.cy-notes').value = m.notes || ""; }
             });
           }
-          
+          document.getElementById('custom-skills-hook').innerHTML = "";
+          if (inc.skills) {
+            inc.skills.forEach(s => {
+              const coreRow = Array.from(document.querySelectorAll('.skill-row')).find(r => r.getAttribute('data-skill-name') === s.name);
+              if (coreRow) coreRow.querySelector('input').value = s.lvl;
+              else if (s.custom) addNewCustomSkill(s.name, s.stat, parseInt(s.lvl) || 0);
+            });
+          }
           updateSheetMath();
-          // Let DOM settle, then auto-size populated text areas
           setTimeout(() => document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea), 100);
           alert("Matrix Connection Restored.");
-        }catch(err){alert("Decryption Error.");}
+        } catch(err) { alert("Decryption Error."); }
       };
       reader.readAsText(file);
     });
-    
-function previewWikiSearch() {
-  const query = document.getElementById('wiki-search-input').value.trim();
-  if (!query) return;
-
-  const portal = document.getElementById('wiki-hover-portal');
-  const frame = document.getElementById('wiki-frame');
-
-  // Routes specifically into the static search template route to trigger the native search UI execution
-  frame.src = `https://gman-cyberpunk.vercel.app/search/?q=${encodeURIComponent(query)}`;
-  
-  portal.style.display = 'flex';
-}
-
-function closeWikiPortal() {
-  document.getElementById('wiki-hover-portal').style.display = 'none';
-  document.getElementById('wiki-frame').src = '';
-}
   </script>
 </body>
 </html>
