@@ -679,90 +679,91 @@
     </div>
 
     <!-- AIR VEHICLE MODULE -->
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:2px solid var(--neon-cyan);padding-bottom:10px;">
-  <h2 style="margin:0;border:none;padding:0;color:var(--neon-cyan);">AIR VEHICLE</h2>
-  <div style="display:flex;gap:15px;align-items:center;">
-    <label style="font-weight:bold;color:var(--neon-cyan);cursor:pointer;display:flex;align-items:center;gap:8px;font-size:11px;background:#000;padding:4px 8px;border:1px solid var(--border-color);border-radius:3px;">
-      <input type="checkbox" id="toggle-av" onchange="document.getElementById('av-content').style.display=this.checked?'block':'none'" checked style="width:auto;">
-      INITIALIZE VEHICLE OVERLAY
-    </label>
-    <div style="display:flex;gap:8px;align-items:center;">
-      <label style="color:#888;font-size:11px;">NAME:</label>
-      <input type="text" id="av-name" placeholder="e.g. AV-4 Aerodyne" style="width:200px;font-weight:bold;font-size:13px;border-color:var(--neon-cyan);">
+<!-- AIR VEHICLE MODULE -->
+<div class="panel">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:2px solid var(--accent-yellow);padding-bottom:10px;">
+    <h2 style="margin:0;border:none;padding:0;">VEHICLE</h2>
+    <div style="display:flex;gap:15px;align-items:center;">
+      <label style="font-weight:bold;color:var(--accent-yellow);cursor:pointer;display:flex;align-items:center;gap:8px;font-size:11px;background:#000;padding:4px 8px;border:1px solid var(--border-color);border-radius:3px;">
+        <input type="checkbox" id="toggle-av" onchange="document.getElementById('av-content').style.display=this.checked?'block':'none'" checked style="width:auto;">
+        INITIALIZE VEHICLE MODULE
+      </label>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <label style="color:#888;font-size:11px;">NAME:</label>
+        <input type="text" id="av-name" placeholder="e.g. AV-4 Aerodyne" style="width:200px;font-weight:bold;font-size:13px;">
+      </div>
+    </div>
+  </div>
+
+  <div id="av-content">
+    <!-- STATS ROW -->
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:15px;">
+      <div class="stat-box" style="border-color:var(--danger-red);">
+        <label>SDP CHASSIS</label>
+        <input type="number" id="av-sdp-chassis" value="0" min="0">
+      </div>
+      <div class="stat-box" style="border-color:var(--danger-red);">
+        <label>SDP GLASS</label>
+        <input type="number" id="av-sdp-glass" value="0" min="0">
+      </div>
+      <div class="stat-box" style="border-color:var(--neon-cyan);">
+        <label>SP</label>
+        <input type="number" id="av-sp" value="0" min="0">
+      </div>
+      <div class="stat-box" style="border-color:var(--neon-cyan);">
+        <label>SEATS</label>
+        <input type="number" id="av-seats" value="4" min="1">
+      </div>
+      <div class="stat-box" style="border-color:var(--accent-yellow);">
+        <label>SPEED [combat]</label>
+        <input type="text" id="av-speed-combat" placeholder="e.g. 6">
+      </div>
+      <div class="stat-box" style="border-color:var(--accent-yellow);">
+        <label>SPEED [narrative]</label>
+        <input type="text" id="av-speed-narrative" placeholder="e.g. 200mph">
+      </div>
+      <div class="stat-box" style="border-color:#a142ff;">
+        <label>COST (€$)</label>
+        <input type="number" id="av-cost" value="0" min="0">
+      </div>
+    </div>
+
+    <!-- DESCRIPTION / NOTES -->
+    <div style="margin-bottom:15px;">
+      <label style="color:#888;font-size:10px;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">Description / Notes</label>
+      <textarea id="av-description" class="auto-expand" rows="2" placeholder="Vehicle description, special features, condition notes..." style="width:100%;border-color:#444;"></textarea>
+    </div>
+
+    <!-- UPGRADES + WEAPONS SIDE BY SIDE -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;">
+
+      <!-- UPGRADES -->
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:1px solid var(--accent-yellow);padding-bottom:6px;">
+          <span style="color:var(--accent-yellow);font-weight:bold;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Upgrades</span>
+          <button class="btn" type="button" onclick="addAvUpgrade()" style="padding:2px 8px;font-size:11px;">+ Add</button>
+        </div>
+        <table>
+          <thead><tr><th>Upgrade / Modification</th><th style="width:28px;"></th></tr></thead>
+          <tbody id="av-upgrades-tbody"></tbody>
+        </table>
+      </div>
+
+      <!-- MOUNTED WEAPONS -->
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:1px solid var(--danger-red);padding-bottom:6px;">
+          <span style="color:var(--danger-red);font-weight:bold;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Mounted Weapons</span>
+          <button class="btn btn-danger" type="button" onclick="addAvWeapon()" style="padding:2px 8px;font-size:11px;">+ Add</button>
+        </div>
+        <table>
+          <thead><tr><th>Weapon</th><th style="width:50px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr></thead>
+          <tbody id="av-weapons-tbody"></tbody>
+        </table>
+      </div>
+
     </div>
   </div>
 </div>
-    
-<div id="av-content">
-      <!-- STATS ROW -->
-      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:15px;">
-        <div class="stat-box" style="border-color:var(--danger-red);">
-          <label>SDP CHASSIS</label>
-          <input type="number" id="av-sdp-chassis" value="0" min="0">
-        </div>
-        <div class="stat-box" style="border-color:var(--danger-red);">
-          <label>SDP GLASS</label>
-          <input type="number" id="av-sdp-glass" value="0" min="0">
-        </div>
-        <div class="stat-box" style="border-color:var(--neon-cyan);">
-          <label>SP</label>
-          <input type="number" id="av-sp" value="0" min="0">
-        </div>
-        <div class="stat-box" style="border-color:var(--neon-cyan);">
-          <label>SEATS</label>
-          <input type="number" id="av-seats" value="4" min="1">
-        </div>
-        <div class="stat-box" style="border-color:var(--accent-yellow);">
-          <label>SPEED [combat]</label>
-          <input type="text" id="av-speed-combat" placeholder="e.g. 6">
-        </div>
-        <div class="stat-box" style="border-color:var(--accent-yellow);">
-          <label>SPEED [narrative]</label>
-          <input type="text" id="av-speed-narrative" placeholder="e.g. 200mph">
-        </div>
-        <div class="stat-box" style="border-color:#a142ff;">
-          <label>COST (€$)</label>
-          <input type="number" id="av-cost" value="0" min="0">
-        </div>
-      </div>
-
-      <!-- DESCRIPTION / NOTES -->
-      <div style="margin-bottom:15px;">
-        <label style="color:#888;font-size:10px;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">Description / Notes</label>
-        <textarea id="av-description" class="auto-expand" rows="2" placeholder="Vehicle description, special features, condition notes..." style="width:100%;border-color:#444;"></textarea>
-      </div>
-
-      <!-- UPGRADES + WEAPONS SIDE BY SIDE -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;">
-
-        <!-- UPGRADES -->
-        <div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:1px solid var(--neon-cyan);padding-bottom:6px;">
-            <span style="color:var(--neon-cyan);font-weight:bold;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Upgrades</span>
-            <button class="btn" type="button" onclick="addAvUpgrade()" style="padding:2px 8px;font-size:11px;color:var(--neon-cyan);border-color:var(--neon-cyan);">+ Add</button>
-          </div>
-          <table>
-            <thead><tr><th>Upgrade / Modification</th><th style="width:28px;"></th></tr></thead>
-            <tbody id="av-upgrades-tbody"></tbody>
-          </table>
-        </div>
-
-        <!-- MOUNTED WEAPONS -->
-        <div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:1px solid var(--danger-red);padding-bottom:6px;">
-            <span style="color:var(--danger-red);font-weight:bold;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Mounted Weapons</span>
-            <button class="btn btn-danger" type="button" onclick="addAvWeapon()" style="padding:2px 8px;font-size:11px;">+ Add</button>
-          </div>
-          <table>
-            <thead><tr><th>Weapon</th><th style="width:50px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr></thead>
-            <tbody id="av-weapons-tbody"></tbody>
-          </table>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  </div>
 
   <!-- PAGE 3: CYBERWARE -->
   <div id="page-cyberware" class="sheet-tab-panel">
