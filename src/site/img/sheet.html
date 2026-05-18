@@ -152,7 +152,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 15px;
-      margin-bottom: 20px;
     }
     .two-col-row .panel { margin-bottom: 0; }
 
@@ -239,7 +238,14 @@
     textarea {
       width: 100%; background: #000; border: 1px solid #444;
       color: white; padding: 4px; box-sizing: border-box;
-      resize: vertical; font-family: 'Lexend', monospace; font-size: 12px;
+      font-family: 'Lexend', monospace; font-size: 12px;
+    }
+    
+    /* Dedicated class for fields that automatically fit to text size */
+    textarea.auto-expand {
+      overflow: hidden; 
+      min-height: 28px;
+      resize: vertical; /* Allows manual height adjust just in case, but auto-expands by default */
     }
 
     .currency-panel {
@@ -309,13 +315,14 @@
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:2px solid var(--accent-yellow);padding-bottom:10px;">
             <h2 style="margin:0;border:none;padding:0;">Combat & Status Core Systems</h2>
             <label style="font-weight: bold; color: var(--neon-cyan); cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 11px; background:#000; padding:4px 8px; border:1px solid var(--border-color); border-radius:3px;">
-              <input type="checkbox" id="toggle-combat" onchange="document.getElementById('combat-matrix-content').style.display=this.checked?'grid':'none'" checked style="width:auto;">
+              <input type="checkbox" id="toggle-combat" onchange="document.getElementById('combat-matrix-content').style.display=this.checked?'block':'none'" checked style="width:auto;">
               INITIALIZE COMBAT OVERLAY
             </label>
           </div>
           
-          <div id="combat-matrix-content" class="two-col-row" style="margin-bottom:10px;">
-            <div style="display:flex; flex-direction:column; gap:15px;">
+          <div id="combat-matrix-content" style="margin-bottom:10px;">
+            <div class="two-col-row">
+              
               <div class="panel" style="margin-bottom:0; padding:12px;">
                 <h2 style="font-size:14px;">Combat Telemetry</h2>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
@@ -363,22 +370,22 @@
                   <div id="psychosis-warning"></div>
                 </div>
               </div>
+
+            </div>
+            
+            <div class="panel" style="margin-top: 15px; margin-bottom:0; padding:12px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                <h2 style="margin:0;border:none;font-size:14px;color:var(--accent-yellow);">Weapon Slots</h2>
+                <button class="btn" type="button" id="addWeaponBtn" style="padding:2px 8px; font-size:11px;">+ Add</button>
+              </div>
+              <table>
+                <thead>
+                  <tr><th>Weapon</th><th style="width:55px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr>
+                </thead>
+                <tbody id="weapons-tbody"></tbody>
+              </table>
             </div>
 
-            <div style="display:flex; flex-direction:column; gap:15px;">
-              <div class="panel" style="margin-bottom:0; padding:12px; height:100%;">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-                  <h2 style="margin:0;border:none;font-size:14px;color:var(--accent-yellow);">Weapon Slots</h2>
-                  <button class="btn" type="button" id="addWeaponBtn" style="padding:2px 8px; font-size:11px;">+ Add</button>
-                </div>
-                <table>
-                  <thead>
-                    <tr><th>Weapon</th><th style="width:55px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr>
-                  </thead>
-                  <tbody id="weapons-tbody"></tbody>
-                </table>
-              </div>
-            </div>
           </div>
         </div>
         <div class="netrunner-toggle-panel">
@@ -589,6 +596,12 @@
         event.currentTarget.classList.add('active-btn');
       }
     }
+    
+    // Auto-Resize Textarea Controller
+    function autoResizeTextarea(el) {
+      el.style.height = 'auto'; // Reset to calculate new height
+      el.style.height = el.scrollHeight + 'px'; // Set to scrollHeight to fit content perfectly
+    }
 
     // Custom Skills Processor Injection
     function addNewCustomSkill(name = "", stat = "", lvl = 0) {
@@ -610,15 +623,10 @@
         <div class="skill-base-val">0</div>
       `;
       
-      // Inject row straight into column 3 bottom registry (Under Technique)
       document.getElementById('custom-skills-hook').appendChild(row);
-      
-      // Hook event detection to run calculations on edit
       row.querySelector('input').addEventListener('input', updateSheetMath);
       
-      if (!name) {
-        nameInp.value = "";
-      }
+      if (!name) nameInp.value = "";
       updateSheetMath();
     }
 
@@ -666,24 +674,28 @@
       for(let i=1;i<=3;i++){
         const row=document.createElement('tr');
         row.className="cyber-row";row.setAttribute('data-group',group);row.setAttribute('data-slot',i);
-        row.innerHTML=`${i===1?`<td rowspan="3" style="font-weight:bold;color:var(--neon-cyan);vertical-align:middle;background:#0b0d1e;">${group}</td>`:''}<td><input type="text" class="cy-name" value=""></td><td><input type="number" class="cy-quality" min="1" max="5" value="1" style="text-align:center;"></td><td><textarea class="cy-notes" rows="1" placeholder="Notes..."></textarea></td>`;
+        row.innerHTML=`${i===1?`<td rowspan="3" style="font-weight:bold;color:var(--neon-cyan);vertical-align:middle;background:#0b0d1e;">${group}</td>`:''}<td><textarea class="cy-name auto-expand" rows="1" placeholder="Hardware..."></textarea></td><td><input type="number" class="cy-quality" min="1" max="5" value="1" style="text-align:center;"></td><td><textarea class="cy-notes auto-expand" rows="1" placeholder="Notes..."></textarea></td>`;
         document.getElementById('cyberware-tbody').appendChild(row);
       }
     });
 
+    // Modified Weapon Slots: Now features manual drag resizing for Name & Notes (resize:both)
     function addWeaponSlot(name="",dmg="",rof="",notes=""){
       const tr=document.createElement('tr');tr.className="weapon-row";
-      tr.innerHTML=`<td><input type="text" class="wp-name" value="${name}" placeholder="Heavy Pistol"></td><td><input type="text" class="wp-dmg" value="${dmg}" placeholder="3d6" style="text-align:center;"></td><td><input type="text" class="wp-rof" value="${rof}" placeholder="2" style="text-align:center;"></td><td><textarea class="wp-notes" rows="1" placeholder="Notes...">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>`;
+      tr.innerHTML=`<td><textarea class="wp-name" rows="1" placeholder="Heavy Pistol" style="resize:both; min-height:28px;">${name}</textarea></td><td><input type="text" class="wp-dmg" value="${dmg}" placeholder="3d6" style="text-align:center;"></td><td><input type="text" class="wp-rof" value="${rof}" placeholder="2" style="text-align:center;"></td><td><textarea class="wp-notes" rows="1" placeholder="Notes..." style="resize:both; min-height:28px;">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>`;
       document.getElementById('weapons-tbody').appendChild(tr);
       tr.querySelectorAll('input,textarea').forEach(i=>i.addEventListener('input',updateSheetMath));
     }
     document.getElementById('addWeaponBtn').addEventListener('click',()=>addWeaponSlot());
 
+    // Modified Gear Slots: Implements dynamic auto-expanding text areas
     function addGearSlot(name="",notes=""){
       const tr=document.createElement('tr');tr.className="gear-row";
-      tr.innerHTML=`<td><input type="text" class="gear-name" value="${name}" placeholder="Agent"></td><td><textarea class="gear-notes" rows="1" placeholder="Notes...">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>`;
+      tr.innerHTML=`<td><textarea class="gear-name auto-expand" rows="1" placeholder="Agent">${name}</textarea></td><td><textarea class="gear-notes auto-expand" rows="1" placeholder="Notes...">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>`;
       document.getElementById('gear-tbody').appendChild(tr);
       tr.querySelectorAll('input,textarea').forEach(i=>i.addEventListener('input',updateSheetMath));
+      // Auto-size upon creation
+      tr.querySelectorAll('.auto-expand').forEach(autoResizeTextarea);
     }
     document.getElementById('addGearBtn').addEventListener('click',()=>addGearSlot());
 
@@ -744,7 +756,6 @@
       else{pEl.classList.remove('exceeded');document.getElementById('psychosis-warning').innerText='';}
       const wounded=document.getElementById('eff-wounded').checked;
       
-      // Automatically captures core AND newly injected custom skill nodes seamlessly
       document.querySelectorAll('.skill-row').forEach(row=>{
         const stat=row.getAttribute('data-stat').toUpperCase();
         const sn=row.getAttribute('data-skill-name')||'';
@@ -756,11 +767,19 @@
       });
     }
 
-    document.addEventListener('input',e=>{if(e.target.matches('input,select,textarea'))updateSheetMath();});
+    // Global listener to handle both math updates and auto-expanding textareas
+    document.addEventListener('input', e => {
+      if(e.target.matches('input,select,textarea')) updateSheetMath();
+      if(e.target.classList.contains('auto-expand')) autoResizeTextarea(e.target);
+    });
+    
     document.addEventListener('change',e=>{if(e.target.matches('input[type="checkbox"]'))updateSheetMath();});
-    window.addEventListener('DOMContentLoaded',updateSheetMath);
+    window.addEventListener('DOMContentLoaded', () => {
+      updateSheetMath();
+      // Auto-size everything natively on load
+      setTimeout(() => document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea), 50);
+    });
 
-    // Secure Data Compression Engines Including Notes & Custom Skills Manifest
     document.getElementById('exportBtn').addEventListener('click',()=>{
       const d={
         handle:document.getElementById('charHandle').value,
@@ -780,7 +799,6 @@
       document.querySelectorAll('.gear-row').forEach(r=>d.gear.push({name:r.querySelector('.gear-name').value,notes:r.querySelector('.gear-notes').value}));
       document.querySelectorAll('.cyber-row').forEach(r=>d.cyberware.push({group:r.getAttribute('data-group'),slot:r.getAttribute('data-slot'),name:r.querySelector('.cy-name').value,quality:r.querySelector('.cy-quality').value,notes:r.querySelector('.cy-notes').value}));
       
-      // Save full custom parameters down to file
       document.querySelectorAll('.skill-row').forEach(r=>d.skills.push({
         name:r.getAttribute('data-skill-name'),
         lvl:r.querySelector('input').value,
@@ -811,7 +829,6 @@
           if(inc.gear)inc.gear.forEach(g=>addGearSlot(g.name,g.notes));
           if(inc.cyberware){document.querySelectorAll('.cyber-row').forEach(row=>{const m=inc.cyberware.find(c=>c.group===row.getAttribute('data-group')&&c.slot==row.getAttribute('data-slot'));if(m){row.querySelector('.cy-name').value=m.name||"";row.querySelector('.cy-quality').value=m.quality||"1";row.querySelector('.cy-notes').value=m.notes||"";}});}
           
-          // Rebuild custom elements dynamically on restoration trigger
           document.getElementById('custom-skills-hook').innerHTML = "";
           if(inc.skills){
             inc.skills.forEach(s=>{
@@ -823,7 +840,11 @@
               }
             });
           }
-          updateSheetMath();alert("Matrix Connection Restored.");
+          
+          updateSheetMath();
+          // Let DOM settle, then auto-size populated text areas
+          setTimeout(() => document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea), 100);
+          alert("Matrix Connection Restored.");
         }catch(err){alert("Decryption Error.");}
       };
       reader.readAsText(file);
