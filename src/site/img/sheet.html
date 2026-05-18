@@ -134,27 +134,28 @@
   border-color: var(--accent-yellow);
 }
 
-/* Hover/Active Search Results Portal Overlay Panel */
+/* Updated Hover Search Portal Matrix */
 .wiki-hover-portal {
-  display: none; /* Kept hidden until a keyword is queried */
+  display: none; 
   position: absolute;
   right: 0;
   top: 100%;
   margin-top: 8px;
-  width: 450px;
-  height: 400px;
+  width: 500px;         /* Compact outer panel width */
+  height: 550px;        /* Increased slightly for much better readability */
   background: #000000;
   border: 2px solid var(--accent-yellow);
-  box-shadow: 0 0 20px rgba(254, 232, 1, 0.5);
+  box-shadow: 0 0 25px rgba(254, 232, 1, 0.6);
   z-index: 1000;
   flex-direction: column;
+  overflow: hidden;    /* Prevents the virtual layout from spilling out */
 }
 
 /* Portal Title Bar Layout */
 .portal-header {
   background: var(--panel-bg);
   border-bottom: 1px solid var(--border-color);
-  padding: 6px 10px;
+  padding: 8px 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -162,6 +163,7 @@
   font-weight: bold;
   color: var(--accent-yellow);
   letter-spacing: 1px;
+  z-index: 1001;       /* Stays layered above the scaled window */
 }
 .portal-header button {
   background: transparent;
@@ -172,12 +174,17 @@
   font-size: 14px;
 }
 
-/* Embedded Webview Sandbox Frame */
+/* Embedded Webview Sandbox Frame with Desktop Resolution Injection */
 #wiki-frame {
-  width: 100%;
-  flex-grow: 1;
+  /* Force a desktop canvas breakpoint */
+  width: 1200px !important;   
+  height: 1210px !important;  
   border: none;
-  background: #ffffff; /* Digital Garden default background themes */
+  background: #ffffff;
+  
+  /* Scale matrix calculation: (Outer Width 500px / Virtual Width 1200px) = ~0.4166 */
+  transform: scale(0.4166);
+  transform-origin: top left; /* Anchor scaling to prevent clipping */
 }
     
     /* Stats: 6 per row (5 stats + 1 derived) */
