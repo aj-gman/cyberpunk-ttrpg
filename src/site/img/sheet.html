@@ -661,6 +661,8 @@
 
   <!-- PAGE 2: INVENTORY -->
   <div id="page-inventory" class="sheet-tab-panel">
+
+    <!-- GEAR -->
     <div class="panel">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
         <h2>INVENTORY &amp; GEAR</h2>
@@ -675,6 +677,85 @@
         <tbody id="gear-tbody"></tbody>
       </table>
     </div>
+
+    <!-- AIR VEHICLE MODULE -->
+    <div class="panel" style="border-color:#54C1E6;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:2px solid var(--neon-cyan);padding-bottom:10px;">
+        <h2 style="margin:0;border:none;padding:0;color:var(--neon-cyan);border-bottom:none;">AIR VEHICLE</h2>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <label style="color:#888;font-size:11px;">NAME:</label>
+          <input type="text" id="av-name" placeholder="e.g. AV-4 Aerodyne" style="width:200px;font-weight:bold;font-size:13px;border-color:var(--neon-cyan);">
+        </div>
+      </div>
+
+      <!-- STATS ROW -->
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:15px;">
+        <div class="stat-box" style="border-color:var(--danger-red);">
+          <label>SDP CHASSIS</label>
+          <input type="number" id="av-sdp-chassis" value="0" min="0">
+        </div>
+        <div class="stat-box" style="border-color:var(--danger-red);">
+          <label>SDP GLASS</label>
+          <input type="number" id="av-sdp-glass" value="0" min="0">
+        </div>
+        <div class="stat-box" style="border-color:var(--neon-cyan);">
+          <label>SP</label>
+          <input type="number" id="av-sp" value="0" min="0">
+        </div>
+        <div class="stat-box" style="border-color:var(--neon-cyan);">
+          <label>SEATS</label>
+          <input type="number" id="av-seats" value="4" min="1">
+        </div>
+        <div class="stat-box" style="border-color:var(--accent-yellow);">
+          <label>SPEED [combat]</label>
+          <input type="text" id="av-speed-combat" placeholder="e.g. 6">
+        </div>
+        <div class="stat-box" style="border-color:var(--accent-yellow);">
+          <label>SPEED [narrative]</label>
+          <input type="text" id="av-speed-narrative" placeholder="e.g. 200mph">
+        </div>
+        <div class="stat-box" style="border-color:#a142ff;">
+          <label>COST (€$)</label>
+          <input type="number" id="av-cost" value="0" min="0">
+        </div>
+      </div>
+
+      <!-- DESCRIPTION / NOTES -->
+      <div style="margin-bottom:15px;">
+        <label style="color:#888;font-size:10px;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">Description / Notes</label>
+        <textarea id="av-description" class="auto-expand" rows="2" placeholder="Vehicle description, special features, condition notes..." style="width:100%;border-color:#444;"></textarea>
+      </div>
+
+      <!-- UPGRADES + WEAPONS SIDE BY SIDE -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;">
+
+        <!-- UPGRADES -->
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:1px solid var(--neon-cyan);padding-bottom:6px;">
+            <span style="color:var(--neon-cyan);font-weight:bold;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Upgrades</span>
+            <button class="btn" type="button" onclick="addAvUpgrade()" style="padding:2px 8px;font-size:11px;color:var(--neon-cyan);border-color:var(--neon-cyan);">+ Add</button>
+          </div>
+          <table>
+            <thead><tr><th>Upgrade / Modification</th><th style="width:28px;"></th></tr></thead>
+            <tbody id="av-upgrades-tbody"></tbody>
+          </table>
+        </div>
+
+        <!-- MOUNTED WEAPONS -->
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:1px solid var(--danger-red);padding-bottom:6px;">
+            <span style="color:var(--danger-red);font-weight:bold;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Mounted Weapons</span>
+            <button class="btn btn-danger" type="button" onclick="addAvWeapon()" style="padding:2px 8px;font-size:11px;">+ Add</button>
+          </div>
+          <table>
+            <thead><tr><th>Weapon</th><th style="width:50px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr></thead>
+            <tbody id="av-weapons-tbody"></tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 
   <!-- PAGE 3: CYBERWARE -->
@@ -964,6 +1045,29 @@
       setTimeout(() => document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea), 50);
     });
 
+    // === AIR VEHICLE MODULE ===
+    function addAvUpgrade(notes="") {
+      const tr = document.createElement('tr'); tr.className = "av-upgrade-row";
+      tr.innerHTML = `
+        <td style="padding:2px;"><textarea class="av-upgrade-notes auto-expand" rows="1" placeholder="e.g. Reinforced Hull, Stealth Paint..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
+        <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>
+      `;
+      document.getElementById('av-upgrades-tbody').appendChild(tr);
+      tr.querySelectorAll('textarea').forEach(t => { t.addEventListener('input', () => autoResizeTextarea(t)); autoResizeTextarea(t); });
+    }
+
+    function addAvWeapon(name="", dmg="", rof="", notes="") {
+      const tr = document.createElement('tr'); tr.className = "av-weapon-row";
+      tr.innerHTML = `
+        <td style="padding:2px;"><textarea class="av-wp-name" rows="1" placeholder="Twin Autocannon" style="resize:both;min-height:28px;width:100%;overflow:auto;">${name}</textarea></td>
+        <td><input type="text" class="av-wp-dmg" value="${dmg}" placeholder="5d6" style="text-align:center;"></td>
+        <td><input type="text" class="av-wp-rof" value="${rof}" placeholder="1" style="text-align:center;"></td>
+        <td style="padding:2px;"><textarea class="av-wp-notes" rows="1" placeholder="Notes..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
+        <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>
+      `;
+      document.getElementById('av-weapons-tbody').appendChild(tr);
+    }
+
     // === EXPORT ===
     document.getElementById('exportBtn').addEventListener('click', () => {
       const d = {
@@ -981,8 +1085,23 @@
         armorPenalty: document.getElementById('eff-armor-penalty').value,
         psychosis: document.getElementById('psychosis-input').value,
         customEffects: customEffectsList,
-        weapons: [], gear: [], cyberware: [], skills: []
+        weapons: [], gear: [], cyberware: [], skills: [],
+        airVehicle: {
+          name: document.getElementById('av-name').value,
+          sdpChassis: document.getElementById('av-sdp-chassis').value,
+          sdpGlass: document.getElementById('av-sdp-glass').value,
+          sp: document.getElementById('av-sp').value,
+          seats: document.getElementById('av-seats').value,
+          speedCombat: document.getElementById('av-speed-combat').value,
+          speedNarrative: document.getElementById('av-speed-narrative').value,
+          cost: document.getElementById('av-cost').value,
+          description: document.getElementById('av-description').value,
+          upgrades: [],
+          weapons: []
+        }
       };
+      document.querySelectorAll('.av-upgrade-row').forEach(r => d.airVehicle.upgrades.push({ notes: r.querySelector('.av-upgrade-notes').value }));
+      document.querySelectorAll('.av-weapon-row').forEach(r => d.airVehicle.weapons.push({ name: r.querySelector('.av-wp-name').value, dmg: r.querySelector('.av-wp-dmg').value, rof: r.querySelector('.av-wp-rof').value, notes: r.querySelector('.av-wp-notes').value }));
       document.querySelectorAll('.weapon-row').forEach(r => d.weapons.push({ name: r.querySelector('.wp-name').value, dmg: r.querySelector('.wp-dmg').value, rof: r.querySelector('.wp-rof').value, notes: r.querySelector('.wp-notes').value }));
       document.querySelectorAll('.gear-row').forEach(r => d.gear.push({ name: r.querySelector('.gear-name').value, notes: r.querySelector('.gear-notes').value }));
       document.querySelectorAll('.cyber-row').forEach(r => d.cyberware.push({ group: r.getAttribute('data-group'), slot: r.getAttribute('data-slot'), name: r.querySelector('.cy-name').value, quality: r.querySelector('.cy-quality').value, notes: r.querySelector('.cy-notes').value }));
@@ -1025,6 +1144,22 @@
               if (coreRow) coreRow.querySelector('input').value = s.lvl;
               else if (s.custom) addNewCustomSkill(s.name, s.stat, parseInt(s.lvl) || 0);
             });
+          }
+          if (inc.airVehicle) {
+            const av = inc.airVehicle;
+            if (av.name) document.getElementById('av-name').value = av.name;
+            if (av.sdpChassis) document.getElementById('av-sdp-chassis').value = av.sdpChassis;
+            if (av.sdpGlass) document.getElementById('av-sdp-glass').value = av.sdpGlass;
+            if (av.sp) document.getElementById('av-sp').value = av.sp;
+            if (av.seats) document.getElementById('av-seats').value = av.seats;
+            if (av.speedCombat) document.getElementById('av-speed-combat').value = av.speedCombat;
+            if (av.speedNarrative) document.getElementById('av-speed-narrative').value = av.speedNarrative;
+            if (av.cost) document.getElementById('av-cost').value = av.cost;
+            if (av.description) document.getElementById('av-description').value = av.description;
+            document.getElementById('av-upgrades-tbody').innerHTML = "";
+            if (av.upgrades) av.upgrades.forEach(u => addAvUpgrade(u.notes));
+            document.getElementById('av-weapons-tbody').innerHTML = "";
+            if (av.weapons) av.weapons.forEach(w => addAvWeapon(w.name, w.dmg, w.rof, w.notes));
           }
           updateSheetMath();
           setTimeout(() => document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea), 100);
