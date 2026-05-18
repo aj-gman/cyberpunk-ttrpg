@@ -103,32 +103,30 @@
     }
 
     /* === LEFT COLUMN INTERNAL LAYOUT === */
-    /* Combat + Status side by side */
-    .combat-status-row {
+    .telemetry-weapons-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 15px;
       margin-bottom: 20px;
     }
-    .combat-status-row .panel {
+    .telemetry-weapons-row .panel {
       margin-bottom: 0;
     }
 
-    /* Weapons + Inventory side by side */
-    .weapons-inventory-row {
+    .status-inventory-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 15px;
       margin-bottom: 20px;
     }
-    .weapons-inventory-row .panel {
+    .status-inventory-row .panel {
       margin-bottom: 0;
     }
 
     /* Attributes Grid Layout */
     .stats-container {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 8px;
       margin-bottom: 15px;
     }
@@ -172,7 +170,7 @@
       .skills-master-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (min-width: 1100px) {
-      .skills-master-grid { grid-template-columns: repeat(3, 1fr); }
+      .skills-master-grid { grid-template-columns: repeat(4, 1fr); }
     }
 
     .skills-header, .skill-row {
@@ -190,7 +188,7 @@
       margin-top: 10px;
     }
     .skill-row { border-bottom: 1px dashed #2e3456; }
-    .skill-row div { font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .skill-row div { font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: bold; }
     .skill-row input {
       background: #000;
       border: 1px solid #444;
@@ -201,6 +199,7 @@
       padding: 2px 0;
       border-radius: 3px;
       font-family: 'Lexend', monospace;
+      font-weight: bold;
     }
     .skill-base-val { text-align: center; font-weight: bold; color: var(--accent-yellow); font-size: 12px; }
 
@@ -388,7 +387,6 @@
   <div class="main-grid">
     
     <div>
-      <!-- ATTRIBUTES -->
       <div class="panel">
         <h2>Attributes Matrix</h2>
         <div class="stats-container">
@@ -397,6 +395,7 @@
           <div class="stat-box"><label>DEX</label><input type="number" id="stat-dex" value="6"><span class="display-stat-modified" id="mod-dex"></span></div>
           <div class="stat-box"><label>TECH</label><input type="number" id="stat-tech" value="6"><span class="display-stat-modified" id="mod-tech"></span></div>
           <div class="stat-box"><label>COOL</label><input type="number" id="stat-cool" value="6"><span class="display-stat-modified" id="mod-cool"></span></div>
+          <div class="stat-box" style="border-color: var(--neon-cyan);"><label>HUMANITY</label><input type="text" id="humanity" readonly style="color: var(--neon-cyan);"></div>
         </div>
         <div class="stats-container">
           <div class="stat-box"><label>WILL</label><input type="number" id="stat-will" value="6"><span class="display-stat-modified" id="mod-will"></span></div>
@@ -404,17 +403,12 @@
           <div class="stat-box"><label>MOVE</label><input type="number" id="stat-move" value="6"><span class="display-stat-modified" id="mod-move"></span></div>
           <div class="stat-box"><label>BODY</label><input type="number" id="stat-body" value="6"><span class="display-stat-modified" id="mod-body"></span></div>
           <div class="stat-box"><label>EMP</label><input type="number" id="stat-emp" value="6"><span class="display-stat-modified" id="mod-emp"></span></div>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px;">
-          <div class="stat-box" style="border-color: var(--neon-cyan);"><label>HUMANITY (AUTO)</label><input type="text" id="humanity" readonly style="color: var(--neon-cyan);"></div>
-          <div class="stat-box" style="border-color: var(--neon-cyan);"><label>HP MAX (AUTO)</label><input type="text" id="hp-max" readonly style="color: var(--neon-cyan);"></div>
+          <div class="stat-box" style="border-color: var(--neon-cyan);"><label>HP MAX</label><input type="text" id="hp-max" readonly style="color: var(--neon-cyan);"></div>
         </div>
       </div>
 
-      <!-- COMBAT + STATUS SIDE BY SIDE -->
-      <div class="combat-status-row">
+      <div class="telemetry-weapons-row">
 
-        <!-- COMBAT -->
         <div class="panel">
           <h2>Combat Telemetry</h2>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
@@ -447,40 +441,21 @@
           </div>
         </div>
 
-        <!-- STATUS EFFECTS -->
         <div class="panel">
-          <h2>Status Modifiers</h2>
-          <div class="effects-builder">
-            <input type="text" id="effectInput" placeholder="e.g., SynthCoke REF +2, Concentration +2" style="flex:2; font-size:11px;">
-            <button class="btn" id="addEffectBtn" type="button">+ Inject</button>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+            <h2 style="margin:0; border:none; flex-grow:1;">Weapon Slots</h2>
+            <button class="btn" type="button" id="addWeaponBtn">+ Add Slot</button>
           </div>
-          <div class="effects-list">
-            <div class="effect-card" style="border-left-color: var(--danger-red);">
-              <label><input type="checkbox" id="eff-wounded"> <strong>Seriously Wounded</strong> (-2 All Actions)</label>
-            </div>
-            <div class="effect-card" style="border-left-color: var(--danger-red);">
-              <div style="display:flex; align-items:center; gap:10px; width:100%;">
-                <label style="white-space:nowrap;"><strong>Armor Penalty:</strong></label>
-                <input type="number" id="eff-armor-penalty" value="0" style="width:50px; text-align:center;">
-              </div>
-            </div>
-            <div id="custom-effects-hook"></div>
-          </div>
-
-          <!-- CYBERPSYCHOSIS TRACKER -->
-          <div class="psychosis-tracker">
-            <label>⚠ Cyberpsychosis Tracker</label>
-            <div class="tracker-row">
-              <input type="number" id="psychosis-input" value="0" min="0" placeholder="0">
-            </div>
-            <div class="humanity-ref">Humanity threshold: <span id="humanity-threshold">—</span></div>
-            <div id="psychosis-warning"></div>
-          </div>
+          <table>
+            <thead>
+              <tr><th>Weapon</th><th style="width:50px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:30px;"></th></tr>
+            </thead>
+            <tbody id="weapons-tbody"></tbody>
+          </table>
         </div>
 
       </div>
 
-      <!-- NETRUNNER MODULE -->
       <div class="netrunner-toggle-panel">
         <label>
           <input type="checkbox" id="toggle-netrunner" onchange="toggleNetrunnerModule(this.checked)" style="width: auto;">
@@ -526,24 +501,37 @@
         </div>
       </div>
 
-      <!-- WEAPONS + INVENTORY SIDE BY SIDE -->
-      <div class="weapons-inventory-row">
+      <div class="status-inventory-row">
 
-        <!-- WEAPONS -->
         <div class="panel">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-            <h2 style="margin:0; border:none; flex-grow:1;">Weapon Slots</h2>
-            <button class="btn" type="button" id="addWeaponBtn">+ Add Slot</button>
+          <h2>Status Modifiers</h2>
+          <div class="effects-builder">
+            <input type="text" id="effectInput" placeholder="e.g., SynthCoke REF +2, Concentration +2" style="flex:2; font-size:11px;">
+            <button class="btn" id="addEffectBtn" type="button">+ Inject</button>
           </div>
-          <table>
-            <thead>
-              <tr><th>Weapon</th><th style="width:50px;">Dmg</th><th style="width:40px;">Ammo</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:30px;"></th></tr>
-            </thead>
-            <tbody id="weapons-tbody"></tbody>
-          </table>
+          <div class="effects-list">
+            <div class="effect-card" style="border-left-color: var(--danger-red);">
+              <label><input type="checkbox" id="eff-wounded"> <strong>Seriously Wounded</strong> (-2 All Actions)</label>
+            </div>
+            <div class="effect-card" style="border-left-color: var(--danger-red);">
+              <div style="display:flex; align-items:center; gap:10px; width:100%;">
+                <label style="white-space:nowrap;"><strong>Armor Penalty:</strong></label>
+                <input type="number" id="eff-armor-penalty" value="0" style="width:50px; text-align:center;">
+              </div>
+            </div>
+            <div id="custom-effects-hook"></div>
+          </div>
+
+          <div class="psychosis-tracker">
+            <label>⚠ Cyberpsychosis Tracker</label>
+            <div class="tracker-row">
+              <input type="number" id="psychosis-input" value="0" min="0" placeholder="0">
+            </div>
+            <div class="humanity-ref">Humanity threshold: <span id="humanity-threshold">—</span></div>
+            <div id="psychosis-warning"></div>
+          </div>
         </div>
 
-        <!-- INVENTORY -->
         <div class="panel">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
             <h2 style="margin:0; border:none; flex-grow:1;">Inventory</h2>
@@ -564,12 +552,10 @@
       </div>
     </div>
 
-    <!-- RIGHT COLUMN: SKILLS -->
     <div class="panel">
       <h2>Skills Sub-Processor</h2>
       <div class="skills-master-grid">
 
-        <!-- COLUMN 1: Awareness + Ranged + Control -->
         <div>
           <div class="skills-header"><div>Awareness Skills</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="will" data-skill-name="Concentration"><div>Concentration</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
@@ -598,7 +584,6 @@
           <div class="skill-row" data-stat="dex" data-skill-name="Melee Weapon"><div>Melee Weapon</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
         </div>
 
-        <!-- COLUMN 2: Body + Social + Performance -->
         <div>
           <div class="skills-header"><div>Body Skills</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="dex" data-skill-name="Athletics"><div>Athletics</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
@@ -621,17 +606,16 @@
           <div class="skill-row" data-stat="cool" data-skill-name="Acting"><div>Acting</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="cool" data-skill-name="Personal Grooming"><div>Personal Grooming</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="cool" data-skill-name="Wardrobe & Style"><div>Wardrobe &amp; Style</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+        </div>
 
+        <div>
           <div class="skills-header"><div>Education Skills (A)</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Language (Streetslang)"><div>Language (Streetslang)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Language (Origin)"><div>Language (Origin)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Accounting"><div>Accounting</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Animal Handling"><div>Animal Handling</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Bureaucracy"><div>Bureaucracy</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-        </div>
 
-        <!-- COLUMN 3: Education (cont) + Technique -->
-        <div>
           <div class="skills-header"><div>Education Skills (B)</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Business"><div>Business</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Composition"><div>Composition</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
@@ -645,7 +629,9 @@
           <div class="skill-row" data-stat="int" data-skill-name="Science"><div>Science</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Tactics"><div>Tactics</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="int" data-skill-name="Wilderness Survival"><div>Wilderness Survival</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+        </div>
 
+        <div>
           <div class="skills-header"><div>Technique Skills</div><div>LVL</div><div>BASE</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Air Vehicle Tech"><div>Air Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
           <div class="skill-row" data-stat="tech" data-skill-name="Basic Tech"><div>Basic Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
@@ -670,12 +656,11 @@
 
   </div>
 
-  <!-- CYBERWARE TABLE -->
   <div class="panel" style="margin-top:20px;">
     <h2>Cyberware Implant Matrix (3 Slots Per System Node)</h2>
     <table>
       <thead>
-        <tr><th style="width:180px;">System Node</th><th style="width:40px;">Slot</th><th>Hardware Manifest / Model Name</th><th style="width:90px;">Quality (1-5)</th><th>Data Logging / Notes</th></tr>
+        <tr><th style="width:180px;">System Node</th><th>Hardware Manifest / Model Name</th><th style="width:50px;">Quality</th><th>Data Logging / Notes</th></tr>
       </thead>
       <tbody id="cyberware-tbody"></tbody>
     </table>
@@ -759,7 +744,6 @@
         row.setAttribute('data-slot', i);
         row.innerHTML = `
           ${i === 1 ? `<td rowspan="3" style="font-weight:bold; color:var(--neon-cyan); vertical-align:middle; background:#0b0d1e;">${group}</td>` : ''}
-          <td style="text-align:center; color:#888;">#${i}</td>
           <td><input type="text" class="cy-name" value=""></td>
           <td><input type="number" class="cy-quality" min="1" max="5" value="1" style="text-align:center;"></td>
           <td><textarea class="cy-notes" rows="1" placeholder="Add entry notes..."></textarea></td>
@@ -770,13 +754,12 @@
 
     // --- WEAPONS ---
     const weaponsTbody = document.getElementById('weapons-tbody');
-    function addWeaponSlot(name="", dmg="", ammo="", rof="", notes="") {
+    function addWeaponSlot(name="", dmg="", rof="", notes="") {
       const tr = document.createElement('tr');
       tr.className = "weapon-row";
       tr.innerHTML = `
         <td><input type="text" class="wp-name" value="${name}" placeholder="Heavy Pistol"></td>
         <td><input type="text" class="wp-dmg" value="${dmg}" placeholder="3d6" style="text-align:center;"></td>
-        <td><input type="text" class="wp-ammo" value="${ammo}" placeholder="8" style="text-align:center;"></td>
         <td><input type="text" class="wp-rof" value="${rof}" placeholder="2" style="text-align:center;"></td>
         <td><textarea class="wp-notes" rows="1" placeholder="Notes...">${notes}</textarea></td>
         <td style="text-align:center; vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove(); updateSheetMath();" style="padding:2px 6px;">X</button></td>
@@ -801,7 +784,7 @@
     }
     document.getElementById('addGearBtn').addEventListener('click', () => addGearSlot());
 
-    addWeaponSlot("Heavy Pistol", "3d6", "8", "2", "");
+    addWeaponSlot("Heavy Pistol", "3d6", "2", "");
     addGearSlot("Agent", "AI powered smartphone.");
     addGearSlot("Carryall", "Heavy ripstop nylon bags.");
 
@@ -815,14 +798,11 @@
       const nameMatch = inputVal.match(/^([^,]+?)(?=\s+[A-Za-z\/&()\s]+\s*[+-]\d|$)/);
       const name = nameMatch ? nameMatch[1].trim() : "Custom Effect";
 
-      // Extended token regex: matches stat names OR multi-word skill names followed by +/- value
-      // We'll parse all comma-separated segments for modifiers
       const segments = inputVal.split(',').map(s => s.trim());
       let modifiers = [];
       let effectName = null;
 
       segments.forEach((seg, idx) => {
-        // Try to find "[Target] +N" or "[Target] -N" pattern
         const modMatch = seg.match(/^(.*?)\s*([+-]\d+)\s*$/);
         if (modMatch) {
           const target = modMatch[1].trim();
@@ -833,9 +813,8 @@
         }
       });
 
-      // If first segment had no modifier, it's the name
       if (effectName !== null && modifiers.length > 0) {
-        // name already captured
+        // structural capture
       } else if (modifiers.length > 0 && effectName === null) {
         effectName = modifiers[0].target;
       }
@@ -880,7 +859,6 @@
       updateSheetMath();
     };
 
-    // --- STAT ABBREVIATION MAP ---
     const statAliases = {
       'INT': 'int', 'REF': 'ref', 'DEX': 'dex', 'TECH': 'tech',
       'COOL': 'cool', 'WILL': 'will', 'LUCK': 'luck', 'MOVE': 'move',
@@ -905,7 +883,6 @@
       for(let key in baseStats) document.getElementById(`mod-${key.toLowerCase()}`).innerText = "";
 
       const processedStats = { ...baseStats };
-      // Track per-skill bonuses separately
       const skillBonuses = {};
 
       customEffectsList.forEach(eff => {
@@ -913,24 +890,20 @@
         eff.modifiers.forEach(mod => {
           const targetUpper = mod.target.toUpperCase();
           if(processedStats[targetUpper] !== undefined) {
-            // It's a stat modifier
             processedStats[targetUpper] += mod.value;
           } else {
-            // It's a skill modifier — store by exact name match
             const key = mod.target;
             skillBonuses[key] = (skillBonuses[key] || 0) + mod.value;
           }
         });
       });
 
-      // Display stat changes
       for(let key in baseStats) {
         if(processedStats[key] !== baseStats[key]) {
           document.getElementById(`mod-${key.toLowerCase()}`).innerText = `(${processedStats[key]})`;
         }
       }
 
-      // Armor penalty
       const armorPenalty = parseInt(document.getElementById('eff-armor-penalty').value) || 0;
       if (armorPenalty > 0) {
         processedStats.REF = Math.max(0, processedStats.REF - armorPenalty);
@@ -941,13 +914,11 @@
         document.getElementById('mod-move').innerText = `(${processedStats.MOVE})`;
       }
 
-      // Derived stats
       const derivedHumanity = processedStats.WILL + processedStats.EMP;
       const derivedHP = 10 + (5 * Math.ceil((processedStats.BODY + processedStats.WILL) / 2));
       document.getElementById('humanity').value = derivedHumanity;
       document.getElementById('hp-max').value = derivedHP;
 
-      // Cyberpsychosis tracker
       const psychosisInput = document.getElementById('psychosis-input');
       const psychosisWarning = document.getElementById('psychosis-warning');
       const humanityThresholdEl = document.getElementById('humanity-threshold');
@@ -963,7 +934,6 @@
 
       const isSeriouslyWounded = document.getElementById('eff-wounded').checked;
 
-      // Update skill rows
       document.querySelectorAll('.skill-row').forEach(row => {
         const statKey = row.getAttribute('data-stat').toUpperCase();
         const skillName = row.getAttribute('data-skill-name') || '';
@@ -973,7 +943,6 @@
         const lvl = parseInt(lvlInput.value) || 0;
         let finalBase = lvl + activeStatValue;
 
-        // Apply skill-specific bonus if any
         if (skillBonuses[skillName]) finalBase += skillBonuses[skillName];
         if (isSeriouslyWounded) finalBase -= 2;
 
@@ -1014,7 +983,7 @@
       };
 
       document.querySelectorAll('.weapon-row').forEach(row => {
-        dataPackage.weapons.push({ name: row.querySelector('.wp-name').value, dmg: row.querySelector('.wp-dmg').value, ammo: row.querySelector('.wp-ammo').value, rof: row.querySelector('.wp-rof').value, notes: row.querySelector('.wp-notes').value });
+        dataPackage.weapons.push({ name: row.querySelector('.wp-name').value, dmg: row.querySelector('.wp-dmg').value, rof: row.querySelector('.wp-rof').value, notes: row.querySelector('.wp-notes').value });
       });
       document.querySelectorAll('.gear-row').forEach(row => {
         dataPackage.gear.push({ name: row.querySelector('.gear-name').value, notes: row.querySelector('.gear-notes').value });
@@ -1051,7 +1020,7 @@
           if(inc.customEffects) { customEffectsList = inc.customEffects; renderCustomEffects(); }
 
           weaponsTbody.innerHTML = "";
-          if(inc.weapons) inc.weapons.forEach(w => addWeaponSlot(w.name, w.dmg, w.ammo, w.rof, w.notes));
+          if(inc.weapons) inc.weapons.forEach(w => addWeaponSlot(w.name, w.dmg, w.rof, w.notes));
           gearTbody.innerHTML = "";
           if(inc.gear) inc.gear.forEach(g => addGearSlot(g.name, g.notes));
 
