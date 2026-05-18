@@ -200,3 +200,35 @@ body {
     left: auto !important;
     right: 0 !important;
 }
+
+/* --- CROSS-DEVICE STANDARDIZED SCROLLBARS --- */
+
+/* Target the container handles for the sidebars or note indexes */
+.sidebar-left, 
+.sidebar-right, 
+.notes-container, /* Or the exact selector used for your central note view */
+main {
+  /* For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color, #303235) transparent;
+
+  /* For Chrome, Safari, Edge, and Opera */
+  &::-webkit-scrollbar {
+    width: 6px;  /* Width of vertical scrollbar */
+    height: 6px; /* Height of horizontal scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent; /* Keeps track background invisible */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--border-color, #303235); 
+    border-radius: 10px;
+    border: none;
+    
+    &:hover {
+      background-color: var(--text-accent, #5865f2); /* Brightens when hovered */
+    }
+  }
+}
