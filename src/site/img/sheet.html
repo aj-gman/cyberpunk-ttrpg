@@ -305,79 +305,82 @@
           </div>
         </div>
 
-        <div class="two-col-row">
+        <div class="panel" style="padding-bottom:5px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:2px solid var(--accent-yellow);padding-bottom:10px;">
+            <h2 style="margin:0;border:none;padding:0;">Combat & Status Core Systems</h2>
+            <label style="font-weight: bold; color: var(--neon-cyan); cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 11px; background:#000; padding:4px 8px; border:1px solid var(--border-color); border-radius:3px;">
+              <input type="checkbox" id="toggle-combat" onchange="document.getElementById('combat-matrix-content').style.display=this.checked?'grid':'none'" checked style="width:auto;">
+              INITIALIZE COMBAT OVERLAY
+            </label>
+          </div>
           
-          <div>
-            <div class="panel" style="margin-bottom:0; border-bottom:none; border-radius:4px 4px 0 0;">
-              <h2>Combat Telemetry</h2>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
-                <div class="stat-box" style="border-color:var(--neon-cyan);"><label>HEAD SP</label><input type="number" id="sp-head" value="11" min="0"></div>
-                <div class="stat-box" style="border-color:var(--neon-cyan);"><label>BODY SP</label><input type="number" id="sp-body" value="11" min="0"></div>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
-                <div class="stat-box" style="border-color:var(--accent-yellow);"><label>CURRENT HP</label><input type="number" id="hp-curr" value="40" min="0"></div>
-                <div class="stat-box" style="border-color:#555;"><label>MAX HP (AUTO)</label><input type="text" id="hp-max-display" readonly style="color:#888;"></div>
-              </div>
-              <div style="background:#000;padding:12px;border:1px dashed var(--danger-red);border-radius:4px;">
-                <label style="color:var(--danger-red);font-weight:bold;font-size:11px;display:block;margin-bottom:5px;">INCOMING DAMAGE</label>
-                <div style="display:flex;gap:10px;">
-                  <input type="number" id="dmg-counter" placeholder="0" min="0" style="flex:1;font-size:16px;font-weight:bold;text-align:center;border-color:var(--danger-red);">
-                  <button class="btn btn-danger" type="button" onclick="resolveIncomingDamage()" style="flex:1;">Apply</button>
+          <div id="combat-matrix-content" class="two-col-row" style="margin-bottom:10px;">
+            <div style="display:flex; flex-direction:column; gap:15px;">
+              <div class="panel" style="margin-bottom:0; padding:12px;">
+                <h2 style="font-size:14px;">Combat Telemetry</h2>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
+                  <div class="stat-box" style="border-color:var(--neon-cyan);"><label>HEAD SP</label><input type="number" id="sp-head" value="11" min="0"></div>
+                  <div class="stat-box" style="border-color:var(--neon-cyan);"><label>BODY SP</label><input type="number" id="sp-body" value="11" min="0"></div>
                 </div>
-                <div id="damage-log" style="margin-top:8px;font-size:12px;font-weight:bold;text-align:center;text-transform:uppercase;min-height:15px;"></div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
+                  <div class="stat-box" style="border-color:var(--accent-yellow);"><label>CURRENT HP</label><input type="number" id="hp-curr" value="40" min="0"></div>
+                  <div class="stat-box" style="border-color:#555;"><label>MAX HP (AUTO)</label><input type="text" id="hp-max-display" readonly style="color:#888;"></div>
+                </div>
+                <div style="background:#000;padding:12px;border:1px dashed var(--danger-red);border-radius:4px;">
+                  <label style="color:var(--danger-red);font-weight:bold;font-size:11px;display:block;margin-bottom:5px;">INCOMING DAMAGE</label>
+                  <div style="display:flex;gap:10px;">
+                    <input type="number" id="dmg-counter" placeholder="0" min="0" style="flex:1;font-size:16px;font-weight:bold;text-align:center;border-color:var(--danger-red);">
+                    <button class="btn btn-danger" type="button" onclick="resolveIncomingDamage()" style="flex:1;">Apply</button>
+                  </div>
+                  <div id="damage-log" style="margin-top:8px;font-size:12px;font-weight:bold;text-align:center;text-transform:uppercase;min-height:15px;"></div>
+                </div>
               </div>
               
-              <div style="background: #000; border: 1px solid var(--border-color); padding: 8px; margin-top: 15px; border-radius: 4px;">
-                <label style="font-weight: bold; color: var(--neon-cyan); cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 11px;">
-                  <input type="checkbox" id="toggle-weapons" onchange="toggleWeaponsModule(this.checked)" checked style="width:auto;">
-                  INITIALIZE WEAPONS INTERFACE OVERLAY
-                </label>
-              </div>
-            </div>
-
-            <div id="weapons-section" class="panel" style="border-top:none; border-radius:0 0 4px 4px;">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-                <h3 style="margin:0;border:none;font-size:13px;color:var(--accent-yellow);">Weapon Slots</h3>
-                <button class="btn" type="button" id="addWeaponBtn" style="padding:2px 8px; font-size:11px;">+ Add</button>
-              </div>
-              <table>
-                <thead>
-                  <tr><th>Weapon</th><th style="width:55px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr>
-                </thead>
-                <tbody id="weapons-tbody"></tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="panel">
-            <h2>Status Modifiers</h2>
-            <div class="effects-builder">
-              <input type="text" id="effectInput" placeholder="SynthCoke REF +2, Concentration +2" style="flex:2;font-size:11px;">
-              <button class="btn" id="addEffectBtn" type="button">+ Inject</button>
-            </div>
-            <div class="effects-list">
-              <div class="effect-card" style="border-left-color:var(--danger-red);">
-                <label><input type="checkbox" id="eff-wounded"> <strong>Seriously Wounded</strong> (-2 All)</label>
-              </div>
-              <div class="effect-card" style="border-left-color:var(--danger-red);">
-                <div style="display:flex;align-items:center;gap:10px;width:100%;">
-                  <label style="white-space:nowrap;"><strong>Armor Penalty:</strong></label>
-                  <input type="number" id="eff-armor-penalty" value="0" style="width:50px;text-align:center;">
+              <div class="panel" style="margin-bottom:0; padding:12px;">
+                <h2 style="font-size:14px;">Status Modifiers</h2>
+                <div class="effects-builder">
+                  <input type="text" id="effectInput" placeholder="SynthCoke REF +2, Concentration +2" style="flex:2;font-size:11px;">
+                  <button class="btn" id="addEffectBtn" type="button">+ Inject</button>
+                </div>
+                <div class="effects-list">
+                  <div class="effect-card" style="border-left-color:var(--danger-red);">
+                    <label><input type="checkbox" id="eff-wounded"> <strong>Seriously Wounded</strong> (-2 All)</label>
+                  </div>
+                  <div class="effect-card" style="border-left-color:var(--danger-red);">
+                    <div style="display:flex;align-items:center;gap:10px;width:100%;">
+                      <label style="white-space:nowrap;"><strong>Armor Penalty:</strong></label>
+                      <input type="number" id="eff-armor-penalty" value="0" style="width:50px;text-align:center;">
+                    </div>
+                  </div>
+                  <div id="custom-effects-hook"></div>
+                </div>
+                <div class="psychosis-tracker">
+                  <label>⚠ Cyberpsychosis Tracker</label>
+                  <div class="tracker-row">
+                    <input type="number" id="psychosis-input" value="0" min="0">
+                  </div>
+                  <div class="humanity-ref">Humanity threshold: <span id="humanity-threshold">—</span></div>
+                  <div id="psychosis-warning"></div>
                 </div>
               </div>
-              <div id="custom-effects-hook"></div>
             </div>
-            <div class="psychosis-tracker">
-              <label>⚠ Cyberpsychosis Tracker</label>
-              <div class="tracker-row">
-                <input type="number" id="psychosis-input" value="0" min="0">
+
+            <div style="display:flex; flex-direction:column; gap:15px;">
+              <div class="panel" style="margin-bottom:0; padding:12px; height:100%;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                  <h2 style="margin:0;border:none;font-size:14px;color:var(--accent-yellow);">Weapon Slots</h2>
+                  <button class="btn" type="button" id="addWeaponBtn" style="padding:2px 8px; font-size:11px;">+ Add</button>
+                </div>
+                <table>
+                  <thead>
+                    <tr><th>Weapon</th><th style="width:55px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr>
+                  </thead>
+                  <tbody id="weapons-tbody"></tbody>
+                </table>
               </div>
-              <div class="humanity-ref">Humanity threshold: <span id="humanity-threshold">—</span></div>
-              <div id="psychosis-warning"></div>
             </div>
           </div>
         </div>
-
         <div class="netrunner-toggle-panel">
           <label>
             <input type="checkbox" id="toggle-netrunner" onchange="toggleNetrunnerModule(this.checked)" style="width:auto;">
@@ -421,26 +424,6 @@
       <div class="panel">
         <h2>Skills Sub-Processor</h2>
         
-        <div class="skills-header" style="border-bottom: 2px solid var(--accent-yellow); color: var(--accent-yellow); font-size:11px;">
-          <div>CUSTOM SKILL MATRIX CREATOR</div>
-        </div>
-        <div style="display: flex; gap: 6px; margin: 8px 0 15px 0; align-items: center; background:#000; padding:8px; border:1px dashed var(--border-color); border-radius:4px;">
-          <input type="text" id="custom-skill-name" placeholder="Skill Identifier name..." style="flex: 2; font-size: 11px;">
-          <select id="custom-skill-stat" style="flex: 1; font-size: 11px; background:#000; color:#fff; border:1px solid #444; padding:4px;">
-            <option value="int">INT</option>
-            <option value="ref">REF</option>
-            <option value="dex">DEX</option>
-            <option value="tech">TECH</option>
-            <option value="cool">COOL</option>
-            <option value="will">WILL</option>
-            <option value="luck">LUCK</option>
-            <option value="move">MOVE</option>
-            <option value="body">BODY</option>
-            <option value="emp">EMP</option>
-          </select>
-          <button class="btn" type="button" onclick="addNewCustomSkill()" style="padding: 4px 10px; font-size: 11px; white-space: nowrap;">+ Create</button>
-        </div>
-        
         <div class="skills-master-grid">
 
           <div>
@@ -478,7 +461,6 @@
             <div class="skill-row" data-stat="will" data-skill-name="Resist Torture/Drugs"><div>Resist Torture/Drugs</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
             <div class="skill-row" data-stat="dex" data-skill-name="Stealth"><div>Stealth</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
             
-            <div id="custom-skills-col1"></div>
           </div>
 
           <div>
@@ -534,9 +516,30 @@
             <div class="skill-row" data-stat="tech" data-skill-name="Play Instrument"><div>Play Instrument</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
             <div class="skill-row" data-stat="tech" data-skill-name="Sea Vehicle Tech"><div>Sea Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
             <div class="skill-row" data-stat="tech" data-skill-name="Weaponstech"><div>Weaponstech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+            
+            <div id="custom-skills-hook"></div>
           </div>
 
+        </div> <div class="skills-header" style="border-bottom: 2px solid var(--accent-yellow); color: var(--accent-yellow); font-size:11px; margin-top:20px;">
+          <div>CUSTOM SKILL MATRIX CREATOR</div>
         </div>
+        <div style="display: flex; gap: 6px; margin: 8px 0 0 0; align-items: center; background:#000; padding:8px; border:1px dashed var(--border-color); border-radius:4px;">
+          <input type="text" id="custom-skill-name" placeholder="Skill Identifier name..." style="flex: 2; font-size: 11px;">
+          <select id="custom-skill-stat" style="flex: 1; font-size: 11px; background:#000; color:#fff; border:1px solid #444; padding:4px;">
+            <option value="int">INT</option>
+            <option value="ref">REF</option>
+            <option value="dex">DEX</option>
+            <option value="tech" selected>TECH</option>
+            <option value="cool">COOL</option>
+            <option value="will">WILL</option>
+            <option value="luck">LUCK</option>
+            <option value="move">MOVE</option>
+            <option value="body">BODY</option>
+            <option value="emp">EMP</option>
+          </select>
+          <button class="btn" type="button" onclick="addNewCustomSkill()" style="padding: 4px 10px; font-size: 11px; white-space: nowrap;">+ Create</button>
+        </div>
+
       </div>
     </div>
   </div>
@@ -587,11 +590,6 @@
       }
     }
 
-    // Weapons Visibility Controller
-    function toggleWeaponsModule(on) {
-      document.getElementById('weapons-section').style.display = on ? 'block' : 'none';
-    }
-
     // Custom Skills Processor Injection
     function addNewCustomSkill(name = "", stat = "", lvl = 0) {
       const nameInp = document.getElementById('custom-skill-name');
@@ -612,8 +610,8 @@
         <div class="skill-base-val">0</div>
       `;
       
-      // Inject row straight into column 1 bottom registry
-      document.getElementById('custom-skills-col1').appendChild(row);
+      // Inject row straight into column 3 bottom registry (Under Technique)
+      document.getElementById('custom-skills-hook').appendChild(row);
       
       // Hook event detection to run calculations on edit
       row.querySelector('input').addEventListener('input', updateSheetMath);
@@ -814,7 +812,7 @@
           if(inc.cyberware){document.querySelectorAll('.cyber-row').forEach(row=>{const m=inc.cyberware.find(c=>c.group===row.getAttribute('data-group')&&c.slot==row.getAttribute('data-slot'));if(m){row.querySelector('.cy-name').value=m.name||"";row.querySelector('.cy-quality').value=m.quality||"1";row.querySelector('.cy-notes').value=m.notes||"";}});}
           
           // Rebuild custom elements dynamically on restoration trigger
-          document.getElementById('custom-skills-col1').innerHTML = "";
+          document.getElementById('custom-skills-hook').innerHTML = "";
           if(inc.skills){
             inc.skills.forEach(s=>{
               let coreRow=Array.from(document.querySelectorAll('.skill-row')).find(r=>r.getAttribute('data-skill-name')===s.name);
