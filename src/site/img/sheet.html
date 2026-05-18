@@ -134,28 +134,28 @@
   border-color: var(--accent-yellow);
 }
 
-/* Updated Hover Search Portal Matrix */
+/* 1. Main Outer Window (Forces a clean 16:9 widescreen layout) */
 .wiki-hover-portal {
   display: none; 
   position: absolute;
   right: 0;
   top: 100%;
   margin-top: 8px;
-  width: 500px;         /* Compact outer panel width */
-  height: 550px;        /* Increased slightly for much better readability */
+  width: 640px;          /* Widescreen Width */
+  height: 360px;         /* Widescreen Height (16:9) */
   background: #000000;
   border: 2px solid var(--accent-yellow);
   box-shadow: 0 0 25px rgba(254, 232, 1, 0.6);
   z-index: 1000;
   flex-direction: column;
-  overflow: hidden;    /* Prevents the virtual layout from spilling out */
+  overflow: hidden;      /* Crops everything cleanly into the 16:9 box */
 }
 
-/* Portal Title Bar Layout */
+/* Title Bar Header Matrix */
 .portal-header {
   background: var(--panel-bg);
   border-bottom: 1px solid var(--border-color);
-  padding: 8px 12px;
+  padding: 6px 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -163,7 +163,7 @@
   font-weight: bold;
   color: var(--accent-yellow);
   letter-spacing: 1px;
-  z-index: 1001;       /* Stays layered above the scaled window */
+  z-index: 1002;
 }
 .portal-header button {
   background: transparent;
@@ -174,17 +174,27 @@
   font-size: 14px;
 }
 
-/* Embedded Webview Sandbox Frame with Desktop Resolution Injection */
+/* 2. Scaler Sub-Wrapper (Compensates for the scale offset) */
+.wiki-frame-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 3. The Desktop Iframe (Simulating a crisp 1080p desktop canvas layout) */
 #wiki-frame {
-  /* Force a desktop canvas breakpoint */
-  width: 1200px !important;   
-  height: 1210px !important;  
+  width: 1920px !important;    /* Full Desktop width */
+  height: 1080px !important;   /* Full Desktop height */
   border: none;
   background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
   
-  /* Scale matrix calculation: (Outer Width 500px / Virtual Width 1200px) = ~0.4166 */
-  transform: scale(0.4166);
-  transform-origin: top left; /* Anchor scaling to prevent clipping */
+  /* Scale factor: 640px / 1920px = Exactly 0.333333 */
+  transform: scale(0.333333);
+  transform-origin: top left;
 }
     
     /* Stats: 6 per row (5 stats + 1 derived) */
@@ -354,13 +364,14 @@
         <button class="btn" type="button" onclick="previewWikiSearch()" style="padding: 5px 12px; font-size: 12px;">GO</button>
       </div>
 
-      <div id="wiki-hover-portal" class="wiki-hover-portal">
-        <div class="portal-header">
-          <span>WIKI LIVE PREVIEW MATRIX</span>
-          <button type="button" onclick="closeWikiPortal()">✕</button>
-        </div>
-        <iframe id="wiki-frame" src=""></iframe>
-      </div>
+<div id="wiki-hover-portal" class="wiki-hover-portal">
+    <div class="portal-header">
+      <span>WIKI LIVE PREVIEW MATRIX</span>
+      <button type="button" onclick="closeWikiPortal()">✕</button>
+    </div>
+    
+    <div class="wiki-frame-wrapper">
+      <iframe id="wiki-frame" src=""></iframe>
     </div>
   </div>
 
