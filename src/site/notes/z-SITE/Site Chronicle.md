@@ -25,12 +25,15 @@
 - Brought the [[z-SITE/Character Sheet\|Character Sheet]] to a stable 1.0.1.1 version
 - Added an [[z-SITE/AI Policy\|AI disclaimer]] in the footer of all webpages (except, for some reason, the [[z-SITE/Homepage\|Homepage]]?)
 - Added descriptions for all of the main [[Eurotour/Eurotour\|Eurotour]] locations: [[Eurotour/Locations/Liverpool\|Liverpool]], [[Eurotour/Locations/Brussels\|Brussels]], [[Eurotour/Locations/Paris\|Paris]], [[Eurotour/Locations/Venice\|Venice]], [[Eurotour/Locations/Rhine-Ruhr Conurb\|Rhine-Ruhr Conurb]], [[Stockholm\|Stockholm]], [[Prague\|Prague]]
+- Added initial descriptions for the #role s, as well as their Role Abilities
+- Added public webpages for [[Eurotour/Characters/Crew/The Crew\|The Crew]]
+- Broke down [[Rules/CPRED/Combat/Combat\|Combat]] into [[Rules/CPRED/Combat/Combat\|Combat]], [[Rules/CPRED/Combat/Critical Injuries\|Critical Injuries]] & [[Rules/CPRED/Combat/Firearms of Cyberpunk\|Firearms of Cyberpunk]]
 
 
 ## TO DO
-- [ ] Add descriptions to all #role s (currently only [[Rules/CPRED/Roles/Solo\|Solo]])
 - [ ] [[z-SITE/Character Sheet\|Character Sheet]] needs:
 	- [ ] Reputation (lore or mechanics only?)
 	- [ ] Reputation Events (lore or mechanics only?)
 	- [ ] Improvement Points (?)
 	- [ ] Add [[Rules/CPRED/Drugs/Drug Effects/Nerve Degeneration\|Nerve Degeneration]] as a feature
+- [ ] Recalibrate mobile interface (very buggy atm)

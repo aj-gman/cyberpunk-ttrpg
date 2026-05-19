@@ -15,7 +15,7 @@ The content in this section is [[Rules/Homebrew\|Homebrew]]. Gun Types are inspi
 **Use gyrojet technology to fire caseless, guided ammo at enemies.** Even on a miss, every shot deals minimum damage. User rolls half of the dice pool (rounding down) of the gun's damage. Spending 1 turn for a Called Shot with a [[Rules/CPRED/Cyberware/Cyberware\|Smart Link]] completely negates the penalty (-8).
 
 ### Gun Brands
-Sometimes, the firearms we purchase are from a recognizable brand - either because we trust that brand to supply a certain kind of product, or because that's the hand fate dealt us. Either way, this represents an alternative to "generic heavy pistol #5916" without actually changing weapon stats, just fiction.
+Sometimes, the firearms we purchase are from a recognizable brand - either because we trust that brand to supply a certain kind of product, or because that's the hand fate dealt us. Either way, this represents an alternative to "generic heavy pistol 5916" without actually changing weapon stats, just fiction.
 ##### **Cheap**
 - [[Lore/Organizations/Corporations/Budget Arms\|Budget Arms]] - jams and breaks easily, very affordable, single-use recommended
 - [[Lore/Organizations/Corporations/Dai Lung\|Dai Lung]] - rip-offs of the most notorious guns, less reliable but sporting similar qualities;
