@@ -20,9 +20,10 @@
 #### *19.05*
 - Added three new drugs: [[Rules/CPRED/Drugs/Speedheal\|Speedheal]], [[Rules/CPRED/Drugs/Flash Assault\|Flash Assault]] and [[Rules/CPRED/Drugs/Regen 21\|Regen 21]], as well as their associated Drug Effects
 - Added a common price for all [[Rules/CPRED/Drugs/Drugs\|Drugs]]
-- Cleaned up some webpages
+- Cleaned up webpages
 - Added two news articles, [[Eurotour/News/Who let Entropy have a CHAINSAW!\|Who let Entropy have a CHAINSAW!]] & [[Eurotour/News/Executive Executions on Rhin-Ruhr Rooftops\|Executive Executions on Rhin-Ruhr Rooftops]]
 - Brought the [[z-SITE/Character Sheet\|Character Sheet]] to a stable 1.0.1.1 version
+- Added an [[z-SITE/AI Policy\|AI disclaimer]] in the footer of all webpages (except, for some reason, the [[z-SITE/Homepage\|Homepage]]?)
 
 
 ## TO DO
