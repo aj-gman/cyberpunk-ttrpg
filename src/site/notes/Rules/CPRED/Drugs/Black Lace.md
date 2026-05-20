@@ -11,7 +11,7 @@ A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that was made as a speed-enha
 - Strength: 13
 
 ### Side Effect
-- Test [[Rules/CPRED/Difficulty Rating\|DR 21]] Resist T/D or suffer from **Alienation & Paranoia** (2d6 on [[Rules/CPRED/Cyberware/Cyberware\|Cyberpsychosis Tracker]])
+- Test [[Rules/CPRED/Difficulty Rating\|DR 21]] Resist T/D or suffer from **Alienation & Paranoia** (2d6 on [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis Tracker]])
 - **Aggression.** Test d10+COOL against Strength (13). Failure allows the GM to incite up to 4 provocations that the user must respond to with aggression.
 
 ### After effects

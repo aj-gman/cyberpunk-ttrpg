@@ -6,12 +6,12 @@
 
 <mark style="background: #fee801;">MAIN RULE:</mark> Cyberware **is activated**. When doing so, it exponentially lowers the [[Rules/CPRED/Difficulty Rating\|Difficulty Rating]] of a relevant roll. Each Cyberware has a [[Rules/CPRED/Quality\|Quality]] value (from 1 to 5) that determines how much the [[Rules/CPRED/Difficulty Rating\|DR]] is lowered by, in [[Rules/CPRED/Difficulty Rating\|DR bands]][^3][^5]. 
 
-Before resolving the check, the player adds **+[[Rules/CPRED/Quality\|Quality]]**[^8] to his Cyberpsychosis tracker, a [[Rules/Homebrew\|Homebrew]] element marked down under Addiction in the Character Sheet. 
-If the Cyberpsychosis final value is higher than the player's current [[Rules/CPRED/Cyberware/Humanity\|Humanity]] (=WILL+EMP), they roll a d10 to see what [[Rules/CPRED/Cyberware/Cyberpsychosis Symptom\|Cyberpsychosis Symptom]] they experience. 
+Before resolving the check, the player adds **+[[Rules/CPRED/Quality\|Quality]]**[^8] to his Cyberpsychosis tracker, (mark down under Addiction category in Character Sheet).
+If the Cyberpsychosis final value is higher than the player's current [[Rules/CPRED/Cyberware/Humanity\|Humanity]] (=WILL+EMP), they roll a d10 to see what [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|Cyberpsychosis Symptoms]] they experience. 
 
 <mark style="background: #fee801;">WARNING!</mark> This overwrites standard Cyberware rules, since it modifies how [[Rules/CPRED/Cyberware/Humanity\|Humanity]] is calculated. Apart from [[Rules/CPRED/Cyberware/Cyberware#Exotic Cyberware\|specific edge cases]][^24], **most Cyberware only interacts with [[Rules/CPRED/Cyberware/Humanity\|Humanity]] upon usage, not on installation.** 
 
-> *For examples on every Cyberware option, see [[Rules/CPRED/Cyberware/Cyberware Types\|Cyberware Types]].*
+> *For examples on every Cyberware option, see [[Rules/CPRED/Cyberware/Cyberware Classes\|Cyberware Classes]].*
 
 ### Core Rules
 There are **10 classes of Cyberware**, specifically adapted from Cyberpunk 2077's system, which outline the 10 "core powers" that bionic enhancement can grant. Under each class, different Cyberware can be chosen[^6], **up to a maximum of 3 slots per type[^7].**
@@ -25,31 +25,6 @@ New characters may buy as many individual pieces of [[Rules/CPRED/Cyberware/Cybe
 **Upgrading Cyberware** requires going to a proficient [[Rules/CPRED/Roles/Medtechie\|Ripperdoc]] and paying a sum equal to the minimum cost of the [[Rules/CPRED/Quality\|next price band]]. Some [[Rules/CPRED/Roles/Medtechie\|Ripperdocs]] may be specialized in certain types of surgeries, so finding the right one for your needs may be difficult in some places.
 
 ##### Acquiring Cyberware
-
-
-### Cyberpsychosis
-> For more about the lore of *Cyberpsychosis*, see [[Lore/Others/Cyberpsychosis\|this page]].
-
-<mark style="background: #fee801;">MAIN RULE:</mark> Mechanically, symptoms of Cyberpsychosis begin manifesting once the player's **Cyberpsychosis Tracker** exceeds their [[Rules/CPRED/Cyberware/Humanity\|Humanity]] (=WILL+EMP). Upon this occurrence, players roll a d10. **If the result is higher than 5, a [[Rules/CPRED/Cyberware/Cyberpsychosis Symptom\|Cyberpsychosis Symptom]] occurs.**
-
-The severity of the symptom is proportional to this result: higher values indicate worse symptoms like [[Lore/Others/Cyberpsychosis\|Cy-rage]], while lower values may be something as simple as a nosebleed.
-
-##### Lowering Cyberpsychosis
-- decays naturally over time (1d6/week)
-- decreased through the usage of [[Rules/CPRED/Drugs/Omega Blockers\|Omega Blockers]], a type of drug
-- decreased by going to **Humanity Therapy**
-	- 1d6/session or 3d6/week or 4d6/session in case of emergency therapy procedures
-- decreased by having [[Rules/CPRED/Cyberware/Humanity\|humane interactions]] like talking to a loved one, relaxing, eating a good meal, experiencing love etc.
-- decreased when processing trauma through a **Flashback** scene
-- decreased quickly & cheaply by [[Rules/CPRED/Drugs/Wireheading\|Wireheading]]
-
-##### Increasing Cyberpsychosis
-Oftentimes, you'll find yourself pushed over the edge not by the usage of [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] as outlined in the <mark style="background: #fee801;">Main Rule</mark>, but through the experience of trauma, mental afflictions or drugs.
-
-- using [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]], increased by +[[Rules/CPRED/Quality\|Quality]]
-- installing certain [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] increased by +[[Rules/CPRED/Quality\|Quality]][^24]
-- taking [[Rules/CPRED/Drugs/Drugs\|Drugs]] and experiencing dehumanizing symptoms (like Paranoia for [[Rules/CPRED/Drugs/SynthCoke\|SynthCoke]])
-- experiencing incredibly stressful/traumatic situations, like war, betrayal, losing a limb, losing a loved one etc.
 
 ### Theoretical Foundations
 *this is game design philosophy. useful for prospecting storytellers*
@@ -68,7 +43,7 @@ Cyberware should not be balanced mechanically with one another. Rather, they sho
 
 ##### Inspiration
 - [The Future is Now, Old Man](https://www.storytellersvault.com/en/product/415807/the-future-is-now-old-man); A WoD supplement for V5 that details Cyberware rules compatible with Discipline-like systems
-- [Cyberpunk: Edgerunners](https://en.wikipedia.org/wiki/Cyberpunk:_Edgerunners); for the depiction of [[Lore/Others/Cyberpsychosis\|Cyberpsychosis]] and the "descent" into it;
+- [Cyberpunk: Edgerunners](https://en.wikipedia.org/wiki/Cyberpunk:_Edgerunners); for the depiction of [[Lore/Others/About Cyberpsychosis\|About Cyberpsychosis]] and the "descent" into it;
 - [Cyberpunk 2077](https://en.wikipedia.org/wiki/Cyberpunk_2077) for the more seamless integration of mechanical prowess and diversity in Cyberware, especially for combat purposes
 
 Although Cyberpunk 2020 and its newer brother, [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]] are both inspirations and foundational to this module, its very obvious that 2077's more "biology-first" approach is useful, as splitting "neuralware" into 3 enhances the portability of all its moving parts.

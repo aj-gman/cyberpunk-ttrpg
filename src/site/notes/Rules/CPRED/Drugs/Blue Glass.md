@@ -15,6 +15,6 @@ A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] originally designed as a chem
 - **[[Rules/CPRED/Drugs/Drug Effects/Blank\|Blank]].**
 
 ### After effects
-- Test [[Rules/CPRED/Difficulty Rating\|DR 21]] Resist Torture/Drugs or suffer, in addition to Side Effects, dissociation (+d6 to [[Rules/CPRED/Cyberware/Cyberware#Cyberpsychosis\|Cyberpsychosis Tracker]])
+- Test [[Rules/CPRED/Difficulty Rating\|DR 21]] Resist Torture/Drugs or suffer, in addition to Side Effects, dissociation (+d6 to [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis Tracker]])
 
 

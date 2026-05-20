@@ -2,7 +2,7 @@
 {"dg-publish":true,"dg-path":"Rules/Netrunning/Quickhacks.md","permalink":"/rules/netrunning/quickhacks/","dg-note-properties":{}}
 ---
 
-Quickhacks require an [[Rules/CPRED/Cyberware/Cyberware Types#Psychological and Neural\|Operating System]] in order to function. They can only target one person at a time and require the [[Rules/CPRED/Roles/Netrunner\|Netrunner]] to mentally overpower their target before being initiated.
+Quickhacks require an [[Rules/CPRED/Cyberware/Cyberware Classes#Psychological and Neural\|Operating System]] in order to function. They can only target one person at a time and require the [[Rules/CPRED/Roles/Netrunner\|Netrunner]] to mentally overpower their target before being initiated.
 
 In order to fully upload a Quickhack, a [[Rules/CPRED/Roles/Netrunner\|Netrunner]] must go through the process: 
 **JACK IN > BREACH > QUICKHACK > JACK OUT**

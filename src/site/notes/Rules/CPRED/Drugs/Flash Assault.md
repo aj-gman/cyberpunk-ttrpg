@@ -13,7 +13,7 @@ Users of Flash assault usually come out with a major hangover, and habitual user
 - Strength: 10
 
 ### Side Effect
-- Increase [[Rules/CPRED/Cyberware/Cyberware#Cyberpsychosis\|Cyberpsychos Tracker]] by d6+2 (Suffer from Paranoia)
+- Increase [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychos Tracker]] by d6+2 (Suffer from Paranoia)
 - Test [[Rules/CPRED/Difficulty Rating\|DR 29]] Resist Torture/Drugs or suffer from [[Rules/CPRED/Drugs/Drug Effects/Disorientation\|Disorientation]] (+1)
 - Disorientation +1, Paranoia +5 Hangover +5
 
