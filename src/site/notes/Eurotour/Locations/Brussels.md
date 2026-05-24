@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/eurotour/locations/brussels/","dg-note-properties":{}}
 ---
 
-#location 
+#location #eurotour 
 ## PLEASE HOLD, YOU ARE BEING REDIRECTED TO THE OFFICIAL WEBSITE OF THE EUROPEAN UNION (FORMERLY THE EUROPEAN ECONOMIC AREA).
 ### WELCOME TO BRUXELLES, CAPITAL OF THE WORLD!
 Ever wanted to see the world's greatest art?

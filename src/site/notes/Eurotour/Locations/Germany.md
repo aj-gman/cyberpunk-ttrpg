@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/eurotour/locations/germany/","dg-note-properties":{}}
 ---
 
+#location #eurotour 
 **Germany as a whole.**
 ![Info-Berlin.png](/img/user/Pictures/Info-Berlin.png)
 

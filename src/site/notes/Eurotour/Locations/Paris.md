@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/eurotour/locations/paris/","dg-note-properties":{}}
 ---
 
+#location #eurotour 
 # Oh, Paris, my beloved.
 City of love, of lights, of beauty. The place where even street cleaners have art degrees.
 What's there to know? People here are happy, they're literate, and the French "identity" is as malleable as a piece of dough - it's the spirit and the intention that's the yeast to make it grow...

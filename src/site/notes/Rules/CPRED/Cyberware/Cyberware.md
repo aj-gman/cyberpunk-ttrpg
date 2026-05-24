@@ -25,6 +25,14 @@ New characters may buy as many individual pieces of [[Rules/CPRED/Cyberware/Cybe
 **Upgrading Cyberware** requires going to a proficient [[Rules/CPRED/Roles/Medtechie\|Ripperdoc]] and paying a sum equal to the minimum cost of the [[Rules/CPRED/Quality\|next price band]]. Some [[Rules/CPRED/Roles/Medtechie\|Ripperdocs]] may be specialized in certain types of surgeries, so finding the right one for your needs may be difficult in some places.
 
 ##### Acquiring Cyberware
+- **From a [[Rules/CPRED/Roles/Medtechie\|Ripperdoc]]**
+- **From corpses:** raises [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis]] and requires [[Rules/CPRED/Difficulty Rating\|a succesful Paramedic check]] relative to the [[Rules/CPRED/Quality\|Quality]] of the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]]
+
+##### Disabling Cyberware
+- Physically sever the connection between the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] and the brain
+- Temporarily, through the use of [[Restraint Chip\|Restraint Chips]]
+- Disabling it via [[Rules/CPRED/Netrunning/Quickhacks\|Quickhacks]]
+- Destroying the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]]'s functionality
 
 ### Theoretical Foundations
 *this is game design philosophy. useful for prospecting storytellers*

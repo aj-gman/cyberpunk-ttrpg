@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/eurotour/locations/venice/","dg-note-properties":{}}
 ---
 
+#location #eurotour 
 ###  EXTRAVAGANCE OF CAPITALISTIC TOURISM
 ### The most expensive and profitable open-air museum.
 ### Brought to you by [[Lore/Organizations/Corporations/Wortrac\|Wortrac]] (*BY [[Lore/Organizations/Corporations/CINO\|CINO]]*).

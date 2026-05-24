@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/eurotour/locations/rhine-ruhr-conurb/","dg-note-properties":{}}
 ---
 
+#location #eurotour 
 # You want to get into the EC's crown jewel, [GERMANY](https://gman-cyberpunk.vercel.app/eurotour/locations/germany/)?
 ## Jack your thinking chrome in, 'cause this ain't gonna be easy.
 ## Problem 1: [Frankfurt Airport](https://gman-cyberpunk.vercel.app/eurotour/locations/frankfurt-airport/).
