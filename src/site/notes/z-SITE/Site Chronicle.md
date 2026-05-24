@@ -28,7 +28,8 @@
 - Added initial descriptions for the #role s, as well as their Role Abilities
 - Added public webpages for [[Eurotour/Characters/Crew/The Crew\|The Crew]]
 - Broke down [[Rules/CPRED/Combat/Combat\|Combat]] into [[Rules/CPRED/Combat/Combat\|Combat]], [[Rules/CPRED/Combat/Critical Injuries\|Critical Injuries]] & [[Rules/CPRED/Combat/Firearms of Cyberpunk\|Firearms of Cyberpunk]]
-
+#### *24.05*
+- Added [[Eurotour/Locations/Stockholm\|Stockholm]] and information on [[Eurotour/Adventures/5 Touring the Margin\|5 Touring the Margin]] (restricted access)
 
 ## TO DO
 - [ ] [[z-SITE/Character Sheet\|Character Sheet]] needs:
