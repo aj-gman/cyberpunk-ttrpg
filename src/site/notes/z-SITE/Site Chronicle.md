@@ -30,6 +30,8 @@
 - Broke down [[Rules/CPRED/Combat/Combat\|Combat]] into [[Rules/CPRED/Combat/Combat\|Combat]], [[Rules/CPRED/Combat/Critical Injuries\|Critical Injuries]] & [[Rules/CPRED/Combat/Firearms of Cyberpunk\|Firearms of Cyberpunk]]
 #### *24.05*
 - Added [[Eurotour/Locations/Stockholm\|Stockholm]] and information on [[Eurotour/Adventures/5 Touring the Margin\|5 Touring the Margin]] (restricted access)
+- [[z-SITE/Character Sheet\|Character Sheet]] has been brought to a stable patch, v1.0.1.1.
+- Cleared up some more on the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] webpage
 
 ## TO DO
 - [ ] [[z-SITE/Character Sheet\|Character Sheet]] needs:
@@ -37,4 +39,4 @@
 	- [ ] Reputation Events (lore or mechanics only?)
 	- [ ] Improvement Points (?)
 	- [ ] Add [[Rules/CPRED/Drugs/Drug Effects/Nerve Degeneration\|Nerve Degeneration]] as a feature
-- [ ] Recalibrate mobile interface (very buggy atm)
+- [ ] Recalibrate mobile interface for the site (very buggy atm)

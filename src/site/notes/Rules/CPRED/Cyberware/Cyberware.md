@@ -4,19 +4,18 @@
 
 [[Rules/Homebrew\|Homebrewed]] completely from the ground up.
 
-<mark style="background: #fee801;">MAIN RULE:</mark> Cyberware **is activated**. When doing so, it exponentially lowers the [[Rules/CPRED/Difficulty Rating\|Difficulty Rating]] of a relevant roll. Each Cyberware has a [[Rules/CPRED/Quality\|Quality]] value (from 1 to 5) that determines how much the [[Rules/CPRED/Difficulty Rating\|DR]] is lowered by, in [[Rules/CPRED/Difficulty Rating\|DR bands]][^3][^5]. 
+<mark style="background: #fee801;">MAIN RULE:</mark> [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] **is activated**. When doing so, it exponentially lowers the [[Rules/CPRED/Difficulty Rating\|Difficulty Rating]] of a relevant roll. Each [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] has a [[Rules/CPRED/Quality\|Quality]] value (from 1 to 5) that determines how much the [[Rules/CPRED/Difficulty Rating\|DR]] is lowered by, in [[Rules/CPRED/Difficulty Rating\|DR bands]][^3][^5]. 
 
-Before resolving the check, the player adds **+[[Rules/CPRED/Quality\|Quality]]**[^8] to his Cyberpsychosis tracker, (mark down under Addiction category in Character Sheet).
-If the Cyberpsychosis final value is higher than the player's current [[Rules/CPRED/Cyberware/Humanity\|Humanity]] (=WILL+EMP), they roll a d10 to see what [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|Cyberpsychosis Symptoms]] they experience. 
+Before resolving the check, the player adds **+[[Rules/CPRED/Quality\|Quality]]**[^8] to his [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis tracker]], (mark down under Addiction category in Character Sheet).
+If the [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis final value]] is higher than the player's current [[Rules/CPRED/Cyberware/Humanity\|Humanity]] (=WILL+EMP), they experience [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|Cyberpsychosis Symptoms]].
 
 <mark style="background: #fee801;">WARNING!</mark> This overwrites standard Cyberware rules, since it modifies how [[Rules/CPRED/Cyberware/Humanity\|Humanity]] is calculated. Apart from [[Rules/CPRED/Cyberware/Cyberware#Exotic Cyberware\|specific edge cases]][^24], **most Cyberware only interacts with [[Rules/CPRED/Cyberware/Humanity\|Humanity]] upon usage, not on installation.** 
 
 > *For examples on every Cyberware option, see [[Rules/CPRED/Cyberware/Cyberware Classes\|Cyberware Classes]].*
 
-### Core Rules
-There are **10 classes of Cyberware**, specifically adapted from Cyberpunk 2077's system, which outline the 10 "core powers" that bionic enhancement can grant. Under each class, different Cyberware can be chosen[^6], **up to a maximum of 3 slots per type[^7].**
-
-**Each Cyberware has a [[Rules/CPRED/Quality\|Quality]] attribute ranging from 1 to 5, determining their effectiveness at their given task.**
+### Acquiring Cyberware
+- **From a [[Rules/CPRED/Roles/Medtechie\|Ripperdoc]]**
+- **From corpses:** raises [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis]] and requires [[Rules/CPRED/Difficulty Rating\|a succesful Paramedic check]] relative to the [[Rules/CPRED/Quality\|Quality]] of the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]]
 
 ##### Starting Cyberware
 New characters may buy as many individual pieces of [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] as they desire, up to their starting eurodollars. **For the starting [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]],** use the minimum price in the desired [[Rules/CPRED/Quality\|Quality band]] to value each implant based on the number of points spent in class, from **50eb (Costly) for [[Rules/CPRED/Quality\|Quality]] 1** to **5000 eb (Luxury) for [[Rules/CPRED/Quality\|Quality]] 5.** 
@@ -24,11 +23,7 @@ New characters may buy as many individual pieces of [[Rules/CPRED/Cyberware/Cybe
 ##### Upgrading Cyberware
 **Upgrading Cyberware** requires going to a proficient [[Rules/CPRED/Roles/Medtechie\|Ripperdoc]] and paying a sum equal to the minimum cost of the [[Rules/CPRED/Quality\|next price band]]. Some [[Rules/CPRED/Roles/Medtechie\|Ripperdocs]] may be specialized in certain types of surgeries, so finding the right one for your needs may be difficult in some places.
 
-##### Acquiring Cyberware
-- **From a [[Rules/CPRED/Roles/Medtechie\|Ripperdoc]]**
-- **From corpses:** raises [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis]] and requires [[Rules/CPRED/Difficulty Rating\|a succesful Paramedic check]] relative to the [[Rules/CPRED/Quality\|Quality]] of the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]]
-
-##### Disabling Cyberware
+### Disabling Cyberware
 - Physically sever the connection between the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] and the brain
 - Temporarily, through the use of [[Restraint Chip\|Restraint Chips]]
 - Disabling it via [[Rules/CPRED/Netrunning/Quickhacks\|Quickhacks]]
