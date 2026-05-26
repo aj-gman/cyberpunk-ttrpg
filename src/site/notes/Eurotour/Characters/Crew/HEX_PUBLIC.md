@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/eurotour/characters/crew/hex-public/","dg-note-properties":{}}
 ---
 
-Hex has grown over the weeks spent in [[Lore/Organizations/Europe/EEC\|Europe]] - literally, he got [[Rules/CPRED/Cyberware/Cyberware Classes#**Skeleton**\|some Grafted Muscle & Bone Lace]]. Born to a corpo family in [[NUSA\|the industrialized North]], his proficiency in [[Rules/CPRED/Roles/Techie\|tech-adjacent stuff]] eventually landed him in [[Lore/Organizations/Corporations/Militech\|Militech]] training, where he promptly left after less than 6 months. But he's a good kid, given the chance. He's smart for a [[Lore/Locations/Night City\|Night City]] resident, smart enough to not screw [[Rules/CPRED/Roles/Fixer\|Fixers]] over or try to catch stray bullets from a #boostergang.
+Hex has grown over the weeks spent in [[Lore/Organizations/Europe/EEC\|Europe]] - literally, he got [[Rules/CPRED/Cyberware/Cyberware Classes#**Skeleton**\|some Grafted Muscle & Bone Lace]]. Born to a corpo family in [[Lore/Organizations/NUSA\|the industrialized North]], his proficiency in [[Rules/CPRED/Roles/Techie\|tech-adjacent stuff]] eventually landed him in [[Lore/Organizations/Corporations/Militech\|Militech]] training, where he promptly left after less than 6 months. But he's a good kid, given the chance. He's smart for a [[Lore/Locations/Night City\|Night City]] resident, smart enough to not screw [[Rules/CPRED/Roles/Fixer\|Fixers]] over or try to catch stray bullets from a #boostergang.
 
 >*Out-of-character Information*
 >**Jake, what are three things anyone who would do a bit of digging on [[Eurotour/Characters/Crew/Hex\|Hex]] find out about him?**
