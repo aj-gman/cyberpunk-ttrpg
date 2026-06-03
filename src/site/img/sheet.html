@@ -17,8 +17,8 @@
       --net-green: #00ff41;
       --net-green-dim: #00aa2b;
       --net-panel-bg: #001a0a;
+      --purple: #a142ff;
     }
-
     body {
       background-color: var(--bg-color);
       color: var(--text-color);
@@ -26,18 +26,16 @@
       margin: 0;
       padding: 15px;
     }
-
-    h1, h2, h3, h4 {
+    h1,h2,h3,h4 {
       color: var(--accent-yellow);
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-top: 0;
       border-bottom: 2px solid var(--accent-yellow);
       padding-bottom: 5px;
-      text-shadow: 0 0 8px rgba(254, 232, 1, 0.4);
+      text-shadow: 0 0 8px rgba(254,232,1,0.4);
       font-family: 'Lexend', monospace;
     }
-
     .top-bar {
       display: flex;
       justify-content: space-between;
@@ -48,8 +46,7 @@
       margin-bottom: 20px;
       border: 1px solid var(--border-color);
     }
-
-    /* === TAB SYSTEM === */
+    /* TABS */
     .tab-navigation-bar {
       display: flex;
       gap: 10px;
@@ -58,1123 +55,1353 @@
       padding-bottom: 10px;
       align-items: center;
     }
-    .tab-trigger-btn.active-btn {
-      background: var(--accent-yellow) !important;
-      color: #000 !important;
-      box-shadow: 0 0 10px var(--accent-yellow);
-      border-color: var(--accent-yellow) !important;
-    }
+    .tab-trigger-btn.active-btn { background: var(--accent-yellow) !important; color: #000 !important; box-shadow: 0 0 10px var(--accent-yellow); border-color: var(--accent-yellow) !important; }
     .sheet-tab-panel { display: none; }
     .sheet-tab-panel.active-view { display: block; }
-
-    /* === WIKI SEARCH PORTAL === */
-    .wiki-search-portal-container {
-      position: relative;
-      margin-left: auto;
-    }
-    #wiki-search-input {
-      width: 160px;
-      padding: 6px;
-      border: 1px solid var(--border-color);
-      background: #000;
-      color: #fff;
-      font-family: 'Lexend', monospace;
-      font-size: 12px;
-      outline: none;
-    }
+    /* WIKI SEARCH */
+    .wiki-search-portal-container { position: relative; margin-left: auto; }
+    #wiki-search-input { width: 160px; padding: 6px; border: 1px solid var(--border-color); background: #000; color: #fff; font-family: 'Lexend', monospace; font-size: 12px; outline: none; }
     #wiki-search-input:focus { border-color: var(--accent-yellow); }
-
-    .wiki-hover-portal {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: calc(100% + 8px);
-      width: 700px;
-      height: 520px;
-      background: #000;
-      border: 2px solid var(--accent-yellow);
-      box-shadow: 0 0 25px rgba(254, 232, 1, 0.5);
-      z-index: 1000;
-      flex-direction: column;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .portal-header {
-      background: var(--panel-bg);
-      border-bottom: 1px solid var(--border-color);
-      padding: 6px 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 11px;
-      font-weight: bold;
-      color: var(--accent-yellow);
-      letter-spacing: 1px;
-      flex-shrink: 0;
-    }
-    .portal-header button {
-      background: transparent;
-      border: none;
-      color: var(--danger-red);
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 14px;
-      padding: 0 4px;
-    }
+    .wiki-hover-portal { display: none; position: absolute; right: 0; top: calc(100% + 8px); width: 700px; height: 520px; background: #000; border: 2px solid var(--accent-yellow); box-shadow: 0 0 25px rgba(254,232,1,0.5); z-index: 1000; flex-direction: column; border-radius: 4px; overflow: hidden; }
+    .portal-header { background: var(--panel-bg); border-bottom: 1px solid var(--border-color); padding: 6px 12px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; color: var(--accent-yellow); letter-spacing: 1px; flex-shrink: 0; }
+    .portal-header button { background: transparent; border: none; color: var(--danger-red); font-weight: bold; cursor: pointer; font-size: 14px; padding: 0 4px; }
     .portal-header button:hover { color: #fff; }
-    /* The iframe fills the portal at 100% — no scaling tricks, just native rendering */
-    #wiki-frame {
-      width: 100%;
-      height: 100%;
-      border: none;
-      background: #000;
-      flex: 1;
-    }
-
-    /* === BUTTONS === */
-    .btn {
-      background: transparent;
-      color: var(--neon-cyan);
-      border: 1px solid var(--neon-cyan);
-      padding: 6px 12px;
-      cursor: pointer;
-      font-weight: bold;
-      text-transform: uppercase;
-      transition: all 0.2s ease;
-      font-family: 'Lexend', monospace;
-    }
+    #wiki-frame { width: 100%; height: 100%; border: none; background: #000; flex: 1; }
+    /* BUTTONS */
+    .btn { background: transparent; color: var(--neon-cyan); border: 1px solid var(--neon-cyan); padding: 6px 12px; cursor: pointer; font-weight: bold; text-transform: uppercase; transition: all 0.2s ease; font-family: 'Lexend', monospace; }
     .btn:hover { background: var(--neon-cyan); color: #000; box-shadow: 0 0 10px var(--neon-cyan); }
     .btn-danger { color: var(--danger-red); border-color: var(--danger-red); }
     .btn-danger:hover { background: var(--danger-red); color: #fff; box-shadow: 0 0 10px var(--danger-red); }
     .btn-net { color: var(--net-green); border-color: var(--net-green); }
     .btn-net:hover { background: var(--net-green); color: #000; box-shadow: 0 0 10px var(--net-green); }
-
-    /* === PANELS === */
-    .panel {
-      background: var(--panel-bg);
-      border: 1px solid var(--border-color);
-      padding: 15px;
-      border-radius: 4px;
-      margin-bottom: 20px;
-    }
-
-    /* === LAYOUT === */
-    .main-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-    @media (min-width: 1200px) {
-      .main-grid { grid-template-columns: 42% 58%; }
-    }
-
-    .two-col-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
+    .btn-yellow { color: var(--accent-yellow); border-color: var(--accent-yellow); }
+    .btn-yellow:hover { background: var(--accent-yellow); color: #000; box-shadow: 0 0 10px var(--accent-yellow); }
+    /* PANELS */
+    .panel { background: var(--panel-bg); border: 1px solid var(--border-color); padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+    /* LAYOUT */
+    .main-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 1200px) { .main-grid { grid-template-columns: 42% 58%; } }
+    .two-col-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
     .two-col-row .panel { margin-bottom: 0; }
-
-    /* === STATS === */
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 6px;
-      margin-bottom: 8px;
-    }
-    .stat-box {
-      background: #000;
-      border: 1px solid var(--accent-yellow);
-      text-align: center;
-      padding: 5px 4px;
-      border-radius: 4px;
-    }
+    /* STATS */
+    .stats-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin-bottom: 8px; }
+    .stat-box { background: #000; border: 1px solid var(--accent-yellow); text-align: center; padding: 5px 4px; border-radius: 4px; }
     .stat-box label { display: block; font-size: 10px; color: var(--accent-yellow); font-weight: bold; }
-    .stat-box input {
-      width: 90%; background: transparent; border: none;
-      color: #fff; text-align: center; font-size: 15px; font-weight: bold;
-      font-family: 'Lexend', monospace;
-    }
+    .stat-box input { width: 90%; background: transparent; border: none; color: #fff; text-align: center; font-size: 15px; font-weight: bold; font-family: 'Lexend', monospace; }
     .stat-box.derived { border-color: var(--neon-cyan); }
     .stat-box.derived label { color: var(--neon-cyan); }
     .stat-box.derived input { color: var(--neon-cyan); font-size: 13px; }
     .display-stat-modified { font-size: 10px; color: var(--neon-cyan); display: block; margin-top: 1px; }
-
-    /* === SKILLS === */
-    .skills-master-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
-    .skills-header, .skill-row {
-      display: grid;
-      grid-template-columns: 4fr 1.2fr 1.2fr;
-      gap: 4px;
-      align-items: center;
-      padding: 3px 0;
-    }
-    .skills-header {
-      font-weight: bold;
-      border-bottom: 1px solid var(--border-color);
-      color: var(--neon-cyan);
-      font-size: 10px;
-      margin-top: 10px;
-    }
+    /* BUDGET BAR */
+    .budget-bar { display: flex; align-items: center; gap: 10px; padding: 7px 12px; background: #000; border: 1px solid #2e3456; border-radius: 3px; margin-top: 8px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+    .budget-bar .budget-value { color: var(--accent-yellow); font-size: 18px; font-weight: bold; margin-left: auto; text-shadow: 0 0 8px rgba(254,232,1,0.5); font-family: 'Lexend', monospace; min-width: 36px; text-align: right; }
+    .budget-bar .budget-pts { color: #555; font-size: 10px; margin-right: 4px; }
+    /* SKILLS */
+    .skills-master-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .skills-header, .skill-row { display: grid; grid-template-columns: 4fr 1.2fr 1.2fr; gap: 4px; align-items: center; padding: 3px 0; }
+    .skills-header { font-weight: bold; border-bottom: 1px solid var(--border-color); color: var(--neon-cyan); font-size: 10px; margin-top: 10px; }
     .skill-row { border-bottom: 1px dashed #2e3456; }
     .skill-row div { font-size: 11px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .skill-row input {
-      background: #000; border: 1px solid #444; color: white;
-      text-align: center; width: 100%; font-size: 11px; padding: 2px 0;
-      border-radius: 3px; font-family: 'Lexend', monospace; font-weight: 400;
-    }
+    .skill-row input { background: #000; border: 1px solid #444; color: white; text-align: center; width: 100%; font-size: 11px; padding: 2px 0; border-radius: 3px; font-family: 'Lexend', monospace; font-weight: 400; }
     .skill-base-val { text-align: center; font-weight: bold; color: var(--accent-yellow); font-size: 12px; }
-
-    /* === STATUS EFFECTS === */
+    /* STATUS EFFECTS */
     .effects-builder { display: flex; gap: 8px; margin-bottom: 15px; }
     .effects-list { display: grid; grid-template-columns: 1fr; gap: 8px; }
-    .effect-card {
-      display: flex; justify-content: space-between; align-items: center;
-      background: #000; padding: 8px; border-left: 3px solid var(--neon-cyan);
-    }
-
-    /* === CYBERPSYCHOSIS === */
-    .psychosis-tracker {
-      margin-top: 12px; background: #000; padding: 10px;
-      border: 1px solid #a142ff; border-radius: 4px;
-    }
-    .psychosis-tracker label {
-      color: #a142ff; font-weight: bold; font-size: 11px;
-      display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px;
-    }
+    .effect-card { display: flex; justify-content: space-between; align-items: center; background: #000; padding: 8px; border-left: 3px solid var(--neon-cyan); }
+    /* CYBERPSYCHOSIS */
+    .psychosis-tracker { margin-top: 12px; background: #000; padding: 10px; border: 1px solid var(--purple); border-radius: 4px; }
+    .psychosis-tracker label { color: var(--purple); font-weight: bold; font-size: 11px; display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
     .psychosis-tracker .tracker-row { display: flex; gap: 10px; align-items: center; }
-    .psychosis-tracker input { flex: 1; font-size: 16px; font-weight: bold; text-align: center; border-color: #a142ff; font-family: 'Lexend', monospace; }
+    .psychosis-tracker input { flex: 1; font-size: 16px; font-weight: bold; text-align: center; border-color: var(--purple); font-family: 'Lexend', monospace; }
     .psychosis-tracker .humanity-ref { font-size: 11px; color: #888; margin-top: 4px; }
     #psychosis-input.exceeded { border-color: var(--danger-red) !important; color: var(--danger-red) !important; box-shadow: 0 0 8px var(--danger-red); }
     #psychosis-warning { font-size: 11px; font-weight: bold; color: var(--danger-red); text-align: center; margin-top: 4px; min-height: 14px; text-transform: uppercase; }
-
-    /* === NETRUNNER === */
-    .netrunner-toggle-panel {
-      background: var(--net-panel-bg); border: 1px solid var(--net-green-dim);
-      padding: 12px 15px; border-radius: 4px; margin-bottom: 20px;
-    }
-    .netrunner-toggle-panel label {
-      font-weight: bold; color: var(--net-green); cursor: pointer;
-      display: flex; align-items: center; gap: 10px; font-size: 14px;
-      text-shadow: 0 0 6px rgba(0,255,65,0.5);
-    }
-    #netrunner-section {
-      background: var(--net-panel-bg); border: 1px solid var(--net-green);
-      padding: 15px; border-radius: 4px; margin-bottom: 20px; display: none;
-    }
+    /* NERVE DEGENERATION */
+    .nerve-tracker { margin-top: 8px; background: #000; padding: 10px; border: 1px solid var(--neon-cyan); border-radius: 4px; }
+    .nerve-tracker label { color: var(--neon-cyan); font-weight: bold; font-size: 11px; display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+    .nerve-tracker .tracker-row { display: flex; gap: 10px; align-items: center; }
+    .nerve-tracker input { flex: 1; font-size: 16px; font-weight: bold; text-align: center; border-color: var(--neon-cyan); font-family: 'Lexend', monospace; }
+    #nerve-input.exceeded { border-color: var(--danger-red) !important; color: var(--danger-red) !important; box-shadow: 0 0 8px var(--danger-red); }
+    #nerve-warning { font-size: 11px; font-weight: bold; color: var(--danger-red); text-align: center; margin-top: 4px; min-height: 14px; text-transform: uppercase; }
+    @keyframes warningFlicker { 0%,100%{opacity:1} 50%{opacity:0.45} }
+    .warning-flicker { animation: warningFlicker 0.7s ease-in-out infinite; }
+    /* IDENTITY */
+    .identity-panel { resize: both; overflow: auto; min-width: 320px; min-height: 200px; box-sizing: border-box; }
+    .identity-top-row { display: flex; align-items: flex-start; gap: 15px; flex-wrap: wrap; margin-bottom: 10px; }
+    .handle-block { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 200px; }
+    .handle-block label { color: var(--accent-yellow); font-weight: bold; font-size: 12px; white-space: nowrap; }
+    .handle-block input { background: transparent; border: none; color: white; font-size: 15px; font-weight: bold; border-bottom: 1px solid var(--border-color); width: 100%; font-family: 'Lexend', monospace; }
+    .roles-block { display: flex; flex-direction: column; gap: 5px; }
+    .roles-block-header { display: flex; align-items: center; gap: 8px; }
+    .roles-block-label { color: var(--accent-yellow); font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+    .role-entries { display: flex; flex-wrap: wrap; gap: 5px; }
+    .role-entry { display: flex; align-items: center; gap: 4px; background: #000; border: 1px solid #2e3456; border-radius: 3px; padding: 3px 5px; }
+    .role-entry select { background: transparent; border: none; color: var(--neon-cyan); font-size: 11px; font-weight: bold; cursor: pointer; font-family: 'Lexend', monospace; padding: 0; outline: none; }
+    .role-entry select option { background: #0d0f2a; color: #fff; }
+    .role-entry .role-score-input { width: 32px; text-align: center; font-size: 13px; font-weight: bold; color: var(--accent-yellow); background: transparent; border: none; border-bottom: 1px solid #444; font-family: 'Lexend', monospace; }
+    .role-entry .remove-role-btn { background: none; border: none; color: #444; cursor: pointer; font-size: 13px; padding: 0 2px; line-height: 1; }
+    .role-entry .remove-role-btn:hover { color: var(--danger-red); }
+    /* ROLE ABILITIES DISPLAY */
+    .role-abilities-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; padding: 8px 10px; background: #000; border: 1px solid #1e2040; border-radius: 3px; min-height: 32px; }
+    .role-ability-chip { display: flex; align-items: center; gap: 6px; padding: 5px 10px; background: #070a1e; border: 1px solid var(--accent-yellow); border-radius: 3px; }
+    .chip-role { color: #666; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
+    .chip-divider { color: #333; }
+    .chip-ability { color: var(--accent-yellow); font-weight: bold; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .chip-score { color: var(--neon-cyan); font-weight: bold; font-size: 16px; margin-left: 4px; font-family: 'Lexend', monospace; text-shadow: 0 0 6px rgba(84,193,230,0.5); }
+    .chip-empty { color: #333; font-size: 11px; font-style: italic; }
+    /* IP / REP */
+    .ip-rep-row { display: flex; gap: 12px; margin-top: 10px; }
+    .ip-rep-box { background: #000; border: 1px solid #2e3456; border-radius: 4px; padding: 6px 10px; display: flex; align-items: center; gap: 10px; flex: 1; }
+    .ip-rep-box label { font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+    .ip-rep-box.ip-box { border-color: var(--neon-cyan); }
+    .ip-rep-box.ip-box label { color: var(--neon-cyan); }
+    .ip-rep-box.rep-box { border-color: var(--accent-yellow); }
+    .ip-rep-box.rep-box label { color: var(--accent-yellow); }
+    .ip-rep-box input { background: transparent; border: none; color: #fff; font-size: 18px; font-weight: bold; text-align: center; font-family: 'Lexend', monospace; width: 70px; }
+    /* IDENTITY DIVIDER */
+    .identity-divider { height: 1px; background: linear-gradient(to right, transparent, var(--border-color), transparent); margin: 8px 0; }
+    /* NETRUNNER */
+    .netrunner-toggle-panel { background: var(--net-panel-bg); border: 1px solid var(--net-green-dim); padding: 12px 15px; border-radius: 4px; margin-bottom: 20px; }
+    .netrunner-toggle-panel label { font-weight: bold; color: var(--net-green); cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 14px; text-shadow: 0 0 6px rgba(0,255,65,0.5); }
+    #netrunner-section { background: var(--net-panel-bg); border: 1px solid var(--net-green); padding: 15px; border-radius: 4px; margin-bottom: 20px; display: none; }
     #netrunner-section h2 { color: var(--net-green); border-color: var(--net-green); text-shadow: 0 0 8px rgba(0,255,65,0.5); }
     #netrunner-section h3 { color: var(--net-green-dim); border-color: var(--net-green-dim); font-size: 13px; margin-top: 15px; }
     #netrunner-section .stat-box { border-color: var(--net-green); }
     #netrunner-section .stat-box label { color: var(--net-green); }
     #netrunner-section table th { color: var(--net-green); }
-    #netrunner-section input, #netrunner-section textarea {
-      border-color: #003a10; color: var(--net-green); background: #000e05; font-family: 'Lexend', monospace;
-    }
-
-    /* === TABLES === */
+    #netrunner-section input, #netrunner-section textarea { border-color: #003a10; color: var(--net-green); background: #000e05; font-family: 'Lexend', monospace; }
+    /* TABLES */
     table { width: 100%; border-collapse: collapse; margin-top: 10px; }
     th, td { border: 1px solid #2e3456; padding: 6px; text-align: left; font-size: 12px; vertical-align: top; }
     th { background: #000; color: var(--neon-cyan); }
-
-    /* === INPUTS === */
-    input, select {
-      width: 100%; background: #000; border: 1px solid #444;
-      color: white; padding: 4px; box-sizing: border-box; font-family: 'Lexend', monospace;
-    }
-    textarea {
-      width: 100%; background: #000; border: 1px solid #444;
-      color: white; padding: 4px; box-sizing: border-box;
-      font-family: 'Lexend', monospace; font-size: 12px;
-    }
-
-    /* Auto-expand textareas (inventory, notes) */
-    textarea.auto-expand {
-      overflow: hidden;
-      min-height: 28px;
-      resize: vertical;
-    }
-
-    /* Resizable cells for cyberware and inventory tables */
-    /* The td itself becomes the resize handle host */
-    td.resizable-cell {
-      padding: 0;
-      overflow: hidden;
-    }
-    td.resizable-cell textarea,
-    td.resizable-cell input[type="text"],
-    td.resizable-cell input[type="number"] {
-      width: 100%;
-      height: 100%;
-      min-height: 32px;
-      resize: both;
-      overflow: auto;
-      box-sizing: border-box;
-      padding: 6px;
-    }
-
-    .currency-panel {
-      display: flex; align-items: center; gap: 15px;
-      background: #000; padding: 10px;
-      border: 1px solid var(--accent-yellow); margin-bottom: 12px; border-radius: 4px;
-    }
-
-    /* Identity card */
-    .adjustable-profile-card {
-      resize: both;
-      overflow: auto;
-      min-width: 320px;
-      min-height: 140px;
-      box-sizing: border-box;
-    }
+    /* INPUTS */
+    input, select { width: 100%; background: #000; border: 1px solid #444; color: white; padding: 4px; box-sizing: border-box; font-family: 'Lexend', monospace; }
+    textarea { width: 100%; background: #000; border: 1px solid #444; color: white; padding: 4px; box-sizing: border-box; font-family: 'Lexend', monospace; font-size: 12px; }
+    textarea.auto-expand { overflow: hidden; min-height: 28px; resize: vertical; }
+    td.resizable-cell { padding: 0; overflow: hidden; }
+    td.resizable-cell textarea, td.resizable-cell input[type="text"], td.resizable-cell input[type="number"] { width: 100%; height: 100%; min-height: 32px; resize: both; overflow: auto; box-sizing: border-box; padding: 6px; }
+    .currency-panel { display: flex; align-items: center; gap: 15px; background: #000; padding: 10px; border: 1px solid var(--accent-yellow); margin-bottom: 12px; border-radius: 4px; }
+    /* CLOUD MODAL */
+    .cloud-modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.92); z-index: 3000; align-items: center; justify-content: center; }
+    .cloud-modal-box { background: var(--panel-bg); border: 2px solid var(--neon-cyan); border-radius: 4px; padding: 0; width: 460px; box-shadow: 0 0 50px rgba(84,193,230,0.25); overflow: hidden; }
+    .cloud-modal-header { background: #000; border-bottom: 1px solid var(--border-color); padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; }
+    .cloud-modal-header span { color: var(--neon-cyan); font-weight: bold; font-size: 13px; letter-spacing: 2px; text-shadow: 0 0 8px rgba(84,193,230,0.4); }
+    .cloud-modal-body { padding: 20px; }
+    .cloud-field-label { font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 4px; font-weight: bold; }
+    .cloud-field-label span { color: var(--neon-cyan); }
+    .cloud-input { width: 100%; background: #000; border: 1px solid #333; color: #fff; padding: 10px 12px; font-family: 'Lexend', monospace; font-size: 14px; box-sizing: border-box; border-radius: 3px; margin-bottom: 12px; outline: none; }
+    .cloud-input:focus { border-color: var(--neon-cyan); box-shadow: 0 0 8px rgba(84,193,230,0.2); }
+    .cloud-btn-row { display: flex; gap: 10px; margin-top: 5px; }
+    #cloud-status { min-height: 24px; font-size: 12px; text-align: center; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; padding: 8px; margin-top: 10px; border-radius: 3px; }
+    .cloud-status-ok { color: var(--net-green); background: rgba(0,255,65,0.05); border: 1px solid rgba(0,255,65,0.2); }
+    .cloud-status-err { color: var(--danger-red); background: rgba(255,0,85,0.05); border: 1px solid rgba(255,0,85,0.2); }
+    .cloud-status-loading { color: var(--neon-cyan); background: rgba(84,193,230,0.05); border: 1px solid rgba(84,193,230,0.2); }
+    .cloud-loading { display: inline-block; width: 10px; height: 10px; border: 2px solid var(--neon-cyan); border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    /* CYBERWARE BODY LAYOUT */
+    .cyberware-body-grid { display: grid; grid-template-columns: 1fr 150px 1fr; gap: 18px; align-items: start; }
+    .cyber-col { display: flex; flex-direction: column; gap: 0; }
+    .cyber-body-figure { position: sticky; top: 20px; display: flex; flex-direction: column; align-items: center; }
+    .cyber-section { background: #000; border: 1px solid #1e2245; border-radius: 4px; margin-bottom: 8px; overflow: hidden; transition: border-color 0.2s; }
+    .cyber-section:has(.has-data) { border-color: #2e3a5c; }
+    .cyber-section-header { display: flex; align-items: center; gap: 8px; padding: 9px 12px; cursor: pointer; background: #070a1e; border-bottom: 1px solid #1e2245; user-select: none; transition: background 0.15s; }
+    .cyber-section-header:hover { background: #0e1228; }
+    .cyber-chevron { color: var(--neon-cyan); font-size: 9px; flex-shrink: 0; transition: transform 0.2s; }
+    .cyber-chevron.collapsed { transform: rotate(-90deg); }
+    .cyber-group-name { color: var(--neon-cyan); font-weight: bold; font-size: 11px; letter-spacing: 1.5px; flex: 1; text-transform: uppercase; }
+    .cyber-slot-badge { font-size: 10px; padding: 2px 8px; border: 1px solid #2e3456; border-radius: 10px; color: #555; font-weight: bold; font-family: 'Lexend', monospace; transition: all 0.2s; white-space: nowrap; }
+    .cyber-slot-badge.has-data { border-color: var(--neon-cyan); color: var(--neon-cyan); background: rgba(84,193,230,0.08); text-shadow: 0 0 6px rgba(84,193,230,0.3); }
+    .cyber-section-body { padding: 6px 8px 4px; }
+    .cyber-section-body.hidden { display: none; }
+    .cyber-slot-row { display: grid; grid-template-columns: 16px 1fr 42px 1.5fr; gap: 5px; align-items: start; padding: 4px 0; border-bottom: 1px dashed #101228; }
+    .cyber-slot-row:last-child { border-bottom: none; }
+    .cyber-slot-num { color: #333; font-size: 9px; font-weight: bold; text-align: center; padding-top: 7px; }
+    .cyber-slot-row textarea { resize: vertical; min-height: 26px; font-size: 11px; padding: 4px; border-color: #1e2245; }
+    .cyber-slot-row textarea:focus { border-color: var(--neon-cyan); outline: none; }
+    .cyber-slot-row input[type="number"] { text-align: center; font-size: 12px; padding: 4px; min-height: 26px; }
+    .cyber-slot-row input:focus { border-color: var(--neon-cyan); outline: none; }
+    .cyber-col-header { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; color: #333; text-align: center; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px dashed #1e2245; }
+    /* VEHICLE MODULE */
+    .stat-box { background: #000; border: 1px solid var(--accent-yellow); text-align: center; padding: 5px 4px; border-radius: 4px; }
   </style>
 </head>
 <body>
 
-  <div class="top-bar">
-    <div>
-      <span style="color:var(--accent-yellow);font-weight:bold;">CYBERPUNK RED CHARACTER SHEET v. 1.0.1.1 (Made with Google Gemini & Claude AI)</span>
+<!-- ═══════════════════ CLOUD SYNC MODAL ═══════════════════ -->
+<div id="cloud-modal" class="cloud-modal-overlay">
+  <div class="cloud-modal-box">
+    <div class="cloud-modal-header">
+      <span>// MATRIX CLOUD SYNC</span>
+      <button class="btn btn-danger" onclick="closeCloudModal()" style="padding:3px 8px;font-size:11px;">✕ CLOSE</button>
     </div>
-    <div>
-      <label class="btn" style="margin-right:8px;padding:5px 10px;display:inline-block;">
-        Load File <input type="file" id="importFile" accept=".json" style="display:none;">
-      </label>
-      <button class="btn" id="exportBtn">Save File</button>
-    </div>
-  </div>
-
-  <div class="tab-navigation-bar">
-    <button class="btn tab-trigger-btn active-btn" type="button" onclick="switchTab('page-core', event)">PAGE 1: CORE</button>
-    <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-inventory', event)">PAGE 2: INVENTORY</button>
-    <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-cyberware', event)">PAGE 3: CYBERWARE</button>
-
-    <!-- WIKI SEARCH -->
-    <div class="wiki-search-portal-container">
-      <div style="display:flex;gap:5px;align-items:center;">
-        <input type="text" id="wiki-search-input" placeholder="SEARCH WIKI..." onkeydown="if(event.key==='Enter')previewWikiSearch()">
-        <button class="btn" type="button" onclick="previewWikiSearch()" style="padding:5px 12px;font-size:12px;">GO</button>
+    <div class="cloud-modal-body">
+      <label class="cloud-field-label">CALLSIGN <span>(USERNAME)</span></label>
+      <input type="text" id="cloud-username" class="cloud-input" placeholder="e.g. ghost_runner_77" autocomplete="off">
+      <label class="cloud-field-label">ACCESS CODE <span>(PASSWORD)</span></label>
+      <input type="password" id="cloud-password" class="cloud-input" placeholder="Enter your access code..." autocomplete="off">
+      <div class="cloud-btn-row">
+        <button class="btn" onclick="saveToCloud()" style="flex:1;padding:10px;">⬆ UPLOAD CHARACTER</button>
+        <button class="btn btn-yellow" onclick="loadFromCloud()" style="flex:1;padding:10px;">⬇ DOWNLOAD CHARACTER</button>
       </div>
-      <div id="wiki-hover-portal" class="wiki-hover-portal">
-        <div class="portal-header">
-          <span>// WIKI SEARCH PORTAL</span>
-          <div style="display:flex;gap:10px;align-items:center;">
-            <span style="color:#888;font-size:10px;font-weight:normal;">Ctrl+K inside frame to search again</span>
-            <button type="button" onclick="closeWikiPortal()">✕ CLOSE</button>
-          </div>
-        </div>
-        <iframe id="wiki-frame" src="" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+      <div id="cloud-status"></div>
+      <div style="margin-top:12px;padding:8px;background:#000;border:1px dashed #1e2245;border-radius:3px;font-size:10px;color:#555;line-height:1.6;">
+        First save creates your account. Same callsign + code will overwrite the previous save. Passwords are hashed and never stored in plaintext.
       </div>
-    </div>
-  </div>
-
-  <!-- PAGE 1: CORE -->
-  <div id="page-core" class="sheet-tab-panel active-view">
-
-    <div class="panel adjustable-profile-card">
-      <h2>IDENTITY</h2>
-      <div style="display:flex;flex-direction:column;gap:10px;height:calc(100% - 35px);">
-        <div style="display:flex;align-items:center;gap:10px;">
-          <label style="color:var(--accent-yellow);font-weight:bold;font-size:12px;white-space:nowrap;">HANDLE:</label>
-          <input type="text" id="charHandle" value="Jacked_In_Runner" style="background:transparent;border:none;color:white;font-size:15px;font-weight:bold;border-bottom:1px solid var(--border-color);width:100%;">
-        </div>
-        <textarea id="charNotes" class="auto-expand" placeholder="Core note telemetry..." style="flex:1;min-height:50px;width:100%;"></textarea>
-      </div>
-    </div>
-
-    <div class="main-grid">
-      <div>
-
-        <!-- STATS -->
-        <div class="panel">
-          <h2>STATS</h2>
-          <div class="stats-row">
-            <div class="stat-box"><label>INT</label><input type="number" id="stat-int" value="6"><span class="display-stat-modified" id="mod-int"></span></div>
-            <div class="stat-box"><label>REF</label><input type="number" id="stat-ref" value="6"><span class="display-stat-modified" id="mod-ref"></span></div>
-            <div class="stat-box"><label>DEX</label><input type="number" id="stat-dex" value="6"><span class="display-stat-modified" id="mod-dex"></span></div>
-            <div class="stat-box"><label>TECH</label><input type="number" id="stat-tech" value="6"><span class="display-stat-modified" id="mod-tech"></span></div>
-            <div class="stat-box"><label>COOL</label><input type="number" id="stat-cool" value="6"><span class="display-stat-modified" id="mod-cool"></span></div>
-            <div class="stat-box derived"><label>HUMANITY</label><input type="text" id="humanity" readonly></div>
-          </div>
-          <div class="stats-row">
-            <div class="stat-box"><label>WILL</label><input type="number" id="stat-will" value="6"><span class="display-stat-modified" id="mod-will"></span></div>
-            <div class="stat-box"><label>LUCK</label><input type="number" id="stat-luck" value="6"><span class="display-stat-modified" id="mod-luck"></span></div>
-            <div class="stat-box"><label>MOVE</label><input type="number" id="stat-move" value="6"><span class="display-stat-modified" id="mod-move"></span></div>
-            <div class="stat-box"><label>BODY</label><input type="number" id="stat-body" value="6"><span class="display-stat-modified" id="mod-body"></span></div>
-            <div class="stat-box"><label>EMP</label><input type="number" id="stat-emp" value="6"><span class="display-stat-modified" id="mod-emp"></span></div>
-            <div class="stat-box derived"><label>HP MAX</label><input type="text" id="hp-max" readonly></div>
-          </div>
-        </div>
-
-        <!-- HEALTH DIAGNOSTICS (collapsible) -->
-        <div class="panel" style="padding-bottom:5px;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:2px solid var(--accent-yellow);padding-bottom:10px;">
-            <h2 style="margin:0;border:none;padding:0;">HEALTH DIAGNOSTICS</h2>
-            <label style="font-weight:bold;color:var(--neon-cyan);cursor:pointer;display:flex;align-items:center;gap:10px;font-size:11px;background:#000;padding:4px 8px;border:1px solid var(--border-color);border-radius:3px;">
-              <input type="checkbox" id="toggle-combat" onchange="document.getElementById('combat-matrix-content').style.display=this.checked?'block':'none'" checked style="width:auto;">
-              INITIALIZE HEALTH OVERLAY
-            </label>
-          </div>
-
-          <div id="combat-matrix-content" style="margin-bottom:10px;">
-            <div class="two-col-row">
-
-              <!-- COMBAT TELEMETRY -->
-              <div class="panel" style="margin-bottom:0;padding:12px;">
-                <h2 style="font-size:14px;">COMBAT TELEMETRY</h2>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
-                  <div class="stat-box" style="border-color:var(--neon-cyan);"><label>HEAD SP</label><input type="number" id="sp-head" value="11" min="0"></div>
-                  <div class="stat-box" style="border-color:var(--neon-cyan);"><label>BODY SP</label><input type="number" id="sp-body" value="11" min="0"></div>
-                </div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
-                  <div class="stat-box" style="border-color:var(--accent-yellow);"><label>CURRENT HEALTH</label><input type="number" id="hp-curr" value="40" min="0"></div>
-                  <div class="stat-box" style="border-color:#555;"><label>MAX HEALTH</label><input type="text" id="hp-max-display" readonly style="color:#888;"></div>
-                </div>
-                <div style="background:#000;padding:12px;border:1px dashed var(--danger-red);border-radius:4px;">
-                  <label style="color:var(--danger-red);font-weight:bold;font-size:11px;display:block;margin-bottom:5px;">INCOMING DAMAGE</label>
-                  <div style="display:flex;gap:10px;">
-                    <input type="number" id="dmg-counter" placeholder="0" min="0" style="flex:1;font-size:16px;font-weight:bold;text-align:center;border-color:var(--danger-red);">
-                    <button class="btn btn-danger" type="button" onclick="resolveIncomingDamage()" style="flex:1;">Apply</button>
-                  </div>
-                  <div id="damage-log" style="margin-top:8px;font-size:12px;font-weight:bold;text-align:center;text-transform:uppercase;min-height:15px;"></div>
-                </div>
-              </div>
-
-              <!-- STATUS EFFECTS -->
-              <div class="panel" style="margin-bottom:0;padding:12px;">
-                <h2 style="font-size:14px;">STATUS EFFECTS</h2>
-                <div class="effects-builder">
-                  <input type="text" id="effectInput" placeholder="SynthCoke REF +2, Concentration +2" style="flex:2;font-size:11px;">
-                  <button class="btn" id="addEffectBtn" type="button">+ Inject</button>
-                </div>
-                <div class="effects-list">
-                  <div class="effect-card" style="border-left-color:var(--danger-red);">
-                    <label><input type="checkbox" id="eff-wounded"> <strong>Seriously Wounded</strong> (-2 All)</label>
-                  </div>
-                  <div class="effect-card" style="border-left-color:var(--danger-red);">
-                    <div style="display:flex;align-items:center;gap:10px;width:100%;">
-                      <label style="white-space:nowrap;"><strong>Armor Penalty:</strong></label>
-                      <input type="number" id="eff-armor-penalty" value="0" style="width:50px;text-align:center;">
-                    </div>
-                  </div>
-                  <div id="custom-effects-hook"></div>
-                </div>
-                <div class="psychosis-tracker">
-                  <label>⚠ Cyberpsychosis Tracker</label>
-                  <div class="tracker-row">
-                    <input type="number" id="psychosis-input" value="0" min="0">
-                  </div>
-                  <div class="humanity-ref">Humanity threshold: <span id="humanity-threshold">—</span></div>
-                  <div id="psychosis-warning"></div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- WEAPONS -->
-            <div class="panel" style="margin-top:15px;margin-bottom:0;padding:12px;">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-                <h2 style="margin:0;border:none;font-size:14px;">WEAPON SLOTS</h2>
-                <button class="btn" type="button" id="addWeaponBtn" style="padding:2px 8px;font-size:11px;">+ Add</button>
-              </div>
-              <table>
-                <thead>
-                  <tr><th>Weapon</th><th style="width:55px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr>
-                </thead>
-                <tbody id="weapons-tbody"></tbody>
-              </table>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- NETRUNNER -->
-        <div class="netrunner-toggle-panel">
-          <label>
-            <input type="checkbox" id="toggle-netrunner" onchange="toggleNetrunnerModule(this.checked)" style="width:auto;">
-            INITIALIZE NETRUNNER OVERLAY
-          </label>
-        </div>
-
-        <div id="netrunner-section">
-          <h2>CYBERDECK DIAGNOSTICS</h2>
-          <h3 style="margin-top:15px;">CONFIG</h3>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
-            <div class="stat-box"><label>Hardening</label><input type="number" id="cfg-hardening" value="0" min="0" max="3"></div>
-            <div class="stat-box"><label>Firewall</label><input type="number" id="cfg-firewall" value="0" min="0" max="3"></div>
-            <div class="stat-box"><label>Processor</label><input type="number" id="cfg-processor" value="0" min="0" max="3"></div>
-            <div class="stat-box"><label>Stealth</label><input type="number" id="cfg-stealth" value="0" min="0" max="3"></div>
-          </div>
-          <div style="margin-bottom:20px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
-              <h3 style="margin:0;border:none;">QUICKHACK SLOTS</h3>
-              <button class="btn btn-net" type="button" onclick="addQuickhackSlot()" style="padding:2px 8px;font-size:11px;">+ Slot</button>
-            </div>
-            <table>
-              <thead><tr><th style="width:80px;">DR Value</th><th>Notes</th><th style="width:30px;"></th></tr></thead>
-              <tbody id="quickhacks-tbody"></tbody>
-            </table>
-          </div>
-          <div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
-              <h3 style="margin:0;border:none;">AVAILABLE PROGRAMS</h3>
-              <button class="btn btn-net" type="button" onclick="addProgramSlot()" style="padding:2px 8px;font-size:11px;">+ Load</button>
-            </div>
-            <table>
-              <thead><tr><th style="width:180px;">Program</th><th>Notes</th><th style="width:30px;"></th></tr></thead>
-              <tbody id="programs-tbody"></tbody>
-            </table>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- SKILLS -->
-      <div class="panel">
-        <h2>SKILLS</h2>
-        <div class="skills-master-grid">
-
-          <!-- COL 1: Awareness + Ranged + Control + Fighting + Body -->
-          <div>
-            <div class="skills-header"><div>Awareness</div><div>LVL</div><div>BASE</div></div>
-            <div class="skill-row" data-stat="will" data-skill-name="Concentration"><div>Concentration</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Conceal/Reveal Object"><div>Conceal/Reveal Object</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Lip Reading"><div>Lip Reading</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Perception"><div>Perception</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Tracking"><div>Tracking</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-
-            <div class="skills-header"><div>Ranged Weapons</div><div>LVL</div><div>BASE</div></div>
-            <div class="skill-row" data-stat="ref" data-skill-name="Heavy Weapons"><div>Heavy Weapons (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="ref" data-skill-name="Shoulder Arms"><div>Shoulder Arms</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="ref" data-skill-name="Archery"><div>Archery</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="ref" data-skill-name="Autofire"><div>Autofire (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="ref" data-skill-name="Handgun"><div>Handgun</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-
-            <div class="skills-header"><div>Control</div><div>LVL</div><div>BASE</div></div>
-            <div class="skill-row" data-stat="ref" data-skill-name="Drive Land Vehicle"><div>Drive Land Vehicle</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="ref" data-skill-name="Pilot Air Vehicle"><div>Pilot Air Vehicle (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="ref" data-skill-name="Pilot Sea Vehicle"><div>Pilot Sea Vehicle</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="ref" data-skill-name="Riding"><div>Riding</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-
-            <div class="skills-header"><div>Fighting</div><div>LVL</div><div>BASE</div></div>
-            <div class="skill-row" data-stat="dex" data-skill-name="Brawling"><div>Brawling</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="dex" data-skill-name="Evasion"><div>Evasion</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="dex" data-skill-name="Martial Arts"><div>Martial Arts (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="dex" data-skill-name="Melee Weapon"><div>Melee Weapon</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-
-            <div class="skills-header"><div>Body</div><div>LVL</div><div>BASE</div></div>
-            <div class="skill-row" data-stat="dex" data-skill-name="Athletics"><div>Athletics</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="dex" data-skill-name="Contortionist"><div>Contortionist</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="dex" data-skill-name="Dance"><div>Dance</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="will" data-skill-name="Endurance"><div>Endurance</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="will" data-skill-name="Resist Torture/Drugs"><div>Resist Torture/Drugs</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="dex" data-skill-name="Stealth"><div>Stealth</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-          </div>
-
-          <!-- COL 2: Social + Performance + Education -->
-          <div>
-            <div class="skills-header"><div>Social</div><div>LVL</div><div>BASE</div></div>
-            <div class="skill-row" data-stat="cool" data-skill-name="Bribery"><div>Bribery</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="emp" data-skill-name="Conversation"><div>Conversation</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="emp" data-skill-name="Human Perception"><div>Human Perception</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="cool" data-skill-name="Interrogation"><div>Interrogation</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="cool" data-skill-name="Persuasion"><div>Persuasion</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="cool" data-skill-name="Streetwise"><div>Streetwise</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="cool" data-skill-name="Trading"><div>Trading</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-
-            <div class="skills-header"><div>Performance</div><div>LVL</div><div>BASE</div></div>
-            <div class="skill-row" data-stat="cool" data-skill-name="Acting"><div>Acting</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="cool" data-skill-name="Personal Grooming"><div>Personal Grooming</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="cool" data-skill-name="Wardrobe & Style"><div>Wardrobe &amp; Style</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-
-            <div class="skills-header"><div>Education</div><div>LVL</div><div>BASE</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Language (Streetslang)"><div>Language (Streetslang)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Language (Origin)"><div>Language (Origin)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Accounting"><div>Accounting</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Animal Handling"><div>Animal Handling</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Bureaucracy"><div>Bureaucracy</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Business"><div>Business</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Composition"><div>Composition</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Criminology"><div>Criminology</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Cryptography"><div>Cryptography</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Deduction"><div>Deduction</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Education"><div>Education</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Gamble"><div>Gamble</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Library Search"><div>Library Search</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Local Expert"><div>Local Expert</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Science"><div>Science</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Tactics"><div>Tactics</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="int" data-skill-name="Wilderness Survival"><div>Wilderness Survival</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-          </div>
-
-          <!-- COL 3: Technique + Custom Skills -->
-          <div>
-            <div class="skills-header"><div>Technique</div><div>LVL</div><div>BASE</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Air Vehicle Tech"><div>Air Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Basic Tech"><div>Basic Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Cybertech"><div>Cybertech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Demolitions"><div>Demolitions (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Electronics/Security Tech"><div>Electronics/Security Tech (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="First Aid"><div>First Aid</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Forgery"><div>Forgery</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Land Vehicle Tech"><div>Land Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Paint/Draw/Sculpt"><div>Paint/Draw/Sculpt</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Paramedic"><div>Paramedic (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Photography/Film"><div>Photography/Film</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Pick Lock"><div>Pick Lock</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Pick Pocket"><div>Pick Pocket</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Play Instrument"><div>Play Instrument</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Sea Vehicle Tech"><div>Sea Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-            <div class="skill-row" data-stat="tech" data-skill-name="Weaponstech"><div>Weaponstech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
-
-            <div id="custom-skills-hook"></div>
-          </div>
-
-        </div>
-
-        <!-- CUSTOM SKILL INSERTER -->
-        <div class="skills-header" style="border-bottom:2px solid var(--accent-yellow);color:var(--accent-yellow);font-size:11px;margin-top:20px;">
-          <div>CUSTOM SKILL INSERTER</div>
-        </div>
-        <div style="display:flex;gap:6px;margin:8px 0 0 0;align-items:center;background:#000;padding:8px;border:1px dashed var(--border-color);border-radius:4px;">
-          <input type="text" id="custom-skill-name" placeholder="Skill name..." style="flex:2;font-size:11px;">
-          <select id="custom-skill-stat" style="flex:1;font-size:11px;background:#000;color:#fff;border:1px solid #444;padding:4px;">
-            <option value="int">INT</option>
-            <option value="ref">REF</option>
-            <option value="dex">DEX</option>
-            <option value="tech" selected>TECH</option>
-            <option value="cool">COOL</option>
-            <option value="will">WILL</option>
-            <option value="luck">LUCK</option>
-            <option value="move">MOVE</option>
-            <option value="body">BODY</option>
-            <option value="emp">EMP</option>
-          </select>
-          <button class="btn" type="button" onclick="addNewCustomSkill()" style="padding:4px 10px;font-size:11px;white-space:nowrap;">+ Create</button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- PAGE 2: INVENTORY -->
-  <div id="page-inventory" class="sheet-tab-panel">
-
-    <!-- GEAR -->
-    <div class="panel">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-        <h2>INVENTORY &amp; GEAR</h2>
-        <button class="btn" type="button" id="addGearBtn">+ Add Item</button>
-      </div>
-      <div class="currency-panel">
-        <div style="font-weight:bold;color:var(--accent-yellow);font-size:11px;letter-spacing:1px;">€$ :</div>
-        <input type="number" id="eurodollars" value="0" style="width:100px;font-weight:bold;color:#fff;border:1px solid #444;text-align:right;padding-right:5px;">
-      </div>
-      <table>
-        <thead><tr><th>Item</th><th>Notes</th><th style="width:28px;"></th></tr></thead>
-        <tbody id="gear-tbody"></tbody>
-      </table>
-    </div>
-
-    <!-- AIR VEHICLE MODULE -->
-<!-- AIR VEHICLE MODULE -->
-<div class="panel">
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:2px solid var(--accent-yellow);padding-bottom:10px;">
-    <h2 style="margin:0;border:none;padding:0;">VEHICLE</h2>
-    <div style="display:flex;gap:15px;align-items:center;">
-      <label style="font-weight:bold;color:var(--accent-yellow);cursor:pointer;display:flex;align-items:center;gap:8px;font-size:11px;background:#000;padding:4px 8px;border:1px solid var(--border-color);border-radius:3px;">
-        <input type="checkbox" id="toggle-av" onchange="document.getElementById('av-content').style.display=this.checked?'block':'none'" checked style="width:auto;">
-        INITIALIZE VEHICLE MODULE
-      </label>
-      <div style="display:flex;gap:8px;align-items:center;">
-        <label style="color:#888;font-size:11px;">NAME:</label>
-        <input type="text" id="av-name" placeholder="e.g. AV-4 Aerodyne" style="width:200px;font-weight:bold;font-size:13px;">
-      </div>
-    </div>
-  </div>
-
-  <div id="av-content">
-    <!-- STATS ROW -->
-    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:15px;">
-      <div class="stat-box" style="border-color:var(--danger-red);">
-        <label>SDP CHASSIS</label>
-        <input type="number" id="av-sdp-chassis" value="0" min="0">
-      </div>
-      <div class="stat-box" style="border-color:var(--danger-red);">
-        <label>SDP GLASS</label>
-        <input type="number" id="av-sdp-glass" value="0" min="0">
-      </div>
-      <div class="stat-box" style="border-color:var(--neon-cyan);">
-        <label>SP</label>
-        <input type="number" id="av-sp" value="0" min="0">
-      </div>
-      <div class="stat-box" style="border-color:var(--neon-cyan);">
-        <label>SEATS</label>
-        <input type="number" id="av-seats" value="4" min="1">
-      </div>
-      <div class="stat-box" style="border-color:var(--accent-yellow);">
-        <label>SPEED [combat]</label>
-        <input type="text" id="av-speed-combat" placeholder="e.g. 6">
-      </div>
-      <div class="stat-box" style="border-color:var(--accent-yellow);">
-        <label>SPEED [narrative]</label>
-        <input type="text" id="av-speed-narrative" placeholder="e.g. 200mph">
-      </div>
-      <div class="stat-box" style="border-color:#a142ff;">
-        <label>COST (€$)</label>
-        <input type="number" id="av-cost" value="0" min="0">
-      </div>
-    </div>
-
-    <!-- DESCRIPTION / NOTES -->
-    <div style="margin-bottom:15px;">
-      <label style="color:#888;font-size:10px;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">Description / Notes</label>
-      <textarea id="av-description" class="auto-expand" rows="2" placeholder="Vehicle description, special features, condition notes..." style="width:100%;border-color:#444;"></textarea>
-    </div>
-
-    <!-- UPGRADES + WEAPONS SIDE BY SIDE -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;">
-
-      <!-- UPGRADES -->
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:1px solid var(--accent-yellow);padding-bottom:6px;">
-          <span style="color:var(--accent-yellow);font-weight:bold;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Upgrades</span>
-          <button class="btn" type="button" onclick="addAvUpgrade()" style="padding:2px 8px;font-size:11px;">+ Add</button>
-        </div>
-        <table>
-          <thead><tr><th>Upgrade / Modification</th><th style="width:28px;"></th></tr></thead>
-          <tbody id="av-upgrades-tbody"></tbody>
-        </table>
-      </div>
-
-      <!-- MOUNTED WEAPONS -->
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:1px solid var(--danger-red);padding-bottom:6px;">
-          <span style="color:var(--danger-red);font-weight:bold;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Mounted Weapons</span>
-          <button class="btn btn-danger" type="button" onclick="addAvWeapon()" style="padding:2px 8px;font-size:11px;">+ Add</button>
-        </div>
-        <table>
-          <thead><tr><th>Weapon</th><th style="width:50px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr></thead>
-          <tbody id="av-weapons-tbody"></tbody>
-        </table>
-      </div>
-    </div>
     </div>
   </div>
 </div>
 
-  <!-- PAGE 3: CYBERWARE -->
-  <div id="page-cyberware" class="sheet-tab-panel">
-    <div class="panel">
-      <h2>CYBERWARE</h2>
-      <table>
-        <thead>
-          <tr>
-            <th style="width:150px;">System Type</th>
-            <th>Model Name</th>
-            <th style="width:55px;">Quality</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody id="cyberware-tbody"></tbody>
-      </table>
+<!-- ═══════════════════ TOP BAR ═══════════════════ -->
+<div class="top-bar">
+  <div>
+    <span style="color:var(--accent-yellow);font-weight:bold;">CYBERPUNK RED CHARACTER SHEET v.1.1.0 (Made with Google Gemini & Claude AI)</span>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <button class="btn" onclick="openCloudModal()" style="padding:5px 12px;">☁ CLOUD SYNC</button>
+    <label class="btn" style="padding:5px 10px;display:inline-block;">
+      Load File <input type="file" id="importFile" accept=".json" style="display:none;">
+    </label>
+    <button class="btn" id="exportBtn">Save File</button>
+  </div>
+</div>
+
+<!-- ═══════════════════ TAB NAV ═══════════════════ -->
+<div class="tab-navigation-bar">
+  <button class="btn tab-trigger-btn active-btn" type="button" onclick="switchTab('page-core', event)">PAGE 1: CORE</button>
+  <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-inventory', event)">PAGE 2: INVENTORY</button>
+  <button class="btn tab-trigger-btn" type="button" onclick="switchTab('page-cyberware', event)">PAGE 3: CYBERWARE</button>
+  <div class="wiki-search-portal-container">
+    <div style="display:flex;gap:5px;align-items:center;">
+      <input type="text" id="wiki-search-input" placeholder="SEARCH WIKI..." onkeydown="if(event.key==='Enter')previewWikiSearch()">
+      <button class="btn" type="button" onclick="previewWikiSearch()" style="padding:5px 12px;font-size:12px;">GO</button>
+    </div>
+    <div id="wiki-hover-portal" class="wiki-hover-portal">
+      <div class="portal-header">
+        <span>// WIKI SEARCH PORTAL</span>
+        <div style="display:flex;gap:10px;align-items:center;">
+          <span style="color:#888;font-size:10px;font-weight:normal;">Ctrl+K inside frame to search again</span>
+          <button type="button" onclick="closeWikiPortal()">✕ CLOSE</button>
+        </div>
+      </div>
+      <iframe id="wiki-frame" src="" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
     </div>
   </div>
+</div>
 
-  <script>
-    // === TAB CONTROLLER ===
-    function switchTab(pageId, event) {
-      document.querySelectorAll('.sheet-tab-panel').forEach(p => p.classList.remove('active-view'));
-      document.querySelectorAll('.tab-trigger-btn').forEach(b => b.classList.remove('active-btn'));
-      document.getElementById(pageId).classList.add('active-view');
-      if (event) event.currentTarget.classList.add('active-btn');
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 1: CORE
+═══════════════════════════════════════════════════════ -->
+<div id="page-core" class="sheet-tab-panel active-view">
+
+  <!-- IDENTITY -->
+  <div class="panel identity-panel">
+    <h2>IDENTITY</h2>
+    <!-- Row 1: Handle + Roles -->
+    <div class="identity-top-row">
+      <div class="handle-block">
+        <label>HANDLE:</label>
+        <input type="text" id="charHandle" value="Jacked_In_Runner">
+      </div>
+      <div class="roles-block">
+        <div class="roles-block-header">
+          <span class="roles-block-label">Roles</span>
+          <button class="btn" type="button" onclick="addRole()" style="padding:2px 9px;font-size:10px;margin-left:6px;">+ Add</button>
+        </div>
+        <div class="role-entries" id="roles-container"></div>
+      </div>
+    </div>
+    <!-- Role Abilities Display -->
+    <div class="role-abilities-bar" id="role-abilities-display">
+      <span class="chip-empty">// no roles assigned</span>
+    </div>
+    <div class="identity-divider"></div>
+    <!-- IP + REP -->
+    <div class="ip-rep-row">
+      <div class="ip-rep-box ip-box">
+        <label>IP</label>
+        <input type="number" id="ip-tracker" value="0" min="0" style="width:80px;border:none;background:transparent;font-size:20px;font-weight:bold;color:#fff;text-align:center;font-family:'Lexend',monospace;">
+        <span style="font-size:9px;color:#444;text-transform:uppercase;letter-spacing:1px;">Improvement<br>Points</span>
+      </div>
+      <div class="ip-rep-box rep-box">
+        <label>REP</label>
+        <input type="number" id="rep-tracker" value="0" min="0" max="10" style="width:80px;border:none;background:transparent;font-size:20px;font-weight:bold;color:#fff;text-align:center;font-family:'Lexend',monospace;">
+        <span style="font-size:9px;color:#444;text-transform:uppercase;letter-spacing:1px;">Reputation<br>(0–10)</span>
+      </div>
+    </div>
+    <div class="identity-divider"></div>
+    <!-- Notes -->
+    <textarea id="charNotes" class="auto-expand" placeholder="Core note telemetry..." style="margin-top:6px;min-height:50px;width:100%;"></textarea>
+  </div>
+
+  <div class="main-grid">
+    <div>
+
+      <!-- STATS -->
+      <div class="panel">
+        <h2>STATS</h2>
+        <div class="stats-row">
+          <div class="stat-box"><label>INT</label><input type="number" id="stat-int" value="6"><span class="display-stat-modified" id="mod-int"></span></div>
+          <div class="stat-box"><label>REF</label><input type="number" id="stat-ref" value="6"><span class="display-stat-modified" id="mod-ref"></span></div>
+          <div class="stat-box"><label>DEX</label><input type="number" id="stat-dex" value="6"><span class="display-stat-modified" id="mod-dex"></span></div>
+          <div class="stat-box"><label>TECH</label><input type="number" id="stat-tech" value="6"><span class="display-stat-modified" id="mod-tech"></span></div>
+          <div class="stat-box"><label>COOL</label><input type="number" id="stat-cool" value="6"><span class="display-stat-modified" id="mod-cool"></span></div>
+          <div class="stat-box derived"><label>HUMANITY</label><input type="text" id="humanity" readonly></div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-box"><label>WILL</label><input type="number" id="stat-will" value="6"><span class="display-stat-modified" id="mod-will"></span></div>
+          <div class="stat-box"><label>LUCK</label><input type="number" id="stat-luck" value="6"><span class="display-stat-modified" id="mod-luck"></span></div>
+          <div class="stat-box"><label>MOVE</label><input type="number" id="stat-move" value="6"><span class="display-stat-modified" id="mod-move"></span></div>
+          <div class="stat-box"><label>BODY</label><input type="number" id="stat-body" value="6"><span class="display-stat-modified" id="mod-body"></span></div>
+          <div class="stat-box"><label>EMP</label><input type="number" id="stat-emp" value="6"><span class="display-stat-modified" id="mod-emp"></span></div>
+          <div class="stat-box derived"><label>HP MAX</label><input type="text" id="hp-max" readonly></div>
+        </div>
+        <!-- STAT BUDGET -->
+        <div class="budget-bar">
+          <span>Stat Points Allocated</span>
+          <span class="budget-pts">pts</span>
+          <span class="budget-value" id="stat-total">60</span>
+        </div>
+      </div>
+
+      <!-- HEALTH DIAGNOSTICS -->
+      <div class="panel" style="padding-bottom:5px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:2px solid var(--accent-yellow);padding-bottom:10px;">
+          <h2 style="margin:0;border:none;padding:0;">HEALTH DIAGNOSTICS</h2>
+          <label style="font-weight:bold;color:var(--neon-cyan);cursor:pointer;display:flex;align-items:center;gap:10px;font-size:11px;background:#000;padding:4px 8px;border:1px solid var(--border-color);border-radius:3px;">
+            <input type="checkbox" id="toggle-combat" onchange="document.getElementById('combat-matrix-content').style.display=this.checked?'block':'none'" checked style="width:auto;">
+            INITIALIZE HEALTH OVERLAY
+          </label>
+        </div>
+        <div id="combat-matrix-content" style="margin-bottom:10px;">
+          <div class="two-col-row">
+            <!-- COMBAT TELEMETRY -->
+            <div class="panel" style="margin-bottom:0;padding:12px;">
+              <h2 style="font-size:14px;">COMBAT TELEMETRY</h2>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
+                <div class="stat-box" style="border-color:var(--neon-cyan);"><label>HEAD SP</label><input type="number" id="sp-head" value="11" min="0"></div>
+                <div class="stat-box" style="border-color:var(--neon-cyan);"><label>BODY SP</label><input type="number" id="sp-body" value="11" min="0"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
+                <div class="stat-box" style="border-color:var(--accent-yellow);"><label>CURRENT HEALTH</label><input type="number" id="hp-curr" value="40" min="0"></div>
+                <div class="stat-box" style="border-color:#555;"><label>MAX HEALTH</label><input type="text" id="hp-max-display" readonly style="color:#888;"></div>
+              </div>
+              <div style="background:#000;padding:12px;border:1px dashed var(--danger-red);border-radius:4px;">
+                <label style="color:var(--danger-red);font-weight:bold;font-size:11px;display:block;margin-bottom:5px;">INCOMING DAMAGE</label>
+                <div style="display:flex;gap:10px;">
+                  <input type="number" id="dmg-counter" placeholder="0" min="0" style="flex:1;font-size:16px;font-weight:bold;text-align:center;border-color:var(--danger-red);">
+                  <button class="btn btn-danger" type="button" onclick="resolveIncomingDamage()" style="flex:1;">Apply</button>
+                </div>
+                <div id="damage-log" style="margin-top:8px;font-size:12px;font-weight:bold;text-align:center;text-transform:uppercase;min-height:15px;"></div>
+              </div>
+            </div>
+            <!-- STATUS EFFECTS -->
+            <div class="panel" style="margin-bottom:0;padding:12px;">
+              <h2 style="font-size:14px;">STATUS EFFECTS</h2>
+              <div class="effects-builder">
+                <input type="text" id="effectInput" placeholder="SynthCoke REF +2, Concentration +2" style="flex:2;font-size:11px;">
+                <button class="btn" id="addEffectBtn" type="button">+ Inject</button>
+              </div>
+              <div class="effects-list">
+                <div class="effect-card" style="border-left-color:var(--danger-red);">
+                  <label><input type="checkbox" id="eff-wounded"> <strong>Seriously Wounded</strong> (-2 All)</label>
+                </div>
+                <div class="effect-card" style="border-left-color:var(--danger-red);">
+                  <div style="display:flex;align-items:center;gap:10px;width:100%;">
+                    <label style="white-space:nowrap;"><strong>Armor Penalty:</strong></label>
+                    <input type="number" id="eff-armor-penalty" value="0" style="width:50px;text-align:center;">
+                  </div>
+                </div>
+                <div id="custom-effects-hook"></div>
+              </div>
+              <!-- CYBERPSYCHOSIS -->
+              <div class="psychosis-tracker">
+                <label>⚠ Cyberpsychosis Tracker</label>
+                <div class="tracker-row">
+                  <input type="number" id="psychosis-input" value="0" min="0">
+                </div>
+                <div class="humanity-ref">Humanity threshold: <span id="humanity-threshold">—</span></div>
+                <div id="psychosis-warning"></div>
+              </div>
+              <!-- NERVE DEGENERATION -->
+              <div class="nerve-tracker">
+                <label>⚡ Nerve Degeneration</label>
+                <div class="tracker-row">
+                  <input type="number" id="nerve-input" value="0" min="0">
+                  <span style="font-size:10px;color:#444;white-space:nowrap;">/ 5 max</span>
+                </div>
+                <div id="nerve-warning"></div>
+              </div>
+            </div>
+          </div>
+          <!-- WEAPONS -->
+          <div class="panel" style="margin-top:15px;margin-bottom:0;padding:12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+              <h2 style="margin:0;border:none;font-size:14px;">WEAPON SLOTS</h2>
+              <button class="btn" type="button" id="addWeaponBtn" style="padding:2px 8px;font-size:11px;">+ Add</button>
+            </div>
+            <table>
+              <thead><tr><th>Weapon</th><th style="width:55px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr></thead>
+              <tbody id="weapons-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- NETRUNNER -->
+      <div class="netrunner-toggle-panel">
+        <label>
+          <input type="checkbox" id="toggle-netrunner" onchange="toggleNetrunnerModule(this.checked)" style="width:auto;">
+          INITIALIZE NETRUNNER OVERLAY
+        </label>
+      </div>
+      <div id="netrunner-section">
+        <h2>CYBERDECK DIAGNOSTICS</h2>
+        <h3 style="margin-top:15px;">CONFIG</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
+          <div class="stat-box"><label>Hardening</label><input type="number" id="cfg-hardening" value="0" min="0" max="3"></div>
+          <div class="stat-box"><label>Firewall</label><input type="number" id="cfg-firewall" value="0" min="0" max="3"></div>
+          <div class="stat-box"><label>Processor</label><input type="number" id="cfg-processor" value="0" min="0" max="3"></div>
+          <div class="stat-box"><label>Stealth</label><input type="number" id="cfg-stealth" value="0" min="0" max="3"></div>
+        </div>
+        <div style="margin-bottom:20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
+            <h3 style="margin:0;border:none;">QUICKHACK SLOTS</h3>
+            <button class="btn btn-net" type="button" onclick="addQuickhackSlot()" style="padding:2px 8px;font-size:11px;">+ Slot</button>
+          </div>
+          <table><thead><tr><th style="width:80px;">DR Value</th><th>Notes</th><th style="width:30px;"></th></tr></thead><tbody id="quickhacks-tbody"></tbody></table>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
+            <h3 style="margin:0;border:none;">AVAILABLE PROGRAMS</h3>
+            <button class="btn btn-net" type="button" onclick="addProgramSlot()" style="padding:2px 8px;font-size:11px;">+ Load</button>
+          </div>
+          <table><thead><tr><th style="width:180px;">Program</th><th>Notes</th><th style="width:30px;"></th></tr></thead><tbody id="programs-tbody"></tbody></table>
+        </div>
+      </div>
+
+    </div><!-- END left col -->
+
+    <!-- SKILLS -->
+    <div class="panel">
+      <h2>SKILLS</h2>
+      <div class="skills-master-grid">
+        <!-- COL 1 -->
+        <div>
+          <div class="skills-header"><div>Awareness</div><div>LVL</div><div>BASE</div></div>
+          <div class="skill-row" data-stat="will" data-skill-name="Concentration"><div>Concentration</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Conceal/Reveal Object"><div>Conceal/Reveal Object</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Lip Reading"><div>Lip Reading</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Perception"><div>Perception</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Tracking"><div>Tracking</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skills-header"><div>Ranged Weapons</div><div>LVL</div><div>BASE</div></div>
+          <div class="skill-row" data-stat="ref" data-skill-name="Heavy Weapons"><div>Heavy Weapons (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="ref" data-skill-name="Shoulder Arms"><div>Shoulder Arms</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="ref" data-skill-name="Archery"><div>Archery</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="ref" data-skill-name="Autofire"><div>Autofire (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="ref" data-skill-name="Handgun"><div>Handgun</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skills-header"><div>Control</div><div>LVL</div><div>BASE</div></div>
+          <div class="skill-row" data-stat="ref" data-skill-name="Drive Land Vehicle"><div>Drive Land Vehicle</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="ref" data-skill-name="Pilot Air Vehicle"><div>Pilot Air Vehicle (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="ref" data-skill-name="Pilot Sea Vehicle"><div>Pilot Sea Vehicle</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="ref" data-skill-name="Riding"><div>Riding</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skills-header"><div>Fighting</div><div>LVL</div><div>BASE</div></div>
+          <div class="skill-row" data-stat="dex" data-skill-name="Brawling"><div>Brawling</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="dex" data-skill-name="Evasion"><div>Evasion</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="dex" data-skill-name="Martial Arts"><div>Martial Arts (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="dex" data-skill-name="Melee Weapon"><div>Melee Weapon</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skills-header"><div>Body</div><div>LVL</div><div>BASE</div></div>
+          <div class="skill-row" data-stat="dex" data-skill-name="Athletics"><div>Athletics</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="dex" data-skill-name="Contortionist"><div>Contortionist</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="dex" data-skill-name="Dance"><div>Dance</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="will" data-skill-name="Endurance"><div>Endurance</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="will" data-skill-name="Resist Torture/Drugs"><div>Resist Torture/Drugs</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="dex" data-skill-name="Stealth"><div>Stealth</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+        </div>
+        <!-- COL 2 -->
+        <div>
+          <div class="skills-header"><div>Social</div><div>LVL</div><div>BASE</div></div>
+          <div class="skill-row" data-stat="cool" data-skill-name="Bribery"><div>Bribery</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="emp" data-skill-name="Conversation"><div>Conversation</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="emp" data-skill-name="Human Perception"><div>Human Perception</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="cool" data-skill-name="Interrogation"><div>Interrogation</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="cool" data-skill-name="Persuasion"><div>Persuasion</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="cool" data-skill-name="Streetwise"><div>Streetwise</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="cool" data-skill-name="Trading"><div>Trading</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skills-header"><div>Performance</div><div>LVL</div><div>BASE</div></div>
+          <div class="skill-row" data-stat="cool" data-skill-name="Acting"><div>Acting</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="cool" data-skill-name="Personal Grooming"><div>Personal Grooming</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="cool" data-skill-name="Wardrobe & Style"><div>Wardrobe &amp; Style</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skills-header"><div>Education</div><div>LVL</div><div>BASE</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Language (Streetslang)"><div>Language (Streetslang)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Language (Origin)"><div>Language (Origin)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Accounting"><div>Accounting</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Animal Handling"><div>Animal Handling</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Bureaucracy"><div>Bureaucracy</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Business"><div>Business</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Composition"><div>Composition</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Criminology"><div>Criminology</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Cryptography"><div>Cryptography</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Deduction"><div>Deduction</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Education"><div>Education</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Gamble"><div>Gamble</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Library Search"><div>Library Search</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Local Expert"><div>Local Expert</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Science"><div>Science</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Tactics"><div>Tactics</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="int" data-skill-name="Wilderness Survival"><div>Wilderness Survival</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+        </div>
+        <!-- COL 3 -->
+        <div>
+          <div class="skills-header"><div>Technique</div><div>LVL</div><div>BASE</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Air Vehicle Tech"><div>Air Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Basic Tech"><div>Basic Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Cybertech"><div>Cybertech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Demolitions"><div>Demolitions (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Electronics/Security Tech"><div>Electronics/Security Tech (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="First Aid"><div>First Aid</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Forgery"><div>Forgery</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Land Vehicle Tech"><div>Land Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Paint/Draw/Sculpt"><div>Paint/Draw/Sculpt</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Paramedic"><div>Paramedic (x2)</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Photography/Film"><div>Photography/Film</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Pick Lock"><div>Pick Lock</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Pick Pocket"><div>Pick Pocket</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Play Instrument"><div>Play Instrument</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Sea Vehicle Tech"><div>Sea Vehicle Tech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div class="skill-row" data-stat="tech" data-skill-name="Weaponstech"><div>Weaponstech</div><input type="number" value="0"><div class="skill-base-val">0</div></div>
+          <div id="custom-skills-hook"></div>
+        </div>
+      </div>
+      <!-- SKILL BUDGET -->
+      <div class="budget-bar" style="margin-top:15px;">
+        <span>Skill Points Allocated</span>
+        <span class="budget-pts">pts</span>
+        <span class="budget-value" id="skill-total">0</span>
+      </div>
+      <!-- CUSTOM SKILL INSERTER -->
+      <div class="skills-header" style="border-bottom:2px solid var(--accent-yellow);color:var(--accent-yellow);font-size:11px;margin-top:20px;">
+        <div>CUSTOM SKILL INSERTER</div>
+      </div>
+      <div style="display:flex;gap:6px;margin:8px 0 0 0;align-items:center;background:#000;padding:8px;border:1px dashed var(--border-color);border-radius:4px;">
+        <input type="text" id="custom-skill-name" placeholder="Skill name..." style="flex:2;font-size:11px;">
+        <select id="custom-skill-stat" style="flex:1;font-size:11px;background:#000;color:#fff;border:1px solid #444;padding:4px;">
+          <option value="int">INT</option><option value="ref">REF</option><option value="dex">DEX</option>
+          <option value="tech" selected>TECH</option><option value="cool">COOL</option><option value="will">WILL</option>
+          <option value="luck">LUCK</option><option value="move">MOVE</option><option value="body">BODY</option><option value="emp">EMP</option>
+        </select>
+        <button class="btn" type="button" onclick="addNewCustomSkill()" style="padding:4px 10px;font-size:11px;white-space:nowrap;">+ Create</button>
+      </div>
+    </div><!-- END skills panel -->
+  </div><!-- END main-grid -->
+</div><!-- END page-core -->
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 2: INVENTORY
+═══════════════════════════════════════════════════════ -->
+<div id="page-inventory" class="sheet-tab-panel">
+  <div class="panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <h2>INVENTORY &amp; GEAR</h2>
+      <button class="btn" type="button" id="addGearBtn">+ Add Item</button>
+    </div>
+    <div class="currency-panel">
+      <div style="font-weight:bold;color:var(--accent-yellow);font-size:11px;letter-spacing:1px;">€$ :</div>
+      <input type="number" id="eurodollars" value="0" style="width:100px;font-weight:bold;color:#fff;border:1px solid #444;text-align:right;padding-right:5px;">
+    </div>
+    <table>
+      <thead><tr><th>Item</th><th>Notes</th><th style="width:28px;"></th></tr></thead>
+      <tbody id="gear-tbody"></tbody>
+    </table>
+  </div>
+  <!-- VEHICLE -->
+  <div class="panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:2px solid var(--accent-yellow);padding-bottom:10px;">
+      <h2 style="margin:0;border:none;padding:0;">VEHICLE</h2>
+      <div style="display:flex;gap:15px;align-items:center;">
+        <label style="font-weight:bold;color:var(--accent-yellow);cursor:pointer;display:flex;align-items:center;gap:8px;font-size:11px;background:#000;padding:4px 8px;border:1px solid var(--border-color);border-radius:3px;">
+          <input type="checkbox" id="toggle-av" onchange="document.getElementById('av-content').style.display=this.checked?'block':'none'" checked style="width:auto;">
+          INITIALIZE VEHICLE MODULE
+        </label>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <label style="color:#888;font-size:11px;">NAME:</label>
+          <input type="text" id="av-name" placeholder="e.g. AV-4 Aerodyne" style="width:200px;font-weight:bold;font-size:13px;">
+        </div>
+      </div>
+    </div>
+    <div id="av-content">
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:15px;">
+        <div class="stat-box" style="border-color:var(--danger-red);"><label>SDP CHASSIS</label><input type="number" id="av-sdp-chassis" value="0" min="0"></div>
+        <div class="stat-box" style="border-color:var(--danger-red);"><label>SDP GLASS</label><input type="number" id="av-sdp-glass" value="0" min="0"></div>
+        <div class="stat-box" style="border-color:var(--neon-cyan);"><label>SP</label><input type="number" id="av-sp" value="0" min="0"></div>
+        <div class="stat-box" style="border-color:var(--neon-cyan);"><label>SEATS</label><input type="number" id="av-seats" value="4" min="1"></div>
+        <div class="stat-box" style="border-color:var(--accent-yellow);"><label>SPEED [combat]</label><input type="text" id="av-speed-combat" placeholder="e.g. 6"></div>
+        <div class="stat-box" style="border-color:var(--accent-yellow);"><label>SPEED [narrative]</label><input type="text" id="av-speed-narrative" placeholder="e.g. 200mph"></div>
+        <div class="stat-box" style="border-color:var(--purple);"><label>COST (€$)</label><input type="number" id="av-cost" value="0" min="0"></div>
+      </div>
+      <div style="margin-bottom:15px;">
+        <label style="color:#888;font-size:10px;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">Description / Notes</label>
+        <textarea id="av-description" class="auto-expand" rows="2" placeholder="Vehicle description, special features, condition notes..." style="width:100%;border-color:#444;"></textarea>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:1px solid var(--accent-yellow);padding-bottom:6px;">
+            <span style="color:var(--accent-yellow);font-weight:bold;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Upgrades</span>
+            <button class="btn" type="button" onclick="addAvUpgrade()" style="padding:2px 8px;font-size:11px;">+ Add</button>
+          </div>
+          <table><thead><tr><th>Upgrade / Modification</th><th style="width:28px;"></th></tr></thead><tbody id="av-upgrades-tbody"></tbody></table>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:1px solid var(--danger-red);padding-bottom:6px;">
+            <span style="color:var(--danger-red);font-weight:bold;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Mounted Weapons</span>
+            <button class="btn btn-danger" type="button" onclick="addAvWeapon()" style="padding:2px 8px;font-size:11px;">+ Add</button>
+          </div>
+          <table><thead><tr><th>Weapon</th><th style="width:50px;">Dmg</th><th style="width:35px;">ROF</th><th>Notes</th><th style="width:28px;"></th></tr></thead><tbody id="av-weapons-tbody"></tbody></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 3: CYBERWARE
+═══════════════════════════════════════════════════════ -->
+<div id="page-cyberware" class="sheet-tab-panel">
+  <div class="panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;border-bottom:2px solid var(--accent-yellow);padding-bottom:12px;">
+      <h2 style="margin:0;border:none;padding:0;">CYBERWARE IMPLANTS</h2>
+      <div style="font-size:10px;color:#555;text-transform:uppercase;letter-spacing:1px;">Click section header to collapse/expand</div>
+    </div>
+    <div class="cyberware-body-grid">
+      <!-- LEFT COLUMN -->
+      <div class="cyber-col">
+        <div class="cyber-col-header">◀ LEFT SYSTEMS</div>
+        <div id="cyber-left"></div>
+      </div>
+      <!-- BODY FIGURE -->
+      <div class="cyber-body-figure">
+        <svg viewBox="0 0 120 290" xmlns="http://www.w3.org/2000/svg" style="width:140px;opacity:0.85;">
+          <defs>
+            <filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <!-- Body fill -->
+          <ellipse cx="60" cy="24" rx="17" ry="20" fill="#1a0008" stroke="#cc0033" stroke-width="1.2"/>
+          <rect x="56" y="42" width="8" height="11" fill="#1a0008" stroke="#cc0033" stroke-width="1"/>
+          <path d="M36,53 L84,53 L88,128 L32,128 Z" fill="#1a0008" stroke="#cc0033" stroke-width="1.2"/>
+          <path d="M36,53 L12,60 L8,130 L28,134 L33,70Z" fill="#1a0008" stroke="#cc0033" stroke-width="1"/>
+          <path d="M84,53 L108,60 L112,130 L92,134 L87,70Z" fill="#1a0008" stroke="#cc0033" stroke-width="1"/>
+          <ellipse cx="18" cy="143" rx="10" ry="12" fill="#1a0008" stroke="#cc0033" stroke-width="1"/>
+          <ellipse cx="102" cy="143" rx="10" ry="12" fill="#1a0008" stroke="#cc0033" stroke-width="1"/>
+          <rect x="34" y="126" width="52" height="14" fill="#1a0008" stroke="#cc0033" stroke-width="1"/>
+          <path d="M34,140 L57,140 L58,240 L31,240 Z" fill="#1a0008" stroke="#cc0033" stroke-width="1"/>
+          <path d="M63,140 L86,140 L89,240 L62,240 Z" fill="#1a0008" stroke="#cc0033" stroke-width="1"/>
+          <ellipse cx="45" cy="250" rx="15" ry="8" fill="#1a0008" stroke="#cc0033" stroke-width="1"/>
+          <ellipse cx="75" cy="250" rx="15" ry="8" fill="#1a0008" stroke="#cc0033" stroke-width="1"/>
+          <!-- Circuit lines -->
+          <line x1="60" y1="53" x2="60" y2="128" stroke="#ff003355" stroke-width="0.8" stroke-dasharray="3,3"/>
+          <line x1="36" y1="90" x2="84" y2="90" stroke="#ff003355" stroke-width="0.8" stroke-dasharray="3,3"/>
+          <!-- Implant nodes -->
+          <circle cx="60" cy="14" r="2.5" fill="#ff0033" filter="url(#glow)"/>
+          <circle cx="60" cy="90" r="2.5" fill="#ff0033" filter="url(#glow)"/>
+          <circle cx="18" cy="90" r="2" fill="#54c1e6" filter="url(#glow)"/>
+          <circle cx="102" cy="90" r="2" fill="#54c1e6" filter="url(#glow)"/>
+          <circle cx="18" cy="143" r="2" fill="#54c1e6" filter="url(#glow)"/>
+          <circle cx="102" cy="143" r="2" fill="#54c1e6" filter="url(#glow)"/>
+          <circle cx="44" cy="195" r="2" fill="#54c1e6" filter="url(#glow)"/>
+          <circle cx="76" cy="195" r="2" fill="#54c1e6" filter="url(#glow)"/>
+          <circle cx="60" cy="24" r="2" fill="#a142ff" filter="url(#glow)"/>
+          <!-- Labels -->
+          <text x="60" y="280" text-anchor="middle" fill="#ff003366" font-size="6" font-family="monospace" letter-spacing="2">CYBERWARE</text>
+        </svg>
+        <div style="font-size:9px;color:#333;letter-spacing:2px;text-transform:uppercase;margin-top:6px;text-align:center;">AUGMENTATION<br>MATRIX</div>
+      </div>
+      <!-- RIGHT COLUMN -->
+      <div class="cyber-col">
+        <div class="cyber-col-header">RIGHT SYSTEMS ▶</div>
+        <div id="cyber-right"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SCRIPT ═══════════════════ -->
+<script>
+// ═══ CONSTANTS ═══════════════════════════════════════════
+const ROLE_ABILITIES = {
+  'Rockerboy': { ability: 'Charismatic Impact',  desc: 'Sway crowds through performance and fame' },
+  'Solo':      { ability: 'Combat Awareness',    desc: 'Tactical danger detection and combat precision' },
+  'Netrunner': { ability: 'Interface',           desc: 'Jack into the NET and control systems' },
+  'Techie':    { ability: 'Maker',               desc: 'Build, repair, and upgrade technology' },
+  'Medtechie': { ability: 'Medicine',            desc: 'Heal wounds and treat conditions in the field' },
+  'Media':     { ability: 'Credibility',         desc: 'Broadcast truth and shape public opinion' },
+  'Exec':      { ability: 'Teamwork',            desc: 'Lead and coordinate corporate assets' },
+  'Lawman':    { ability: 'Backup',              desc: 'Call in law enforcement reinforcements' },
+  'Fixer':     { ability: 'Operator',            desc: 'Connect buyers, sellers, and resources' },
+  'Nomad':     { ability: 'Moto',                desc: 'Master of vehicles and the open road' },
+};
+
+const CYBER_GROUPS = [
+  { name: 'Operating System', side: 'left'  },
+  { name: 'Arms',             side: 'left'  },
+  { name: 'Hands',            side: 'left'  },
+  { name: 'Circulatory',      side: 'left'  },
+  { name: 'Nervous System',   side: 'left'  },
+  { name: 'Frontal Cortex',   side: 'right' },
+  { name: 'Face',             side: 'right' },
+  { name: 'Skeleton',         side: 'right' },
+  { name: 'Integumentary',    side: 'right' },
+  { name: 'Legs',             side: 'right' },
+];
+
+// ═══ GLOBAL STATE ════════════════════════════════════════
+let customEffectsList = [];
+let rolesData         = [];
+
+// ═══ TAB CONTROLLER ══════════════════════════════════════
+function switchTab(pageId, event) {
+  document.querySelectorAll('.sheet-tab-panel').forEach(p => p.classList.remove('active-view'));
+  document.querySelectorAll('.tab-trigger-btn').forEach(b => b.classList.remove('active-btn'));
+  document.getElementById(pageId).classList.add('active-view');
+  if (event) event.currentTarget.classList.add('active-btn');
+}
+
+// ═══ AUTO-RESIZE TEXTAREAS ═══════════════════════════════
+function autoResizeTextarea(el) {
+  el.style.height = 'auto';
+  el.style.height = el.scrollHeight + 'px';
+}
+
+// ═══ WIKI SEARCH ═════════════════════════════════════════
+function previewWikiSearch() {
+  const query = document.getElementById('wiki-search-input').value.trim();
+  if (!query) return;
+  const portal = document.getElementById('wiki-hover-portal');
+  const frame  = document.getElementById('wiki-frame');
+  frame.src = `https://gman-cyberpunk.vercel.app/?search=${encodeURIComponent(query)}`;
+  portal.style.display = 'flex';
+  frame.onload = function() {
+    try {
+      const fi = frame.contentDocument || frame.contentWindow.document;
+      const searchInput = fi.querySelector('#dg-search-input, input[type="search"], input[placeholder*="earch"]');
+      if (searchInput) { searchInput.value = query; searchInput.dispatchEvent(new Event('input', { bubbles: true })); }
+    } catch(e) {}
+  };
+}
+function closeWikiPortal() {
+  document.getElementById('wiki-hover-portal').style.display = 'none';
+  document.getElementById('wiki-frame').src = '';
+}
+document.addEventListener('click', function(e) {
+  const portal    = document.getElementById('wiki-hover-portal');
+  const container = document.querySelector('.wiki-search-portal-container');
+  if (portal.style.display === 'flex' && !container.contains(e.target)) closeWikiPortal();
+});
+
+// ═══ CLOUD SYNC MODAL ════════════════════════════════════
+function openCloudModal()  { document.getElementById('cloud-modal').style.display = 'flex'; }
+function closeCloudModal() { document.getElementById('cloud-modal').style.display = 'none'; document.getElementById('cloud-status').textContent = ''; document.getElementById('cloud-status').className = ''; }
+
+function setCloudStatus(msg, type) {
+  const el = document.getElementById('cloud-status');
+  el.textContent = msg;
+  el.className = type === 'ok' ? 'cloud-status-ok' : type === 'err' ? 'cloud-status-err' : 'cloud-status-loading';
+}
+
+async function saveToCloud() {
+  const username = document.getElementById('cloud-username').value.trim();
+  const password = document.getElementById('cloud-password').value.trim();
+  if (!username || !password) { setCloudStatus('⚠ Enter callsign and access code.', 'err'); return; }
+  setCloudStatus('[ uploading... ]', 'loading');
+  const characterData = buildExportObject();
+  try {
+    const res = await fetch('/api/save-character', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password, characterData }),
+    });
+    const data = await res.json();
+    if (res.ok && data.success) {
+      setCloudStatus(`✓ ${data.message}`, 'ok');
+    } else {
+      setCloudStatus(`✕ ${data.error || 'Upload failed'}`, 'err');
     }
+  } catch(e) {
+    setCloudStatus('✕ Network error — matrix unreachable.', 'err');
+  }
+}
 
-    // === AUTO-RESIZE TEXTAREAS ===
-    function autoResizeTextarea(el) {
-      el.style.height = 'auto';
-      el.style.height = el.scrollHeight + 'px';
+async function loadFromCloud() {
+  const username = document.getElementById('cloud-username').value.trim();
+  const password = document.getElementById('cloud-password').value.trim();
+  if (!username || !password) { setCloudStatus('⚠ Enter callsign and access code.', 'err'); return; }
+  setCloudStatus('[ downloading... ]', 'loading');
+  try {
+    const res = await fetch('/api/load-character', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }),
+    });
+    const data = await res.json();
+    if (res.ok && data.success) {
+      applyImportObject(data.characterData);
+      const ts = data.lastSaved ? ` (saved: ${new Date(data.lastSaved).toLocaleString()})` : '';
+      setCloudStatus(`✓ Character loaded.${ts}`, 'ok');
+    } else {
+      setCloudStatus(`✕ ${data.error || 'Download failed'}`, 'err');
     }
+  } catch(e) {
+    setCloudStatus('✕ Network error — matrix unreachable.', 'err');
+  }
+}
 
-    // === WIKI SEARCH ===
-    // Strategy: load your garden's search page directly inside the iframe at native size.
-    // The search page is a full SPA that works at 700px width just fine.
-    // We do NOT scale — we just let it render normally.
-    function previewWikiSearch() {
-      const query = document.getElementById('wiki-search-input').value.trim();
-      if (!query) return;
-      const portal = document.getElementById('wiki-hover-portal');
-      const frame = document.getElementById('wiki-frame');
-      // Load the garden root with the search query — the garden's own search JS picks up ?q=
-      // and opens the search overlay automatically via the search button trigger
-      frame.src = `https://gman-cyberpunk.vercel.app/?search=${encodeURIComponent(query)}`;
-      portal.style.display = 'flex';
-      // After load, try to fire the search programmatically inside the frame
-      frame.onload = function() {
-        try {
-          // Attempt to populate and trigger search inside the iframe
-          const fw = frame.contentWindow;
-          const fi = frame.contentDocument || fw.document;
-          // Try Alpine.js search trigger if available
-          const searchInput = fi.querySelector('#dg-search-input, input[type="search"], input[placeholder*="earch"]');
-          if (searchInput) {
-            searchInput.value = query;
-            searchInput.dispatchEvent(new Event('input', { bubbles: true }));
-          }
-        } catch(e) {
-          // Cross-origin may block this — the fallback is Ctrl+K hint in the header
-        }
-      };
-    }
+// ═══ ROLES SYSTEM ════════════════════════════════════════
+function addRole(role='', score=1) {
+  rolesData.push({ id: Date.now() + Math.random(), role, score });
+  renderRoles();
+}
 
-    function closeWikiPortal() {
-      document.getElementById('wiki-hover-portal').style.display = 'none';
-      document.getElementById('wiki-frame').src = '';
-    }
+function removeRole(id) {
+  rolesData = rolesData.filter(r => r.id !== id);
+  renderRoles();
+}
 
-    // Close portal when clicking outside
-    document.addEventListener('click', function(e) {
-      const portal = document.getElementById('wiki-hover-portal');
-      const container = document.querySelector('.wiki-search-portal-container');
-      if (portal.style.display === 'flex' && !container.contains(e.target)) {
-        closeWikiPortal();
+function renderRoles() {
+  const container = document.getElementById('roles-container');
+  container.innerHTML = '';
+  rolesData.forEach(r => {
+    const div = document.createElement('div');
+    div.className = 'role-entry';
+    div.innerHTML = `
+      <select class="role-select" onchange="updateRoleData(${r.id},'role',this.value)">
+        <option value="">— Select —</option>
+        ${Object.keys(ROLE_ABILITIES).map(name => `<option value="${name}" ${r.role===name?'selected':''}>${name}</option>`).join('')}
+      </select>
+      <input type="number" class="role-score-input" value="${r.score}" min="1" max="10" onchange="updateRoleData(${r.id},'score',+this.value)">
+      <button class="remove-role-btn" title="Remove role" onclick="removeRole(${r.id})">×</button>
+    `;
+    container.appendChild(div);
+  });
+  updateRoleAbilitiesDisplay();
+}
+
+function updateRoleData(id, field, value) {
+  const r = rolesData.find(x => x.id === id);
+  if (r) { r[field] = value; updateRoleAbilitiesDisplay(); }
+}
+
+function updateRoleAbilitiesDisplay() {
+  const bar = document.getElementById('role-abilities-display');
+  const filled = rolesData.filter(r => r.role);
+  if (!filled.length) {
+    bar.innerHTML = '<span class="chip-empty">// no roles assigned</span>';
+    return;
+  }
+  bar.innerHTML = filled.map(r => {
+    const ab = ROLE_ABILITIES[r.role];
+    if (!ab) return '';
+    return `
+      <div class="role-ability-chip" title="${ab.desc}">
+        <span class="chip-role">${r.role}</span>
+        <span class="chip-divider">|</span>
+        <span class="chip-ability">${ab.ability}</span>
+        <span class="chip-score">${r.score}</span>
+      </div>`;
+  }).join('');
+}
+
+// ═══ CYBERWARE INIT ═══════════════════════════════════════
+function slugify(s) { return s.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9-]/g,''); }
+
+function createCyberSection(groupName) {
+  const slug = slugify(groupName);
+  const section = document.createElement('div');
+  section.className = 'cyber-section';
+  section.setAttribute('data-group', groupName);
+
+  const header = document.createElement('div');
+  header.className = 'cyber-section-header';
+  header.innerHTML = `
+    <span class="cyber-chevron" id="chevron-${slug}">▼</span>
+    <span class="cyber-group-name">${groupName}</span>
+    <span class="cyber-slot-badge" id="badge-${slug}">0 / 3</span>
+  `;
+  header.addEventListener('click', () => toggleCyberSection(groupName));
+
+  const body = document.createElement('div');
+  body.className = 'cyber-section-body';
+  body.id = `cyber-body-${slug}`;
+
+  for (let i = 1; i <= 3; i++) {
+    const row = document.createElement('div');
+    row.className = 'cyber-row cyber-slot-row';
+    row.setAttribute('data-group', groupName);
+    row.setAttribute('data-slot', i);
+    row.innerHTML = `
+      <div class="cyber-slot-num">${i}</div>
+      <textarea class="cy-name" rows="1" placeholder="Implant name…" style="resize:vertical;min-height:26px;"></textarea>
+      <input type="number" class="cy-quality" min="1" max="5" value="1" title="Quality (1–5)">
+      <textarea class="cy-notes" rows="1" placeholder="Notes…" style="resize:vertical;min-height:26px;"></textarea>
+    `;
+    row.querySelectorAll('input, textarea').forEach(el => {
+      el.addEventListener('input', () => { updateCyberBadge(groupName); autoResizeTextarea(el); });
+    });
+    body.appendChild(row);
+  }
+
+  section.appendChild(header);
+  section.appendChild(body);
+  return section;
+}
+
+function toggleCyberSection(groupName) {
+  const slug   = slugify(groupName);
+  const body   = document.getElementById(`cyber-body-${slug}`);
+  const chev   = document.getElementById(`chevron-${slug}`);
+  const hidden = body.classList.toggle('hidden');
+  chev.textContent = hidden ? '►' : '▼';
+  chev.classList.toggle('collapsed', hidden);
+}
+
+function updateCyberBadge(groupName) {
+  const slug  = slugify(groupName);
+  const rows  = document.querySelectorAll(`.cyber-row[data-group="${groupName}"]`);
+  let filled  = 0;
+  rows.forEach(r => { if (r.querySelector('.cy-name')?.value.trim()) filled++; });
+  const badge = document.getElementById(`badge-${slug}`);
+  if (badge) {
+    badge.textContent = `${filled} / 3`;
+    badge.classList.toggle('has-data', filled > 0);
+  }
+}
+
+function initCyberware() {
+  const leftCol  = document.getElementById('cyber-left');
+  const rightCol = document.getElementById('cyber-right');
+  CYBER_GROUPS.forEach(g => {
+    (g.side === 'left' ? leftCol : rightCol).appendChild(createCyberSection(g.name));
+  });
+}
+
+// ═══ CUSTOM SKILLS ════════════════════════════════════════
+function addNewCustomSkill(name='', stat='', lvl=0) {
+  const nameInp = document.getElementById('custom-skill-name');
+  const statSel = document.getElementById('custom-skill-stat');
+  const skillName   = name || nameInp.value.trim();
+  const targetStat  = stat || statSel.value;
+  if (!skillName) return;
+  const row = document.createElement('div');
+  row.className = 'skill-row custom-skill-injected';
+  row.setAttribute('data-stat', targetStat.toLowerCase());
+  row.setAttribute('data-skill-name', skillName);
+  row.innerHTML = `<div style="color:var(--neon-cyan);font-weight:bold;">${skillName}*</div><input type="number" value="${lvl}"><div class="skill-base-val">0</div>`;
+  document.getElementById('custom-skills-hook').appendChild(row);
+  row.querySelector('input').addEventListener('input', updateSheetMath);
+  if (!name) nameInp.value = '';
+  updateSheetMath();
+}
+
+// ═══ DAMAGE ENGINE ════════════════════════════════════════
+function resolveIncomingDamage() {
+  const dmgEl = document.getElementById('dmg-counter');
+  const log   = document.getElementById('damage-log');
+  const dmg   = parseInt(dmgEl.value) || 0;
+  if (dmg <= 0) { log.innerText = 'No incoming data.'; log.style.color = 'var(--text-color)'; return; }
+  const isBody = confirm('Route to BODY?\n[OK] = Body  [Cancel] = Head');
+  const spEl   = document.getElementById(`sp-${isBody ? 'body' : 'head'}`);
+  let sp       = parseInt(spEl.value) || 0;
+  const rem    = dmg - sp;
+  if (rem <= 0) {
+    log.innerText = 'Armor absorbs damage'; log.style.color = 'var(--neon-cyan)';
+  } else {
+    log.innerText = 'Armor ablated'; log.style.color = 'var(--danger-red)';
+    const hpEl = document.getElementById('hp-curr');
+    hpEl.value = Math.max(0, (parseInt(hpEl.value) || 0) - rem);
+    spEl.value = Math.max(0, sp - (confirm('Armor Piercing?') ? 2 : 1));
+  }
+  dmgEl.value = '';
+  updateSheetMath();
+}
+
+// ═══ NETRUNNER ════════════════════════════════════════════
+function toggleNetrunnerModule(on) { document.getElementById('netrunner-section').style.display = on ? 'block' : 'none'; }
+
+function addQuickhackSlot(dr='', notes='') {
+  const tr = document.createElement('tr'); tr.className = 'net-qh-row';
+  tr.innerHTML = `<td><input type="number" class="qh-dr" value="${dr}" placeholder="0" style="text-align:center;"></td><td><textarea class="qh-notes" rows="2">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>`;
+  document.getElementById('quickhacks-tbody').appendChild(tr);
+}
+
+function addProgramSlot(name='', notes='') {
+  const tr = document.createElement('tr'); tr.className = 'net-prog-row';
+  tr.innerHTML = `<td><input type="text" class="prog-name" value="${name}" placeholder="e.g. Sword"></td><td><textarea class="prog-notes" rows="2">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>`;
+  document.getElementById('programs-tbody').appendChild(tr);
+}
+
+function synchHealthDisplay() {
+  const a = document.getElementById('hp-max'), b = document.getElementById('hp-max-display');
+  if (a && b) b.value = a.value;
+}
+
+// ═══ WEAPONS & GEAR ══════════════════════════════════════
+function addWeaponSlot(name='', dmg='', rof='', notes='') {
+  const tr = document.createElement('tr'); tr.className = 'weapon-row';
+  tr.innerHTML = `
+    <td style="padding:2px;"><textarea class="wp-name" rows="1" placeholder="Heavy Pistol" style="resize:both;min-height:28px;width:100%;overflow:auto;">${name}</textarea></td>
+    <td><input type="text" class="wp-dmg" value="${dmg}" placeholder="3d6" style="text-align:center;"></td>
+    <td><input type="text" class="wp-rof" value="${rof}" placeholder="2" style="text-align:center;"></td>
+    <td style="padding:2px;"><textarea class="wp-notes" rows="1" placeholder="Notes..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
+    <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>
+  `;
+  document.getElementById('weapons-tbody').appendChild(tr);
+  tr.querySelectorAll('input,textarea').forEach(i => i.addEventListener('input', updateSheetMath));
+}
+document.getElementById('addWeaponBtn').addEventListener('click', () => addWeaponSlot());
+
+function addGearSlot(name='', notes='') {
+  const tr = document.createElement('tr'); tr.className = 'gear-row';
+  tr.innerHTML = `
+    <td style="padding:2px;"><textarea class="gear-name auto-expand" rows="1" placeholder="Agent" style="resize:both;min-height:28px;width:100%;overflow:auto;">${name}</textarea></td>
+    <td style="padding:2px;"><textarea class="gear-notes auto-expand" rows="1" placeholder="Notes..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
+    <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>
+  `;
+  document.getElementById('gear-tbody').appendChild(tr);
+  tr.querySelectorAll('input,textarea').forEach(i => i.addEventListener('input', updateSheetMath));
+  tr.querySelectorAll('.auto-expand').forEach(autoResizeTextarea);
+}
+document.getElementById('addGearBtn').addEventListener('click', () => addGearSlot());
+
+// Default items
+addWeaponSlot('Heavy Pistol', '3d6', '2', '');
+addGearSlot('Agent', 'AI powered smartphone.');
+addGearSlot('Carryall', 'Heavy ripstop nylon bags.');
+
+// ═══ EFFECTS ENGINE ══════════════════════════════════════
+document.getElementById('addEffectBtn').addEventListener('click', () => {
+  const inputVal = document.getElementById('effectInput').value.trim();
+  if (!inputVal) return;
+  const segments  = inputVal.split(',').map(s => s.trim());
+  let modifiers   = [], effectName = null;
+  segments.forEach((seg, idx) => {
+    const m = seg.match(/^(.*?)\s*([+-]\d+)\s*$/);
+    if (m) modifiers.push({ target: m[1].trim(), value: parseInt(m[2]) });
+    else if (idx === 0) effectName = seg;
+  });
+  if (modifiers.length > 0) {
+    customEffectsList.push({ id: Date.now(), name: effectName || modifiers[0].target, modifiers, active: true });
+    renderCustomEffects();
+    document.getElementById('effectInput').value = '';
+    updateSheetMath();
+  } else {
+    alert('Parsing Error.\nSyntax: EffectName STAT +N, SkillName +N\nExample: SynthCoke REF +2, Concentration +3');
+  }
+});
+
+function renderCustomEffects() {
+  const hook = document.getElementById('custom-effects-hook'); hook.innerHTML = '';
+  customEffectsList.forEach(eff => {
+    const div = document.createElement('div'); div.className = 'effect-card';
+    const desc = eff.modifiers.map(m => `${m.value >= 0 ? '+' : ''}${m.value} ${m.target}`).join(', ');
+    div.innerHTML = `<label style="font-size:11px;"><input type="checkbox" data-id="${eff.id}" ${eff.active ? 'checked' : ''} onchange="toggleEffect(${eff.id})"><strong>${eff.name}</strong> (${desc})</label><button class="btn btn-danger" onclick="deleteEffect(${eff.id})" style="padding:2px 5px;font-size:10px;">Burn</button>`;
+    hook.appendChild(div);
+  });
+}
+window.toggleEffect = function(id) { const f = customEffectsList.find(e => e.id === id); if (f) { f.active = !f.active; updateSheetMath(); } };
+window.deleteEffect = function(id) { customEffectsList = customEffectsList.filter(e => e.id !== id); renderCustomEffects(); updateSheetMath(); };
+
+// ═══ BUDGET TRACKERS ═════════════════════════════════════
+function updateStatBudget() {
+  const ids = ['stat-int','stat-ref','stat-dex','stat-tech','stat-cool','stat-will','stat-luck','stat-move','stat-body','stat-emp'];
+  const total = ids.reduce((s, id) => s + (parseInt(document.getElementById(id)?.value) || 0), 0);
+  document.getElementById('stat-total').textContent = total;
+}
+
+function updateSkillBudget() {
+  let total = 0;
+  document.querySelectorAll('.skill-row input[type="number"]').forEach(inp => {
+    total += Math.max(0, parseInt(inp.value) || 0);
+  });
+  document.getElementById('skill-total').textContent = total;
+}
+
+// ═══ MAIN CALC ENGINE ════════════════════════════════════
+function updateSheetMath() {
+  const b = {
+    INT: parseInt(document.getElementById('stat-int').value)||0,
+    REF: parseInt(document.getElementById('stat-ref').value)||0,
+    DEX: parseInt(document.getElementById('stat-dex').value)||0,
+    TECH:parseInt(document.getElementById('stat-tech').value)||0,
+    COOL:parseInt(document.getElementById('stat-cool').value)||0,
+    WILL:parseInt(document.getElementById('stat-will').value)||0,
+    LUCK:parseInt(document.getElementById('stat-luck').value)||0,
+    MOVE:parseInt(document.getElementById('stat-move').value)||0,
+    BODY:parseInt(document.getElementById('stat-body').value)||0,
+    EMP: parseInt(document.getElementById('stat-emp').value)||0
+  };
+  for (let k in b) document.getElementById(`mod-${k.toLowerCase()}`).innerText = '';
+  const ps = { ...b }; const sb = {};
+  customEffectsList.forEach(eff => {
+    if (!eff.active) return;
+    eff.modifiers.forEach(mod => {
+      const t = mod.target.toUpperCase();
+      if (ps[t] !== undefined) ps[t] += mod.value;
+      else sb[mod.target] = (sb[mod.target] || 0) + mod.value;
+    });
+  });
+  for (let k in b) if (ps[k] !== b[k]) document.getElementById(`mod-${k.toLowerCase()}`).innerText = `(${ps[k]})`;
+  const ap = parseInt(document.getElementById('eff-armor-penalty').value) || 0;
+  if (ap > 0) {
+    ps.REF = Math.max(0, ps.REF - ap); ps.DEX = Math.max(0, ps.DEX - ap); ps.MOVE = Math.max(0, ps.MOVE - ap);
+    document.getElementById('mod-ref').innerText  = `(${ps.REF})`;
+    document.getElementById('mod-dex').innerText  = `(${ps.DEX})`;
+    document.getElementById('mod-move').innerText = `(${ps.MOVE})`;
+  }
+  const hum   = ps.WILL + ps.EMP;
+  const hpMax = 10 + (5 * Math.ceil((ps.BODY + ps.WILL) / 2));
+  document.getElementById('humanity').value = hum;
+  document.getElementById('hp-max').value   = hpMax;
+  synchHealthDisplay();
+
+  // Cyberpsychosis
+  const pEl  = document.getElementById('psychosis-input');
+  const pVal = parseInt(pEl.value) || 0;
+  document.getElementById('humanity-threshold').innerText = hum;
+  if (pVal > hum) {
+    pEl.classList.add('exceeded');
+    const w = document.getElementById('psychosis-warning');
+    w.textContent = '⚠ CYBERPSYCHOSIS THRESHOLD EXCEEDED';
+    w.classList.add('warning-flicker');
+  } else {
+    pEl.classList.remove('exceeded');
+    const w = document.getElementById('psychosis-warning');
+    w.textContent = '';
+    w.classList.remove('warning-flicker');
+  }
+
+  // Nerve Degeneration
+  const nEl  = document.getElementById('nerve-input');
+  const nVal = parseInt(nEl.value) || 0;
+  const nWarn = document.getElementById('nerve-warning');
+  if (nVal >= 5) {
+    nEl.classList.add('exceeded');
+    nWarn.textContent = '⚠ NEURAL DEGRADATION — SUBTRACT -1 FROM INT / REF / DEX';
+    nWarn.classList.add('warning-flicker');
+  } else {
+    nEl.classList.remove('exceeded');
+    nWarn.textContent = '';
+    nWarn.classList.remove('warning-flicker');
+  }
+
+  // Skills
+  const wounded = document.getElementById('eff-wounded').checked;
+  document.querySelectorAll('.skill-row').forEach(row => {
+    const stat = row.getAttribute('data-stat').toUpperCase();
+    const sn   = row.getAttribute('data-skill-name') || '';
+    const lvl  = parseInt(row.querySelector('input').value) || 0;
+    let val    = lvl + ps[stat];
+    if (sb[sn]) val += sb[sn];
+    if (wounded) val -= 2;
+    row.querySelector('.skill-base-val').innerText = val;
+  });
+
+  updateStatBudget();
+  updateSkillBudget();
+}
+
+// ═══ AIR VEHICLE MODULE ══════════════════════════════════
+function addAvUpgrade(notes='') {
+  const tr = document.createElement('tr'); tr.className = 'av-upgrade-row';
+  tr.innerHTML = `
+    <td style="padding:2px;"><textarea class="av-upgrade-notes auto-expand" rows="1" placeholder="e.g. Reinforced Hull, Stealth Paint..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
+    <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>
+  `;
+  document.getElementById('av-upgrades-tbody').appendChild(tr);
+  tr.querySelectorAll('textarea').forEach(t => { t.addEventListener('input', () => autoResizeTextarea(t)); autoResizeTextarea(t); });
+}
+
+function addAvWeapon(name='', dmg='', rof='', notes='') {
+  const tr = document.createElement('tr'); tr.className = 'av-weapon-row';
+  tr.innerHTML = `
+    <td style="padding:2px;"><textarea class="av-wp-name" rows="1" placeholder="Twin Autocannon" style="resize:both;min-height:28px;width:100%;overflow:auto;">${name}</textarea></td>
+    <td><input type="text" class="av-wp-dmg" value="${dmg}" placeholder="5d6" style="text-align:center;"></td>
+    <td><input type="text" class="av-wp-rof" value="${rof}" placeholder="1" style="text-align:center;"></td>
+    <td style="padding:2px;"><textarea class="av-wp-notes" rows="1" placeholder="Notes..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
+    <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>
+  `;
+  document.getElementById('av-weapons-tbody').appendChild(tr);
+}
+
+// ═══ BUILD EXPORT OBJECT ═════════════════════════════════
+function buildExportObject() {
+  const d = {
+    handle: document.getElementById('charHandle').value,
+    notes:  document.getElementById('charNotes').value,
+    eurodollars: document.getElementById('eurodollars').value,
+    ip:  document.getElementById('ip-tracker').value,
+    rep: document.getElementById('rep-tracker').value,
+    roles: rolesData.map(r => ({ role: r.role, score: r.score })),
+    rawStats: {
+      int: document.getElementById('stat-int').value,  ref: document.getElementById('stat-ref').value,
+      dex: document.getElementById('stat-dex').value,  tech:document.getElementById('stat-tech').value,
+      cool:document.getElementById('stat-cool').value, will:document.getElementById('stat-will').value,
+      luck:document.getElementById('stat-luck').value, move:document.getElementById('stat-move').value,
+      body:document.getElementById('stat-body').value, emp: document.getElementById('stat-emp').value,
+    },
+    wounded:       document.getElementById('eff-wounded').checked,
+    armorPenalty:  document.getElementById('eff-armor-penalty').value,
+    psychosis:     document.getElementById('psychosis-input').value,
+    nerveDegeneration: document.getElementById('nerve-input').value,
+    customEffects: customEffectsList,
+    weapons: [], gear: [], cyberware: [], skills: [],
+    airVehicle: {
+      name: document.getElementById('av-name').value,
+      sdpChassis: document.getElementById('av-sdp-chassis').value,
+      sdpGlass:   document.getElementById('av-sdp-glass').value,
+      sp:    document.getElementById('av-sp').value,
+      seats: document.getElementById('av-seats').value,
+      speedCombat:    document.getElementById('av-speed-combat').value,
+      speedNarrative: document.getElementById('av-speed-narrative').value,
+      cost:        document.getElementById('av-cost').value,
+      description: document.getElementById('av-description').value,
+      upgrades: [], weapons: [],
+    },
+    netrunner: {
+      enabled:   document.getElementById('toggle-netrunner').checked,
+      hardening: document.getElementById('cfg-hardening').value,
+      firewall:  document.getElementById('cfg-firewall').value,
+      processor: document.getElementById('cfg-processor').value,
+      stealth:   document.getElementById('cfg-stealth').value,
+      quickhacks: [], programs: [],
+    },
+  };
+  document.querySelectorAll('.av-upgrade-row').forEach(r => d.airVehicle.upgrades.push({ notes: r.querySelector('.av-upgrade-notes').value }));
+  document.querySelectorAll('.av-weapon-row').forEach(r => d.airVehicle.weapons.push({ name: r.querySelector('.av-wp-name').value, dmg: r.querySelector('.av-wp-dmg').value, rof: r.querySelector('.av-wp-rof').value, notes: r.querySelector('.av-wp-notes').value }));
+  document.querySelectorAll('.weapon-row').forEach(r => d.weapons.push({ name: r.querySelector('.wp-name').value, dmg: r.querySelector('.wp-dmg').value, rof: r.querySelector('.wp-rof').value, notes: r.querySelector('.wp-notes').value }));
+  document.querySelectorAll('.gear-row').forEach(r => d.gear.push({ name: r.querySelector('.gear-name').value, notes: r.querySelector('.gear-notes').value }));
+  document.querySelectorAll('.cyber-row').forEach(r => d.cyberware.push({ group: r.getAttribute('data-group'), slot: r.getAttribute('data-slot'), name: r.querySelector('.cy-name').value, quality: r.querySelector('.cy-quality').value, notes: r.querySelector('.cy-notes').value }));
+  document.querySelectorAll('.skill-row').forEach(r => d.skills.push({ name: r.getAttribute('data-skill-name'), lvl: r.querySelector('input').value, stat: r.getAttribute('data-stat'), custom: r.classList.contains('custom-skill-injected') }));
+  document.querySelectorAll('.net-qh-row').forEach(r => d.netrunner.quickhacks.push({ dr: r.querySelector('.qh-dr').value, notes: r.querySelector('.qh-notes').value }));
+  document.querySelectorAll('.net-prog-row').forEach(r => d.netrunner.programs.push({ name: r.querySelector('.prog-name').value, notes: r.querySelector('.prog-notes').value }));
+  return d;
+}
+
+// ═══ APPLY IMPORT OBJECT ═════════════════════════════════
+function applyImportObject(inc) {
+  if (inc.handle)       document.getElementById('charHandle').value = inc.handle;
+  if (inc.notes)        document.getElementById('charNotes').value  = inc.notes;
+  if (inc.eurodollars != null) document.getElementById('eurodollars').value = inc.eurodollars;
+  if (inc.ip  != null)  document.getElementById('ip-tracker').value  = inc.ip;
+  if (inc.rep != null)  document.getElementById('rep-tracker').value = inc.rep;
+
+  if (inc.roles) {
+    rolesData = inc.roles.map(r => ({ id: Date.now() + Math.random(), role: r.role, score: r.score }));
+    renderRoles();
+  }
+
+  for (let k in (inc.rawStats||{})) { const el = document.getElementById(`stat-${k}`); if (el) el.value = inc.rawStats[k]; }
+  if (inc.wounded !== undefined) document.getElementById('eff-wounded').checked = inc.wounded;
+  if (inc.armorPenalty != null)  document.getElementById('eff-armor-penalty').value = inc.armorPenalty;
+  if (inc.psychosis != null)     document.getElementById('psychosis-input').value   = inc.psychosis;
+  if (inc.nerveDegeneration != null) document.getElementById('nerve-input').value   = inc.nerveDegeneration;
+  if (inc.customEffects)         { customEffectsList = inc.customEffects; renderCustomEffects(); }
+
+  document.getElementById('weapons-tbody').innerHTML = '';
+  (inc.weapons||[]).forEach(w => addWeaponSlot(w.name, w.dmg, w.rof, w.notes));
+  document.getElementById('gear-tbody').innerHTML = '';
+  (inc.gear||[]).forEach(g => addGearSlot(g.name, g.notes));
+
+  if (inc.cyberware) {
+    document.querySelectorAll('.cyber-row').forEach(row => {
+      const m = inc.cyberware.find(c => c.group === row.getAttribute('data-group') && c.slot == row.getAttribute('data-slot'));
+      if (m) {
+        row.querySelector('.cy-name').value    = m.name    || '';
+        row.querySelector('.cy-quality').value = m.quality || '1';
+        row.querySelector('.cy-notes').value   = m.notes   || '';
+        updateCyberBadge(row.getAttribute('data-group'));
       }
     });
+  }
 
-    // === CUSTOM SKILLS ===
-    function addNewCustomSkill(name="", stat="", lvl=0) {
-      const nameInp = document.getElementById('custom-skill-name');
-      const statSel = document.getElementById('custom-skill-stat');
-      const skillName = name || nameInp.value.trim();
-      const targetStat = stat || statSel.value;
-      if (!skillName) return;
-      const row = document.createElement('div');
-      row.className = "skill-row custom-skill-injected";
-      row.setAttribute('data-stat', targetStat.toLowerCase());
-      row.setAttribute('data-skill-name', skillName);
-      row.innerHTML = `<div style="color:var(--neon-cyan);font-weight:bold;">${skillName}*</div><input type="number" value="${lvl}"><div class="skill-base-val">0</div>`;
-      document.getElementById('custom-skills-hook').appendChild(row);
-      row.querySelector('input').addEventListener('input', updateSheetMath);
-      if (!name) nameInp.value = "";
-      updateSheetMath();
-    }
+  document.getElementById('custom-skills-hook').innerHTML = '';
+  (inc.skills||[]).forEach(s => {
+    const coreRow = Array.from(document.querySelectorAll('.skill-row')).find(r => r.getAttribute('data-skill-name') === s.name);
+    if (coreRow) coreRow.querySelector('input').value = s.lvl;
+    else if (s.custom) addNewCustomSkill(s.name, s.stat, parseInt(s.lvl) || 0);
+  });
 
-    // === DAMAGE ENGINE ===
-    function resolveIncomingDamage() {
-      const dmgEl = document.getElementById('dmg-counter');
-      const log = document.getElementById('damage-log');
-      const dmg = parseInt(dmgEl.value) || 0;
-      if (dmg <= 0) { log.innerText = "No incoming data."; log.style.color = "var(--text-color)"; return; }
-      const isBody = confirm("Route to BODY?\n[OK] = Body  [Cancel] = Head");
-      const spEl = document.getElementById(`sp-${isBody ? 'body' : 'head'}`);
-      let sp = parseInt(spEl.value) || 0;
-      const rem = dmg - sp;
-      if (rem <= 0) {
-        log.innerText = "Armor absorbs damage"; log.style.color = "var(--neon-cyan)";
-      } else {
-        log.innerText = "Armor ablated"; log.style.color = "var(--danger-red)";
-        const hpEl = document.getElementById('hp-curr');
-        hpEl.value = Math.max(0, (parseInt(hpEl.value) || 0) - rem);
-        spEl.value = Math.max(0, sp - (confirm("Armor Piercing?") ? 2 : 1));
-      }
-      dmgEl.value = ""; updateSheetMath();
-    }
+  const av = inc.airVehicle;
+  if (av) {
+    if (av.name)           document.getElementById('av-name').value          = av.name;
+    if (av.sdpChassis)     document.getElementById('av-sdp-chassis').value   = av.sdpChassis;
+    if (av.sdpGlass)       document.getElementById('av-sdp-glass').value     = av.sdpGlass;
+    if (av.sp)             document.getElementById('av-sp').value            = av.sp;
+    if (av.seats)          document.getElementById('av-seats').value         = av.seats;
+    if (av.speedCombat)    document.getElementById('av-speed-combat').value  = av.speedCombat;
+    if (av.speedNarrative) document.getElementById('av-speed-narrative').value = av.speedNarrative;
+    if (av.cost)           document.getElementById('av-cost').value          = av.cost;
+    if (av.description)    document.getElementById('av-description').value   = av.description;
+    document.getElementById('av-upgrades-tbody').innerHTML = '';
+    (av.upgrades||[]).forEach(u => addAvUpgrade(u.notes));
+    document.getElementById('av-weapons-tbody').innerHTML = '';
+    (av.weapons||[]).forEach(w => addAvWeapon(w.name, w.dmg, w.rof, w.notes));
+  }
 
-    // === NETRUNNER ===
-    function toggleNetrunnerModule(on) { document.getElementById('netrunner-section').style.display = on ? 'block' : 'none'; }
+  const nr = inc.netrunner;
+  if (nr) {
+    if (nr.enabled !== undefined) { document.getElementById('toggle-netrunner').checked = nr.enabled; toggleNetrunnerModule(nr.enabled); }
+    if (nr.hardening) document.getElementById('cfg-hardening').value = nr.hardening;
+    if (nr.firewall)  document.getElementById('cfg-firewall').value  = nr.firewall;
+    if (nr.processor) document.getElementById('cfg-processor').value = nr.processor;
+    if (nr.stealth)   document.getElementById('cfg-stealth').value   = nr.stealth;
+    document.getElementById('quickhacks-tbody').innerHTML = '';
+    (nr.quickhacks||[]).forEach(q => addQuickhackSlot(q.dr, q.notes));
+    document.getElementById('programs-tbody').innerHTML = '';
+    (nr.programs||[]).forEach(p => addProgramSlot(p.name, p.notes));
+  }
 
-    function addQuickhackSlot(dr="", notes="") {
-      const tr = document.createElement('tr'); tr.className = "net-qh-row";
-      tr.innerHTML = `<td><input type="number" class="qh-dr" value="${dr}" placeholder="0" style="text-align:center;"></td><td><textarea class="qh-notes" rows="2">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>`;
-      document.getElementById('quickhacks-tbody').appendChild(tr);
-    }
+  updateSheetMath();
+  setTimeout(() => {
+    document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea);
+    document.querySelectorAll('.cy-name, .cy-notes').forEach(autoResizeTextarea);
+  }, 100);
+}
 
-    function addProgramSlot(name="", notes="") {
-      const tr = document.createElement('tr'); tr.className = "net-prog-row";
-      tr.innerHTML = `<td><input type="text" class="prog-name" value="${name}" placeholder="e.g. Sword"></td><td><textarea class="prog-notes" rows="2">${notes}</textarea></td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>`;
-      document.getElementById('programs-tbody').appendChild(tr);
-    }
+// ═══ EXPORT / IMPORT (LOCAL) ═════════════════════════════
+document.getElementById('exportBtn').addEventListener('click', () => {
+  const d = buildExportObject();
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(d, null, 2)], { type: 'application/json' }));
+  a.download = `${d.handle}_cybercore.json`;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+});
 
-    function synchHealthDisplay() {
-      const a = document.getElementById('hp-max'), b = document.getElementById('hp-max-display');
-      if (a && b) b.value = a.value;
-    }
+document.getElementById('importFile').addEventListener('change', e => {
+  const file = e.target.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = evt => {
+    try {
+      applyImportObject(JSON.parse(evt.target.result));
+      alert('Matrix Connection Restored.');
+    } catch(err) { alert('Decryption Error.'); }
+  };
+  reader.readAsText(file);
+});
 
-    // === CYBERWARE ===
-    // Cells use resize:both on the textarea/input directly — no wrapper needed
-    ['Operating System','Frontal Cortex','Arms','Hands','Circulatory','Face','Skeleton','Integumentary','Legs','Nervous System'].forEach(group => {
-      for (let i = 1; i <= 3; i++) {
-        const row = document.createElement('tr');
-        row.className = "cyber-row";
-        row.setAttribute('data-group', group);
-        row.setAttribute('data-slot', i);
-        row.innerHTML = `
-          ${i === 1 ? `<td rowspan="3" style="font-weight:bold;color:var(--neon-cyan);vertical-align:middle;background:#0b0d1e;">${group}</td>` : ''}
-          <td style="padding:2px;"><textarea class="cy-name" rows="1" placeholder="Hardware..." style="resize:both;min-height:28px;width:100%;overflow:auto;"></textarea></td>
-          <td style="padding:2px;"><input type="number" class="cy-quality" min="1" max="5" value="1" style="text-align:center;"></td>
-          <td style="padding:2px;"><textarea class="cy-notes" rows="1" placeholder="Notes..." style="resize:both;min-height:28px;width:100%;overflow:auto;"></textarea></td>
-        `;
-        document.getElementById('cyberware-tbody').appendChild(row);
-      }
-    });
+// ═══ GLOBAL EVENTS ═══════════════════════════════════════
+document.addEventListener('input', e => {
+  if (e.target.matches('input,select,textarea')) updateSheetMath();
+  if (e.target.classList.contains('auto-expand')) autoResizeTextarea(e.target);
+});
+document.addEventListener('change', e => { if (e.target.matches('input[type="checkbox"]')) updateSheetMath(); });
+// Close cloud modal on backdrop click
+document.getElementById('cloud-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeCloudModal();
+});
 
-    // === WEAPONS ===
-    function addWeaponSlot(name="", dmg="", rof="", notes="") {
-      const tr = document.createElement('tr'); tr.className = "weapon-row";
-      tr.innerHTML = `
-        <td style="padding:2px;"><textarea class="wp-name" rows="1" placeholder="Heavy Pistol" style="resize:both;min-height:28px;width:100%;overflow:auto;">${name}</textarea></td>
-        <td><input type="text" class="wp-dmg" value="${dmg}" placeholder="3d6" style="text-align:center;"></td>
-        <td><input type="text" class="wp-rof" value="${rof}" placeholder="2" style="text-align:center;"></td>
-        <td style="padding:2px;"><textarea class="wp-notes" rows="1" placeholder="Notes..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
-        <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>
-      `;
-      document.getElementById('weapons-tbody').appendChild(tr);
-      tr.querySelectorAll('input,textarea').forEach(i => i.addEventListener('input', updateSheetMath));
-    }
-    document.getElementById('addWeaponBtn').addEventListener('click', () => addWeaponSlot());
-
-    // === GEAR ===
-    function addGearSlot(name="", notes="") {
-      const tr = document.createElement('tr'); tr.className = "gear-row";
-      tr.innerHTML = `
-        <td style="padding:2px;"><textarea class="gear-name auto-expand" rows="1" placeholder="Agent" style="resize:both;min-height:28px;width:100%;overflow:auto;">${name}</textarea></td>
-        <td style="padding:2px;"><textarea class="gear-notes auto-expand" rows="1" placeholder="Notes..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
-        <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();updateSheetMath();" style="padding:2px 6px;">X</button></td>
-      `;
-      document.getElementById('gear-tbody').appendChild(tr);
-      tr.querySelectorAll('input,textarea').forEach(i => i.addEventListener('input', updateSheetMath));
-      tr.querySelectorAll('.auto-expand').forEach(autoResizeTextarea);
-    }
-    document.getElementById('addGearBtn').addEventListener('click', () => addGearSlot());
-
-    addWeaponSlot("Heavy Pistol", "3d6", "2", "");
-    addGearSlot("Agent", "AI powered smartphone.");
-    addGearSlot("Carryall", "Heavy ripstop nylon bags.");
-
-    // === EFFECTS ENGINE ===
-    let customEffectsList = [];
-
-    document.getElementById('addEffectBtn').addEventListener('click', () => {
-      const inputVal = document.getElementById('effectInput').value.trim();
-      if (!inputVal) return;
-      const segments = inputVal.split(',').map(s => s.trim());
-      let modifiers = [], effectName = null;
-      segments.forEach((seg, idx) => {
-        const m = seg.match(/^(.*?)\s*([+-]\d+)\s*$/);
-        if (m) modifiers.push({ target: m[1].trim(), value: parseInt(m[2]) });
-        else if (idx === 0) effectName = seg;
-      });
-      if (modifiers.length > 0) {
-        customEffectsList.push({ id: Date.now(), name: effectName || modifiers[0].target, modifiers, active: true });
-        renderCustomEffects();
-        document.getElementById('effectInput').value = "";
-        updateSheetMath();
-      } else {
-        alert("Parsing Error.\nSyntax: EffectName STAT +N, SkillName +N\nExample: SynthCoke REF +2, Concentration +3");
-      }
-    });
-
-    function renderCustomEffects() {
-      const hook = document.getElementById('custom-effects-hook'); hook.innerHTML = "";
-      customEffectsList.forEach(eff => {
-        const div = document.createElement('div'); div.className = "effect-card";
-        const desc = eff.modifiers.map(m => `${m.value >= 0 ? '+' : ''}${m.value} ${m.target}`).join(', ');
-        div.innerHTML = `<label style="font-size:11px;"><input type="checkbox" data-id="${eff.id}" ${eff.active ? 'checked' : ''} onchange="toggleEffect(${eff.id})"><strong>${eff.name}</strong> (${desc})</label><button class="btn btn-danger" onclick="deleteEffect(${eff.id})" style="padding:2px 5px;font-size:10px;">Burn</button>`;
-        hook.appendChild(div);
-      });
-    }
-    window.toggleEffect = function(id) { const f = customEffectsList.find(e => e.id === id); if (f) f.active = !f.active; updateSheetMath(); };
-    window.deleteEffect = function(id) { customEffectsList = customEffectsList.filter(e => e.id !== id); renderCustomEffects(); updateSheetMath(); };
-
-    // === MAIN CALC ENGINE ===
-    function updateSheetMath() {
-      const b = {
-        INT: parseInt(document.getElementById('stat-int').value)||0,
-        REF: parseInt(document.getElementById('stat-ref').value)||0,
-        DEX: parseInt(document.getElementById('stat-dex').value)||0,
-        TECH: parseInt(document.getElementById('stat-tech').value)||0,
-        COOL: parseInt(document.getElementById('stat-cool').value)||0,
-        WILL: parseInt(document.getElementById('stat-will').value)||0,
-        LUCK: parseInt(document.getElementById('stat-luck').value)||0,
-        MOVE: parseInt(document.getElementById('stat-move').value)||0,
-        BODY: parseInt(document.getElementById('stat-body').value)||0,
-        EMP: parseInt(document.getElementById('stat-emp').value)||0
-      };
-      for (let k in b) document.getElementById(`mod-${k.toLowerCase()}`).innerText = "";
-      const ps = { ...b }; const sb = {};
-      customEffectsList.forEach(eff => {
-        if (!eff.active) return;
-        eff.modifiers.forEach(mod => {
-          const t = mod.target.toUpperCase();
-          if (ps[t] !== undefined) ps[t] += mod.value;
-          else sb[mod.target] = (sb[mod.target] || 0) + mod.value;
-        });
-      });
-      for (let k in b) if (ps[k] !== b[k]) document.getElementById(`mod-${k.toLowerCase()}`).innerText = `(${ps[k]})`;
-      const ap = parseInt(document.getElementById('eff-armor-penalty').value) || 0;
-      if (ap > 0) {
-        ps.REF = Math.max(0, ps.REF - ap); ps.DEX = Math.max(0, ps.DEX - ap); ps.MOVE = Math.max(0, ps.MOVE - ap);
-        document.getElementById('mod-ref').innerText = `(${ps.REF})`;
-        document.getElementById('mod-dex').innerText = `(${ps.DEX})`;
-        document.getElementById('mod-move').innerText = `(${ps.MOVE})`;
-      }
-      const hum = ps.WILL + ps.EMP;
-      const hpMax = 10 + (5 * Math.ceil((ps.BODY + ps.WILL) / 2));
-      document.getElementById('humanity').value = hum;
-      document.getElementById('hp-max').value = hpMax;
-      synchHealthDisplay();
-      const pEl = document.getElementById('psychosis-input'); const pVal = parseInt(pEl.value) || 0;
-      document.getElementById('humanity-threshold').innerText = hum;
-      if (pVal > hum) { pEl.classList.add('exceeded'); document.getElementById('psychosis-warning').innerText = '⚠ CYBERPSYCHOSIS THRESHOLD EXCEEDED'; }
-      else { pEl.classList.remove('exceeded'); document.getElementById('psychosis-warning').innerText = ''; }
-      const wounded = document.getElementById('eff-wounded').checked;
-      document.querySelectorAll('.skill-row').forEach(row => {
-        const stat = row.getAttribute('data-stat').toUpperCase();
-        const sn = row.getAttribute('data-skill-name') || '';
-        const lvl = parseInt(row.querySelector('input').value) || 0;
-        let val = lvl + ps[stat];
-        if (sb[sn]) val += sb[sn];
-        if (wounded) val -= 2;
-        row.querySelector('.skill-base-val').innerText = val;
-      });
-    }
-
-    // === GLOBAL EVENT LISTENERS ===
-    document.addEventListener('input', e => {
-      if (e.target.matches('input,select,textarea')) updateSheetMath();
-      if (e.target.classList.contains('auto-expand')) autoResizeTextarea(e.target);
-    });
-    document.addEventListener('change', e => { if (e.target.matches('input[type="checkbox"]')) updateSheetMath(); });
-    window.addEventListener('DOMContentLoaded', () => {
-      updateSheetMath();
-      setTimeout(() => document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea), 50);
-    });
-
-    // === AIR VEHICLE MODULE ===
-    function addAvUpgrade(notes="") {
-      const tr = document.createElement('tr'); tr.className = "av-upgrade-row";
-      tr.innerHTML = `
-        <td style="padding:2px;"><textarea class="av-upgrade-notes auto-expand" rows="1" placeholder="e.g. Reinforced Hull, Stealth Paint..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
-        <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>
-      `;
-      document.getElementById('av-upgrades-tbody').appendChild(tr);
-      tr.querySelectorAll('textarea').forEach(t => { t.addEventListener('input', () => autoResizeTextarea(t)); autoResizeTextarea(t); });
-    }
-
-    function addAvWeapon(name="", dmg="", rof="", notes="") {
-      const tr = document.createElement('tr'); tr.className = "av-weapon-row";
-      tr.innerHTML = `
-        <td style="padding:2px;"><textarea class="av-wp-name" rows="1" placeholder="Twin Autocannon" style="resize:both;min-height:28px;width:100%;overflow:auto;">${name}</textarea></td>
-        <td><input type="text" class="av-wp-dmg" value="${dmg}" placeholder="5d6" style="text-align:center;"></td>
-        <td><input type="text" class="av-wp-rof" value="${rof}" placeholder="1" style="text-align:center;"></td>
-        <td style="padding:2px;"><textarea class="av-wp-notes" rows="1" placeholder="Notes..." style="resize:both;min-height:28px;width:100%;overflow:auto;">${notes}</textarea></td>
-        <td style="text-align:center;vertical-align:middle;"><button class="btn btn-danger" onclick="this.closest('tr').remove();" style="padding:2px 6px;">X</button></td>
-      `;
-      document.getElementById('av-weapons-tbody').appendChild(tr);
-    }
-
-    // === EXPORT ===
-    document.getElementById('exportBtn').addEventListener('click', () => {
-      const d = {
-        handle: document.getElementById('charHandle').value,
-        notes: document.getElementById('charNotes').value,
-        eurodollars: document.getElementById('eurodollars').value,
-        rawStats: {
-          int: document.getElementById('stat-int').value, ref: document.getElementById('stat-ref').value,
-          dex: document.getElementById('stat-dex').value, tech: document.getElementById('stat-tech').value,
-          cool: document.getElementById('stat-cool').value, will: document.getElementById('stat-will').value,
-          luck: document.getElementById('stat-luck').value, move: document.getElementById('stat-move').value,
-          body: document.getElementById('stat-body').value, emp: document.getElementById('stat-emp').value
-        },
-        wounded: document.getElementById('eff-wounded').checked,
-        armorPenalty: document.getElementById('eff-armor-penalty').value,
-        psychosis: document.getElementById('psychosis-input').value,
-        customEffects: customEffectsList,
-        weapons: [], gear: [], cyberware: [], skills: [],
-        airVehicle: {
-          name: document.getElementById('av-name').value,
-          sdpChassis: document.getElementById('av-sdp-chassis').value,
-          sdpGlass: document.getElementById('av-sdp-glass').value,
-          sp: document.getElementById('av-sp').value,
-          seats: document.getElementById('av-seats').value,
-          speedCombat: document.getElementById('av-speed-combat').value,
-          speedNarrative: document.getElementById('av-speed-narrative').value,
-          cost: document.getElementById('av-cost').value,
-          description: document.getElementById('av-description').value,
-          upgrades: [],
-          weapons: []
-        }
-      };
-      document.querySelectorAll('.av-upgrade-row').forEach(r => d.airVehicle.upgrades.push({ notes: r.querySelector('.av-upgrade-notes').value }));
-      document.querySelectorAll('.av-weapon-row').forEach(r => d.airVehicle.weapons.push({ name: r.querySelector('.av-wp-name').value, dmg: r.querySelector('.av-wp-dmg').value, rof: r.querySelector('.av-wp-rof').value, notes: r.querySelector('.av-wp-notes').value }));
-      document.querySelectorAll('.weapon-row').forEach(r => d.weapons.push({ name: r.querySelector('.wp-name').value, dmg: r.querySelector('.wp-dmg').value, rof: r.querySelector('.wp-rof').value, notes: r.querySelector('.wp-notes').value }));
-      document.querySelectorAll('.gear-row').forEach(r => d.gear.push({ name: r.querySelector('.gear-name').value, notes: r.querySelector('.gear-notes').value }));
-      document.querySelectorAll('.cyber-row').forEach(r => d.cyberware.push({ group: r.getAttribute('data-group'), slot: r.getAttribute('data-slot'), name: r.querySelector('.cy-name').value, quality: r.querySelector('.cy-quality').value, notes: r.querySelector('.cy-notes').value }));
-      document.querySelectorAll('.skill-row').forEach(r => d.skills.push({ name: r.getAttribute('data-skill-name'), lvl: r.querySelector('input').value, stat: r.getAttribute('data-stat'), custom: r.classList.contains('custom-skill-injected') }));
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(new Blob([JSON.stringify(d, null, 2)], { type: "application/json" }));
-      a.download = `${d.handle}_cybercore.json`;
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    });
-
-    // === IMPORT ===
-    document.getElementById('importFile').addEventListener('change', e => {
-      const file = e.target.files[0]; if (!file) return;
-      const reader = new FileReader();
-      reader.onload = evt => {
-        try {
-          const inc = JSON.parse(evt.target.result);
-          if (inc.handle) document.getElementById('charHandle').value = inc.handle;
-          if (inc.notes) document.getElementById('charNotes').value = inc.notes;
-          if (inc.eurodollars) document.getElementById('eurodollars').value = inc.eurodollars;
-          for (let k in inc.rawStats) { const el = document.getElementById(`stat-${k}`); if (el) el.value = inc.rawStats[k]; }
-          if (inc.wounded !== undefined) document.getElementById('eff-wounded').checked = inc.wounded;
-          if (inc.armorPenalty) document.getElementById('eff-armor-penalty').value = inc.armorPenalty;
-          if (inc.psychosis) document.getElementById('psychosis-input').value = inc.psychosis;
-          if (inc.customEffects) { customEffectsList = inc.customEffects; renderCustomEffects(); }
-          document.getElementById('weapons-tbody').innerHTML = "";
-          if (inc.weapons) inc.weapons.forEach(w => addWeaponSlot(w.name, w.dmg, w.rof, w.notes));
-          document.getElementById('gear-tbody').innerHTML = "";
-          if (inc.gear) inc.gear.forEach(g => addGearSlot(g.name, g.notes));
-          if (inc.cyberware) {
-            document.querySelectorAll('.cyber-row').forEach(row => {
-              const m = inc.cyberware.find(c => c.group === row.getAttribute('data-group') && c.slot == row.getAttribute('data-slot'));
-              if (m) { row.querySelector('.cy-name').value = m.name || ""; row.querySelector('.cy-quality').value = m.quality || "1"; row.querySelector('.cy-notes').value = m.notes || ""; }
-            });
-          }
-          document.getElementById('custom-skills-hook').innerHTML = "";
-          if (inc.skills) {
-            inc.skills.forEach(s => {
-              const coreRow = Array.from(document.querySelectorAll('.skill-row')).find(r => r.getAttribute('data-skill-name') === s.name);
-              if (coreRow) coreRow.querySelector('input').value = s.lvl;
-              else if (s.custom) addNewCustomSkill(s.name, s.stat, parseInt(s.lvl) || 0);
-            });
-          }
-          if (inc.airVehicle) {
-            const av = inc.airVehicle;
-            if (av.name) document.getElementById('av-name').value = av.name;
-            if (av.sdpChassis) document.getElementById('av-sdp-chassis').value = av.sdpChassis;
-            if (av.sdpGlass) document.getElementById('av-sdp-glass').value = av.sdpGlass;
-            if (av.sp) document.getElementById('av-sp').value = av.sp;
-            if (av.seats) document.getElementById('av-seats').value = av.seats;
-            if (av.speedCombat) document.getElementById('av-speed-combat').value = av.speedCombat;
-            if (av.speedNarrative) document.getElementById('av-speed-narrative').value = av.speedNarrative;
-            if (av.cost) document.getElementById('av-cost').value = av.cost;
-            if (av.description) document.getElementById('av-description').value = av.description;
-            document.getElementById('av-upgrades-tbody').innerHTML = "";
-            if (av.upgrades) av.upgrades.forEach(u => addAvUpgrade(u.notes));
-            document.getElementById('av-weapons-tbody').innerHTML = "";
-            if (av.weapons) av.weapons.forEach(w => addAvWeapon(w.name, w.dmg, w.rof, w.notes));
-          }
-          updateSheetMath();
-          setTimeout(() => document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea), 100);
-          alert("Matrix Connection Restored.");
-        } catch(err) { alert("Decryption Error."); }
-      };
-      reader.readAsText(file);
-    });
-  </script>
+// ═══ INIT ════════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', () => {
+  initCyberware();
+  updateSheetMath();
+  setTimeout(() => document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea), 50);
+});
+</script>
 </body>
 </html>
