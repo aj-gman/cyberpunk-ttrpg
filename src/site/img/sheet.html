@@ -282,6 +282,41 @@
   }
 }
 
+
+  /* Mobile Responsive Layout */
+  @media (max-width: 768px) {
+    .character-sheet { padding: 10px; }
+    .tabs { flex-wrap: wrap; }
+    .tab { font-size: 11px; padding: 8px 12px; }
+    .panel { padding: 10px; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .skills-master-grid { grid-template-columns: 1fr !important; }
+    .combat-matrix { grid-template-columns: 1fr; }
+    .weapon-card { font-size: 11px; }
+    h1 { font-size: 18px; }
+    h2 { font-size: 13px; }
+    .role-ability-box { font-size: 11px; padding: 8px; }
+  }
+  
+  @media (max-width: 480px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .tab { font-size: 10px; padding: 6px 10px; }
+    h1 { font-size: 16px; }
+  }
+
+  .skill-delete-btn {
+    background: var(--danger-red);
+    color: #fff;
+    border: none;
+    padding: 2px 6px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+  }
+  .skill-delete-btn:hover {
+    background: #ff3366;
+  }
 </style>
 </head>
 <body>
@@ -381,7 +416,8 @@
         <div style="display: flex; gap: 5px; align-items: center;">
           <input type="number" id="ip-current" value="0" min="0" placeholder="Current" style="width:60px;border:1px solid #333;background:#000;font-size:16px;font-weight:bold;color:#fff;text-align:center;font-family:'Lexend',monospace;border-radius:3px;">
           <span style="opacity: 0.4; font-size: 14px;">/</span>
-          <input type="number" id="ip-total" value="0" min="0" placeholder="Total" style="width:60px;border:1px solid #333;background:#000;font-size:16px;font-weight:bold;color:#fff;text-align:center;font-family:'Lexend',monospace;border-radius:3px;">
+          <input type="number" id="ip-current" value="0" min="0" placeholder="Current" style="width:60px;border:1px solid #333;background:#000;font-size:16px;font-weight:bold;color:#fff;text-align:center;font-family:'Lexend',monospace;border-radius:3px;margin-right:5px;">
+          <input type="number" id="ip-total" value="0" min="0" placeholder="Total" style="width:60px;border:1px solid #333;background:#000;font-size:16px;font-weight:bold;color:#888;text-align:center;font-family:'Lexend',monospace;border-radius:3px;">
         </div>
         <span style="font-size:9px;color:#444;text-transform:uppercase;letter-spacing:1px;">Improvement<br>Points</span>
       </div>
@@ -445,6 +481,10 @@
                 <div class="stat-box" style="border-color:var(--neon-cyan);"><label>HEAD SP</label><input type="number" id="sp-head" value="11" min="0"></div>
                 <div class="stat-box" style="border-color:var(--neon-cyan);"><label>BODY SP</label><input type="number" id="sp-body" value="11" min="0"></div>
               </div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px;background:#0a0a0a;border-radius:4px;margin-bottom:15px;">
+                <label style="white-space:nowrap;color:#888;"><strong>Armor Penalty:</strong></label>
+                <input type="number" id="eff-armor-penalty" value="0" style="width:50px;text-align:center;background:#000;border:1px solid #333;color:#fff;border-radius:3px;">
+              </div>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
                 <div class="stat-box" style="border-color:var(--accent-yellow);"><label>CURRENT HEALTH</label><input type="number" id="hp-curr" value="40" min="0"></div>
                 <div class="stat-box" style="border-color:#555;"><label>MAX HEALTH</label><input type="text" id="hp-max-display" readonly style="color:#888;"></div>
@@ -457,6 +497,10 @@
                 </div>
                 <div id="damage-log" style="margin-top:8px;font-size:12px;font-weight:bold;text-align:center;text-transform:uppercase;min-height:15px;"></div>
               </div>
+              <div style="margin-top:15px;padding:8px;background:#1a0000;border:1px solid var(--danger-red);border-radius:4px;">
+                <label style="color:var(--danger-red);"><input type="checkbox" id="eff-wounded"> <strong>Seriously Wounded</strong> (-2 All)</label>
+                <div style="font-size:10px;color:#666;margin-top:4px;">Auto-applied when HP ≤ 50%</div>
+              </div>
             </div>
             <!-- STATUS EFFECTS -->
             <div class="panel" style="margin-bottom:0;padding:12px;">
@@ -466,15 +510,8 @@
                 <button class="btn" id="addEffectBtn" type="button">+ Inject</button>
               </div>
               <div class="effects-list">
-                <div class="effect-card" style="border-left-color:var(--danger-red);">
-                  <label><input type="checkbox" id="eff-wounded"> <strong>Seriously Wounded</strong> (-2 All)</label>
-                </div>
-                <div class="effect-card" style="border-left-color:var(--danger-red);">
-                  <div style="display:flex;align-items:center;gap:10px;width:100%;">
-                    <label style="white-space:nowrap;"><strong>Armor Penalty:</strong></label>
-                    <input type="number" id="eff-armor-penalty" value="0" style="width:50px;text-align:center;">
-                  </div>
-                </div>
+
+
                 <div id="custom-effects-hook"></div>
               </div>
               <!-- CYBERPSYCHOSIS -->
@@ -1056,9 +1093,47 @@ function addNewCustomSkill(name='', stat='', lvl=0) {
   row.className = 'skill-row custom-skill-injected';
   row.setAttribute('data-stat', targetStat.toLowerCase());
   row.setAttribute('data-skill-name', skillName);
-  row.innerHTML = `<div style="color:var(--neon-cyan);font-weight:bold;">${skillName}*</div><input type="number" value="${lvl}"><div class="skill-base-val">0</div>`;
+  
+  // Create editable skill name
+  const nameSpan = document.createElement('span');
+  nameSpan.contentEditable = true;
+  nameSpan.style.cssText = 'color:var(--neon-cyan);font-weight:bold;outline:none;cursor:text;';
+  nameSpan.textContent = skillName + '*';
+  nameSpan.addEventListener('blur', function() {
+    const newName = this.textContent.replace('*', '').trim();
+    if (newName) {
+      row.setAttribute('data-skill-name', newName);
+      this.textContent = newName + '*';
+    }
+  });
+  
+  const lvlInput = document.createElement('input');
+  lvlInput.type = 'number';
+  lvlInput.value = lvl;
+  lvlInput.addEventListener('input', updateSheetMath);
+  
+  const baseDiv = document.createElement('div');
+  baseDiv.className = 'skill-base-val';
+  baseDiv.textContent = '0';
+  
+  // Delete button
+  const deleteBtn = document.createElement('button');
+  deleteBtn.textContent = '×';
+  deleteBtn.className = 'btn';
+  deleteBtn.style.cssText = 'padding:2px 8px;font-size:16px;margin-left:5px;background:#ff0055;';
+  deleteBtn.onclick = function() {
+    if (confirm('Delete "' + skillName + '"?')) {
+      row.remove();
+      updateSheetMath();
+    }
+  };
+  
+  row.appendChild(nameSpan);
+  row.appendChild(lvlInput);
+  row.appendChild(baseDiv);
+  row.appendChild(deleteBtn);
+  
   document.getElementById('custom-skills-hook').appendChild(row);
-  row.querySelector('input').addEventListener('input', updateSheetMath);
   if (!name) nameInp.value = '';
   updateSheetMath();
 }
