@@ -317,6 +317,22 @@
   .skill-delete-btn:hover {
     background: #ff3366;
   }
+    .skill-delete-btn {
+      background: transparent;
+      border: none;
+      color: #888;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 0 4px;
+      transition: all 0.2s;
+      margin-right: 4px;
+    }
+    .skill-delete-btn:hover {
+      background: var(--danger-red);
+      color: #fff;
+      box-shadow: 0 0 10px var(--danger-red);
+    }
 </style>
 </head>
 <body>
@@ -415,7 +431,7 @@
         <label>IP</label>
         <div style="display: flex; gap: 5px; align-items: center;">
           <input type="number" id="ip-current" value="0" min="0" placeholder="Current" style="width:60px;border:1px solid #333;background:#000;font-size:16px;font-weight:bold;color:#fff;text-align:center;font-family:'Lexend',monospace;border-radius:3px;">
-          <input type="number" id="ip-current" value="0" min="0" placeholder="Current" style="width:60px;border:1px solid #333;background:#000;font-size:16px;font-weight:bold;color:#fff;text-align:center;font-family:'Lexend',monospace;border-radius:3px;margin-right:5px;">
+          <span style="color:#666;">/</span>
           <input type="number" id="ip-total" value="0" min="0" placeholder="Total" style="width:60px;border:1px solid #333;background:#000;font-size:16px;font-weight:bold;color:#888;text-align:center;font-family:'Lexend',monospace;border-radius:3px;">
         </div>
         <span style="font-size:9px;color:#444;text-transform:uppercase;letter-spacing:1px;">Improvement<br>Points</span>
