@@ -1564,6 +1564,31 @@ document.addEventListener('DOMContentLoaded', function() {
   if (maxHP) maxHP.addEventListener('input', checkSeriouslyWounded);
 });
 
+
+// IP validation - total must be >= current, grey out when empty
+const ipCurrent = document.getElementById('ip-current');
+const ipTotal = document.getElementById('ip-total');
+
+function updateIPOpacity() {
+  ipCurrent.style.opacity = ipCurrent.value ? '1' : '0.5';
+  ipTotal.style.opacity = ipTotal.value ? '1' : '0.5';
+}
+
+function validateIP() {
+  updateIPOpacity();
+  const current = parseInt(ipCurrent.value) || 0;
+  const total = parseInt(ipTotal.value) || 0;
+  
+  if (current > total && total > 0) {
+    ipCurrent.value = total;
+  }
+}
+
+ipCurrent.addEventListener('input', validateIP);
+ipTotal.addEventListener('input', validateIP);
+ipCurrent.addEventListener('change', validateIP);
+ipTotal.addEventListener('change', validateIP);
+
 </script>
 </body>
 </html>
