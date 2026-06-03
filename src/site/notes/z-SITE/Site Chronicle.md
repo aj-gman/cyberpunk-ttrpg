@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
 ---
 
 ### May 2026
@@ -33,10 +33,21 @@
 - [[z-SITE/Character Sheet\|Character Sheet]] has been brought to a stable patch, v1.0.1.1.
 - Cleared up some more on the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] webpage
 
+### June 2026
+#### *03.06*
+- Updated [[z-SITE/Character Sheet\|Character Sheet]] with features (Still work in progress):
+	- Added Cloud Sync feature (save in-browser to the site's Repo and load from there)
+	- Added Nerve Degeneration, Rep & IP trackers.
+	- Added Role Ability functionality with multiple roles & values
+	- Rearranged the **Cyberware** page to be able to collapse all categories with no cyberware for a cleaner view.
+
 ## TO DO
-- [ ] [[z-SITE/Character Sheet\|Character Sheet]] needs:
-	- [ ] Reputation (lore or mechanics only?)
-	- [ ] Reputation Events (lore or mechanics only?)
-	- [ ] Improvement Points (?)
-	- [ ] Add [[Rules/CPRED/Drugs/Drug Effects/Nerve Degeneration\|Nerve Degeneration]] as a feature
+- [ ] **[[z-SITE/Character Sheet\|Character Sheet]] needs:**
+	- [ ] Page for Notes, Backstory, Lore etc.
+	- [ ] Functionality for **REMOVING**:
+		- [ ] Custom Skills
+	- [ ] Links to the wiki when inserting: (with the idea being that you can find out the rules for them quickly without having them on the sheet in full)
+		- [ ] Role Abilities
+		- [ ] Skills
+		- [ ] Stats
 - [ ] Recalibrate mobile interface for the site (very buggy atm)
