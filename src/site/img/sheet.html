@@ -223,7 +223,66 @@
     .cyber-col-header { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; color: #333; text-align: center; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px dashed #1e2245; }
     /* VEHICLE MODULE */
     .stat-box { background: #000; border: 1px solid var(--accent-yellow); text-align: center; padding: 5px 4px; border-radius: 4px; }
-  </style>
+  
+/* Mobile Responsive Layout */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .character-sheet {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px;
+  }
+  
+  .skills-category {
+    margin-bottom: 15px;
+  }
+  
+  .skill-row {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .tabs {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .tab {
+    width: 100%;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    font-size: 14px;
+    padding: 6px;
+  }
+  
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+  }
+  
+  h3 {
+    font-size: 1em;
+  }
+}
+
+</style>
 </head>
 <body>
 
@@ -319,8 +378,13 @@
     <div class="ip-rep-row">
       <div class="ip-rep-box ip-box">
         <label>IP</label>
-        <input type="number" id="ip-tracker" value="0" min="0" style="width:80px;border:none;background:transparent;font-size:20px;font-weight:bold;color:#fff;text-align:center;font-family:'Lexend',monospace;">
+        <div style="display: flex; gap: 5px; align-items: center;">
+          <input type="number" id="ip-current" value="0" min="0" placeholder="Current" style="width:60px;border:1px solid #333;background:#000;font-size:16px;font-weight:bold;color:#fff;text-align:center;font-family:'Lexend',monospace;border-radius:3px;">
+          <span style="opacity: 0.4; font-size: 14px;">/</span>
+          <input type="number" id="ip-total" value="0" min="0" placeholder="Total" style="width:60px;border:1px solid #333;background:#000;font-size:16px;font-weight:bold;color:#fff;text-align:center;font-family:'Lexend',monospace;border-radius:3px;">
+        </div>
         <span style="font-size:9px;color:#444;text-transform:uppercase;letter-spacing:1px;">Improvement<br>Points</span>
+      </div>
       </div>
       <div class="ip-rep-box rep-box">
         <label>REP</label>
@@ -1402,6 +1466,29 @@ window.addEventListener('DOMContentLoaded', () => {
   updateSheetMath();
   setTimeout(() => document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea), 50);
 });
+
+// Auto-apply seriously wounded status
+function checkSeriouslyWounded() {
+  const currentHP = parseInt(document.getElementById('current-hp').value) || 0;
+  const maxHP = parseInt(document.getElementById('max-hp').value) || 0;
+  const seriouslyWounded = document.getElementById('seriously-wounded');
+  
+  if (maxHP > 0 && currentHP < (maxHP / 2)) {
+    seriouslyWounded.checked = true;
+  } else {
+    seriouslyWounded.checked = false;
+  }
+}
+
+// Add event listeners to HP inputs
+document.addEventListener('DOMContentLoaded', function() {
+  const currentHP = document.getElementById('current-hp');
+  const maxHP = document.getElementById('max-hp');
+  
+  if (currentHP) currentHP.addEventListener('input', checkSeriouslyWounded);
+  if (maxHP) maxHP.addEventListener('input', checkSeriouslyWounded);
+});
+
 </script>
 </body>
 </html>
