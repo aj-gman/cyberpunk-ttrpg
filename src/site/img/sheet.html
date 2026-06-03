@@ -1120,7 +1120,7 @@ function addNewCustomSkill(name='', stat='', lvl=0) {
   const deleteBtn = document.createElement('button');
   deleteBtn.textContent = '×';
   deleteBtn.className = 'btn';
-  deleteBtn.style.cssText = 'padding:2px 8px;font-size:16px;margin-left:5px;background:#ff0055;';
+  deleteBtn.style.cssText = 'padding:2px 5px;font-size:12px;margin-left:5px;min-width:24px;opacity:0.6;color:#ff0055;';
   deleteBtn.onclick = function() {
     if (confirm('Delete "' + skillName + '"?')) {
       row.remove();
