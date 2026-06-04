@@ -98,7 +98,7 @@
     .budget-bar .budget-pts { color: #555; font-size: 10px; margin-right: 4px; }
     /* SKILLS */
     .skills-master-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
-    .skills-header, .skill-row { display: grid; grid-template-columns: 4fr 1.2fr 1.2fr; gap: 4px; align-items: center; padding: 3px 0; }
+    .skills-header, .skill-row { display: grid; grid-template-columns: 24px 1fr 1.2fr 1.2fr; gap: 4px; align-items: center; padding: 3px 0; margin-left: 8px; }
     .skills-header { font-weight: bold; border-bottom: 1px solid var(--border-color); color: var(--neon-cyan); font-size: 10px; margin-top: 10px; }
     .skill-row { border-bottom: 1px dashed #2e3456; }
     .skill-row div { font-size: 11px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -333,6 +333,19 @@
       color: #fff;
       box-shadow: 0 0 10px var(--danger-red);
     }
+
+/* Hide modules on non-core pages */
+#page-inventory .character-header,
+#page-inventory .two-column,
+#page-inventory .health-section,
+#page-inventory .netrunner-section,
+#page-cyberware .character-header,
+#page-cyberware .two-column,
+#page-cyberware .health-section,
+#page-cyberware .netrunner-section {
+    display: none;
+}
+
 </style>
 </head>
 <body>
