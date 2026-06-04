@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyberpunk Red Advanced Sheet</title>
+  <title>Cyberpunk Red Advanced Sheet v.1.2.0.7 (Programmed with AI)</title>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -56,8 +56,8 @@
       align-items: center;
     }
     .tab-trigger-btn.active-btn { background: var(--accent-yellow) !important; color: #000 !important; box-shadow: 0 0 10px var(--accent-yellow); border-color: var(--accent-yellow) !important; }
-    .sheet-tab-panel { display: none; }
-    .sheet-tab-panel.active-view { display: block; }
+    .sheet-tab-panel { display: none !important; }
+    .sheet-tab-panel.active-view { display: block !important; }
     /* WIKI SEARCH */
     .wiki-search-portal-container { position: relative; margin-left: auto; }
     #wiki-search-input { width: 160px; padding: 6px; border: 1px solid var(--border-color); background: #000; color: #fff; font-family: 'Lexend', monospace; font-size: 12px; outline: none; }
@@ -93,18 +93,25 @@
     .stat-box.derived input { color: var(--neon-cyan); font-size: 13px; }
     .display-stat-modified { font-size: 10px; color: var(--neon-cyan); display: block; margin-top: 1px; }
     /* BUDGET BAR */
-    .budget-bar { display: flex; align-items: center; gap: 10px; padding: 7px 12px; background: #000; border: 1px solid #2e3456; border-radius: 3px; margin-top: 8px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #888; }
-    .budget-bar .budget-value { color: var(--accent-yellow); font-size: 18px; font-weight: bold; margin-left: auto; text-shadow: 0 0 8px rgba(254,232,1,0.5); font-family: 'Lexend', monospace; min-width: 36px; text-align: right; }
-    .budget-bar .budget-pts { color: #555; font-size: 10px; margin-right: 4px; }
+    .budget-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 7px 12px; background: #000; border: 1px solid #2e3456; border-radius: 3px; margin-top: 8px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+    .budget-bar .budget-value { color: #888; font-size: 18px; font-weight: bold; text-shadow: none; font-family: 'Lexend', monospace; min-width: 36px; text-align: right; }
+    .budget-bar .budget-pts { display: none; }
+    .header-budget-value { text-shadow: none; }
+    .seriously-wounded-message { display: none; margin-top: 15px; padding: 8px; background:#1a0000; border:1px solid var(--danger-red); border-radius:4px; color:var(--danger-red); font-weight:bold; }
+    .seriously-wounded-message.active { display: block; box-shadow: 0 0 18px rgba(255,0,85,0.5); }
+    .seriously-wounded-message small { display:block; margin-top:4px; color:#666; font-size:10px; font-weight:400; }
     /* SKILLS */
     .skills-master-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
-    .skills-header, .skill-row { display: grid; grid-template-columns: 24px 1fr 1.2fr 1.2fr; gap: 4px; align-items: center; padding: 3px 0; margin-left: 8px; }
-    .skill-row.custom { display: grid; grid-template-columns: 30px 1fr 50px 50px; gap: 4px; align-items: center; padding: 3px 0; margin-left: 8px; }
+    .skills-header, .skill-row { display: grid; grid-template-columns: 4fr 1.2fr 1.2fr; gap: 4px; align-items: center; padding: 3px 0; margin-left: 8px; }
     .skills-header { font-weight: bold; border-bottom: 1px solid var(--border-color); color: var(--neon-cyan); font-size: 10px; margin-top: 10px; }
     .skill-row { border-bottom: 1px dashed #2e3456; }
     .skill-row div { font-size: 11px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .skill-row input, .stats-row input[type="number"] { text-align: center; }
     .skill-row input { background: #000; border: 1px solid #444; color: white; text-align: center; width: 100%; font-size: 11px; padding: 2px 0; border-radius: 3px; font-family: 'Lexend', monospace; font-weight: 400; }
     .skill-base-val { text-align: center; font-weight: bold; color: var(--accent-yellow); font-size: 12px; }
+    h2 { display: flex; align-items: center; justify-content: space-between; }
+    .header-budget-value { color: #888; font-size: 18px; font-weight: 700; }
+    .budget-bar { display: none !important; }
     /* STATUS EFFECTS */
     .effects-builder { display: flex; gap: 8px; margin-bottom: 15px; }
     .effects-list { display: grid; grid-template-columns: 1fr; gap: 8px; }
@@ -335,16 +342,18 @@
       box-shadow: 0 0 10px var(--danger-red);
     }
 
-/* Hide modules on non-core pages */
-#page-inventory .character-header,
-#page-inventory .two-column,
-#page-inventory .health-section,
-#page-inventory .netrunner-section,
-#page-cyberware .character-header,
-#page-cyberware .two-column,
-#page-cyberware .health-section,
-#page-cyberware .netrunner-section {
-    display: none;
+/* Hide page-one modules on non-core pages */
+#page-inventory .identity-panel,
+#page-inventory .main-grid,
+#page-inventory .netrunner-toggle-panel,
+#page-inventory #netrunner-section,
+#page-inventory .skills-master-grid,
+#page-cyberware .identity-panel,
+#page-cyberware .main-grid,
+#page-cyberware .netrunner-toggle-panel,
+#page-cyberware #netrunner-section,
+#page-cyberware .skills-master-grid {
+    display: none !important;
 }
 
 </style>
@@ -378,7 +387,7 @@
 <!-- ═══════════════════ TOP BAR ═══════════════════ -->
 <div class="top-bar">
   <div>
-    <span style="color:var(--accent-yellow);font-weight:bold;">CYBERPUNK RED CHARACTER SHEET v.1.2.0.3 (Made with Google Gemini & Claude AI)</span>
+    <span style="color:var(--accent-yellow);font-weight:bold;">CYBERPUNK RED CHARACTER SHEET v.1.2.0.7 (Programmed with AI)</span>
   </div>
   <div style="display:flex;gap:8px;align-items:center;">
     <button class="btn" onclick="openCloudModal()" style="padding:5px 12px;">☁ CLOUD SYNC</button>
@@ -424,7 +433,7 @@
     <div class="identity-top-row">
       <div class="handle-block">
         <label>HANDLE:</label>
-        <input type="text" id="charHandle" value="Jacked_In_Runner">
+        <input type="text" id="charHandle" value="Punk">
       </div>
       <div class="roles-block">
         <div class="roles-block-header">
@@ -450,7 +459,6 @@
         </div>
         <span style="font-size:9px;color:#444;text-transform:uppercase;letter-spacing:1px;">Improvement<br>Points</span>
       </div>
-      </div>
       <div class="ip-rep-box rep-box">
         <label>REP</label>
         <input type="number" id="rep-tracker" value="0" min="0" max="10" style="width:80px;border:none;background:transparent;font-size:20px;font-weight:bold;color:#fff;text-align:center;font-family:'Lexend',monospace;">
@@ -467,7 +475,7 @@
 
       <!-- STATS -->
       <div class="panel">
-        <h2>STATS</h2>
+        <h2>STATS <span class="header-budget-value" id="stat-total">60</span></h2>
         <div class="stats-row">
           <div class="stat-box"><label>INT</label><input type="number" id="stat-int" value="6"><span class="display-stat-modified" id="mod-int"></span></div>
           <div class="stat-box"><label>REF</label><input type="number" id="stat-ref" value="6"><span class="display-stat-modified" id="mod-ref"></span></div>
@@ -487,8 +495,7 @@
         <!-- STAT BUDGET -->
         <div class="budget-bar">
           <span>Stat Points Allocated</span>
-          <span class="budget-pts">pts</span>
-          <span class="budget-value" id="stat-total">60</span>
+          <span class="budget-value">60</span>
         </div>
       </div>
 
@@ -507,28 +514,28 @@
             <div class="panel" style="margin-bottom:0;padding:12px;">
               <h2 style="font-size:14px;">COMBAT TELEMETRY</h2>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
-                <div class="stat-box" style="border-color:var(--neon-cyan);"><label>HEAD SP</label><input type="number" id="sp-head" value="11" min="0"></div>
-                <div class="stat-box" style="border-color:var(--neon-cyan);"><label>BODY SP</label><input type="number" id="sp-body" value="11" min="0"></div>
+                <div class="stat-box" style="border-color:var(--neon-cyan);"><label>HEAD SP</label><input type="number" id="sp-head" value="0" min="0"></div>
+                <div class="stat-box" style="border-color:var(--neon-cyan);"><label>BODY SP</label><input type="number" id="sp-body" value="7" min="0"></div>
               </div>
               <div style="display:flex;align-items:center;gap:10px;padding:8px;background:#0a0a0a;border-radius:4px;margin-bottom:15px;">
                 <label style="white-space:nowrap;color:#888;"><strong>Armor Penalty:</strong></label>
-                <input type="number" id="eff-armor-penalty" value="0" style="width:50px;text-align:center;background:#000;border:1px solid #333;color:#fff;border-radius:3px;">
+                <input type="number" id="eff-armor-penalty" value="0" min="-3" max="3" step="1" style="width:50px;text-align:center;background:#000;border:1px solid #333;color:#fff;border-radius:3px;">
               </div>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px;">
                 <div class="stat-box" style="border-color:var(--accent-yellow);"><label>CURRENT HEALTH</label><input type="number" id="hp-curr" value="40" min="0"></div>
                 <div class="stat-box" style="border-color:#555;"><label>MAX HEALTH</label><input type="text" id="hp-max-display" readonly style="color:#888;"></div>
               </div>
-              <div style="background:#000;padding:12px;border:1px dashed var(--danger-red);border-radius:4px;">
-                <label style="color:var(--danger-red);font-weight:bold;font-size:11px;display:block;margin-bottom:5px;">INCOMING DAMAGE</label>
+              <div style="background:#000;padding:10px;border:1px dashed var(--danger-red);border-radius:4px;">
+                <label style="color:var(--danger-red);font-weight:bold;font-size:11px;display:block;margin-bottom:4px;">INCOMING DAMAGE</label>
                 <div style="display:flex;gap:10px;">
                   <input type="number" id="dmg-counter" placeholder="0" min="0" style="flex:1;font-size:16px;font-weight:bold;text-align:center;border-color:var(--danger-red);">
                   <button class="btn btn-danger" type="button" onclick="resolveIncomingDamage()" style="flex:1;">Apply</button>
                 </div>
                 <div id="damage-log" style="margin-top:8px;font-size:12px;font-weight:bold;text-align:center;text-transform:uppercase;min-height:15px;"></div>
               </div>
-              <div style="margin-top:15px;padding:8px;background:#1a0000;border:1px solid var(--danger-red);border-radius:4px;">
-                <label style="color:var(--danger-red);"><input type="checkbox" id="eff-wounded"> <strong>Seriously Wounded</strong> (-2 All)</label>
-                <div style="font-size:10px;color:#666;margin-top:4px;">Auto-applied when HP ≤ 50%</div>
+              <div id="seriously-wounded" class="seriously-wounded-message">
+                <strong>Seriously Wounded</strong> (-2 All)
+                <small>Auto-applied when HP ≤ 50%</small>
               </div>
             </div>
             <!-- STATUS EFFECTS -->
@@ -613,7 +620,7 @@
 
     <!-- SKILLS -->
     <div class="panel">
-      <h2>SKILLS</h2>
+      <h2>SKILLS <span class="header-budget-value" id="skill-total">0</span></h2>
       <div class="skills-master-grid">
         <!-- COL 1 -->
         <div>
@@ -705,8 +712,7 @@
       <!-- SKILL BUDGET -->
       <div class="budget-bar" style="margin-top:15px;">
         <span>Skill Points Allocated</span>
-        <span class="budget-pts">pts</span>
-        <span class="budget-value" id="skill-total">0</span>
+        <span class="budget-value">0</span>
       </div>
       <!-- CUSTOM SKILL INSERTER -->
       <div class="skills-header" style="border-bottom:2px solid var(--accent-yellow);color:var(--accent-yellow);font-size:11px;margin-top:20px;">
@@ -888,10 +894,14 @@ let rolesData         = [];
 
 // ═══ TAB CONTROLLER ══════════════════════════════════════
 function switchTab(pageId, event) {
-  document.querySelectorAll('.sheet-tab-panel').forEach(p => p.classList.remove('active-view'));
-  document.querySelectorAll('.tab-trigger-btn').forEach(b => b.classList.remove('active-btn'));
-  document.getElementById(pageId).classList.add('active-view');
-  if (event) event.currentTarget.classList.add('active-btn');
+  document.querySelectorAll('.sheet-tab-panel').forEach(p => {
+    const isActive = p.id === pageId;
+    p.classList.toggle('active-view', isActive);
+    p.style.display = isActive ? 'block' : 'none';
+  });
+  document.querySelectorAll('.tab-trigger-btn').forEach(b => {
+    b.classList.toggle('active-btn', event ? b === event.currentTarget : b.getAttribute('onclick')?.includes(pageId));
+  });
 }
 
 // ═══ AUTO-RESIZE TEXTAREAS ═══════════════════════════════
@@ -1122,61 +1132,71 @@ function addNewCustomSkill(name='', stat='', lvl=0) {
   row.className = 'skill-row custom-skill-injected';
   row.setAttribute('data-stat', targetStat.toLowerCase());
   row.setAttribute('data-skill-name', skillName);
-  
-  // Create editable skill name
-  const nameSpan = document.createElement('span');
+
+  const nameSpan = document.createElement('div');
   nameSpan.contentEditable = true;
-  nameSpan.style.cssText = 'flex:1;color:var(--neon-cyan);font-weight:700;font-size:11px;outline:none;cursor:text;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;';
+  nameSpan.style.cssText = 'color:var(--neon-cyan);font-weight:700;font-size:11px;outline:none;cursor:text;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;';
   nameSpan.textContent = skillName + '*';
   nameSpan.addEventListener('blur', function() {
     const newName = this.textContent.replace('*', '').trim();
-    if (newName) {
-      row.setAttribute('data-skill-name', newName);
-      this.textContent = newName + '*';
+    if (!newName) {
+      row.remove();
+      updateSheetMath();
+      return;
+    }
+    row.setAttribute('data-skill-name', newName);
+    this.textContent = newName + '*';
+  });
+  nameSpan.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      nameSpan.blur();
     }
   });
   
   const lvlInput = document.createElement('input');
   lvlInput.type = 'number';
   lvlInput.value = lvl;
+  lvlInput.min = 0;
+  lvlInput.max = 10;
+  lvlInput.step = 1;
   lvlInput.addEventListener('input', updateSheetMath);
   
   const baseDiv = document.createElement('div');
   baseDiv.className = 'skill-base-val';
   baseDiv.textContent = '0';
   
-  // Delete button
-  const deleteBtn = document.createElement('button');
-  deleteBtn.textContent = '×';
-  deleteBtn.className = 'btn';
-  deleteBtn.style.cssText = 'width:24px;height:24px;padding:0;font-size:16px;margin-left:8px;margin-right:8px;border:2px solid var(--danger-red);background:transparent;color:var(--danger-red);cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0.6;transition:all 0.2s;';
-  deleteBtn.addEventListener('mouseover', function() {
-    this.style.background = 'var(--danger-red)';
-    this.style.color = '#fff';
-    this.style.boxShadow = '0 0 10px var(--danger-red)';
-    this.style.opacity = '1';
-  });
-  deleteBtn.addEventListener('mouseout', function() {
-    this.style.background = 'transparent';
-    this.style.color = 'var(--danger-red)';
-    this.style.boxShadow = 'none';
-    this.style.opacity = '0.6';
-  });
-  deleteBtn.onclick = function() {
-    if (confirm('Delete "' + skillName + '"?')) {
-      row.remove();
-      updateSheetMath();
-    }
-  };
-  
-  row.appendChild(deleteBtn);
   row.appendChild(nameSpan);
   row.appendChild(lvlInput);
   row.appendChild(baseDiv);
   
   document.getElementById('custom-skills-hook').appendChild(row);
   if (!name) nameInp.value = '';
+  enforceStatAndSkillRanges();
   updateSheetMath();
+}
+
+function enforceStatAndSkillRanges() {
+  document.querySelectorAll('.stats-row input[type="number"]').forEach(inp => {
+    inp.min = 0;
+    inp.max = 15;
+    inp.step = 1;
+    if (!inp.value) return;
+    const v = parseInt(inp.value, 10);
+    if (Number.isNaN(v)) return;
+    if (v < 0) inp.value = 0;
+    if (v > 15) inp.value = 15;
+  });
+  document.querySelectorAll('.skill-row input[type="number"]').forEach(inp => {
+    inp.min = 0;
+    inp.max = 10;
+    inp.step = 1;
+    if (!inp.value) return;
+    const v = parseInt(inp.value, 10);
+    if (Number.isNaN(v)) return;
+    if (v < 0) inp.value = 0;
+    if (v > 10) inp.value = 10;
+  });
 }
 
 // ═══ DAMAGE ENGINE ════════════════════════════════════════
@@ -1327,9 +1347,17 @@ function updateSheetMath() {
     });
   });
   for (let k in b) if (ps[k] !== b[k]) document.getElementById(`mod-${k.toLowerCase()}`).innerText = `(${ps[k]})`;
-  const ap = parseInt(document.getElementById('eff-armor-penalty').value) || 0;
-  if (ap > 0) {
-    ps.REF = Math.max(0, ps.REF - ap); ps.DEX = Math.max(0, ps.DEX - ap); ps.MOVE = Math.max(0, ps.MOVE - ap);
+  const ap = parseInt(document.getElementById('eff-armor-penalty').value, 10) || 0;
+  if (ap !== 0) {
+    if (ap < 0) {
+      ps.REF = ps.REF - ap;
+      ps.DEX = ps.DEX - ap;
+      ps.MOVE = ps.MOVE - ap;
+    } else {
+      ps.REF = ps.REF + ap;
+      ps.DEX = ps.DEX + ap;
+      ps.MOVE = ps.MOVE + ap;
+    }
     document.getElementById('mod-ref').innerText  = `(${ps.REF})`;
     document.getElementById('mod-dex').innerText  = `(${ps.DEX})`;
     document.getElementById('mod-move').innerText = `(${ps.MOVE})`;
@@ -1339,6 +1367,7 @@ function updateSheetMath() {
   document.getElementById('humanity').value = hum;
   document.getElementById('hp-max').value   = hpMax;
   synchHealthDisplay();
+  checkSeriouslyWounded();
 
   // Cyberpsychosis
   const pEl  = document.getElementById('psychosis-input');
@@ -1371,7 +1400,7 @@ function updateSheetMath() {
   }
 
   // Skills
-  const wounded = document.getElementById('eff-wounded').checked;
+  const wounded = isSeriouslyWounded();
   document.querySelectorAll('.skill-row').forEach(row => {
     const stat = row.getAttribute('data-stat').toUpperCase();
     const sn   = row.getAttribute('data-skill-name') || '';
@@ -1425,7 +1454,6 @@ function buildExportObject() {
       luck:document.getElementById('stat-luck').value, move:document.getElementById('stat-move').value,
       body:document.getElementById('stat-body').value, emp: document.getElementById('stat-emp').value,
     },
-    wounded:       document.getElementById('eff-wounded').checked,
     armorPenalty:  document.getElementById('eff-armor-penalty').value,
     psychosis:     document.getElementById('psychosis-input').value,
     nerveDegeneration: document.getElementById('nerve-input').value,
@@ -1477,7 +1505,6 @@ function applyImportObject(inc) {
   }
 
   for (let k in (inc.rawStats||{})) { const el = document.getElementById(`stat-${k}`); if (el) el.value = inc.rawStats[k]; }
-  if (inc.wounded !== undefined) document.getElementById('eff-wounded').checked = inc.wounded;
   if (inc.armorPenalty != null)  document.getElementById('eff-armor-penalty').value = inc.armorPenalty;
   if (inc.psychosis != null)     document.getElementById('psychosis-input').value   = inc.psychosis;
   if (inc.nerveDegeneration != null) document.getElementById('nerve-input').value   = inc.nerveDegeneration;
@@ -1504,7 +1531,7 @@ function applyImportObject(inc) {
   (inc.skills||[]).forEach(s => {
     const coreRow = Array.from(document.querySelectorAll('.skill-row')).find(r => r.getAttribute('data-skill-name') === s.name);
     if (coreRow) coreRow.querySelector('input').value = s.lvl;
-    else if (s.custom) addNewCustomSkill(s.name, s.stat, parseInt(s.lvl) || 0);
+    else if (s.custom && s.name) addNewCustomSkill(s.name, s.stat, parseInt(s.lvl) || 0);
   });
 
   const av = inc.airVehicle;
@@ -1579,31 +1606,30 @@ document.getElementById('cloud-modal').addEventListener('click', function(e) {
 // ═══ INIT ════════════════════════════════════════════════
 window.addEventListener('DOMContentLoaded', () => {
   initCyberware();
+  enforceStatAndSkillRanges();
   updateSheetMath();
+  document.querySelectorAll('.sheet-tab-panel').forEach(panel => {
+    panel.style.display = panel.classList.contains('active-view') ? 'block' : 'none';
+  });
   setTimeout(() => document.querySelectorAll('.auto-expand').forEach(autoResizeTextarea), 50);
 });
 
 // Auto-apply seriously wounded status
-function checkSeriouslyWounded() {
-  const currentHP = parseInt(document.getElementById('current-hp').value) || 0;
-  const maxHP = parseInt(document.getElementById('max-hp').value) || 0;
-  const seriouslyWounded = document.getElementById('seriously-wounded');
-  
-  if (maxHP > 0 && currentHP < (maxHP / 2)) {
-    seriouslyWounded.checked = true;
-  } else {
-    seriouslyWounded.checked = false;
-  }
+function isSeriouslyWounded() {
+  const currentHP = parseInt(document.getElementById('hp-curr').value, 10) || 0;
+  const maxHP = parseInt(document.getElementById('hp-max').value, 10) || 0;
+  return maxHP > 0 && currentHP < (maxHP / 2);
 }
 
-// Add event listeners to HP inputs
-document.addEventListener('DOMContentLoaded', function() {
-  const currentHP = document.getElementById('current-hp');
-  const maxHP = document.getElementById('max-hp');
-  
-  if (currentHP) currentHP.addEventListener('input', checkSeriouslyWounded);
-  if (maxHP) maxHP.addEventListener('input', checkSeriouslyWounded);
-});
+function checkSeriouslyWounded() {
+  const seriouslyWounded = document.getElementById('seriously-wounded');
+  if (!seriouslyWounded) return;
+  if (isSeriouslyWounded()) {
+    seriouslyWounded.classList.add('active');
+  } else {
+    seriouslyWounded.classList.remove('active');
+  }
+}
 
 
 // IP validation - total must be >= current, grey out when empty
