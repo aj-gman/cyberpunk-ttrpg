@@ -1112,7 +1112,7 @@ function addNewCustomSkill(name='', stat='', lvl=0) {
   // Create editable skill name
   const nameSpan = document.createElement('span');
   nameSpan.contentEditable = true;
-  nameSpan.style.cssText = 'color:var(--neon-cyan);font-weight:bold;outline:none;cursor:text;';
+  nameSpan.style.cssText = 'flex:1;color:var(--neon-cyan);font-weight:700;font-size:11px;outline:none;cursor:text;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;';
   nameSpan.textContent = skillName + '*';
   nameSpan.addEventListener('blur', function() {
     const newName = this.textContent.replace('*', '').trim();
@@ -1135,7 +1135,19 @@ function addNewCustomSkill(name='', stat='', lvl=0) {
   const deleteBtn = document.createElement('button');
   deleteBtn.textContent = '×';
   deleteBtn.className = 'btn';
-  deleteBtn.style.cssText = 'padding:2px 5px;font-size:12px;margin-left:5px;min-width:24px;opacity:0.6;color:#ff0055;';
+  deleteBtn.style.cssText = 'padding:2px 4px;font-size:16px;margin-right:8px;min-width:20px;opacity:0.6;color:var(--danger-red);transition:all 0.2s;';
+  deleteBtn.addEventListener('mouseover', function() {
+    this.style.background = 'var(--danger-red)';
+    this.style.color = '#fff';
+    this.style.boxShadow = '0 0 10px var(--danger-red)';
+    this.style.opacity = '1';
+  });
+  deleteBtn.addEventListener('mouseout', function() {
+    this.style.background = 'transparent';
+    this.style.color = 'var(--danger-red)';
+    this.style.boxShadow = 'none';
+    this.style.opacity = '0.6';
+  });
   deleteBtn.onclick = function() {
     if (confirm('Delete "' + skillName + '"?')) {
       row.remove();
