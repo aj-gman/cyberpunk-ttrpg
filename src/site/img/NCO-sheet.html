@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon City Overdrive — Character Sheet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    :root {
+      --bg-color: #000000;
+      --panel-bg: #171A39;
+      --accent-yellow: #FEE801;
+      --neon-cyan: #54C1E6;
+      --neon-pink: #FF2D78;
+      --text-color: #E2E8F0;
+      --border-color: #39C4B6;
+      --danger-red: #ff0055;
+      --net-green: #00ff41;
+      --purple: #a142ff;
+      --dim: #555;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Lexend', 'Courier New', monospace;
+      margin: 0;
+      padding: 15px;
+      font-size: 13px;
+    }
+
+    h2 {
+      color: var(--neon-pink);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0 0 10px 0;
+      border-bottom: 2px solid var(--neon-pink);
+      padding-bottom: 5px;
+      text-shadow: 0 0 10px rgba(255,45,120,0.5);
+      font-size: 13px;
+    }
+
+    h3 {
+      color: var(--accent-yellow);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 12px 0 6px 0;
+      font-size: 11px;
+      border-bottom: 1px solid var(--accent-yellow);
+      padding-bottom: 3px;
+      text-shadow: 0 0 8px rgba(254,232,1,0.4);
+    }
+
+    /* TOP BAR */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--panel-bg);
+      padding: 12px 18px;
+      border-radius: 4px;
+      margin-bottom: 18px;
+      border: 1px solid var(--border-color);
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nco-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-neon { color: var(--neon-pink); font-weight: 700; font-size: 18px; letter-spacing: 3px; text-shadow: 0 0 12px var(--neon-pink); text-transform: uppercase; }
+    .logo-city { color: var(--accent-yellow); font-weight: 700; font-size: 18px; letter-spacing: 3px; text-shadow: 0 0 12px var(--accent-yellow); text-transform: uppercase; }
+    .logo-over { color: var(--neon-cyan); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.8; }
+
+    .top-bar-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+    /* BUTTONS */
+    .btn {
+      background: transparent;
+      color: var(--neon-cyan);
+      border: 1px solid var(--neon-cyan);
+      padding: 6px 14px;
+      cursor: pointer;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: all 0.2s;
+      font-family: 'Lexend', monospace;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+    .btn:hover { background: var(--neon-cyan); color: #000; box-shadow: 0 0 12px var(--neon-cyan); }
+    .btn-pink { color: var(--neon-pink); border-color: var(--neon-pink); }
+    .btn-pink:hover { background: var(--neon-pink); color: #fff; box-shadow: 0 0 12px var(--neon-pink); }
+    .btn-yellow { color: var(--accent-yellow); border-color: var(--accent-yellow); }
+    .btn-yellow:hover { background: var(--accent-yellow); color: #000; box-shadow: 0 0 12px var(--accent-yellow); }
+    .btn-danger { color: var(--danger-red); border-color: var(--danger-red); }
+    .btn-danger:hover { background: var(--danger-red); color: #fff; box-shadow: 0 0 10px var(--danger-red); }
+    .btn-small { padding: 3px 8px; font-size: 10px; }
+
+    /* PANELS */
+    .panel {
+      background: var(--panel-bg);
+      border: 1px solid var(--border-color);
+      padding: 14px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    /* LAYOUT */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 16px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .main-grid { grid-template-columns: 1fr; }
+    }
+
+    /* INPUTS */
+    input[type="text"], input[type="number"], textarea, select {
+      background: #000;
+      border: 1px solid #333;
+      color: var(--text-color);
+      font-family: 'Lexend', monospace;
+      font-size: 12px;
+      padding: 5px 7px;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 6px rgba(84,193,230,0.2);
+    }
+    textarea { resize: vertical; min-height: 52px; }
+    input[type="number"] { -moz-appearance: textfield; }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+    /* FORM ROWS */
+    .field-row { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .field-row label { color: var(--neon-cyan); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; padding-top: 7px; min-width: 72px; }
+    .field-row input, .field-row textarea { flex: 1; }
+    .field-label { color: var(--neon-cyan); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 4px; }
+
+    /* NICKNAME */
+    .nickname-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #000;
+      border: 1px solid var(--neon-pink);
+      padding: 8px 14px;
+      margin-bottom: 14px;
+      border-radius: 3px;
+    }
+    .nickname-row label { color: var(--neon-pink); font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; white-space: nowrap; }
+    .nickname-row input { background: transparent; border: none; color: #fff; font-size: 20px; font-weight: 700; font-family: 'Lexend', monospace; flex: 1; padding: 0; }
+    .nickname-row input:focus { outline: none; border-bottom: 1px solid var(--neon-pink); }
+
+    /* TRADEMARKS */
+    .trademark-block {
+      background: #000;
+      border: 1px solid #2a2d50;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .trademark-header {
+      display: flex;
+      align-items: center;
+      background: #0d0f22;
+      border-bottom: 1px solid #2a2d50;
+      padding: 6px 10px;
+      gap: 8px;
+    }
+    .trademark-name-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #444;
+      color: var(--accent-yellow);
+      font-weight: 700;
+      font-size: 13px;
+      font-family: 'Lexend', monospace;
+      flex: 1;
+      padding: 2px 4px;
+      letter-spacing: 1px;
+    }
+    .trademark-name-input:focus { outline: none; border-bottom-color: var(--neon-pink); }
+    .trademark-name-input::placeholder { color: #333; font-weight: 400; }
+    .trademark-body { padding: 8px 10px; }
+    .trademark-body-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .edges-section label, .triggers-section label { color: var(--neon-cyan); font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .edges-section label { color: var(--neon-pink); }
+
+    .edge-row, .trigger-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 4px;
+    }
+    .edge-row input, .trigger-row input {
+      flex: 1;
+      background: #0a0c1a;
+      border: 1px solid #1e2245;
+      color: var(--text-color);
+      font-size: 11px;
+      padding: 3px 6px;
+    }
+    .edge-row input:focus, .trigger-row input:focus { border-color: var(--neon-cyan); }
+    .edge-num { color: #333; font-size: 9px; font-weight: 700; min-width: 12px; text-align: center; }
+
+    /* HITS */
+    .hits-row { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
+    .hit-pip {
+      width: 28px; height: 28px;
+      border: 2px solid var(--neon-pink);
+      border-radius: 3px;
+      cursor: pointer;
+      background: transparent;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.15s;
+      font-size: 16px;
+      color: transparent;
+    }
+    .hit-pip.marked {
+      background: var(--neon-pink);
+      box-shadow: 0 0 10px var(--neon-pink);
+      color: #000;
+    }
+
+    /* STASH / DRIVE PIPS */
+    .pip-row { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 6px; }
+    .pip {
+      width: 20px; height: 20px;
+      border: 1px solid var(--border-color);
+      border-radius: 2px;
+      cursor: pointer;
+      background: transparent;
+      transition: all 0.15s;
+    }
+    .pip.marked { background: var(--neon-cyan); box-shadow: 0 0 6px var(--neon-cyan); border-color: var(--neon-cyan); }
+    .pip.yellow { border-color: var(--accent-yellow); }
+    .pip.yellow.marked { background: var(--accent-yellow); box-shadow: 0 0 6px var(--accent-yellow); }
+
+    /* EXP PIPS */
+    .exp-section { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .exp-group { display: flex; gap: 4px; }
+    .exp-divider { color: var(--dim); font-size: 18px; font-weight: 300; }
+
+    /* CONDITIONS */
+    .conditions-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+    .condition-item { display: flex; align-items: center; gap: 6px; }
+    .condition-item input[type="checkbox"] { display: none; }
+    .condition-label {
+      cursor: pointer;
+      font-size: 11px;
+      color: #888;
+      padding: 4px 8px;
+      border: 1px solid #2a2d50;
+      border-radius: 3px;
+      transition: all 0.15s;
+      width: 100%;
+      text-align: center;
+      user-select: none;
+    }
+    .condition-item input[type="checkbox"]:checked + .condition-label {
+      color: var(--neon-pink);
+      border-color: var(--neon-pink);
+      background: rgba(255,45,120,0.1);
+      box-shadow: 0 0 8px rgba(255,45,120,0.2);
+    }
+    .custom-condition { display: flex; gap: 5px; align-items: center; margin-top: 5px; }
+    .custom-condition input[type="text"] { font-size: 11px; }
+
+    /* TRAUMAS */
+    .trauma-row { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
+    .trauma-mark {
+      width: 14px; height: 14px;
+      background: var(--danger-red);
+      border: 1px solid var(--danger-red);
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .trauma-mark.empty { background: transparent; border-color: #444; }
+    .trauma-row input { flex: 1; font-size: 11px; }
+
+    /* FLAWS */
+    .flaw-row { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
+    .flaw-mark { width: 14px; height: 14px; background: var(--purple); border: 1px solid var(--purple); flex-shrink: 0; }
+    .flaw-row input { flex: 1; font-size: 11px; }
+
+    /* STUNT POINTS */
+    .stunt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .stunt-box { background: #000; border: 1px solid #2a2d50; padding: 6px 10px; text-align: center; }
+    .stunt-box label { display: block; color: var(--neon-cyan); font-size: 9px; font-weight: 700; letter-spacing: 2px; margin-bottom: 3px; }
+    .stunt-box input { background: transparent; border: none; color: var(--accent-yellow); font-size: 22px; font-weight: 700; text-align: center; font-family: 'Lexend', monospace; width: 100%; }
+
+    /* GEAR */
+    .gear-section label { color: var(--neon-cyan); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin: 8px 0 4px; }
+
+    /* DIVIDER */
+    .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border-color), transparent); margin: 12px 0; }
+
+    /* PRINT STYLES */
+    @media print {
+      body { background: #fff !important; color: #000 !important; padding: 0; }
+      .top-bar, .no-print { display: none !important; }
+      .panel { background: #f5f5f5 !important; border: 1px solid #ccc !important; page-break-inside: avoid; }
+      .main-grid { display: grid !important; }
+      input, textarea { background: #fff !important; color: #000 !important; border: 1px solid #999 !important; }
+      h2 { color: #c00 !important; }
+      h3 { color: #333 !important; }
+    }
+
+    /* SCAN LINES EFFECT */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.03) 2px,
+        rgba(0,0,0,0.03) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* SECTION ACCENT BORDER */
+    .panel.pink-border { border-color: var(--neon-pink); }
+    .panel.yellow-border { border-color: var(--accent-yellow); }
+    .panel.purple-border { border-color: var(--purple); }
+
+    /* STASH SEPARATOR */
+    .stash-sep { color: var(--dim); font-size: 14px; font-weight: 300; margin: 0 2px; }
+
+    /* Loading overlay */
+    #pdf-loading {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 99999;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+    #pdf-loading.active { display: flex; }
+    .spinner { width: 36px; height: 36px; border: 3px solid var(--neon-cyan); border-top-color: transparent; border-radius: 50%; animation: spin 0.7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #pdf-loading p { color: var(--neon-cyan); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+
+    /* Sheet wrapper for PDF export */
+    #sheet-wrapper { max-width: 1200px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+<!-- PDF Loading Overlay -->
+<div id="pdf-loading">
+  <div class="spinner"></div>
+  <p>Generating PDF…</p>
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar no-print">
+  <div class="top-bar-title">
+    <div class="nco-logo">
+      <span><span class="logo-neon">NEON </span><span class="logo-city">CITY</span></span>
+      <span class="logo-over">OVERDRIVE</span>
+    </div>
+    <span style="color:#444;font-size:20px;">|</span>
+    <span style="color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:1px;">Character Sheet</span>
+  </div>
+  <div class="top-bar-actions">
+    <label class="btn" style="display:inline-block;cursor:pointer;">
+      ⬆ Load JSON <input type="file" id="importFile" accept=".json" style="display:none;">
+    </label>
+    <button class="btn btn-yellow" onclick="saveJSON()">⬇ Save JSON</button>
+    <button class="btn btn-pink" onclick="exportPDF()">⬛ Export PDF</button>
+  </div>
+</div>
+
+<!-- SHEET WRAPPER (used for PDF capture) -->
+<div id="sheet-wrapper">
+
+  <!-- NICKNAME -->
+  <div class="nickname-row">
+    <label>Nickname</label>
+    <input type="text" id="nickname" placeholder="Enter street name…">
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div class="panel" style="margin-bottom:16px;">
+    <h2>Description</h2>
+    <textarea id="description" rows="3" placeholder="Who are you? What do you look like? What's your vibe?"></textarea>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="main-grid">
+
+    <!-- LEFT COLUMN: Trademarks -->
+    <div>
+      <div class="panel">
+        <h2>Trademarks</h2>
+        <div id="trademarks-container"></div>
+        <button class="btn btn-small" onclick="addTrademark()" style="margin-top:4px;">+ Add Trademark</button>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div>
+
+      <!-- HITS -->
+      <div class="panel pink-border">
+        <h2>Hits</h2>
+        <div class="hits-row" id="hits-pips"></div>
+      </div>
+
+      <!-- CONDITIONS -->
+      <div class="panel">
+        <h2>Conditions</h2>
+        <div class="conditions-grid">
+          <div class="condition-item"><input type="checkbox" id="cond-angry"><label class="condition-label" for="cond-angry">Angry</label></div>
+          <div class="condition-item"><input type="checkbox" id="cond-dazed"><label class="condition-label" for="cond-dazed">Dazed</label></div>
+          <div class="condition-item"><input type="checkbox" id="cond-exhausted"><label class="condition-label" for="cond-exhausted">Exhausted</label></div>
+          <div class="condition-item"><input type="checkbox" id="cond-scared"><label class="condition-label" for="cond-scared">Scared</label></div>
+          <div class="condition-item"><input type="checkbox" id="cond-restrained"><label class="condition-label" for="cond-restrained">Restrained</label></div>
+          <div class="condition-item"><input type="checkbox" id="cond-weakened"><label class="condition-label" for="cond-weakened">Weakened</label></div>
+        </div>
+        <div class="custom-condition" style="margin-top:8px;">
+          <input type="checkbox" id="cond-custom1" style="width:auto;flex-shrink:0;">
+          <input type="text" id="cond-custom1-text" placeholder="Custom condition…" style="font-size:11px;">
+        </div>
+        <div class="custom-condition">
+          <input type="checkbox" id="cond-custom2" style="width:auto;flex-shrink:0;">
+          <input type="text" id="cond-custom2-text" placeholder="Custom condition…" style="font-size:11px;">
+        </div>
+      </div>
+
+      <!-- TRAUMAS -->
+      <div class="panel yellow-border">
+        <h2>Traumas</h2>
+        <div id="traumas-container">
+          <div class="trauma-row"><div class="trauma-mark empty" onclick="toggleTrauma(this)"></div><input type="text" placeholder="Trauma description…"></div>
+          <div class="trauma-row"><div class="trauma-mark empty" onclick="toggleTrauma(this)"></div><input type="text" placeholder="Trauma description…"></div>
+          <div class="trauma-row"><div class="trauma-mark empty" onclick="toggleTrauma(this)"></div><input type="text" placeholder="Trauma description…"></div>
+          <div class="trauma-row"><div class="trauma-mark empty" onclick="toggleTrauma(this)"></div><input type="text" placeholder="Trauma description…"></div>
+        </div>
+      </div>
+
+      <!-- FLAWS -->
+      <div class="panel purple-border">
+        <h2>Flaws</h2>
+        <div class="flaw-row"><div class="flaw-mark"></div><input type="text" id="flaw1" placeholder="Flaw…"></div>
+        <div class="flaw-row" style="margin-top:5px;"><div class="flaw-mark"></div><input type="text" id="flaw2" placeholder="Flaw…"></div>
+      </div>
+
+      <!-- STUNT POINTS -->
+      <div class="panel">
+        <h2>Stunt Points</h2>
+        <div class="stunt-grid">
+          <div class="stunt-box">
+            <label>Base</label>
+            <input type="number" id="stunt-base" min="0" placeholder="—">
+          </div>
+          <div class="stunt-box">
+            <label>Current</label>
+            <input type="number" id="stunt-current" min="0" placeholder="—">
+          </div>
+        </div>
+      </div>
+
+      <!-- GEAR -->
+      <div class="panel">
+        <h2>Gear</h2>
+        <div class="gear-section">
+          <label>Basic</label>
+          <textarea id="gear-basic" rows="3" placeholder="Basic gear…"></textarea>
+          <label>Special</label>
+          <textarea id="gear-special" rows="3" placeholder="Special gear…"></textarea>
+        </div>
+        <div class="divider"></div>
+        <h3>Stash</h3>
+        <div class="pip-row" id="stash-pips"></div>
+      </div>
+
+      <!-- DRIVE -->
+      <div class="panel">
+        <h2>Drive</h2>
+        <textarea id="drive-text" rows="2" placeholder="What drives you? Your motivation…"></textarea>
+        <div class="pip-row" id="drive-pips" style="margin-top:8px;"></div>
+      </div>
+
+      <!-- EXPERIENCE POINTS -->
+      <div class="panel">
+        <h2>Experience Points</h2>
+        <div class="exp-section" id="exp-pips"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- end sheet-wrapper -->
+
+<script>
+  // ═══════════════════════════════════════════════════════
+  // TRADEMARK SYSTEM
+  // ═══════════════════════════════════════════════════════
+
+  let trademarkCount = 0;
+
+  function addTrademark(data = {}) {
+    trademarkCount++;
+    const id = trademarkCount;
+    const container = document.getElementById('trademarks-container');
+    const div = document.createElement('div');
+    div.className = 'trademark-block';
+    div.id = `trademark-${id}`;
+    div.innerHTML = `
+      <div class="trademark-header">
+        <input type="text" class="trademark-name-input tm-name" placeholder="Trademark name…" value="${escHtml(data.name||'')}">
+        <button class="btn btn-danger btn-small" onclick="removeTrademark(${id})">✕</button>
+      </div>
+      <div class="trademark-body">
+        <div class="trademark-body-grid">
+          <div class="triggers-section">
+            <label>▸ Triggers</label>
+            ${[1,2,3,4,5].map(n => `
+              <div class="trigger-row">
+                <span class="edge-num">${n}</span>
+                <input type="text" class="tm-trigger" placeholder="Trigger ${n}…" value="${escHtml((data.triggers||[])[n-1]||'')}">
+              </div>`).join('')}
+          </div>
+          <div class="edges-section">
+            <label>◈ Edges</label>
+            ${[1,2,3,4,5].map(n => `
+              <div class="edge-row">
+                <span class="edge-num">${n}</span>
+                <input type="text" class="tm-edge" placeholder="Edge ${n}…" value="${escHtml((data.edges||[])[n-1]||'')}">
+              </div>`).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+    container.appendChild(div);
+  }
+
+  function removeTrademark(id) {
+    const el = document.getElementById(`trademark-${id}`);
+    if (el) el.remove();
+  }
+
+  // Initialise with 5 trademarks (matching PDF)
+  for (let i = 0; i < 5; i++) addTrademark();
+
+  // ═══════════════════════════════════════════════════════
+  // HITS PIPS (4 hits)
+  // ═══════════════════════════════════════════════════════
+  function buildHitPips() {
+    const container = document.getElementById('hits-pips');
+    for (let i = 0; i < 4; i++) {
+      const pip = document.createElement('div');
+      pip.className = 'hit-pip';
+      pip.dataset.index = i;
+      pip.innerHTML = '✕';
+      pip.addEventListener('click', () => pip.classList.toggle('marked'));
+      container.appendChild(pip);
+    }
+  }
+  buildHitPips();
+
+  // ═══════════════════════════════════════════════════════
+  // STASH PIPS (5 pips)
+  // ═══════════════════════════════════════════════════════
+  function buildStashPips() {
+    const container = document.getElementById('stash-pips');
+    for (let i = 0; i < 5; i++) {
+      const pip = document.createElement('div');
+      pip.className = 'pip yellow';
+      pip.dataset.index = i;
+      pip.addEventListener('click', () => pip.classList.toggle('marked'));
+      container.appendChild(pip);
+    }
+  }
+  buildStashPips();
+
+  // ═══════════════════════════════════════════════════════
+  // DRIVE PIPS (10 pips)
+  // ═══════════════════════════════════════════════════════
+  function buildDrivePips() {
+    const container = document.getElementById('drive-pips');
+    for (let i = 0; i < 10; i++) {
+      const pip = document.createElement('div');
+      pip.className = 'pip';
+      pip.dataset.index = i;
+      pip.addEventListener('click', () => pip.classList.toggle('marked'));
+      container.appendChild(pip);
+    }
+  }
+  buildDrivePips();
+
+  // ═══════════════════════════════════════════════════════
+  // EXPERIENCE PIPS (3 groups of 5)
+  // ═══════════════════════════════════════════════════════
+  function buildExpPips() {
+    const container = document.getElementById('exp-pips');
+    for (let g = 0; g < 3; g++) {
+      if (g > 0) {
+        const sep = document.createElement('span');
+        sep.className = 'exp-divider';
+        sep.textContent = '|';
+        container.appendChild(sep);
+      }
+      const group = document.createElement('div');
+      group.className = 'exp-group';
+      for (let i = 0; i < 5; i++) {
+        const pip = document.createElement('div');
+        pip.className = 'pip yellow';
+        pip.dataset.group = g;
+        pip.dataset.index = i;
+        pip.addEventListener('click', () => pip.classList.toggle('marked'));
+        group.appendChild(pip);
+      }
+      container.appendChild(group);
+    }
+  }
+  buildExpPips();
+
+  // ═══════════════════════════════════════════════════════
+  // TRAUMA TOGGLE
+  // ═══════════════════════════════════════════════════════
+  function toggleTrauma(el) {
+    el.classList.toggle('empty');
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // HELPERS
+  // ═══════════════════════════════════════════════════════
+  function escHtml(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function val(id) {
+    const el = document.getElementById(id);
+    return el ? el.value : '';
+  }
+
+  function checked(id) {
+    const el = document.getElementById(id);
+    return el ? el.checked : false;
+  }
+
+  function set(id, v) {
+    const el = document.getElementById(id);
+    if (el) el.value = v;
+  }
+
+  function setChecked(id, v) {
+    const el = document.getElementById(id);
+    if (el) el.checked = v;
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // BUILD EXPORT OBJECT
+  // ═══════════════════════════════════════════════════════
+  function buildExport() {
+    // Trademarks
+    const trademarks = [];
+    document.querySelectorAll('.trademark-block').forEach(block => {
+      const name = block.querySelector('.tm-name')?.value || '';
+      const triggers = Array.from(block.querySelectorAll('.tm-trigger')).map(i => i.value);
+      const edges = Array.from(block.querySelectorAll('.tm-edge')).map(i => i.value);
+      trademarks.push({ name, triggers, edges });
+    });
+
+    // Hits
+    const hits = Array.from(document.querySelectorAll('#hits-pips .hit-pip')).map(p => p.classList.contains('marked'));
+
+    // Stash
+    const stash = Array.from(document.querySelectorAll('#stash-pips .pip')).map(p => p.classList.contains('marked'));
+
+    // Drive
+    const drivePips = Array.from(document.querySelectorAll('#drive-pips .pip')).map(p => p.classList.contains('marked'));
+
+    // Exp
+    const exp = Array.from(document.querySelectorAll('#exp-pips .pip')).map(p => p.classList.contains('marked'));
+
+    // Traumas
+    const traumas = Array.from(document.querySelectorAll('#traumas-container .trauma-row')).map(row => ({
+      marked: !row.querySelector('.trauma-mark').classList.contains('empty'),
+      text: row.querySelector('input')?.value || ''
+    }));
+
+    return {
+      _version: '1.0',
+      _game: 'Neon City Overdrive',
+      nickname: val('nickname'),
+      description: val('description'),
+      trademarks,
+      hits,
+      conditions: {
+        angry: checked('cond-angry'),
+        dazed: checked('cond-dazed'),
+        exhausted: checked('cond-exhausted'),
+        scared: checked('cond-scared'),
+        restrained: checked('cond-restrained'),
+        weakened: checked('cond-weakened'),
+        custom1: { checked: checked('cond-custom1'), text: val('cond-custom1-text') },
+        custom2: { checked: checked('cond-custom2'), text: val('cond-custom2-text') }
+      },
+      traumas,
+      flaws: { flaw1: val('flaw1'), flaw2: val('flaw2') },
+      stuntPoints: { base: val('stunt-base'), current: val('stunt-current') },
+      gear: { basic: val('gear-basic'), special: val('gear-special') },
+      stash,
+      drive: { text: val('drive-text'), pips: drivePips },
+      experiencePoints: exp
+    };
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // APPLY IMPORT OBJECT
+  // ═══════════════════════════════════════════════════════
+  function applyImport(data) {
+    set('nickname', data.nickname || '');
+    set('description', data.description || '');
+
+    // Trademarks
+    document.getElementById('trademarks-container').innerHTML = '';
+    trademarkCount = 0;
+    (data.trademarks || []).forEach(tm => addTrademark(tm));
+    if (trademarkCount === 0) for (let i = 0; i < 5; i++) addTrademark();
+
+    // Hits
+    document.querySelectorAll('#hits-pips .hit-pip').forEach((pip, i) => {
+      pip.classList.toggle('marked', !!(data.hits || [])[i]);
+    });
+
+    // Conditions
+    const c = data.conditions || {};
+    setChecked('cond-angry', !!c.angry);
+    setChecked('cond-dazed', !!c.dazed);
+    setChecked('cond-exhausted', !!c.exhausted);
+    setChecked('cond-scared', !!c.scared);
+    setChecked('cond-restrained', !!c.restrained);
+    setChecked('cond-weakened', !!c.weakened);
+    if (c.custom1) { setChecked('cond-custom1', !!c.custom1.checked); set('cond-custom1-text', c.custom1.text || ''); }
+    if (c.custom2) { setChecked('cond-custom2', !!c.custom2.checked); set('cond-custom2-text', c.custom2.text || ''); }
+
+    // Traumas
+    const traumaRows = document.querySelectorAll('#traumas-container .trauma-row');
+    (data.traumas || []).forEach((t, i) => {
+      if (traumaRows[i]) {
+        const mark = traumaRows[i].querySelector('.trauma-mark');
+        if (t.marked) mark.classList.remove('empty'); else mark.classList.add('empty');
+        const inp = traumaRows[i].querySelector('input');
+        if (inp) inp.value = t.text || '';
+      }
+    });
+
+    // Flaws
+    set('flaw1', (data.flaws || {}).flaw1 || '');
+    set('flaw2', (data.flaws || {}).flaw2 || '');
+
+    // Stunt
+    set('stunt-base', (data.stuntPoints || {}).base || '');
+    set('stunt-current', (data.stuntPoints || {}).current || '');
+
+    // Gear
+    set('gear-basic', (data.gear || {}).basic || '');
+    set('gear-special', (data.gear || {}).special || '');
+
+    // Stash
+    document.querySelectorAll('#stash-pips .pip').forEach((pip, i) => {
+      pip.classList.toggle('marked', !!(data.stash || [])[i]);
+    });
+
+    // Drive
+    set('drive-text', (data.drive || {}).text || '');
+    document.querySelectorAll('#drive-pips .pip').forEach((pip, i) => {
+      pip.classList.toggle('marked', !!((data.drive || {}).pips || [])[i]);
+    });
+
+    // Exp
+    document.querySelectorAll('#exp-pips .pip').forEach((pip, i) => {
+      pip.classList.toggle('marked', !!(data.experiencePoints || [])[i]);
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // SAVE / LOAD JSON
+  // ═══════════════════════════════════════════════════════
+  function saveJSON() {
+    const data = buildExport();
+    const nickname = (data.nickname || 'character').replace(/\s+/g, '_').replace(/[^a-zA-Z0-9_]/g, '') || 'character';
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `${nickname}_nco.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+  }
+
+  document.getElementById('importFile').addEventListener('change', e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = evt => {
+      try {
+        applyImport(JSON.parse(evt.target.result));
+      } catch (err) {
+        alert('⚠ Failed to parse JSON file. Is it a valid NCO character file?');
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
+  });
+
+  // ═══════════════════════════════════════════════════════
+  // PDF EXPORT
+  // ═══════════════════════════════════════════════════════
+  function exportPDF() {
+    const loading = document.getElementById('pdf-loading');
+    loading.classList.add('active');
+
+    const el = document.getElementById('sheet-wrapper');
+    const nickname = (document.getElementById('nickname').value || 'character').replace(/\s+/g,'_').replace(/[^a-zA-Z0-9_]/g,'') || 'character';
+
+    const opt = {
+      margin: [10, 10, 10, 10],
+      filename: `${nickname}_nco.pdf`,
+      image: { type: 'jpeg', quality: 0.95 },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#000000',
+        logging: false
+      },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+    };
+
+    html2pdf().set(opt).from(el).save().then(() => {
+      loading.classList.remove('active');
+    }).catch(err => {
+      loading.classList.remove('active');
+      alert('⚠ PDF generation failed. Try a different browser.');
+      console.error(err);
+    });
+  }
+</script>
+</body>
+</html>
