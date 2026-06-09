@@ -83,6 +83,7 @@
     .logo-neon { color: var(--neon-pink); font-weight: 700; font-size: 18px; letter-spacing: 3px; text-shadow: 0 0 12px var(--neon-pink); text-transform: uppercase; }
     .logo-city { color: var(--accent-yellow); font-weight: 700; font-size: 18px; letter-spacing: 3px; text-shadow: 0 0 12px var(--accent-yellow); text-transform: uppercase; }
     .logo-over { color: var(--neon-cyan); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.8; }
+    .logo-version { color: var(--neon-cyan); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.6; margin-top: 2px; }
 
     .top-bar-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 
@@ -126,8 +127,46 @@
       align-items: start;
     }
 
+    .desc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: stretch;
+      margin-bottom: 16px;
+    }
+
+    .desc-grid .panel {
+      margin-bottom: 0;
+    }
+
+    .desc-grid > div:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .desc-grid > div:first-child .panel {
+      flex: 1;
+    }
+
+    .desc-grid > div:last-child {
+      display: flex;
+    }
+
+    .desc-grid > div:last-child .panel {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .desc-grid > div:last-child .panel textarea {
+      flex: 1;
+      min-height: 100px;
+    }
+
     @media (max-width: 900px) {
       .main-grid { grid-template-columns: 1fr; }
+      .desc-grid { grid-template-columns: 1fr; }
     }
 
     /* INPUTS */
@@ -146,7 +185,7 @@
       border-color: var(--neon-cyan);
       box-shadow: 0 0 6px rgba(84,193,230,0.2);
     }
-    textarea { resize: vertical; min-height: 52px; }
+    textarea { resize: vertical; }
     input[type="number"] { -moz-appearance: textfield; }
     input[type="number"]::-webkit-outer-spin-button,
     input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
@@ -187,7 +226,18 @@
       border-bottom: 1px solid #2a2d50;
       padding: 6px 10px;
       gap: 8px;
+      cursor: pointer;
+      user-select: none;
     }
+    .trademark-toggle {
+      color: var(--neon-cyan);
+      font-size: 12px;
+      font-weight: 700;
+      min-width: 14px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .trademark-toggle.collapsed { transform: rotate(-90deg); }
     .trademark-name-input {
       background: transparent;
       border: none;
@@ -202,27 +252,25 @@
     }
     .trademark-name-input:focus { outline: none; border-bottom-color: var(--neon-pink); }
     .trademark-name-input::placeholder { color: #333; font-weight: 400; }
-    .trademark-body { padding: 8px 10px; }
+    .trademark-body { padding: 8px 10px; max-height: 500px; overflow: hidden; transition: all 0.3s; }
+    .trademark-body.collapsed { max-height: 0; padding: 0 8px; overflow: hidden; }
     .trademark-body-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .edges-section label, .triggers-section label { color: var(--neon-cyan); font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 4px; }
     .edges-section label { color: var(--neon-pink); }
-
-    .edge-row, .trigger-row {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      margin-bottom: 4px;
-    }
-    .edge-row input, .trigger-row input {
-      flex: 1;
+    .edges-section textarea, .triggers-section textarea {
+      width: 100%;
       background: #0a0c1a;
       border: 1px solid #1e2245;
       color: var(--text-color);
       font-size: 11px;
-      padding: 3px 6px;
+      padding: 6px;
+      font-family: 'Lexend', monospace;
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.2s;
+      min-height: 0;
     }
-    .edge-row input:focus, .trigger-row input:focus { border-color: var(--neon-cyan); }
-    .edge-num { color: #333; font-size: 9px; font-weight: 700; min-width: 12px; text-align: center; }
+    .edges-section textarea:focus, .triggers-section textarea:focus { border-color: var(--neon-cyan); }
 
     /* HITS */
     .hits-row { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
@@ -302,7 +350,15 @@
 
     /* FLAWS */
     .flaw-row { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
-    .flaw-mark { width: 14px; height: 14px; background: var(--purple); border: 1px solid var(--purple); flex-shrink: 0; }
+    .flaw-mark {
+      width: 14px; height: 14px;
+      border: 1px solid var(--purple);
+      flex-shrink: 0;
+      cursor: pointer;
+      background: transparent;
+      transition: all 0.15s;
+    }
+    .flaw-mark.marked { background: var(--purple); box-shadow: 0 0 6px var(--purple); }
     .flaw-row input { flex: 1; font-size: 11px; }
 
     /* STUNT POINTS */
@@ -312,7 +368,60 @@
     .stunt-box input { background: transparent; border: none; color: var(--accent-yellow); font-size: 22px; font-weight: 700; text-align: center; font-family: 'Lexend', monospace; width: 100%; }
 
     /* GEAR */
-    .gear-section label { color: var(--neon-cyan); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin: 8px 0 4px; }
+    .gear-section { margin-bottom: 10px; }
+    .gear-block {
+      background: #000;
+      border: 1px solid #2a2d50;
+      border-radius: 3px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .gear-header {
+      display: flex;
+      align-items: center;
+      background: #0d0f22;
+      border-bottom: 1px solid #2a2d50;
+      padding: 6px 10px;
+      gap: 8px;
+    }
+    .gear-title-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #444;
+      color: var(--accent-yellow);
+      font-weight: 700;
+      font-size: 13px;
+      font-family: 'Lexend', monospace;
+      flex: 1;
+      padding: 2px 4px;
+      letter-spacing: 1px;
+    }
+    .gear-title-input:focus { outline: none; border-bottom-color: var(--neon-pink); }
+    .gear-title-input::placeholder { color: #333; font-weight: 400; }
+    .gear-type-tag {
+      color: var(--neon-cyan);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border: 1px solid var(--neon-cyan);
+      border-radius: 2px;
+    }
+    .gear-type-tag.special { color: var(--neon-pink); border-color: var(--neon-pink); }
+    .gear-notes {
+      width: 100%;
+      background: #0a0c1a;
+      border: none;
+      color: var(--text-color);
+      font-size: 11px;
+      padding: 8px 10px;
+      font-family: 'Lexend', monospace;
+      resize: vertical;
+      outline: none;
+      min-height: 0;
+    }
+    .gear-notes:focus { background: #0e1124; }
 
     /* DIVIDER */
     .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border-color), transparent); margin: 12px 0; }
@@ -323,6 +432,7 @@
       .top-bar, .no-print { display: none !important; }
       .panel { background: #f5f5f5 !important; border: 1px solid #ccc !important; page-break-inside: avoid; }
       .main-grid { display: grid !important; }
+      .desc-grid { display: grid !important; }
       input, textarea { background: #fff !important; color: #000 !important; border: 1px solid #999 !important; }
       h2 { color: #c00 !important; }
       h3 { color: #333 !important; }
@@ -385,8 +495,9 @@
 <div class="top-bar no-print">
   <div class="top-bar-title">
     <div class="nco-logo">
-      <span><span class="logo-neon">NEON </span><span class="logo-city">CITY</span></span>
+      <span><span class="logo-neon">NIGHT </span><span class="logo-city">CITY</span></span>
       <span class="logo-over">OVERDRIVE</span>
+      <span class="logo-version">v1.0.0.1</span>
     </div>
     <span style="color:#444;font-size:20px;">|</span>
     <span style="color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:1px;">Character Sheet</span>
@@ -409,10 +520,27 @@
     <input type="text" id="nickname" placeholder="Enter street name…">
   </div>
 
-  <!-- DESCRIPTION -->
-  <div class="panel" style="margin-bottom:16px;">
-    <h2>Description</h2>
-    <textarea id="description" rows="3" placeholder="Who are you? What do you look like? What's your vibe?"></textarea>
+  <!-- APPEARANCE & PERSONALITY + DRIVE SIDE-BY-SIDE (equal height) -->
+  <div class="desc-grid">
+    <!-- LEFT COLUMN: Appearance + Personality -->
+    <div>
+      <div class="panel">
+        <h2>Appearance</h2>
+        <textarea id="appearance" rows="3" placeholder="What do you look like? Style, clothing, distinctive features…"></textarea>
+      </div>
+      <div class="panel">
+        <h2>Personality</h2>
+        <textarea id="personality" rows="3" placeholder="Who are you? Attitude, mannerisms, vibe…"></textarea>
+      </div>
+    </div>
+    <!-- RIGHT COLUMN: Drive (stretches to match combined height) -->
+    <div>
+      <div class="panel">
+        <h2>Drive</h2>
+        <textarea id="drive-text" placeholder="What drives you? Your motivation…"></textarea>
+        <div class="pip-row" id="drive-pips" style="margin-top:8px;"></div>
+      </div>
+    </div>
   </div>
 
   <!-- MAIN GRID -->
@@ -471,8 +599,8 @@
       <!-- FLAWS -->
       <div class="panel purple-border">
         <h2>Flaws</h2>
-        <div class="flaw-row"><div class="flaw-mark"></div><input type="text" id="flaw1" placeholder="Flaw…"></div>
-        <div class="flaw-row" style="margin-top:5px;"><div class="flaw-mark"></div><input type="text" id="flaw2" placeholder="Flaw…"></div>
+        <div class="flaw-row"><div class="flaw-mark" onclick="toggleFlaw(this)"></div><input type="text" id="flaw1" placeholder="Flaw…"></div>
+        <div class="flaw-row" style="margin-top:5px;"><div class="flaw-mark" onclick="toggleFlaw(this)"></div><input type="text" id="flaw2" placeholder="Flaw…"></div>
       </div>
 
       <!-- STUNT POINTS -->
@@ -490,27 +618,6 @@
         </div>
       </div>
 
-      <!-- GEAR -->
-      <div class="panel">
-        <h2>Gear</h2>
-        <div class="gear-section">
-          <label>Basic</label>
-          <textarea id="gear-basic" rows="3" placeholder="Basic gear…"></textarea>
-          <label>Special</label>
-          <textarea id="gear-special" rows="3" placeholder="Special gear…"></textarea>
-        </div>
-        <div class="divider"></div>
-        <h3>Stash</h3>
-        <div class="pip-row" id="stash-pips"></div>
-      </div>
-
-      <!-- DRIVE -->
-      <div class="panel">
-        <h2>Drive</h2>
-        <textarea id="drive-text" rows="2" placeholder="What drives you? Your motivation…"></textarea>
-        <div class="pip-row" id="drive-pips" style="margin-top:8px;"></div>
-      </div>
-
       <!-- EXPERIENCE POINTS -->
       <div class="panel">
         <h2>Experience Points</h2>
@@ -518,6 +625,17 @@
       </div>
 
     </div>
+  </div>
+
+  <!-- GEAR (Full Width) -->
+  <div class="panel">
+    <h2>Gear</h2>
+    <div class="gear-section" id="gear-container">
+      <!-- Gear items are built by JavaScript -->
+    </div>
+    <div class="divider"></div>
+    <h3>Stash</h3>
+    <div class="pip-row" id="stash-pips"></div>
   </div>
 
 </div><!-- end sheet-wrapper -->
@@ -529,49 +647,102 @@
 
   let trademarkCount = 0;
 
-  function addTrademark(data = {}) {
+  function addTrademark(data) {
+    if (!data) data = {};
     trademarkCount++;
     const id = trademarkCount;
     const container = document.getElementById('trademarks-container');
     const div = document.createElement('div');
     div.className = 'trademark-block';
-    div.id = `trademark-${id}`;
-    div.innerHTML = `
-      <div class="trademark-header">
-        <input type="text" class="trademark-name-input tm-name" placeholder="Trademark name…" value="${escHtml(data.name||'')}">
-        <button class="btn btn-danger btn-small" onclick="removeTrademark(${id})">✕</button>
-      </div>
-      <div class="trademark-body">
-        <div class="trademark-body-grid">
-          <div class="triggers-section">
-            <label>▸ Triggers</label>
-            ${[1,2,3,4,5].map(n => `
-              <div class="trigger-row">
-                <span class="edge-num">${n}</span>
-                <input type="text" class="tm-trigger" placeholder="Trigger ${n}…" value="${escHtml((data.triggers||[])[n-1]||'')}">
-              </div>`).join('')}
-          </div>
-          <div class="edges-section">
-            <label>◈ Edges</label>
-            ${[1,2,3,4,5].map(n => `
-              <div class="edge-row">
-                <span class="edge-num">${n}</span>
-                <input type="text" class="tm-edge" placeholder="Edge ${n}…" value="${escHtml((data.edges||[])[n-1]||'')}">
-              </div>`).join('')}
-          </div>
-        </div>
-      </div>
-    `;
+    div.id = 'trademark-' + id;
+
+    const header = document.createElement('div');
+    header.className = 'trademark-header';
+    header.innerHTML =
+      '<span class="trademark-toggle">&#9660;</span>' +
+      '<input type="text" class="trademark-name-input tm-name" placeholder="Trademark name&#8230;" value="' + escHtml(data.name || '') + '" onclick="event.stopPropagation();">' +
+      '<button class="btn btn-danger btn-small" onclick="event.stopPropagation(); removeTrademark(' + id + ')">&#10005;</button>';
+    header.addEventListener('click', function () { toggleTrademarkBody(id); });
+    div.appendChild(header);
+
+    const body = document.createElement('div');
+    body.className = 'trademark-body';
+    body.innerHTML =
+      '<div class="trademark-body-grid">' +
+        '<div class="triggers-section">' +
+          '<label>&#9656; Triggers</label>' +
+          '<textarea class="tm-triggers" rows="5" placeholder="Enter triggers, one per line&#8230;">' + escHtml((data.triggers || []).join('\n')) + '</textarea>' +
+        '</div>' +
+        '<div class="edges-section">' +
+          '<label>&#9672; Edges</label>' +
+          '<textarea class="tm-edges" rows="5" placeholder="Enter edges, one per line&#8230;">' + escHtml((data.edges || []).join('\n')) + '</textarea>' +
+        '</div>' +
+      '</div>';
+    div.appendChild(body);
     container.appendChild(div);
   }
 
   function removeTrademark(id) {
-    const el = document.getElementById(`trademark-${id}`);
+    const el = document.getElementById('trademark-' + id);
     if (el) el.remove();
+  }
+
+  function toggleTrademarkBody(id) {
+    const body = document.querySelector('#trademark-' + id + ' .trademark-body');
+    const toggle = document.querySelector('#trademark-' + id + ' .trademark-toggle');
+    if (body) body.classList.toggle('collapsed');
+    if (toggle) toggle.classList.toggle('collapsed');
   }
 
   // Initialise with 5 trademarks (matching PDF)
   for (let i = 0; i < 5; i++) addTrademark();
+
+  // ═══════════════════════════════════════════════════════
+  // GEAR SYSTEM
+  // ═══════════════════════════════════════════════════════
+
+  let gearCount = 0;
+
+  function addGear(data) {
+    if (!data) data = {};
+    gearCount++;
+    const id = gearCount;
+    const container = document.getElementById('gear-container');
+    const div = document.createElement('div');
+    div.className = 'gear-block';
+    div.id = 'gear-block-' + id;
+
+    const isSpecial = data.type === 'special';
+    const typeLabel = isSpecial ? 'Special' : 'Basic';
+    const typeClass = isSpecial ? 'special' : '';
+
+    const header = document.createElement('div');
+    header.className = 'gear-header';
+    header.innerHTML =
+      '<span class="gear-type-tag ' + typeClass + '">' + typeLabel + '</span>' +
+      '<input type="text" class="gear-title-input gear-title" placeholder="Gear name&#8230;" value="' + escHtml(data.title || '') + '">' +
+      '<button class="btn btn-danger btn-small" onclick="removeGear(' + id + ')">&#10005;</button>';
+    div.appendChild(header);
+
+    const notes = document.createElement('textarea');
+    notes.className = 'gear-notes';
+    notes.placeholder = 'Notes, description, stats&#8230;';
+    notes.rows = 3;
+    notes.value = data.notes || '';
+    div.appendChild(notes);
+
+    container.appendChild(div);
+  }
+
+  function removeGear(id) {
+    const el = document.getElementById('gear-block-' + id);
+    if (el) el.remove();
+  }
+
+  // Initialise with 2 basic + 1 special gear
+  addGear({ type: 'basic' });
+  addGear({ type: 'basic' });
+  addGear({ type: 'special' });
 
   // ═══════════════════════════════════════════════════════
   // HITS PIPS (4 hits)
@@ -582,8 +753,8 @@
       const pip = document.createElement('div');
       pip.className = 'hit-pip';
       pip.dataset.index = i;
-      pip.innerHTML = '✕';
-      pip.addEventListener('click', () => pip.classList.toggle('marked'));
+      pip.innerHTML = '&#10005;';
+      pip.addEventListener('click', function () { this.classList.toggle('marked'); });
       container.appendChild(pip);
     }
   }
@@ -598,7 +769,7 @@
       const pip = document.createElement('div');
       pip.className = 'pip yellow';
       pip.dataset.index = i;
-      pip.addEventListener('click', () => pip.classList.toggle('marked'));
+      pip.addEventListener('click', function () { this.classList.toggle('marked'); });
       container.appendChild(pip);
     }
   }
@@ -613,7 +784,7 @@
       const pip = document.createElement('div');
       pip.className = 'pip';
       pip.dataset.index = i;
-      pip.addEventListener('click', () => pip.classList.toggle('marked'));
+      pip.addEventListener('click', function () { this.classList.toggle('marked'); });
       container.appendChild(pip);
     }
   }
@@ -638,7 +809,7 @@
         pip.className = 'pip yellow';
         pip.dataset.group = g;
         pip.dataset.index = i;
-        pip.addEventListener('click', () => pip.classList.toggle('marked'));
+        pip.addEventListener('click', function () { this.classList.toggle('marked'); });
         group.appendChild(pip);
       }
       container.appendChild(group);
@@ -653,11 +824,15 @@
     el.classList.toggle('empty');
   }
 
+  function toggleFlaw(el) {
+    el.classList.toggle('marked');
+  }
+
   // ═══════════════════════════════════════════════════════
   // HELPERS
   // ═══════════════════════════════════════════════════════
   function escHtml(str) {
-    return String(str).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return String(str).replace(/&/g,'&').replace(/"/g,'"').replace(/</g,'<').replace(/>/g,'>');
   }
 
   function val(id) {
@@ -686,38 +861,52 @@
   function buildExport() {
     // Trademarks
     const trademarks = [];
-    document.querySelectorAll('.trademark-block').forEach(block => {
-      const name = block.querySelector('.tm-name')?.value || '';
-      const triggers = Array.from(block.querySelectorAll('.tm-trigger')).map(i => i.value);
-      const edges = Array.from(block.querySelectorAll('.tm-edge')).map(i => i.value);
-      trademarks.push({ name, triggers, edges });
+    document.querySelectorAll('.trademark-block').forEach(function (block) {
+      const name = block.querySelector('.tm-name') ? block.querySelector('.tm-name').value : '';
+      const triggers = (block.querySelector('.tm-triggers') ? block.querySelector('.tm-triggers').value : '').split('\n').filter(function (t) { return t.trim(); });
+      const edges = (block.querySelector('.tm-edges') ? block.querySelector('.tm-edges').value : '').split('\n').filter(function (e) { return e.trim(); });
+      trademarks.push({ name: name, triggers: triggers, edges: edges });
+    });
+
+    // Gear
+    const gear = [];
+    document.querySelectorAll('#gear-container .gear-block').forEach(function (block) {
+      const title = block.querySelector('.gear-title') ? block.querySelector('.gear-title').value : '';
+      const notes = block.querySelector('.gear-notes') ? block.querySelector('.gear-notes').value : '';
+      const tag = block.querySelector('.gear-type-tag');
+      const type = tag && tag.textContent.toLowerCase() === 'special' ? 'special' : 'basic';
+      gear.push({ type: type, title: title, notes: notes });
     });
 
     // Hits
-    const hits = Array.from(document.querySelectorAll('#hits-pips .hit-pip')).map(p => p.classList.contains('marked'));
+    const hits = Array.from(document.querySelectorAll('#hits-pips .hit-pip')).map(function (p) { return p.classList.contains('marked'); });
 
     // Stash
-    const stash = Array.from(document.querySelectorAll('#stash-pips .pip')).map(p => p.classList.contains('marked'));
+    const stash = Array.from(document.querySelectorAll('#stash-pips .pip')).map(function (p) { return p.classList.contains('marked'); });
 
     // Drive
-    const drivePips = Array.from(document.querySelectorAll('#drive-pips .pip')).map(p => p.classList.contains('marked'));
+    const drivePips = Array.from(document.querySelectorAll('#drive-pips .pip')).map(function (p) { return p.classList.contains('marked'); });
 
     // Exp
-    const exp = Array.from(document.querySelectorAll('#exp-pips .pip')).map(p => p.classList.contains('marked'));
+    const exp = Array.from(document.querySelectorAll('#exp-pips .pip')).map(function (p) { return p.classList.contains('marked'); });
 
     // Traumas
-    const traumas = Array.from(document.querySelectorAll('#traumas-container .trauma-row')).map(row => ({
-      marked: !row.querySelector('.trauma-mark').classList.contains('empty'),
-      text: row.querySelector('input')?.value || ''
-    }));
+    const traumas = Array.from(document.querySelectorAll('#traumas-container .trauma-row')).map(function (row) {
+      return {
+        marked: !row.querySelector('.trauma-mark').classList.contains('empty'),
+        text: row.querySelector('input') ? row.querySelector('input').value : ''
+      };
+    });
 
     return {
-      _version: '1.0',
+      _version: '1.0.0.1',
       _game: 'Neon City Overdrive',
       nickname: val('nickname'),
-      description: val('description'),
-      trademarks,
-      hits,
+      appearance: val('appearance'),
+      personality: val('personality'),
+      trademarks: trademarks,
+      gear: gear,
+      hits: hits,
       conditions: {
         angry: checked('cond-angry'),
         dazed: checked('cond-dazed'),
@@ -728,11 +917,15 @@
         custom1: { checked: checked('cond-custom1'), text: val('cond-custom1-text') },
         custom2: { checked: checked('cond-custom2'), text: val('cond-custom2-text') }
       },
-      traumas,
-      flaws: { flaw1: val('flaw1'), flaw2: val('flaw2') },
+      traumas: traumas,
+      flaws: {
+        flaw1: val('flaw1'),
+        flaw2: val('flaw2'),
+        marked1: document.querySelectorAll('#sheet-wrapper .flaw-mark')[0] ? document.querySelectorAll('#sheet-wrapper .flaw-mark')[0].classList.contains('marked') : false,
+        marked2: document.querySelectorAll('#sheet-wrapper .flaw-mark')[1] ? document.querySelectorAll('#sheet-wrapper .flaw-mark')[1].classList.contains('marked') : false
+      },
       stuntPoints: { base: val('stunt-base'), current: val('stunt-current') },
-      gear: { basic: val('gear-basic'), special: val('gear-special') },
-      stash,
+      stash: stash,
       drive: { text: val('drive-text'), pips: drivePips },
       experiencePoints: exp
     };
@@ -743,16 +936,44 @@
   // ═══════════════════════════════════════════════════════
   function applyImport(data) {
     set('nickname', data.nickname || '');
-    set('description', data.description || '');
+    set('appearance', data.appearance || '');
+    set('personality', data.personality || '');
+    // Backward compatibility: if old 'description' field exists, use it
+    if (!data.appearance && !data.personality && data.description) {
+      set('appearance', data.description);
+    }
 
     // Trademarks
     document.getElementById('trademarks-container').innerHTML = '';
     trademarkCount = 0;
-    (data.trademarks || []).forEach(tm => addTrademark(tm));
-    if (trademarkCount === 0) for (let i = 0; i < 5; i++) addTrademark();
+    if (data.trademarks && data.trademarks.length) {
+      data.trademarks.forEach(function (tm) { addTrademark(tm); });
+    }
+    if (trademarkCount === 0) {
+      for (let i = 0; i < 5; i++) addTrademark();
+    }
+
+    // Gear
+    document.getElementById('gear-container').innerHTML = '';
+    gearCount = 0;
+    if (data.gear && data.gear.length) {
+      data.gear.forEach(function (g) { addGear(g); });
+    }
+    if (gearCount === 0) {
+      addGear({ type: 'basic' });
+      addGear({ type: 'basic' });
+      addGear({ type: 'special' });
+    }
+    // Backward compatibility: import old gear-basic / gear-special fields
+    if ((!data.gear || data.gear.length === 0) && (data.gear_basic || data.gear_special)) {
+      document.getElementById('gear-container').innerHTML = '';
+      gearCount = 0;
+      if (data.gear_basic) addGear({ type: 'basic', title: data.gear_basic });
+      if (data.gear_special) addGear({ type: 'special', title: data.gear_special });
+    }
 
     // Hits
-    document.querySelectorAll('#hits-pips .hit-pip').forEach((pip, i) => {
+    document.querySelectorAll('#hits-pips .hit-pip').forEach(function (pip, i) {
       pip.classList.toggle('marked', !!(data.hits || [])[i]);
     });
 
@@ -769,7 +990,7 @@
 
     // Traumas
     const traumaRows = document.querySelectorAll('#traumas-container .trauma-row');
-    (data.traumas || []).forEach((t, i) => {
+    (data.traumas || []).forEach(function (t, i) {
       if (traumaRows[i]) {
         const mark = traumaRows[i].querySelector('.trauma-mark');
         if (t.marked) mark.classList.remove('empty'); else mark.classList.add('empty');
@@ -781,28 +1002,28 @@
     // Flaws
     set('flaw1', (data.flaws || {}).flaw1 || '');
     set('flaw2', (data.flaws || {}).flaw2 || '');
+    document.querySelectorAll('#sheet-wrapper .flaw-mark').forEach(function (mark, i) {
+      const marked = (data.flaws || {})['marked' + (i + 1)];
+      if (marked) mark.classList.add('marked'); else mark.classList.remove('marked');
+    });
 
     // Stunt
     set('stunt-base', (data.stuntPoints || {}).base || '');
     set('stunt-current', (data.stuntPoints || {}).current || '');
 
-    // Gear
-    set('gear-basic', (data.gear || {}).basic || '');
-    set('gear-special', (data.gear || {}).special || '');
-
     // Stash
-    document.querySelectorAll('#stash-pips .pip').forEach((pip, i) => {
+    document.querySelectorAll('#stash-pips .pip').forEach(function (pip, i) {
       pip.classList.toggle('marked', !!(data.stash || [])[i]);
     });
 
     // Drive
     set('drive-text', (data.drive || {}).text || '');
-    document.querySelectorAll('#drive-pips .pip').forEach((pip, i) => {
+    document.querySelectorAll('#drive-pips .pip').forEach(function (pip, i) {
       pip.classList.toggle('marked', !!((data.drive || {}).pips || [])[i]);
     });
 
     // Exp
-    document.querySelectorAll('#exp-pips .pip').forEach((pip, i) => {
+    document.querySelectorAll('#exp-pips .pip').forEach(function (pip, i) {
       pip.classList.toggle('marked', !!(data.experiencePoints || [])[i]);
     });
   }
@@ -816,22 +1037,22 @@
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = `${nickname}_nco.json`;
+    a.download = nickname + '_nco.json';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(a.href);
   }
 
-  document.getElementById('importFile').addEventListener('change', e => {
+  document.getElementById('importFile').addEventListener('change', function (e) {
     const file = e.target.files[0];
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = evt => {
+    reader.onload = function (evt) {
       try {
         applyImport(JSON.parse(evt.target.result));
       } catch (err) {
-        alert('⚠ Failed to parse JSON file. Is it a valid NCO character file?');
+        alert('\u26A0 Failed to parse JSON file. Is it a valid NCO character file?');
       }
     };
     reader.readAsText(file);
@@ -850,7 +1071,7 @@
 
     const opt = {
       margin: [10, 10, 10, 10],
-      filename: `${nickname}_nco.pdf`,
+      filename: nickname + '_nco.pdf',
       image: { type: 'jpeg', quality: 0.95 },
       html2canvas: {
         scale: 2,
@@ -862,14 +1083,34 @@
       pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
     };
 
-    html2pdf().set(opt).from(el).save().then(() => {
+    html2pdf().set(opt).from(el).save().then(function () {
       loading.classList.remove('active');
-    }).catch(err => {
+    }).catch(function (err) {
       loading.classList.remove('active');
-      alert('⚠ PDF generation failed. Try a different browser.');
+      alert('\u26A0 PDF generation failed. Try a different browser.');
       console.error(err);
     });
   }
+
+  // ═══════════════════════════════════════════════════════
+  // ADD GEAR BUTTON (placed after gear container)
+  // ═══════════════════════════════════════════════════════
+  (function addGearButtons() {
+    const container = document.getElementById('gear-container');
+    const btnWrap = document.createElement('div');
+    btnWrap.style.cssText = 'display:flex;gap:8px;margin-top:4px;';
+    const btnBasic = document.createElement('button');
+    btnBasic.className = 'btn btn-small';
+    btnBasic.textContent = '+ Basic Gear';
+    btnBasic.onclick = function () { addGear({ type: 'basic' }); };
+    const btnSpecial = document.createElement('button');
+    btnSpecial.className = 'btn btn-small btn-pink';
+    btnSpecial.textContent = '+ Special Gear';
+    btnSpecial.onclick = function () { addGear({ type: 'special' }); };
+    btnWrap.appendChild(btnBasic);
+    btnWrap.appendChild(btnSpecial);
+    container.parentNode.insertBefore(btnWrap, container.nextSibling);
+  })();
 </script>
 </body>
 </html>
