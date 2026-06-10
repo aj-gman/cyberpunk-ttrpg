@@ -4,7 +4,7 @@
 
 > [[Rules/CPRED/Quality\|Common Price:]] Premium (100-500eb)
 
-The elite healing [[Rules/CPRED/Drugs/Drugs\|drug]], [[Rules/CPRED/Drugs/Speedheal\|SpeedHeal]] has none of the nasty side-effects of [[Rules/CPRED/Drugs/Regen 21\|Regen 21]] and unlike previous versions it does not cause allergic reactions in most users. A single ampule of [[Rules/CPRED/Drugs/Speedheal\|SpeedHeal]] lasts for 12 hours so four times the dosage is required than for [[Rules/CPRED/Drugs/Regen 21\|Regen 21]], and each dose is prohibitively expensive.
+The elite healing [[Rules/CPRED/Drugs/Drugs (CPRED)\|drug]], [[Rules/CPRED/Drugs/Speedheal\|SpeedHeal]] has none of the nasty side-effects of [[Rules/CPRED/Drugs/Regen 21\|Regen 21]] and unlike previous versions it does not cause allergic reactions in most users. A single ampule of [[Rules/CPRED/Drugs/Speedheal\|SpeedHeal]] lasts for 12 hours so four times the dosage is required than for [[Rules/CPRED/Drugs/Regen 21\|Regen 21]], and each dose is prohibitively expensive.
 
 ### Main Effect
 - **Add BODY+WILL to your Current HP**

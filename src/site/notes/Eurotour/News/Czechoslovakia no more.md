@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/news/czechoslovakia-no-more/","tags":["#news"],"dg-note-properties":{"tags":["#news"]}}
+{"dg-publish":true,"permalink":"/eurotour/news/czechoslovakia-no-more/","dg-note-properties":{}}
 ---
 
 #news [[Prague\|Prague]], [[Lore/Organizations/Europe/EEC\|EEC]], [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]]

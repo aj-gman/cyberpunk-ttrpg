@@ -10,7 +10,7 @@ From early 2026 up to June 2026, the main campaign of the [[Eurotour/Eurotour\|E
 We will be testing [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] as the new system and, if it works, we will then proceed with the main campaign of [The Fourth Corporate War](https://cyberpunk.fandom.com/wiki/Firestorm) using [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] as the system and [[Cyberpunk 2020\|Cyberpunk 2020]] as its setting/universe.
 
 ### Easy Access
-- All [[Rules/CPRED/Drugs/Drugs\|Drugs]]
+- All [[Rules/CPRED/Drugs/Drugs (CPRED)\|Drugs (CPRED)]]
 - All [[Rules/Homebrew\|Homebrew]] (listed & linked)
 - New [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] rules
 - read the #news

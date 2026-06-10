@@ -22,5 +22,5 @@ Oftentimes, you'll find yourself pushed over the edge not by the usage of [[Rule
 
 - using [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]], increased by +[[Rules/CPRED/Quality\|Quality]]
 - installing certain [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] increased by +[[Rules/CPRED/Quality\|Quality]][^24]
-- taking [[Rules/CPRED/Drugs/Drugs\|Drugs]] and experiencing dehumanizing symptoms (like Paranoia for [[Rules/CPRED/Drugs/SynthCoke\|SynthCoke]])
+- taking [[Rules/CPRED/Drugs/Drugs (CPRED)\|Drugs (CPRED)]] and experiencing dehumanizing symptoms (like Paranoia for [[Rules/CPRED/Drugs/SynthCoke\|SynthCoke]])
 - experiencing incredibly stressful/traumatic situations, like war, betrayal, losing a limb, losing a loved one etc.

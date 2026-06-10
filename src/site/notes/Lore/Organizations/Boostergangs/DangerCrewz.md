@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Organizations/Boostergangs/DangerCrewz.md","permalink":"/organizations/boostergangs/danger-crewz/","tags":["#boostergang"],"dg-note-properties":{"tags":["#boostergang"]}}
+{"dg-publish":true,"dg-path":"Organizations/Boostergangs/DangerCrewz.md","permalink":"/organizations/boostergangs/danger-crewz/","dg-note-properties":{}}
 ---
 
 #boostergang 

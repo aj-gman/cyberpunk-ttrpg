@@ -4,8 +4,15 @@
 
 > [[Rules/CPRED/Quality\|Common Price:]] Everyday (20-50eb)
 
-An original "brain booster" [[Rules/CPRED/Drugs/Drugs\|drug]] which radically enhance a character's INT. Administered through an intramuscular injection, Boost is also unfortunately very addictive and soon regular users find that their body has built up a complete tolerance to the drug, and addicts end up shelling out large sums of cash to keep up a habit that no longer helps them.
+An original "brain booster" [[Rules/CPRED/Drugs/Drugs (CPRED)\|drug]] which radically enhance a character's INT. Administered through an intramuscular injection, Boost is also unfortunately very addictive and soon regular users find that their body has built up a complete tolerance to the drug, and addicts end up shelling out large sums of cash to keep up a habit that no longer helps them.
+# [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
+### **[[Rules/NCOverdrive/Conditions\|Conditions]]**
+- **Positive:** Concentrator
+- **Negative:** Instant Addiction
+- **Other:** 1-in-6 for Drowsiness, 3-in-6 for [[Rules/CPRED/Drugs/Drug Effects/Tolerance\|Tolerance]]
 
+
+# [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]]
 ### Main Effect
 - **+2 INT**
 - Strength: 4

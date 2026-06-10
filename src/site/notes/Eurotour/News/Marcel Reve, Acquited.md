@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/news/marcel-reve-acquited/","tags":["#news"],"dg-note-properties":{"tags":["#news"]}}
+{"dg-publish":true,"permalink":"/eurotour/news/marcel-reve-acquited/","dg-note-properties":{}}
 ---
 
 #news [[Eurotour/Locations/Brussels\|Brussels]], [[Marcel Reve\|Marcel Reve]], [[Eurotour/Locations/Paris\|Paris]], [[Biotechnica\|Biotechnica]]

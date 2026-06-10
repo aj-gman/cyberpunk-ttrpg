@@ -1,11 +1,19 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/drugs/blue-glass/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/blue-glass/","tags":["#special"],"dg-note-properties":{"tags":["#special"]}}
 ---
 
 > [[Rules/CPRED/Quality\|Common Price:]] Everyday (20-50eb)
 
-A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] originally designed as a chemical warfare agent. Blue Glass incapacitates it's users with bizarre hallucinations that are only remembered vaguely as either wonderful or horrid, but with no real substance after the trip is over. Now available on the streets due to some "friendly" drug labs, this has become a very cheap and addictive hallucinogen.
+A type of [[Rules/CPRED/Drugs/Drugs (CPRED)\|street drug]] originally designed as a chemical warfare agent. Blue Glass incapacitates it's users with bizarre hallucinations that are only remembered vaguely as either wonderful or horrid, but with no real substance after the trip is over. Now available on the streets due to some "friendly" drug labs, this has become a very cheap and addictive hallucinogen.
 
+# [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
+### **[[Rules/NCOverdrive/Conditions\|Conditions]]**
+#special On a good trip, lower [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis]] by d6/2.
+- **Positive:** Psychedelic, Endurance, Analgesic
+- **Negative:** Black Outs, Blank, Hallucinations
+- **Other:** 2-in-6 for Obsession
+
+# [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]]
 ### Main Effect
 - [[Rules/CPRED/Drugs/Drug Effects/Psychedelic\|Psychedelic]], +2 BODY (including for Death Saves)
 - Strength: 10

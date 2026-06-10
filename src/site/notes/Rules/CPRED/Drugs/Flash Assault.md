@@ -4,10 +4,18 @@
 
 > [[Rules/CPRED/Quality\|Common Price:]] Premium (100-500eb)
 
-Flash Assault is a massive accelerator [[Rules/CPRED/Drugs/Drugs\|drug]], stimulating and accelerating the user's nervous system often to the point where the user loses track of it, causing mild disorientation. Also the amount of stimulation brings about a side effect of massive paranoia during the drug's use. 
+Flash Assault is a massive accelerator [[Rules/CPRED/Drugs/Drugs (CPRED)\|drug]], stimulating and accelerating the user's nervous system often to the point where the user loses track of it, causing mild disorientation. Also the amount of stimulation brings about a side effect of massive paranoia during the drug's use. 
 
 Users of Flash assault usually come out with a major hangover, and habitual users report disturbing flashbacks, mainly because most Flash Assault is used as a combat drug, so the flash backs are usually quite violent.
 
+# [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
+### **[[Rules/NCOverdrive/Conditions\|Conditions]]**
+- **Positive:** Accelerator, Speed, Stimulant
+- **Negative:** Disorientation, Paranoia
+- **Other:** 3-in-6 for Hangover, 3-in-6 for Flashbacks
+
+
+# [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]]
 ### Main Effect
 - +5 REF, +5 Perception
 - Strength: 10
