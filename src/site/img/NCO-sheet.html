@@ -499,13 +499,15 @@
     <div class="nco-logo">
       <span><span class="logo-neon">NIGHT </span><span class="logo-city">CITY</span></span>
       <span class="logo-over">OVERDRIVE</span>
-      <span class="logo-version">v1.0.1.0</span>
+      <span class="logo-version">v1.0.1.5</span>
     </div>
     <span style="color:#444;font-size:20px;">|</span>
     <span style="color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:1px;">Character Sheet</span>
     <span style="color:#444;font-size:16px;margin-left:10px;">|</span>
     <button class="btn btn-small" onclick="showPage(1)" id="btn-page1" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Page 1</button>
-    <button class="btn btn-small" onclick="showPage(2)" id="btn-page2" style="border-color:var(--purple);color:var(--purple);">Page 2</button>
+    <button class="btn btn-small" onclick="showPage(2)" id="btn-page2" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Page 2</button>
+    <button class="btn btn-small" onclick="showPage(3)" id="btn-page3" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Stash</button>
+    <button class="btn btn-small" onclick="showPage(4)" id="btn-page4" style="border-color:var(--neon-cyan);color:var(--neon-cyan);">VTT</button>
   </div>
   <div class="top-bar-actions">
     <label class="btn" style="display:inline-block;cursor:pointer;">
@@ -519,10 +521,24 @@
 <!-- SHEET WRAPPER (used for PDF capture) -->
 <div id="sheet-wrapper">
 
-  <!-- NICKNAME -->
-  <div class="nickname-row">
-    <label>Handle</label>
-    <input type="text" id="nickname" placeholder="Enter street name…">
+  <!-- HANDLE + STUNTS + XP -->
+  <div class="nickname-row" style="display:flex;align-items:center;gap:12px;flex-wrap:nowrap;">
+    <label style="white-space:nowrap;">Handle</label>
+    <input type="text" id="nickname" placeholder="Enter street name…" style="flex:1;">
+    <span style="color:#444;font-size:16px;">|</span>
+    <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;">
+      <span style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Stunts</span>
+      <button class="btn btn-small" onclick="changeStunt(-1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">−</button>
+      <span id="stunt-value" style="font-size:16px;font-weight:700;color:var(--accent-yellow);min-width:24px;text-align:center;">0</span>
+      <button class="btn btn-small" onclick="changeStunt(1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">+</button>
+    </div>
+    <span style="color:#444;font-size:16px;">|</span>
+    <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;">
+      <span style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">XP</span>
+      <button class="btn btn-small" onclick="changeExp(-1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">−</button>
+      <span id="exp-value" style="font-size:16px;font-weight:700;color:var(--accent-yellow);min-width:24px;text-align:center;">0</span>
+      <button class="btn btn-small" onclick="changeExp(1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">+</button>
+    </div>
   </div>
 
   <!-- APPEARANCE & PERSONALITY + DRIVE SIDE-BY-SIDE (equal height) -->
@@ -615,31 +631,7 @@
         <button class="btn btn-small" onclick="addFlaw()" style="margin-top:6px;">+ Flaw</button>
       </div>
 
-      <!-- STUNT POINTS -->
-      <div class="panel">
-        <h2>Stunt Points</h2>
-        <div class="stunt-grid">
-          <div class="stunt-box">
-            <label>Base</label>
-            <input type="number" id="stunt-base" min="0" placeholder="—">
-          </div>
-          <div class="stunt-box">
-            <label>Current</label>
-            <input type="number" id="stunt-current" min="0" placeholder="—">
-          </div>
-        </div>
-      </div>
-
-      <!-- EXPERIENCE POINTS -->
-      <div class="panel">
-        <h2>Experience Points</h2>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <button class="btn btn-small" onclick="changeExp(-1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);">−</button>
-          <span id="exp-value" style="font-size:24px;font-weight:700;color:var(--accent-yellow);min-width:40px;text-align:center;">0</span>
-          <button class="btn btn-small" onclick="changeExp(1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);">+</button>
-          <span style="color:var(--dim);font-size:11px;margin-left:4px;">/ 15</span>
-        </div>
-      </div>
+      <!-- (STUNTS & XP moved to Handle row) -->
 
     </div>
   </div>
@@ -664,14 +656,50 @@
   </div>
 
   <!-- CYBERWARE -->
-  <div class="panel" style="border-color:var(--purple);">
-    <h2 style="color:var(--purple);border-color:var(--purple);">Cyberware</h2>
+  <div class="panel" style="border-color:var(--accent-yellow);">
+    <h2 style="color:var(--accent-yellow);border-color:var(--accent-yellow);">Cyberware</h2>
     <div class="gear-section" id="cyberware-container">
       <!-- Cyberware items are built by JavaScript -->
     </div>
   </div>
 
 </div><!-- end sheet-page2 -->
+
+<!-- PAGE 3 -->
+<div id="sheet-page3" style="max-width:1200px;margin:0 auto;">
+
+  <div class="page-break"></div>
+
+  <!-- STASH (GOOGLE SHEETS) -->
+  <div style="padding:0;margin:0;height:calc(100vh - 120px);min-height:500px;">
+    <iframe src="https://docs.google.com/spreadsheets/d/1YpRERhKOoGxK3ybMjjvrwKSOPtKJGs3kU9BJT4o2yMI/edit?usp=sharing&rm=minimal&headers=false&chrome=false"
+            style="width:100%;height:100%;border:none;border-radius:2px;background:#1a1c2e;"
+            allowfullscreen>
+    </iframe>
+  </div>
+
+</div><!-- end sheet-page3 -->
+
+<!-- PAGE 4 -->
+<div id="sheet-page4" style="max-width:1200px;margin:0 auto;">
+
+  <div class="page-break"></div>
+
+  <!-- VTT (OWLBEAR RODEO - opens in new tab, cannot embed) -->
+  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:calc(100vh - 120px);min-height:500px;gap:16px;">
+    <p style="color:var(--dim);font-size:12px;text-align:center;max-width:400px;">
+      Owlbear Rodeo cannot be embedded in an iframe.<br>Open it in a new tab to play.
+    </p>
+    <a href="https://www.owlbear.rodeo/room/KwPt706YcZQ_/The%20Afoot%20Doom"
+       target="_blank"
+       class="btn btn-pink"
+       style="font-size:16px;padding:14px 32px;text-decoration:none;display:inline-block;">
+      ▶ Open VTT
+    </a>
+  </div>
+
+</div><!-- end sheet-page4 -->
+
 
 <script>
   // ═══════════════════════════════════════════════════════
@@ -798,10 +826,7 @@
     if (el) el.remove();
   }
 
-  // Initialise with 2 basic + 1 special gear
-  addGear({ type: 'basic' });
-  addGear({ type: 'basic' });
-  addGear({ type: 'special' });
+  // Start with no gear items (players add via + buttons)
 
   // ═══════════════════════════════════════════════════════
   // CONDITIONS SYSTEM
@@ -893,6 +918,13 @@
     var el = document.getElementById('exp-value');
     var val = parseInt(el.textContent) || 0;
     val = Math.max(0, Math.min(15, val + delta));
+    el.textContent = val;
+  }
+
+  function changeStunt(delta) {
+    var el = document.getElementById('stunt-value');
+    var val = parseInt(el.textContent) || 0;
+    val = Math.max(0, Math.min(99, val + delta));
     el.textContent = val;
   }
 
@@ -1022,7 +1054,7 @@
     });
 
     return {
-      _version: '1.0.1.0',
+      _version: '1.0.1.1',
       _game: 'Neon City Overdrive',
       nickname: val('nickname'),
       appearance: val('appearance'),
@@ -1052,7 +1084,7 @@
         marked1: document.querySelectorAll('#sheet-wrapper .flaw-mark')[0] ? document.querySelectorAll('#sheet-wrapper .flaw-mark')[0].classList.contains('marked') : false,
         marked2: document.querySelectorAll('#sheet-wrapper .flaw-mark')[1] ? document.querySelectorAll('#sheet-wrapper .flaw-mark')[1].classList.contains('marked') : false
       },
-      stuntPoints: { base: val('stunt-base'), current: val('stunt-current') },
+      stuntPoints: parseInt(document.getElementById('stunt-value').textContent) || 0,
       stash: stash,
       drive: { text: val('drive-text'), pips: drivePips },
       experiencePoints: parseInt(document.getElementById('exp-value').textContent) || 0
@@ -1114,9 +1146,7 @@
     if (el) el.remove();
   }
 
-  // Initialise with 2 cyberware
-  addCyberware({});
-  addCyberware({});
+  // Start with no cyberware items (players add via + buttons)
 
   // ═══════════════════════════════════════════════════════
   // CONDITIONS SYSTEM
@@ -1146,12 +1176,8 @@
     if (data.gear && data.gear.length) {
       data.gear.forEach(function (g) { addGear(g); });
     }
-    if (gearCount === 0) {
-      addGear({ type: 'basic' });
-      addGear({ type: 'basic' });
-      addGear({ type: 'special' });
-    }
     // Backward compatibility: import old gear-basic / gear-special fields
+    // Backward compatibility: import old gear-basic / gear-special fields (only if new gear is empty)
     if ((!data.gear || data.gear.length === 0) && (data.gear_basic || data.gear_special)) {
       document.getElementById('gear-container').innerHTML = '';
       gearCount = 0;
@@ -1164,10 +1190,6 @@
     cyberwareCount = 0;
     if (data.cyberware && data.cyberware.length) {
       data.cyberware.forEach(function (cw) { addCyberware(cw); });
-    }
-    if (cyberwareCount === 0) {
-      addCyberware({});
-      addCyberware({});
     }
     // Hits
     document.querySelectorAll('#hits-pips .hit-pip').forEach(function (pip, i) {
@@ -1238,9 +1260,13 @@
       if (marked) mark.classList.add('marked'); else mark.classList.remove('marked');
     });
 
-    // Stunt
-    set('stunt-base', (data.stuntPoints || {}).base || '');
-    set('stunt-current', (data.stuntPoints || {}).current || '');
+    // Stunt (numeric tracker)
+    if (typeof data.stuntPoints === 'number') {
+      document.getElementById('stunt-value').textContent = Math.max(0, Math.min(99, data.stuntPoints));
+    } else if (data.stuntPoints && typeof data.stuntPoints === 'object') {
+      // Backward compat with old {base, current}
+      document.getElementById('stunt-value').textContent = Math.max(0, Math.min(99, parseInt(data.stuntPoints.current) || 0));
+    }
 
     // Stash
     document.querySelectorAll('#stash-pips .pip').forEach(function (pip, i) {
@@ -1253,7 +1279,7 @@
       pip.classList.toggle('marked', !!((data.drive || {}).pips || [])[i]);
     });
 
-    // Exp
+    // Exp (moved to Handle row, use new selector for backward compat)
     var expVal = data.experiencePoints;
     if (typeof expVal === 'number') {
       document.getElementById('exp-value').textContent = Math.max(0, Math.min(15, expVal));
@@ -1301,23 +1327,39 @@
   function showPage(num) {
     var p1 = document.getElementById('sheet-wrapper');
     var p2 = document.getElementById('sheet-page2');
+    var p3 = document.getElementById('sheet-page3');
+    var p4 = document.getElementById('sheet-page4');
     var b1 = document.getElementById('btn-page1');
     var b2 = document.getElementById('btn-page2');
+    var b3 = document.getElementById('btn-page3');
+    var b4 = document.getElementById('btn-page4');
+    p1.style.display = 'none';
+    p2.style.display = 'none';
+    p3.style.display = 'none';
+    p4.style.display = 'none';
+    if (b1) b1.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
+    if (b2) b2.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
+    if (b3) b3.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
+    if (b4) b4.style.cssText = 'border-color:var(--neon-cyan);color:var(--neon-cyan);background:transparent;';
     if (num === 1) {
       p1.style.display = 'block';
-      p2.style.display = 'none';
       if (b1) b1.style.cssText = 'border-color:var(--accent-yellow);color:#000;background:var(--accent-yellow);';
-      if (b2) b2.style.cssText = 'border-color:var(--purple);color:var(--purple);background:transparent;';
-    } else {
-      p1.style.display = 'none';
+    } else if (num === 2) {
       p2.style.display = 'block';
-      if (b1) b1.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
-      if (b2) b2.style.cssText = 'border-color:var(--purple);color:#000;background:var(--purple);';
+      if (b2) b2.style.cssText = 'border-color:var(--accent-yellow);color:#000;background:var(--accent-yellow);';
+    } else if (num === 3) {
+      p3.style.display = 'block';
+      if (b3) b3.style.cssText = 'border-color:var(--accent-yellow);color:#000;background:var(--accent-yellow);';
+    } else if (num === 4) {
+      p4.style.display = 'block';
+      if (b4) b4.style.cssText = 'border-color:var(--neon-cyan);color:#000;background:var(--neon-cyan);';
     }
   }
 
-  // Init: show page 1, hide page 2
+  // Init: show page 1, hide pages 2, 3 & 4
   document.getElementById('sheet-page2').style.display = 'none';
+  document.getElementById('sheet-page3').style.display = 'none';
+  document.getElementById('sheet-page4').style.display = 'none';
   showPage(1);
 
   // ═══════════════════════════════════════════════════════
