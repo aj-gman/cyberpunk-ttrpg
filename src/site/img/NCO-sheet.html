@@ -531,14 +531,16 @@
     <input type="text" id="nickname" placeholder="Enter street name…" style="flex:1;">
     <span style="color:#444;font-size:16px;">|</span>
     <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;">
-      <span style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Stunts</span>
+      <span class="dynamic-header" data-path="rules/nc-overdrive" style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Stunts</span>
       <button class="btn btn-small" onclick="changeStunt(-1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">−</button>
       <span id="stunt-value" style="font-size:16px;font-weight:700;color:var(--accent-yellow);min-width:24px;text-align:center;">0</span>
       <button class="btn btn-small" onclick="changeStunt(1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">+</button>
     </div>
     <span style="color:#444;font-size:16px;">|</span>
     <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;">
-      <span style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">XP</span>
+      <span class="dynamic-header" 
+      data-path="rules/nc-overdrive" 
+      style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">XP</span>
       <button class="btn btn-small" onclick="changeExp(-1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">−</button>
       <span id="exp-value" style="font-size:16px;font-weight:700;color:var(--accent-yellow);min-width:24px;text-align:center;">0</span>
       <button class="btn btn-small" onclick="changeExp(1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">+</button>
@@ -1458,17 +1460,14 @@
   })();
 </script>
 <script>
-  // Only the main domain stays here
   const domain = "https://gman-cyberpunk.vercel.app/";
   
-  document.querySelectorAll('.dynamic-header').forEach(header => {
-    const title = header.textContent.trim().toLowerCase();
-    const folderPath = header.getAttribute('data-path'); // Grabs the specific path
-    
-    // Combines domain + folder path + title
+  document.querySelectorAll('.dynamic-header').forEach(element => {
+    const title = element.textContent.trim().toLowerCase();
+    const folderPath = element.getAttribute('data-path');
     const fullUrl = `${domain}${folderPath}/${encodeURIComponent(title)}/`;
     
-    header.innerHTML = `<a href="${fullUrl}" target="_blank" style="color: inherit; text-decoration: none;">${header.textContent}</a>`;
+    element.innerHTML = `<a href="${fullUrl}" style="color: inherit; text-decoration: none; display: inline-block;">${element.textContent}</a>`;
   });
 </script>
 </body>
