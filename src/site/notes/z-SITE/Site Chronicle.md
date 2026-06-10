@@ -48,6 +48,7 @@
 - **Updated the Digital Garden template** to version 1.8.0.4.
 - More #news 
 - Core Crews' stats and personalities are now open as explorable files([[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], [[Eurotour/Characters/Core Crew/Jimenez\|Jimenez]], [[Eurotour/Characters/Core Crew/Tinker\|Tinker]], [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], [[Eurotour/Characters/Core Crew/Ace McLeod\|Ace McLeod]], [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]], [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine Clements]]), including even [[Eurotour/Characters/Claire Monet\|Claire Monet]]!
+- Added [[Rules/NCOverdrive/Drugs (NCOverdrive)\|Drugs (NCOverdrive)]], which encompasses all of the adjusted rules for [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] for [[Rules/CPRED/Drugs/Drugs (CPRED)\|Drugs (CPRED)]]
 
 ## TO DO
 - [ ] **[[z-SITE/CPRED Sheet\|CPRED Sheet]] needs:**
@@ -59,6 +60,5 @@
 		- [ ] Skills
 		- [ ] Stats
 - [ ] Recalibrate mobile interface for the site (very buggy atm)
-- [ ] [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] needs:
-	- [ ] Rewriting of description grey text (bug fixes)
-	- [ ] Hyperlinks to the wiki for all of the new mechanics
+- [ ] **[[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] needs:**
+	- [ ] Rewriting of description placeholder text (bug fixes)
