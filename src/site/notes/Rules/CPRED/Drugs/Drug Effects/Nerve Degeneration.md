@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/drugs/drug-effects/nerve-degeneration/","tags":["#drug-effect"],"dg-note-properties":{"tags":["#drug-effect"]}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/drug-effects/nerve-degeneration/","dg-note-properties":{}}
 ---
 
 #drug-effect

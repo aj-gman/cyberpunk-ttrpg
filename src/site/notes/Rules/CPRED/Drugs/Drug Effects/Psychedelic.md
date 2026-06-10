@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/drugs/drug-effects/psychedelic/","tags":["#drug-effect"],"dg-note-properties":{"tags":["#drug-effect"]}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/drug-effects/psychedelic/","dg-note-properties":{}}
 ---
 
 #drug-effect

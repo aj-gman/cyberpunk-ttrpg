@@ -43,7 +43,7 @@
 #### _10.06_
 - **Added Rules for NCOverdrive**, a new TTRPG system.
 - Created dedicated subpages for all core mechanics, including [[Rules/NCOverdrive/Conditions\|Conditions]], [[Rules/NCOverdrive/Drive\|Drive]], [[Rules/CBR+PNK/EDGES\|Edges]], [[Rules/NCOverdrive/XP\|XP]], [[Rules/NCOverdrive/Flaws\|Flaws]], [[Rules/NCOverdrive/Gear\|Gear]], [[Rules/NCOverdrive/Hits\|Hits]], [[Rules/NCOverdrive/Stunts\|Stunts]], [[Rules/NCOverdrive/Trademarks\|Trademarks]], [[Rules/NCOverdrive/Traumas\|Traumas]], and [[Rules/NCOverdrive/Triggers\|Triggers]].
-- **Added a custom Character Sheet** for NCOverdrive, bringing it to stable version 1.0.1.5.
+- **Added a custom Character Sheet** for NCOverdrive, bringing it to stable version 1.0.1.6.
     - _Features:_ Integrated direct links to the VTT and a shared Google Sheets document for player collaboration.
 - **Updated the Digital Garden template** to version 1.8.0.4.
 - More #news 
