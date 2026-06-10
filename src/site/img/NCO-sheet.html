@@ -525,11 +525,17 @@
 <!-- SHEET WRAPPER (used for PDF capture) -->
 <div id="sheet-wrapper">
 
-  <!-- HANDLE + STUNTS + XP -->
-  <div class="nickname-row" style="display:flex;align-items:center;gap:12px;flex-wrap:nowrap;">
+<div class="nickname-row" style="display:flex;align-items:center;gap:12px;flex-wrap:nowrap;">
     <label style="white-space:nowrap;">Handle</label>
     <input type="text" id="nickname" placeholder="Enter street name…" style="flex:1;">
     <span style="color:#444;font-size:16px;">|</span>
+
+    <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;">
+      <span class="dynamic-header" data-path="rules/nc-overdrive" style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">€$</span>
+      <input type="text" id="eddies-value" value="0" style="font-size:16px;font-weight:700;color:var(--accent-yellow);width:50px;text-align:center;background:none;border:none;padding:0;">
+    </div>
+    <span style="color:#444;font-size:16px;">|</span>
+
     <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;">
       <span class="dynamic-header" data-path="rules/nc-overdrive" style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Stunts</span>
       <button class="btn btn-small" onclick="changeStunt(-1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">−</button>
@@ -537,10 +543,9 @@
       <button class="btn btn-small" onclick="changeStunt(1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">+</button>
     </div>
     <span style="color:#444;font-size:16px;">|</span>
+
     <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;">
-      <span class="dynamic-header" 
-      data-path="rules/nc-overdrive" 
-      style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">XP</span>
+      <span class="dynamic-header" data-path="rules/nc-overdrive" style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">XP</span>
       <button class="btn btn-small" onclick="changeExp(-1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">−</button>
       <span id="exp-value" style="font-size:16px;font-weight:700;color:var(--accent-yellow);min-width:24px;text-align:center;">0</span>
       <button class="btn btn-small" onclick="changeExp(1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">+</button>
