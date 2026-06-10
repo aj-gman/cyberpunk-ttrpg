@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Drugs/Speedheal.md","permalink":"/rules/drugs/speedheal/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/speedheal/","dg-note-properties":{}}
 ---
 
 > [[Rules/CPRED/Quality\|Common Price:]] Premium (100-500eb)

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Drugs/Weed.md","permalink":"/rules/drugs/weed/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/weed/","dg-note-properties":{}}
 ---
 
 > [[Rules/CPRED/Quality\|Common Price:]] Everyday (20-50eb)

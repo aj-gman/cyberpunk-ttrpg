@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Cyberware/Cyberware.md","permalink":"/rules/cyberware/cyberware/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/cyberware/cyberware/","dg-note-properties":{}}
 ---
 
 [[Rules/Homebrew\|Homebrewed]] completely from the ground up.

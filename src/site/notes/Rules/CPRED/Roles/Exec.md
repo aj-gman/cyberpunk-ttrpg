@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Roles/Exec.md","permalink":"/rules/roles/exec/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/exec/","dg-note-properties":{}}
 ---
 
 #role

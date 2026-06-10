@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Cyberware/Cyberpsychosis.md","permalink":"/rules/cyberware/cyberpsychosis/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/cyberware/cyberpsychosis/","dg-note-properties":{}}
 ---
 
 > For more about the lore of *Cyberpsychosis*, see [[Lore/Others/About Cyberpsychosis\|this page]].

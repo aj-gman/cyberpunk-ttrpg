@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Cyberpunk RED.md","permalink":"/rules/cyberpunk-red/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/cyberpunk-red/","dg-note-properties":{}}
 ---
 
 Set in [[2045\|2045]], during the "Time of the Red".

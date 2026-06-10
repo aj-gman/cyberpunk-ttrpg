@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Drugs/Black Lace.md","permalink":"/rules/drugs/black-lace/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/black-lace/","dg-note-properties":{}}
 ---
 
 > [[Rules/CPRED/Quality\|Common Price:]] Costly (50-100eb)

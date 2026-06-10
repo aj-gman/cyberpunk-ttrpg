@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Drugs/Drug Effects/Disorientation.md","permalink":"/rules/drugs/drug-effects/disorientation/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/drug-effects/disorientation/","dg-note-properties":{}}
 ---
 
 For every point of [[Rules/CPRED/Drugs/Drug Effects/Disorientation\|Disorientation]], GM can cancel one of your Move Actions during a turn.

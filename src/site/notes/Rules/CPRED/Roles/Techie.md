@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Roles/Techie.md","permalink":"/rules/roles/techie/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/techie/","dg-note-properties":{}}
 ---
 
 #role

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Drugs/Blue Glass.md","permalink":"/rules/drugs/blue-glass/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/blue-glass/","dg-note-properties":{}}
 ---
 
 > [[Rules/CPRED/Quality\|Common Price:]] Everyday (20-50eb)

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Drugs/Flash Assault.md","permalink":"/rules/drugs/flash-assault/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/flash-assault/","dg-note-properties":{}}
 ---
 
 > [[Rules/CPRED/Quality\|Common Price:]] Premium (100-500eb)

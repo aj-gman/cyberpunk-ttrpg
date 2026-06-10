@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Roles/Nomad.md","permalink":"/rules/roles/nomad/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/nomad/","dg-note-properties":{}}
 ---
 
 #role

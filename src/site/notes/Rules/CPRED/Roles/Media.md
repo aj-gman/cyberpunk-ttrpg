@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Roles/Media.md","permalink":"/rules/roles/media/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/media/","dg-note-properties":{}}
 ---
 
 #role

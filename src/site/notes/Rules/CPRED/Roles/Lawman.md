@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Roles/Lawman.md","permalink":"/rules/roles/lawman/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/lawman/","dg-note-properties":{}}
 ---
 
 #role

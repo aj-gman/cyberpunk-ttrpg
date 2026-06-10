@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Roles/Netrunner.md","permalink":"/rules/roles/netrunner/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/netrunner/","dg-note-properties":{}}
 ---
 
 #role

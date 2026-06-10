@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Roles/Fixer.md","permalink":"/rules/roles/fixer/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/fixer/","dg-note-properties":{}}
 ---
 
 #role

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/Drugs/Vaporware.md","permalink":"/rules/drugs/vaporware/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/vaporware/","dg-note-properties":{}}
 ---
 
 > [[Rules/CPRED/Quality\|Common Price:]] Premium (100-500eb)
