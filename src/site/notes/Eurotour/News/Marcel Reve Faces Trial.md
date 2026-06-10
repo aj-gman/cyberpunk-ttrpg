@@ -1,6 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/news/marcel-reve-faces-trial/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/news/marcel-reve-faces-trial/","tags":["#news"],"dg-note-properties":{"tags":["#news"]}}
 ---
 
-#news [[Biotehnica\|Biotehnica]], [[Marcel Reve\|Marcel Reve]], [[Eurotour/Locations/Paris\|Paris]]
+#news [[Biotechnica\|Biotechnica]], [[Marcel Reve\|Marcel Reve]], [[Eurotour/Locations/Paris\|Paris]]
 ![news-marcelreve.png\|500](/img/user/Pictures/news-marcelreve.png)
