@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
 ---
 
 ### May 2026
@@ -9,7 +9,7 @@
 - Revamped the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] page to link into [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|Cyberpsychosis Symptoms]], [[Rules/CPRED/Cyberware/Cyberware Classes\|Cyberware Classes]] and [[Rules/CPRED/Cyberware/Humanity\|Humanity]] so you don't have to navigate
 - Updated the Site's CSS to match in colors and vibe to the Obsidian Vault
 #### *18.05*
-- Added a [[z-SITE/CPRED Character Sheet\|CPRED Character Sheet]] (Work in Progress)
+- Added a [[z-SITE/CPRED Sheet\|CPRED Sheet]] (Work in Progress)
 	Features:
 	- [[Rules/CPRED/Cyberware/Cyberware#Cyberpsychosis\|Cyberpsychosis ]]tracker, [[Rules/CPRED/Cyberware/Humanity\|Humanity]] calculator & full [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] rule implementation
 	- Multiple pages for easy navigation
@@ -22,7 +22,7 @@
 - Added a common price for all [[Rules/CPRED/Drugs/Drugs\|Drugs]]
 - Cleaned up webpages
 - Added two news articles, [[Eurotour/News/Who let Entropy have a CHAINSAW!\|Who let Entropy have a CHAINSAW!]] & [[Eurotour/News/Executive Executions on Rhin-Ruhr Rooftops\|Executive Executions on Rhin-Ruhr Rooftops]]
-- Brought the [[z-SITE/CPRED Character Sheet\|CPRED Character Sheet]] to a stable 1.0.1.1 version
+- Brought the [[z-SITE/CPRED Sheet\|CPRED Sheet]] to a stable 1.0.1.1 version
 - Added an [[z-SITE/AI Policy\|AI disclaimer]] in the footer of all webpages (except, for some reason, the [[z-SITE/Homepage\|Homepage]]?)
 - Added descriptions for all of the main [[Eurotour/Eurotour\|Eurotour]] locations: [[Eurotour/Locations/Liverpool\|Liverpool]], [[Eurotour/Locations/Brussels\|Brussels]], [[Eurotour/Locations/Paris\|Paris]], [[Eurotour/Locations/Venice\|Venice]], [[Eurotour/Locations/Rhine-Ruhr Conurb\|Rhine-Ruhr Conurb]], [[Eurotour/Locations/Stockholm\|Stockholm]], [[Prague\|Prague]]
 - Added initial descriptions for the #role s, as well as their Role Abilities
@@ -30,19 +30,25 @@
 - Broke down [[Rules/CPRED/Combat/Combat\|Combat]] into [[Rules/CPRED/Combat/Combat\|Combat]], [[Rules/CPRED/Combat/Critical Injuries\|Critical Injuries]] & [[Rules/CPRED/Combat/Firearms of Cyberpunk\|Firearms of Cyberpunk]]
 #### *24.05*
 - Added [[Eurotour/Locations/Stockholm\|Stockholm]] and information on [[Eurotour/Adventures/5 Touring the Margin\|5 Touring the Margin]] (restricted access)
-- [[z-SITE/CPRED Character Sheet\|CPRED Character Sheet]] has been brought to a stable patch, v1.0.1.1.
+- [[z-SITE/CPRED Sheet\|CPRED Sheet]] has been brought to a stable patch, v1.0.1.1.
 - Cleared up some more on the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] webpage
 
 ### June 2026
 #### *03.06*
-- Updated [[z-SITE/CPRED Character Sheet\|CPRED Character Sheet]] with features (Still work in progress):
+- Updated [[z-SITE/CPRED Sheet\|CPRED Sheet]] with features (Still work in progress):
 	- Added Cloud Sync feature (save in-browser to the site's Repo and load from there)
 	- Added Nerve Degeneration, Rep & IP trackers.
 	- Added Role Ability functionality with multiple roles & values
 	- Rearranged the **Cyberware** page to be able to collapse all categories with no cyberware for a cleaner view.
+#### _10.06_
+- **Added Rules for NCOverdrive**, a new TTRPG system.
+- Created dedicated subpages for all core mechanics, including [[Rules/NCOverdrive/Conditions\|Conditions]], [[Rules/NCOverdrive/Drive\|Drive]], [[Rules/CBR+PNK/EDGES\|Edges]], [[Rules/NCOverdrive/Experience Points\|Experience Points]], [[Rules/NCOverdrive/Flaws\|Flaws]], [[Rules/NCOverdrive/Gear\|Gear]], [[Rules/NCOverdrive/Hits\|Hits]], [[Rules/NCOverdrive/Stunt Points\|Stunt Points]], [[Rules/NCOverdrive/Trademarks\|Trademarks]], [[Rules/NCOverdrive/Traumas\|Traumas]], and [[Rules/NCOverdrive/Triggers\|Triggers]].
+- **Added a custom Character Sheet** for NCOverdrive, bringing it to stable version 1.0.1.5.
+    - _Features:_ Integrated direct links to the VTT and a shared Google Sheets document for player collaboration.
+- **Updated the Digital Garden template** to version 1.8.0.4.
 
 ## TO DO
-- [ ] **[[z-SITE/CPRED Character Sheet\|CPRED Character Sheet]] needs:**
+- [ ] **[[z-SITE/CPRED Sheet\|CPRED Sheet]] needs:**
 	- [ ] Page for Notes, Backstory, Lore etc.
 	- [ ] Functionality for **REMOVING**:
 		- [ ] Custom Skills
@@ -51,3 +57,6 @@
 		- [ ] Skills
 		- [ ] Stats
 - [ ] Recalibrate mobile interface for the site (very buggy atm)
+- [ ] [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] needs:
+	- [ ] Rewriting of description grey text (bug fixes)
+	- [ ] Hyperlinks to the wiki for all of the new mechanics
