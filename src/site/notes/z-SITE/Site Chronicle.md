@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#role","#news"],"dg-note-properties":{"tags":["#role","#news"]}}
 ---
 
 ### May 2026
@@ -46,6 +46,8 @@
 - **Added a custom Character Sheet** for NCOverdrive, bringing it to stable version 1.0.1.5.
     - _Features:_ Integrated direct links to the VTT and a shared Google Sheets document for player collaboration.
 - **Updated the Digital Garden template** to version 1.8.0.4.
+- More #news 
+- Core Crews' stats and personalities are now open as explorable files([[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], [[Eurotour/Characters/Core Crew/Jimenez\|Jimenez]], [[Eurotour/Characters/Core Crew/Tinker\|Tinker]], [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], [[Eurotour/Characters/Core Crew/Ace McLeod\|Ace McLeod]], [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]], [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine Clements]]), including even [[Eurotour/Characters/Claire Monet\|Claire Monet]]!
 
 ## TO DO
 - [ ] **[[z-SITE/CPRED Sheet\|CPRED Sheet]] needs:**
