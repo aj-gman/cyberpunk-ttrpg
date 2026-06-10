@@ -557,7 +557,7 @@
     <!-- RIGHT COLUMN: Drive (stretches to match combined height) -->
     <div>
       <div class="panel">
-        <h2>Drive</h2>
+        <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Drive</h2>
         <textarea id="drive-text" placeholder="What drives you? Your motivation…"></textarea>
         <div class="pip-row" id="drive-pips" style="margin-top:8px;"></div>
       </div>
@@ -570,7 +570,7 @@
     <!-- LEFT COLUMN: Trademarks -->
     <div>
       <div class="panel">
-        <h2>Trademarks</h2>
+        <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Trademarks</h2>
         <div id="trademarks-container"></div>
         <button class="btn btn-small" onclick="addTrademark()" style="margin-top:4px;">+ Add Trademark</button>
       </div>
@@ -581,13 +581,13 @@
 
       <!-- HITS -->
       <div class="panel pink-border">
-        <h2>Hits</h2>
+        <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Hits</h2>
         <div class="hits-row" id="hits-pips"></div>
       </div>
 
       <!-- CONDITIONS -->
       <div class="panel">
-        <h2>Conditions</h2>
+        <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Conditions</h2>
         <div class="conditions-grid">
           <div class="condition-item"><div class="trauma-mark empty" onclick="toggleCondMark(this)"></div><span class="cond-label">Angry</span></div>
           <div class="condition-item"><div class="trauma-mark empty" onclick="toggleCondMark(this)"></div><span class="cond-label">Dazed</span></div>
@@ -611,7 +611,7 @@
 
       <!-- TRAUMAS -->
       <div class="panel yellow-border">
-        <h2>Traumas</h2>
+        <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Traumas</h2>
         <div id="traumas-container">
           <div class="trauma-row"><div class="trauma-mark empty" onclick="toggleTrauma(this)"></div><input type="text" placeholder="Trauma description…"></div>
           <div class="trauma-row"><div class="trauma-mark empty" onclick="toggleTrauma(this)"></div><input type="text" placeholder="Trauma description…"></div>
@@ -623,7 +623,7 @@
 
       <!-- FLAWS -->
       <div class="panel purple-border">
-        <h2>Flaws</h2>
+        <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Flaws</h2>
         <div id="flaws-container">
           <div class="flaw-row"><div class="flaw-mark" onclick="toggleFlaw(this)"></div><input type="text" placeholder="Flaw…"></div>
           <div class="flaw-row" style="margin-top:5px;"><div class="flaw-mark" onclick="toggleFlaw(this)"></div><input type="text" placeholder="Flaw…"></div>
@@ -646,7 +646,7 @@
 
   <!-- GEAR -->
   <div class="panel">
-    <h2>Gear</h2>
+    <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Gear</h2>
     <div class="gear-section" id="gear-container">
       <!-- Gear items are built by JavaScript -->
     </div>
@@ -1436,6 +1436,20 @@
     btnWrap.appendChild(btnAdd);
     container.parentNode.insertBefore(btnWrap, container.nextSibling);
   })();
+</script>
+<script>
+  // Only the main domain stays here
+  const domain = "https://gman-cyberpunk.vercel.app/";
+  
+  document.querySelectorAll('.dynamic-header').forEach(header => {
+    const title = header.textContent.trim().toLowerCase();
+    const folderPath = header.getAttribute('data-path'); // Grabs the specific path
+    
+    // Combines domain + folder path + title
+    const fullUrl = `${domain}${folderPath}/${encodeURIComponent(title)}/`;
+    
+    header.innerHTML = `<a href="${fullUrl}" style="color: inherit; text-decoration: none;">${header.textContent}</a>`;
+  });
 </script>
 </body>
 </html>
