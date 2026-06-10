@@ -481,6 +481,9 @@
     /* Sheet wrapper for PDF export */
     #sheet-wrapper { max-width: 1200px; margin: 0 auto; }
     #sheet-page2 { max-width: 1200px; margin: 0 auto; }
+    .dynamic-header a { color: inherit; text-decoration: none; transition: color 0.2s, text-shadow 0.2s; }
+    .dynamic-header a:hover { color: var(--accent-yellow) !important; text-shadow: 0 0 10px var(--accent-yellow), 0 0 20px rgba(254,232,1,0.4); }
+
     .page-break { page-break-before: always; break-before: page; }
     @media screen { .page-break { margin-top: 24px; padding-top: 24px; border-top: 1px dashed #333; } }
   </style>
@@ -499,7 +502,7 @@
     <div class="nco-logo">
       <span><span class="logo-neon">NIGHT </span><span class="logo-city">CITY</span></span>
       <span class="logo-over">OVERDRIVE</span>
-      <span class="logo-version">v1.0.1.5</span>
+      <span class="logo-version">v1.0.1.6</span>
     </div>
     <span style="color:#444;font-size:20px;">|</span>
     <span style="color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:1px;">Character Sheet</span>
@@ -507,7 +510,8 @@
     <button class="btn btn-small" onclick="showPage(1)" id="btn-page1" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Page 1</button>
     <button class="btn btn-small" onclick="showPage(2)" id="btn-page2" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Page 2</button>
     <button class="btn btn-small" onclick="showPage(3)" id="btn-page3" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Stash</button>
-    <button class="btn btn-small" onclick="showPage(4)" id="btn-page4" style="border-color:var(--neon-cyan);color:var(--neon-cyan);">VTT</button>
+    <button class="btn btn-small" onclick="showPage(4)" id="btn-page4" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">VTT</button>
+    <button class="btn btn-small" onclick="showPage(5)" id="btn-page5" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Wiki</button>
   </div>
   <div class="top-bar-actions">
     <label class="btn" style="display:inline-block;cursor:pointer;">
@@ -699,6 +703,14 @@
   </div>
 
 </div><!-- end sheet-page4 -->
+
+<!-- PAGE 5 -->
+<div id="sheet-page5" style="max-width:1200px;margin:0 auto;">
+  <div class="page-break"></div>
+  <div style="padding:0;margin:0;height:calc(100vh - 120px);min-height:500px;">
+    <iframe src="https://gman-cyberpunk.vercel.app/" style="width:100%;height:100%;border:none;border-radius:2px;background:#1a1c2e;" allowfullscreen></iframe>
+  </div>
+</div><!-- end sheet-page5 -->
 
 
 <script>
@@ -1329,18 +1341,22 @@
     var p2 = document.getElementById('sheet-page2');
     var p3 = document.getElementById('sheet-page3');
     var p4 = document.getElementById('sheet-page4');
+    var p5 = document.getElementById('sheet-page5');
     var b1 = document.getElementById('btn-page1');
     var b2 = document.getElementById('btn-page2');
     var b3 = document.getElementById('btn-page3');
     var b4 = document.getElementById('btn-page4');
+    var b5 = document.getElementById('btn-page5');
     p1.style.display = 'none';
     p2.style.display = 'none';
     p3.style.display = 'none';
     p4.style.display = 'none';
+    p5.style.display = 'none';
     if (b1) b1.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
     if (b2) b2.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
     if (b3) b3.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
-    if (b4) b4.style.cssText = 'border-color:var(--neon-cyan);color:var(--neon-cyan);background:transparent;';
+    if (b4) b4.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
+    if (b5) b5.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
     if (num === 1) {
       p1.style.display = 'block';
       if (b1) b1.style.cssText = 'border-color:var(--accent-yellow);color:#000;background:var(--accent-yellow);';
@@ -1352,14 +1368,18 @@
       if (b3) b3.style.cssText = 'border-color:var(--accent-yellow);color:#000;background:var(--accent-yellow);';
     } else if (num === 4) {
       p4.style.display = 'block';
-      if (b4) b4.style.cssText = 'border-color:var(--neon-cyan);color:#000;background:var(--neon-cyan);';
+      if (b4) b4.style.cssText = 'border-color:var(--accent-yellow);color:#000;background:var(--accent-yellow);';
+    } else if (num === 5) {
+      p5.style.display = 'block';
+      if (b5) b5.style.cssText = 'border-color:var(--accent-yellow);color:#000;background:var(--accent-yellow);';
     }
   }
 
-  // Init: show page 1, hide pages 2, 3 & 4
+  // Init: show page 1, hide pages 2-5
   document.getElementById('sheet-page2').style.display = 'none';
   document.getElementById('sheet-page3').style.display = 'none';
   document.getElementById('sheet-page4').style.display = 'none';
+  document.getElementById('sheet-page5').style.display = 'none';
   showPage(1);
 
   // ═══════════════════════════════════════════════════════
@@ -1448,7 +1468,7 @@
     // Combines domain + folder path + title
     const fullUrl = `${domain}${folderPath}/${encodeURIComponent(title)}/`;
     
-    header.innerHTML = `<a href="${fullUrl}" style="color: inherit; text-decoration: none;">${header.textContent}</a>`;
+    header.innerHTML = `<a href="${fullUrl}" target="_blank" style="color: inherit; text-decoration: none;">${header.textContent}</a>`;
   });
 </script>
 </body>
