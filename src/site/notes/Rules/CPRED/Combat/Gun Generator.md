@@ -16,6 +16,6 @@ Picks fron the [[Rules/CPRED/Combat/Combat#Gun Brands\|Brands]], [[Rules/CPRED/C
 
 
 ### Generator
-<div><div><b>Brand:</b> <a href="Militech" class="internal-link">Militech</a></div><div><b>Archetype:</b> Shotgun</div><div><b>Gun Type:</b> <a href="Tech" class="internal-link">Tech</a></div><div><b>Price:</b> 1125 eb</div></div><button class="gun-gen-btn"><span>Regenerate</span></button>
+<div><div><b>Brand:</b> <a href="Tsunami Arms" class="internal-link">Tsunami Arms</a></div><div><b>Archetype:</b> Shotgun</div><div><b>Gun Type:</b> <a href="Tech" class="internal-link">Tech</a></div><div><b>Price:</b> 1875 eb</div></div><button class="gun-gen-btn"><span>Regenerate</span></button>
 
 

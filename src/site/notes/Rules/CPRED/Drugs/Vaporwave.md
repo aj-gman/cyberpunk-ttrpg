@@ -5,7 +5,7 @@
 
 > [[Rules/CPRED/Quality\|Common Price:]] Premium (100-500eb)
 
-A type of [[Rules/CPRED/Drugs/Drugs (CPRED)\|street drug]] that is smoked in its vapor form, traditionally by [hookah](https://en.wikipedia.org/wiki/Hookah).
+A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that is smoked in its vapor form, traditionally by [hookah](https://en.wikipedia.org/wiki/Hookah).
 Commonly believed to be a mix between a strain of synthtobacco and opium seeds.
 
 Vaporware is popular with [[Rules/CPRED/Roles/Netrunner\|Netrunners]] as **it increases concentration and decreases stress**, producing a feeling of separation between the person's psyche and emotions. This has been known to throw less-than-stable users over the edge of psychosis.

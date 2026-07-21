@@ -4,7 +4,7 @@
 
 > [[Rules/CPRED/Quality\|Common Price:]] Everyday (20-50eb)
 
-A type of [[Rules/CPRED/Drugs/Drugs (CPRED)\|street drug]] that comes in little plastic vials of powder. It's purported to be a general enhancer of concentration, awareness and reactions, with the classic cocaine side effects of paranoia and anxiety. Cheap and easy to obtain.
+A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that comes in little plastic vials of powder. It's purported to be a general enhancer of concentration, awareness and reactions, with the classic cocaine side effects of paranoia and anxiety. Cheap and easy to obtain.
 
 # [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
 ### **[[Rules/NCOverdrive/Conditions\|Conditions]]**

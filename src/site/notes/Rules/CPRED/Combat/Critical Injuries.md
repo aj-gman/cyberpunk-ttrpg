@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/rules/cpred/combat/critical-injuries/","dg-note-properties":{}}
 ---
 
-Critical Injuries are an integral part of [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]]'s [[Rules/CPRED/Combat/Combat\|Combat]] system. 
+Critical Injuries are an integral part of [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]]'s [[Rules/CPRED/Combat/Combat\|Rules/CPRED/Combat/Combat]] system. 
 Whenever two or more dice rolled for damage from a Melee or Ranged Attack come up 6, you've inflicted a Critical Injury!
 Surgery checks can only be done by [[Rules/CPRED/Roles/Medtechie\|a professional]].
 

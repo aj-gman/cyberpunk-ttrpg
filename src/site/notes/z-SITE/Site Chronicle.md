@@ -5,7 +5,7 @@
 ### May 2026
 #### *17.05*
 - **Updated the site with a clearer/readable Theme.** Adjusted the sidebars to be more useful (left sidebar has been cleaned up to remove redundant folders | right sidebar has been extended for easy graph navigation)
-- Added multiple [[Rules/CPRED/Drugs/Drugs (CPRED)\|Drugs (CPRED)]], including [[Rules/CPRED/Drugs/Wireheading\|Wireheading]].
+- Added multiple [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]], including [[Rules/CPRED/Drugs/Wireheading\|Wireheading]].
 - Revamped the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] page to link into [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|Cyberpsychosis Symptoms]], [[Rules/CPRED/Cyberware/Cyberware Classes\|Cyberware Classes]] and [[Rules/CPRED/Cyberware/Humanity\|Humanity]] so you don't have to navigate
 - Updated the Site's CSS to match in colors and vibe to the Obsidian Vault
 #### *18.05*
@@ -19,7 +19,7 @@
 - Modified margins & padding so website fits on the entire screen instead of defaulting to 4:3
 #### *19.05*
 - Added three new drugs: [[Rules/CPRED/Drugs/Speedheal\|Speedheal]], [[Rules/CPRED/Drugs/Flash Assault\|Flash Assault]] and [[Rules/CPRED/Drugs/Regen 21\|Regen 21]], as well as their associated Drug Effects
-- Added a common price for all [[Rules/CPRED/Drugs/Drugs (CPRED)\|Drugs (CPRED)]]
+- Added a common price for all [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]]
 - Cleaned up webpages
 - Added two news articles, [[Eurotour/News/Who let Entropy have a CHAINSAW!\|Who let Entropy have a CHAINSAW!]] & [[Eurotour/News/Executive Executions on Rhin-Ruhr Rooftops\|Executive Executions on Rhin-Ruhr Rooftops]]
 - Brought the [[z-SITE/CPRED Sheet\|CPRED Sheet]] to a stable 1.0.1.1 version
@@ -27,7 +27,7 @@
 - Added descriptions for all of the main [[Eurotour/Eurotour\|Eurotour]] locations: [[Eurotour/Locations/Liverpool\|Liverpool]], [[Eurotour/Locations/Brussels\|Brussels]], [[Eurotour/Locations/Paris\|Paris]], [[Eurotour/Locations/Venice\|Venice]], [[Eurotour/Locations/Rhine-Ruhr Conurb\|Rhine-Ruhr Conurb]], [[Eurotour/Locations/Stockholm\|Stockholm]], [[Prague\|Prague]]
 - Added initial descriptions for the #role s, as well as their Role Abilities
 - Added public webpages for [[Eurotour/Characters/Crew/The Crew\|The Crew]]
-- Broke down [[Rules/CPRED/Combat/Combat\|Combat]] into [[Rules/CPRED/Combat/Combat\|Combat]], [[Rules/CPRED/Combat/Critical Injuries\|Critical Injuries]] & [[Rules/CPRED/Combat/Firearms of Cyberpunk\|Firearms of Cyberpunk]]
+- Broke down [[Rules/CPRED/Combat/Combat\|Rules/CPRED/Combat/Combat]] into [[Rules/CPRED/Combat/Combat\|Rules/CPRED/Combat/Combat]], [[Rules/CPRED/Combat/Critical Injuries\|Critical Injuries]] & [[Rules/CPRED/Combat/Firearms of Cyberpunk\|Firearms of Cyberpunk]]
 #### *24.05*
 - Added [[Eurotour/Locations/Stockholm\|Stockholm]] and information on [[Eurotour/Adventures/5 Touring the Margin\|5 Touring the Margin]] (restricted access)
 - [[z-SITE/CPRED Sheet\|CPRED Sheet]] has been brought to a stable patch, v1.0.1.1.
@@ -36,19 +36,20 @@
 ### June 2026
 #### *03.06*
 - Updated [[z-SITE/CPRED Sheet\|CPRED Sheet]] with features (Still work in progress):
-	- Added Cloud Sync feature (save in-browser to the site's Repo and load from there)
+	- ~~Added Cloud Sync feature (save in-browser to the site's Repo and load from there)~~
+		Currently broken. No idea why.
 	- Added Nerve Degeneration, Rep & IP trackers.
 	- Added Role Ability functionality with multiple roles & values
 	- Rearranged the **Cyberware** page to be able to collapse all categories with no cyberware for a cleaner view.
 #### _10.06_
 - **Added Rules for NCOverdrive**, a new TTRPG system.
-- Created dedicated subpages for all core mechanics, including [[Rules/NCOverdrive/Conditions\|Conditions]], [[Rules/NCOverdrive/Drive\|Drive]], [[Rules/CBR+PNK/EDGES\|Edges]], [[Rules/NCOverdrive/XP\|XP]], [[Rules/NCOverdrive/Flaws\|Flaws]], [[Rules/NCOverdrive/Gear\|Gear]], [[Rules/NCOverdrive/Hits\|Hits]], [[Rules/NCOverdrive/Stunts\|Stunts]], [[Rules/NCOverdrive/Trademarks\|Trademarks]], [[Rules/NCOverdrive/Traumas\|Traumas]], and [[Rules/NCOverdrive/Triggers\|Triggers]].
+- Created dedicated subpages for all core mechanics, including [[Rules/NCOverdrive/Conditions\|Conditions]], [[Rules/NCOverdrive/Drive\|Drive]], [[Rules/CBR+PNK/EDGES\|Rules/CBR+PNK/EDGES]], [[Rules/NCOverdrive/XP\|XP]], [[Rules/NCOverdrive/Trademarks/Flaws\|Flaws]], [[Rules/NCOverdrive/Gear\|Gear]], [[Rules/NCOverdrive/Damage/Hits\|Hits]], [[Rules/NCOverdrive/Stunts\|Stunts]], [[Rules/NCOverdrive/Trademarks/Trademarks\|Trademarks]], [[Rules/NCOverdrive/Damage/Traumas\|Traumas]], and [[Rules/NCOverdrive/Trademarks/Triggers\|Triggers]].
 - **Added a custom Character Sheet** for NCOverdrive, bringing it to stable version 1.0.1.6.
     - _Features:_ Integrated direct links to the VTT and a shared Google Sheets document for player collaboration.
 - **Updated the Digital Garden template** to version 1.8.0.4.
 - More #news 
 - Core Crews' stats and personalities are now open as explorable files([[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], [[Eurotour/Characters/Core Crew/Jimenez\|Jimenez]], [[Eurotour/Characters/Core Crew/Tinker\|Tinker]], [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], [[Eurotour/Characters/Core Crew/Ace McLeod\|Ace McLeod]], [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]], [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine Clements]]), including even [[Eurotour/Characters/Claire Monet\|Claire Monet]]!
-- Added [[Rules/NCOverdrive/Drugs (NCOverdrive)\|Drugs (NCOverdrive)]], which encompasses all of the adjusted rules for [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] for [[Rules/CPRED/Drugs/Drugs (CPRED)\|Drugs (CPRED)]]
+- Added [[Rules/NCOverdrive/Drugs\|Rules/NCOverdrive/Drugs]], which encompasses all of the adjusted rules for [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] for [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]]
 
 ## TO DO
 - [ ] **[[z-SITE/CPRED Sheet\|CPRED Sheet]] needs:**

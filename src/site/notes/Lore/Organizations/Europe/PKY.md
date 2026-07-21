@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Organizations/Europe/PKY.md","permalink":"/organizations/europe/pky/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Organizations/Europe/PKY.md","permalink":"/organizations/europe/pky/","tags":["#organization"],"dg-note-properties":{"tags":["#organization"]}}
 ---
 
 #organization as part of the [[Lore/Organizations/Europe/MLA\|MLA]]
