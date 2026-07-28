@@ -461,6 +461,104 @@
     /* STASH SEPARATOR */
     .stash-sep { color: var(--dim); font-size: 14px; font-weight: 300; margin: 0 2px; }
 
+    /* TRACKERS MODULE */
+    .tracker-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      padding: 6px 8px;
+      background: #0a0c1a;
+      border: 1px solid #1e2245;
+      border-radius: 3px;
+    }
+    .tracker-label {
+      color: var(--neon-cyan);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      min-width: 110px;
+    }
+    .tracker-controls {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .tracker-controls .btn {
+      padding: 2px 6px;
+      font-size: 10px;
+    }
+    .tracker-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent-yellow);
+      min-width: 28px;
+      text-align: center;
+    }
+    .tracker-bar {
+      flex: 1;
+      height: 8px;
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+    }
+    .tracker-bar-fill {
+      height: 100%;
+      background: var(--neon-cyan);
+      transition: width 0.2s;
+      border-radius: 2px;
+    }
+    .tracker-bar-fill.danger {
+      background: var(--danger-red);
+    }
+    .cyberpsy-warning {
+      display: none;
+      background: rgba(255, 0, 85, 0.15);
+      border: 1px solid var(--danger-red);
+      color: var(--danger-red);
+      padding: 8px 10px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 3px;
+      margin-top: 6px;
+      animation: flashRed 0.8s ease-in-out infinite alternate;
+    }
+    .cyberpsy-warning.visible { display: block; }
+    @keyframes flashRed {
+      from { background: rgba(255, 0, 85, 0.08); text-shadow: 0 0 6px rgba(255,0,85,0.3); }
+      to { background: rgba(255, 0, 85, 0.3); text-shadow: 0 0 14px rgba(255,0,85,0.8); }
+    }
+
+    /* HITS counter controls */
+    .hits-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hits-counter {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .hits-counter .btn {
+      padding: 2px 6px;
+      font-size: 10px;
+    }
+    .hits-counter-label {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent-yellow);
+      min-width: 20px;
+      text-align: center;
+    }
+
     /* Loading overlay */
     #pdf-loading {
       display: none;
@@ -592,7 +690,14 @@
 
       <!-- HITS -->
       <div class="panel pink-border">
-        <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Hits</h2>
+        <div class="hits-title-row">
+          <h2 class="dynamic-header" data-path="rules/nc-overdrive/" style="border-bottom:none;margin-bottom:0;padding-bottom:0;">Hits</h2>
+          <div class="hits-counter">
+            <button class="btn btn-small" onclick="changeHits(-1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);">−</button>
+            <span id="hits-count" class="hits-counter-label">3</span>
+            <button class="btn btn-small" onclick="changeHits(1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);">+</button>
+          </div>
+        </div>
         <div class="hits-row" id="hits-pips"></div>
       </div>
 
@@ -618,6 +723,39 @@
           </div>
         </div>
         <button class="btn btn-small" onclick="addCondition()" style="margin-top:6px;">+ Condition</button>
+      </div>
+
+      <!-- CYBERPSYCHOSIS TRACKERS -->
+      <div class="panel" style="border-color:var(--purple);">
+        <h2 style="color:var(--purple);border-color:var(--purple);">Cyberpsychosis Trackers</h2>
+        <div class="tracker-row">
+          <span class="tracker-label" style="color:var(--danger-red);">Cyberpsychosis</span>
+          <div class="tracker-controls">
+            <button class="btn btn-small" onclick="changeTracker('cyberpsy', -1)" style="border-color:var(--danger-red);color:var(--danger-red);">−</button>
+            <span id="cyberpsy-value" class="tracker-value" style="color:var(--danger-red);">0</span>
+            <button class="btn btn-small" onclick="changeTracker('cyberpsy', 1)" style="border-color:var(--danger-red);color:var(--danger-red);">+</button>
+          </div>
+          <div class="tracker-bar"><div class="tracker-bar-fill danger" id="cyberpsy-bar" style="width:0%;"></div></div>
+        </div>
+        <div class="tracker-row">
+          <span class="tracker-label">Humanity</span>
+          <div class="tracker-controls">
+            <button class="btn btn-small" onclick="changeTracker('humanity', -1)">−</button>
+            <span id="humanity-value" class="tracker-value">10</span>
+            <button class="btn btn-small" onclick="changeTracker('humanity', 1)">+</button>
+          </div>
+          <div class="tracker-bar"><div class="tracker-bar-fill" id="humanity-bar" style="width:100%;"></div></div>
+        </div>
+        <div class="tracker-row">
+          <span class="tracker-label" style="color:var(--net-green);">Nerve Degeneration</span>
+          <div class="tracker-controls">
+            <button class="btn btn-small" onclick="changeTracker('nerve', -1)" style="border-color:var(--net-green);color:var(--net-green);">−</button>
+            <span id="nerve-value" class="tracker-value" style="color:var(--net-green);">0</span>
+            <button class="btn btn-small" onclick="changeTracker('nerve', 1)" style="border-color:var(--net-green);color:var(--net-green);">+</button>
+          </div>
+          <div class="tracker-bar"><div class="tracker-bar-fill" id="nerve-bar" style="width:0%;background:var(--net-green);"></div></div>
+        </div>
+        <div class="cyberpsy-warning" id="cyberpsy-warning">⚠ CYBERPSYCHOSIS THRESHOLD EXCEEDED</div>
       </div>
 
       <!-- TRAUMAS -->
@@ -885,11 +1023,14 @@
   }
 
   // ═══════════════════════════════════════════════════════
-  // HITS PIPS (4 hits)
+  // HITS PIPS (adjustable count, default 3, max 10)
   // ═══════════════════════════════════════════════════════
-  function buildHitPips() {
+  let hitsCount = 3;
+
+  function buildHitPips(count) {
     const container = document.getElementById('hits-pips');
-    for (let i = 0; i < 4; i++) {
+    container.innerHTML = '';
+    for (let i = 0; i < count; i++) {
       const pip = document.createElement('div');
       pip.className = 'hit-pip';
       pip.dataset.index = i;
@@ -897,8 +1038,43 @@
       pip.addEventListener('click', function () { this.classList.toggle('marked'); });
       container.appendChild(pip);
     }
+    document.getElementById('hits-count').textContent = count;
   }
-  buildHitPips();
+
+  function changeHits(delta) {
+    hitsCount = Math.max(1, Math.min(10, hitsCount + delta));
+    buildHitPips(hitsCount);
+  }
+
+  buildHitPips(hitsCount);
+
+  // ═══════════════════════════════════════════════════════
+  // CYBERPSYCHOSIS TRACKERS
+  // ═══════════════════════════════════════════════════════
+  const trackerMax = 10;
+
+  function changeTracker(type, delta) {
+    var el = document.getElementById(type + '-value');
+    var val = parseInt(el.textContent) || 0;
+    val = Math.max(0, Math.min(trackerMax, val + delta));
+    el.textContent = val;
+    // Update bar fill
+    var bar = document.getElementById(type + '-bar');
+    bar.style.width = (val / trackerMax * 100) + '%';
+    // Check cyberpsy threshold
+    checkCyberpsyThreshold();
+  }
+
+  function checkCyberpsyThreshold() {
+    var cyberpsy = parseInt(document.getElementById('cyberpsy-value').textContent) || 0;
+    var humanity = parseInt(document.getElementById('humanity-value').textContent) || 0;
+    var warning = document.getElementById('cyberpsy-warning');
+    if (cyberpsy > humanity) {
+      warning.classList.add('visible');
+    } else {
+      warning.classList.remove('visible');
+    }
+  }
 
   // ═══════════════════════════════════════════════════════
   // STASH PIPS (5 pips)
@@ -1058,6 +1234,13 @@
     // Hits
     const hits = Array.from(document.querySelectorAll('#hits-pips .hit-pip')).map(function (p) { return p.classList.contains('marked'); });
 
+    // Cyberpsychosis trackers
+    var trackers = {
+      cyberpsy: parseInt(document.getElementById('cyberpsy-value').textContent) || 0,
+      humanity: parseInt(document.getElementById('humanity-value').textContent) || 0,
+      nerve: parseInt(document.getElementById('nerve-value').textContent) || 0
+    };
+
     // Stash
     const stash = Array.from(document.querySelectorAll('#stash-pips .pip')).map(function (p) { return p.classList.contains('marked'); });
 
@@ -1081,7 +1264,9 @@
       trademarks: trademarks,
       gear: gear,
       cyberware: cyberware,
+      hitsCount: hitsCount,
       hits: hits,
+      trackers: trackers,
       conditions: {
         angry: !document.querySelector('.conditions-grid .condition-item:nth-child(1) .trauma-mark') || !document.querySelector('.conditions-grid .condition-item:nth-child(1) .trauma-mark').classList.contains('empty'),
         dazed: !document.querySelector('.conditions-grid .condition-item:nth-child(2) .trauma-mark') || !document.querySelector('.conditions-grid .condition-item:nth-child(2) .trauma-mark').classList.contains('empty'),
@@ -1210,10 +1395,30 @@
     if (data.cyberware && data.cyberware.length) {
       data.cyberware.forEach(function (cw) { addCyberware(cw); });
     }
-    // Hits
+    // Hits (rebuild with saved count, then restore marks)
+    if (typeof data.hitsCount === 'number') {
+      hitsCount = Math.max(1, Math.min(10, data.hitsCount));
+      buildHitPips(hitsCount);
+    }
     document.querySelectorAll('#hits-pips .hit-pip').forEach(function (pip, i) {
       pip.classList.toggle('marked', !!(data.hits || [])[i]);
     });
+
+    // Cyberpsychosis trackers
+    var t = data.trackers || {};
+    if (typeof t.cyberpsy === 'number') {
+      document.getElementById('cyberpsy-value').textContent = Math.max(0, Math.min(trackerMax, t.cyberpsy));
+      document.getElementById('cyberpsy-bar').style.width = (Math.max(0, Math.min(trackerMax, t.cyberpsy)) / trackerMax * 100) + '%';
+    }
+    if (typeof t.humanity === 'number') {
+      document.getElementById('humanity-value').textContent = Math.max(0, Math.min(trackerMax, t.humanity));
+      document.getElementById('humanity-bar').style.width = (Math.max(0, Math.min(trackerMax, t.humanity)) / trackerMax * 100) + '%';
+    }
+    if (typeof t.nerve === 'number') {
+      document.getElementById('nerve-value').textContent = Math.max(0, Math.min(trackerMax, t.nerve));
+      document.getElementById('nerve-bar').style.width = (Math.max(0, Math.min(trackerMax, t.nerve)) / trackerMax * 100) + '%';
+    }
+    checkCyberpsyThreshold();
 
     // Conditions
     const c = data.conditions || {};
