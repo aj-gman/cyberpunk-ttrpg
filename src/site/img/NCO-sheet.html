@@ -368,6 +368,49 @@
 
     /* GEAR */
     .gear-section { margin-bottom: 10px; }
+    .gear-section.compact-1 { max-width: 100%; margin: 0 auto 10px; }
+    .gear-section.compact-2 { margin: 0 0 10px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: row; gap: 8px; width: 100%; }
+    .gear-section.compact-3 { margin: 0 0 10px 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-flow: row; gap: 8px; width: 100%; }
+    .gear-section.compact-2 .gear-block,
+    .gear-section.compact-3 .gear-block {
+      margin-bottom: 0;
+      min-width: 0;
+      width: 100%;
+    }
+    .panel-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .panel-header-row h2 {
+      margin: 0;
+    }
+    .compact-controls {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .compact-controls .btn {
+      padding: 2px 6px;
+      min-width: 44px;
+      font-size: 9px;
+    }
+    .gear-item-actions {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: auto;
+    }
+    .gear-order-btn {
+      min-width: 22px;
+      padding: 2px 5px;
+      line-height: 1;
+      font-size: 10px;
+    }
     .gear-block {
       background: #000;
       border: 1px solid #2a2d50;
@@ -795,8 +838,15 @@
 
   <!-- GEAR -->
   <div class="panel">
-    <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Gear</h2>
-    <div class="gear-section" id="gear-container">
+    <div class="panel-header-row">
+      <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Gear</h2>
+      <div class="compact-controls">
+        <button class="btn btn-small" type="button" onclick="setListCompact('gear-container', 1)">1 row</button>
+        <button class="btn btn-small" type="button" onclick="setListCompact('gear-container', 2)">2 rows</button>
+        <button class="btn btn-small" type="button" onclick="setListCompact('gear-container', 3)">3 rows</button>
+      </div>
+    </div>
+    <div class="gear-section compact-2" id="gear-container">
       <!-- Gear items are built by JavaScript -->
     </div>
     <div class="divider"></div>
@@ -806,8 +856,15 @@
 
   <!-- CYBERWARE -->
   <div class="panel" style="border-color:var(--accent-yellow);">
-    <h2 style="color:var(--accent-yellow);border-color:var(--accent-yellow);">Cyberware</h2>
-    <div class="gear-section" id="cyberware-container">
+    <div class="panel-header-row">
+      <h2 style="color:var(--accent-yellow);border-color:var(--accent-yellow);">Cyberware</h2>
+      <div class="compact-controls">
+        <button class="btn btn-small" type="button" onclick="setListCompact('cyberware-container', 1)" style="border-color:var(--purple);color:var(--purple);">1 row</button>
+        <button class="btn btn-small" type="button" onclick="setListCompact('cyberware-container', 2)" style="border-color:var(--purple);color:var(--purple);">2 rows</button>
+        <button class="btn btn-small" type="button" onclick="setListCompact('cyberware-container', 3)" style="border-color:var(--purple);color:var(--purple);">3 rows</button>
+      </div>
+    </div>
+    <div class="gear-section compact-2" id="cyberware-container">
       <!-- Cyberware items are built by JavaScript -->
     </div>
   </div>
@@ -929,6 +986,8 @@
     const div = document.createElement('div');
     div.className = 'gear-block';
     div.id = 'gear-block-' + id;
+    div.draggable = true;
+    div.dataset.kind = 'gear';
 
     const isSpecial = data.type === 'special';
     const typeLabel = isSpecial ? 'Special' : 'Basic';
@@ -936,10 +995,16 @@
 
     const header = document.createElement('div');
     header.className = 'gear-header';
+
+    const controls = document.createElement('div');
+    controls.className = 'gear-item-actions';
+    controls.innerHTML =
+      '<button class="btn btn-danger btn-small" type="button" onclick="event.stopPropagation(); removeGear(' + id + ')">&#10005;</button>';
+
     header.innerHTML =
       '<span class="gear-type-tag ' + typeClass + '">' + typeLabel + '</span>' +
-      '<input type="text" class="gear-title-input gear-title" placeholder="Gear name&#8230;" value="' + escHtml(data.title || '') + '">' +
-      '<button class="btn btn-danger btn-small" onclick="removeGear(' + id + ')">&#10005;</button>';
+      '<input type="text" class="gear-title-input gear-title" placeholder="Gear name&#8230;" value="' + escHtml(data.title || '') + '">';
+    header.appendChild(controls);
     div.appendChild(header);
 
     if (isSpecial) {
@@ -975,12 +1040,91 @@
       div.appendChild(notes);
     }
 
+    div.addEventListener('dragstart', handleListDragStart);
+    div.addEventListener('dragover', handleListDragOver);
+    div.addEventListener('drop', handleListDrop);
+    div.addEventListener('dragend', handleListDragEnd);
     container.appendChild(div);
+    setListCompact(container.id, getListCompactLevel(container.id));
   }
 
   function removeGear(id) {
     const el = document.getElementById('gear-block-' + id);
     if (el) el.remove();
+  }
+
+  function setListCompact(containerId, rows) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    const level = Math.max(1, Math.min(3, Number(rows) || 2));
+    container.classList.remove('compact-1', 'compact-2', 'compact-3');
+    container.classList.add('compact-' + level);
+    container.dataset.compactLevel = String(level);
+    const blocks = container.querySelectorAll('.gear-block');
+    blocks.forEach(function (block) {
+      const notes = block.querySelector('.gear-notes');
+      if (notes) {
+        notes.rows = Math.max(1, Math.min(3, level));
+      }
+      block.style.width = '100%';
+    });
+
+    if (level > 1) {
+      container.style.display = 'grid';
+      const colCount = level === 2 ? 2 : 3;
+      container.style.gridTemplateColumns = 'repeat(' + colCount + ', minmax(0, 1fr))';
+      container.style.gridAutoFlow = 'row';
+      container.style.gap = '8px';
+      container.style.alignItems = 'stretch';
+      container.style.width = '100%';
+    } else {
+      container.style.display = '';
+      container.style.gridTemplateColumns = '';
+      container.style.gridAutoFlow = '';
+      container.style.gap = '';
+      container.style.alignItems = '';
+      container.style.width = '';
+    }
+  }
+
+  function getListCompactLevel(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return 2;
+    const level = Number(container.dataset.compactLevel || 2);
+    return Math.max(1, Math.min(3, level));
+  }
+
+  function handleListDragStart(event) {
+    const item = event.currentTarget;
+    item.classList.add('dragging');
+    event.dataTransfer.effectAllowed = 'move';
+    event.dataTransfer.setData('text/plain', item.id);
+  }
+
+  function handleListDragOver(event) {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'move';
+  }
+
+  function handleListDrop(event) {
+    event.preventDefault();
+    const sourceId = event.dataTransfer.getData('text/plain');
+    const source = document.getElementById(sourceId);
+    const target = event.currentTarget;
+    if (!source || !target || source === target || !source.parentNode || !target.parentNode) return;
+    const container = source.parentNode;
+    const sourceIndex = Array.from(container.children).indexOf(source);
+    const targetIndex = Array.from(container.children).indexOf(target);
+    const insertionIndex = sourceIndex < targetIndex ? targetIndex + 1 : targetIndex;
+    if (insertionIndex >= 0 && insertionIndex <= container.children.length) {
+      const refNode = container.children[insertionIndex] || null;
+      container.insertBefore(source, refNode);
+    }
+  }
+
+  function handleListDragEnd(event) {
+    const item = event.currentTarget;
+    item.classList.remove('dragging');
   }
 
   // Start with no gear items (players add via + buttons)
@@ -1013,12 +1157,20 @@
     container.appendChild(div);
   }
 
-  function addFlaw() {
+  function addFlaw(data) {
     const container = document.getElementById('flaws-container');
     const div = document.createElement('div');
     div.className = 'flaw-row';
     div.style.marginTop = '5px';
-    div.innerHTML = '<div class="flaw-mark" onclick="toggleFlaw(this)"></div><input type="text" placeholder="Flaw&#8230;">';
+    const mark = document.createElement('div');
+    mark.className = 'flaw-mark' + ((data && data.marked) ? ' marked' : '');
+    mark.onclick = function () { toggleFlaw(this); };
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.placeholder = 'Flaw…';
+    input.value = (data && data.text) ? data.text : '';
+    div.appendChild(mark);
+    div.appendChild(input);
     container.appendChild(div);
   }
 
@@ -1255,12 +1407,27 @@
       };
     });
 
+    const flaws = Array.from(document.querySelectorAll('#flaws-container .flaw-row')).map(function (row) {
+      const mark = row.querySelector('.flaw-mark');
+      const input = row.querySelector('input');
+      return {
+        marked: mark ? mark.classList.contains('marked') : false,
+        text: input ? input.value : ''
+      };
+    }).filter(function (flaw) {
+      return flaw.text.trim() || flaw.marked;
+    });
+
+    const eddies = Number(String(document.getElementById('eddies-value').value || '0').replace(/[^0-9-]/g, '')) || 0;
+
     return {
       _version: '1.0.1.1',
       _game: 'Neon City Overdrive',
       nickname: val('nickname'),
       appearance: val('appearance'),
       personality: val('personality'),
+      money: eddies,
+      eddies: eddies,
       trademarks: trademarks,
       gear: gear,
       cyberware: cyberware,
@@ -1282,12 +1449,11 @@
         })
       },
       traumas: traumas,
-      flaws: {
-        flaw1: val('flaw1'),
-        flaw2: val('flaw2'),
-        marked1: document.querySelectorAll('#sheet-wrapper .flaw-mark')[0] ? document.querySelectorAll('#sheet-wrapper .flaw-mark')[0].classList.contains('marked') : false,
-        marked2: document.querySelectorAll('#sheet-wrapper .flaw-mark')[1] ? document.querySelectorAll('#sheet-wrapper .flaw-mark')[1].classList.contains('marked') : false
-      },
+      flaws: flaws,
+      flaw1: flaws[0] ? flaws[0].text : '',
+      flaw2: flaws[1] ? flaws[1].text : '',
+      marked1: flaws[0] ? flaws[0].marked : false,
+      marked2: flaws[1] ? flaws[1].marked : false,
       stuntPoints: parseInt(document.getElementById('stunt-value').textContent) || 0,
       stash: stash,
       drive: { text: val('drive-text'), pips: drivePips },
@@ -1309,13 +1475,21 @@
     const div = document.createElement('div');
     div.className = 'gear-block';
     div.id = 'cyberware-block-' + id;
+    div.draggable = true;
+    div.dataset.kind = 'cyberware';
 
     const header = document.createElement('div');
     header.className = 'gear-header';
+
+    const controls = document.createElement('div');
+    controls.className = 'gear-item-actions';
+    controls.innerHTML =
+      '<button class="btn btn-danger btn-small" type="button" onclick="event.stopPropagation(); removeCyberware(' + id + ')">&#10005;</button>';
+
     header.innerHTML =
       '<span class="gear-type-tag" style="color:var(--purple);border-color:var(--purple);">Cyber</span>' +
-      '<input type="text" class="gear-title-input gear-title" placeholder="Cyberware name&#8230;" value="' + escHtml(data.title || '') + '">' +
-      '<button class="btn btn-danger btn-small" onclick="removeCyberware(' + id + ')">&#10005;</button>';
+      '<input type="text" class="gear-title-input gear-title" placeholder="Cyberware name&#8230;" value="' + escHtml(data.title || '') + '">';
+    header.appendChild(controls);
     div.appendChild(header);
 
     // Tags row
@@ -1342,7 +1516,12 @@
     notes.value = data.notes || '';
     div.appendChild(notes);
 
+    div.addEventListener('dragstart', handleListDragStart);
+    div.addEventListener('dragover', handleListDragOver);
+    div.addEventListener('drop', handleListDrop);
+    div.addEventListener('dragend', handleListDragEnd);
     container.appendChild(div);
+    setListCompact(container.id, getListCompactLevel(container.id));
   }
 
   function removeCyberware(id) {
@@ -1359,6 +1538,9 @@
     set('nickname', data.nickname || '');
     set('appearance', data.appearance || '');
     set('personality', data.personality || '');
+    const moneyValue = Number.isFinite(Number(data.money)) ? Number(data.money) : (Number.isFinite(Number(data.eddies)) ? Number(data.eddies) : 0);
+    const moneyField = document.getElementById('eddies-value');
+    if (moneyField) moneyField.value = moneyValue || 0;
     // Backward compatibility: if old 'description' field exists, use it
     if (!data.appearance && !data.personality && data.description) {
       set('appearance', data.description);
@@ -1477,12 +1659,32 @@
     });
 
     // Flaws
-    set('flaw1', (data.flaws || {}).flaw1 || '');
-    set('flaw2', (data.flaws || {}).flaw2 || '');
-    document.querySelectorAll('#sheet-wrapper .flaw-mark').forEach(function (mark, i) {
-      const marked = (data.flaws || {})['marked' + (i + 1)];
-      if (marked) mark.classList.add('marked'); else mark.classList.remove('marked');
+    const flawContainer = document.getElementById('flaws-container');
+    flawContainer.innerHTML = '';
+    let flawRows = [];
+    if (Array.isArray(data.flaws)) {
+      flawRows = data.flaws;
+    } else if (data.flaws && typeof data.flaws === 'object') {
+      flawRows = [
+        { text: data.flaws.flaw1 || '', marked: !!data.flaws.marked1 },
+        { text: data.flaws.flaw2 || '', marked: !!data.flaws.marked2 }
+      ];
+    }
+    if (!flawRows.length && data.flaw1 !== undefined || data.flaw2 !== undefined) {
+      flawRows = [
+        { text: data.flaw1 || '', marked: !!data.marked1 },
+        { text: data.flaw2 || '', marked: !!data.marked2 }
+      ];
+    }
+    if (!flawRows.length) {
+      flawRows = [{}, {}];
+    }
+    flawRows.forEach(function (flaw) {
+      addFlaw({ text: flaw.text || '', marked: !!flaw.marked });
     });
+    while (flawContainer.children.length < 2) {
+      addFlaw({ text: '', marked: false });
+    }
 
     // Stunt (numeric tracker)
     if (typeof data.stuntPoints === 'number') {
