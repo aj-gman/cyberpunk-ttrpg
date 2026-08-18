@@ -3,7 +3,7 @@
 ---
 
 #gig #eurotour 
-Set in the universe of [[2020\|Cyberpunk 2020]] and ran using the updated [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]] system, the [[Eurotour/Eurotour\|Eurotour]] sees [[Eurotour/Characters/Crew/The Crew\|The Crew]] go through New Europe protecting and working for [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], stateside [[Rules/CPRED/Roles/Rockerboy\|Rockerboy]], anarchist molotov-thrower and anti-corpo mascot. The *"TOTAL ENTROPY TOUR"* means flak from the [[Lore/Organizations/Europe/MLA\|MLA]], from the [[Lore/Organizations/Europe/EEC\|EEC]], as well as interaction with Eurosolos and Eurogangs, all with their different customs and behaviors.
+Set in the universe of [[2020\|Cyberpunk 2020]] and ran using the updated [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]] system, the [[Eurotour/Eurotour\|Eurotour]] sees [[Crew/The Crew\|The Crew]] go through New Europe protecting and working for [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], stateside [[Rules/CPRED/Roles/Rockerboy\|Rockerboy]], anarchist molotov-thrower and anti-corpo mascot. The *"TOTAL ENTROPY TOUR"* means flak from the [[Lore/Organizations/Europe/MLA\|MLA]], from the [[Lore/Organizations/Europe/EEC\|EEC]], as well as interaction with Eurosolos and Eurogangs, all with their different customs and behaviors.
 
 The opportunity of a lifetime... You've been hired to be the cream of the crop, the best Night City has to offer. You'll protect, assist and support Jack Entropy's exploits, concerts and (bad) habits. Else, you'll be stranded in Europe without an ID. A death sentence. 
 
@@ -25,9 +25,9 @@ Jack in here, smartboy, and see if you can cut it - Eurostyle.
 - [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], Ornament
 
 ### Adventures
-[[Eurotour/Adventures/1 Paper Trail\|1 Paper Trail]], set in [[Eurotour/Locations/Liverpool\|Liverpool]], where [[Eurotour/Characters/Crew/The Crew\|The Crew]] tracks down a runaway [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] without causing too much fuss. 
-[[Eurotour/Adventures/2 European Graffiti\|2 European Graffiti]], the second adventure, sees [[Eurotour/Characters/Crew/The Crew\|The Crew]] descend upon [[Eurotour/Locations/Brussels\|Brussels]], the capital of the [[Lore/Organizations/Europe/EEC\|EEC]], looking to score some radical points for [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]]'s image.
-[[Eurotour/Adventures/3 Trapped Animal\|3 Trapped Animal]] sees [[Eurotour/Characters/Crew/The Crew\|The Crew]] settle down in [[Eurotour/Locations/Paris\|Paris]], where they encounter an assassination attempt on [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]].
+[[Eurotour/Adventures/1 Paper Trail\|1 Paper Trail]], set in [[Eurotour/Locations/Liverpool\|Liverpool]], where [[Crew/The Crew\|The Crew]] tracks down a runaway [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] without causing too much fuss. 
+[[Eurotour/Adventures/2 European Graffiti\|2 European Graffiti]], the second adventure, sees [[Crew/The Crew\|The Crew]] descend upon [[Eurotour/Locations/Brussels\|Brussels]], the capital of the [[Lore/Organizations/Europe/EEC\|EEC]], looking to score some radical points for [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]]'s image.
+[[Eurotour/Adventures/3 Trapped Animal\|3 Trapped Animal]] sees [[Crew/The Crew\|The Crew]] settle down in [[Eurotour/Locations/Paris\|Paris]], where they encounter an assassination attempt on [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]].
 [[Eurotour/Adventures/4 Menace in Venice\|4 Menace in Venice]]
 [[Eurotour/Adventures/5 Touring the Margin\|5 Touring the Margin]]
 [[Eurotour/Adventures/6 Plundering Praha\|6 Plundering Praha]]

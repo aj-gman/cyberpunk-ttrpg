@@ -6,6 +6,10 @@ Characters have a “hit track” with **three boxes**[^1] that represents their
 
 A character that must mark one or more hits but has no empty boxes immediately writes a [[Rules/NCOverdrive/Damage/Traumas\|trauma]]. When you write a new [[Rules/NCOverdrive/Damage/Traumas\|trauma]] roll a D6; on a “1” the character is also dying.
 
+### Armor
+Armor is a **TAG**, which means it gives [[Rules/NCOverdrive/Dice Mechanics/Dice Rolls\|Action/Danger Dice]] depending on the situation. Armor may negate [[Rules/NCOverdrive/Damage/Hits\|Hits]] or even [[Rules/NCOverdrive/Conditions\|Conditions]] and, when enemies use it, counts as additional **Danger Dice**.
+
+**COVER** acts exactly like Armor.
 ### Healing
 - **Rest**. Characters clear one hit box when they can rest in relative safety. This only needs to be a few minutes - long enough to catch your breath and ready yourself for the next challenge.
 - [[Rules/NCOverdrive/Drugs\|Drugs]]

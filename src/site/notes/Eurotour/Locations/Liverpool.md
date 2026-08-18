@@ -14,7 +14,7 @@ Despite this obvious crime problem, the [[Lore/Organizations/Europe/MLA\|MLA]] r
 
 [[Eurotour/Locations/Liverpool\|Liverpool]]'s theme is **INFESTED**. Cops are everywhere, but most of them are corrupt, gang-affiliated, blackmailed to no end, on medication and are willing to exchange the little authority they have for some cold, hard cash, especially since the eurodollar sometimes jumps in value compared to the British Pound. 
 
-Worse, government agents are embedded and "fixing" (read: overwhelmed by) different problems, but most of their uniforms have the same color, lettering (big, bold MLA on the back). Some will stand up for the [[Lore/Organizations/Europe/MLA\|MLA]], but most are easily swayed by money, but they'll also try to peddle to [[Eurotour/Characters/Crew/The Crew\|The Crew]], gauging them as foreigners.
+Worse, government agents are embedded and "fixing" (read: overwhelmed by) different problems, but most of their uniforms have the same color, lettering (big, bold MLA on the back). Some will stand up for the [[Lore/Organizations/Europe/MLA\|MLA]], but most are easily swayed by money, but they'll also try to peddle to [[Crew/The Crew\|The Crew]], gauging them as foreigners.
 
 > FEATURES \\\ FEATURES \\\ FEATURES \\\ FEATURES
 > Liverpool [[Combat Zone\|Combat Zone]] - 3 square kilometeres abandoned by the [[Lore/Organizations/Europe/MLA\|MLA]], protected by gangs and scavengers | HIGH RISK, DO NOT ENTER IF CIVILLIAN/TOURIST

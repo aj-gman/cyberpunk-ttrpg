@@ -4,7 +4,7 @@
 
 #npc #eurotour [[Rules/CPRED/Roles/Lawman\|Lawman]], works for Interpol.
 
-Only referred to as her codename - **Monet** - this Interpol agent has been following [[Eurotour/Characters/Crew/The Crew\|The Crew]] since the moment they landed in [[Eurotour/Locations/Brussels\|Brussels]]. ███████  ███████  ██████████  ████████ ████████ ████████
+Only referred to as her codename - **Monet** - this Interpol agent has been following [[Crew/The Crew\|The Crew]] since the moment they landed in [[Eurotour/Locations/Brussels\|Brussels]]. ███████  ███████  ██████████  ████████ ████████ ████████
 
 Her desire is to obtain complete authority ██████████ and preferably gather enough evidence to push forward legislation ██████████████████████ to ban American [[Rules/CPRED/Roles/Rockerboy\|rockers]] ████████████████.
 

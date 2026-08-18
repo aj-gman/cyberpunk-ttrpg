@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#role","#news"],"dg-note-properties":{"tags":["#role","#news"]}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
 ---
 
 ### May 2026
@@ -26,7 +26,7 @@
 - Added an [[z-SITE/AI Policy\|AI disclaimer]] in the footer of all webpages (except, for some reason, the [[z-SITE/Homepage\|Homepage]]?)
 - Added descriptions for all of the main [[Eurotour/Eurotour\|Eurotour]] locations: [[Eurotour/Locations/Liverpool\|Liverpool]], [[Eurotour/Locations/Brussels\|Brussels]], [[Eurotour/Locations/Paris\|Paris]], [[Eurotour/Locations/Venice\|Venice]], [[Eurotour/Locations/Rhine-Ruhr Conurb\|Rhine-Ruhr Conurb]], [[Eurotour/Locations/Stockholm\|Stockholm]], [[Prague\|Prague]]
 - Added initial descriptions for the #role s, as well as their Role Abilities
-- Added public webpages for [[Eurotour/Characters/Crew/The Crew\|The Crew]]
+- Added public webpages for [[Crew/The Crew\|The Crew]]
 - Broke down [[Rules/CPRED/Combat/Combat\|Rules/CPRED/Combat/Combat]] into [[Rules/CPRED/Combat/Combat\|Rules/CPRED/Combat/Combat]], [[Rules/CPRED/Combat/Critical Injuries\|Critical Injuries]] & [[Rules/CPRED/Combat/Firearms of Cyberpunk\|Firearms of Cyberpunk]]
 #### *24.05*
 - Added [[Eurotour/Locations/Stockholm\|Stockholm]] and information on [[Eurotour/Adventures/5 Touring the Margin\|5 Touring the Margin]] (restricted access)
