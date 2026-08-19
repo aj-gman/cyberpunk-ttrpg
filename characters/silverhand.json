@@ -92,23 +92,20 @@
     {
       "marked": false,
       "text": ""
-    },
-    {
-      "marked": false,
-      "text": ""
-    },
-    {
-      "marked": false,
-      "text": ""
-    },
-    {
-      "marked": false,
-      "text": ""
     }
   ],
-  "flaws": [],
-  "flaw1": "",
-  "flaw2": "",
+  "flaws": [
+    {
+      "marked": false,
+      "text": "Paranoid"
+    },
+    {
+      "marked": false,
+      "text": "Irritable"
+    }
+  ],
+  "flaw1": "Paranoid",
+  "flaw2": "Irritable",
   "marked1": false,
   "marked2": false,
   "stuntPoints": 0,
