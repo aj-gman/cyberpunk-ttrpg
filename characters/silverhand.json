@@ -1,0 +1,127 @@
+{
+  "_version": "1.0.1.1",
+  "_game": "Neon City Overdrive",
+  "nickname": "Johnny Silverhand",
+  "appearance": "You already know...\nRed Aviators, a Medium Armorjack Vest, Red Leather Pants, Long, sleazy black hair.",
+  "personality": "They say you can become a legendary rockerboy without all the sex and drugs, the manic depression, run-ins with the law and one toxic relationship after another. But Johnny Silverhand's old school.",
+  "money": 0,
+  "eddies": 0,
+  "trademarks": [
+    {
+      "name": "Military Veteran",
+      "triggers": [],
+      "edges": []
+    },
+    {
+      "name": "Legendary Rockerboy",
+      "triggers": [],
+      "edges": []
+    },
+    {
+      "name": "Rebel with a Cause",
+      "triggers": [],
+      "edges": []
+    },
+    {
+      "name": "",
+      "triggers": [],
+      "edges": []
+    },
+    {
+      "name": "",
+      "triggers": [],
+      "edges": []
+    }
+  ],
+  "gear": [
+    {
+      "type": "special",
+      "title": "",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "type": "basic",
+      "title": "",
+      "tags": "",
+      "notes": ""
+    }
+  ],
+  "cyberware": [],
+  "hitsCount": 3,
+  "hits": [
+    false,
+    false,
+    false
+  ],
+  "trackers": {
+    "cyberpsy": 7,
+    "humanity": 7,
+    "nerve": 8
+  },
+  "conditions": {
+    "angry": false,
+    "dazed": false,
+    "exhausted": false,
+    "scared": false,
+    "restrained": false,
+    "weakened": false,
+    "custom": [
+      {
+        "checked": false,
+        "text": ""
+      },
+      {
+        "checked": false,
+        "text": ""
+      }
+    ]
+  },
+  "traumas": [
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    }
+  ],
+  "flaws": [],
+  "flaw1": "",
+  "flaw2": "",
+  "marked1": false,
+  "marked2": false,
+  "stuntPoints": 0,
+  "stash": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "drive": {
+    "text": "Make it right for Alt Cunningham. His friend Spider Murphy has discovered that Arasaka has trapped Alt after 10 years of hunting for her. He's mainly there to get her back, but is willing to join up with Thompson and Morgan to get the job(s) done.\n\nJohnny harbored a constant hatred for much the world around him: Night City, the NUSA, the police, corps, and most of all, Arasaka. He concentrated most of his anger and hatred on Arasaka, on two occasions carrying out attacks on Arasaka's HQ and becoming so obsessed with the megacorporation that his friends would criticize him for his extreme determination.",
+    "pips": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "experiencePoints": 0
+}
