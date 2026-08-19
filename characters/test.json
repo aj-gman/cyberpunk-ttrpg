@@ -1,0 +1,118 @@
+{
+  "_version": "1.0.1.1",
+  "_game": "Neon City Overdrive",
+  "nickname": "dsadsad",
+  "appearance": "ASDSADAS",
+  "personality": "SADSA",
+  "money": 0,
+  "eddies": 0,
+  "trademarks": [
+    {
+      "name": "",
+      "triggers": [
+        "safsafasf"
+      ],
+      "edges": [
+        "asfdsadsafasf"
+      ]
+    },
+    {
+      "name": "",
+      "triggers": [],
+      "edges": []
+    },
+    {
+      "name": "",
+      "triggers": [],
+      "edges": []
+    },
+    {
+      "name": "",
+      "triggers": [],
+      "edges": []
+    },
+    {
+      "name": "",
+      "triggers": [],
+      "edges": []
+    }
+  ],
+  "gear": [],
+  "cyberware": [],
+  "hitsCount": 3,
+  "hits": [
+    false,
+    false,
+    false
+  ],
+  "trackers": {
+    "cyberpsy": 0,
+    "humanity": 10,
+    "nerve": 0
+  },
+  "conditions": {
+    "angry": false,
+    "dazed": false,
+    "exhausted": false,
+    "scared": false,
+    "restrained": false,
+    "weakened": false,
+    "custom": [
+      {
+        "checked": false,
+        "text": ""
+      },
+      {
+        "checked": false,
+        "text": ""
+      }
+    ]
+  },
+  "traumas": [
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    }
+  ],
+  "flaws": [],
+  "flaw1": "",
+  "flaw2": "",
+  "marked1": false,
+  "marked2": false,
+  "stuntPoints": 0,
+  "stash": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "drive": {
+    "text": "dsadsadsa",
+    "pips": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "experiencePoints": 0
+}
