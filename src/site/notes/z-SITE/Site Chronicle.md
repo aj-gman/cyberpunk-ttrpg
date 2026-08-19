@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#role","#news"],"dg-note-properties":{"tags":["#role","#news"]}}
 ---
 
 ### May 2026
@@ -51,15 +51,27 @@
 - Core Crews' stats and personalities are now open as explorable files([[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], [[Eurotour/Characters/Core Crew/Jimenez\|Jimenez]], [[Eurotour/Characters/Core Crew/Tinker\|Tinker]], [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], [[Eurotour/Characters/Core Crew/Ace McLeod\|Ace McLeod]], [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]], [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine Clements]]), including even [[Eurotour/Characters/Claire Monet\|Claire Monet]]!
 - Added [[Rules/NCOverdrive/Drugs\|Rules/NCOverdrive/Drugs]], which encompasses all of the adjusted rules for [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] for [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]]
 
+### August 2026
+#### 19.08
+- Added most important characters in the [[Fourth Corporate War/Adventures/Big Trouble in Neo-Sov\|Big Trouble in Neo-Sov]] adventure ([[Fourth Corporate War/Characters/Boris Asimov\|Boris Asimov]], [[Fourth Corporate War/Characters/Liudmila\|Liudmila]], [[Fourth Corporate War/Characters/Raphael the Kid\|Raphael the Kid]], [[Fourth Corporate War/Characters/Seraphim\|Seraphim]], [[Lore/Organizations/Boostergangs/Organitskaya\|Organitskaya]]).
+- Published information regarding [[Fourth Corporate War/Locations/St. Petersburg\|St. Petersburg]].
+- Updated and corrected minor details regarding [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] rules.
+#### 19.08
+- Brought [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.1.0.0. 
+	**Key new features:**
+	- Fixed a bug with Eurodollars & Flaws not saving in .json format
+	- Added GitHub-connected save via Character ID
+	- Adjusted Gear & Cyberware (Page 2) to have adjustable widths via row formatting (1, 2 or 3 rows);
+	- Added drag & drop feature to Gear & Cyberware for more efficient listing.
 ## TO DO
 - [ ] **[[z-SITE/CPRED Sheet\|CPRED Sheet]] needs:**
 	- [ ] Page for Notes, Backstory, Lore etc.
-	- [ ] Functionality for **REMOVING**:
-		- [ ] Custom Skills
+	- [x] Functionality for **REMOVING**:
+		- [x] Custom Skills
 	- [ ] Links to the wiki when inserting: (with the idea being that you can find out the rules for them quickly without having them on the sheet in full)
 		- [ ] Role Abilities
 		- [ ] Skills
 		- [ ] Stats
 - [ ] Recalibrate mobile interface for the site (very buggy atm)
 - [ ] **[[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] needs:**
-	- [ ] Rewriting of description placeholder text (bug fixes)
+	- [x] Rewriting of description placeholder text (bug fixes)
