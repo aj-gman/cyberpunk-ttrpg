@@ -655,6 +655,11 @@
     <button class="btn btn-small" onclick="showPage(5)" id="btn-page5" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Wiki</button>
   </div>
   <div class="top-bar-actions">
+    <input type="text" id="gh-username" placeholder="Character ID (e.g. HEX)" style="background:#0a0c1a;border:1px solid var(--border-color);color:var(--text-color);padding:6px 10px;font-family:'Lexend',monospace;font-size:11px;text-transform:uppercase;width:150px;">
+    <button class="btn" onclick="loadFromGitHub()" title="Load this character">☁ Load</button>
+    <button class="btn btn-yellow" onclick="saveToGitHub()" title="Save this character">☁ Save</button>
+    <span id="gh-status" style="font-size:10px;color:var(--dim);min-width:110px;"></span>
+    <span style="color:#444;font-size:16px;">|</span>
     <label class="btn" style="display:inline-block;cursor:pointer;">
       ⬆ Load JSON <input type="file" id="importFile" accept=".json" style="display:none;">
     </label>
@@ -1712,6 +1717,67 @@
     } else if (Array.isArray(expVal)) {
       // Backward compat: count marked pips
       document.getElementById('exp-value').textContent = expVal.filter(Boolean).length;
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // SAVE / LOAD TO GITHUB (via serverless proxy at /api/character)
+  // No token or repo config lives in this page — the server holds that.
+  // ═══════════════════════════════════════════════════════
+  function setGHStatus(msg, isError) {
+    const el = document.getElementById('gh-status');
+    el.textContent = msg;
+    el.style.color = isError ? 'var(--danger-red)' : 'var(--net-green)';
+  }
+
+  function getCharId() {
+    const raw = val('gh-username');
+    if (raw && raw.trim()) return raw.trim();
+    return val('nickname');
+  }
+
+  async function saveToGitHub() {
+    const charId = getCharId();
+    if (!charId) {
+      setGHStatus('Enter a Character ID', true);
+      return;
+    }
+    setGHStatus('Saving…', false);
+    try {
+      const data = buildExport();
+      const resp = await fetch('/api/character', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: charId, data: data })
+      });
+      const result = await resp.json().catch(function () { return {}; });
+      if (!resp.ok) throw new Error(result.error || ('Server error ' + resp.status));
+      setGHStatus('Saved "' + (result.id || charId) + '" ✓', false);
+    } catch (err) {
+      setGHStatus('Save failed: ' + err.message, true);
+    }
+  }
+
+  async function loadFromGitHub() {
+    const charId = getCharId();
+    if (!charId) {
+      setGHStatus('Enter a Character ID', true);
+      return;
+    }
+    setGHStatus('Loading…', false);
+    try {
+      const resp = await fetch('/api/character?id=' + encodeURIComponent(charId));
+      if (resp.status === 404) {
+        setGHStatus('No save found for "' + charId + '"', true);
+        return;
+      }
+      const result = await resp.json().catch(function () { return {}; });
+      if (!resp.ok) throw new Error(result.error || ('Server error ' + resp.status));
+      applyImport(result.data);
+      set('gh-username', result.id || charId);
+      setGHStatus('Loaded "' + (result.id || charId) + '" ✓', false);
+    } catch (err) {
+      setGHStatus('Load failed: ' + err.message, true);
     }
   }
 
