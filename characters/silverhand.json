@@ -10,27 +10,38 @@
     {
       "name": "Military Veteran",
       "triggers": [],
-      "edges": []
+      "edges": [
+        "Clearing Corners",
+        "Squad Formations",
+        "Combat Ambushes"
+      ]
     },
     {
       "name": "Legendary Rockerboy",
       "triggers": [],
-      "edges": []
+      "edges": [
+        "Entice to Riot",
+        "Gigantic Ego",
+        "Stellar Performance"
+      ]
     },
     {
       "name": "Rebel with a Cause",
       "triggers": [],
-      "edges": []
+      "edges": [
+        "Talk Politics",
+        "Guerilla Tactics",
+        "Fight the System"
+      ]
     },
     {
-      "name": "",
+      "name": "Charismatic Leader",
       "triggers": [],
-      "edges": []
-    },
-    {
-      "name": "",
-      "triggers": [],
-      "edges": []
+      "edges": [
+        "Convert to Cause",
+        "Organize Mobs",
+        "See the Bigger Picture"
+      ]
     }
   ],
   "gear": [
