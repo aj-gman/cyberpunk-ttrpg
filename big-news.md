@@ -1,1 +1,0 @@
-"# Big News\n\nThis is a test file created to verify GitHub API integration with Odysseus is working properly.\n\n**Created:** Test commit from Odysseus\n**Purpose:** Verify direct push access to main branch"  
