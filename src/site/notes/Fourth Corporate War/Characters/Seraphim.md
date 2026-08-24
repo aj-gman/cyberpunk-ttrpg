@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/fourth-corporate-war/characters/seraphim/","tags":["#npc","#4cw"],"dg-note-properties":{"tags":["#npc","#4cw"]}}
+{"dg-publish":true,"permalink":"/fourth-corporate-war/characters/seraphim/","dg-note-properties":{}}
 ---
 
 #npc #4cw 
