@@ -648,14 +648,14 @@
     <span style="color:#444;font-size:20px;">|</span>
     <span style="color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:1px;">Character Sheet</span>
     <span style="color:#444;font-size:16px;margin-left:10px;">|</span>
-    <button class="btn btn-small" onclick="showPage(1)" id="btn-page1" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Page 1</button>
-    <button class="btn btn-small" onclick="showPage(2)" id="btn-page2" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Page 2</button>
+    <button class="btn btn-small" onclick="showPage(1)" id="btn-page1" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Core</button>
+    <button class="btn btn-small" onclick="showPage(2)" id="btn-page2" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Gear & Cyberware</button>
     <button class="btn btn-small" onclick="showPage(3)" id="btn-page3" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Stash</button>
     <button class="btn btn-small" onclick="showPage(4)" id="btn-page4" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">VTT</button>
     <button class="btn btn-small" onclick="showPage(5)" id="btn-page5" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Wiki</button>
   </div>
   <div class="top-bar-actions">
-    <input type="text" id="gh-username" placeholder="Character ID (e.g. HEX)" style="background:#0a0c1a;border:1px solid var(--border-color);color:var(--text-color);padding:6px 10px;font-family:'Lexend',monospace;font-size:11px;text-transform:uppercase;width:150px;">
+    <input type="text" id="gh-username" placeholder="ID" style="background:#0a0c1a;border:1px solid var(--border-color);color:var(--text-color);padding:6px 10px;font-family:'Lexend',monospace;font-size:11px;text-transform:uppercase;width:150px;">
     <button class="btn" onclick="loadFromGitHub()" title="Load this character">☁ Load</button>
     <button class="btn btn-yellow" onclick="saveToGitHub()" title="Save this character">☁ Save</button>
     <span id="gh-status" style="font-size:10px;color:var(--dim);min-width:110px;"></span>
