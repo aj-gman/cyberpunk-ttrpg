@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neon City Overdrive — Character Sheet</title>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
     :root {
       --bg-color: #000000;
@@ -602,24 +601,7 @@
       text-align: center;
     }
 
-    /* Loading overlay */
-    #pdf-loading {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.85);
-      z-index: 99999;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 16px;
-    }
-    #pdf-loading.active { display: flex; }
-    .spinner { width: 36px; height: 36px; border: 3px solid var(--neon-cyan); border-top-color: transparent; border-radius: 50%; animation: spin 0.7s linear infinite; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    #pdf-loading p { color: var(--neon-cyan); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-
-    /* Sheet wrapper for PDF export */
+    /* Sheet wrapper */
     #sheet-wrapper { max-width: 1200px; margin: 0 auto; }
     #sheet-page2 { max-width: 1200px; margin: 0 auto; }
     .dynamic-header a { color: inherit; text-decoration: none; transition: color 0.2s, text-shadow 0.2s; }
@@ -627,14 +609,28 @@
 
     .page-break { page-break-before: always; break-before: page; }
     @media screen { .page-break { margin-top: 24px; padding-top: 24px; border-top: 1px dashed #333; } }
+
+    /* Storage chooser */
+    .storage-modal { display: none; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; background: rgba(0,0,0,0.8); padding: 20px; }
+    .storage-modal.visible { display: flex; }
+    .storage-dialog { width: min(360px, 100%); background: var(--panel-bg); border: 1px solid var(--neon-cyan); padding: 18px; box-shadow: 0 0 20px rgba(84,193,230,0.25); }
+    .storage-dialog h2 { margin-bottom: 14px; }
+    .storage-options { display: grid; gap: 8px; }
+    .storage-dialog .btn { width: 100%; }
   </style>
 </head>
 <body>
 
-<!-- PDF Loading Overlay -->
-<div id="pdf-loading">
-  <div class="spinner"></div>
-  <p>Generating PDF…</p>
+<!-- STORAGE CHOOSER -->
+<div id="storage-modal" class="storage-modal" role="dialog" aria-modal="true" aria-labelledby="storage-modal-title">
+  <div class="storage-dialog">
+    <h2 id="storage-modal-title">Storage</h2>
+    <div class="storage-options">
+      <button class="btn btn-yellow" type="button" onclick="chooseStorageOption('cloud')">☁ From Cloud</button>
+      <button class="btn" type="button" onclick="chooseStorageOption('json')">▣ From JSON</button>
+      <button class="btn btn-danger" type="button" onclick="closeStorageModal()">Cancel</button>
+    </div>
+  </div>
 </div>
 
 <!-- TOP BAR -->
@@ -643,7 +639,7 @@
     <div class="nco-logo">
       <span><span class="logo-neon">NIGHT </span><span class="logo-city">CITY</span></span>
       <span class="logo-over">OVERDRIVE</span>
-      <span class="logo-version">v1.1.0.0</span>
+      <span class="logo-version">v1.1.1.0</span>
     </div>
     <span style="color:#444;font-size:20px;">|</span>
     <span style="color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:1px;">Character Sheet</span>
@@ -655,16 +651,10 @@
     <button class="btn btn-small" onclick="showPage(5)" id="btn-page5" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Wiki</button>
   </div>
   <div class="top-bar-actions">
-    <input type="text" id="gh-username" placeholder="ID" style="background:#0a0c1a;border:1px solid var(--border-color);color:var(--text-color);padding:6px 10px;font-family:'Lexend',monospace;font-size:11px;text-transform:uppercase;width:150px;">
-    <button class="btn" onclick="loadFromGitHub()" title="Load this character">☁ Load</button>
-    <button class="btn btn-yellow" onclick="saveToGitHub()" title="Save this character">☁ Save</button>
+    <button class="btn" onclick="openStorageModal('load')" title="Load a character">Load</button>
+    <button class="btn btn-yellow" onclick="openStorageModal('save')" title="Save this character">Save</button>
     <span id="gh-status" style="font-size:10px;color:var(--dim);min-width:110px;"></span>
-    <span style="color:#444;font-size:16px;">|</span>
-    <label class="btn" style="display:inline-block;cursor:pointer;">
-      ⬆ Load JSON <input type="file" id="importFile" accept=".json" style="display:none;">
-    </label>
-    <button class="btn btn-yellow" onclick="saveJSON()">⬇ Save JSON</button>
-    <button class="btn btn-pink" onclick="exportPDF()">⬛ Export PDF</button>
+    <input type="file" id="importFile" accept=".json" style="display:none;">
   </div>
 </div>
 
@@ -1730,14 +1720,36 @@
     el.style.color = isError ? 'var(--danger-red)' : 'var(--net-green)';
   }
 
-  function getCharId() {
-    const raw = val('gh-username');
-    if (raw && raw.trim()) return raw.trim();
-    return val('nickname');
+  let storageAction = '';
+
+  function openStorageModal(action) {
+    storageAction = action;
+    document.getElementById('storage-modal-title').textContent = action === 'load' ? 'Load Character' : 'Save Character';
+    document.getElementById('storage-modal').classList.add('visible');
   }
 
-  async function saveToGitHub() {
-    const charId = getCharId();
+  function closeStorageModal() {
+    document.getElementById('storage-modal').classList.remove('visible');
+    storageAction = '';
+  }
+
+  function chooseStorageOption(source) {
+    const action = storageAction;
+    closeStorageModal();
+    if (source === 'json') {
+      if (action === 'load') document.getElementById('importFile').click();
+      else saveJSON();
+      return;
+    }
+
+    const characterId = window.prompt('Character ID:');
+    if (!characterId || !characterId.trim()) return;
+    if (action === 'load') loadFromGitHub(characterId.trim());
+    else saveToGitHub(characterId.trim());
+  }
+
+  async function saveToGitHub(characterId) {
+    const charId = characterId || val('nickname');
     if (!charId) {
       setGHStatus('Enter a Character ID', true);
       return;
@@ -1758,8 +1770,8 @@
     }
   }
 
-  async function loadFromGitHub() {
-    const charId = getCharId();
+  async function loadFromGitHub(characterId) {
+    const charId = characterId || val('nickname');
     if (!charId) {
       setGHStatus('Enter a Character ID', true);
       return;
@@ -1774,7 +1786,6 @@
       const result = await resp.json().catch(function () { return {}; });
       if (!resp.ok) throw new Error(result.error || ('Server error ' + resp.status));
       applyImport(result.data);
-      set('gh-username', result.id || charId);
       setGHStatus('Loaded "' + (result.id || charId) + '" ✓', false);
     } catch (err) {
       setGHStatus('Load failed: ' + err.message, true);
@@ -1861,45 +1872,6 @@
   document.getElementById('sheet-page4').style.display = 'none';
   document.getElementById('sheet-page5').style.display = 'none';
   showPage(1);
-
-  // ═══════════════════════════════════════════════════════
-  // PDF EXPORT
-  // ═══════════════════════════════════════════════════════
-  function exportPDF() {
-    const loading = document.getElementById('pdf-loading');
-    loading.classList.add('active');
-
-    const page1 = document.getElementById('sheet-wrapper');
-    const page2 = document.getElementById('sheet-page2');
-    const nickname = (document.getElementById('nickname').value || 'character').replace(/\s+/g,'_').replace(/[^a-zA-Z0-9_]/g,'') || 'character';
-
-    // Combine both pages into a temp container for PDF
-    const wrapper = document.createElement('div');
-    wrapper.appendChild(page1.cloneNode(true));
-    wrapper.appendChild(page2.cloneNode(true));
-
-    const opt = {
-      margin: [10, 10, 10, 10],
-      filename: nickname + '_nco.pdf',
-      image: { type: 'jpeg', quality: 0.95 },
-      html2canvas: {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: '#000000',
-        logging: false
-      },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-    };
-
-    html2pdf().set(opt).from(wrapper).save().then(function () {
-      loading.classList.remove('active');
-    }).catch(function (err) {
-      loading.classList.remove('active');
-      alert('\u26A0 PDF generation failed. Try a different browser.');
-      console.error(err);
-    });
-  }
 
   // ═══════════════════════════════════════════════════════
   // ADD GEAR BUTTON
