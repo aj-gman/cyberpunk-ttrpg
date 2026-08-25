@@ -74,7 +74,7 @@
   const GRID_H = TILE_H * ROWS.length; // 4320
 
   // Switch from the overview to detail tiles one zoom step earlier.
-  const OVERVIEW_THRESHOLD = -2;
+  const OVERVIEW_THRESHOLD = -3;
 
   // ── Map setup (CRS.Simple = plain pixel-space, no geo projection) ──
   const map = L.map('map', {
@@ -97,6 +97,7 @@
   // ── Detail layer (54 tiles arranged in the A-I / 1-6 grid) ──────
   const detailLayer = L.layerGroup();
   const tileUrls = [];
+  const preloadedTiles = [];
   COLS.forEach((col, ci) => {
     ROWS.forEach((row, ri) => {
       const north = -ri * TILE_H;
@@ -105,7 +106,15 @@
       const east = (ci + 1) * TILE_W;
       const tileUrl = `tiles/${col}${row}.png`;
       tileUrls.push(tileUrl);
-      L.imageOverlay(tileUrl, [[north, west], [south, east]]).addTo(detailLayer);
+      const overlay = L.imageOverlay(tileUrl, [[north, west], [south, east]]);
+      let retries = 0;
+      overlay.on('error', () => {
+        if (retries < 3) {
+          retries += 1;
+          overlay.setUrl(tileUrl);
+        }
+      });
+      overlay.addTo(detailLayer);
     });
   });
 
@@ -113,7 +122,9 @@
   // until the layer switch.
   tileUrls.forEach((tileUrl) => {
     const image = new Image();
+    image.decoding = 'async';
     image.src = tileUrl;
+    preloadedTiles.push(image);
   });
 
   function updateLayers() {
