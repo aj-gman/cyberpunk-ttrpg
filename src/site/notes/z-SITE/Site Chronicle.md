@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#role","#news"],"dg-note-properties":{"tags":["#role","#news"]}}
 ---
 
 ### May 2026
@@ -63,6 +63,11 @@
 	- Added GitHub-connected save via Character ID
 	- Adjusted Gear & Cyberware (Page 2) to have adjustable widths via row formatting (1, 2 or 3 rows);
 	- Added drag & drop feature to Gear & Cyberware for more efficient listing.
+#### 25.08
+- [[z-SITE/NCOverdrive Sheet\|Updated NCOverdrive Sheet to 1.1.1.0]]
+	- Added load/save modal that asks for local or cloud sync
+	- Changed page naming to clearly state what it is
+	- Removed export-to-pdf functionality
 ## TO DO
 - [ ] **[[z-SITE/CPRED Sheet\|CPRED Sheet]] needs:**
 	- [ ] Page for Notes, Backstory, Lore etc.

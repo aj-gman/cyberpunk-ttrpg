@@ -7,10 +7,10 @@ This **Wiki** is dedicated to preserving the archive of stories, rules and lore 
 
 From early 2026 up to June 2026, the main campaign of the [[Eurotour/Eurotour\|Eurotour]][^2] finally concluded after 6 months of hard work. This campaign was ran using [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]] as its mechanical base.
 
-We will be testing [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] as the new system and, if it works, we will then proceed with the main campaign of [The Fourth Corporate War](https://cyberpunk.fandom.com/wiki/Firestorm) using [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] as the system and [[Cyberpunk 2020\|Cyberpunk 2020]] as its setting/universe.
+Starting in July 2026, [[Crew/The Crew\|The Crew]] has embarked on a new journey. They have left [[Eurotour/Eurotour\|Europe]], crossing through the [[Fourth Corporate War/Adventures/Big Trouble in Neo-Sov\|NUSSR]] and finally ending in [[Lore/Locations/Night City\|Night City]]. This new campaign, encompassing the [[Lore/Fourth Corporate War\|Fourth Corporate War]], is ran using [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] for its ruleset.
 
 ### Easy Access
-- All [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]]
+- All [[Rules/NCOverdrive/Drugs\|Drugs]]
 - All [[Rules/Homebrew\|Homebrew]] (listed & linked)
 - New [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] rules
 - read the #news
