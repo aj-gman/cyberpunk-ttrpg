@@ -88,6 +88,98 @@
     color: #05060f;
     font-weight: bold;
   }
+
+  /* ── Legend panel ─────────────────────────────────────────────── */
+  #legend {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    z-index: 1000;
+    width: 320px;
+    min-width: 220px;
+    min-height: 60px;
+    max-width: 90vw;
+    max-height: 80vh;
+    background: rgba(210, 210, 215, 0.97);
+    border: 2px solid #6b3fd6;
+    border-radius: 4px;
+    color: #111;
+    font-family: 'Courier New', monospace;
+    resize: both;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+  }
+  #legend.minimized {
+    resize: none;
+    height: auto !important;
+    width: auto !important;
+    min-width: 0;
+  }
+  #legendHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #6b3fd6;
+    color: #fff;
+    padding: 8px 10px;
+    cursor: grab;
+    user-select: none;
+    flex: 0 0 auto;
+  }
+  #legendHeader:active {
+    cursor: grabbing;
+  }
+  #legendTitle {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #legendMinBtn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 22px;
+    height: 22px;
+    line-height: 1;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 2px;
+    flex: 0 0 auto;
+    margin-left: 8px;
+  }
+  #legendMinBtn:hover {
+    background: rgba(255,255,255,0.2);
+  }
+  #legendBody {
+    padding: 12px 14px;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 18px;
+    font-size: 13px;
+  }
+  #legend.minimized #legendBody {
+    display: none;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .legend-swatch {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 2px;
+  }
 </style>
 </head>
 <body>
@@ -96,6 +188,14 @@
 <div id="hud">Night City // scroll or pinch to zoom</div>
 <div id="presetSwitcher"></div>
 <button id="resetBtn" onclick="resetView()">Reset View</button>
+
+<div id="legend">
+  <div id="legendHeader">
+    <span id="legendTitle">Legend</span>
+    <button id="legendMinBtn" title="Minimize">–</button>
+  </div>
+  <div id="legendBody"></div>
+</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -119,6 +219,51 @@
     { key: 'culture',    label: 'Culture',    folder: 'tiles_culture' },
     { key: 'religions',  label: 'Religions',  folder: 'tiles_religions' }
   ];
+
+  // ── Legends ─────────────────────────────────────────────────────
+  // One legend per preset key. Colors below are PLACEHOLDERS eyeballed
+  // from a reference screenshot — replace with real hex values here.
+  const LEGENDS = {
+    political: { title: 'Political', items: [] },
+    culture: {
+      title: 'Cultures',
+      items: [
+        { label: 'Mover',       color: '#9999b3' },
+        { label: 'Corpzoner',   color: '#2a3a6b' },
+        { label: 'Edgerunner',  color: '#cc33aa' },
+        { label: 'Mallplexer',  color: '#b06a35' },
+        { label: 'Beaver',      color: '#2f4a2f' },
+        { label: 'Streetscum',  color: '#7a1f2b' },
+        { label: 'Powerdealer', color: '#4b3fcf' }
+      ]
+    },
+    religions: { title: 'Religions', items: [] }
+  };
+
+  function renderLegend(key) {
+    const legend = LEGENDS[key];
+    const titleEl = document.getElementById('legendTitle');
+    const bodyEl = document.getElementById('legendBody');
+    if (!legend) {
+      titleEl.textContent = 'Legend';
+      bodyEl.innerHTML = '';
+      return;
+    }
+    titleEl.textContent = legend.title;
+    bodyEl.innerHTML = '';
+    legend.items.forEach((item) => {
+      const row = document.createElement('div');
+      row.className = 'legend-item';
+      const swatch = document.createElement('span');
+      swatch.className = 'legend-swatch';
+      swatch.style.background = item.color;
+      const label = document.createElement('span');
+      label.textContent = item.label;
+      row.appendChild(swatch);
+      row.appendChild(label);
+      bodyEl.appendChild(row);
+    });
+  }
 
   // ── Map setup (CRS.Simple = plain pixel-space, no geo projection) ──
   const map = L.map('map', {
@@ -166,6 +311,7 @@
     document.querySelectorAll('.preset-btn').forEach((btn) => {
       btn.classList.toggle('active', btn.dataset.key === key);
     });
+    renderLegend(key);
   }
 
   // ── Preset switcher UI ─────────────────────────────────────────────
@@ -190,6 +336,78 @@
 
   resetView();
   window.addEventListener('load', resetView);
+  renderLegend(currentKey);
+
+  // ── Legend: draggable ────────────────────────────────────────────
+  const legendEl = document.getElementById('legend');
+  const legendHeader = document.getElementById('legendHeader');
+  const legendMinBtn = document.getElementById('legendMinBtn');
+  let dragging = false;
+  let dragOffsetX = 0;
+  let dragOffsetY = 0;
+
+  legendHeader.addEventListener('mousedown', (e) => {
+    if (e.target === legendMinBtn) return;
+    dragging = true;
+    const rect = legendEl.getBoundingClientRect();
+    dragOffsetX = e.clientX - rect.left;
+    dragOffsetY = e.clientY - rect.top;
+    // Switch from bottom/left auto-position to explicit top/left so
+    // dragging can freely reposition it.
+    legendEl.style.left = rect.left + 'px';
+    legendEl.style.top = rect.top + 'px';
+    legendEl.style.bottom = 'auto';
+    e.preventDefault();
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!dragging) return;
+    const maxLeft = window.innerWidth - legendEl.offsetWidth;
+    const maxTop = window.innerHeight - legendEl.offsetHeight;
+    const newLeft = Math.min(Math.max(0, e.clientX - dragOffsetX), Math.max(0, maxLeft));
+    const newTop = Math.min(Math.max(0, e.clientY - dragOffsetY), Math.max(0, maxTop));
+    legendEl.style.left = newLeft + 'px';
+    legendEl.style.top = newTop + 'px';
+  });
+
+  window.addEventListener('mouseup', () => {
+    dragging = false;
+  });
+
+  // Touch support (mobile drag)
+  legendHeader.addEventListener('touchstart', (e) => {
+    if (e.target === legendMinBtn) return;
+    const touch = e.touches[0];
+    dragging = true;
+    const rect = legendEl.getBoundingClientRect();
+    dragOffsetX = touch.clientX - rect.left;
+    dragOffsetY = touch.clientY - rect.top;
+    legendEl.style.left = rect.left + 'px';
+    legendEl.style.top = rect.top + 'px';
+    legendEl.style.bottom = 'auto';
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    if (!dragging) return;
+    const touch = e.touches[0];
+    const maxLeft = window.innerWidth - legendEl.offsetWidth;
+    const maxTop = window.innerHeight - legendEl.offsetHeight;
+    const newLeft = Math.min(Math.max(0, touch.clientX - dragOffsetX), Math.max(0, maxLeft));
+    const newTop = Math.min(Math.max(0, touch.clientY - dragOffsetY), Math.max(0, maxTop));
+    legendEl.style.left = newLeft + 'px';
+    legendEl.style.top = newTop + 'px';
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => {
+    dragging = false;
+  });
+
+  // ── Legend: minimize ────────────────────────────────────────────
+  legendMinBtn.addEventListener('click', () => {
+    const minimized = legendEl.classList.toggle('minimized');
+    legendMinBtn.textContent = minimized ? '+' : '–';
+    legendMinBtn.title = minimized ? 'Restore' : 'Minimize';
+  });
 </script>
 
 </body>
