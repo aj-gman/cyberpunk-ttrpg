@@ -1,0 +1,1 @@
+this folder was generated to facilitate the creation of zoomable Leaflet maps
