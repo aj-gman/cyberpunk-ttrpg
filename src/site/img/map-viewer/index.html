@@ -139,7 +139,11 @@
   detailTilesReady.then(() => {
     detailLayerReady = true;
     updateLayers();
-  }).catch((error) => console.error(error));
+  }).catch((error) => {
+    console.error(error);
+    detailLayerReady = true;
+    updateLayers();
+  });
 
   function updateLayers() {
     const z = map.getZoom();
