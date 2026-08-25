@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Night City — Map Viewer</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #05060f;
+    font-family: 'Courier New', monospace;
+  }
+  #map {
+    width: 100%;
+    height: 100vh;
+    background: #05060f;
+  }
+  .leaflet-container {
+    background: #05060f;
+  }
+  #hud {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1000;
+    background: rgba(5, 6, 15, 0.85);
+    border: 1px solid #2fe0ff;
+    color: #2fe0ff;
+    padding: 8px 14px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    pointer-events: none;
+    border-radius: 3px;
+  }
+  #resetBtn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1000;
+    background: rgba(5, 6, 15, 0.85);
+    border: 1px solid #2fe0ff;
+    color: #2fe0ff;
+    padding: 8px 14px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+  }
+  #resetBtn:hover {
+    background: rgba(47, 224, 255, 0.15);
+  }
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+<div id="hud">Night City // scroll or pinch to zoom</div>
+<button id="resetBtn" onclick="resetView()">Reset View</button>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  // ── Grid configuration ──────────────────────────────────────────
+  const COLS = ['A','B','C','D','E','F','G','H','I'];
+  const ROWS = ['1','2','3','4','5','6'];
+  const TILE_W = 1920;
+  const TILE_H = 720;
+  const GRID_W = TILE_W * COLS.length; // 17280
+  const GRID_H = TILE_H * ROWS.length; // 4320
+
+  // Threshold zoom level below which we show the overview (schema.png)
+  // instead of the detail tile grid.
+  const OVERVIEW_THRESHOLD = -1;
+
+  // ── Map setup (CRS.Simple = plain pixel-space, no geo projection) ──
+  const map = L.map('map', {
+    crs: L.CRS.Simple,
+    minZoom: -4,
+    maxZoom: 0,
+    zoomSnap: 0.25,
+    zoomDelta: 0.5,
+    attributionControl: false,
+    wheelPxPerZoomLevel: 120
+  });
+
+  const fullBounds = [[0, 0], [-GRID_H, GRID_W]];
+  map.setMaxBounds([[GRID_H * 0.25, -GRID_W * 0.25], [-GRID_H * 1.25, GRID_W * 1.25]]);
+  map.options.maxBoundsViscosity = 1.0;
+
+  // ── Overview layer (schema.png, stretched to the full grid extent) ──
+  const overviewLayer = L.imageOverlay('schema.png', fullBounds);
+
+  // ── Detail layer (54 tiles arranged in the A-I / 1-6 grid) ──────
+  const detailLayer = L.layerGroup();
+  COLS.forEach((col, ci) => {
+    ROWS.forEach((row, ri) => {
+      const north = -ri * TILE_H;
+      const south = -(ri + 1) * TILE_H;
+      const west = ci * TILE_W;
+      const east = (ci + 1) * TILE_W;
+      L.imageOverlay(`tiles/${col}${row}.png`, [[north, west], [south, east]]).addTo(detailLayer);
+    });
+  });
+
+  function updateLayers() {
+    const z = map.getZoom();
+    if (z < OVERVIEW_THRESHOLD) {
+      if (map.hasLayer(detailLayer)) map.removeLayer(detailLayer);
+      if (!map.hasLayer(overviewLayer)) overviewLayer.addTo(map);
+    } else {
+      if (map.hasLayer(overviewLayer)) map.removeLayer(overviewLayer);
+      if (!map.hasLayer(detailLayer)) detailLayer.addTo(map);
+    }
+  }
+  map.on('zoomend', updateLayers);
+
+  // Initial view: whole grid visible, overview layer showing.
+  map.fitBounds(fullBounds);
+  map.setZoom(-3);
+  updateLayers();
+
+  function resetView() {
+    map.fitBounds(fullBounds);
+    map.setZoom(-3);
+  }
+</script>
+
+</body>
+</html>
