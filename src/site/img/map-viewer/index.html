@@ -66,15 +66,18 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
   // ── Grid configuration ──────────────────────────────────────────
-  const COLS = ['A','B','C','D','E','F','G','H','I'];
-  const ROWS = ['1','2','3','4','5','6'];
+  // Confirmed against schema.png: letters (A-I) are ROWS (north to south),
+  // numbers (1-6) are COLUMNS (west to east). Tile "A4" = row A, column 4.
+  const ROWS = ['A','B','C','D','E','F','G','H','I'];
+  const COLS = ['1','2','3','4','5','6'];
   const TILE_W = 1920;
   const TILE_H = 720;
-  const GRID_W = TILE_W * COLS.length; // 17280
-  const GRID_H = TILE_H * ROWS.length; // 4320
+  const GRID_W = TILE_W * COLS.length; // 11520
+  const GRID_H = TILE_H * ROWS.length; // 6480
 
-  // Switch from the overview to detail tiles one zoom step earlier.
-  const OVERVIEW_THRESHOLD = -3;
+  // Threshold zoom level below which we show the overview (schema.png)
+  // instead of the detail tile grid.
+  const OVERVIEW_THRESHOLD = -1;
 
   // ── Map setup (CRS.Simple = plain pixel-space, no geo projection) ──
   const map = L.map('map', {
@@ -96,58 +99,19 @@
 
   // ── Detail layer (54 tiles arranged in the A-I / 1-6 grid) ──────
   const detailLayer = L.layerGroup();
-  const tileUrls = [];
-  COLS.forEach((col, ci) => {
-    ROWS.forEach((row, ri) => {
+  ROWS.forEach((row, ri) => {
+    COLS.forEach((col, ci) => {
       const north = -ri * TILE_H;
       const south = -(ri + 1) * TILE_H;
       const west = ci * TILE_W;
       const east = (ci + 1) * TILE_W;
-      const tileUrl = `tiles/${col}${row}.png`;
-      tileUrls.push(tileUrl);
-      const overlay = L.imageOverlay(tileUrl, [[north, west], [south, east]]);
-      let retries = 0;
-      overlay.on('error', () => {
-        if (retries < 3) {
-          retries += 1;
-          overlay.setUrl(tileUrl);
-        }
-      });
-      overlay.addTo(detailLayer);
+      L.imageOverlay(`tiles/${row}${col}.png`, [[north, west], [south, east]]).addTo(detailLayer);
     });
-  });
-
-  function loadTile(tileUrl, attempt = 0) {
-    return new Promise((resolve, reject) => {
-      const image = new Image();
-      image.onload = resolve;
-      image.onerror = () => {
-        if (attempt < 2) {
-          loadTile(`${tileUrl}?retry=${attempt + 1}`, attempt + 1)
-            .then(resolve, reject);
-        } else {
-          reject(new Error(`Unable to load ${tileUrl}`));
-        }
-      };
-      image.src = tileUrl;
-    });
-  }
-
-  // Keep the overview visible until every detail image is ready.
-  const detailTilesReady = Promise.all(tileUrls.map((tileUrl) => loadTile(tileUrl)));
-  let detailLayerReady = false;
-  detailTilesReady.then(() => {
-    detailLayerReady = true;
-    updateLayers();
-  }).catch((error) => {
-    console.error(error);
-    detailLayerReady = true;
-    updateLayers();
   });
 
   function updateLayers() {
     const z = map.getZoom();
-    if (z < OVERVIEW_THRESHOLD || !detailLayerReady) {
+    if (z < OVERVIEW_THRESHOLD) {
       if (map.hasLayer(detailLayer)) map.removeLayer(detailLayer);
       if (!map.hasLayer(overviewLayer)) overviewLayer.addTo(map);
     } else {
@@ -157,15 +121,21 @@
   }
   map.on('zoomend', updateLayers);
 
-  // Initial view: whole grid visible, overview layer showing.
-  map.fitBounds(fullBounds);
-  map.setZoom(-3);
-  updateLayers();
+  // ── Initial view ─────────────────────────────────────────────────
+  // Set deterministically (no fitBounds) so the default view is always
+  // the overview, regardless of container size at load time.
+  const DEFAULT_ZOOM = -3;
+  const center = L.latLng(-GRID_H / 2, GRID_W / 2);
 
   function resetView() {
-    map.fitBounds(fullBounds);
-    map.setZoom(-3);
+    map.invalidateSize();
+    map.setView(center, DEFAULT_ZOOM, { animate: false });
+    updateLayers();
   }
+
+  map.whenReady(resetView);
+  window.addEventListener('load', () => map.invalidateSize());
+
 </script>
 
 </body>
