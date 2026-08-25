@@ -4,33 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Night City — Map Viewer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <style>
+  :root {
+    --bg-color: #000000;
+    --panel-bg: #171A39;
+    --accent-yellow: #FEE801;
+    --neon-cyan: #54C1E6;
+    --neon-pink: #FF2D78;
+    --text-color: #E2E8F0;
+    --border-color: #39C4B6;
+    --danger-red: #ff0055;
+    --net-green: #00ff41;
+    --dim: #555;
+  }
   html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #05060f;
-    font-family: 'Courier New', monospace;
+    background: var(--bg-color);
+    font-family: 'Lexend', 'Courier New', monospace;
   }
   #map {
     width: 100%;
     height: 100vh;
-    background: #05060f;
+    background: var(--bg-color);
   }
   .leaflet-container {
-    background: #05060f;
+    background: var(--bg-color);
   }
   #hud {
     position: absolute;
     top: 12px;
     left: 12px;
     z-index: 1000;
-    background: rgba(5, 6, 15, 0.85);
-    border: 1px solid #2fe0ff;
-    color: #2fe0ff;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    color: var(--neon-cyan);
     padding: 8px 14px;
     font-size: 12px;
+    font-family: 'Lexend', monospace;
     letter-spacing: 1px;
     text-transform: uppercase;
     pointer-events: none;
@@ -41,19 +56,21 @@
     top: 12px;
     right: 12px;
     z-index: 1000;
-    background: rgba(5, 6, 15, 0.85);
-    border: 1px solid #2fe0ff;
-    color: #2fe0ff;
+    background: transparent;
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
     padding: 8px 14px;
     font-size: 11px;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 3px;
-    font-family: 'Courier New', monospace;
+    font-family: 'Lexend', monospace;
   }
   #resetBtn:hover {
-    background: rgba(47, 224, 255, 0.15);
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 12px var(--neon-cyan);
   }
   #presetSwitcher {
     position: absolute;
@@ -63,30 +80,31 @@
     z-index: 1000;
     display: flex;
     gap: 6px;
-    background: rgba(5, 6, 15, 0.85);
-    border: 1px solid #2fe0ff;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
     border-radius: 3px;
     padding: 4px;
   }
   .preset-btn {
     background: transparent;
     border: 1px solid transparent;
-    color: #2fe0ff;
+    color: var(--neon-cyan);
     padding: 6px 12px;
     font-size: 11px;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 2px;
-    font-family: 'Courier New', monospace;
+    font-family: 'Lexend', monospace;
   }
   .preset-btn:hover {
-    background: rgba(47, 224, 255, 0.15);
+    background: rgba(84, 193, 230, 0.15);
   }
   .preset-btn.active {
-    background: #2fe0ff;
-    color: #05060f;
-    font-weight: bold;
+    background: var(--neon-cyan);
+    color: #000;
+    font-weight: 700;
+    box-shadow: 0 0 10px var(--neon-cyan);
   }
 
   /* ── Legend panel ─────────────────────────────────────────────── */
@@ -100,16 +118,16 @@
     min-height: 60px;
     max-width: 90vw;
     max-height: 80vh;
-    background: rgba(210, 210, 215, 0.97);
-    border: 2px solid #6b3fd6;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
-    color: #111;
-    font-family: 'Courier New', monospace;
+    color: var(--text-color);
+    font-family: 'Lexend', monospace;
     resize: both;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.6);
   }
   #legend.minimized {
     resize: none;
@@ -121,8 +139,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #6b3fd6;
-    color: #fff;
+    background: rgba(255, 45, 120, 0.12);
+    border-bottom: 1px solid var(--neon-pink);
+    color: var(--neon-pink);
     padding: 8px 10px;
     cursor: grab;
     user-select: none;
@@ -132,18 +151,19 @@
     cursor: grabbing;
   }
   #legendTitle {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 13px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px var(--neon-pink);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   #legendMinBtn {
     background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid var(--neon-pink);
+    color: var(--neon-pink);
     width: 22px;
     height: 22px;
     line-height: 1;
@@ -152,9 +172,12 @@
     border-radius: 2px;
     flex: 0 0 auto;
     margin-left: 8px;
+    font-family: 'Lexend', monospace;
   }
   #legendMinBtn:hover {
-    background: rgba(255,255,255,0.2);
+    background: var(--neon-pink);
+    color: #000;
+    box-shadow: 0 0 10px var(--neon-pink);
   }
   #legendBody {
     padding: 12px 14px;
@@ -162,7 +185,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px 18px;
-    font-size: 13px;
+    font-size: 12px;
   }
   #legend.minimized #legendBody {
     display: none;
@@ -174,10 +197,10 @@
     white-space: nowrap;
   }
   .legend-swatch {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     flex: 0 0 auto;
-    border: 1px solid rgba(0,0,0,0.4);
+    border: 1px solid var(--border-color);
     border-radius: 2px;
   }
 </style>
