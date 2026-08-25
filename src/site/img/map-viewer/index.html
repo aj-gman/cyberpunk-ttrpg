@@ -238,9 +238,9 @@
   // same A1..I16-style tiles as the others. Add/remove/reorder entries
   // here to change what shows up in the preset switcher.
   const TILE_SETS = [
-    { key: 'political',  label: 'Political',  folder: 'tiles' },
-    { key: 'culture',    label: 'Culture',    folder: 'tiles_culture' },
-    { key: 'religions',  label: 'Religions',  folder: 'tiles_religions' }
+    { key: 'political',  label: 'Political',  folder: 'tiles-pol' },
+    { key: 'socioeconomic',    label: 'Socioeconomic',    folder: 'tiles-socio' },
+    { key: 'influence',  label: 'Influence',  folder: 'tiles-infl' }
   ];
 
   // ── Legends ─────────────────────────────────────────────────────
@@ -248,8 +248,8 @@
   // from a reference screenshot — replace with real hex values here.
   const LEGENDS = {
     political: { title: 'Political', items: [] },
-    culture: {
-      title: 'Cultures',
+    socioeconomic: {
+      title: 'Socioeconomic Class',
       items: [
         { label: 'Mover',       color: '#9999b3' },
         { label: 'Corpzoner',   color: '#2a3a6b' },
@@ -260,7 +260,7 @@
         { label: 'Powerdealer', color: '#4b3fcf' }
       ]
     },
-    religions: { title: 'Religions', items: [] }
+    influence: { title: 'Influences', items: [] }
   };
 
   function renderLegend(key) {
