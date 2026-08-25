@@ -55,12 +55,46 @@
   #resetBtn:hover {
     background: rgba(47, 224, 255, 0.15);
   }
+  #presetSwitcher {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    gap: 6px;
+    background: rgba(5, 6, 15, 0.85);
+    border: 1px solid #2fe0ff;
+    border-radius: 3px;
+    padding: 4px;
+  }
+  .preset-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #2fe0ff;
+    padding: 6px 12px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    font-family: 'Courier New', monospace;
+  }
+  .preset-btn:hover {
+    background: rgba(47, 224, 255, 0.15);
+  }
+  .preset-btn.active {
+    background: #2fe0ff;
+    color: #05060f;
+    font-weight: bold;
+  }
 </style>
 </head>
 <body>
 
 <div id="map"></div>
 <div id="hud">Night City // scroll or pinch to zoom</div>
+<div id="presetSwitcher"></div>
 <button id="resetBtn" onclick="resetView()">Reset View</button>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -72,8 +106,19 @@
   const COLS = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'];
   const TILE_W = 960;
   const TILE_H = 960;
-  const GRID_W = TILE_W * COLS.length; // 11520
-  const GRID_H = TILE_H * ROWS.length; // 6480
+  const GRID_W = TILE_W * COLS.length; // 15360
+  const GRID_H = TILE_H * ROWS.length; // 8640
+
+  // ── Layer presets ─────────────────────────────────────────────────
+  // Each entry is one switchable map layer. `folder` is the tiles
+  // directory for that preset (relative to this page), containing the
+  // same A1..I16-style tiles as the others. Add/remove/reorder entries
+  // here to change what shows up in the preset switcher.
+  const TILE_SETS = [
+    { key: 'political',  label: 'Political',  folder: 'tiles' },
+    { key: 'culture',    label: 'Culture',    folder: 'tiles_culture' },
+    { key: 'religions',  label: 'Religions',  folder: 'tiles_religions' }
+  ];
 
   // ── Map setup (CRS.Simple = plain pixel-space, no geo projection) ──
   const map = L.map('map', {
@@ -89,19 +134,50 @@
   map.setMaxBounds([[GRID_H * 0.25, -GRID_W * 0.25], [-GRID_H * 1.25, GRID_W * 1.25]]);
   map.options.maxBoundsViscosity = 1.0;
 
-  // ── Tile layer (tiles arranged in the A-I / 1-16 grid) ───────────
-  const detailLayer = L.layerGroup();
-  ROWS.forEach((row, ri) => {
-    COLS.forEach((col, ci) => {
-      const north = -ri * TILE_H;
-      const south = -(ri + 1) * TILE_H;
-      const west = ci * TILE_W;
-      const east = (ci + 1) * TILE_W;
-      L.imageOverlay(`tiles/${row}${col}.png`, [[north, west], [south, east]]).addTo(detailLayer);
+  // ── Build one tile layerGroup per preset (lazy: images only fetch ──
+  // once their layerGroup is actually added to the map).
+  function buildLayerGroup(folder) {
+    const group = L.layerGroup();
+    ROWS.forEach((row, ri) => {
+      COLS.forEach((col, ci) => {
+        const north = -ri * TILE_H;
+        const south = -(ri + 1) * TILE_H;
+        const west = ci * TILE_W;
+        const east = (ci + 1) * TILE_W;
+        L.imageOverlay(`${folder}/${row}${col}.png`, [[north, west], [south, east]]).addTo(group);
+      });
     });
+    return group;
+  }
+
+  const layerGroups = {};
+  TILE_SETS.forEach((preset) => {
+    layerGroups[preset.key] = buildLayerGroup(preset.folder);
   });
 
-  detailLayer.addTo(map);
+  let currentKey = TILE_SETS[0].key;
+  layerGroups[currentKey].addTo(map);
+
+  function switchTileSet(key) {
+    if (key === currentKey || !layerGroups[key]) return;
+    map.removeLayer(layerGroups[currentKey]);
+    currentKey = key;
+    layerGroups[currentKey].addTo(map);
+    document.querySelectorAll('.preset-btn').forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.key === key);
+    });
+  }
+
+  // ── Preset switcher UI ─────────────────────────────────────────────
+  const switcherEl = document.getElementById('presetSwitcher');
+  TILE_SETS.forEach((preset) => {
+    const btn = document.createElement('button');
+    btn.className = 'preset-btn' + (preset.key === currentKey ? ' active' : '');
+    btn.textContent = preset.label;
+    btn.dataset.key = preset.key;
+    btn.onclick = () => switchTileSet(preset.key);
+    switcherEl.appendChild(btn);
+  });
 
   // ── Initial view ─────────────────────────────────────────────────
   const DEFAULT_ZOOM = -3;
@@ -114,7 +190,6 @@
 
   resetView();
   window.addEventListener('load', resetView);
-
 </script>
 
 </body>
