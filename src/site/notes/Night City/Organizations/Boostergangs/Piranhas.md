@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/boostergangs/piranhas/","tags":["#boostergang"],"dg-note-properties":{"tags":["#boostergang"]}}
+{"dg-publish":true,"permalink":"/night-city/organizations/boostergangs/piranhas/","dg-note-properties":{}}
 ---
 
 #boostergang [[Night City/Locations/Night City\|Night City]]

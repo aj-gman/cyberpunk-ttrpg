@@ -1,6 +1,49 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#role","#news"],"dg-note-properties":{"tags":["#role","#news"]}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#news","#role"],"dg-note-properties":{"tags":["#news","#role"]}}
 ---
+
+### August 2026
+#### 19.08
+- Added most important characters in the [[Fourth Corporate War/Adventures/Big Trouble in Neo-Sov\|Big Trouble in Neo-Sov]] adventure ([[Fourth Corporate War/Characters/Boris Asimov\|Boris Asimov]], [[Fourth Corporate War/Characters/Liudmila\|Liudmila]], [[Fourth Corporate War/Characters/Raphael the Kid\|Raphael the Kid]], [[Fourth Corporate War/Characters/Seraphim\|Seraphim]], [[Night City/Organizations/Boostergangs/Organitskaya\|Organitskaya]]).
+- Published information regarding [[Fourth Corporate War/Locations/St. Petersburg\|St. Petersburg]].
+- Updated and corrected minor details regarding [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] rules.
+#### 19.08
+- Brought [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.1.0.0. 
+	**Key new features:**
+	- Fixed a bug with Eurodollars & Flaws not saving in .json format
+	- Added GitHub-connected save via Character ID
+	- Adjusted Gear & Cyberware (Page 2) to have adjustable widths via row formatting (1, 2 or 3 rows);
+	- Added drag & drop feature to Gear & Cyberware for more efficient listing.
+#### 25.08
+- [[z-SITE/NCOverdrive Sheet\|Updated NCOverdrive Sheet to 1.1.1.0]]
+	- Added load/save modal that asks for local or cloud sync
+	- Changed page naming to clearly state what it is
+	- Removed export-to-pdf functionality
+
+#### 26.08
+- Updated [[Night City/Locations/Night City\|Night City]] map (check [here](https://gman-cyberpunk.vercel.app/img/map-viewer/)) with a more accurate rendition of the districts provided by [Night City 2045](https://rtalsoriangames.com/night-city-2045/)'s redrawing of 2020's city
+	- Socioeconomic Class view updated to match.
+	- [ ] **Political Map** will also include Threat Levels (or coloring in that direction)
+		- [ ] +++ sway/control of [[Night City/Organizations/Corporations/Militech\|Militech]] and [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] using anything from subsidiaries to gangs to minds;
+	- [ ] **Influence Map** will need retooling, as there are [[Night City/Organizations/Boostergangs/Boostergangs of Night City\|16 boostergangs]] in the mix (and I'd rather not color each one a different shade of red); we'll see if they actually have some colors on their logos I can use
+		- [ ] +++ Core Ideologies: **Corpo Realism** (its not the best, but it's the best we got), **Corpo Idealism** (you CAN make it big if you try hard enough), **Anti-Corpo** (burn it all to the ground), **Parallelism** (inspired by [Parallel Polis](https://en.wikipedia.org/wiki/Parallel_Polis), with communities evolving without the need of corporations to supply them with goods)
+### June 2026
+#### *03.06*
+- Updated [[z-SITE/CPRED Sheet\|CPRED Sheet]] with features (Still work in progress):
+	- ~~Added Cloud Sync feature (save in-browser to the site's Repo and load from there)~~
+		Currently broken. No idea why.
+	- Added Nerve Degeneration, Rep & IP trackers.
+	- Added Role Ability functionality with multiple roles & values
+	- Rearranged the **Cyberware** page to be able to collapse all categories with no cyberware for a cleaner view.
+#### _10.06_
+- **Added Rules for NCOverdrive**, a new TTRPG system.
+- Created dedicated subpages for all core mechanics, including [[Rules/NCOverdrive/Conditions\|Conditions]], [[Rules/NCOverdrive/Drive\|Drive]], [[Rules/CBR+PNK/EDGES\|Rules/CBR+PNK/EDGES]], [[Rules/NCOverdrive/XP\|XP]], [[Rules/NCOverdrive/Trademarks/Flaws\|Flaws]], [[Rules/NCOverdrive/Gear\|Gear]], [[Rules/NCOverdrive/Damage/Hits\|Hits]], [[Rules/NCOverdrive/Stunts\|Stunts]], [[Rules/NCOverdrive/Trademarks/Trademarks\|Trademarks]], [[Rules/NCOverdrive/Damage/Traumas\|Traumas]], and [[Rules/NCOverdrive/Trademarks/Triggers\|Triggers]].
+- **Added a custom Character Sheet** for NCOverdrive, bringing it to stable version 1.0.1.6.
+    - _Features:_ Integrated direct links to the VTT and a shared Google Sheets document for player collaboration.
+- **Updated the Digital Garden template** to version 1.8.0.4.
+- More #news 
+- Core Crews' stats and personalities are now open as explorable files([[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], [[Eurotour/Characters/Core Crew/Jimenez\|Jimenez]], [[Eurotour/Characters/Core Crew/Tinker\|Tinker]], [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], [[Eurotour/Characters/Core Crew/Ace McLeod\|Ace McLeod]], [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]], [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine Clements]]), including even [[Eurotour/Characters/Claire Monet\|Claire Monet]]!
+- Added [[Rules/NCOverdrive/Drugs\|Rules/NCOverdrive/Drugs]], which encompasses all of the adjusted rules for [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] for [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]]
 
 ### May 2026
 #### *17.05*
@@ -33,49 +76,8 @@
 - [[z-SITE/CPRED Sheet\|CPRED Sheet]] has been brought to a stable patch, v1.0.1.1.
 - Cleared up some more on the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] webpage
 
-### June 2026
-#### *03.06*
-- Updated [[z-SITE/CPRED Sheet\|CPRED Sheet]] with features (Still work in progress):
-	- ~~Added Cloud Sync feature (save in-browser to the site's Repo and load from there)~~
-		Currently broken. No idea why.
-	- Added Nerve Degeneration, Rep & IP trackers.
-	- Added Role Ability functionality with multiple roles & values
-	- Rearranged the **Cyberware** page to be able to collapse all categories with no cyberware for a cleaner view.
-#### _10.06_
-- **Added Rules for NCOverdrive**, a new TTRPG system.
-- Created dedicated subpages for all core mechanics, including [[Rules/NCOverdrive/Conditions\|Conditions]], [[Rules/NCOverdrive/Drive\|Drive]], [[Rules/CBR+PNK/EDGES\|Rules/CBR+PNK/EDGES]], [[Rules/NCOverdrive/XP\|XP]], [[Rules/NCOverdrive/Trademarks/Flaws\|Flaws]], [[Rules/NCOverdrive/Gear\|Gear]], [[Rules/NCOverdrive/Damage/Hits\|Hits]], [[Rules/NCOverdrive/Stunts\|Stunts]], [[Rules/NCOverdrive/Trademarks/Trademarks\|Trademarks]], [[Rules/NCOverdrive/Damage/Traumas\|Traumas]], and [[Rules/NCOverdrive/Trademarks/Triggers\|Triggers]].
-- **Added a custom Character Sheet** for NCOverdrive, bringing it to stable version 1.0.1.6.
-    - _Features:_ Integrated direct links to the VTT and a shared Google Sheets document for player collaboration.
-- **Updated the Digital Garden template** to version 1.8.0.4.
-- More #news 
-- Core Crews' stats and personalities are now open as explorable files([[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], [[Eurotour/Characters/Core Crew/Jimenez\|Jimenez]], [[Eurotour/Characters/Core Crew/Tinker\|Tinker]], [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], [[Eurotour/Characters/Core Crew/Ace McLeod\|Ace McLeod]], [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]], [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine Clements]]), including even [[Eurotour/Characters/Claire Monet\|Claire Monet]]!
-- Added [[Rules/NCOverdrive/Drugs\|Rules/NCOverdrive/Drugs]], which encompasses all of the adjusted rules for [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] for [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]]
 
-### August 2026
-#### 19.08
-- Added most important characters in the [[Fourth Corporate War/Adventures/Big Trouble in Neo-Sov\|Big Trouble in Neo-Sov]] adventure ([[Fourth Corporate War/Characters/Boris Asimov\|Boris Asimov]], [[Fourth Corporate War/Characters/Liudmila\|Liudmila]], [[Fourth Corporate War/Characters/Raphael the Kid\|Raphael the Kid]], [[Fourth Corporate War/Characters/Seraphim\|Seraphim]], [[Night City/Organizations/Boostergangs/Organitskaya\|Organitskaya]]).
-- Published information regarding [[Fourth Corporate War/Locations/St. Petersburg\|St. Petersburg]].
-- Updated and corrected minor details regarding [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] rules.
-#### 19.08
-- Brought [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.1.0.0. 
-	**Key new features:**
-	- Fixed a bug with Eurodollars & Flaws not saving in .json format
-	- Added GitHub-connected save via Character ID
-	- Adjusted Gear & Cyberware (Page 2) to have adjustable widths via row formatting (1, 2 or 3 rows);
-	- Added drag & drop feature to Gear & Cyberware for more efficient listing.
-#### 25.08
-- [[z-SITE/NCOverdrive Sheet\|Updated NCOverdrive Sheet to 1.1.1.0]]
-	- Added load/save modal that asks for local or cloud sync
-	- Changed page naming to clearly state what it is
-	- Removed export-to-pdf functionality
 
-#### 26.08
-- Updated [[Night City/Locations/Night City\|Night City]] map (check [here](https://gman-cyberpunk.vercel.app/img/map-viewer/)) with a more accurate rendition of the districts provided by [Night City 2045](https://rtalsoriangames.com/night-city-2045/)'s redrawing of 2020's city
-	- Socioeconomic Class view updated to match.
-	- [ ] **Political Map** will also include Threat Levels (or coloring in that direction)
-		- [ ] +++ sway/control of [[Night City/Organizations/Corporations/Militech\|Militech]] and [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] using anything from subsidiaries to gangs to minds;
-	- [ ] **Influence Map** will need retooling, as there are [[Night City/Organizations/Boostergangs/Boostergangs of Night City\|16 boostergangs]] in the mix (and I'd rather not color each one a different shade of red); we'll see if they actually have some colors on their logos I can use
-		- [ ] +++ Core Ideologies: **Corpo Realism** (its not the best, but it's the best we got), **Corpo Idealism** (you CAN make it big if you try hard enough), **Anti-Corpo** (burn it all to the ground), **Parallelism** (inspired by [Parallel Polis](https://en.wikipedia.org/wiki/Parallel_Polis), with communities evolving without the need of corporations to supply them with goods)
 ## TO DO
 - [ ] **[[z-SITE/CPRED Sheet\|CPRED Sheet]] needs:**
 	- [ ] Page for Notes, Backstory, Lore etc.

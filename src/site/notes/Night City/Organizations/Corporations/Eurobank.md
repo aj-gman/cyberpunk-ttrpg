@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/corporations/eurobank/","tags":["#organization"],"dg-note-properties":{"tags":["#organization"]}}
+{"dg-publish":true,"permalink":"/night-city/organizations/corporations/eurobank/","dg-note-properties":{}}
 ---
 
 #organization 

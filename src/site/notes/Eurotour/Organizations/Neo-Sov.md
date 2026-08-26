@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/organizations/neo-sov/","tags":["#state"],"dg-note-properties":{"tags":["#state"]}}
+{"dg-publish":true,"permalink":"/eurotour/organizations/neo-sov/","dg-note-properties":{}}
 ---
 
 #state 
