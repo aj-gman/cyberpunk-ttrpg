@@ -15,24 +15,24 @@
 ### [[Night City/Locations/Districts (2020)/Little Europe\|Little Europe]]
 - [[Night City/Organizations/Boostergangs/The Mob\|The Mob]] in Little Italy
 - [[Night City/Organizations/Boostergangs/Organitskaya\|Organitskaya]] in East Marina
-- [[Wild Things\|Wild Things]] in Upper & East Marina
-- [[Inquisitors\|Inquisitors]] in Northside
+- [[Night City/Organizations/Boostergangs/Wild Things\|Wild Things]] in Upper & East Marina
+- [[Night City/Organizations/Boostergangs/Inquisitors\|Inquisitors]] in Northside
 ### [[Night City/Locations/Districts (2020)/Nightlife District\|Nightlife District]]
 - [[Night City/Organizations/Boostergangs/Piranhas\|Piranhas]] in Upper Eastside
-- [[Wild Things\|Wild Things]] in Upper Eastside and Studio City
+- [[Night City/Organizations/Boostergangs/Wild Things\|Wild Things]] in Upper Eastside and Studio City
 - [[Night City/Organizations/Boostergangs/Maelstrom\|Maelstrom]] in Studio City
 ### [[Night City/Locations/Districts (2020)/University District\|University District]]
-- [[The Pack\|The Pack]] in Lake Park
-- [[Voodoo Boys\|Voodoo Boys]] in University District
+- [[Night City/Organizations/Boostergangs/The Pack\|The Pack]] in Lake Park
+- [[Night City/Organizations/Boostergangs/Voodoo Boys\|Voodoo Boys]] in University District
 - [[Night City/Organizations/Boostergangs/Blood Razors\|Blood Razors]] in University District
-- [[Bozos\|Bozos]] in University Districts
+- [[Night City/Organizations/Boostergangs/Bozos\|Bozos]] in University Districts
 ### [[Night City/Locations/Districts (2020)/Westside\|Westside]]
-- [[Voodoo Boys\|Voodoo Boys]]
-- [[Bozos\|Bozos]]
+- [[Night City/Organizations/Boostergangs/Voodoo Boys\|Voodoo Boys]]
+- [[Night City/Organizations/Boostergangs/Bozos\|Bozos]]
 - [[Night City/Organizations/Boostergangs/The Enhanced\|The Enhanced]]
 ### [[Night City/Locations/Districts (2020)/South Night City\|South Night City]]
 - [[Night City/Organizations/Boostergangs/Blood Razors\|Blood Razors]]
 - [[Night City/Organizations/Boostergangs/Maelstrom\|Maelstrom]]
 - [[Night City/Organizations/Boostergangs/Piranhas\|Piranhas]]
-- [[Red Chrome Legion\|Red Chrome Legion]]
+- [[Night City/Organizations/Boostergangs/Red Chrome Legion\|Red Chrome Legion]]
 - D6 other gangs

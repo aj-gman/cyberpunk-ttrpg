@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#role","#news"],"dg-note-properties":{"tags":["#role","#news"]}}
 ---
 
 ### May 2026
@@ -68,6 +68,14 @@
 	- Added load/save modal that asks for local or cloud sync
 	- Changed page naming to clearly state what it is
 	- Removed export-to-pdf functionality
+
+#### 26.08
+- Updated [[Night City/Locations/Night City\|Night City]] map (check [here](https://gman-cyberpunk.vercel.app/img/map-viewer/)) with a more accurate rendition of the districts provided by [Night City 2045](https://rtalsoriangames.com/night-city-2045/)'s redrawing of 2020's city
+	- Socioeconomic Class view updated to match.
+	- [ ] **Political Map** will also include Threat Levels (or coloring in that direction)
+		- [ ] +++ sway/control of [[Night City/Organizations/Corporations/Militech\|Militech]] and [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] using anything from subsidiaries to gangs to minds;
+	- [ ] **Influence Map** will need retooling, as there are [[Night City/Organizations/Boostergangs/Boostergangs of Night City\|16 boostergangs]] in the mix (and I'd rather not color each one a different shade of red); we'll see if they actually have some colors on their logos I can use
+		- [ ] +++ Core Ideologies: **Corpo Realism** (its not the best, but it's the best we got), **Corpo Idealism** (you CAN make it big if you try hard enough), **Anti-Corpo** (burn it all to the ground), **Parallelism** (inspired by [Parallel Polis](https://en.wikipedia.org/wiki/Parallel_Polis), with communities evolving without the need of corporations to supply them with goods)
 ## TO DO
 - [ ] **[[z-SITE/CPRED Sheet\|CPRED Sheet]] needs:**
 	- [ ] Page for Notes, Backstory, Lore etc.
