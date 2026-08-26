@@ -1,99 +1,154 @@
 {
   "/": [
     "Homepage",
+    "NCOverdrive Sheet",
     "Site Chronicle",
     "Rules",
+    "Fourth Corporate War",
+    "Night City",
     "Eurotour",
-    "Organizations",
-    "Others"
+    "Crew",
+    "AI Policy",
+    "CPRED Sheet"
   ],
   "/Rules": [
     "Homebrew",
+    "Basebuilding",
+    "NCOverdrive",
+    "CPRED"
+  ],
+  "/Rules/NCOverdrive": [
+    "Damage",
+    "Dice Mechanics",
+    "Trademarks",
+    "Conditions",
+    "Drive",
+    "Drugs",
+    "Gear",
+    "Neon City Overdrive",
+    "Stunts",
+    "XP"
+  ],
+  "/Rules/NCOverdrive/Damage": [
+    "Combat",
+    "Hits",
+    "Traumas"
+  ],
+  "/Rules/NCOverdrive/Dice Mechanics": [
+    "Boons",
+    "Dice Rolls",
+    "Extended Checks",
+    "Helping"
+  ],
+  "/Rules/NCOverdrive/Trademarks": [
+    "Edges",
+    "Flaws",
+    "Trademarks",
+    "Triggers"
+  ],
+  "/Rules/CPRED": [
     "Combat",
     "Cyberware",
     "Drugs",
     "Netrunning",
+    "Roles",
+    "Cyberpunk RED",
     "Difficulty Rating",
     "Quality"
   ],
-  "/Rules/Combat": [
+  "/Rules/CPRED/Combat": [
     "Combat",
     "Critical Injuries",
+    "Firearms of Cyberpunk",
     "Gun Generator",
     "Power Guns",
     "Smart Guns",
     "Tech Guns"
   ],
-  "/Rules/Cyberware": [
+  "/Rules/CPRED/Cyberware": [
+    "Cyberpsychosis",
+    "Cyberpsychosis Symptoms",
     "Cyberware",
-    "Cyberware Types",
-    "Humanity"
+    "Cyberware Classes",
+    "Humanity",
+    "Speedware"
   ],
-  "/Rules/Drugs": [
+  "/Rules/CPRED/Drugs": [
     "Drug Effects",
     "Black Lace",
+    "Blue Glass",
     "Boost",
     "Drugs",
+    "Flash Assault",
     "Omega Blockers",
+    "Regen 21",
+    "Speedheal",
     "SynthCoke",
-    "Vaporware",
+    "Vaporwave",
     "Weed",
-    "Wireheading",
-    "Blue Glass"
+    "Wireheading"
   ],
-  "/Rules/Drugs/Drug Effects": [
+  "/Rules/CPRED/Drugs/Drug Effects": [
+    "Black Outs",
     "Blank",
+    "Disorientation",
     "Drowsiness",
     "Hunger",
     "Nerve Degeneration",
     "Psychedelic"
   ],
-  "/Rules/Netrunning": [
+  "/Rules/CPRED/Netrunning": [
     "ICE",
     "Netrunner Gear",
     "Netrunning",
     "Quickhacks"
   ],
-  "/Eurotour": [
+  "/Rules/CPRED/Roles": [
+    "Exec",
+    "Fixer",
+    "Lawman",
+    "Media",
+    "Medtechie",
+    "Netrunner",
+    "Nomad",
+    "Rockerboy",
+    "Solo",
+    "Techie"
+  ],
+  "/Fourth Corporate War": [
     "Characters",
-    "Locations",
-    "News",
-    "Eurotour"
+    "Locations"
   ],
-  "/Eurotour/Characters": [
-    "Crew",
-    "France",
-    "Nolasco Family"
+  "/Fourth Corporate War/Characters": [
+    "Boris Asimov",
+    "Liudmila",
+    "Raphael the Kid",
+    "Seraphim"
   ],
-  "/Eurotour/Characters/Crew": [
-    "The Crew",
-    "HEX_PUBLIC",
-    "LAZARUS_PUBLIC",
-    "RAY_PUBLIC"
+  "/Fourth Corporate War/Locations": [
+    "St. Petersburg"
   ],
-  "/Eurotour/Characters/France": [
-    "Beatrice Fahida",
-    "Frederic Germain"
+  "/Night City": [
+    "Organizations",
+    "Others"
   ],
-  "/Eurotour/Characters/Nolasco Family": [
-    "Nolasco Family"
-  ],
-  "/Eurotour/Locations": [
-    "Frankfurt Airport",
-    "Germany",
-    "Liverpool",
-    "Rhine-Ruhr Conurb"
-  ],
-  "/Eurotour/News": [
-    "Glamorous Deaths in the Swiss Alps",
-    "Nomad Rockstars, Beware!"
-  ],
-  "/Organizations": [
+  "/Night City/Organizations": [
+    "Boostergangs",
     "Corporations",
-    "MLA",
-    "PKY"
+    "NUSA"
   ],
-  "/Organizations/Corporations": [
+  "/Night City/Organizations/Boostergangs": [
+    "Boostergangs of Night City",
+    "Blood Razors",
+    "Maelstrom",
+    "Organitskaya",
+    "Piranhas",
+    "Street Queens",
+    "Sun On Yee",
+    "The Enhanced",
+    "Tyger Clawz"
+  ],
+  "/Night City/Organizations/Corporations": [
     "Arasaka",
     "Budget Arms",
     "CINO",
@@ -112,8 +167,83 @@
     "Tsunami Arms",
     "Wortrac"
   ],
-  "/Others": [
-    "Cyberpsychosis",
+  "/Night City/Others": [
+    "About Cyberpsychosis"
+  ],
+  "/Eurotour": [
+    "Characters",
+    "Locations",
+    "News",
+    "Eurotour",
+    "Organizations",
     "EYE"
+  ],
+  "/Eurotour/Characters": [
+    "France",
+    "Core Crew",
+    "Claire Monet_Public",
+    "Lars-Olov Skeppsholm",
+    "Maddogs"
+  ],
+  "/Eurotour/Characters/France": [
+    "Beatrice Fahida",
+    "Frederic Germain"
+  ],
+  "/Eurotour/Characters/Core Crew": [
+    "Ace McLeod",
+    "Angus Kessler",
+    "Catherine Clements",
+    "Jack Entropy",
+    "Jimenez",
+    "Tammi Lu",
+    "Tinker"
+  ],
+  "/Eurotour/Locations": [
+    "Frankfurt Airport",
+    "Germany",
+    "Liverpool",
+    "Rhine-Ruhr Conurb",
+    "Brussels",
+    "Paris",
+    "Stockholm",
+    "Venice"
+  ],
+  "/Eurotour/News": [
+    "Glamorous Deaths in the Swiss Alps",
+    "Nomad Rockstars, Beware!",
+    "Czech Crown Jewels, gone",
+    "Czechoslovakia no more",
+    "Czechoslovakian Unrest Continues",
+    "Entropy too chaotic",
+    "Eurotour Shows Available",
+    "Executive Executions on Rhin-Ruhr Rooftops",
+    "I borged out Entropy",
+    "Marcel Reve Faces Trial",
+    "Marcel Reve, Acquited",
+    "Masquerade Or Foul Play",
+    "The Czech Republic",
+    "Who let Entropy have a CHAINSAW!"
+  ],
+  "/Eurotour/Organizations": [
+    "DangerCrewz",
+    "MLA",
+    "Neo-Sov",
+    "PKY"
+  ],
+  "/Crew": [
+    "The Crew",
+    "OTHER",
+    "Relevant NPCs"
+  ],
+  "/Crew/OTHER": [
+    "HEX_PUBLIC",
+    "LAZARUS_PUBLIC",
+    "RAY_PUBLIC"
+  ],
+  "/Crew/Relevant NPCs": [
+    "Nolasco Family"
+  ],
+  "/Crew/Relevant NPCs/Nolasco Family": [
+    "Nolasco Family"
   ]
 }
