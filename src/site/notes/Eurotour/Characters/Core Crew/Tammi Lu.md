@@ -8,7 +8,7 @@
 
 This is how [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]] eventually hooked up with [[Crew/Hex\|Hex]], desiring nothing more but [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack's]] attention, too busy with other girls to even notice this. Unfortunately, this context was noticed by [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine Clements]] who, desiring to end [[Eurotour/Characters/Core Crew/Jack Entropy\|Entropy's]] career for good, placed a hidden camera during the [[Eurotour/Adventures/3 Trapped Animal\|Paris concert]], revealing [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]]'s carnal relations to [[Crew/Hex\|Hex]].
 
-Then, [[Eurotour/News/Glamorous Deaths in the Swiss Alps\|Glamorous Deaths in the Swiss Alps]]/[[Lore/Others/The Swiss Affair\|The Swiss Affair]] occured.
+Then, [[Eurotour/News/Glamorous Deaths in the Swiss Alps\|Glamorous Deaths in the Swiss Alps]]/[[Eurotour/The Swiss Affair\|The Swiss Affair]] occured.
 
 ![NPC-TammiLu.png\|300](/img/user/Pictures/NPC-TammiLu.png)
 
@@ -26,4 +26,4 @@ Then, [[Eurotour/News/Glamorous Deaths in the Swiss Alps\|Glamorous Deaths in th
 - **Stats:** high EMP, ATT, LUCK; medium COOL, INT; low REF, BODY, MOVE, TECH
 - **Skills:** 7-8 in social skills (Seduction, Wardrobe, Streetwise, Human Perception, Grooming, Social, Dance), 3-4 in some self-defense skills (Hide/Evade, Handgun)
 - **Cyberware:** Midnight Lady, contraceptive implant, advanced social engine specialized for seduction and stress control, hormone regulators, nail claws cyberweapon
-- **Outfit:** [[Lore/Organizations/Corporations/Dai Lung\|Dai Lung]] Nightlight ([[Lore/Organizations/Corporations/Arasaka\|Arasaka]] rip-off)
+- **Outfit:** [[Night City/Organizations/Corporations/Dai Lung\|Dai Lung]] Nightlight ([[Night City/Organizations/Corporations/Arasaka\|Arasaka]] rip-off)

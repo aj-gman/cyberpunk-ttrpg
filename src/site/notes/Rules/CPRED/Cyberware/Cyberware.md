@@ -46,7 +46,7 @@ Cyberware should not be balanced mechanically with one another. Rather, they sho
 
 ##### Inspiration
 - [The Future is Now, Old Man](https://www.storytellersvault.com/en/product/415807/the-future-is-now-old-man); A WoD supplement for V5 that details Cyberware rules compatible with Discipline-like systems
-- [Cyberpunk: Edgerunners](https://en.wikipedia.org/wiki/Cyberpunk:_Edgerunners); for the depiction of [[Lore/Others/About Cyberpsychosis\|About Cyberpsychosis]] and the "descent" into it;
+- [Cyberpunk: Edgerunners](https://en.wikipedia.org/wiki/Cyberpunk:_Edgerunners); for the depiction of [[Night City/Others/About Cyberpsychosis\|About Cyberpsychosis]] and the "descent" into it;
 - [Cyberpunk 2077](https://en.wikipedia.org/wiki/Cyberpunk_2077) for the more seamless integration of mechanical prowess and diversity in Cyberware, especially for combat purposes
 
 Although Cyberpunk 2020 and its newer brother, [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]] are both inspirations and foundational to this module, its very obvious that 2077's more "biology-first" approach is useful, as splitting "neuralware" into 3 enhances the portability of all its moving parts.
@@ -67,7 +67,7 @@ Although Cyberpunk 2020 and its newer brother, [[Rules/CPRED/Cyberpunk RED\|Cybe
 
 [^8]: So, when using Kiroshi Deadlock Cyberoptics (Quality 4), the player would add a +4 to the Cyberpsychosis Tracker.
 
-[^10]: While [[Lore/Organizations/MAXTAC\|MAXTAC]] could use this on the Cyberpsychos they go up against, in a tactical operation throwing a syringe into a raging maniac's chest isn't quite the most efficient of putting them down.
+[^10]: While [[Night City/Organizations/MAXTAC\|MAXTAC]] could use this on the Cyberpsychos they go up against, in a tactical operation throwing a syringe into a raging maniac's chest isn't quite the most efficient of putting them down.
 
 [^21]: "I try to shatter the glass by using the points I have in Integumentary System. If you'll allow me, my elbow is covered by a thin line of flexible metal, which allows me to break the glass without getting any shards stuck." This would lower the already easy check of Everyday (13) to Simple (9). 
 

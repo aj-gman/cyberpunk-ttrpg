@@ -19,4 +19,4 @@
 - **Stats:** high ATT, TECH, COOL, EMP, INT; medium LUCK, BODY, REF
 - **Skills:** 7-8 in Tech Skills (Electronics, Basic Tech, Jury Rig), 4-5 in advanced Tech (Guitar, Keyboards, Cybertech), high seduction & persuasion (6-7), speaks French
 - **Cyberware:** cyberaudio suite to fine-tune music, but also to eavesdrop, edit sound, listen to music; interface plugs and machine-link connection, especially with the little technical spider-drone she uses; concealment slots for difficult/illegal objects, dynamic skin (for tattoos), memory boosters and RAM accelerators for quick and effective multitasking
-- **Outfit:** a lot of memory chips, utility toolbelt, electronics & tech kits, a broken cyberarm, pocket computer, [[Lore/Organizations/Corporations/Dai Lung\|Dai Lung]] Liberator (3d6-1)
+- **Outfit:** a lot of memory chips, utility toolbelt, electronics & tech kits, a broken cyberarm, pocket computer, [[Night City/Organizations/Corporations/Dai Lung\|Dai Lung]] Liberator (3d6-1)

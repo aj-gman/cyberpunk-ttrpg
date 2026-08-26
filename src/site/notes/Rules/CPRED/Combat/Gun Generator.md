@@ -5,17 +5,17 @@
 Picks fron the [[Rules/CPRED/Combat/Combat#Gun Brands\|Brands]], [[Rules/CPRED/Combat/Combat#Core Rules\|Archetypes]] and [[Rules/CPRED/Combat/Combat#Gun Types\|Types]] to produce a randomly-generated [[Rules/CPRED/Combat/Combat#Core Rules\|gun]] and calculate its price. This price is the initial retail price at a certified gun shop, so getting the same gun from a black market dealer might prove more costly (or perhaps cheaper, if the gun has heat).
 
 #### Specificities
-- [[Rules/CPRED/Combat/Smart Guns\|Smart Guns]] weapons are made only by [[Lore/Organizations/Corporations/Arasaka\|Arasaka]] or [[Lore/Organizations/Corporations/Kang Tao\|Kang Tao]];
+- [[Rules/CPRED/Combat/Smart Guns\|Smart Guns]] weapons are made only by [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] or [[Night City/Organizations/Corporations/Kang Tao\|Kang Tao]];
 - [[Rules/CPRED/Combat/Power Guns\|Power Guns]] & [[Rules/CPRED/Combat/Tech Guns\|Tech Guns]] weapons are made by all companies;
 - All [[Rules/CPRED/Combat/Combat#Gun Brands\|Brands]] have specific abilities, which can be seen by accessing the Brand's page;
 
 #### Pricing
-- [[Lore/Organizations/Corporations/Dai Lung\|Dai Lung]] & [[Lore/Organizations/Corporations/Budget Arms\|Budget Arms]] are the cheapest, at 0.5x of the weapon archetype's cost;
-- [[Lore/Organizations/Corporations/Constitutional Arms\|Constitutional]] & [[Lore/Organizations/Corporations/Techtronika\|Techtronika]] are both priced mid-tier, at 1x of the archetype's cost, while [[Lore/Organizations/Corporations/Arasaka\|Arasaka]] & [[Lore/Organizations/Corporations/Militech\|Militech]] vary slightly, with both at 1.5x 
-- [[Lore/Organizations/Corporations/Kang Tao\|Kang Tao]], [[Lore/Organizations/Corporations/Malorian Arms\|Malorian]] & [[Lore/Organizations/Corporations/Tsunami Arms\|Tsunami]] are the most expensive, at 2.5x of the weapon archetype's initial cost;
+- [[Night City/Organizations/Corporations/Dai Lung\|Dai Lung]] & [[Night City/Organizations/Corporations/Budget Arms\|Budget Arms]] are the cheapest, at 0.5x of the weapon archetype's cost;
+- [[Night City/Organizations/Corporations/Constitutional Arms\|Constitutional]] & [[Night City/Organizations/Corporations/Techtronika\|Techtronika]] are both priced mid-tier, at 1x of the archetype's cost, while [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] & [[Night City/Organizations/Corporations/Militech\|Militech]] vary slightly, with both at 1.5x 
+- [[Night City/Organizations/Corporations/Kang Tao\|Kang Tao]], [[Night City/Organizations/Corporations/Malorian Arms\|Malorian]] & [[Night City/Organizations/Corporations/Tsunami Arms\|Tsunami]] are the most expensive, at 2.5x of the weapon archetype's initial cost;
 
 
 ### Generator
-<div><div><b>Brand:</b> <a href="Malorian Arms" class="internal-link">Malorian Arms</a></div><div><b>Archetype:</b> Assault Rifle</div><div><b>Gun Type:</b> <a href="Power" class="internal-link">Power</a></div><div><b>Price:</b> 1250 eb</div></div><button class="gun-gen-btn"><span>Regenerate</span></button>
+<div><div><b>Brand:</b> <a href="Budget Arms" class="internal-link">Budget Arms</a></div><div><b>Archetype:</b> Medium Pistol</div><div><b>Gun Type:</b> <a href="Tech" class="internal-link">Tech</a></div><div><b>Price:</b> 38 eb</div></div><button class="gun-gen-btn"><span>Regenerate</span></button>
 
 

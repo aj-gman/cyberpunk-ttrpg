@@ -17,19 +17,19 @@ The content in this section is [[Rules/Homebrew\|Homebrew]]. Gun Types are inspi
 ### Gun Brands
 Sometimes, the firearms we purchase are from a recognizable brand - either because we trust that brand to supply a certain kind of product, or because that's the hand fate dealt us. Either way, this represents an alternative to "generic heavy pistol 5916" without actually changing weapon stats, just fiction.
 ##### **Cheap**
-- [[Lore/Organizations/Corporations/Budget Arms\|Budget Arms]] - jams and breaks easily, very affordable, single-use recommended
-- [[Lore/Organizations/Corporations/Dai Lung\|Dai Lung]] - rip-offs of the most notorious guns, less reliable but sporting similar qualities;
+- [[Night City/Organizations/Corporations/Budget Arms\|Budget Arms]] - jams and breaks easily, very affordable, single-use recommended
+- [[Night City/Organizations/Corporations/Dai Lung\|Dai Lung]] - rip-offs of the most notorious guns, less reliable but sporting similar qualities;
 
 ##### **Midtier**
-- [[Lore/Organizations/Corporations/Constitutional Arms\|Constitutional Arms]] - run of the mill, standard, decently-priced, always available;
-- [[Lore/Organizations/Corporations/Techtronika\|Techtronika]] - devastating damage, but low clips, slow fire-rate, long reload; standard 
+- [[Night City/Organizations/Corporations/Constitutional Arms\|Constitutional Arms]] - run of the mill, standard, decently-priced, always available;
+- [[Night City/Organizations/Corporations/Techtronika\|Techtronika]] - devastating damage, but low clips, slow fire-rate, long reload; standard 
 
 ##### **Expensive**
-- [[Lore/Organizations/Corporations/Arasaka\|Arasaka]] - never jam, precise, sleek, proprietary (only available at licensed sellers); 
-- [[Lore/Organizations/Corporations/Militech\|Militech]] - never break, spray fire over precision, modular (fits anything);
+- [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] - never jam, precise, sleek, proprietary (only available at licensed sellers); 
+- [[Night City/Organizations/Corporations/Militech\|Militech]] - never break, spray fire over precision, modular (fits anything);
 
 ##### **Excessive**
-- [[Lore/Organizations/Corporations/Kang Tao\|Kang Tao]] - patented smart-gun technology, expensive (like a printer, ammo costs more);
-- [[Lore/Organizations/Corporations/Tsunami Arms\|Tsunami Arms]] - state-of-the-art, custom, exorbitantly expensive;
-- [[Lore/Organizations/Corporations/Malorian Arms\|Malorian Arms]] - custom weaponry, usually combining more [[Rules/CPRED/Combat/Firearms of Cyberpunk#Gun Types\|#Gun Types]];
+- [[Night City/Organizations/Corporations/Kang Tao\|Kang Tao]] - patented smart-gun technology, expensive (like a printer, ammo costs more);
+- [[Night City/Organizations/Corporations/Tsunami Arms\|Tsunami Arms]] - state-of-the-art, custom, exorbitantly expensive;
+- [[Night City/Organizations/Corporations/Malorian Arms\|Malorian Arms]] - custom weaponry, usually combining more [[Rules/CPRED/Combat/Firearms of Cyberpunk#Gun Types\|#Gun Types]];
 

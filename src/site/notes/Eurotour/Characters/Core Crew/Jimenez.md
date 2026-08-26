@@ -19,4 +19,4 @@
 - **Stats:** high INT, REF, TECH, LUCK, EMP; medium COOL, ATT, MOVE, BODY
 - **Skills:** Resources 8, Streetwise 6, high Education skills (Anthropology, Education, History, Music Media Theory, Music Law)
 - **Cyberware:** Cyberear, memory boosters for local languages, customs, law, pattern recognition and predictive analysis, cybereye for displays, brain "whiteboarding" tech, standard bullshit detector social engine, metal-plated knuckles "just in case"
-- **Outfit:** [[Lore/Organizations/Corporations/Trauma Team\|Trauma Team]] card, [[Lore/Organizations/Corporations/Militech\|Militech]] taser, cab hailer, cellphone, always in a suit
+- **Outfit:** [[Night City/Organizations/Corporations/Trauma Team\|Trauma Team]] card, [[Night City/Organizations/Corporations/Militech\|Militech]] taser, cab hailer, cellphone, always in a suit

@@ -19,4 +19,4 @@
 - **Stats:** high REF, INT, MOVE, BODY; medium COOL, EMP, TECH; low ATT, LUCK
 - **Skills:** 5-6 in Combat Sense, Intimidate, Streetwise, Human Perception, Leadership, Awareness, Drive, Handgun, Tae Kwon Do; 4 in Interrogate, Melee
 - **Cyberware:** Sandevistan, cyberoptics for image enhancement and target prediction, toxic-diffuser organ, synthetic skeletal muscle, pain editors, shock absorbers & titanium hands for critical-inducing knuckle hits
-- **Outfit:** [[Lore/Organizations/Corporations/Militech\|Militech]] taser, camouflaged Medium Armorjack, smoke grenades, a [[Lore/Organizations/Corporations/Kendachi\|Kendachi]] retractable knife & a collapsible [[Lore/Organizations/Corporations/Arasaka\|Arasaka]] Smart Heavy Pistol (3d6)
+- **Outfit:** [[Night City/Organizations/Corporations/Militech\|Militech]] taser, camouflaged Medium Armorjack, smoke grenades, a [[Night City/Organizations/Corporations/Kendachi\|Kendachi]] retractable knife & a collapsible [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] Smart Heavy Pistol (3d6)

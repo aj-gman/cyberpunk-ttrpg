@@ -10,4 +10,4 @@
 - [[Crew/Lazarus\|Lazarus]], [[Rules/CPRED/Roles/Netrunner\|Netrunner]] played by Sasha
 	- [[Crew/OTHER/LAZARUS_PUBLIC\|Find out more about Lazarus.]]
 
-In [[Lore/Locations/Night City\|Night City]], [[Crew/The Crew\|The Crew]] first go to [[Crew/Hex\|Hex]]'s place, a cube hotel-like @Dino's Bar, near the [[South Night City\|South Night City]] border.
+In [[Night City/Locations/Night City\|Night City]], [[Crew/The Crew\|The Crew]] first go to [[Crew/Hex\|Hex]]'s place, a cube hotel-like @Dino's Bar, near the [[South Night City\|South Night City]] border.

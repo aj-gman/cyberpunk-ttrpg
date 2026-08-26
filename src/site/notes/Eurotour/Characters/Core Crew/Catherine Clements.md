@@ -18,4 +18,4 @@
 - **Stats:** high INT, COOL, ATT, EMP; medium REF, TECH, LUCK; low MOVE, BODY
 - **Skills:** Resources 7, Media Skills (Marketing, Social, Education, Human Perception), Languages
 - **Cyberware:** microfacial face implants to make everyone around her more comfortable (drop their guard), tests to persuade her/employ subterfuge face-to-face are done at a penalty (+3 difficulty), memory boosters for languages and law, no social engines as those are "in bad taste"
-- **Outfit:** Gold [[Lore/Organizations/Corporations/Trauma Team\|Trauma Team]] card, image wallet, high-tech cellular phone, expensive perfume, [[Lore/Organizations/Corporations/Arasaka\|Arasaka]] derringer (2d6)
+- **Outfit:** Gold [[Night City/Organizations/Corporations/Trauma Team\|Trauma Team]] card, image wallet, high-tech cellular phone, expensive perfume, [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] derringer (2d6)

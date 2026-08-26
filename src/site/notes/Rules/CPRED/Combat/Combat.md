@@ -55,7 +55,7 @@ Although firearms are the most popular choice, melee weapons occupy a niche slot
 Melee Weapons cut through armor like butter - when attacking with a melee weapon, the SP value of the defender is reduced by half (rounding down). 
 
 Most weapons are scavenged or repurposed from other fields (sports, industry, kitchen utensils). However, some manufacturers exist specifically for combat-oriented melee weapons. These are:
-- [[Lore/Organizations/Corporations/Kendachi\|Kendachi]]
-- [[Lore/Organizations/Corporations/Budget Arms\|Budget Arms]]
-- [[Lore/Organizations/Corporations/Arasaka\|Arasaka]]
-- [[Lore/Organizations/Corporations/Techtronika\|Techtronika]]
+- [[Night City/Organizations/Corporations/Kendachi\|Kendachi]]
+- [[Night City/Organizations/Corporations/Budget Arms\|Budget Arms]]
+- [[Night City/Organizations/Corporations/Arasaka\|Arasaka]]
+- [[Night City/Organizations/Corporations/Techtronika\|Techtronika]]

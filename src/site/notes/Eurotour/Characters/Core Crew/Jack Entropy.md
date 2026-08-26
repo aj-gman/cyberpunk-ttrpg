@@ -20,5 +20,5 @@
 ### Stats
 - **Stats:** high INT, LUCK, ATT, COOL, MOVE; medium REF, TECH, BODY; low EMP
 - **Skills:** Charismatic Leadership 10, Perform 10, Economics 10, Social skills 7-8, medium skills in Drive, Motorcycle, Pilot, Handgun & Judo (4-5)
-- **Cyberware:** Pop-up Heavy Pistols, [[Lore/Organizations/Corporations/Arasaka\|Arasaka]], under concealment skinweave, heart monitor linked to his [[Lore/Organizations/Corporations/Trauma Team\|Trauma Team]] Card, social engine comprised of pheromone & perfume emitters in integumentary, cyberaudio suite, contraceptive implants, adrenaline injectors
-- **Outfit:** [[Lore/Organizations/Corporations/Trauma Team\|Trauma Team]] Platinum Card, Kevlar t-shirt under designer leathers
+- **Cyberware:** Pop-up Heavy Pistols, [[Night City/Organizations/Corporations/Arasaka\|Arasaka]], under concealment skinweave, heart monitor linked to his [[Night City/Organizations/Corporations/Trauma Team\|Trauma Team]] Card, social engine comprised of pheromone & perfume emitters in integumentary, cyberaudio suite, contraceptive implants, adrenaline injectors
+- **Outfit:** [[Night City/Organizations/Corporations/Trauma Team\|Trauma Team]] Platinum Card, Kevlar t-shirt under designer leathers

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#role","#news"],"dg-note-properties":{"tags":["#role","#news"]}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
 ---
 
 ### May 2026
@@ -53,7 +53,7 @@
 
 ### August 2026
 #### 19.08
-- Added most important characters in the [[Fourth Corporate War/Adventures/Big Trouble in Neo-Sov\|Big Trouble in Neo-Sov]] adventure ([[Fourth Corporate War/Characters/Boris Asimov\|Boris Asimov]], [[Fourth Corporate War/Characters/Liudmila\|Liudmila]], [[Fourth Corporate War/Characters/Raphael the Kid\|Raphael the Kid]], [[Fourth Corporate War/Characters/Seraphim\|Seraphim]], [[Lore/Organizations/Boostergangs/Organitskaya\|Organitskaya]]).
+- Added most important characters in the [[Fourth Corporate War/Adventures/Big Trouble in Neo-Sov\|Big Trouble in Neo-Sov]] adventure ([[Fourth Corporate War/Characters/Boris Asimov\|Boris Asimov]], [[Fourth Corporate War/Characters/Liudmila\|Liudmila]], [[Fourth Corporate War/Characters/Raphael the Kid\|Raphael the Kid]], [[Fourth Corporate War/Characters/Seraphim\|Seraphim]], [[Night City/Organizations/Boostergangs/Organitskaya\|Organitskaya]]).
 - Published information regarding [[Fourth Corporate War/Locations/St. Petersburg\|St. Petersburg]].
 - Updated and corrected minor details regarding [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] rules.
 #### 19.08
