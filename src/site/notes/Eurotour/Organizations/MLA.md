@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/organizations/mla/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/organizations/mla/","tags":["#state","#eurotour","#organization"],"dg-note-properties":{"tags":["#state","#eurotour","#organization"]}}
 ---
 
-#state #eurotour 
+#state #eurotour #organization 
 
 By the turn of the millenium, Hong Kong refugees, Welsh and Scottish nationalists joining the IRA and little confidence in the monarchy finally spelled the doom of the King.
 

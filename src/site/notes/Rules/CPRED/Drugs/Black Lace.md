@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/drugs/black-lace/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/black-lace/","tags":["#special"],"dg-note-properties":{"tags":["#special"]}}
 ---
 
 > [[Rules/CPRED/Quality\|Common Price:]] Costly (50-100eb)
@@ -8,8 +8,7 @@ A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that was made as a speed-enha
 
 # [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
 ### **[[Rules/NCOverdrive/Conditions\|Conditions]]**
-#special When user would enter dying, instead roll again for Alienation/Paranoia/Nerve Degeneration, up to d6/2 times per dose.
-- **Positive:** Euphoric, Analgesic, Speed
+- **Positive:** #special When user would enter dying, instead increase Nerve Degeneration, Speed (1)
 - **Negative:** Aggression
 - **Other:** 2-in-6 for Alienation, 2-in-6 for Paranoia, 2-in-6 for Nerve Degeneration
 

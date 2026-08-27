@@ -8,7 +8,7 @@ A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that comes in little plastic 
 
 # [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
 ### **[[Rules/NCOverdrive/Conditions\|Conditions]]**
-- **Positive:** Concentrator, Stimulant, Speed
+- **Positive:** Concentrator (1), Stimulant (1), Speed (1)
 - **Negative:** Paranoia
 - **Other:** 1-in-6 for Anxiety, 1-in-6 for Paranoia
 

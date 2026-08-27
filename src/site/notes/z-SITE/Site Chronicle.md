@@ -81,12 +81,8 @@
 ## TO DO
 - [ ] **[[z-SITE/CPRED Sheet\|CPRED Sheet]] needs:**
 	- [ ] Page for Notes, Backstory, Lore etc.
-	- [x] Functionality for **REMOVING**:
-		- [x] Custom Skills
-	- [ ] Links to the wiki when inserting: (with the idea being that you can find out the rules for them quickly without having them on the sheet in full)
-		- [ ] Role Abilities
-		- [ ] Skills
-		- [ ] Stats
-- [ ] Recalibrate mobile interface for the site (very buggy atm)
+	- [ ] Links to the wiki when inserting: role abilities, skills, stats
+- [x] Recalibrate mobile interface for the site (very buggy atm)
 - [ ] **[[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] needs:**
 	- [x] Rewriting of description placeholder text (bug fixes)
+- [ ] Update [[Rules/CPRED/Drugs/Omega Blockers\|Omega Blockers]], [[Rules/CPRED/Drugs/Weed\|Weed]], [[Rules/CPRED/Drugs/Regen 21\|Regen 21]] & [[Rules/CPRED/Drugs/Speedheal\|Speedheal]] with rules for [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]

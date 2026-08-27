@@ -12,9 +12,9 @@ Vaporware is popular with [[Rules/CPRED/Roles/Netrunner\|Netrunners]] as **it in
 
 # [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
 ### **[[Rules/NCOverdrive/Conditions\|Conditions]]**
-- **Positive:** Focused, Sedated
-- **Negative:** Alienation, Egotism
-- **Other:** 1-in-6 for Hunger, Flashbacks
+- **Positive:** Focused (2), Sedated (1)
+- **Negative:** Alienation (2-in-6), Egotism
+- **Other:** Flashbacks
 
 # [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]]
 ### Main Effect

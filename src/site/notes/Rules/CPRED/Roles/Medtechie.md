@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/roles/medtechie/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/medtechie/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
 ---
 
 #role

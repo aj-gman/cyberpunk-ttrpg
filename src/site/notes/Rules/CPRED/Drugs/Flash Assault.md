@@ -10,8 +10,8 @@ Users of Flash assault usually come out with a major hangover, and habitual user
 
 # [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
 ### **[[Rules/NCOverdrive/Conditions\|Conditions]]**
-- **Positive:** Accelerator, Speed, Stimulant
-- **Negative:** Disorientation, Paranoia
+- **Positive:** Accelerator (3), Speed (2), Stimulant (1)
+- **Negative:** Disorientation (2), Paranoia (2)
 - **Other:** 3-in-6 for Hangover, 3-in-6 for Flashbacks
 
 

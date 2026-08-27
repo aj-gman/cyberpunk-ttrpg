@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/night-city/organizations/boostergangs/boostergangs-of-night-city/","dg-note-properties":{}}
 ---
 
-### [[Night City/Locations/Districts (2020)/City & Corporate Center\|City & Corporate Center]]
+### [[Night City/Locations/Districts (2020)/City Center\|City Center]]
 - [[Night City/Organizations/Boostergangs/Street Queens\|Street Queens]] in Civic Center
 - [[Night City/Organizations/Boostergangs/Sun On Yee\|Sun On Yee]] in Corporate Center
 - [[Night City/Organizations/Boostergangs/The Enhanced\|The Enhanced]] in Corporate Center
@@ -21,6 +21,7 @@
 - [[Night City/Organizations/Boostergangs/Piranhas\|Piranhas]] in Upper Eastside
 - [[Night City/Organizations/Boostergangs/Wild Things\|Wild Things]] in Upper Eastside and Studio City
 - [[Night City/Organizations/Boostergangs/Maelstrom\|Maelstrom]] in Studio City
+- [[Night City/Organizations/Boostergangs/El Norte Cartel\|El Norte Cartel]] in Charter Hill
 ### [[Night City/Locations/Districts (2020)/University District\|University District]]
 - [[Night City/Organizations/Boostergangs/The Pack\|The Pack]] in Lake Park
 - [[Night City/Organizations/Boostergangs/Voodoo Boys\|Voodoo Boys]] in University District
@@ -36,3 +37,6 @@
 - [[Night City/Organizations/Boostergangs/Piranhas\|Piranhas]]
 - [[Night City/Organizations/Boostergangs/Red Chrome Legion\|Red Chrome Legion]]
 - D6 other gangs
+
+### [[Heywood\|Heywood]]
+- [[Night City/Organizations/Boostergangs/El Norte Cartel\|El Norte Cartel]]
