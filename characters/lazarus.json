@@ -1,0 +1,185 @@
+{
+  "_version": "1.0.1.1",
+  "_game": "Neon City Overdrive",
+  "nickname": "Lazarus",
+  "appearance": "Caucasian, brown hair, brown eyes, pale skin, skinny with cheekbones protruding in an uncomfortable manner, stronger than he looks.",
+  "personality": "Emanates an air of calmness, talks slowly, gets rarely excited except around tech and old friends or close people.",
+  "money": 10000,
+  "eddies": 10000,
+  "trademarks": [
+    {
+      "name": "Netrunner",
+      "triggers": [
+        "Hacking, Notice, Cyber combat, Computers, Security systems, Defence programs, Repair, Sense motives, AI systems, controlling drones"
+      ],
+      "edges": [
+        "Quickhacks, detect lifeforms through walls."
+      ]
+    },
+    {
+      "name": "Organised crime",
+      "triggers": [
+        "Streetwise, proficient in street warfare, close combat, sneaking, chemist, track, smooth talker, resistant pain."
+      ],
+      "edges": [
+        "Gunfu, street lang, SovOil connections, tactics"
+      ]
+    },
+    {
+      "name": "Corpo ",
+      "triggers": [
+        "Corporate contacts,Bureaucracy, Gossip, Computing,",
+        "Forgeries, Sense motives, Detail oriented, easy to blend in, smooth talker."
+      ],
+      "edges": []
+    },
+    {
+      "name": "JOYRIDER",
+      "triggers": [
+        "Hover bikes, Brawling,Hotwire, Machine interface, Ride like a",
+        "lunatic, Underground street racing."
+      ],
+      "edges": [
+        "Vehicle combat, car modifications, dirty fighting. "
+      ]
+    },
+    {
+      "name": "Archivist",
+      "triggers": [
+        "Gathers information and stores it, information gremlin, tracker of changes."
+      ],
+      "edges": []
+    }
+  ],
+  "gear": [
+    {
+      "type": "basic",
+      "title": "Medscanner",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "type": "special",
+      "title": "BioDyne Mk.2 Cyberdeck",
+      "tags": "",
+      "notes": "Allows to perform quickhacks on targets and devices while scanning. "
+    }
+  ],
+  "cyberware": [
+    {
+      "title": "Kiroshi MultiOptics",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "title": "Netwatch Netdriver MK 1 OS",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "title": "Monowire",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "title": "Cyberears",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "title": "Epimorphic Skeleton",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "title": "Evasion chip",
+      "tags": "",
+      "notes": ""
+    }
+  ],
+  "hitsCount": 3,
+  "hits": [
+    false,
+    false,
+    false
+  ],
+  "trackers": {
+    "cyberpsy": 2,
+    "humanity": 8,
+    "nerve": 0
+  },
+  "conditions": {
+    "angry": false,
+    "dazed": false,
+    "exhausted": false,
+    "scared": false,
+    "restrained": false,
+    "weakened": false,
+    "custom": [
+      {
+        "checked": false,
+        "text": ""
+      },
+      {
+        "checked": false,
+        "text": ""
+      }
+    ]
+  },
+  "traumas": [
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    }
+  ],
+  "flaws": [
+    {
+      "marked": true,
+      "text": "Mob connection"
+    },
+    {
+      "marked": true,
+      "text": "Injury"
+    }
+  ],
+  "flaw1": "Mob connection",
+  "flaw2": "Injury",
+  "marked1": true,
+  "marked2": true,
+  "stuntPoints": 3,
+  "stash": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "drive": {
+    "text": "Hacktivist interested in cracking systems and exposing bad guys. Works alone.\nCares a lot about his aunt and wants to save her.\nWants to get out of Organitskaya debt and hence from SovOil corporate work.\n",
+    "pips": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "experiencePoints": 0
+}
