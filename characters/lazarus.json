@@ -4,8 +4,8 @@
   "nickname": "Lazarus",
   "appearance": "Caucasian, brown hair, brown eyes, pale skin, skinny with cheekbones protruding in an uncomfortable manner, stronger than he looks.",
   "personality": "Emanates an air of calmness, talks slowly, gets rarely excited except around tech and old friends or close people.",
-  "money": 10000,
-  "eddies": 10000,
+  "money": 1240,
+  "eddies": 1240,
   "trademarks": [
     {
       "name": "Netrunner",
@@ -99,12 +99,12 @@
   ],
   "hitsCount": 3,
   "hits": [
-    false,
+    true,
     false,
     false
   ],
   "trackers": {
-    "cyberpsy": 2,
+    "cyberpsy": 1,
     "humanity": 8,
     "nerve": 0
   },
@@ -117,12 +117,12 @@
     "weakened": false,
     "custom": [
       {
-        "checked": false,
-        "text": ""
+        "checked": true,
+        "text": "Satiated"
       },
       {
-        "checked": false,
-        "text": ""
+        "checked": true,
+        "text": "Sleepy"
       }
     ]
   },
@@ -158,7 +158,7 @@
   "flaw2": "Injury",
   "marked1": true,
   "marked2": true,
-  "stuntPoints": 3,
+  "stuntPoints": 2,
   "stash": [
     false,
     false,
