@@ -1,0 +1,305 @@
+{
+  "_version": "1.0.1.1",
+  "_game": "Neon City Overdrive",
+  "nickname": "Hex",
+  "appearance": "Tall muscular, orange pink mohawk",
+  "personality": "",
+  "money": 7115,
+  "eddies": 7115,
+  "trademarks": [
+    {
+      "name": "Prodigal Son",
+      "triggers": [
+        "Educated, Corpo Politics, Militech Connections, institutional wealth, "
+      ],
+      "edges": [
+        "Education"
+      ]
+    },
+    {
+      "name": "Combat Tech",
+      "triggers": [
+        "Jury rigging, Ambush Tactics, Explosives, Weapons Tech, Drone use, Engineer, Vehicle tech, aircraft tech, Sea vehicle tech, communications tech, Drone tech, drone flight, electronic security, Assault Rifle"
+      ],
+      "edges": [
+        "Disarm Explosives",
+        "Weapons tech",
+        "Communications tech"
+      ]
+    },
+    {
+      "name": "Close Quatres Combatant ",
+      "triggers": [
+        "Handgun Use, Gun Fu, Hand to Hand, Melee Weapons, Improvised Weapons, Quick draw"
+      ],
+      "edges": [
+        "Gun Fu",
+        "Headshot ",
+        "Grapple"
+      ]
+    },
+    {
+      "name": "On The Run",
+      "triggers": [
+        "Perception, Sneak, Lock picking, Concealed Weapons, Human Perception, blending in,"
+      ],
+      "edges": [
+        "Perception",
+        "Lock Picking"
+      ]
+    }
+  ],
+  "gear": [
+    {
+      "type": "special",
+      "title": "Malorian SMart VHP",
+      "tags": "Offensive, Ranged, smart",
+      "notes": "Armor Piercing, Smart"
+    },
+    {
+      "type": "basic",
+      "title": "Smoke Grenade",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "type": "special",
+      "title": "Hand Cannon",
+      "tags": "Offensive, Ranged, TECH",
+      "notes": "Armor Piercing, Rail cannon, can shoot through cover when charged, Silenced "
+    },
+    {
+      "type": "basic",
+      "title": "Flash Grenade",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "type": "basic",
+      "title": "Tech bag",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "type": "special",
+      "title": "Sandevistan",
+      "tags": "Cyberware",
+      "notes": "Speed ware, Harder to hit with Semi automatic weapons increases reflex"
+    },
+    {
+      "type": "basic",
+      "title": "Anti Smog mask",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "type": "special",
+      "title": "Tool Hand",
+      "tags": "Cyberware",
+      "notes": ""
+    },
+    {
+      "type": "basic",
+      "title": "Agent",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "type": "special",
+      "title": "Monowire",
+      "tags": "offensive, ranged, melee",
+      "notes": "Can be used at close range and melee, Causes Trauma easily "
+    },
+    {
+      "type": "basic",
+      "title": "Computer",
+      "tags": "",
+      "notes": ""
+    },
+    {
+      "type": "special",
+      "title": "Subdermal Armor",
+      "tags": "deffensive",
+      "notes": "Up to Heavy pistols. Blocks VHP due to response matrix"
+    },
+    {
+      "type": "special",
+      "title": "Neural port",
+      "tags": "Cyberware",
+      "notes": ""
+    },
+    {
+      "type": "special",
+      "title": "Pain Editor",
+      "tags": "Defensive cyberware ",
+      "notes": "Can ignore Trauma and increses cyberpsychosis"
+    },
+    {
+      "type": "special",
+      "title": "Tactile boost",
+      "tags": "",
+      "notes": "sense movement within 20m"
+    },
+    {
+      "type": "special",
+      "title": "Trauma response nanomatrix",
+      "tags": "deffensive",
+      "notes": "Boosts subdurmal armor to Very heavy pistol block"
+    },
+    {
+      "type": "special",
+      "title": "Cyberoptics",
+      "tags": "",
+      "notes": "Night vision, thermal vision, Anti dazzle, EMP hardened "
+    },
+    {
+      "type": "special",
+      "title": "Dartgun Eye",
+      "tags": "offensive, ranged",
+      "notes": "Shoots a metal dart"
+    },
+    {
+      "type": "special",
+      "title": "Heavy weapons chip",
+      "tags": "Offensive",
+      "notes": "Allows better use of heavy weapons"
+    },
+    {
+      "type": "special",
+      "title": "Demolitions chip",
+      "tags": "Offensive",
+      "notes": "Allows better use of Explosives and disarming "
+    },
+    {
+      "type": "special",
+      "title": "Grafted Muscle and Bone lace",
+      "tags": "",
+      "notes": "Gives me  very high strength, lift a car with effort"
+    },
+    {
+      "type": "special",
+      "title": "MonoWazikashi",
+      "tags": "Melee weapon, Monophilamant ",
+      "notes": ""
+    },
+    {
+      "type": "special",
+      "title": "Militech Radio gear",
+      "tags": "High end",
+      "notes": "Militech high quality communicator and scanner"
+    }
+  ],
+  "cyberware": [
+    {
+      "title": "Cyberhand",
+      "tags": "Cyberhand",
+      "notes": "MonoWire, Tool Hand, Tactile Boost"
+    },
+    {
+      "title": "CyberEyes",
+      "tags": "CyberEyes",
+      "notes": "Thermal, Night, vision, Anti Dazzel, Dart gun, EMP hardened "
+    },
+    {
+      "title": "CyberBody",
+      "tags": "Cyberbody",
+      "notes": "Pain Editor, Subdurmal armor, Trauma response matrix, Muscle and Bone lace, Sandevistan"
+    },
+    {
+      "title": "Neuroport",
+      "tags": "Cybersystems",
+      "notes": "interface plugs, Heavy weapons chip, Demolitions chip"
+    },
+    {
+      "title": "Moscow Language chip",
+      "tags": "",
+      "notes": "Moscow forces you to say comrade when addressing people"
+    }
+  ],
+  "hitsCount": 4,
+  "hits": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "trackers": {
+    "cyberpsy": 9,
+    "humanity": 6,
+    "nerve": 0
+  },
+  "conditions": {
+    "angry": false,
+    "dazed": false,
+    "exhausted": false,
+    "scared": false,
+    "restrained": false,
+    "weakened": false,
+    "custom": [
+      {
+        "checked": false,
+        "text": ""
+      },
+      {
+        "checked": false,
+        "text": ""
+      }
+    ]
+  },
+  "traumas": [
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    }
+  ],
+  "flaws": [
+    {
+      "marked": false,
+      "text": "Exile"
+    },
+    {
+      "marked": false,
+      "text": "Arrogant"
+    }
+  ],
+  "flaw1": "Exile",
+  "flaw2": "Arrogant",
+  "marked1": false,
+  "marked2": false,
+  "stuntPoints": 2,
+  "stash": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "drive": {
+    "text": "A desire to be free.",
+    "pips": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "experiencePoints": 0
+}
