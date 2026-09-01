@@ -4,8 +4,8 @@
   "nickname": "Hex",
   "appearance": "Tall muscular, orange pink mohawk",
   "personality": "",
-  "money": 7115,
-  "eddies": 7115,
+  "money": 12260,
+  "eddies": 12260,
   "trademarks": [
     {
       "name": "Prodigal Son",
@@ -218,13 +218,13 @@
   ],
   "hitsCount": 4,
   "hits": [
-    false,
+    true,
     false,
     false,
     false
   ],
   "trackers": {
-    "cyberpsy": 9,
+    "cyberpsy": 6,
     "humanity": 6,
     "nerve": 0
   },
@@ -238,30 +238,38 @@
     "custom": [
       {
         "checked": false,
-        "text": ""
+        "text": "satieated "
       },
       {
         "checked": false,
-        "text": ""
+        "text": "sleepy"
+      },
+      {
+        "checked": false,
+        "text": "euphoreic "
+      },
+      {
+        "checked": false,
+        "text": "delusions of invuln"
+      },
+      {
+        "checked": false,
+        "text": "Concentrator 2"
+      },
+      {
+        "checked": false,
+        "text": "speed 2"
+      },
+      {
+        "checked": false,
+        "text": "stimulant 2"
       }
     ]
   },
   "traumas": [
     {
       "marked": false,
-      "text": ""
-    },
-    {
-      "marked": false,
-      "text": ""
-    },
-    {
-      "marked": false,
-      "text": ""
-    },
-    {
-      "marked": false,
-      "text": ""
+      "text": "Deep lac on the back of neck"
     }
   ],
   "flaws": [
@@ -272,6 +280,14 @@
     {
       "marked": false,
       "text": "Arrogant"
+    },
+    {
+      "marked": false,
+      "text": "Paranoid"
+    },
+    {
+      "marked": false,
+      "text": "black outs"
     }
   ],
   "flaw1": "Exile",
