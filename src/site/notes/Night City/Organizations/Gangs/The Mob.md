@@ -1,0 +1,7 @@
+---
+{"dg-publish":true,"permalink":"/night-city/organizations/gangs/the-mob/","tags":["#boostergang"],"dg-note-properties":{"tags":["#boostergang"]}}
+---
+
+#boostergang [[Night City/Locations/Night City\|Night City]]
+- **Leader:** Skiv Family (the same ones who are rumoured to have murdered [[Night City/Characters/Richard Night\|Richard Night]])
+- **Other Families:** Vilshenko Family, a traitor to the [[Night City/Organizations/Gangs/Organitskaya\|Organitskaya]].
