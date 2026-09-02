@@ -305,9 +305,9 @@
     return (hueDistance * 0.55) + (Math.abs(first[1] - second[1]) * 0.1) + (Math.abs(first[2] - second[2]) * 0.35);
   }
 
-  const COLOR_MATCH_THRESHOLD = 0.34;
-  const MAX_HUE_DISTANCE = 34;
-  const MAX_LUMINOSITY_DISTANCE = 0.3;
+  const COLOR_MATCH_THRESHOLD = 0.2;
+  const MAX_HUE_DISTANCE = 20;
+  const MAX_LUMINOSITY_DISTANCE = 0.18;
   const BASE_MAP_COLOR_THRESHOLD = 12;
 
   function getTileCanvas(folder, row, col, onReady) {
