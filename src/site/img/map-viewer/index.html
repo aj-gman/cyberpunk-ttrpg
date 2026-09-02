@@ -310,6 +310,10 @@
   const MAX_HUE_DISTANCE = 20;
   const MAX_SATURATION_DISTANCE = 0.3;
   const MAX_DARKENING_DISTANCE = 0.45;
+  const INFLUENCE_COLOR_MATCH_THRESHOLD = 0.3;
+  const INFLUENCE_MAX_HUE_DISTANCE = 20;
+  const INFLUENCE_MAX_SATURATION_DISTANCE = 0.55;
+  const INFLUENCE_MAX_LUMINOSITY_DISTANCE = 0.5;
   const BASE_MAP_COLOR_THRESHOLD = 12;
 
   function getTileCanvas(folder, row, col, onReady) {
@@ -397,22 +401,28 @@
       const pixelHsl = rgbToHsl(rgb);
       let best = null;
       let bestDistance = Infinity;
+      const isInfluence = currentKey === 'influence';
       labels.items.forEach((item) => {
         const itemHsl = rgbToHsl(hexToRgb(item.color));
         const hueDifference = Math.abs(pixelHsl[0] - itemHsl[0]);
         const hueDistance = Math.min(hueDifference, 360 - hueDifference);
-        const hueMatches = hueDistance <= MAX_HUE_DISTANCE;
-        const saturationMatches = Math.abs(pixelHsl[1] - itemHsl[1]) <= MAX_SATURATION_DISTANCE;
+        const hueMatches = hueDistance <= (isInfluence ? INFLUENCE_MAX_HUE_DISTANCE : MAX_HUE_DISTANCE);
+        const saturationMatches = Math.abs(pixelHsl[1] - itemHsl[1]) <= (isInfluence ? INFLUENCE_MAX_SATURATION_DISTANCE : MAX_SATURATION_DISTANCE);
         const darkeningDistance = itemHsl[2] - pixelHsl[2];
-        const luminosityMatches = darkeningDistance >= 0 && darkeningDistance <= MAX_DARKENING_DISTANCE;
-        const distance = colorDistance(pixelHsl, itemHsl);
+        const luminosityMatches = isInfluence
+          ? Math.abs(darkeningDistance) <= INFLUENCE_MAX_LUMINOSITY_DISTANCE
+          : darkeningDistance >= 0 && darkeningDistance <= MAX_DARKENING_DISTANCE;
+        const distance = isInfluence
+          ? (hueDistance / 180) * 0.8 + Math.abs(pixelHsl[1] - itemHsl[1]) * 0.1 + Math.abs(darkeningDistance) * 0.1
+          : colorDistance(pixelHsl, itemHsl);
         if (hueMatches && saturationMatches && luminosityMatches && distance < bestDistance) {
           bestDistance = distance;
           best = item;
         }
       });
 
-      if (best && bestDistance <= COLOR_MATCH_THRESHOLD) {
+      const matchThreshold = isInfluence ? INFLUENCE_COLOR_MATCH_THRESHOLD : COLOR_MATCH_THRESHOLD;
+      if (best && bestDistance <= matchThreshold) {
         tooltipEl.textContent = best.label;
         tooltipEl.style.left = e.originalEvent.clientX + 'px';
         tooltipEl.style.top = e.originalEvent.clientY + 'px';
