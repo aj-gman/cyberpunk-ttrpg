@@ -1,11 +1,16 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#news","#role"],"dg-note-properties":{"tags":["#news","#role"]}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
 ---
 
+### September 2026
+#### 02.09
+- Updated [The Map](https://gman-cyberpunk.vercel.app/img/map-viewer/) with full label-on-hover functionality for the Socioeconomic and Influence panels. These display the social strata of [[Night City/Locations/Night City\|Night City]]'s inhabitants and the [[Night City/Organizations/Gangs/Boostergangs of Night City\|gang]] or [[Fourth Corporate War\|corporation]] that is most influent in the region.
+	- The map should correctly identify all gangs by color upon hovering and should be generally bug-free.
+- Fixed Cyberpsychosis not scaling past 10.
 ### August 2026
 #### 19.08
-- Added most important characters in the [[Fourth Corporate War/Adventures/Big Trouble in Neo-Sov\|Big Trouble in Neo-Sov]] adventure ([[Fourth Corporate War/Characters/Boris Asimov\|Boris Asimov]], [[Fourth Corporate War/Characters/Liudmila\|Liudmila]], [[Fourth Corporate War/Characters/Raphael the Kid\|Raphael the Kid]], [[Fourth Corporate War/Characters/Seraphim\|Seraphim]], [[Night City/Organizations/Boostergangs/Organitskaya\|Organitskaya]]).
-- Published information regarding [[Fourth Corporate War/Locations/St. Petersburg\|St. Petersburg]].
+- Added most important characters in the [[Eurotour/Adventures/7 Big Trouble in Neo-Sov\|7 Big Trouble in Neo-Sov]] adventure ([[Eurotour/Characters/Boris Asimov\|Boris Asimov]], [[Eurotour/Characters/Liudmila\|Liudmila]], [[Eurotour/Characters/Raphael the Kid\|Raphael the Kid]], [[Eurotour/Characters/Seraphim\|Seraphim]], [[Night City/Organizations/Gangs/Organitskaya\|Organitskaya]]).
+- Published information regarding [[Eurotour/Locations/St. Petersburg\|St. Petersburg]].
 - Updated and corrected minor details regarding [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] rules.
 #### 19.08
 - Brought [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.1.0.0. 
@@ -25,7 +30,7 @@
 	- Socioeconomic Class view updated to match.
 	- [ ] **Political Map** will also include Threat Levels (or coloring in that direction)
 		- [ ] +++ sway/control of [[Night City/Organizations/Corporations/Militech\|Militech]] and [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] using anything from subsidiaries to gangs to minds;
-	- [ ] **Influence Map** will need retooling, as there are [[Night City/Organizations/Boostergangs/Boostergangs of Night City\|16 boostergangs]] in the mix (and I'd rather not color each one a different shade of red); we'll see if they actually have some colors on their logos I can use
+	- [ ] **Influence Map** will need retooling, as there are [[Night City/Organizations/Gangs/Boostergangs of Night City\|16 boostergangs]] in the mix (and I'd rather not color each one a different shade of red); we'll see if they actually have some colors on their logos I can use
 		- [ ] +++ Core Ideologies: **Corpo Realism** (its not the best, but it's the best we got), **Corpo Idealism** (you CAN make it big if you try hard enough), **Anti-Corpo** (burn it all to the ground), **Parallelism** (inspired by [Parallel Polis](https://en.wikipedia.org/wiki/Parallel_Polis), with communities evolving without the need of corporations to supply them with goods)
 ### June 2026
 #### *03.06*

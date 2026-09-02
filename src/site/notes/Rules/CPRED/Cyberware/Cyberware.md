@@ -9,7 +9,7 @@
 Before resolving the check, the player adds **+[[Rules/CPRED/Quality\|Quality]]**[^8] to his [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis tracker]], (mark down under Addiction category in Character Sheet).
 If the [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis final value]] is higher than the player's current [[Rules/CPRED/Cyberware/Humanity\|Humanity]] (=WILL+EMP), they experience [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|Cyberpsychosis Symptoms]].
 
-<mark style="background: #fee801;">WARNING!</mark> This overwrites standard Cyberware rules, since it modifies how [[Rules/CPRED/Cyberware/Humanity\|Humanity]] is calculated. Apart from [[Rules/CPRED/Cyberware/Cyberware#Exotic Cyberware\|specific edge cases]][^24], **most Cyberware only interacts with [[Rules/CPRED/Cyberware/Humanity\|Humanity]] upon usage, not on installation.** 
+<mark style="background: #fee801;">WARNING!</mark> This overwrites **standard Cyberware rules**, since it modifies how [[Rules/CPRED/Cyberware/Humanity\|Humanity]] is calculated. Apart from [[Rules/CPRED/Cyberware/Cyberware#Exotic Cyberware\|specific edge cases]][^24], **most Cyberware only interacts with [[Rules/CPRED/Cyberware/Humanity\|Humanity]] upon usage, not on installation.** 
 
 > *For examples on every Cyberware option, see [[Rules/CPRED/Cyberware/Cyberware Classes\|Cyberware Classes]].*
 
@@ -36,7 +36,7 @@ Cyberware in any Cyberpunk TTRPG is the equivalent to a Magic system in a fantas
 
 Such is the case with Cyberware, which creates **the Infinite List Problem**, where players can access a truly astounding variety of Cyberware, but which essentially boils down to only a few very powerful/optimal slots, with others like fashion or style falling short. By pulling from Sid Meier, we learn that players will optimize the fun out of a game. So, you don't need *cool* Cyberware (a finger-lighter) to be a Humanity-draining piece of tech you have to install. Rather, you just have that on you.
 
-To solve **the Infinite List Problem** without building a complicated and unrewarding system, we need to find an elegant and practical solution where players feel rewarded for using Cyberware[^1] to the point they themselves become as addicted and dependent on the tools they use as their characters in the narrative.
+To solve **the Infinite List Problem** without building a complicated and unrewarding system, we need to find an elegant and practical solution where players feel rewarded for using **Cyberware**[^1] to the point they themselves become as addicted and dependent on the tools they use as their characters in the narrative.
 
 Our solution is twofold: 
 - **uncoupling the mechanics from the balancing;** our hope is for the end result to translate into more "busted" Cyberware, which can then lead to variety of gameplay and strategy, but also creativity;

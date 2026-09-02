@@ -4,7 +4,7 @@
 
 A type of [[Rules/CPRED/Drugs/Drugs\|street drug]]. Probably the single-easiest drug to O.D. on, SpeedBalls are a manufactured combination of a SynthCoke and Di-Oxy-Heroin analog. Cheap to get and probably the hottest crank job you can inject on planet Earth, Speedballs wind you up so high that nothing will wind you down short of forced unconciousness or death.
 
-**Produced by [[Night City/Organizations/Boostergangs/Piranhas\|Piranhas]], [[Night City/Organizations/Boostergangs/Weng Fang Tong\|Weng Fang Tong]]**
+**Produced by [[Night City/Organizations/Gangs/Piranhas\|Piranhas]], [[Night City/Organizations/Gangs/Weng Fang Tong\|Weng Fang Tong]]**
 
 # [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
 ### **[[Rules/NCOverdrive/Conditions\|Conditions]]**

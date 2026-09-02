@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/drugs/black-lace/","tags":["#special"],"dg-note-properties":{"tags":["#special"]}}
+{"dg-publish":true,"permalink":"/rules/cpred/drugs/black-lace/","dg-note-properties":{}}
 ---
 
 > [[Rules/CPRED/Quality\|Common Price:]] Costly (50-100eb)
