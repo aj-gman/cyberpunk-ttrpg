@@ -107,116 +107,25 @@
     box-shadow: 0 0 10px var(--neon-cyan);
   }
 
-  /* ── Legend panel ─────────────────────────────────────────────── */
-  #legend {
-    position: absolute;
-    left: 12px;
-    bottom: 12px;
-    z-index: 1000;
-    width: 320px;
-    min-width: 220px;
-    min-height: 60px;
-    max-width: 90vw;
-    max-height: 80vh;
-    background: var(--panel-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    color: var(--text-color);
-    font-family: 'Lexend', monospace;
-    resize: both;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.6);
-  }
-  #legend.minimized {
-    resize: none;
-    height: auto !important;
-    width: auto !important;
-    min-width: 0;
-  }
-  #legendHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(255, 45, 120, 0.12);
-    border-bottom: 1px solid var(--neon-pink);
-    color: var(--neon-pink);
-    padding: 8px 10px;
-    cursor: grab;
-    user-select: none;
-    flex: 0 0 auto;
-  }
-  #legendHeader:active {
-    cursor: grabbing;
-  }
-  #legendTitle {
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 8px var(--neon-pink);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  #legendMinBtn {
-    background: transparent;
-    border: 1px solid var(--neon-pink);
-    color: var(--neon-pink);
-    width: 22px;
-    height: 22px;
-    line-height: 1;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 2px;
-    flex: 0 0 auto;
-    margin-left: 8px;
-    font-family: 'Lexend', monospace;
-  }
-  #legendMinBtn:hover {
-    background: var(--neon-pink);
-    color: #000;
-    box-shadow: 0 0 10px var(--neon-pink);
-  }
-#legendBody {
-    padding: 12px 14px;
-    overflow: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(26px, 1fr));
-    gap: 8px;
-}
-.legend-item {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-.legend-swatch {
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 2px;
-}
-.legend-tooltip {
-    position: absolute;
-    bottom: calc(100% + 6px);
-    left: 50%;
-    transform: translateX(-50%);
+  #mapTooltip {
+    position: fixed;
+    z-index: 2000;
     background: #000;
     color: var(--neon-cyan);
     border: 1px solid var(--neon-cyan);
-    padding: 3px 8px;
-    font-size: 11px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-family: 'Lexend', monospace;
     white-space: nowrap;
     border-radius: 3px;
-    opacity: 0;
     pointer-events: none;
-    transition: opacity 0.15s ease;
-    z-index: 10;
-}
-.legend-item:hover .legend-tooltip {
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    transform: translate(-50%, -130%);
+  }
+  #mapTooltip.visible {
     opacity: 1;
-}
+  }
 </style>
 </head>
 <body>
@@ -224,15 +133,8 @@
 <div id="map"></div>
 <div id="hud">Night City // scroll or pinch to zoom</div>
 <div id="presetSwitcher"></div>
+<div id="mapTooltip"></div>
 <button id="resetBtn" onclick="resetView()">Reset View</button>
-
-<div id="legend">
-  <div id="legendHeader">
-    <span id="legendTitle">Legend</span>
-    <button id="legendMinBtn" title="Minimize">–</button>
-  </div>
-  <div id="legendBody"></div>
-</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -257,10 +159,10 @@
     { key: 'influence',  label: 'Influence',  folder: 'tiles-infl' }
   ];
 
-  // ── Legends ─────────────────────────────────────────────────────
-  // One legend per preset key. Colors below are PLACEHOLDERS eyeballed
+  // ── Hover labels ────────────────────────────────────────────────
+  // One label set per preset key. Colors below are PLACEHOLDERS eyeballed
   // from a reference screenshot — replace with real hex values here.
-  const LEGENDS = {
+  const MAP_LABELS = {
     political: { title: 'Political', items: [] },
     socioeconomic: {
       title: 'Socioeconomic Class',
@@ -297,32 +199,6 @@
        ] 
      }
    };
-
-  function renderLegend(key) {
-    const legend = LEGENDS[key];
-    const titleEl = document.getElementById('legendTitle');
-    const bodyEl = document.getElementById('legendBody');
-    if (!legend) {
-      titleEl.textContent = 'Legend';
-      bodyEl.innerHTML = '';
-      return;
-    }
-    titleEl.textContent = legend.title;
-    bodyEl.innerHTML = '';
-    legend.items.forEach((item) => {
-      const row = document.createElement('div');
-      row.className = 'legend-item';
-      const swatch = document.createElement('span');
-      swatch.className = 'legend-swatch';
-      swatch.style.background = item.color;
-      const tooltip = document.createElement('span');
-      tooltip.className = 'legend-tooltip';
-      tooltip.textContent = item.label;
-      row.appendChild(swatch);
-      row.appendChild(tooltip);
-      bodyEl.appendChild(row);
-    });
-  }
 
   // ── Map setup (CRS.Simple = plain pixel-space, no geo projection) ──
   const map = L.map('map', {
@@ -370,7 +246,6 @@
     document.querySelectorAll('.preset-btn').forEach((btn) => {
       btn.classList.toggle('active', btn.dataset.key === key);
     });
-    renderLegend(key);
   }
 
   // ── Preset switcher UI ─────────────────────────────────────────────
@@ -395,78 +270,107 @@
 
   resetView();
   window.addEventListener('load', resetView);
-  renderLegend(currentKey);
 
-  // ── Legend: draggable ────────────────────────────────────────────
-  const legendEl = document.getElementById('legend');
-  const legendHeader = document.getElementById('legendHeader');
-  const legendMinBtn = document.getElementById('legendMinBtn');
-  let dragging = false;
-  let dragOffsetX = 0;
-  let dragOffsetY = 0;
+  // ── Hover-to-identify: sample the tile pixel under the cursor ───
+  const tooltipEl = document.getElementById('mapTooltip');
+  const tileCanvasCache = {};
 
-  legendHeader.addEventListener('mousedown', (e) => {
-    if (e.target === legendMinBtn) return;
-    dragging = true;
-    const rect = legendEl.getBoundingClientRect();
-    dragOffsetX = e.clientX - rect.left;
-    dragOffsetY = e.clientY - rect.top;
-    // Switch from bottom/left auto-position to explicit top/left so
-    // dragging can freely reposition it.
-    legendEl.style.left = rect.left + 'px';
-    legendEl.style.top = rect.top + 'px';
-    legendEl.style.bottom = 'auto';
-    e.preventDefault();
+  function hexToRgb(hex) {
+    const value = hex.replace('#', '');
+    return [parseInt(value.substring(0, 2), 16), parseInt(value.substring(2, 4), 16), parseInt(value.substring(4, 6), 16)];
+  }
+
+  function colorDistance(first, second) {
+    return Math.sqrt((first[0] - second[0]) ** 2 + (first[1] - second[1]) ** 2 + (first[2] - second[2]) ** 2);
+  }
+
+  const COLOR_MATCH_THRESHOLD = 24;
+
+  function getTileCanvas(folder, row, col, onReady) {
+    const cacheKey = `${folder}/${row}${col}`;
+    const cached = tileCanvasCache[cacheKey];
+    if (cached && cached.ctx) {
+      onReady(cached.ctx);
+      return;
+    }
+    if (cached === 'loading') return;
+    tileCanvasCache[cacheKey] = 'loading';
+    const image = new Image();
+    image.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = image.naturalWidth;
+      canvas.height = image.naturalHeight;
+      const context = canvas.getContext('2d', { willReadFrequently: true });
+      context.drawImage(image, 0, 0);
+      tileCanvasCache[cacheKey] = { ctx: context };
+      onReady(context);
+    };
+    image.onerror = () => { tileCanvasCache[cacheKey] = null; };
+    image.src = `${folder}/${row}${col}.png`;
+  }
+
+  map.on('mousemove', (e) => {
+    const preset = TILE_SETS.find((entry) => entry.key === currentKey);
+    const labels = MAP_LABELS[currentKey];
+    if (!preset || !labels || !labels.items.length) {
+      tooltipEl.classList.remove('visible');
+      return;
+    }
+
+    const x = e.latlng.lng;
+    const yDown = -e.latlng.lat;
+    if (x < 0 || yDown < 0 || x >= GRID_W || yDown >= GRID_H) {
+      tooltipEl.classList.remove('visible');
+      return;
+    }
+
+    const columnIndex = Math.floor(x / TILE_W);
+    const rowIndex = Math.floor(yDown / TILE_H);
+    if (rowIndex < 0 || rowIndex >= ROWS.length || columnIndex < 0 || columnIndex >= COLS.length) {
+      tooltipEl.classList.remove('visible');
+      return;
+    }
+
+    const row = ROWS[rowIndex];
+    const column = COLS[columnIndex];
+    const pixelX = Math.floor(x - columnIndex * TILE_W);
+    const pixelY = Math.floor(yDown - rowIndex * TILE_H);
+
+    getTileCanvas(preset.folder, row, column, (context) => {
+      let pixel;
+      try {
+        pixel = context.getImageData(pixelX, pixelY, 1, 1).data;
+      } catch (error) {
+        return;
+      }
+      if (pixel[3] < 200) {
+        tooltipEl.classList.remove('visible');
+        return;
+      }
+
+      const rgb = [pixel[0], pixel[1], pixel[2]];
+      let best = null;
+      let bestDistance = Infinity;
+      labels.items.forEach((item) => {
+        const distance = colorDistance(rgb, hexToRgb(item.color));
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          best = item;
+        }
+      });
+
+      if (best && bestDistance <= COLOR_MATCH_THRESHOLD) {
+        tooltipEl.textContent = best.label;
+        tooltipEl.style.left = e.originalEvent.clientX + 'px';
+        tooltipEl.style.top = e.originalEvent.clientY + 'px';
+        tooltipEl.classList.add('visible');
+      } else {
+        tooltipEl.classList.remove('visible');
+      }
+    });
   });
 
-  window.addEventListener('mousemove', (e) => {
-    if (!dragging) return;
-    const maxLeft = window.innerWidth - legendEl.offsetWidth;
-    const maxTop = window.innerHeight - legendEl.offsetHeight;
-    const newLeft = Math.min(Math.max(0, e.clientX - dragOffsetX), Math.max(0, maxLeft));
-    const newTop = Math.min(Math.max(0, e.clientY - dragOffsetY), Math.max(0, maxTop));
-    legendEl.style.left = newLeft + 'px';
-    legendEl.style.top = newTop + 'px';
-  });
-
-  window.addEventListener('mouseup', () => {
-    dragging = false;
-  });
-
-  // Touch support (mobile drag)
-  legendHeader.addEventListener('touchstart', (e) => {
-    if (e.target === legendMinBtn) return;
-    const touch = e.touches[0];
-    dragging = true;
-    const rect = legendEl.getBoundingClientRect();
-    dragOffsetX = touch.clientX - rect.left;
-    dragOffsetY = touch.clientY - rect.top;
-    legendEl.style.left = rect.left + 'px';
-    legendEl.style.top = rect.top + 'px';
-    legendEl.style.bottom = 'auto';
-  }, { passive: true });
-
-  window.addEventListener('touchmove', (e) => {
-    if (!dragging) return;
-    const touch = e.touches[0];
-    const maxLeft = window.innerWidth - legendEl.offsetWidth;
-    const maxTop = window.innerHeight - legendEl.offsetHeight;
-    const newLeft = Math.min(Math.max(0, touch.clientX - dragOffsetX), Math.max(0, maxLeft));
-    const newTop = Math.min(Math.max(0, touch.clientY - dragOffsetY), Math.max(0, maxTop));
-    legendEl.style.left = newLeft + 'px';
-    legendEl.style.top = newTop + 'px';
-  }, { passive: true });
-
-  window.addEventListener('touchend', () => {
-    dragging = false;
-  });
-
-  // ── Legend: minimize ────────────────────────────────────────────
-  legendMinBtn.addEventListener('click', () => {
-    const minimized = legendEl.classList.toggle('minimized');
-    legendMinBtn.textContent = minimized ? '+' : '–';
-    legendMinBtn.title = minimized ? 'Restore' : 'Minimize';
-  });
+  map.on('mouseout', () => tooltipEl.classList.remove('visible'));
 </script>
 
 </body>
