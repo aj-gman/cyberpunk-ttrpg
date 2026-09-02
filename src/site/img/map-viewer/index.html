@@ -314,6 +314,8 @@
   const INFLUENCE_MAX_HUE_DISTANCE = 20;
   const INFLUENCE_MAX_SATURATION_DISTANCE = 0.55;
   const INFLUENCE_MAX_LUMINOSITY_DISTANCE = 0.5;
+  const ARASAKA_MAX_CHANNEL_SPREAD = 18;
+  const ARASAKA_MIN_LUMINOSITY = 0.35;
   const BASE_MAP_COLOR_THRESHOLD = 12;
 
   function getTileCanvas(folder, row, col, onReady) {
@@ -404,6 +406,17 @@
       const isInfluence = currentKey === 'influence';
       labels.items.forEach((item) => {
         const itemHsl = rgbToHsl(hexToRgb(item.color));
+        const channelSpread = Math.max(...rgb) - Math.min(...rgb);
+        const isArasaka = item.label === 'Arasaka Loyalty';
+        if (isArasaka) {
+          if (channelSpread > ARASAKA_MAX_CHANNEL_SPREAD || pixelHsl[2] < ARASAKA_MIN_LUMINOSITY) return;
+          const distance = channelSpread / 255;
+          if (distance < bestDistance) {
+            bestDistance = distance;
+            best = item;
+          }
+          return;
+        }
         const hueDifference = Math.abs(pixelHsl[0] - itemHsl[0]);
         const hueDistance = Math.min(hueDifference, 360 - hueDifference);
         const hueMatches = hueDistance <= (isInfluence ? INFLUENCE_MAX_HUE_DISTANCE : MAX_HUE_DISTANCE);
