@@ -160,42 +160,42 @@
   ];
 
   // ── Hover labels ────────────────────────────────────────────────
-  // One label set per preset key. Colors below are PLACEHOLDERS eyeballed
-  // from a reference screenshot — replace with real hex values here.
+  // One label set per preset key. Colors are sampled from the socioeconomic
+  // and influence map images; texture and lighting are handled below.
   const MAP_LABELS = {
     political: { title: 'Political', items: [] },
     socioeconomic: {
       title: 'Socioeconomic Class',
       items: [
-        { label: 'Mover',       color: '#9999b3' },
-        { label: 'Corpzoner',   color: '#2a3a6b' },
-        { label: 'Edgerunner',  color: '#cc33aa' },
-        { label: 'Mallplexer',  color: '#b06a35' },
-        { label: 'Beaver',      color: '#2f4a2f' },
-        { label: 'Streetscum',  color: '#7a1f2b' },
-        { label: 'Powerdealer', color: '#4b3fcf' }
+        { label: 'Mover',       color: '#a4a3ae' },
+        { label: 'Corpzoner',   color: '#222c4c' },
+        { label: 'Edgerunner',  color: '#b55eaf' },
+        { label: 'Mallplexer',  color: '#845d68' },
+        { label: 'Beaver',      color: '#285028' },
+        { label: 'Streetscum',  color: '#37142a' },
+        { label: 'Powerdealer', color: '#361f9b' }
       ]
     },
      influence: { title: 'Influences', items: [
         { label: 'Arasaka Loyalty', color: '#ffffff' },
-        { label: 'Blood Razors', color: '#581724' },
-        { label: 'Bozos', color: '#f0c2f9' },
-        { label: 'El Norte Cartel', color: '#5ad0ee' },
-        { label: 'Inquisitors', color: '#de5546' },
-        { label: 'Maelstrom', color: '#ff102d' },
-        { label: 'Militech Superiority', color: '#fffc0a' },
-        { label: 'Organitskaya', color: '#4523ed' },
+        { label: 'Blood Razors', color: '#461828' },
+        { label: 'Bozos', color: '#cfcfd5' },
+        { label: 'El Norte Cartel', color: '#48a1be' },
+        { label: 'Inquisitors', color: '#c79435' },
+        { label: 'Maelstrom', color: '#d0112d' },
+        { label: 'Militech Superiority', color: '#d2d016' },
+        { label: 'Organitskaya', color: '#3c1fc7' },
         { label: 'Piranhas', color: '#cffffa' },
-        { label: 'Red Chrome Legion', color: '#b73025' },
-        { label: 'Street Queens', color: '#ffc2d9' },
-        { label: 'Sun On Yee', color: '#46b2c8' },
-        { label: 'The Enhanced', color: '#c432a2' },
-        { label: 'The Mob', color: '#7699ff' },
-        { label: 'The Pack', color: '#c9ffd4' },
-        { label: 'Tyger Clawz', color: '#2d9be1' },
-        { label: 'Voodoo Boys', color: '#8694af' },
-        { label: 'Weng Fang Tong', color: '#4a64eb' },
-        { label: 'Wild Things', color: '#ffbb36' }
+        { label: 'Red Chrome Legion', color: '#ab162e' },
+        { label: 'Street Queens', color: '#bfbfc6' },
+        { label: 'Sun On Yee', color: '#287bb6' },
+        { label: 'The Enhanced', color: '#a52f8d' },
+        { label: 'The Mob', color: '#5e78c9' },
+        { label: 'The Pack', color: '#cffffa' },
+        { label: 'Tyger Clawz', color: '#287bb6' },
+        { label: 'Voodoo Boys', color: '#a4a3ae' },
+        { label: 'Weng Fang Tong', color: '#3b4eb3' },
+        { label: 'Wild Things', color: '#bfbd1a' }
        ] 
      }
    };
@@ -280,11 +280,31 @@
     return [parseInt(value.substring(0, 2), 16), parseInt(value.substring(2, 4), 16), parseInt(value.substring(4, 6), 16)];
   }
 
-  function colorDistance(first, second) {
-    return Math.sqrt((first[0] - second[0]) ** 2 + (first[1] - second[1]) ** 2 + (first[2] - second[2]) ** 2);
+  function rgbToHsl(rgb) {
+    const values = rgb.map((value) => value / 255);
+    const max = Math.max(...values);
+    const min = Math.min(...values);
+    const luminosity = (max + min) / 2;
+    const range = max - min;
+    if (!range) return [0, 0, luminosity];
+
+    const saturation = range / (1 - Math.abs(2 * luminosity - 1));
+    let hue;
+    if (max === values[0]) hue = ((values[1] - values[2]) / range) % 6;
+    else if (max === values[1]) hue = (values[2] - values[0]) / range + 2;
+    else hue = (values[0] - values[1]) / range + 4;
+    return [(hue * 60 + 360) % 360, saturation, luminosity];
   }
 
-  const COLOR_MATCH_THRESHOLD = 24;
+  function hslDistance(first, second) {
+    const hueDifference = Math.abs(first[0] - second[0]);
+    const hueDistance = Math.min(hueDifference, 360 - hueDifference) / 180;
+    return (hueDistance * 0.55) + (Math.abs(first[1] - second[1]) * 0.1) + (Math.abs(first[2] - second[2]) * 0.35);
+  }
+
+  const COLOR_MATCH_THRESHOLD = 0.34;
+  const MAX_HUE_DISTANCE = 34;
+  const MAX_LUMINOSITY_DISTANCE = 0.3;
 
   function getTileCanvas(folder, row, col, onReady) {
     const cacheKey = `${folder}/${row}${col}`;
@@ -349,11 +369,17 @@
       }
 
       const rgb = [pixel[0], pixel[1], pixel[2]];
+      const pixelHsl = rgbToHsl(rgb);
       let best = null;
       let bestDistance = Infinity;
       labels.items.forEach((item) => {
-        const distance = colorDistance(rgb, hexToRgb(item.color));
-        if (distance < bestDistance) {
+        const itemHsl = rgbToHsl(hexToRgb(item.color));
+        const hueDifference = Math.abs(pixelHsl[0] - itemHsl[0]);
+        const hueDistance = Math.min(hueDifference, 360 - hueDifference);
+        const hueMatches = pixelHsl[1] < 0.15 || itemHsl[1] < 0.15 || hueDistance <= MAX_HUE_DISTANCE;
+        const luminosityMatches = Math.abs(pixelHsl[2] - itemHsl[2]) <= MAX_LUMINOSITY_DISTANCE;
+        const distance = hslDistance(pixelHsl, itemHsl);
+        if (hueMatches && luminosityMatches && distance < bestDistance) {
           bestDistance = distance;
           best = item;
         }
