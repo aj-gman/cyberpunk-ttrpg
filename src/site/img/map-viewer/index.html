@@ -298,12 +298,18 @@
     return [(hue * 60 + 360) % 360, saturation, luminosity];
   }
 
-  function luminosityDistance(first, second) {
-    return Math.abs(first[2] - second[2]);
+  function colorDistance(first, second) {
+    const hueDifference = Math.abs(first[0] - second[0]);
+    const hueDistance = Math.min(hueDifference, 360 - hueDifference) / 180;
+    const saturationDistance = Math.abs(first[1] - second[1]);
+    const luminosityDistance = Math.max(0, second[2] - first[2]);
+    return (hueDistance * 0.65) + (saturationDistance * 0.15) + (luminosityDistance * 0.2);
   }
 
   const COLOR_MATCH_THRESHOLD = 0.2;
-  const MAX_LUMINOSITY_DISTANCE = 0.18;
+  const MAX_HUE_DISTANCE = 20;
+  const MAX_SATURATION_DISTANCE = 0.3;
+  const MAX_DARKENING_DISTANCE = 0.45;
   const BASE_MAP_COLOR_THRESHOLD = 12;
 
   function getTileCanvas(folder, row, col, onReady) {
@@ -393,9 +399,14 @@
       let bestDistance = Infinity;
       labels.items.forEach((item) => {
         const itemHsl = rgbToHsl(hexToRgb(item.color));
-        const luminosityMatches = Math.abs(pixelHsl[2] - itemHsl[2]) <= MAX_LUMINOSITY_DISTANCE;
-        const distance = luminosityDistance(pixelHsl, itemHsl);
-        if (luminosityMatches && distance < bestDistance) {
+        const hueDifference = Math.abs(pixelHsl[0] - itemHsl[0]);
+        const hueDistance = Math.min(hueDifference, 360 - hueDifference);
+        const hueMatches = hueDistance <= MAX_HUE_DISTANCE;
+        const saturationMatches = Math.abs(pixelHsl[1] - itemHsl[1]) <= MAX_SATURATION_DISTANCE;
+        const darkeningDistance = itemHsl[2] - pixelHsl[2];
+        const luminosityMatches = darkeningDistance >= 0 && darkeningDistance <= MAX_DARKENING_DISTANCE;
+        const distance = colorDistance(pixelHsl, itemHsl);
+        if (hueMatches && saturationMatches && luminosityMatches && distance < bestDistance) {
           bestDistance = distance;
           best = item;
         }
