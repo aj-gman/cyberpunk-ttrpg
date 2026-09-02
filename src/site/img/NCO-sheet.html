@@ -1199,15 +1199,17 @@
   // CYBERPSYCHOSIS TRACKERS
   // ═══════════════════════════════════════════════════════
   const trackerMax = 10;
+  const cyberpsyMax = 20;
 
   function changeTracker(type, delta) {
     var el = document.getElementById(type + '-value');
     var val = parseInt(el.textContent) || 0;
-    val = Math.max(0, Math.min(trackerMax, val + delta));
+    var valueMax = type === 'cyberpsy' ? cyberpsyMax : trackerMax;
+    val = Math.max(0, Math.min(valueMax, val + delta));
     el.textContent = val;
     // Update bar fill
     var bar = document.getElementById(type + '-bar');
-    bar.style.width = (val / trackerMax * 100) + '%';
+    bar.style.width = Math.min(100, val / trackerMax * 100) + '%';
     // Check cyberpsy threshold
     checkCyberpsyThreshold();
   }
@@ -1584,8 +1586,9 @@
     // Cyberpsychosis trackers
     var t = data.trackers || {};
     if (typeof t.cyberpsy === 'number') {
-      document.getElementById('cyberpsy-value').textContent = Math.max(0, Math.min(trackerMax, t.cyberpsy));
-      document.getElementById('cyberpsy-bar').style.width = (Math.max(0, Math.min(trackerMax, t.cyberpsy)) / trackerMax * 100) + '%';
+      var cyberpsyValue = Math.max(0, Math.min(cyberpsyMax, t.cyberpsy));
+      document.getElementById('cyberpsy-value').textContent = cyberpsyValue;
+      document.getElementById('cyberpsy-bar').style.width = Math.min(100, cyberpsyValue / trackerMax * 100) + '%';
     }
     if (typeof t.humanity === 'number') {
       document.getElementById('humanity-value').textContent = Math.max(0, Math.min(trackerMax, t.humanity));
