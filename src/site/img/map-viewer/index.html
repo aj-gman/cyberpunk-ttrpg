@@ -176,28 +176,31 @@
         { label: 'Powerdealer', color: '#361f9b' }
       ]
     },
-     influence: { title: 'Influences', items: [
-        { label: 'Arasaka Loyalty', color: '#ffffff' },
-        { label: 'Blood Razors', color: '#461828' },
-        { label: 'Bozos', color: '#cfcfd5' },
-        { label: 'El Norte Cartel', color: '#48a1be' },
-        { label: 'Inquisitors', color: '#c79435' },
-        { label: 'Maelstrom', color: '#d0112d' },
-        { label: 'Militech Superiority', color: '#d2d016' },
-        { label: 'Organitskaya', color: '#3c1fc7' },
-        { label: 'Piranhas', color: '#cffffa' },
-        { label: 'Red Chrome Legion', color: '#ab162e' },
-        { label: 'Street Queens', color: '#bfbfc6' },
-        { label: 'Sun On Yee', color: '#287bb6' },
-        { label: 'The Enhanced', color: '#a52f8d' },
-        { label: 'The Mob', color: '#5e78c9' },
-        { label: 'The Pack', color: '#cffffa' },
-        { label: 'Tyger Clawz', color: '#287bb6' },
-        { label: 'Voodoo Boys', color: '#a4a3ae' },
-        { label: 'Weng Fang Tong', color: '#3b4eb3' },
-        { label: 'Wild Things', color: '#bfbd1a' }
-       ] 
-     }
+    influence: { title: 'Influences', items: [
+        // Cults
+        { label: 'Arasaka Loyalty',      color: '#ffffff', matchColor: '#ffffff' },
+        { label: 'Militech Superiority', color: '#ffe135', matchColor: '#fffc0a' },
+        // Folk — greens
+        { label: 'Street Queens',  color: '#4ade80', matchColor: '#ffc2d9' },
+        { label: 'Piranhas',       color: '#14b8a6', matchColor: '#cffffa' },
+        { label: 'The Pack',       color: '#a3e635', matchColor: '#c9ffd4' },
+        { label: 'Voodoo Boys',    color: '#166534', matchColor: '#8694af' },
+        { label: 'Bozos',          color: '#6ee7b7', matchColor: '#f0c2f9' },
+        // Heresy — pink to red to orange
+        { label: 'The Enhanced',       color: '#ec4899', matchColor: '#c432a2' },
+        { label: 'Red Chrome Legion',  color: '#f43f5e', matchColor: '#b73025' },
+        { label: 'Maelstrom',          color: '#ef4444', matchColor: '#ff102d' },
+        { label: 'Blood Razors',       color: '#7f1d1d', matchColor: '#581724' },
+        { label: 'Inquisitors',        color: '#f97316', matchColor: '#de5546' },
+        { label: 'Wild Things',        color: '#fb923c', matchColor: '#ffbb36' },
+        // Organized — purple to blue to cyan
+        { label: 'El Norte Cartel',  color: '#22d3ee', matchColor: '#5ad0ee' },
+        { label: 'Sun On Yee',       color: '#0ea5e9', matchColor: '#46b2c8' },
+        { label: 'Tyger Clawz',      color: '#3b82f6', matchColor: '#2d9be1' },
+        { label: 'The Mob',          color: '#6366f1', matchColor: '#7699ff' },
+        { label: 'Weng Fang Tong',   color: '#8b5cf6', matchColor: '#4a64eb' },
+        { label: 'Organitskaya',     color: '#a855f7', matchColor: '#4523ed' }
+      ] }
    };
 
   // ── Map setup (CRS.Simple = plain pixel-space, no geo projection) ──
@@ -305,6 +308,7 @@
   const COLOR_MATCH_THRESHOLD = 0.34;
   const MAX_HUE_DISTANCE = 34;
   const MAX_LUMINOSITY_DISTANCE = 0.3;
+  const BASE_MAP_COLOR_THRESHOLD = 12;
 
   function getTileCanvas(folder, row, col, onReady) {
     const cacheKey = `${folder}/${row}${col}`;
@@ -357,6 +361,23 @@
     const pixelY = Math.floor(yDown - rowIndex * TILE_H);
 
     getTileCanvas(preset.folder, row, column, (context) => {
+      const inspectPixel = (baseContext) => {
+        if (baseContext) {
+          const basePixel = baseContext.getImageData(pixelX, pixelY, 1, 1).data;
+          const baseDistance = Math.sqrt(
+            (pixel[0] - basePixel[0]) ** 2 +
+            (pixel[1] - basePixel[1]) ** 2 +
+            (pixel[2] - basePixel[2]) ** 2
+          );
+          if (baseDistance <= BASE_MAP_COLOR_THRESHOLD) {
+            tooltipEl.classList.remove('visible');
+            return;
+          }
+        }
+
+        identifyPixel();
+      };
+
       let pixel;
       try {
         pixel = context.getImageData(pixelX, pixelY, 1, 1).data;
@@ -368,6 +389,8 @@
         return;
       }
 
+      const identifyPixel = () => {
+
       const rgb = [pixel[0], pixel[1], pixel[2]];
       const pixelHsl = rgbToHsl(rgb);
       let best = null;
@@ -376,7 +399,7 @@
         const itemHsl = rgbToHsl(hexToRgb(item.color));
         const hueDifference = Math.abs(pixelHsl[0] - itemHsl[0]);
         const hueDistance = Math.min(hueDifference, 360 - hueDifference);
-        const hueMatches = pixelHsl[1] < 0.15 || itemHsl[1] < 0.15 || hueDistance <= MAX_HUE_DISTANCE;
+        const hueMatches = hueDistance <= MAX_HUE_DISTANCE;
         const luminosityMatches = Math.abs(pixelHsl[2] - itemHsl[2]) <= MAX_LUMINOSITY_DISTANCE;
         const distance = hslDistance(pixelHsl, itemHsl);
         if (hueMatches && luminosityMatches && distance < bestDistance) {
@@ -392,6 +415,13 @@
         tooltipEl.classList.add('visible');
       } else {
         tooltipEl.classList.remove('visible');
+      }
+      };
+
+      if (currentKey === 'political') {
+        identifyPixel();
+      } else {
+        getTileCanvas('tiles-pol', row, column, inspectPixel);
       }
     });
   });
