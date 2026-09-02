@@ -298,14 +298,11 @@
     return [(hue * 60 + 360) % 360, saturation, luminosity];
   }
 
-  function hslDistance(first, second) {
-    const hueDifference = Math.abs(first[0] - second[0]);
-    const hueDistance = Math.min(hueDifference, 360 - hueDifference) / 180;
-    return (hueDistance * 0.55) + (Math.abs(first[1] - second[1]) * 0.1) + (Math.abs(first[2] - second[2]) * 0.35);
+  function luminosityDistance(first, second) {
+    return Math.abs(first[2] - second[2]);
   }
 
   const COLOR_MATCH_THRESHOLD = 0.2;
-  const MAX_HUE_DISTANCE = 20;
   const MAX_LUMINOSITY_DISTANCE = 0.18;
   const BASE_MAP_COLOR_THRESHOLD = 12;
 
@@ -396,12 +393,9 @@
       let bestDistance = Infinity;
       labels.items.forEach((item) => {
         const itemHsl = rgbToHsl(hexToRgb(item.color));
-        const hueDifference = Math.abs(pixelHsl[0] - itemHsl[0]);
-        const hueDistance = Math.min(hueDifference, 360 - hueDifference);
-        const hueMatches = hueDistance <= MAX_HUE_DISTANCE;
         const luminosityMatches = Math.abs(pixelHsl[2] - itemHsl[2]) <= MAX_LUMINOSITY_DISTANCE;
-        const distance = hslDistance(pixelHsl, itemHsl);
-        if (hueMatches && luminosityMatches && distance < bestDistance) {
+        const distance = luminosityDistance(pixelHsl, itemHsl);
+        if (luminosityMatches && distance < bestDistance) {
           bestDistance = distance;
           best = item;
         }
