@@ -289,5 +289,11 @@ main {
         width: calc(100% - 32px);
         margin: 32px 16px 16px;
     }
+
+    .content :where(p, li, blockquote, td, th) {
+        text-align: left;
+        hyphens: auto;
+        overflow-wrap: break-word;
+    }
 }
 
