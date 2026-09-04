@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#news","#role"],"dg-note-properties":{"tags":["#news","#role"]}}
 ---
 
 ### September 2026
@@ -12,7 +12,7 @@
 - Added most important characters in the [[Eurotour/Adventures/7 Big Trouble in Neo-Sov\|7 Big Trouble in Neo-Sov]] adventure ([[Eurotour/Characters/Boris Asimov\|Boris Asimov]], [[Eurotour/Characters/Liudmila\|Liudmila]], [[Eurotour/Characters/Raphael the Kid\|Raphael the Kid]], [[Eurotour/Characters/Seraphim\|Seraphim]], [[Night City/Organizations/Gangs/Organitskaya\|Organitskaya]]).
 - Published information regarding [[Eurotour/Locations/St. Petersburg\|St. Petersburg]].
 - Updated and corrected minor details regarding [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] rules.
-#### 19.08
+#### 20.08
 - Brought [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.1.0.0. 
 	**Key new features:**
 	- Fixed a bug with Eurodollars & Flaws not saving in .json format
