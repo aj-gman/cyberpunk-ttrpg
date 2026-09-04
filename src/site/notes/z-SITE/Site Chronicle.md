@@ -8,6 +8,8 @@
 - Added #stratum : needs write-up for all
 - Added fashion folder, as each #ideology  is associated with an aesthetic
 - Published character profiles for [[Night City/Characters/2021/Big Wu\|Big Wu]], [[Night City/Characters/2021/Theresa Valentino\|Theresa Valentino]], [[Night City/Characters/2021/Victor Campbell\|Victor Campbell]], [[Night City/Characters/2021/Corpse Reviver\|Corpse Reviver]].
+- Added permanent Header & Footer on webpages (shouldn't break on Digital Garden template update)
+- Reorganized folders & webpages for clearer navigation
 #### 02.09
 - Updated [The Map](https://gman-cyberpunk.vercel.app/img/map-viewer/) with full label-on-hover functionality for the Socioeconomic and Influence panels. These display the social strata of [[Night City/Locations/Night City\|Night City]]'s inhabitants and the [[Night City/Organizations/Gangs/Boostergangs of Night City\|gang]] or [[Fourth Corporate War\|corporation]] that is most influent in the region.
 	- The map should correctly identify all gangs by color upon hovering and should be generally bug-free.

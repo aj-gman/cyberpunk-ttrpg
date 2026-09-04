@@ -9,10 +9,5 @@ From early 2026 up to June 2026, the main campaign of the [[Eurotour/Eurotour\|E
 
 Starting in July 2026, [[Crew/The Crew\|The Crew]] has embarked on a new journey. They have left [[Eurotour/Eurotour\|Europe]], crossing through the [[Eurotour/Adventures/7 Big Trouble in Neo-Sov\|NUSSR]] and finally ending in [[Night City/Locations/Night City\|Night City]]. This new campaign, encompassing the [[Fourth Corporate War\|Fourth Corporate War]], is ran using [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] for its ruleset.
 
-### Newly-Updated:
-- [[Rules/NCOverdrive/Drugs\|Drugs]]
-- [[Rules/Homebrew\|Homebrew]] (listed & linked)
-- [[Night City/Beliefs/Idealism\|Idealism]]
-- [[Night City/Characters/2021/Corpse Reviver\|Corpse Reviver]]
-- [[Night City/Characters/2021/Big Wu\|Big Wu]]
+
 
