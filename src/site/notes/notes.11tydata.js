@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({ path: [".env.local", ".env"] });
 const settings = require("../../helpers/constants");
 const { pickNoteMetadata } = require("../../helpers/bases-engine/noteMetadata");
 const pluginLoader = require("../../helpers/pluginLoader");
