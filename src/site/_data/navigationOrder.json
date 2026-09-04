@@ -11,20 +11,21 @@
     "NCOverdrive Sheet"
   ],
   "/Rules": [
+    "NCOverdrive",
     "Homebrew",
     "Basebuilding",
-    "NCOverdrive",
+    "Cyberpunk Universe",
     "CPRED"
   ],
   "/Rules/NCOverdrive": [
+    "Neon City Overdrive",
+    "Drugs",
     "Damage",
     "Dice Mechanics",
     "Trademarks",
     "Conditions",
-    "Drive",
-    "Drugs",
     "Gear",
-    "Neon City Overdrive",
+    "Drive",
     "Stunts",
     "XP"
   ],
@@ -34,16 +35,16 @@
     "Traumas"
   ],
   "/Rules/NCOverdrive/Dice Mechanics": [
-    "Boons",
     "Dice Rolls",
-    "Extended Checks",
-    "Helping"
+    "Boons",
+    "Helping",
+    "Extended Checks"
   ],
   "/Rules/NCOverdrive/Trademarks": [
-    "Edges",
-    "Flaws",
     "Trademarks",
-    "Triggers"
+    "Triggers",
+    "Edges",
+    "Flaws"
   ],
   "/Rules/CPRED": [
     "Combat",
@@ -125,33 +126,32 @@
     "Techie"
   ],
   "/Night City": [
+    "Beliefs",
+    "Characters",
     "Organizations",
-    "Others",
-    "Characters"
+    "Others"
+  ],
+  "/Night City/Beliefs": [
+    "Idealism",
+    "Realism",
+    "Insurrectionism",
+    "Parallelism"
+  ],
+  "/Night City/Characters": [
+    "2021",
+    "Richard Night"
+  ],
+  "/Night City/Characters/2021": [
+    "Big Wu",
+    "Corpse Reviver",
+    "Theresa Valentino",
+    "Victor Campbell"
   ],
   "/Night City/Organizations": [
+    "Gangs",
     "Corporations",
     "NUSA",
-    "Gangs"
-  ],
-  "/Night City/Organizations/Corporations": [
-    "Arasaka",
-    "Budget Arms",
-    "CINO",
-    "Constitutional Arms",
-    "Dai Lung",
-    "Eurobank",
-    "Kang Tao",
-    "Kendachi",
-    "Malorian Arms",
-    "Militech",
-    "OTEC",
-    "Petrochem",
-    "Seal GmbH",
-    "SovOil",
-    "Techtronika",
-    "Tsunami Arms",
-    "Wortrac"
+    "Highrider Confederation"
   ],
   "/Night City/Organizations/Gangs": [
     "Aldecaldos",
@@ -174,18 +174,27 @@
     "Weng Fang Tong",
     "Wild Things"
   ],
+  "/Night City/Organizations/Corporations": [
+    "Arasaka",
+    "Budget Arms",
+    "CINO",
+    "Constitutional Arms",
+    "Dai Lung",
+    "Eurobank",
+    "Kang Tao",
+    "Kendachi",
+    "Malorian Arms",
+    "Militech",
+    "OTEC",
+    "Petrochem",
+    "Seal GmbH",
+    "SovOil",
+    "Techtronika",
+    "Tsunami Arms",
+    "Wortrac"
+  ],
   "/Night City/Others": [
-    "About Cyberpsychosis",
-    "sociology"
-  ],
-  "/Night City/Others/sociology": [
-    "Beliefs"
-  ],
-  "/Night City/Others/sociology/Beliefs": [
-    "Idealism"
-  ],
-  "/Night City/Characters": [
-    "Big Wu"
+    "About Cyberpsychosis"
   ],
   "/Eurotour": [
     "Characters",
