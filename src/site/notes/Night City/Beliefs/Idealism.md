@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/beliefs/idealism/","tags":["ideology"],"dg-note-properties":{"tags":["ideology"]}}
+{"dg-publish":true,"permalink":"/night-city/beliefs/idealism/","tags":["#ideology","#corporation"],"dg-note-properties":{"tags":["#ideology","#corporation"]}}
 ---
 
 Idealism in the [[Rules/Cyberpunk Universe\|Cyberpunk Universe]] refers to the belief that #corporation s are mostly forces for positive change. It posits that [captains of industry](https://en.wikipedia.org/wiki/Captain_of_industry) are taking the charge in making the world a better place.
 
-In terms of aesthetics, it is closely related to [[Night City/Beliefs/Fashion/Neomilitarism\|Neomilitarism]].
+In terms of aesthetics, it is closely related to [[Night City/Beliefs/Fashion/Neokitsch\|Neokitsch]].
 
 ### Principles
 - Corporations serve the interests of their workers better than other institutions (States, Labor Unions, NGOs etc.)

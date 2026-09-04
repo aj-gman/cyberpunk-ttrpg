@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/beliefs/realism/","tags":["ideology"],"dg-note-properties":{"tags":["ideology"]}}
+{"dg-publish":true,"permalink":"/night-city/beliefs/realism/","tags":["#ideology"],"dg-note-properties":{"tags":["#ideology"]}}
 ---
 
 Realism in the [[Rules/Cyberpunk Universe\|Cyberpunk Universe]] refers to the belief that although not [[Night City/Beliefs/Idealism\|ideal]], corporate governance is currently the best system. It posits that one must game the system in order to secure a decent lifestyle.
 
-In terms of aesthetics, it is closely related to [[Night City/Beliefs/Fashion/Entropism\|Entropism]].
+In terms of aesthetics, it is closely related to [[Night City/Beliefs/Fashion/Neomilitarism\|Neomilitarism]].
 
 ### Principles
 ### Patrons

@@ -1,8 +1,11 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#ideology","#stratum","#news","#role"],"dg-note-properties":{"tags":["#ideology","#stratum","#news","#role"]}}
 ---
 
 ### September 2026
+#### 05.09
+- Updated #ideology, changed up fashion association
+- Did initial write-up for the fashions: [[Night City/Beliefs/Fashion/Neomilitarism\|Neomilitarism]], [[Night City/Beliefs/Fashion/Neokitsch\|Neokitsch]], [[Night City/Beliefs/Fashion/Kitsch\|Kitsch]], [[Night City/Beliefs/Fashion/Entropism\|Entropism]]
 #### 04.09
 - Added #ideology : full write-up for [[Night City/Beliefs/Idealism\|Idealism]], half-write-up for [[Night City/Beliefs/Insurrectionism\|Insurrectionism]], [[Night City/Beliefs/Parallelism\|Parallelism]], [[Night City/Beliefs/Realism\|Realism]]
 - Added #stratum : needs write-up for all

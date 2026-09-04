@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/beliefs/parallelism/","tags":["ideology"],"dg-note-properties":{"tags":["ideology"]}}
+{"dg-publish":true,"permalink":"/night-city/beliefs/parallelism/","tags":["#ideology"],"dg-note-properties":{"tags":["#ideology"]}}
 ---
 
 Parallelism in the [[Rules/Cyberpunk Universe\|Cyberpunk Universe]] refers to the belief that contemporary structures are inefficient but impossible to tackle head on. As such, it posits that communities must develop alternative institutions and societies.
 
-In terms of aesthetics, it is closely related to [[Night City/Beliefs/Fashion/Neokitsch\|Neokitsch]].
+In terms of aesthetics, it is closely related to [[Night City/Beliefs/Fashion/Entropism\|Entropism]].
 
 ### Principles
 ### Patrons
