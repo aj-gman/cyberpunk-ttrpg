@@ -241,9 +241,13 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 12px 20px;
-    margin: 12px 0 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #39C4B6;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 4;
+    align-items: center;
+    min-height: var(--dg-navbar-height);
+    box-sizing: border-box;
 }
 
 .site-resource-nav a,
@@ -266,6 +270,11 @@ main {
 
 @media (max-width: 768px) {
     .site-resource-nav {
+        position: static;
+        min-height: 0;
+        margin: 12px 0 20px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #39C4B6;
         gap: 8px 16px;
     }
 
