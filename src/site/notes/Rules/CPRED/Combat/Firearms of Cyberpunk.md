@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/rules/cpred/combat/firearms-of-cyberpunk/","dg-note-properties":{}}
 ---
 
-The content in this section is [[Rules/Homebrew\|Homebrew]]. Gun Types are inspired by the [Edgerunners Kit](https://rtalsoriangames.com/cyberpunk-edgerunners-mission-kit/) sourcebook for [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]], although adapted to have more spunk, while Gun Brands are based on the flavor text from [[Cyberpunk 2020\|Cyberpunk 2020]]'s Corporations.
+The content in this section is [[Rules/Homebrew\|Homebrew]]. Gun Types are inspired by the [Edgerunners Kit](https://rtalsoriangames.com/cyberpunk-edgerunners-mission-kit/) sourcebook for [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]], although adapted to have more spunk, while Gun Brands are based on the flavor text from [[Rules/Cyberpunk Universe\|Cyberpunk Universe]]'s Corporations.
 
 ### Gun Types
 ##### [[Rules/CPRED/Combat/Power Guns\|Power Guns]] 
