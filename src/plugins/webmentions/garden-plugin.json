@@ -6,6 +6,7 @@
   "author": "Ole Eskild Steensen",
   "hooks": "index.js",
   "slots": {
+    "common.head": "templates/webmention-head.njk",
     "notes.afterContent": "templates/mentions.njk"
   },
   "styles": ["styles/mentions.scss"],
