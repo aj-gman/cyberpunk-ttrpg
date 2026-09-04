@@ -54,6 +54,13 @@
         {% include imp %}
       {% endfor %}
       {{ content | hideDataview | taggify | link | resolveMdLinks | safe}}
+      {% if recentChange %}
+        <section class="recent-changes" aria-labelledby="recent-changes-title">
+          <h2 id="recent-changes-title">Recent Changes</h2>
+          <p><time>{{ recentChange.day }}</time></p>
+          <div>{{ recentChange.body | markdown | link | resolveMdLinks | safe }}</div>
+        </section>
+      {% endif %}
       {% set slotName = "common.afterContent" %}{% include "components/pluginSlot.njk" %}
       {% set slotName = "index.afterContent" %}{% include "components/pluginSlot.njk" %}
       {% for imp in dynamics.common.afterContent %}

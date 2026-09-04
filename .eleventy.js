@@ -476,6 +476,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setLibrary("md", markdownLib);
 
+  eleventyConfig.addFilter("markdown", function(str) {
+    return str ? markdownLib.render(str) : "";
+  });
+
   eleventyConfig.addFilter("isoDate", function(date) {
     return date && date.toISOString();
   });
