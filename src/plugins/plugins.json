@@ -1,0 +1,7 @@
+{
+  "plugins": {
+    "dg-filetree": {
+      "enabled": false
+    }
+  }
+}
