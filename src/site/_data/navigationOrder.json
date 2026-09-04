@@ -1,15 +1,14 @@
 {
   "/": [
     "Homepage",
-    "NCOverdrive Sheet",
     "Site Chronicle",
     "Rules",
-    "Fourth Corporate War",
     "Night City",
     "Eurotour",
     "Crew",
     "AI Policy",
-    "CPRED Sheet"
+    "CPRED Sheet",
+    "NCOverdrive Sheet"
   ],
   "/Rules": [
     "Homebrew",
@@ -86,7 +85,17 @@
     "SynthCoke",
     "Vaporwave",
     "Weed",
-    "Wireheading"
+    "Wireheading",
+    "Beauties",
+    "Caff Stix",
+    "Coca",
+    "Di-oxy-heroin",
+    "Enduro 500",
+    "Fireball",
+    "Hack Attack",
+    "Neocorticine",
+    "Speedball",
+    "Sunnies"
   ],
   "/Rules/CPRED/Drugs/Drug Effects": [
     "Black Outs",
@@ -115,38 +124,15 @@
     "Solo",
     "Techie"
   ],
-  "/Fourth Corporate War": [
-    "Characters",
-    "Locations"
-  ],
-  "/Fourth Corporate War/Characters": [
-    "Boris Asimov",
-    "Liudmila",
-    "Raphael the Kid",
-    "Seraphim"
-  ],
-  "/Fourth Corporate War/Locations": [
-    "St. Petersburg"
-  ],
   "/Night City": [
     "Organizations",
-    "Others"
+    "Others",
+    "Characters"
   ],
   "/Night City/Organizations": [
-    "Boostergangs",
     "Corporations",
-    "NUSA"
-  ],
-  "/Night City/Organizations/Boostergangs": [
-    "Boostergangs of Night City",
-    "Blood Razors",
-    "Maelstrom",
-    "Organitskaya",
-    "Piranhas",
-    "Street Queens",
-    "Sun On Yee",
-    "The Enhanced",
-    "Tyger Clawz"
+    "NUSA",
+    "Gangs"
   ],
   "/Night City/Organizations/Corporations": [
     "Arasaka",
@@ -167,8 +153,39 @@
     "Tsunami Arms",
     "Wortrac"
   ],
+  "/Night City/Organizations/Gangs": [
+    "Aldecaldos",
+    "Blood Razors",
+    "Boostergangs of Night City",
+    "Bozos",
+    "El Norte Cartel",
+    "Inquisitors",
+    "Maelstrom",
+    "Organitskaya",
+    "Piranhas",
+    "Red Chrome Legion",
+    "Street Queens",
+    "Sun On Yee",
+    "The Enhanced",
+    "The Mob",
+    "The Pack",
+    "Tyger Clawz",
+    "Voodoo Boys",
+    "Weng Fang Tong",
+    "Wild Things"
+  ],
   "/Night City/Others": [
-    "About Cyberpsychosis"
+    "About Cyberpsychosis",
+    "sociology"
+  ],
+  "/Night City/Others/sociology": [
+    "Beliefs"
+  ],
+  "/Night City/Others/sociology/Beliefs": [
+    "Idealism"
+  ],
+  "/Night City/Characters": [
+    "Big Wu"
   ],
   "/Eurotour": [
     "Characters",
@@ -183,7 +200,11 @@
     "Core Crew",
     "Claire Monet_Public",
     "Lars-Olov Skeppsholm",
-    "Maddogs"
+    "Maddogs",
+    "Boris Asimov",
+    "Liudmila",
+    "Raphael the Kid",
+    "Seraphim"
   ],
   "/Eurotour/Characters/France": [
     "Beatrice Fahida",
@@ -206,7 +227,8 @@
     "Brussels",
     "Paris",
     "Stockholm",
-    "Venice"
+    "Venice",
+    "St. Petersburg"
   ],
   "/Eurotour/News": [
     "Glamorous Deaths in the Swiss Alps",
