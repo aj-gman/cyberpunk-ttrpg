@@ -1,8 +1,13 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#news","#role"],"dg-note-properties":{"tags":["#news","#role"]}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#ideology","#stratum","#news","#role"],"dg-note-properties":{"tags":["#ideology","#stratum","#news","#role"]}}
 ---
 
 ### September 2026
+#### 04.09
+- Added #ideology : full write-up for [[Night City/Beliefs/Idealism\|Idealism]], half-write-up for [[Night City/Beliefs/Insurrectionism\|Insurrectionism]], [[Night City/Beliefs/Parallelism\|Parallelism]], [[Night City/Beliefs/Realism\|Realism]]
+- Added #stratum : needs write-up for all
+- Added fashion folder, as each #ideology  is associated with an aesthetic
+- Published character profiles for [[Night City/Characters/2021/Big Wu\|Big Wu]], [[Night City/Characters/2021/Theresa Valentino\|Theresa Valentino]], [[Night City/Characters/2021/Victor Campbell\|Victor Campbell]], [[Night City/Characters/2021/Corpse Reviver\|Corpse Reviver]].
 #### 02.09
 - Updated [The Map](https://gman-cyberpunk.vercel.app/img/map-viewer/) with full label-on-hover functionality for the Socioeconomic and Influence panels. These display the social strata of [[Night City/Locations/Night City\|Night City]]'s inhabitants and the [[Night City/Organizations/Gangs/Boostergangs of Night City\|gang]] or [[Fourth Corporate War\|corporation]] that is most influent in the region.
 	- The map should correctly identify all gangs by color upon hovering and should be generally bug-free.
