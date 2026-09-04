@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/characters/2021/big-wu/","tags":["#npc","#4cw"],"dg-note-properties":{"tags":["#npc","#4cw"]}}
+{"dg-publish":true,"dg-path":"Night City/Characters/Big Wu.md","permalink":"/night-city/characters/big-wu/","tags":["#npc","#4cw"],"dg-note-properties":{"tags":["#npc","#4cw"]}}
 ---
 
 #npc #4cw [[Night City/Locations/Night City\|Night City]]

@@ -10,7 +10,7 @@ In terms of aesthetics, it is closely related to [[Night City/Beliefs/Fashion/Ne
 ### Patrons
 [[Night City/Beliefs/Parallelism\|Parallelism]] is the most divided #ideology, since it relies on the frameworks provided by the Patrons on how to act in order to distance oneself from society at large. As such, Patrons might not agree with one another or even regard themselves as [[Night City/Beliefs/Parallelism\|Parallelists]].
 - [[Santiago\|Santiago]], leader of the [[Night City/Organizations/Gangs/Aldecaldos\|Aldecaldos]]
-- The [[Highrider Confederation\|Highrider Confederation]]
+- The [[Night City/Organizations/Highrider Confederation\|Highrider Confederation]]
 
 ### Further reading:
 - https://en.wikipedia.org/wiki/Parallel_Polis
