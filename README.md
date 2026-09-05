@@ -9,6 +9,62 @@
 This is the template to be used together with the [Digital Garden Obsidian Plugin](https://github.com/oleeskild/Obsidian-Digital-Garden).
 See the README in the plugin repo for information on how to set it up.
 
+---
+## Discord GitHub approval bot
+
+The repository includes an approval-gated Discord integration hosted by Vercel.
+It listens for signed GitHub push webhooks to `main`, ignores pushes with no
+described commits, and sends an approval message to Discord. Only members with
+the configured approver role can approve or reject it. Approved updates contain
+the commit title, changed-file summary, and GitHub link.
+
+Pending approvals expire after 24 hours. A newer `main` push supersedes older
+pending requests. Rejected requests remain in the GitHub audit state file and do
+not create a public rejection post.
+
+### Vercel environment variables
+
+Set these variables in the Vercel project. Keep all values server-side.
+
+| Variable | Purpose |
+| --- | --- |
+| `GITHUB_DISCORD_TOKEN` | GitHub token with Contents read/write access for the state file only |
+| `GITHUB_WEBHOOK_SECRET` | Secret used to verify GitHub `X-Hub-Signature-256` |
+| `GITHUB_OWNER` | Repository owner; defaults to `aj-gman` |
+| `GITHUB_REPO` | Repository name; defaults to `cyberpunk-ttrpg` |
+| `GITHUB_BRANCH` | Monitored branch; defaults to `main` |
+| `DISCORD_APPLICATION_ID` | Discord application ID |
+| `DISCORD_BOT_TOKEN` | Discord bot token with permission to send messages in the target channel |
+| `DISCORD_PUBLIC_KEY` | Discord application public key used to verify interactions |
+| `DISCORD_CHANNEL_ID` | Channel where approval and approved-update messages are posted |
+| `DISCORD_APPROVER_ROLE_ID` | Discord role allowed to approve or reject requests |
+| `DISCORD_STATE_PATH` | Optional GitHub path; defaults to `.github/discord-approval-state.json` |
+
+Use a dedicated GitHub token for this integration. Do not reuse a browser-facing
+character-save token.
+
+### GitHub webhook setup
+
+Create a repository webhook pointing to:
+
+`https://<your-vercel-domain>/api/github-webhook`
+
+Use the same value as `GITHUB_WEBHOOK_SECRET`, select `application/json`, and
+enable the **Pushes** event. The endpoint verifies the signature, branch, and
+commit message before creating an approval request.
+
+### Discord application setup
+
+In the Discord Developer Portal:
+
+1. Create an application and bot, then set the application ID, bot token, and public key in Vercel.
+2. Set the Interactions Endpoint URL to `https://<your-vercel-domain>/api/discord-interactions`.
+3. Invite the bot to the server with View Channel and Send Messages permissions in the target channel.
+4. Set `DISCORD_APPROVER_ROLE_ID` to the role permitted to approve updates.
+
+The implementation uses Discord HTTP interactions rather than a persistent
+Gateway process, so Vercel can host it as serverless functions.
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/oleeskild/digitalgarden)
 
 ---
