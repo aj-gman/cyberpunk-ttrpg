@@ -2,7 +2,7 @@
 {"dg-publish":true,"dg-path":"Homepage.md","permalink":"/homepage/","tags":["gardenEntry"],"dg-note-properties":{}}
 ---
 
-Welcome to [G-man](https://gmantabletops.miraheze.org/wiki/User:AidenJacks)'s Cyberpunk [Digital Garden](https://docs.forestry.md/)! 
+Welcome to [G-man](https://gmantabletops.miraheze.org/wiki/User:AidenJacks)'s Cyberpunk [Digital Garden](https://docs.forestry.md/)! [^1]
 This **Wiki** is dedicated to preserving the archive of stories, rules and lore that gather during the many [TTRPG](https://en.wikipedia.org/wiki/Tabletop_role-playing_game) sessions ran by [[z-SITE/G-man\|G-man]] using [Obsidian](https://obsidian.md/) as a note-taking app.
 
 From early 2026 up to June 2026, the main campaign of the [[Eurotour/Eurotour\|Eurotour]] finally concluded after 6 months of hard work across 11 sessions. This campaign was ran using [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]] as the mechanical base and [[Rules/Cyberpunk Universe\|Cyberpunk Universe]] as its setting (with the added [Eurosource](https://www.drivethrurpg.com/en/product/25405/eurosource-plus) and [Eurotour](https://www.drivethrurpg.com/en/product/127101/eurotour-danger-death-on-a-euro-rock-tour) books).
@@ -11,3 +11,4 @@ Starting in July 2026, [[Crew/The Crew\|The Crew]] has embarked on a new journey
 
 
 
+[^1]: [See more Digital Gardens here!]([https://vaults.obsidian-community.com/](https://vaults.obsidian-community.com/))
