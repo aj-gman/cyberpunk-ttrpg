@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/night-city/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/locations/night-city/","tags":["#location"],"dg-note-properties":{"tags":["#location"]}}
 ---
 
 #location

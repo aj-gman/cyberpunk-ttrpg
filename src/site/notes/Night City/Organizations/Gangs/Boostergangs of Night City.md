@@ -2,15 +2,7 @@
 {"dg-publish":true,"permalink":"/night-city/organizations/gangs/boostergangs-of-night-city/","dg-note-properties":{}}
 ---
 
-Shades of Blue (purple to cyan): Organized Crime (Organized)
-Shades of Red (pink to orange): Combat Gangs (Heresy)
-Shades of White (white to black with pale colors): Other gangs (Folk)
-
-Cult:
-Arasaka: White
-Militech: Yellow
-
-
+See them in [the Map](https://gman-cyberpunk.vercel.app/img/map-viewer/), under the Influence tab.
 ### [[Night City/Locations/Districts (2020)/City Center\|City Center]]
 - [[Night City/Organizations/Gangs/Street Queens\|Street Queens]] in Civic Center
 - [[Night City/Organizations/Gangs/Sun On Yee\|Sun On Yee]] in Corporate Center

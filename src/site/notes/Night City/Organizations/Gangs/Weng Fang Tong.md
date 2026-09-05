@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/gangs/weng-fang-tong/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/organizations/gangs/weng-fang-tong/","tags":["#boostergang"],"dg-note-properties":{"tags":["#boostergang"]}}
 ---
 
-#boostergang [[Night City/Locations/Night City\|Night City]]
+#boostergang [[Night City/Locations/Night City\|Night City]], part of the [[Triads\|Triads]]
 
 **Leader:** David Ling Po, which also serves as District Manager for [[Night City/Locations/Districts (2020)/Little Asia\|Little Asia]].
 
