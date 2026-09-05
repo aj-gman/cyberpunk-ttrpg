@@ -121,9 +121,24 @@
     /* LAYOUT */
     .main-grid {
       display: grid;
-      grid-template-columns: 1fr 340px;
+      grid-template-columns: minmax(240px, 1fr) 4px minmax(300px, 1fr);
       gap: 16px;
       align-items: start;
+    }
+
+    .split-divider {
+      align-self: stretch;
+      min-height: 100%;
+      background: var(--bg-color);
+      cursor: col-resize;
+      touch-action: none;
+      opacity: 0.8;
+      transition: opacity 0.2s, box-shadow 0.2s;
+    }
+    .split-divider:hover, .split-divider:focus-visible, .split-divider.dragging {
+      opacity: 1;
+      box-shadow: 0 0 10px rgba(84,193,230,0.7);
+      outline: none;
     }
 
     .desc-grid {
@@ -165,6 +180,7 @@
 
     @media (max-width: 900px) {
       .main-grid { grid-template-columns: 1fr; }
+      .split-divider { display: none; }
       .desc-grid { grid-template-columns: 1fr; }
     }
 
@@ -604,8 +620,8 @@
     /* Sheet wrapper */
     #sheet-wrapper { max-width: 1200px; margin: 0 auto; }
     #sheet-page2 { max-width: 1200px; margin: 0 auto; }
-    .dynamic-header a { color: inherit; text-decoration: none; transition: color 0.2s, text-shadow 0.2s; }
-    .dynamic-header a:hover { color: var(--accent-yellow) !important; text-shadow: 0 0 10px var(--accent-yellow), 0 0 20px rgba(254,232,1,0.4); }
+    .dynamic-header a, .triggers-section label a, .edges-section label a, .cyberpsy-title a { color: inherit; text-decoration: none; transition: color 0.2s, text-shadow 0.2s; }
+    .dynamic-header a:hover, .triggers-section label a:hover, .edges-section label a:hover, .cyberpsy-title a:hover { color: var(--accent-yellow) !important; text-shadow: 0 0 10px var(--accent-yellow), 0 0 20px rgba(254,232,1,0.4); }
 
     .page-break { page-break-before: always; break-before: page; }
     @media screen { .page-break { margin-top: 24px; padding-top: 24px; border-top: 1px dashed #333; } }
@@ -723,6 +739,8 @@
       </div>
     </div>
 
+    <div class="split-divider" id="main-grid-divider" role="separator" aria-label="Resize Trademarks and modules" aria-orientation="vertical" aria-valuemin="25" aria-valuemax="75" aria-valuenow="50" tabindex="0"></div>
+
     <!-- RIGHT COLUMN -->
     <div>
 
@@ -742,58 +760,8 @@
       <!-- CONDITIONS -->
       <div class="panel">
         <h2 class="dynamic-header" data-path="rules/nc-overdrive/damage">Conditions</h2>
-        <div class="conditions-grid">
-          <div class="condition-item"><div class="trauma-mark empty" onclick="toggleCondMark(this)"></div><span class="cond-label">Angry</span></div>
-          <div class="condition-item"><div class="trauma-mark empty" onclick="toggleCondMark(this)"></div><span class="cond-label">Dazed</span></div>
-          <div class="condition-item"><div class="trauma-mark empty" onclick="toggleCondMark(this)"></div><span class="cond-label">Exhausted</span></div>
-          <div class="condition-item"><div class="trauma-mark empty" onclick="toggleCondMark(this)"></div><span class="cond-label">Scared</span></div>
-          <div class="condition-item"><div class="trauma-mark empty" onclick="toggleCondMark(this)"></div><span class="cond-label">Restrained</span></div>
-          <div class="condition-item"><div class="trauma-mark empty" onclick="toggleCondMark(this)"></div><span class="cond-label">Weakened</span></div>
-        </div>
-        <div id="custom-conditions">
-          <div class="custom-condition">
-            <div class="trauma-mark empty" onclick="toggleCondMark(this)"></div>
-            <input type="text" placeholder="Custom condition…" style="font-size:11px;">
-          </div>
-          <div class="custom-condition">
-            <div class="trauma-mark empty" onclick="toggleCondMark(this)"></div>
-            <input type="text" placeholder="Custom condition…" style="font-size:11px;">
-          </div>
-        </div>
+        <div id="custom-conditions"></div>
         <button class="btn btn-small" onclick="addCondition()" style="margin-top:6px;">+ Condition</button>
-      </div>
-
-      <!-- CYBERPSYCHOSIS TRACKERS -->
-      <div class="panel" style="border-color:var(--purple);">
-        <h2 style="color:var(--purple);border-color:var(--purple);">Cyberpsychosis Trackers</h2>
-        <div class="tracker-row">
-          <span class="tracker-label" style="color:var(--danger-red);">Cyberpsychosis</span>
-          <div class="tracker-controls">
-            <button class="btn btn-small" onclick="changeTracker('cyberpsy', -1)" style="border-color:var(--danger-red);color:var(--danger-red);">−</button>
-            <span id="cyberpsy-value" class="tracker-value" style="color:var(--danger-red);">0</span>
-            <button class="btn btn-small" onclick="changeTracker('cyberpsy', 1)" style="border-color:var(--danger-red);color:var(--danger-red);">+</button>
-          </div>
-          <div class="tracker-bar"><div class="tracker-bar-fill danger" id="cyberpsy-bar" style="width:0%;"></div></div>
-        </div>
-        <div class="tracker-row">
-          <span class="tracker-label">Humanity</span>
-          <div class="tracker-controls">
-            <button class="btn btn-small" onclick="changeTracker('humanity', -1)">−</button>
-            <span id="humanity-value" class="tracker-value">10</span>
-            <button class="btn btn-small" onclick="changeTracker('humanity', 1)">+</button>
-          </div>
-          <div class="tracker-bar"><div class="tracker-bar-fill" id="humanity-bar" style="width:100%;"></div></div>
-        </div>
-        <div class="tracker-row">
-          <span class="tracker-label" style="color:var(--net-green);">Nerve Degeneration</span>
-          <div class="tracker-controls">
-            <button class="btn btn-small" onclick="changeTracker('nerve', -1)" style="border-color:var(--net-green);color:var(--net-green);">−</button>
-            <span id="nerve-value" class="tracker-value" style="color:var(--net-green);">0</span>
-            <button class="btn btn-small" onclick="changeTracker('nerve', 1)" style="border-color:var(--net-green);color:var(--net-green);">+</button>
-          </div>
-          <div class="tracker-bar"><div class="tracker-bar-fill" id="nerve-bar" style="width:0%;background:var(--net-green);"></div></div>
-        </div>
-        <div class="cyberpsy-warning" id="cyberpsy-warning">⚠ CYBERPSYCHOSIS THRESHOLD EXCEEDED</div>
       </div>
 
       <!-- TRAUMAS -->
@@ -812,8 +780,8 @@
       <div class="panel purple-border">
         <h2 class="dynamic-header" data-path="rules/nc-overdrive/trademarks">Flaws</h2>
         <div id="flaws-container">
-          <div class="flaw-row"><div class="flaw-mark" onclick="toggleFlaw(this)"></div><input type="text" placeholder="Flaw…"></div>
-          <div class="flaw-row" style="margin-top:5px;"><div class="flaw-mark" onclick="toggleFlaw(this)"></div><input type="text" placeholder="Flaw…"></div>
+          <div class="flaw-row"><input type="text" placeholder="Flaw…"></div>
+          <div class="flaw-row" style="margin-top:5px;"><input type="text" placeholder="Flaw…"></div>
         </div>
         <button class="btn btn-small" onclick="addFlaw()" style="margin-top:6px;">+ Flaw</button>
       </div>
@@ -862,6 +830,30 @@
     <div class="gear-section compact-2" id="cyberware-container">
       <!-- Cyberware items are built by JavaScript -->
     </div>
+  </div>
+
+  <!-- CYBERPSYCHOSIS TRACKERS -->
+  <div class="panel" style="border-color:var(--purple);">
+    <h2 class="cyberpsy-title" style="color:var(--purple);border-color:var(--purple);"><a href="https://gman-cyberpunk.vercel.app/rules/nc-overdrive/cyberware-nc-overdrive/" target="_blank" rel="noopener">Cyberpsychosis Trackers</a></h2>
+    <div class="tracker-row">
+      <span class="tracker-label" style="color:var(--danger-red);">Cyberpsychosis</span>
+      <div class="tracker-controls">
+        <button class="btn btn-small" onclick="changeTracker('cyberpsy', -1)" style="border-color:var(--danger-red);color:var(--danger-red);">−</button>
+        <span id="cyberpsy-value" class="tracker-value" style="color:var(--danger-red);">0</span>
+        <button class="btn btn-small" onclick="changeTracker('cyberpsy', 1)" style="border-color:var(--danger-red);color:var(--danger-red);">+</button>
+      </div>
+      <div class="tracker-bar"><div class="tracker-bar-fill danger" id="cyberpsy-bar" style="width:0%;"></div></div>
+    </div>
+    <div class="tracker-row">
+      <span class="tracker-label">Humanity</span>
+      <div class="tracker-controls">
+        <button class="btn btn-small" onclick="changeTracker('humanity', -1)">−</button>
+        <span id="humanity-value" class="tracker-value">10</span>
+        <button class="btn btn-small" onclick="changeTracker('humanity', 1)">+</button>
+      </div>
+      <div class="tracker-bar"><div class="tracker-bar-fill" id="humanity-bar" style="width:100%;"></div></div>
+    </div>
+    <div class="cyberpsy-warning" id="cyberpsy-warning">⚠ CYBERPSYCHOSIS THRESHOLD EXCEEDED</div>
   </div>
 
 </div><!-- end sheet-page2 -->
@@ -940,11 +932,11 @@
     body.innerHTML =
       '<div class="trademark-body-grid">' +
         '<div class="triggers-section">' +
-          '<label>&#9656; Triggers</label>' +
+          '<label><a href="https://gman-cyberpunk.vercel.app/rules/nc-overdrive/trademarks/triggers/" target="_blank" rel="noopener">&#9656; Triggers</a></label>' +
           '<textarea class="tm-triggers" rows="5" placeholder="Enter triggers, one per line&#8230;">' + escHtml((data.triggers || []).join('\n')) + '</textarea>' +
         '</div>' +
         '<div class="edges-section">' +
-          '<label>&#9672; Edges</label>' +
+          '<label><a href="https://gman-cyberpunk.vercel.app/rules/nc-overdrive/trademarks/edges/" target="_blank" rel="noopener">&#9672; Edges</a></label>' +
           '<textarea class="tm-edges" rows="5" placeholder="Enter edges, one per line&#8230;">' + escHtml((data.edges || []).join('\n')) + '</textarea>' +
         '</div>' +
       '</div>';
@@ -1128,15 +1120,11 @@
   // CONDITIONS SYSTEM
   // ═══════════════════════════════════════════════════════
 
-  function toggleCondMark(el) {
-    el.classList.toggle('empty');
-  }
-
   function addCondition() {
     const container = document.getElementById('custom-conditions');
     const div = document.createElement('div');
     div.className = 'custom-condition';
-    div.innerHTML = '<div class="trauma-mark empty" onclick="toggleCondMark(this)"></div><input type="text" placeholder="Custom condition&#8230;" style="font-size:11px;">';
+    div.innerHTML = '<input type="text" placeholder="Custom condition&#8230;" style="font-size:11px;">';
     container.appendChild(div);
   }
 
@@ -1157,14 +1145,10 @@
     const div = document.createElement('div');
     div.className = 'flaw-row';
     div.style.marginTop = '5px';
-    const mark = document.createElement('div');
-    mark.className = 'flaw-mark' + ((data && data.marked) ? ' marked' : '');
-    mark.onclick = function () { toggleFlaw(this); };
     const input = document.createElement('input');
     input.type = 'text';
     input.placeholder = 'Flaw…';
     input.value = (data && data.text) ? data.text : '';
-    div.appendChild(mark);
     div.appendChild(input);
     container.appendChild(div);
   }
@@ -1279,10 +1263,6 @@
     el.classList.toggle('empty');
   }
 
-  function toggleFlaw(el) {
-    el.classList.toggle('marked');
-  }
-
   // ═══════════════════════════════════════════════════════
   // AUTO-CLEANUP: remove empty rows on blur
   // ═══════════════════════════════════════════════════════
@@ -1386,8 +1366,7 @@
     // Cyberpsychosis trackers
     var trackers = {
       cyberpsy: parseInt(document.getElementById('cyberpsy-value').textContent) || 0,
-      humanity: parseInt(document.getElementById('humanity-value').textContent) || 0,
-      nerve: parseInt(document.getElementById('nerve-value').textContent) || 0
+      humanity: parseInt(document.getElementById('humanity-value').textContent) || 0
     };
 
     // Stash
@@ -1405,14 +1384,12 @@
     });
 
     const flaws = Array.from(document.querySelectorAll('#flaws-container .flaw-row')).map(function (row) {
-      const mark = row.querySelector('.flaw-mark');
       const input = row.querySelector('input');
       return {
-        marked: mark ? mark.classList.contains('marked') : false,
         text: input ? input.value : ''
       };
     }).filter(function (flaw) {
-      return flaw.text.trim() || flaw.marked;
+      return flaw.text.trim();
     });
 
     const eddies = Number(String(document.getElementById('eddies-value').value || '0').replace(/[^0-9-]/g, '')) || 0;
@@ -1432,25 +1409,14 @@
       hits: hits,
       trackers: trackers,
       conditions: {
-        angry: !document.querySelector('.conditions-grid .condition-item:nth-child(1) .trauma-mark') || !document.querySelector('.conditions-grid .condition-item:nth-child(1) .trauma-mark').classList.contains('empty'),
-        dazed: !document.querySelector('.conditions-grid .condition-item:nth-child(2) .trauma-mark') || !document.querySelector('.conditions-grid .condition-item:nth-child(2) .trauma-mark').classList.contains('empty'),
-        exhausted: !document.querySelector('.conditions-grid .condition-item:nth-child(3) .trauma-mark') || !document.querySelector('.conditions-grid .condition-item:nth-child(3) .trauma-mark').classList.contains('empty'),
-        scared: !document.querySelector('.conditions-grid .condition-item:nth-child(4) .trauma-mark') || !document.querySelector('.conditions-grid .condition-item:nth-child(4) .trauma-mark').classList.contains('empty'),
-        restrained: !document.querySelector('.conditions-grid .condition-item:nth-child(5) .trauma-mark') || !document.querySelector('.conditions-grid .condition-item:nth-child(5) .trauma-mark').classList.contains('empty'),
-        weakened: !document.querySelector('.conditions-grid .condition-item:nth-child(6) .trauma-mark') || !document.querySelector('.conditions-grid .condition-item:nth-child(6) .trauma-mark').classList.contains('empty'),
-        custom: Array.from(document.querySelectorAll('#custom-conditions .custom-condition')).map(function (row) {
-          return {
-            checked: row.querySelector('.trauma-mark') ? !row.querySelector('.trauma-mark').classList.contains('empty') : false,
-            text: row.querySelector('input') ? row.querySelector('input').value : ''
-          };
-        })
+        custom: Array.from(document.querySelectorAll('#custom-conditions .custom-condition input')).map(function (input) {
+          return input.value;
+        }).filter(function (text) { return text.trim(); })
       },
       traumas: traumas,
       flaws: flaws,
       flaw1: flaws[0] ? flaws[0].text : '',
       flaw2: flaws[1] ? flaws[1].text : '',
-      marked1: flaws[0] ? flaws[0].marked : false,
-      marked2: flaws[1] ? flaws[1].marked : false,
       stuntPoints: parseInt(document.getElementById('stunt-value').textContent) || 0,
       stash: stash,
       drive: { text: val('drive-text'), pips: drivePips },
@@ -1594,23 +1560,10 @@
       document.getElementById('humanity-value').textContent = Math.max(0, Math.min(trackerMax, t.humanity));
       document.getElementById('humanity-bar').style.width = (Math.max(0, Math.min(trackerMax, t.humanity)) / trackerMax * 100) + '%';
     }
-    if (typeof t.nerve === 'number') {
-      document.getElementById('nerve-value').textContent = Math.max(0, Math.min(trackerMax, t.nerve));
-      document.getElementById('nerve-bar').style.width = (Math.max(0, Math.min(trackerMax, t.nerve)) / trackerMax * 100) + '%';
-    }
     checkCyberpsyThreshold();
 
     // Conditions
     const c = data.conditions || {};
-    var condMarks = document.querySelectorAll('.conditions-grid .condition-item .trauma-mark');
-    if (condMarks.length >= 6) {
-      var condKeys = ['angry', 'dazed', 'exhausted', 'scared', 'restrained', 'weakened'];
-      condMarks.forEach(function (mark, i) {
-        if (i < condKeys.length) {
-          if (c[condKeys[i]]) mark.classList.remove('empty'); else mark.classList.add('empty');
-        }
-      });
-    }
     // Import custom conditions
     var customContainer = document.getElementById('custom-conditions');
     customContainer.innerHTML = '';
@@ -1618,31 +1571,10 @@
       c.custom.forEach(function (cc) {
         var div = document.createElement('div');
         div.className = 'custom-condition';
-        div.innerHTML = '<div class="trauma-mark' + (cc.checked ? '' : ' empty') + '" onclick="toggleCondMark(this)"></div><input type="text" placeholder="Custom condition&#8230;" style="font-size:11px;" value="' + escHtml(cc.text || '') + '">';
+        var text = typeof cc === 'string' ? cc : (cc.text || '');
+        div.innerHTML = '<input type="text" placeholder="Custom condition&#8230;" style="font-size:11px;" value="' + escHtml(text) + '">';
         customContainer.appendChild(div);
       });
-    }
-    // Backward compat: old format custom1/custom2
-    if (!c.custom && (c.custom1 || c.custom2)) {
-      if (c.custom1) {
-        var div = document.createElement('div');
-        div.className = 'custom-condition';
-        div.innerHTML = '<div class="trauma-mark' + (c.custom1.checked ? '' : ' empty') + '" onclick="toggleCondMark(this)"></div><input type="text" placeholder="Custom condition&#8230;" style="font-size:11px;" value="' + escHtml(c.custom1.text || '') + '">';
-        customContainer.appendChild(div);
-      }
-      if (c.custom2) {
-        var div = document.createElement('div');
-        div.className = 'custom-condition';
-        div.innerHTML = '<div class="trauma-mark' + (c.custom2.checked ? '' : ' empty') + '" onclick="toggleCondMark(this)"></div><input type="text" placeholder="Custom condition&#8230;" style="font-size:11px;" value="' + escHtml(c.custom2.text || '') + '">';
-        customContainer.appendChild(div);
-      }
-    }
-    // Ensure at least 2 custom condition slots
-    while (customContainer.children.length < 2) {
-      var div = document.createElement('div');
-      div.className = 'custom-condition';
-      div.innerHTML = '<div class="trauma-mark empty" onclick="toggleCondMark(this)"></div><input type="text" placeholder="Custom condition&#8230;" style="font-size:11px;">';
-      customContainer.appendChild(div);
     }
 
     // Traumas
@@ -1910,6 +1842,63 @@
     btnAdd.onclick = function () { addCyberware({}); };
     btnWrap.appendChild(btnAdd);
     container.parentNode.insertBefore(btnWrap, container.nextSibling);
+  })();
+
+  (function setupMainGridDivider() {
+    var grid = document.querySelector('.main-grid');
+    var divider = document.getElementById('main-grid-divider');
+    if (!grid || !divider) return;
+
+    var minLeft = 240;
+    var minRight = 300;
+    var dividerWidth = 4;
+    var gap = 16;
+
+    function isDesktop() {
+      return window.matchMedia('(min-width: 901px)').matches;
+    }
+
+    function setSplitFromClientX(clientX) {
+      if (!isDesktop()) return;
+      var rect = grid.getBoundingClientRect();
+      var available = rect.width - dividerWidth - (gap * 2);
+      var leftWidth = Math.max(minLeft, Math.min(available - minRight, clientX - rect.left - gap));
+      var percentage = Math.round(leftWidth / available * 100);
+      grid.style.gridTemplateColumns = leftWidth + 'px ' + dividerWidth + 'px minmax(0, 1fr)';
+      divider.setAttribute('aria-valuenow', percentage);
+    }
+
+    divider.addEventListener('pointerdown', function (event) {
+      if (!isDesktop()) return;
+      divider.classList.add('dragging');
+      divider.setPointerCapture(event.pointerId);
+      setSplitFromClientX(event.clientX);
+    });
+
+    divider.addEventListener('pointermove', function (event) {
+      if (divider.classList.contains('dragging')) setSplitFromClientX(event.clientX);
+    });
+
+    divider.addEventListener('pointerup', function (event) {
+      divider.classList.remove('dragging');
+      if (divider.hasPointerCapture(event.pointerId)) divider.releasePointerCapture(event.pointerId);
+    });
+
+    divider.addEventListener('keydown', function (event) {
+      if (!isDesktop()) return;
+      var current = Number(divider.getAttribute('aria-valuenow')) || 50;
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+        event.preventDefault();
+        var delta = event.key === 'ArrowLeft' ? -2 : 2;
+        var rect = grid.getBoundingClientRect();
+        var available = rect.width - dividerWidth - (gap * 2);
+        setSplitFromClientX(rect.left + gap + (available * (current + delta) / 100));
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      if (!isDesktop()) grid.style.gridTemplateColumns = '';
+    });
   })();
 </script>
 <script>
