@@ -6,6 +6,8 @@
 #### 05.09
 - Updated #ideology, changed up fashion association
 - Did initial write-up for the fashions: [[Night City/Beliefs/Fashion/Neomilitarism\|Neomilitarism]], [[Night City/Beliefs/Fashion/Neokitsch\|Neokitsch]], [[Night City/Beliefs/Fashion/Kitsch\|Kitsch]], [[Night City/Beliefs/Fashion/Entropism\|Entropism]]
+- Update [NCOverdrive Character Sheet](https://gman-cyberpunk.vercel.app/img/NCO-sheet.html) to 1.2.0.0 ([see GitHub repo for more info](https://github.com/aj-gman/cyberpunk-ttrpg/commit/6a83423e0d207666c4d65bcfd2b60a523d0c9ee5))
+- Introduced the rules for [[Rules/NCOverdrive/Cyberware (NCOverdrive)\|Cyberware (NCOverdrive)]], as well as sheet implementation
 #### 04.09
 - Added #ideology : full write-up for [[Night City/Beliefs/Idealism\|Idealism]], half-write-up for [[Night City/Beliefs/Insurrectionism\|Insurrectionism]], [[Night City/Beliefs/Parallelism\|Parallelism]], [[Night City/Beliefs/Realism\|Realism]]
 - Added #stratum : needs write-up for all
