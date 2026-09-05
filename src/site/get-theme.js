@@ -1,4 +1,4 @@
-require("dotenv").config({ path: [".env.local", ".env"] });
+require("dotenv").config();
 const axios = require("axios");
 const fs = require("fs");
 const crypto = require("crypto");
