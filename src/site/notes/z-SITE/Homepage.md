@@ -11,4 +11,4 @@ Starting in July 2026, [[Crew/The Crew\|The Crew]] has embarked on a new journey
 
 
 
-[^1]: [See more Digital Gardens here!]([https://vaults.obsidian-community.com/](https://vaults.obsidian-community.com/))
+[^1]: [See more Digital Gardens here!](https://vaults.obsidian-community.com/)
