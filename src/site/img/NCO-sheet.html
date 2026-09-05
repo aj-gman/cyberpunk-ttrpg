@@ -143,10 +143,25 @@
 
     .desc-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(240px, 1fr) 4px minmax(240px, 1fr);
       gap: 16px;
       align-items: stretch;
       margin-bottom: 16px;
+    }
+
+    .desc-divider {
+      align-self: stretch;
+      min-height: 100%;
+      background: var(--bg-color);
+      cursor: col-resize;
+      touch-action: none;
+      opacity: 0.8;
+      transition: opacity 0.2s, box-shadow 0.2s;
+    }
+    .desc-divider:hover, .desc-divider:focus-visible, .desc-divider.dragging {
+      opacity: 1;
+      box-shadow: 0 0 10px rgba(84,193,230,0.7);
+      outline: none;
     }
 
     .desc-grid .panel {
@@ -182,6 +197,8 @@
       .main-grid { grid-template-columns: 1fr; }
       .split-divider { display: none; }
       .desc-grid { grid-template-columns: 1fr; }
+      .desc-divider { display: none; }
+      .trauma-flaw-grid { grid-template-columns: 1fr; }
     }
 
     /* INPUTS */
@@ -225,6 +242,11 @@
     .nickname-row label { color: var(--neon-pink); font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; white-space: nowrap; }
     .nickname-row input { background: transparent; border: none; color: #fff; font-size: 20px; font-weight: 700; font-family: 'Lexend', monospace; flex: 1; padding: 0; }
     .nickname-row input:focus { outline: none; border-bottom: 1px solid var(--neon-pink); }
+    .top-tracker { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+    .top-tracker-label { color: var(--neon-cyan); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .top-tracker-value { color: var(--accent-yellow); font-size: 16px; font-weight: 700; min-width: 24px; text-align: center; }
+    .top-hits-pips { display: flex; gap: 3px; }
+    .top-hits-pips .hit-pip { width: 16px; height: 16px; font-size: 10px; }
 
     /* TRADEMARKS */
     .trademark-block {
@@ -326,18 +348,17 @@
     .exp-divider { color: var(--dim); font-size: 18px; font-weight: 300; }
 
     /* CONDITIONS */
-    .conditions-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 6px; }
-    .condition-item { display: flex; align-items: center; gap: 6px; }
-    .cond-mark {
+    .condition-pip {
       width: 14px; height: 14px;
-      background: var(--accent-yellow);
-      border: 1px solid var(--accent-yellow);
-      box-shadow: 0 0 4px var(--accent-yellow);
+      border: 1px solid #444;
+      background: transparent;
       flex-shrink: 0;
       cursor: pointer;
       transition: all 0.15s;
     }
-    .cond-mark.empty { background: transparent; box-shadow: none; border-color: #444; }
+    .condition-pip.blue { background: var(--neon-cyan); border-color: var(--neon-cyan); box-shadow: 0 0 4px var(--neon-cyan); }
+    .condition-pip.red { background: var(--neon-pink); border-color: var(--neon-pink); box-shadow: 0 0 4px var(--neon-pink); }
+    .condition-item { display: flex; align-items: center; gap: 6px; }
     .cond-label {
       font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 1px;
       font-family: 'Lexend', monospace; user-select: none;
@@ -348,13 +369,16 @@
     .conditions-add-row { display: flex; gap: 6px; align-items: center; }
     .conditions-add-row input[type="text"] { flex: 1; font-size: 11px; }
 
+    .trauma-flaw-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+    .trauma-flaw-grid .panel { margin-bottom: 0; }
+
     /* TRAUMAS */
     .trauma-row { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
     .trauma-mark {
       width: 14px; height: 14px;
-      background: var(--accent-yellow);
-      border: 1px solid var(--accent-yellow);
-      box-shadow: 0 0 4px var(--accent-yellow);
+      background: var(--purple);
+      border: 1px solid var(--purple);
+      box-shadow: 0 0 4px var(--purple);
       flex-shrink: 0;
       cursor: pointer;
       transition: all 0.15s;
@@ -514,6 +538,7 @@
     /* SECTION ACCENT BORDER */
     .panel.pink-border { border-color: var(--neon-pink); }
     .panel.yellow-border { border-color: var(--accent-yellow); }
+    .panel.red-border { border-color: var(--danger-red); }
     .panel.purple-border { border-color: var(--purple); }
 
     /* STASH SEPARATOR */
@@ -655,7 +680,7 @@
     <div class="nco-logo">
       <span><span class="logo-neon">NIGHT </span><span class="logo-city">CITY</span></span>
       <span class="logo-over">OVERDRIVE</span>
-      <span class="logo-version">v1.1.1.0</span>
+      <span class="logo-version">v1.2.0.0</span>
     </div>
     <span style="color:#444;font-size:20px;">|</span>
     <span style="color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:1px;">Character Sheet</span>
@@ -687,20 +712,26 @@
       <input type="text" id="eddies-value" value="0" style="font-size:16px;font-weight:700;color:var(--accent-yellow);width:50px;text-align:center;background:none;border:none;padding:0;">
     </div>
     <span style="color:#444;font-size:16px;">|</span>
-
-    <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;">
-      <span class="dynamic-header" data-path="rules/nc-overdrive" style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Stunts</span>
-      <button class="btn btn-small" onclick="changeStunt(-1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">−</button>
-      <span id="stunt-value" style="font-size:16px;font-weight:700;color:var(--accent-yellow);min-width:24px;text-align:center;">0</span>
-      <button class="btn btn-small" onclick="changeStunt(1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">+</button>
+    <div class="top-tracker">
+      <span class="top-tracker-label dynamic-header" data-path="rules/nc-overdrive/">Stunts</span>
+      <button class="btn btn-small" onclick="changeStunt(-1)">−</button>
+      <span id="stunt-value" class="top-tracker-value">0</span>
+      <button class="btn btn-small" onclick="changeStunt(1)">+</button>
     </div>
     <span style="color:#444;font-size:16px;">|</span>
-
-    <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;">
-      <span class="dynamic-header" data-path="rules/nc-overdrive" style="color:var(--neon-cyan);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">XP</span>
-      <button class="btn btn-small" onclick="changeExp(-1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">−</button>
-      <span id="exp-value" style="font-size:16px;font-weight:700;color:var(--accent-yellow);min-width:24px;text-align:center;">0</span>
-      <button class="btn btn-small" onclick="changeExp(1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);padding:2px 6px;">+</button>
+    <div class="top-tracker">
+      <span class="top-tracker-label dynamic-header" data-path="rules/nc-overdrive/">XP</span>
+      <button class="btn btn-small" onclick="changeExp(-1)">−</button>
+      <span id="exp-value" class="top-tracker-value">0</span>
+      <button class="btn btn-small" onclick="changeExp(1)">+</button>
+    </div>
+    <span style="color:#444;font-size:16px;">|</span>
+    <div class="top-tracker">
+      <span class="top-tracker-label dynamic-header" data-path="rules/nc-overdrive/damage">Hits</span>
+      <button class="btn btn-small" onclick="changeHits(-1)">−</button>
+      <span id="hits-count" class="top-tracker-value">3</span>
+      <button class="btn btn-small" onclick="changeHits(1)">+</button>
+      <div class="top-hits-pips" id="hits-pips"></div>
     </div>
   </div>
 
@@ -717,6 +748,7 @@
         <textarea id="personality" rows="3" placeholder="Who are you? Attitude, mannerisms, vibe…"></textarea>
       </div>
     </div>
+    <div class="desc-divider" id="desc-grid-divider" role="separator" aria-label="Resize appearance and Drive" aria-orientation="vertical" aria-valuemin="25" aria-valuemax="75" aria-valuenow="50" tabindex="0"></div>
     <!-- RIGHT COLUMN: Drive (stretches to match combined height) -->
     <div>
       <div class="panel">
@@ -744,19 +776,6 @@
     <!-- RIGHT COLUMN -->
     <div>
 
-      <!-- HITS -->
-      <div class="panel pink-border">
-        <div class="hits-title-row">
-          <h2 class="dynamic-header" data-path="rules/nc-overdrive/damage" style="border-bottom:none;margin-bottom:0;padding-bottom:0;">Hits</h2>
-          <div class="hits-counter">
-            <button class="btn btn-small" onclick="changeHits(-1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);">−</button>
-            <span id="hits-count" class="hits-counter-label">3</span>
-            <button class="btn btn-small" onclick="changeHits(1)" style="border-color:var(--neon-cyan);color:var(--neon-cyan);">+</button>
-          </div>
-        </div>
-        <div class="hits-row" id="hits-pips"></div>
-      </div>
-
       <!-- CONDITIONS -->
       <div class="panel">
         <h2 class="dynamic-header" data-path="rules/nc-overdrive/damage">Conditions</h2>
@@ -764,8 +783,9 @@
         <button class="btn btn-small" onclick="addCondition()" style="margin-top:6px;">+ Condition</button>
       </div>
 
+      <div class="trauma-flaw-grid">
       <!-- TRAUMAS -->
-      <div class="panel yellow-border">
+      <div class="panel red-border">
         <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Traumas</h2>
         <div id="traumas-container">
           <div class="trauma-row"><div class="trauma-mark empty" onclick="toggleTrauma(this)"></div><input type="text" placeholder="Trauma description…"></div>
@@ -784,6 +804,7 @@
           <div class="flaw-row" style="margin-top:5px;"><input type="text" placeholder="Flaw…"></div>
         </div>
         <button class="btn btn-small" onclick="addFlaw()" style="margin-top:6px;">+ Flaw</button>
+      </div>
       </div>
 
       <!-- (STUNTS & XP moved to Handle row) -->
@@ -1124,8 +1145,23 @@
     const container = document.getElementById('custom-conditions');
     const div = document.createElement('div');
     div.className = 'custom-condition';
-    div.innerHTML = '<input type="text" placeholder="Custom condition&#8230;" style="font-size:11px;">';
+    div.innerHTML = '<div class="condition-pip" data-state="off" onclick="cycleConditionPip(this)" role="button" tabindex="0" aria-label="Condition severity: off"></div><input type="text" placeholder="Custom condition&#8230;" style="font-size:11px;">';
+    div.querySelector('.condition-pip').addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        cycleConditionPip(this);
+      }
+    });
     container.appendChild(div);
+  }
+
+  function cycleConditionPip(pip) {
+    var states = ['off', 'blue', 'red'];
+    var nextState = states[(states.indexOf(pip.dataset.state || 'off') + 1) % states.length];
+    pip.dataset.state = nextState;
+    pip.classList.remove('blue', 'red');
+    if (nextState !== 'off') pip.classList.add(nextState);
+    pip.setAttribute('aria-label', 'Condition severity: ' + nextState);
   }
 
   // ═══════════════════════════════════════════════════════
@@ -1183,17 +1219,41 @@
   // CYBERPSYCHOSIS TRACKERS
   // ═══════════════════════════════════════════════════════
   const trackerMax = 10;
+  const humanityBaseMax = 10;
   const cyberpsyMax = 20;
+
+  function getActiveTraumaCount() {
+    return document.querySelectorAll('#traumas-container .trauma-mark:not(.empty)').length;
+  }
+
+  function getHumanityMax() {
+    return Math.max(0, humanityBaseMax - getActiveTraumaCount());
+  }
+
+  function updateHumanityLimit() {
+    var humanityEl = document.getElementById('humanity-value');
+    var humanityBar = document.getElementById('humanity-bar');
+    var humanityMax = getHumanityMax();
+    var humanity = Math.min(humanityMax, Math.max(0, parseInt(humanityEl.textContent) || 0));
+    var traumaSlots = Math.min(humanityBaseMax, getActiveTraumaCount());
+    humanityEl.textContent = humanity;
+    var pinkStart = 100 - traumaSlots / humanityBaseMax * 100;
+    humanityBar.parentNode.style.background = 'linear-gradient(to right, #111 0 ' + pinkStart + '%, var(--neon-pink) ' + pinkStart + '% 100%)';
+    humanityBar.style.width = humanityBaseMax ? (humanity / humanityBaseMax * 100) + '%' : '0%';
+    checkCyberpsyThreshold();
+  }
 
   function changeTracker(type, delta) {
     var el = document.getElementById(type + '-value');
     var val = parseInt(el.textContent) || 0;
-    var valueMax = type === 'cyberpsy' ? cyberpsyMax : trackerMax;
+    var valueMax = type === 'cyberpsy' ? cyberpsyMax : getHumanityMax();
     val = Math.max(0, Math.min(valueMax, val + delta));
     el.textContent = val;
     // Update bar fill
     var bar = document.getElementById(type + '-bar');
-    bar.style.width = Math.min(100, val / trackerMax * 100) + '%';
+    var barMax = type === 'humanity' ? getHumanityMax() : trackerMax;
+    bar.style.width = barMax ? Math.min(100, val / barMax * 100) + '%' : '0%';
+    if (type === 'humanity') updateHumanityLimit();
     // Check cyberpsy threshold
     checkCyberpsyThreshold();
   }
@@ -1261,6 +1321,7 @@
   // ═══════════════════════════════════════════════════════
   function toggleTrauma(el) {
     el.classList.toggle('empty');
+    updateHumanityLimit();
   }
 
   // ═══════════════════════════════════════════════════════
@@ -1410,8 +1471,9 @@
       trackers: trackers,
       conditions: {
         custom: Array.from(document.querySelectorAll('#custom-conditions .custom-condition input')).map(function (input) {
-          return input.value;
-        }).filter(function (text) { return text.trim(); })
+          var pip = input.parentNode.querySelector('.condition-pip');
+          return { text: input.value, state: pip ? (pip.dataset.state || 'off') : 'off' };
+        }).filter(function (condition) { return condition.text.trim() || condition.state !== 'off'; })
       },
       traumas: traumas,
       flaws: flaws,
@@ -1557,10 +1619,8 @@
       document.getElementById('cyberpsy-bar').style.width = Math.min(100, cyberpsyValue / trackerMax * 100) + '%';
     }
     if (typeof t.humanity === 'number') {
-      document.getElementById('humanity-value').textContent = Math.max(0, Math.min(trackerMax, t.humanity));
-      document.getElementById('humanity-bar').style.width = (Math.max(0, Math.min(trackerMax, t.humanity)) / trackerMax * 100) + '%';
+      document.getElementById('humanity-value').textContent = Math.max(0, Math.min(humanityBaseMax, t.humanity));
     }
-    checkCyberpsyThreshold();
 
     // Conditions
     const c = data.conditions || {};
@@ -1572,7 +1632,14 @@
         var div = document.createElement('div');
         div.className = 'custom-condition';
         var text = typeof cc === 'string' ? cc : (cc.text || '');
-        div.innerHTML = '<input type="text" placeholder="Custom condition&#8230;" style="font-size:11px;" value="' + escHtml(text) + '">';
+        var state = typeof cc === 'string' ? 'off' : (cc.state || (cc.checked ? 'blue' : 'off'));
+        div.innerHTML = '<div class="condition-pip ' + (state === 'blue' || state === 'red' ? state : '') + '" data-state="' + (state === 'blue' || state === 'red' ? state : 'off') + '" onclick="cycleConditionPip(this)" role="button" tabindex="0" aria-label="Condition severity: ' + (state || 'off') + '"></div><input type="text" placeholder="Custom condition&#8230;" style="font-size:11px;" value="' + escHtml(text) + '">';
+        div.querySelector('.condition-pip').addEventListener('keydown', function (event) {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            cycleConditionPip(this);
+          }
+        });
         customContainer.appendChild(div);
       });
     }
@@ -1587,6 +1654,7 @@
         if (inp) inp.value = t.text || '';
       }
     });
+    updateHumanityLimit();
 
     // Flaws
     const flawContainer = document.getElementById('flaws-container');
@@ -1844,13 +1912,11 @@
     container.parentNode.insertBefore(btnWrap, container.nextSibling);
   })();
 
-  (function setupMainGridDivider() {
-    var grid = document.querySelector('.main-grid');
-    var divider = document.getElementById('main-grid-divider');
+  function setupSplitDivider(gridSelector, dividerId, minLeft, minRight) {
+    var grid = document.querySelector(gridSelector);
+    var divider = document.getElementById(dividerId);
     if (!grid || !divider) return;
 
-    var minLeft = 240;
-    var minRight = 300;
     var dividerWidth = 4;
     var gap = 16;
 
@@ -1899,7 +1965,10 @@
     window.addEventListener('resize', function () {
       if (!isDesktop()) grid.style.gridTemplateColumns = '';
     });
-  })();
+  }
+
+  setupSplitDivider('.main-grid', 'main-grid-divider', 240, 300);
+  setupSplitDivider('.desc-grid', 'desc-grid-divider', 240, 240);
 </script>
 <script>
   const domain = "https://gman-cyberpunk.vercel.app/";
