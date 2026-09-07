@@ -1,8 +1,11 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#ideology","#stratum","#news","#role"],"dg-note-properties":{"tags":["#ideology","#stratum","#news","#role"]}}
 ---
 
 ### September 2026
+#### 07.09
+- Changed site theme from ITS to cybrcore
+- Changed homepage to a header first for easier navigation
 #### 05.09
 - Updated #ideology, changed up fashion association
 - Did initial write-up for the fashions: [[Night City/Beliefs/Fashion/Neomilitarism\|Neomilitarism]], [[Night City/Beliefs/Fashion/Neokitsch\|Neokitsch]], [[Night City/Beliefs/Fashion/Kitsch\|Kitsch]], [[Night City/Beliefs/Fashion/Entropism\|Entropism]]
