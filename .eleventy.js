@@ -3,7 +3,7 @@ const fs = require("fs");
 const matter = require("gray-matter");
 // See src/helpers/matterOptions.js for why frontmatter needs a custom YAML engine.
 const matterOptions = require("./src/helpers/matterOptions");
-const faviconsPlugin = require("eleventy-plugin-gen-favicons");
+const generateFavicons = require("eleventy-plugin-gen-favicons/favicon-gen");
 const normalizeFavicon = require("./src/site/normalize-favicon.js");
 const { convertMdHrefs } = require("./src/helpers/linkUtils");
 const nodePath = require("path");
@@ -850,6 +850,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.on("eleventy.before", () => {
     normalizeFavicon(FAVICON_SOURCE, FAVICON_NORMALIZED);
     anchorAttributesCache.clear();
+    return generateFavicons(FAVICON_NORMALIZED, "dist", {
+      appleIconBgColor: "#123",
+    });
   });
   eleventyConfig.on("eleventy.after", async () => {
     if (pendingImageJobs.length > 0) {
@@ -860,7 +863,6 @@ module.exports = function(eleventyConfig) {
     }
   });
   eleventyConfig.addWatchTarget(FAVICON_SOURCE);
-  eleventyConfig.addPlugin(faviconsPlugin, { outputDir: "dist" });
   eleventyConfig.addPlugin(tocPlugin, {
     ul: true,
     tags: ["h1", "h2", "h3", "h4", "h5", "h6"],

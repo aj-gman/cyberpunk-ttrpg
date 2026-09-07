@@ -70,7 +70,7 @@
     opacity: 0.85;
   }
 
-  .glitch-home-title {
+  .glitch-title {
     position: relative;
     margin: 0;
     color: #f2f2f5;
@@ -84,8 +84,16 @@
     animation: glitch-flicker 6s infinite;
   }
 
-  .glitch-home-title::before,
-  .glitch-home-title::after {
+  .glitch-title .glitch-line {
+    position: relative;
+    display: block;
+    width: max-content;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .glitch-title .glitch-line::before,
+  .glitch-title .glitch-line::after {
     content: attr(data-text);
     position: absolute;
     top: 0;
@@ -96,11 +104,10 @@
     clip-path: inset(0 0 0 0);
   }
 
-  .glitch-home-title::before { color: var(--glitch-pink); mix-blend-mode: screen; animation: glitch-top 4.5s infinite steps(1); }
-  .glitch-home-title::after { color: var(--glitch-cyan); mix-blend-mode: screen; animation: glitch-bottom 4.5s infinite steps(1); }
+  .glitch-title .glitch-line::before { color: var(--glitch-pink); mix-blend-mode: screen; animation: glitch-top 4.5s infinite steps(1); }
+  .glitch-title .glitch-line::after { color: var(--glitch-cyan); mix-blend-mode: screen; animation: glitch-bottom 4.5s infinite steps(1); }
 
-  .glitch-home-title span {
-    display: block;
+  .glitch-title .line2 {
     margin-top: 0.15em;
     color: var(--glitch-pink);
     font-size: 0.55em;
@@ -132,7 +139,27 @@
     transition: color 0.2s, background 0.2s;
   }
 
-  .glitch-home-action:hover, .glitch-home-action:focus-visible { background: var(--glitch-cyan); color: var(--glitch-bg); }
+  .glitch-home-action::before,
+  .glitch-home-action::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+    clip-path: inset(0 0 0 0);
+  }
+
+  .glitch-home-action:hover,
+  .glitch-home-action:focus-visible { background: var(--glitch-cyan); color: var(--glitch-bg); }
+  .glitch-home-action:hover::before,
+  .glitch-home-action:focus-visible::before,
+  .glitch-home-action:hover::after,
+  .glitch-home-action:focus-visible::after { opacity: 1; animation: button-glitch 0.35s steps(1) infinite; }
+  .glitch-home-action:hover::before, .glitch-home-action:focus-visible::before { color: var(--glitch-pink); transform: translate(2px, 0); }
+  .glitch-home-action:hover::after, .glitch-home-action:focus-visible::after { color: var(--glitch-cyan); transform: translate(-2px, 0); }
   .glitch-home-action.alt { border-color: var(--glitch-pink); color: var(--glitch-pink); }
   .glitch-home-action.alt:hover, .glitch-home-action.alt:focus-visible { background: var(--glitch-pink); color: var(--glitch-bg); }
 
@@ -158,8 +185,17 @@
     98% { text-shadow: 0 0 8px rgba(255, 46, 109, 0.35), 0 0 18px rgba(38, 242, 230, 0.2); }
   }
 
+  @keyframes button-glitch {
+    0%, 100% { clip-path: inset(0 0 0 0); }
+    25% { clip-path: inset(15% 0 55% 0); }
+    50% { clip-path: inset(65% 0 10% 0); }
+    75% { clip-path: inset(40% 0 35% 0); }
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .glitch-home-title, .glitch-home-title::before, .glitch-home-title::after { animation: none; }
+    .glitch-title, .glitch-title .glitch-line::before, .glitch-title .glitch-line::after,
+    .glitch-home-action:hover::before, .glitch-home-action:hover::after,
+    .glitch-home-action:focus-visible::before, .glitch-home-action:focus-visible::after { animation: none; }
   }
 
   @media (max-width: 600px) {
@@ -185,10 +221,13 @@
 
 <section class="glitch-home" aria-labelledby="glitch-home-title">
   <p class="glitch-home-kicker">A DIGITAL GARDEN &middot; NIGHT CITY &amp; BEYOND</p>
-  <h1 class="glitch-home-title" id="glitch-home-title" data-text="G-MAN'S">G-MAN'S<span>CYBERPUNK</span></h1>
+  <h1 class="glitch-title" id="glitch-home-title">
+    <span class="glitch-line" data-text="G-MAN'S">G-MAN'S</span>
+    <span class="glitch-line line2" data-text="CYBERPUNK">CYBERPUNK</span>
+  </h1>
   <p class="glitch-home-subhead">An archive of stories, rules, and lore gathered across TTRPG sessions, from the Eurotour to the streets of Night City.</p>
   <div class="glitch-home-actions">
-    <a class="glitch-home-action" href="/homepage/">Explore Night City</a>
-    <a class="glitch-home-action alt" href="/img/NCO-sheet.html">Character Sheets</a>
+    <a class="glitch-home-action" data-text="Explore Night City" href="/homepage/">Explore Night City</a>
+    <a class="glitch-home-action alt" data-text="Character Sheets" href="/img/NCO-sheet.html">Character Sheets</a>
   </div>
 </section>
