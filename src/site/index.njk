@@ -1,20 +1,143 @@
-<div class="dg-fallback-index">
-  {% if publishedNotes.length > 0 %}
-    <p class="dg-fallback-index-intro">{{ publishedNotes.length }} note{% if publishedNotes.length != 1 %}s{% endif %} in this garden.</p>
-    <ul class="dg-fallback-index-list">
-      {% for note in publishedNotes %}
-        <li><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p class="dg-fallback-index-intro">Nothing has been published here yet.</p>
-  {% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Chakra+Petch:wght@500;700&display=swap" rel="stylesheet">
 
-  <aside class="dg-fallback-index-hint">
-    <p>
-      <strong>Tending this garden?</strong> It has no home page yet, so visitors land on this list.
-      In Obsidian, open the note you want as your front page, run the command
-      <em>Set as Garden Home Page</em>, then publish it.
-    </p>
-  </aside>
-</div>
+<style>
+  .glitch-home {
+    --glitch-pink: #ff2e6d;
+    --glitch-cyan: #26f2e6;
+    --glitch-bg: #050507;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    overflow: hidden;
+    background-color: var(--glitch-bg);
+    background-image: linear-gradient(rgba(38, 242, 230, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(38, 242, 230, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    text-align: center;
+    font-family: "Chakra Petch", sans-serif;
+  }
+
+  .glitch-home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 60% 40% at 30% 20%, rgba(255, 46, 109, 0.1), transparent 70%), radial-gradient(ellipse 60% 40% at 70% 80%, rgba(38, 242, 230, 0.1), transparent 70%);
+  }
+
+  .glitch-home > * { position: relative; }
+
+  .glitch-home-kicker {
+    margin: 0 0 1.2rem;
+    color: var(--glitch-cyan);
+    font-family: "Rajdhani", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    opacity: 0.85;
+  }
+
+  .glitch-home-title {
+    position: relative;
+    margin: 0;
+    color: #f2f2f5;
+    font-family: "Rajdhani", sans-serif;
+    font-size: clamp(2.8rem, 8vw, 6rem);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    animation: glitch-flicker 6s infinite;
+  }
+
+  .glitch-home-title::before,
+  .glitch-home-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background: var(--glitch-bg);
+    clip-path: inset(0 0 0 0);
+  }
+
+  .glitch-home-title::before { color: var(--glitch-pink); mix-blend-mode: screen; animation: glitch-top 4.5s infinite steps(1); }
+  .glitch-home-title::after { color: var(--glitch-cyan); mix-blend-mode: screen; animation: glitch-bottom 4.5s infinite steps(1); }
+
+  .glitch-home-title span {
+    display: block;
+    margin-top: 0.15em;
+    color: var(--glitch-pink);
+    font-size: 0.55em;
+  }
+
+  .glitch-home-subhead {
+    max-width: 520px;
+    margin: 2rem auto 0;
+    color: #a9adb8;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  .glitch-home-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2.5rem; }
+
+  .glitch-home-action {
+    position: relative;
+    padding: 0.85rem 1.6rem;
+    border: 1px solid var(--glitch-cyan);
+    color: var(--glitch-cyan);
+    font-family: "Rajdhani", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .glitch-home-action:hover, .glitch-home-action:focus-visible { background: var(--glitch-cyan); color: var(--glitch-bg); }
+  .glitch-home-action.alt { border-color: var(--glitch-pink); color: var(--glitch-pink); }
+  .glitch-home-action.alt:hover, .glitch-home-action.alt:focus-visible { background: var(--glitch-pink); color: var(--glitch-bg); }
+
+  @keyframes glitch-top {
+    0%, 92%, 100% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+    93% { clip-path: inset(10% 0 60% 0); transform: translate(3px, -2px); }
+    94% { clip-path: inset(60% 0 5% 0); transform: translate(-4px, 1px); }
+    95% { clip-path: inset(30% 0 40% 0); transform: translate(2px, 2px); }
+    96% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+  }
+
+  @keyframes glitch-bottom {
+    0%, 91%, 100% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+    92% { clip-path: inset(45% 0 20% 0); transform: translate(-3px, 2px); }
+    93% { clip-path: inset(5% 0 75% 0); transform: translate(4px, -1px); }
+    94% { clip-path: inset(70% 0 5% 0); transform: translate(-2px, -2px); }
+    95% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+  }
+
+  @keyframes glitch-flicker {
+    0%, 96%, 100% { text-shadow: 0 0 8px rgba(255, 46, 109, 0.35), 0 0 18px rgba(38, 242, 230, 0.2); }
+    97% { text-shadow: none; }
+    98% { text-shadow: 0 0 8px rgba(255, 46, 109, 0.35), 0 0 18px rgba(38, 242, 230, 0.2); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .glitch-home-title, .glitch-home-title::before, .glitch-home-title::after { animation: none; }
+  }
+</style>
+
+<section class="glitch-home" aria-labelledby="glitch-home-title">
+  <p class="glitch-home-kicker">A DIGITAL GARDEN &middot; NIGHT CITY &amp; BEYOND</p>
+  <h1 class="glitch-home-title" id="glitch-home-title" data-text="G-MAN'S">G-MAN'S<span>CYBERPUNK</span></h1>
+  <p class="glitch-home-subhead">An archive of stories, rules, and lore gathered across TTRPG sessions, from the Eurotour to the streets of Night City.</p>
+  <div class="glitch-home-actions">
+    <a class="glitch-home-action" href="/homepage/">Explore Night City</a>
+    <a class="glitch-home-action alt" href="/img/NCO-sheet.html">Character Sheets</a>
+  </div>
+</section>

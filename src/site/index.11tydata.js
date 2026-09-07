@@ -1,8 +1,6 @@
 require("dotenv").config();
-const path = require("path");
 const settings = require("../helpers/constants");
 const pluginLoader = require("../helpers/pluginLoader");
-const { hasHomePageNote } = require("../helpers/homePage");
 
 // Fallback front page, rendered only when no published note is marked as the
 // garden's home page (`dg-home` in Obsidian, which the plugin turns into the
@@ -14,8 +12,6 @@ const { hasHomePageNote } = require("../helpers/homePage");
 // exists or Eleventy fails the build with an output conflict. The check reads
 // the notes from disk because permalinks are resolved before collections
 // exist, so `collections.gardenEntry` is not available here.
-const hasHomePage = hasHomePageNote(path.join(__dirname, "notes"));
-
 const allSettings = [
   ...settings.ALL_NOTE_SETTINGS,
   ...pluginLoader.getNoteSettingKeys(),
@@ -29,7 +25,7 @@ module.exports = {
   layout: "layouts/index.njk",
   eleventyExcludeFromCollections: true,
   isFallbackIndex: true,
-  permalink: hasHomePage ? false : "/",
+  permalink: "/",
   eleventyComputed: {
     title: (data) => (data.meta && data.meta.siteName) || "Notes",
     // Notes get their per-page settings from notes/notes.11tydata.js; this
