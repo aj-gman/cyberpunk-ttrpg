@@ -3,6 +3,8 @@
 
 <style>
   body.glitch-landing-page {
+    margin: 0 !important;
+    padding: 0 !important;
     overflow: hidden;
     background: #050507;
   }
@@ -10,7 +12,14 @@
   body.glitch-landing-page .navbar,
   body.glitch-landing-page .filetree-wrapper,
   body.glitch-landing-page .sidebar,
-  body.glitch-landing-page .empty-navbar {
+  body.glitch-landing-page .empty-navbar,
+  body.glitch-landing-page .mobile-navbar,
+  body.glitch-landing-page .mobile-navbar-actions,
+  body.glitch-landing-page > nav {
+    display: none !important;
+  }
+
+  body.glitch-landing-page .content > header {
     display: none !important;
   }
 
