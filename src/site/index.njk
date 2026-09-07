@@ -157,9 +157,15 @@
   .glitch-home-action:hover::before,
   .glitch-home-action:focus-visible::before,
   .glitch-home-action:hover::after,
-  .glitch-home-action:focus-visible::after { opacity: 1; animation: button-glitch 0.35s steps(1) infinite; }
-  .glitch-home-action:hover::before, .glitch-home-action:focus-visible::before { color: var(--glitch-pink); transform: translate(2px, 0); }
-  .glitch-home-action:hover::after, .glitch-home-action:focus-visible::after { color: var(--glitch-cyan); transform: translate(-2px, 0); }
+  .glitch-home-action:focus-visible::after { opacity: 1; }
+  .glitch-home-action:hover::before, .glitch-home-action:focus-visible::before {
+    color: var(--glitch-pink);
+    animation: button-glitch-pink 0.55s infinite steps(1);
+  }
+  .glitch-home-action:hover::after, .glitch-home-action:focus-visible::after {
+    color: var(--glitch-cyan);
+    animation: button-glitch-cyan 0.55s infinite steps(1);
+  }
   .glitch-home-action.alt { border-color: var(--glitch-pink); color: var(--glitch-pink); }
   .glitch-home-action.alt:hover, .glitch-home-action.alt:focus-visible { background: var(--glitch-pink); color: var(--glitch-bg); }
 
@@ -185,11 +191,22 @@
     98% { text-shadow: 0 0 8px rgba(255, 46, 109, 0.35), 0 0 18px rgba(38, 242, 230, 0.2); }
   }
 
-  @keyframes button-glitch {
-    0%, 100% { clip-path: inset(0 0 0 0); }
-    25% { clip-path: inset(15% 0 55% 0); }
-    50% { clip-path: inset(65% 0 10% 0); }
-    75% { clip-path: inset(40% 0 35% 0); }
+  @keyframes button-glitch-pink {
+    0%, 15%, 100% { clip-path: inset(0 0 100% 0); opacity: 0; transform: translate(0, 0); }
+    20% { clip-path: inset(12% 0 62% 0); opacity: 1; transform: translate(3px, -1px); }
+    35% { clip-path: inset(68% 0 8% 0); opacity: 1; transform: translate(-4px, 1px); }
+    50% { clip-path: inset(38% 0 38% 0); opacity: 0.8; transform: translate(2px, 0); }
+    65% { clip-path: inset(0 0 100% 0); opacity: 0; transform: translate(0, 0); }
+    80% { clip-path: inset(55% 0 25% 0); opacity: 1; transform: translate(4px, 1px); }
+  }
+
+  @keyframes button-glitch-cyan {
+    0%, 10%, 100% { clip-path: inset(100% 0 0 0); opacity: 0; transform: translate(0, 0); }
+    18% { clip-path: inset(52% 0 18% 0); opacity: 1; transform: translate(-3px, 1px); }
+    32% { clip-path: inset(8% 0 70% 0); opacity: 1; transform: translate(4px, -1px); }
+    48% { clip-path: inset(76% 0 4% 0); opacity: 0.8; transform: translate(-2px, 0); }
+    62% { clip-path: inset(100% 0 0 0); opacity: 0; transform: translate(0, 0); }
+    84% { clip-path: inset(28% 0 48% 0); opacity: 1; transform: translate(-4px, 1px); }
   }
 
   @media (prefers-reduced-motion: reduce) {
