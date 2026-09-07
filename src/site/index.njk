@@ -2,15 +2,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Chakra+Petch:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
+  body.glitch-landing-page {
+    overflow: hidden;
+    background: #050507;
+  }
+
+  body.glitch-landing-page .navbar,
+  body.glitch-landing-page .filetree-wrapper,
+  body.glitch-landing-page .sidebar,
+  body.glitch-landing-page .empty-navbar {
+    display: none !important;
+  }
+
+  body.glitch-landing-page .content {
+    width: 100vw !important;
+    max-width: none !important;
+    min-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   .glitch-home {
     --glitch-pink: #ff2e6d;
     --glitch-cyan: #26f2e6;
     --glitch-bg: #050507;
     position: relative;
+    display: grid;
+    align-content: center;
+    justify-items: center;
     width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 6rem 2rem;
+    min-height: 100vh;
+    padding: clamp(4rem, 10vh, 8rem) clamp(1.25rem, 5vw, 5rem);
     overflow: hidden;
     background-color: var(--glitch-bg);
     background-image: linear-gradient(rgba(38, 242, 230, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(38, 242, 230, 0.05) 1px, transparent 1px);
@@ -129,6 +151,26 @@
 
   @media (prefers-reduced-motion: reduce) {
     .glitch-home-title, .glitch-home-title::before, .glitch-home-title::after { animation: none; }
+  }
+
+  @media (max-width: 600px) {
+    .glitch-home-kicker {
+      max-width: 22rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+    }
+
+    .glitch-home-subhead {
+      font-size: 0.95rem;
+    }
+
+    .glitch-home-actions {
+      width: min(100%, 20rem);
+    }
+
+    .glitch-home-action {
+      width: 100%;
+    }
   }
 </style>
 
