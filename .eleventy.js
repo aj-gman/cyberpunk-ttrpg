@@ -651,7 +651,7 @@ module.exports = function(eleventyConfig) {
     }
     html += `<img
       class="${cls.toString()}"
-      src="${src}"
+      src="${meta.jpeg[1].url}"
       alt="${alt}"
       width="${width}"
       />`;
@@ -843,7 +843,9 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
-  eleventyConfig.addPassthroughCopy("src/site/img");
+  eleventyConfig.addPassthroughCopy("src/site/img/map-viewer");
+  eleventyConfig.addPassthroughCopy("src/site/img/*.html");
+  eleventyConfig.addPassthroughCopy("src/site/img/*.svg");
   eleventyConfig.addPassthroughCopy("src/site/scripts");
   eleventyConfig.addPassthroughCopy("src/site/styles/_theme.*.css");
   eleventyConfig.addPassthroughCopy({ "src/site/logo.*": "/" });
