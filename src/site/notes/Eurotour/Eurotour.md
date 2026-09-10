@@ -13,6 +13,7 @@ Cold chrome, cash, guns. Stateside, your arsenal could melt a small army. Howeve
 Entropy's entourage. Spend enough time touring with his crew that you learn their quirks, their bad habits. Develop relationships with each of the crew (Entropy included!) and uncover dark secrets that could shake the tour to its core... 
 
 Eurostyle. Chill music, hot action, Brit streetscum, French goldenkids, rebels, cops, riots, parties, thieves and martyrs. **Jack in here, smartboy, and see if you can cut it - Eurostyle.**
+
 --- start-multi-column: eurotour  
 ```column-settings  
 number of columns: 2  

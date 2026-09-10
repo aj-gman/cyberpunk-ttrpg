@@ -252,6 +252,7 @@ module.exports = function(eleventyConfig) {
     })
     .use(require("markdown-it-mark"))
     .use(require("markdown-it-footnote"))
+    .use(require("./src/helpers/multiColumnMarkdown"))
     .use(function(md) {
       md.renderer.rules.hashtag_open = function(tokens, idx) {
         return '<a class="tag">';
