@@ -20,9 +20,8 @@ module.exports = {
       return "layouts/note.njk";
     },
     permalink: (data) => {
-      if (data.tags.indexOf("gardenEntry") != -1) {
-        return "/";
-      }
+      // Root "/" is owned by glitch-header.njk; gardenEntry notes keep their
+      // own frontmatter permalink instead of overriding the landing page.
       return data.permalink || undefined;
     },
     basesNotes: (data) => {
