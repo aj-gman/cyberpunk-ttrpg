@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/news/executive-executions-on-rhin-ruhr-rooftops/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/news/executive-executions-on-rhin-ruhr-rooftops/","tags":["#news"],"dg-note-properties":{"tags":["#news"]}}
 ---
 
 #news 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/the-crew/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/the-crew/","tags":["#crew","#eurotour"],"dg-note-properties":{"tags":["#crew","#eurotour"]}}
 ---
 
 #crew #eurotour 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/news/who-let-entropy-have-a-chainsaw/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/news/who-let-entropy-have-a-chainsaw/","tags":["#news"],"dg-note-properties":{"tags":["#news"]}}
 ---
 
 #news 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/locations/united-kingdom/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/locations/united-kingdom/","tags":["#location","#eurotour"],"dg-note-properties":{"tags":["#location","#eurotour"]}}
 ---
 
 #location #eurotour 

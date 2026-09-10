@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/characters/core-crew/tammi-lu/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/characters/core-crew/tammi-lu/","tags":["#npc","#eurotour"],"dg-note-properties":{"tags":["#npc","#eurotour"]}}
 ---
 
 #npc #eurotour 

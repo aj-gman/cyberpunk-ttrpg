@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/roles/fixer/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/fixer/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
 ---
 
 #role

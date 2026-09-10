@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/locations/liverpool/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/locations/liverpool/","tags":["#location","#eurotour"],"dg-note-properties":{"tags":["#location","#eurotour"]}}
 ---
 
 #location #eurotour 

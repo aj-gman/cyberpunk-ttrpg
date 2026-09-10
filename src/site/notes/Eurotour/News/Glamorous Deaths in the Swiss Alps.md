@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/news/glamorous-deaths-in-the-swiss-alps/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/news/glamorous-deaths-in-the-swiss-alps/","tags":["#news"],"dg-note-properties":{"tags":["#news"]}}
 ---
 
 #news ZIG-POST 158901295-lavn2

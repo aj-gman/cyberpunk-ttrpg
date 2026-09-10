@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/gangs/maelstrom/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/organizations/gangs/maelstrom/","tags":["#boostergang"],"dg-note-properties":{"tags":["#boostergang"]}}
 ---
 
 #boostergang

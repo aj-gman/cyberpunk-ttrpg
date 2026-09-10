@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/corporations/seal-gmb-h/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/organizations/corporations/seal-gmb-h/","tags":["#organization","#eurotour"],"dg-note-properties":{"tags":["#organization","#eurotour"]}}
 ---
 
 #organization #eurotour 

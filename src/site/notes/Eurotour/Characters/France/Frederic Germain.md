@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/characters/france/frederic-germain/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/characters/france/frederic-germain/","tags":["#npc","#eurotour"],"dg-note-properties":{"tags":["#npc","#eurotour"]}}
 ---
 
 #npc #eurotour [[Eurotour/Adventures/3 Trapped Animal\|3 Trapped Animal]] [[Rules/CPRED/Roles/Fixer\|Fixer]]

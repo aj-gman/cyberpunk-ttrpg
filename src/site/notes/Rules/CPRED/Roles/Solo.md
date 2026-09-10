@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/roles/solo/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/solo/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
 ---
 
 #role

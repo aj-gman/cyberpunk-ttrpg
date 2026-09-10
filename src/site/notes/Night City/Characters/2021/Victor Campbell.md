@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/characters/2021/victor-campbell/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/characters/2021/victor-campbell/","tags":["#npc"],"dg-note-properties":{"tags":["#npc"]}}
 ---
 
 #npc [[Night City/Locations/Night City\|Night City]]

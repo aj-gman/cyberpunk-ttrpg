@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/news/the-czech-republic/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/news/the-czech-republic/","tags":["#news"],"dg-note-properties":{"tags":["#news"]}}
 ---
 
 #news [[Eurotour/Organizations/EEC\|EEC]], [[Eurotour/Locations/EC Enclave\|EC Enclave]], [[Prague\|Prague]]

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/locations/st-petersburg/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/locations/st-petersburg/","tags":["#location","#4cw"],"dg-note-properties":{"tags":["#location","#4cw"]}}
 ---
 
 #location #4cw 

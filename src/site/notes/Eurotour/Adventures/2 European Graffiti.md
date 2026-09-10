@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/adventures/2-european-graffiti/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/adventures/2-european-graffiti/","tags":["#gig","#eurotour"],"dg-note-properties":{"tags":["#gig","#eurotour"]}}
 ---
 
 #gig #eurotour 

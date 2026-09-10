@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/adventures/1-paper-trail/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/adventures/1-paper-trail/","tags":["#eurotour","#gig"],"dg-note-properties":{"tags":["#eurotour","#gig"]}}
 ---
 
 #eurotour 

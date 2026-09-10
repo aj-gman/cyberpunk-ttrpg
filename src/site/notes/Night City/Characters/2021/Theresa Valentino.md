@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/characters/2021/theresa-valentino/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/characters/2021/theresa-valentino/","tags":["#npc","#4cw"],"dg-note-properties":{"tags":["#npc","#4cw"]}}
 ---
 
 #npc #4cw 

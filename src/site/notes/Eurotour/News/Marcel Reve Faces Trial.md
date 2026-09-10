@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/news/marcel-reve-faces-trial/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/news/marcel-reve-faces-trial/","tags":["#news"],"dg-note-properties":{"tags":["#news"]}}
 ---
 
 #news [[Night City/Organizations/Corporations/Biotechnica\|Biotechnica]], [[Marcel Reve\|Marcel Reve]], [[Eurotour/Locations/Paris\|Paris]]

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/characters/boris-asimov/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/eurotour/characters/boris-asimov/","tags":["#npc","#4cw"],"dg-note-properties":{"tags":["#npc","#4cw"]}}
 ---
 
 #npc #4cw 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/roles/nomad/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/nomad/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
 ---
 
 #role

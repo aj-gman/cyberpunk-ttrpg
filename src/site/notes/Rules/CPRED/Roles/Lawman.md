@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/roles/lawman/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/lawman/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
 ---
 
 #role
