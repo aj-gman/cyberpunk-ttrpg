@@ -27,7 +27,7 @@ body{background:var(--bg);font-family:'Chakra Petch',sans-serif;overflow-x:hidde
 .hero-inner{position:relative;z-index:1;max-width:900px;}
 .kicker{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:0.9rem;letter-spacing:0.35em;color:var(--cyan);margin:0 0 1.2rem;opacity:0.85;}
 .glitch-title{position:relative;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(2.8rem,8vw,6rem);line-height:1;margin:0;letter-spacing:0.01em;color:var(--text-primary);text-transform:uppercase;-webkit-font-smoothing:antialiased;}
-.glitch-title .line2{display:block;font-size:0.55em;margin-top:0.15em;color:var(--pink);}
+.glitch-title .line2{position:relative;display:block;font-size:0.55em;margin-top:0.15em;color:var(--pink);}
 .glitch-title::before,.glitch-title::after{content:attr(data-text);position:absolute;left:0;top:0;width:100%;overflow:hidden;background:var(--bg);clip-path:inset(0);}
 .glitch-title::before{color:var(--pink);transform:translate(3px,0);mix-blend-mode:screen;animation:glitchTop 2.5s infinite steps(1);}
 .glitch-title::after{color:var(--cyan);transform:translate(-3px,0);mix-blend-mode:screen;animation:glitchBottom 2.5s infinite steps(1);}
