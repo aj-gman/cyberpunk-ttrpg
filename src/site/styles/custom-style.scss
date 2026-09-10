@@ -323,3 +323,12 @@ main {
     }
 }
 
+/* --- Link Preview Tooltip Fixes --- */
+/* Prevent navigation and page header from appearing inside the tooltip,
+   which duplicates the Night City 2021 Map nav and note title. */
+#tooltip-wrapper nav,
+#tooltip-wrapper .site-resource-nav,
+#tooltip-wrapper header {
+  display: none !important;
+}
+

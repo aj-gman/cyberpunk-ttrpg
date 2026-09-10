@@ -161,15 +161,15 @@
             return;
           }
 
-          const titleEl = iframeDoc.querySelector('h1');
           const contentEl = iframeDoc.querySelector('.content');
 
           tooltipContentHtml = ''
-          if (titleEl) {
-            tooltipContentHtml += '<div style="font-weight: bold; unicode-bidi: plaintext;">' + titleEl.innerHTML + '</div>'
-          }
           if (contentEl) {
-            tooltipContentHtml += contentEl.innerHTML
+            // Clone to avoid mutating the iframe DOM; strip <header> (nav + h1)
+            // so the tooltip doesn't duplicate the page header / navigation.
+            const clone = contentEl.cloneNode(true);
+            clone.querySelectorAll('header').forEach(h => h.remove());
+            tooltipContentHtml += clone.innerHTML
           } else if (iframeDoc.body) {
             tooltipContentHtml += iframeDoc.body.innerHTML
           } else if (iframeDoc.documentElement) {

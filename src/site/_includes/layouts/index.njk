@@ -29,7 +29,7 @@
             {% for tag in tags %}
               {% if tag != 'gardenEntry' and tag !='note' %}
                 <a class="tag">
-                  #{{tag}}
+                  #{{tag | cleanTag}}
                 </a>
               {% endif %}
             {% endfor %}
@@ -53,7 +53,7 @@
       {% for imp in dynamics.index.beforeContent %}
         {% include imp %}
       {% endfor %}
-      {{ content | hideDataview | taggify | link | resolveMdLinks | safe}}
+      {{ content | hideDataview | taggifyNoDup(tags) | link | resolveMdLinks | safe}}
       {% set slotName = "common.afterContent" %}{% include "components/pluginSlot.njk" %}
       {% set slotName = "index.afterContent" %}{% include "components/pluginSlot.njk" %}
       {% for imp in dynamics.common.afterContent %}
