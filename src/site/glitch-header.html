@@ -67,15 +67,18 @@
     text-transform:uppercase;
     -webkit-font-smoothing:antialiased;
   }
-  .glitch-title .line2{
-    display:block;
-    font-size:0.55em;
-    margin-top:0.15em;
-    color:var(--pink);
+  .glitch-line {
+    display: block;
+    position: relative;
+  }
+  .glitch-line.line2 {
+    font-size: 0.55em;
+    margin-top: 0.15em;
+    color: var(--pink);
   }
 
-  .glitch-title::before,
-  .glitch-title::after{
+  .glitch-line::before,
+  .glitch-line::after{
     content:attr(data-text);
     position:absolute;
     left:0;
@@ -85,13 +88,13 @@
     background:var(--bg);
     clip-path:inset(0 0 0 0);
   }
-  .glitch-title::before{
+  .glitch-line::before {
     color:var(--pink);
     transform:translate(3px,0);
     mix-blend-mode:screen;
     animation:glitchTop 2.5s infinite steps(1);
   }
-  .glitch-title::after{
+  .glitch-line::after{
     color:var(--cyan);
     transform:translate(-3px,0);
     mix-blend-mode:screen;
@@ -250,7 +253,7 @@
   }
 
   @media (prefers-reduced-motion: reduce){
-    .glitch-title, .glitch-title::before, .glitch-title::after{
+    .glitch-line, .glitch-line::before, .glitch-line::after{
       animation:none;
     }
   }
@@ -261,8 +264,8 @@
 <div class="hero">
   <p class="kicker">A DIGITAL GARDEN &middot; NIGHT CITY &amp; BEYOND</p>
   <h1 class="glitch-title" data-text="G-MAN'S">
-    G-MAN'S
-    <span class="line2" data-text="CYBERPUNK">CYBERPUNK</span>
+    <span class="glitch-line" data-text="G-MAN'S">G-MAN'S</span>
+    <span class="glitch-line line2" data-text="CYBERPUNK">CYBERPUNK</span>
   </h1>
   <p class="subhead">
     An archive of stories, rules, and lore gathered across TTRPG sessions — from the Eurotour to the streets of Night City.
