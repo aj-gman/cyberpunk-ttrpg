@@ -1,20 +1,20 @@
 {
   "/": [
     "Homepage",
-    "Site Chronicle",
+    "CPRED (HUB)",
+    "CPRED Sheet",
+    "NCOverdrive (HUB)",
+    "NCOverdrive Sheet",
     "Rules",
     "Night City",
     "Eurotour",
     "Crew",
     "AI Policy",
-    "CPRED Sheet",
-    "NCOverdrive Sheet",
-    "G-man"
+    "G-man",
+    "Site Chronicle"
   ],
   "/Rules": [
-    "NCOverdrive (HUB)",
     "NCOverdrive",
-    "CPRED (HUB)",
     "CPRED",
     "Cyberpunk Universe",
     "Homebrew"
