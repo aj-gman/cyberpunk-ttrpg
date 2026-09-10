@@ -22,3 +22,12 @@ There are 10 core roles in the Cyberpunk TTRPG across all of its version. I like
 - [[Rules/CPRED/Roles/Exec\|Exec]]
 - [[Rules/CPRED/Roles/Fixer\|Fixer]]
 - [[Rules/CPRED/Roles/Media\|Media]]
+
+I've added a file: glitch-header.html in .cache
+analyze the file. this will serve as the actual intro webpage, not the homepage.md file
+
+However, it has to have some changes:
+- the glitch effect must be more frequent/stronger and applied to the entire title (gman's cyberpunk)
+- more buttons: 1. Character Sheets (that opens two new buttons: CyberpunkRED (https://gman-cyberpunk.vercel.app/cpred-sheet/  or NCOverdrive (https://gman-cyberpunk.vercel.app/nc-overdrive-sheet/ )
+2. Rules - again, two buttons: CyberpunkRED (https://gman-cyberpunk.vercel.app/rules/cpred/cyberpunk-red-hub/ ) or NCOverdrive (https://gman-cyberpunk.vercel.app/rules/nc-overdrive/neon-city-overdrive-hub/ )
+3. Lore - two buttons: Eurotour (https://gman-cyberpunk.vercel.app/eurotour/eurotour/ ) & Night City (https://gman-cyberpunk.vercel.app/night-city/locations/night-city/ )
