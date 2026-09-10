@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#ideology","#stratum","#news","#role"],"dg-note-properties":{"tags":["#ideology","#stratum","#news","#role"]}}
 ---
 
 ### September 2026
@@ -19,7 +19,7 @@
 - Added permanent Header & Footer on webpages (shouldn't break on Digital Garden template update)
 - Reorganized folders & webpages for clearer navigation
 #### 02.09
-- Updated [The Map](https://gman-cyberpunk.vercel.app/img/map-viewer/) with full label-on-hover functionality for the Socioeconomic and Influence panels. These display the social strata of [[Night City/Locations/Night City\|Night City]]'s inhabitants and the [[Night City/Organizations/Gangs/Boostergangs of Night City\|gang]] or [[Fourth Corporate War\|corporation]] that is most influent in the region.
+- Updated [The Map](https://gman-cyberpunk.vercel.app/img/map-viewer/) with full label-on-hover functionality for the Socioeconomic and Influence panels. These display the social strata of [[Night City/Locations/Night City\|Night City]]'s inhabitants and the [[Night City/Organizations/Gangs/Boostergangs of Night City\|gang]] or [[Night City/Fourth Corporate War\|corporation]] that is most influent in the region.
 	- The map should correctly identify all gangs by color upon hovering and should be generally bug-free.
 - Fixed Cyberpsychosis not scaling past 10.
 ### August 2026
@@ -86,7 +86,7 @@
 - Cleaned up webpages
 - Added two news articles, [[Eurotour/News/Who let Entropy have a CHAINSAW!\|Who let Entropy have a CHAINSAW!]] & [[Eurotour/News/Executive Executions on Rhin-Ruhr Rooftops\|Executive Executions on Rhin-Ruhr Rooftops]]
 - Brought the [[z-SITE/CPRED Sheet\|CPRED Sheet]] to a stable 1.0.1.1 version
-- Added an [[z-SITE/AI Policy\|AI disclaimer]] in the footer of all webpages (except, for some reason, the [[z-SITE/Homepage\|Homepage]]?)
+- Added an [[z-SITE/AI Policy\|AI disclaimer]] in the footer of all webpages (except, for some reason, the [[z-SITE/Home\|Home]]?)
 - Added descriptions for all of the main [[Eurotour/Eurotour\|Eurotour]] locations: [[Eurotour/Locations/Liverpool\|Liverpool]], [[Eurotour/Locations/Brussels\|Brussels]], [[Eurotour/Locations/Paris\|Paris]], [[Eurotour/Locations/Venice\|Venice]], [[Eurotour/Locations/Rhine-Ruhr Conurb\|Rhine-Ruhr Conurb]], [[Eurotour/Locations/Stockholm\|Stockholm]], [[Prague\|Prague]]
 - Added initial descriptions for the #role s, as well as their Role Abilities
 - Added public webpages for [[Eurotour/The Crew\|The Crew]]

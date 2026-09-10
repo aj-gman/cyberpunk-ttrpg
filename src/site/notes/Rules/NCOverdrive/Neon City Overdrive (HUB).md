@@ -6,6 +6,8 @@
 > Simply put, I was looking through many alternatives to [[Rules/CPRED/Cyberpunk RED (HUB)\|CPRED]] because [[Eurotour/The Crew\|The Crew]] had reached a point where *some* of their STATS were getting results that heavily outpaced the [[Rules/CPRED/Difficulty Rating\|Difficulty Rating]] schema proposed by the system and "balancing" would've meant just spiking the difficulty on the NPC's ends as well.
 > I first looked at [CBR+PNK](https://emanoelmelo.itch.io/cbrpnk-core), which I was already familiar with, but it was too simple (with no way to go up). Then, [The Sprawl](https://www.drivethrurpg.com/en/product/171286/the-sprawl-midnight) & [The Veil](https://composedreamgames.co.uk/the-veil-pdf) were interesting, but neither was hitting the mark.
 > Eventually, I found [Neon City Overdrive](https://www.perilplanet.com/neon-city-overdrive/), which had both [[Rules/NCOverdrive/Trademarks/Trademarks\|an interesting core mechanic]] and was very much player-facing.
+
+>[!note]- [NCOverdrive Character Sheet](https://gman-cyberpunk.vercel.app/img/NCO-sheet.html)
 ### For more about the mechanics, see here:
 
 > [!danger]- Combat

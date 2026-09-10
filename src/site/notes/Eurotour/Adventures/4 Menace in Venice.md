@@ -24,11 +24,11 @@
 	- [x] he links this to Salvare Venetia, an ecoterrorist group.
 #### Storyteller Goals
 - [x] Present Bern, Switzerland as a chill place where you can gather your spirits.
-- [x] "Solve" (or progress) the conflict between [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] & [[Crew/Hex\|Hex]]
+- [x] "Solve" (or progress) the conflict between [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] & [[Player Characters/Hex\|Hex]]
 - [x] Solve past events
 	- [x] [[Eurotour/The Crew\|The Crew]] sent images and information to **French Samizdat** regarding the NetWatch & OrbitalAir conflict
 	- [x] Some French corpos are now more anarchist - this leads into a French Republic law that upsets the Germans, criticism and EC discussion
-	- [x] [[Crew/Hex\|Hex]] leaked information about [[Eurotour/Characters/Captain Effirm Danala\|Captain Effirm Danala]] regarding the conflict that degenerated [[Eurotour/Adventures/3 Trapped Animal\|Paris]]. 
+	- [x] [[Player Characters/Hex\|Hex]] leaked information about [[Eurotour/Characters/Captain Effirm Danala\|Captain Effirm Danala]] regarding the conflict that degenerated [[Eurotour/Adventures/3 Trapped Animal\|Paris]]. 
 
 ### Execution
 #### Player Goals
@@ -37,7 +37,7 @@
 	- [x] Green Fairy bar/club
 	- [x] Romani Gondolier
 	- [x] Tourists & pickpockets
-- [x] Meeting [[Helena\|Helena]], who we later find out is a [[Night City/Organizations/Corporations/Seal GmbH\|Seal GmbH]] [[Rules/CPRED/Roles/Exec\|Exec]] tasked with keeping tabs on [[Eurotour/The Crew\|The Crew]]. Of course, [[Crew/Hex\|Hex]] is interested in her.
+- [x] Meeting [[Helena\|Helena]], who we later find out is a [[Night City/Organizations/Corporations/Seal GmbH\|Seal GmbH]] [[Rules/CPRED/Roles/Exec\|Exec]] tasked with keeping tabs on [[Eurotour/The Crew\|The Crew]]. Of course, [[Player Characters/Hex\|Hex]] is interested in her.
 #### Storyteller Goals
 - [x] Introduce the various gangs:
 	- [x] Camicie Rosse (Red Shirts), nationalist Garibaldi-poser with mods to all look like the esteemed revolutionary
@@ -59,7 +59,7 @@
 - [ ] sister info about [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]]
 - [ ] claire monet info about [[Night City/Organizations/Corporations/Wortrac\|Wortrac]]
 - [ ] <mark style="background: #fee801;">Mood: late evening, night's creeping in.</mark>
-- [ ] [[Eurotour/Characters/Captain Effirm Danala\|Captain Effirm Danala]] destroys [[Crew/Hex\|Hex]] by sending him an audio clip of [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]]'s last breaths.
+- [ ] [[Eurotour/Characters/Captain Effirm Danala\|Captain Effirm Danala]] destroys [[Player Characters/Hex\|Hex]] by sending him an audio clip of [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]]'s last breaths.
 - [x] Introduce Alessandro Benneti and offer up information.
 	- [x] Weapons and the ability to use them. Surrounded by 2d6 Terrorists.
 	- [x] Trying to make him open up will reveal he doesn't know who his backer is, although he assumes it is Cosa Nostra through Giacomo Lampari.

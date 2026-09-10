@@ -72,9 +72,9 @@ Premise: [[Eurotour/The Crew\|The Crew]] stops for the final show in the [[Eurot
 	- [x] [[Eurotour/Adventures/Heist Netrun.canvas\|Heist Netrun.canvas]]
 - [ ] **Message about [[3000\|3000]] to SalVen**
 #### Storyteller Goals
-- [x] [[Eurotour/Characters/Col. Dr. Barcak\|Col. Dr. Barcak]] knows [[Eurotour/The Crew\|The Crew]]'s dirty secrets and she's even willing to exchange information on [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], something she knows [[Crew/Hex\|Hex]] will care about.
+- [x] [[Eurotour/Characters/Col. Dr. Barcak\|Col. Dr. Barcak]] knows [[Eurotour/The Crew\|The Crew]]'s dirty secrets and she's even willing to exchange information on [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], something she knows [[Player Characters/Hex\|Hex]] will care about.
 - [x] Anatoly gonna call the [[Rules/CPRED/Roles/Medtechie\|Medtechie]]
-	- [x] Nope, [[Crew/OTHER/Lazarus\|Lazarus]] has to pay him. But he can wait.
+	- [x] Nope, [[Player Characters/OTHER/Lazarus\|Lazarus]] has to pay him. But he can wait.
 - [ ] Repercussions for [[Night City/Organizations/Corporations/SovOil\|SovOil]] friendly-fire
 	- [ ] Additional problems: they'll be taken in by [[Night City/Organizations/Corporations/Petrochem\|Petrochem]] agents and scrapped. You can't let that happen. *"Undo the mess you made, comrade."*
 - [x] **More Combat, More opportunities for interrogations**
@@ -113,7 +113,7 @@ Once at the airport, you're greeted by [[Eurotour/Organizations/EEC\|EDF soldier
 	- [ ] One of the cars in the convoy gets into a crash. [[Eurotour/Characters/Core Crew/Jimenez\|Jimenez]]/[[Eurotour/Characters/Core Crew/Ace McLeod\|Ace McLeod]].
 	- [x] Good moment to reintroduce [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]]
 - [ ] And, as [[Eurotour/The Crew\|The Crew]] arrive at the airport...
-	- [x] [[Eurotour/Characters/Claire Monet\|Claire Monet]] is here to take in [[Crew/Ray Null\|Ray Null]]. She's got a warrant and everything.
+	- [x] [[Eurotour/Characters/Claire Monet\|Claire Monet]] is here to take in [[Player Characters/Ray Null\|Ray Null]]. She's got a warrant and everything.
 
 [^1]: The thieves are linked with [[Eurotour/Characters/France/Beatrice Fahida\|Beatrice Fahida]]. 
 ![deets-baxheist.png\|214](/img/user/Pictures/deets-baxheist.png)

@@ -13,14 +13,14 @@ First thing [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] does up
 ## Prologue
 - **Player Goals:** interact with the Core Crew, especially [[Eurotour/Characters/Core Crew/Tinker\|Tinker]], [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]], [[Eurotour/Characters/Core Crew/Jimenez\|Jimenez]]; 
 	- [x] adjust to France, get settled in, notice some differences
-	- [x] participate at the first Paris concert, where off-duty [[Night City/Organizations/Corporations/Militech\|Militech]] are present, including [[Eurotour/Characters/France/Johnson-4\|Johnson-4]], who [[Crew/Hex\|Hex]] knows;
+	- [x] participate at the first Paris concert, where off-duty [[Night City/Organizations/Corporations/Militech\|Militech]] are present, including [[Eurotour/Characters/France/Johnson-4\|Johnson-4]], who [[Player Characters/Hex\|Hex]] knows;
 	- [x] A bunch of [[Rules/CPRED/Roles/Nomad\|Nomads]] are stirring up shit at the food stands; they're Portuegese, complaining about the fact that [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] is only coming to Spain, not Portugal
 	- [x] [[Eurotour/Characters/Core Crew/Tinker\|Tinker]] needs help with the software systems of the stadium 
 - **Storyteller Goals:** 
 	- [x] Introduce France as the top of society (rich, expensive, but most of all made up of a certain Intelligentsia, not just corpo douchebags)
 	- solve problems at the first Paris concert
 	- [x] [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]] introduces elements of "I've been in Paris before"
-	- [x] give corpo punishment: [[Crew/OTHER/Lazarus\|Lazarus]] receives a red envelope telling him he has been put on unpaid work for the duration of the Paris concerts for "not fulfilling expectations" - he has to work, but he loses access to his fancy items
+	- [x] give corpo punishment: [[Player Characters/OTHER/Lazarus\|Lazarus]] receives a red envelope telling him he has been put on unpaid work for the duration of the Paris concerts for "not fulfilling expectations" - he has to work, but he loses access to his fancy items
 		- [x] Enemy Netrunner: 14 dmg
 	- [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] returns to his room with an array of teenage fans and security agents
 ## Scene 1 - The Party
@@ -46,11 +46,11 @@ First thing [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] does up
 	- [x] Keep [[Eurotour/Characters/Core Crew/Jack Entropy\|Entropy]] busy, which proves pretty hard especially since he wants to go out and meet [[Eurotour/Characters/France/Beatrice Fahida\|Beatrice Fahida]]...
 	- [ ] Learn of the murder and go investigate at [[Eurotour/Characters/Core Crew/Ace McLeod\|Ace McLeod]]'s call, who "needs to know" whether or not there this is a threat to [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]]'s livelihood
 - **Storyteller Goals:**
-	- [x] [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine Clements]] TAKES [[Crew/Ray Null\|Ray Null]] TO BED (or tries to)
+	- [x] [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine Clements]] TAKES [[Player Characters/Ray Null\|Ray Null]] TO BED (or tries to)
 	- [x] Let [[Eurotour/The Crew\|The Crew]] see [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]] dressing to look like [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]]; [[Eurotour/The Crew\|The Crew]] then learns that [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]] is going to meet [[Eurotour/Characters/France/Beatrice Fahida\|Beatrice Fahida]] and gives the "quest" for [[Eurotour/The Crew\|The Crew]] to make sure that [[Eurotour/Characters/Core Crew/Jack Entropy\|Entropy]] doesn't wake up or, if he does, doesn't go out;
 	- [x] Introduce the idea that [[Eurotour/Characters/Core Crew/Angus Kessler\|Kessler]] is hiding something and that maybe you should tail him
 	- [ ] Present the crime scene and offer pathways to [[Eurotour/Characters/France/Nicolas Giraud\|Nicolas Giraud]] through [[Eurotour/Characters/France/Beatrice Fahida\|Beatrice Fahida]] and [[Eurotour/Characters/France/Cedric Vernier\|Cedric Vernier]]
-	- [ ] **[[Crew/Hex\|Hex]] is leaking information about [[Eurotour/Characters/Captain Effirm Danala\|Captain Effirm Danala]]; effects next session**
+	- [ ] **[[Player Characters/Hex\|Hex]] is leaking information about [[Eurotour/Characters/Captain Effirm Danala\|Captain Effirm Danala]]; effects next session**
 ## Scene 4 - The Hangover
 - **Player Goals:**
 	- [x] Find out how [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]] died.

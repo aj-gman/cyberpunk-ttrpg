@@ -26,10 +26,10 @@ In [[Eurotour/Locations/Stockholm\|Stockholm]], they'll find that [[Eurotour/Cha
 #### Player Goals
 - [x] Resolve previous incidents
 	- [x] call from the Green Fairy (Venice) about the Black Flag anarchists swiping creds
-	- [x] [[Crew/OTHER/Lazarus\|Lazarus]]'s recurring nightmares relating to his aunt
-	- [x] Pick the new [[Night City/Organizations/Corporations/SovOil\|SovOil]] company member for [[Crew/OTHER/Lazarus\|Lazarus]]
+	- [x] [[Player Characters/OTHER/Lazarus\|Lazarus]]'s recurring nightmares relating to his aunt
+	- [x] Pick the new [[Night City/Organizations/Corporations/SovOil\|SovOil]] company member for [[Player Characters/OTHER/Lazarus\|Lazarus]]
 		- [ ] [[Night City/Organizations/Corporations/SovOil\|SovOil]] [[Rules/CPRED/Roles/Medtechie\|Surgeon]], [[Valodia\|Valodia]]
-	- [x] [[Crew/Hex\|Hex]], [[Crew/Relevant NPCs/Natalie Michaels\|Natalie]] and [[Eurotour/Characters/Captain Effirm Danala\|the elephant in the room]]
+	- [x] [[Player Characters/Hex\|Hex]], [[Player Characters/Relevant NPCs/Natalie Michaels\|Natalie]] and [[Eurotour/Characters/Captain Effirm Danala\|the elephant in the room]]
 - [x] Settle down in [[Eurotour/Locations/Stockholm\|Stockholm]] and suspect that [[Eurotour/Characters/Lars-Olov Skeppsholm\|Lars-Olov Skeppsholm]] is missing.
 	- [x] Begin the investigation
 	- [x] Spend 70eb on the taxi ride to the hotel. Single Rooms 
