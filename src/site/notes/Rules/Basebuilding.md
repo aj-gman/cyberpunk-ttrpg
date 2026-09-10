@@ -21,4 +21,4 @@ Facilities, Contacts, Personnel
 
 ## Projects
 
-[^1]: Inspired by [Vaesen](https://freeleaguepublishing.com/games/vaesen/), [Darkest Dungeon](https://darkestdungeon.fandom.com/wiki/Hamlet), [[Rules/CPRED/Cyberpunk RED\|CPRED]]'s [No Place Like Home](https://rtalsoriangames.com/wp-content/uploads/2024/08/RTG-CPR-DLC-NoPlaceLikeHome.pdf) DLC, [Mutant: Year Zero](https://freeleaguepublishing.com/games/mutant-year-zero/)
+[^1]: Inspired by [Vaesen](https://freeleaguepublishing.com/games/vaesen/), [Darkest Dungeon](https://darkestdungeon.fandom.com/wiki/Hamlet), [[Rules/CPRED/Cyberpunk RED (HUB)\|CPRED]]'s [No Place Like Home](https://rtalsoriangames.com/wp-content/uploads/2024/08/RTG-CPR-DLC-NoPlaceLikeHome.pdf) DLC, [Mutant: Year Zero](https://freeleaguepublishing.com/games/mutant-year-zero/)

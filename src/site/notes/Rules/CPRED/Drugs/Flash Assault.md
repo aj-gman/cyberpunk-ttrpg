@@ -8,14 +8,14 @@ Flash Assault is a massive accelerator [[Rules/CPRED/Drugs/Drugs\|drug]], stimul
 
 Users of Flash assault usually come out with a major hangover, and habitual users report disturbing flashbacks, mainly because most Flash Assault is used as a combat drug, so the flash backs are usually quite violent.
 
-# [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
+# [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]]
 ### **[[Rules/NCOverdrive/Conditions\|Conditions]]**
 - **Positive:** Accelerator (3), Speed (2), Stimulant (1)
 - **Negative:** Disorientation (2), Paranoia (2)
 - **Other:** 3-in-6 for Hangover, 3-in-6 for Flashbacks
 
 
-# [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]]
+# [[Rules/CPRED/Cyberpunk RED (HUB)\|Cyberpunk RED (HUB)]]
 ### Main Effect
 - +5 REF, +5 Perception
 - Strength: 10

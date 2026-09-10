@@ -14,7 +14,7 @@
 - **Increased all ROF by +1** (except launchers).
 - **Autofire Damage:** 3d6 for SMGs, 4d6 for ARs
 
-In the Dark Future, everybody has a gun. Loyalty to a brand brings with it bonuses (see [[Rules/CPRED/Combat/Firearms of Cyberpunk#Gun Brands\|Gun Brands]]). Below is an archetype list of guns available in [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]].
+In the Dark Future, everybody has a gun. Loyalty to a brand brings with it bonuses (see [[Rules/CPRED/Combat/Firearms of Cyberpunk#Gun Brands\|Gun Brands]]). Below is an archetype list of guns available in [[Rules/CPRED/Cyberpunk RED (HUB)\|Cyberpunk RED (HUB)]].
 
 | ARCHETYPE         | DMG | ROF | COST  |
 | ----------------- | --- | --- | ----- |
@@ -50,7 +50,7 @@ Attacker rolls damage. Defender subtracts their SP from the damage.
 >Some guns are special (because they are [[Rules/CPRED/Combat/Firearms of Cyberpunk#Gun Brands\|a certain brand]] or because of their [[Rules/CPRED/Combat/Firearms of Cyberpunk#Gun Types\|unique design]]). To read more about these optional rules, go to [[Rules/CPRED/Combat/Firearms of Cyberpunk\|Firearms of Cyberpunk]].
 
 # Melee Weapons
-Although firearms are the most popular choice, melee weapons occupy a niche slot, with knives and blades serving to cut through almost anything with monomolecular blades and blunt objects being a good tool to knock anybody unconscious or ruin some [[Rules/CPRED/Cyberware/Cyberware\|tech]]. Below is an archetype list of melee weapons available in [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]].
+Although firearms are the most popular choice, melee weapons occupy a niche slot, with knives and blades serving to cut through almost anything with monomolecular blades and blunt objects being a good tool to knock anybody unconscious or ruin some [[Rules/CPRED/Cyberware/Cyberware\|tech]]. Below is an archetype list of melee weapons available in [[Rules/CPRED/Cyberpunk RED (HUB)\|Cyberpunk RED (HUB)]].
 
 Melee Weapons cut through armor like butter - when attacking with a melee weapon, the SP value of the defender is reduced by half (rounding down). 
 

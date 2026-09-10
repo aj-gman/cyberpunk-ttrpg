@@ -10,13 +10,13 @@ Commonly believed to be a mix between a strain of synthtobacco and opium seeds.
 
 Vaporware is popular with [[Rules/CPRED/Roles/Netrunner\|Netrunners]] as **it increases concentration and decreases stress**, producing a feeling of separation between the person's psyche and emotions. This has been known to throw less-than-stable users over the edge of psychosis.
 
-# [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
+# [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]]
 ### **[[Rules/NCOverdrive/Conditions\|Conditions]]**
 - **Positive:** Focused (2), Sedated (1)
 - **Negative:** Alienation (2-in-6), Egotism
 - **Other:** Flashbacks
 
-# [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]]
+# [[Rules/CPRED/Cyberpunk RED (HUB)\|Cyberpunk RED (HUB)]]
 ### Main Effect
 - **INT: +4**
 - **COOL: +4**

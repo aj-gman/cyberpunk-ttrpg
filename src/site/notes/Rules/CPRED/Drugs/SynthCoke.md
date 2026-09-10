@@ -6,13 +6,13 @@
 
 A type of [[Rules/CPRED/Drugs/Drugs\|street drug]] that comes in little plastic vials of powder. It's purported to be a general enhancer of concentration, awareness and reactions, with the classic cocaine side effects of paranoia and anxiety. Cheap and easy to obtain.
 
-# [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
+# [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]]
 ### **[[Rules/NCOverdrive/Conditions\|Conditions]]**
 - **Positive:** Concentrator (1), Stimulant (1), Speed (1)
 - **Negative:** Paranoia
 - **Other:** 1-in-6 for Anxiety, 1-in-6 for Paranoia
 
-# [[Rules/CPRED/Cyberpunk RED\|Cyberpunk RED]]
+# [[Rules/CPRED/Cyberpunk RED (HUB)\|Cyberpunk RED (HUB)]]
 ### Main Effect
 - **+4 Awareness, +2 REF, +2 INT**
 - **Strength: 8**

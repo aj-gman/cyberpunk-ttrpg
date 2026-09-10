@@ -8,7 +8,7 @@ Proxy wars, trade wars, and a resurgent Europe butt against the prevailing US wo
 
 In the chaos, corporations fill the vacuum of power amidst a collapsing social order. Technological advances, unbridled from government oversight or ethical limitations, lead to hundreds of new inventions. As time wears on, some corporations become as powerful as the countries they are housed in. Ultimately, four corporate wars have occurred by 2023, each one becoming more overt and deadly than the last. The infamous [Fourth Corporate War](https://cyberpunk.fandom.com/wiki/Fourth_Corporate_War "Fourth Corporate War") was brought to an end by the detonation of a nuclear bomb in the heart of [[Night City/Locations/Night City\|Night City]]. 
 
-The years that followed until [[Rules/CPRED/Cyberpunk RED\|2045, the Time of the Red]], were a period of global reconstruction as corporations and governments alike tried to recover from unparalleled economic and environmental damage. 
+The years that followed until [[Rules/CPRED/Cyberpunk RED (HUB)\|2045, the Time of the Red]], were a period of global reconstruction as corporations and governments alike tried to recover from unparalleled economic and environmental damage. 
 
 By [[2077\|2077]], corporate influence is more pervasive than ever, and fears of another devastating corporate war loom large on the horizon.
 

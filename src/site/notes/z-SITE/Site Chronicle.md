@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#ideology","#stratum","#news","#role"],"dg-note-properties":{"tags":["#ideology","#stratum","#news","#role"]}}
 ---
 
 ### September 2026
@@ -26,7 +26,7 @@
 #### 19.08
 - Added most important characters in the [[Eurotour/Adventures/7 Big Trouble in Neo-Sov\|7 Big Trouble in Neo-Sov]] adventure ([[Eurotour/Characters/Boris Asimov\|Boris Asimov]], [[Eurotour/Characters/Liudmila\|Liudmila]], [[Eurotour/Characters/Raphael the Kid\|Raphael the Kid]], [[Eurotour/Characters/Seraphim\|Seraphim]], [[Night City/Organizations/Gangs/Organitskaya\|Organitskaya]]).
 - Published information regarding [[Eurotour/Locations/St. Petersburg\|St. Petersburg]].
-- Updated and corrected minor details regarding [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] rules.
+- Updated and corrected minor details regarding [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]] rules.
 #### 20.08
 - Brought [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.1.0.0. 
 	**Key new features:**
@@ -63,7 +63,7 @@
 - **Updated the Digital Garden template** to version 1.8.0.4.
 - More #news 
 - Core Crews' stats and personalities are now open as explorable files([[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], [[Eurotour/Characters/Core Crew/Jimenez\|Jimenez]], [[Eurotour/Characters/Core Crew/Tinker\|Tinker]], [[Eurotour/Characters/Core Crew/Tammi Lu\|Tammi Lu]], [[Eurotour/Characters/Core Crew/Ace McLeod\|Ace McLeod]], [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]], [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine Clements]]), including even [[Eurotour/Characters/Claire Monet\|Claire Monet]]!
-- Added [[Rules/NCOverdrive/Drugs\|Rules/NCOverdrive/Drugs]], which encompasses all of the adjusted rules for [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] for [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]]
+- Added [[Rules/NCOverdrive/Drugs\|Rules/NCOverdrive/Drugs]], which encompasses all of the adjusted rules for [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]] for [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]]
 
 ### May 2026
 #### *17.05*
@@ -105,4 +105,4 @@
 - [x] Recalibrate mobile interface for the site (very buggy atm)
 - [ ] **[[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] needs:**
 	- [x] Rewriting of description placeholder text (bug fixes)
-- [ ] Update [[Rules/CPRED/Drugs/Omega Blockers\|Omega Blockers]], [[Rules/CPRED/Drugs/Weed\|Weed]], [[Rules/CPRED/Drugs/Regen 21\|Regen 21]] & [[Rules/CPRED/Drugs/Speedheal\|Speedheal]] with rules for [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
+- [ ] Update [[Rules/CPRED/Drugs/Omega Blockers\|Omega Blockers]], [[Rules/CPRED/Drugs/Weed\|Weed]], [[Rules/CPRED/Drugs/Regen 21\|Regen 21]] & [[Rules/CPRED/Drugs/Speedheal\|Speedheal]] with rules for [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]]

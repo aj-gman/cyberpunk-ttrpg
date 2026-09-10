@@ -2,15 +2,15 @@
 {"dg-publish":true,"permalink":"/eurotour/adventures/7-big-trouble-in-neo-sov/","tags":["#gig","#4cw"],"dg-note-properties":{"tags":["#gig","#4cw"]}}
 ---
 
-#gig #4cw [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]]
+#gig #4cw [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]]
 
 ### To-Do List
 - [x] Write about [[Eurotour/Locations/St. Petersburg\|St. Petersburg]] (get an idea of the setting)
 - [x] Write the narrative/story (template using [[Templates/Gig\|Gig]])
-- [ ] Figure out the gameplay, i.e. combat encounters ([[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]], prep for bonuses, maluses etc.)
+- [ ] Figure out the gameplay, i.e. combat encounters ([[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]], prep for bonuses, maluses etc.)
 	- [ ] [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis]]
 
-While I haven't quite written the story, I'm planning this to be a two-shot, as I think [[Eurotour/Locations/St. Petersburg\|St. Petersburg]] and [[Eurotour/Organizations/Neo-Sov\|Neo-Sov]] is too interesting to just do once. Also, I want to accommodate myself with [[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] without worrying about changing places (again).
+While I haven't quite written the story, I'm planning this to be a two-shot, as I think [[Eurotour/Locations/St. Petersburg\|St. Petersburg]] and [[Eurotour/Organizations/Neo-Sov\|Neo-Sov]] is too interesting to just do once. Also, I want to accommodate myself with [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]] without worrying about changing places (again).
 
 ## Prepping
 **Premise:** Infiltrating a **failed state** ([[Eurotour/Organizations/Neo-Sov\|Neo-Sov]] with **authoritarian police forces** vying for power. Go into [[Eurotour/Locations/St. Petersburg\|St. Petersburg]], a [[Night City/Organizations/Gangs/Organitskaya\|Organitskaya]]-managed city akin to [[Night City/Locations/Night City\|Night City]] and rescue [[Eurotour/Characters/Liudmila\|Liudmila]], [[Crew/OTHER/Lazarus\|Lazarus]]' aunt.

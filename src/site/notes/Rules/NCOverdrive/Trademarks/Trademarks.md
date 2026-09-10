@@ -6,4 +6,4 @@ A **Trademark** defines a character's background, profession, signature equipmen
 
 **The [[Rules/NCOverdrive/Trademarks/Triggers\|Triggers]] lists aren’t exhaustive,** though. Players can adjust **[[Rules/NCOverdrive/Trademarks/Triggers\|Triggers]]** to fit their character concept. Major mechanical changes require discussion with the **GM** and other players.
 
-[[Rules/NCOverdrive/Neon City Overdrive\|Neon City Overdrive]] provides examples arranged in categories, but you can choose or create any trademark that makes sense for your character. You are not restricted to a specific selection or type of trademarks.
+[[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]] provides examples arranged in categories, but you can choose or create any trademark that makes sense for your character. You are not restricted to a specific selection or type of trademarks.
