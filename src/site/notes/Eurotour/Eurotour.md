@@ -3,6 +3,8 @@
 ---
 
 #campaign #eurotour [[Eurotour/The Crew\|The Crew]]
+==January 2026 - June 2026 (11 sessions)==
+
 Set in the [[Rules/Cyberpunk Universe\|Cyberpunk Universe]] and ran using the updated [[Rules/CPRED/Cyberpunk RED (HUB)\|Cyberpunk RED (HUB)]] system, the [[Eurotour/Eurotour\|Eurotour]] sees [[Eurotour/The Crew\|The Crew]] go through **New Europe** protecting and working for [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], stateside [[Rules/CPRED/Roles/Rockerboy\|Rockerboy]], anarchist molotov-thrower and anti-corpo mascot. The *"TOTAL ENTROPY TOUR"* means flak from the [[Eurotour/Organizations/MLA\|MLA]], from the [[Eurotour/Organizations/EEC\|EEC]], as well as interaction with Eurosolos and Eurogangs, all with their different customs and behaviors.
 
 >[!danger]- The Hook

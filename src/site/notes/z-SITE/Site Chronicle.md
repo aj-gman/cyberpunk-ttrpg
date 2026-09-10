@@ -1,8 +1,18 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#ideology","#stratum","#news","#role"],"dg-note-properties":{"tags":["#ideology","#stratum","#news","#role"]}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#district","#ideology","#stratum","#news","#role"],"dg-note-properties":{"tags":["#district","#ideology","#stratum","#news","#role"]}}
 ---
 
 ### September 2026
+#### 10.09
+- Implemented hero header to the website which makes it look like a real webpage;
+	- Achieved various bug fixes from 07.09 - 11.09 to bring it to a workable state
+- Reindexed the site so there are two "hubs" to navigate: [NCOverdrive](https://gman-cyberpunk.vercel.app/nc-overdrive-hub/) & [CPRED](https://gman-cyberpunk.vercel.app/nc-overdrive-hub/)=
+	- these are pages that contain all of the rules of the specific system in an ordered fashion for quick navigation
+- Removed redundant pages (just privately existing in my Obsidian vault now)
+- Published all #district of [[Night City/Locations/Night City\|Night City]]
+- Cleared some miswrites in [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|NCOverdrive]] webpages (i.e. [[Rules/NCOverdrive/Tags\|Tags]] not existing)
+- Added [[Rules/NCOverdrive/Damage/Weapon Tags\|Weapon Tags]] for Brand weapons
+- Updated the [[To Do List\|To Do List]]
 #### 07.09
 - Changed site theme from ITS to cybrcore
 - Changed homepage to a header first for easier navigation
@@ -86,7 +96,7 @@
 - Cleaned up webpages
 - Added two news articles, [[Eurotour/News/Who let Entropy have a CHAINSAW!\|Who let Entropy have a CHAINSAW!]] & [[Eurotour/News/Executive Executions on Rhin-Ruhr Rooftops\|Executive Executions on Rhin-Ruhr Rooftops]]
 - Brought the [[z-SITE/CPRED Sheet\|CPRED Sheet]] to a stable 1.0.1.1 version
-- Added an [[z-SITE/AI Policy\|AI disclaimer]] in the footer of all webpages (except, for some reason, the [[z-SITE/Home\|Home]]?)
+- Added an [[z-SITE/AI Policy\|AI disclaimer]] in the footer of all webpages (except, for some reason, the [[z-SITE/QuickNav\|QuickNav]]?)
 - Added descriptions for all of the main [[Eurotour/Eurotour\|Eurotour]] locations: [[Eurotour/Locations/Liverpool\|Liverpool]], [[Eurotour/Locations/Brussels\|Brussels]], [[Eurotour/Locations/Paris\|Paris]], [[Eurotour/Locations/Venice\|Venice]], [[Eurotour/Locations/Rhine-Ruhr Conurb\|Rhine-Ruhr Conurb]], [[Eurotour/Locations/Stockholm\|Stockholm]], [[Prague\|Prague]]
 - Added initial descriptions for the #role s, as well as their Role Abilities
 - Added public webpages for [[Eurotour/The Crew\|The Crew]]

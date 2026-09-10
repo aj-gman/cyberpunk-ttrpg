@@ -17,7 +17,7 @@ For an [[Night City/Beliefs/Idealism\|Idealist]], an unfair valuation, a nasty b
 
 [[Night City/Beliefs/Idealism\|Idealists]] can be found across all Corporations, but often have to be tied to some sort of connection to said company - **loyalty via dependance, conditioning, education.** 
 For example, many Corporations prefer to have **private schooling options** for their most loyal [[Night City/Strata/Corpzoner\|Corpzoners]] in order to preemptively indoctrinate their children - [[Night City/Organizations/Corporations/Arasaka\|Arasaka School of Economics]], [[Night City/Organizations/Corporations/Militech\|Militech Academy of Engineering]] and so on.
-Loyalty can also be bought via supplying the worker with **a comfortable lifestyle** inevitably tied to the corporation. A [[Biotehnica\|Biotehnica]] [[Night City/Strata/Beaver\|Beaver]] living in [[Rancho Coronado\|Rancho Coronado]] would stand to lose more than just their source of income if they quit or betrayed the Corp - they'd lose their house, their car, the respect of their peers.
+Loyalty can also be bought via supplying the worker with **a comfortable lifestyle** inevitably tied to the corporation. A [[Biotehnica\|Biotehnica]] [[Night City/Strata/Beaver\|Beaver]] living in [[Night City/Locations/Dependencies (2020)/Rancho Coronado\|Rancho Coronado]] would stand to lose more than just their source of income if they quit or betrayed the Corp - they'd lose their house, their car, the respect of their peers.
 
 ### Patrons
 Although many believers of [[Night City/Beliefs/Idealism\|Idealism]] look up to these individuals, they are not necessarily believers in the ideology as well. Many CEOs merely construct a cult of personality around themselves to the point of veneration.

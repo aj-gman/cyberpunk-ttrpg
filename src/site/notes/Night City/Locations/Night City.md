@@ -1,8 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/night-city/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/locations/night-city/","tags":["#location","#4cw"],"dg-note-properties":{"tags":["#location","#4cw"]}}
 ---
 
-#location
+>[!warning] THIS PAGE severely lacks information.
+
 The **Free City of Night City (NC)** is an autonomous city-state found on the shores of [Del Coronado Bay](https://cyberpunk.fandom.com/wiki/Del_Coronado_Bay "Del Coronado Bay"), located on the border between [North](https://cyberpunk.fandom.com/wiki/North_California "North California") and [South California](https://cyberpunk.fandom.com/wiki/South_California "South California"), on the Pacific Coast of North America. Established in [1994](https://cyberpunk.fandom.com/wiki/1994 "1994") by [Richard Night](https://cyberpunk.fandom.com/wiki/Richard_Night "Richard Night"), it was originally known as **Coronado City** before its renaming in [1998](https://cyberpunk.fandom.com/wiki/1998 "1998"). 
 It is the main setting for the _[Cyberpunk](https://cyberpunk.fandom.com/wiki/Cyberpunk_Series "Cyberpunk Series")_ franchise.
 

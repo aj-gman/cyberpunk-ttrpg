@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/night-city/locations/night-city-history/","dg-note-properties":{}}
 ---
 
-# THIS PAGE NEEDS SUMMARY (it is fully plagiarised from the Cyberpunk Wiki)
+>[!warning] THIS PAGE NEEDS to be rewritten, since it is fully plagiarised from the Cyberpunk Wiki
 ### Inception (1990 - 1992)
 
 [[Night City/Characters/Richard Night\|Richard Night]], a successful businessman who during the early [1990s](https://cyberpunk.fandom.com/wiki/1990 "1990") was concerned by the violence and disruption of the impending [Collapse](https://cyberpunk.fandom.com/wiki/Collapse "Collapse"), saw himself in an unique position to deal with the forthcoming issue. Working mainly on corporate-funded projects under a notorious company known as [Halsey, Ferris and Night](https://cyberpunk.fandom.com/wiki/Halsey,_Ferris_and_Night "Halsey, Ferris and Night"), Richard was dreaming to create his own ideal city.

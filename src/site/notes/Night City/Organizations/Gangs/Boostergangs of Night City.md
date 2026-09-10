@@ -39,5 +39,5 @@ See them in [the Map](https://gman-cyberpunk.vercel.app/img/map-viewer/), under 
 - [[Night City/Organizations/Gangs/Red Chrome Legion\|Red Chrome Legion]]
 - D6 other gangs
 
-### [[Night City/Locations/Districts (2020)/Heywood\|Heywood]]
+### [[Night City/Locations/Dependencies (2020)/Heywood\|Heywood]]
 - [[Night City/Organizations/Gangs/El Norte Cartel\|El Norte Cartel]]
