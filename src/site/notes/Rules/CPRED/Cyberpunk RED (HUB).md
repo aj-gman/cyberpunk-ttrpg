@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/cyberpunk-red-hub/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
+{"dg-publish":true,"dg-path":"Rules/CPRED (HUB).md","permalink":"/rules/cpred-hub/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
 ---
 
 >[!info]-
