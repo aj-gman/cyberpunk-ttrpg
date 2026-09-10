@@ -1,17 +1,31 @@
 {
   "/": [
-    "Homepage",
-    "CPRED (HUB)",
-    "CPRED Sheet",
+    "Home",
     "NCOverdrive (HUB)",
-    "NCOverdrive Sheet",
+    "CPRED (HUB)",
+    "Player Characters",
     "Rules",
     "Night City",
     "Eurotour",
-    "Crew",
     "AI Policy",
     "G-man",
     "Site Chronicle"
+  ],
+  "/Player Characters": [
+    "OTHER",
+    "Relevant NPCs",
+    "The Gang"
+  ],
+  "/Player Characters/OTHER": [
+    "HEX_PUBLIC",
+    "LAZARUS_PUBLIC",
+    "RAY_PUBLIC"
+  ],
+  "/Player Characters/Relevant NPCs": [
+    "Nolasco Family"
+  ],
+  "/Player Characters/Relevant NPCs/Nolasco Family": [
+    "Nolasco Family"
   ],
   "/Rules": [
     "NCOverdrive",
@@ -133,7 +147,8 @@
     "Characters",
     "Organizations",
     "Others",
-    "Locations"
+    "Locations",
+    "Fourth Corporate War"
   ],
   "/Night City/Beliefs": [
     "Idealism",
@@ -288,21 +303,5 @@
     "5 Touring the Margin",
     "6 Plundering Praha",
     "7 Big Trouble in Neo-Sov"
-  ],
-  "/Crew": [
-    "OTHER",
-    "Relevant NPCs",
-    "The Gang"
-  ],
-  "/Crew/OTHER": [
-    "HEX_PUBLIC",
-    "LAZARUS_PUBLIC",
-    "RAY_PUBLIC"
-  ],
-  "/Crew/Relevant NPCs": [
-    "Nolasco Family"
-  ],
-  "/Crew/Relevant NPCs/Nolasco Family": [
-    "Nolasco Family"
   ]
 }
