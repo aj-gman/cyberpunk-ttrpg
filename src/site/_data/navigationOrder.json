@@ -12,13 +12,13 @@
     "G-man"
   ],
   "/Rules": [
-    "Homebrew",
-    "Basebuilding",
-    "Cyberpunk Universe",
     "NCOverdrive",
-    "CPRED"
+    "CPRED",
+    "Cyberpunk Universe",
+    "Homebrew"
   ],
   "/Rules/NCOverdrive": [
+    "Neon City Overdrive (HUB)",
     "Damage",
     "Dice Mechanics",
     "Trademarks",
@@ -29,7 +29,7 @@
     "Gear",
     "Stunts",
     "XP",
-    "Neon City Overdrive (HUB)"
+    "Basebuilding"
   ],
   "/Rules/NCOverdrive/Damage": [
     "Combat",
