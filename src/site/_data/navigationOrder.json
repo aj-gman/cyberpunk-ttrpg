@@ -12,13 +12,14 @@
     "G-man"
   ],
   "/Rules": [
+    "NCOverdrive (HUB)",
     "NCOverdrive",
+    "CPRED (HUB)",
     "CPRED",
     "Cyberpunk Universe",
     "Homebrew"
   ],
   "/Rules/NCOverdrive": [
-    "Neon City Overdrive (HUB)",
     "Damage",
     "Dice Mechanics",
     "Trademarks",
@@ -56,8 +57,7 @@
     "Netrunning",
     "Roles",
     "Difficulty Rating",
-    "Quality",
-    "Cyberpunk RED (HUB)"
+    "Quality"
   ],
   "/Rules/CPRED/Combat": [
     "Combat",
