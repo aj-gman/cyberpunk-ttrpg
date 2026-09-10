@@ -8,31 +8,34 @@
     "Crew",
     "AI Policy",
     "CPRED Sheet",
-    "NCOverdrive Sheet"
+    "NCOverdrive Sheet",
+    "G-man"
   ],
   "/Rules": [
-    "NCOverdrive",
     "Homebrew",
     "Basebuilding",
     "Cyberpunk Universe",
+    "NCOverdrive",
     "CPRED"
   ],
   "/Rules/NCOverdrive": [
-    "Neon City Overdrive",
-    "Drugs",
     "Damage",
     "Dice Mechanics",
     "Trademarks",
     "Conditions",
-    "Gear",
+    "Cyberware",
     "Drive",
+    "Drugs",
+    "Gear",
     "Stunts",
-    "XP"
+    "XP",
+    "Neon City Overdrive (HUB)"
   ],
   "/Rules/NCOverdrive/Damage": [
     "Combat",
     "Hits",
-    "Traumas"
+    "Traumas",
+    "Weapon Tags"
   ],
   "/Rules/NCOverdrive/Dice Mechanics": [
     "Dice Rolls",
@@ -52,9 +55,9 @@
     "Drugs",
     "Netrunning",
     "Roles",
-    "Cyberpunk RED",
     "Difficulty Rating",
-    "Quality"
+    "Quality",
+    "Cyberpunk RED (HUB)"
   ],
   "/Rules/CPRED/Combat": [
     "Combat",
@@ -129,13 +132,21 @@
     "Beliefs",
     "Characters",
     "Organizations",
-    "Others"
+    "Others",
+    "Locations"
   ],
   "/Night City/Beliefs": [
     "Idealism",
     "Realism",
     "Insurrectionism",
-    "Parallelism"
+    "Parallelism",
+    "Fashion"
+  ],
+  "/Night City/Beliefs/Fashion": [
+    "Entropism",
+    "Kitsch",
+    "Neokitsch",
+    "Neomilitarism"
   ],
   "/Night City/Characters": [
     "2021",
@@ -196,13 +207,19 @@
   "/Night City/Others": [
     "About Cyberpsychosis"
   ],
+  "/Night City/Locations": [
+    "Night City",
+    "Night City History"
+  ],
   "/Eurotour": [
     "Characters",
     "Locations",
     "News",
     "Eurotour",
     "Organizations",
-    "EYE"
+    "EYE",
+    "Adventures",
+    "The Crew"
   ],
   "/Eurotour/Characters": [
     "France",
@@ -237,7 +254,8 @@
     "Paris",
     "Stockholm",
     "Venice",
-    "St. Petersburg"
+    "St. Petersburg",
+    "United Kingdom"
   ],
   "/Eurotour/News": [
     "Glamorous Deaths in the Swiss Alps",
@@ -261,10 +279,20 @@
     "Neo-Sov",
     "PKY"
   ],
+  "/Eurotour/Adventures": [
+    "1 Paper Trail",
+    "2 European Graffiti",
+    "3 Trapped Animal",
+    "4 Menace in Venice",
+    "4.5 Hunting the Hunter",
+    "5 Touring the Margin",
+    "6 Plundering Praha",
+    "7 Big Trouble in Neo-Sov"
+  ],
   "/Crew": [
-    "The Crew",
     "OTHER",
-    "Relevant NPCs"
+    "Relevant NPCs",
+    "The Gang"
   ],
   "/Crew/OTHER": [
     "HEX_PUBLIC",
