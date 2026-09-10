@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/corporations/tsunami-arms/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/organizations/corporations/tsunami-arms/","tags":["#corporation"],"dg-note-properties":{"tags":["#corporation"]}}
 ---
 
 #corporation 
-*state-of-the-art, custom, exorbitantly expensive;*
+#### BRAND TAGS: state-of-the-art (choose/invent 2 Brand Tags)
 
 **Tsunami Defense Systems** (also known as **Tsunami Design Bureau** or **Tsunami Arms**) is one of the four largest weapons manufacturers located in [Japan](https://cyberpunk.fandom.com/wiki/Japan "Japan") and is considered one of the top-tier weapons manufacturers in the world.
 

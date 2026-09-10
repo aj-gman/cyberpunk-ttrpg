@@ -1,10 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/corporations/kang-tao/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/organizations/corporations/kang-tao/","tags":["#corporation"],"dg-note-properties":{"tags":["#corporation"]}}
 ---
 
 #corporation 
-*patented smart-gun technology, expensive (like a printer, ammo costs more)*
+#### BRAND TAGS: smart-gun, aim assist
 
+*patented smart-gun technology, expensive (like a printer, ammo costs more)*
 *This is Kang Tao. This is intelligence.*
 
 **Kang Tao** (traditional & simplified Chinese: 康陶) is a weapons manufacturer, initially [Taiwanese](https://cyberpunk.fandom.com/wiki/Taiwan "Taiwan"), later on [Chinese](https://cyberpunk.fandom.com/wiki/China "China"). Kang Tao was originally headquartered in [Taiwan](https://cyberpunk.fandom.com/wiki/Taiwan "Taiwan"), which had become a manufacturing haven in the late [2000s](https://cyberpunk.fandom.com/wiki/2000s "2000s"), after the country declared independence with the help of [Japan](https://cyberpunk.fandom.com/wiki/Japan "Japan") and [Arasaka](https://cyberpunk.fandom.com/wiki/Arasaka "Arasaka"). Kang Tao became an industry giant among the Taiwanese companies. Unlike the rest, it kept its independence by not selling out to Japanese business interests. Kang Tao manufactured weapons that were distributed through Asia and made their way to the [US](https://cyberpunk.fandom.com/wiki/United_States_of_America "United States of America").

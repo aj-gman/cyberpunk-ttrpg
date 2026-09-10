@@ -1,12 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/corporations/budget-arms/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/organizations/corporations/budget-arms/","tags":["#corporation"],"dg-note-properties":{"tags":["#corporation"]}}
 ---
 
 #corporation 
-*jams and breaks easily, very affordable, single-use recommended*
+#### BRAND TAGS: explodes-on-throw
 
 *2nd Amendment is not only for the rich.*
-
 **Budget Arms**, often stylized as **BudgetArms**, is a weapons manufacturer in the Cyberpunk universe.
 
 True to its name, the company specialized in manufacturing very low-cost, very low-quality weapons typically advertised to the lower-middle class.

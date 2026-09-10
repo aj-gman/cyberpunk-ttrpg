@@ -3,7 +3,7 @@
 ---
 
 #npc #4cw 
-[[Crew/Lazarus\|Lazarus]]' aunt. Used to work as a jeweler.
+[[Crew/OTHER/Lazarus\|Lazarus]]' aunt. Used to work as a jeweler.
 
 
 ![NPC-Liudmilla.jpg\|300](/img/user/Pictures/NPC-Liudmilla.jpg)

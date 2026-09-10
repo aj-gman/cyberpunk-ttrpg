@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/characters/2021/big-wu/","tags":["#npc","#4cw"],"dg-note-properties":{"tags":["#npc","#4cw"]}}
+{"dg-publish":true,"permalink":"/night-city/characters/2021/big-wu/","dg-note-properties":{}}
 ---
 
 #npc #4cw [[Night City/Locations/Night City\|Night City]]
@@ -16,5 +16,5 @@ Eventually, however, [[Night City/Organizations/Corporations/Arasaka\|an Arasaka
 Once in [[Night City/Locations/Night City\|Night City]], he used the connections he had with [[Night City/Organizations/Corporations/Militech\|Militech]] to buy out a small property in [[Night City/Locations/Districts (2020)/Little Asia\|Japantown]] and turn it into [[The Golden Palace\|The Golden Palace]].
 By the [[Fourth Corporate War\|Fourth Corporate War]], [[Night City/Characters/2021/Big Wu\|Big Wu]] is a sought-out [[Rules/CPRED/Roles/Fixer\|Fixer]] in his slice of the pie (i.e. [[Night City/Locations/Districts (2020)/Little Asia\|Japantown]]), with [[Night City/Organizations/Gangs/Tyger Clawz\|Tyger Clawz]] and [[Night City/Organizations/Gangs/Piranhas\|Piranhas]] fighting for gigs from him. He has some bad blood with the [[Night City/Organizations/Gangs/Maelstrom\|Maelstrom]], since their presence in [[Night City/Locations/Districts (2020)/Little Asia\|Little Asia]] is taking a hit on "good business".
 
-He first contacts [[Crew/The Crew\|The Crew]] upon their arrival in [[Night City/Locations/Night City\|Night City]] to offer them shelter and food. [[Crew/Hex\|Hex]]'s sister, [[Crew/Relevant NPCs/Natalie Michaels\|Natalie Michaels]], is friends with [[Night City/Characters/2021/Big Wu\|Big Wu]]. So he is playing at both ends.
+He first contacts [[Eurotour/The Crew\|The Crew]] upon their arrival in [[Night City/Locations/Night City\|Night City]] to offer them shelter and food. [[Crew/Hex\|Hex]]'s sister, [[Crew/Relevant NPCs/Natalie Michaels\|Natalie Michaels]], is friends with [[Night City/Characters/2021/Big Wu\|Big Wu]]. So he is playing at both ends.
 ![NPC-bigwu.jpg\|251](/img/user/Pictures/NPC-bigwu.jpg)
