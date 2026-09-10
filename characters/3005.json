@@ -54,7 +54,7 @@
     {
       "type": "special",
       "title": "M71 Liberator",
-      "tags": "",
+      "tags": "Militech, Modular",
       "notes": "Heavy bullet\nBullpup\nRecoil compensation system, excelent design and balancing. \nThe bullet retains a flat trajectory, controllability, and is light (scope)\nACIA muzzle brake\nSuppressed"
     },
     {
@@ -156,16 +156,9 @@
   ],
   "trackers": {
     "cyberpsy": 0,
-    "humanity": 7,
-    "nerve": 2
+    "humanity": 7
   },
   "conditions": {
-    "angry": false,
-    "dazed": false,
-    "exhausted": false,
-    "scared": false,
-    "restrained": false,
-    "weakened": false,
     "custom": []
   },
   "traumas": [
@@ -188,18 +181,14 @@
   ],
   "flaws": [
     {
-      "marked": false,
       "text": "Family ties (Camorra)"
     },
     {
-      "marked": false,
       "text": "Infamous"
     }
   ],
   "flaw1": "Family ties (Camorra)",
   "flaw2": "Infamous",
-  "marked1": false,
-  "marked2": false,
   "stuntPoints": 3,
   "stash": [
     false,
