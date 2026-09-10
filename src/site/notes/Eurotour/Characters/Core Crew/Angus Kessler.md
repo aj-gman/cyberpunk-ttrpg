@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/characters/core-crew/angus-kessler/","tags":["#npc","#eurotour"],"dg-note-properties":{"tags":["#npc","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/characters/core-crew/angus-kessler/","dg-note-properties":{}}
 ---
 
 #npc #eurotour 

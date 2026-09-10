@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/characters/core-crew/ace-mc-leod/","tags":["#npc","#eurotour"],"dg-note-properties":{"tags":["#npc","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/characters/core-crew/ace-mc-leod/","dg-note-properties":{}}
 ---
 
 #npc #eurotour 

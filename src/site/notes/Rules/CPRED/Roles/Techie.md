@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/roles/techie/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/techie/","dg-note-properties":{}}
 ---
 
 #role

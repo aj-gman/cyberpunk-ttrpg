@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/gangs/el-norte-cartel/","tags":["#boostergang"],"dg-note-properties":{"tags":["#boostergang"]}}
+{"dg-publish":true,"permalink":"/night-city/organizations/gangs/el-norte-cartel/","dg-note-properties":{}}
 ---
 
 #boostergang [[Night City/Locations/Night City\|Night City]]

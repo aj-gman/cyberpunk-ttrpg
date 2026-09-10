@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/characters/core-crew/jimenez/","tags":["#npc","#eurotour"],"dg-note-properties":{"tags":["#npc","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/characters/core-crew/jimenez/","dg-note-properties":{}}
 ---
 
 #npc #eurotour 

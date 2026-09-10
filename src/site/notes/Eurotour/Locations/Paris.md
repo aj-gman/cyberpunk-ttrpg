@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/locations/paris/","tags":["#location","#eurotour"],"dg-note-properties":{"tags":["#location","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/locations/paris/","dg-note-properties":{}}
 ---
 
 #location #eurotour 

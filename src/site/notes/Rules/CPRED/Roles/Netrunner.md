@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/roles/netrunner/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/netrunner/","dg-note-properties":{}}
 ---
 
 #role

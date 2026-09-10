@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/locations/frankfurt-airport/","tags":["#location","#eurotour"],"dg-note-properties":{"tags":["#location","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/locations/frankfurt-airport/","dg-note-properties":{}}
 ---
 
 #location #eurotour 

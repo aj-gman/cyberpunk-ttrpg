@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/eurotour/","tags":["#gig","#eurotour"],"dg-note-properties":{"tags":["#gig","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/eurotour/","dg-note-properties":{}}
 ---
 
 #gig #eurotour 

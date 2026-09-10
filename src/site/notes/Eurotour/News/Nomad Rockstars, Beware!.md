@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/news/nomad-rockstars-beware/","tags":["#news"],"dg-note-properties":{"tags":["#news"]}}
+{"dg-publish":true,"permalink":"/eurotour/news/nomad-rockstars-beware/","dg-note-properties":{}}
 ---
 
 #news 

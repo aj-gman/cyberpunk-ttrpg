@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/roles/exec/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/exec/","dg-note-properties":{}}
 ---
 
 #role

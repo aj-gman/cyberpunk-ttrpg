@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/roles/media/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/media/","dg-note-properties":{}}
 ---
 
 #role

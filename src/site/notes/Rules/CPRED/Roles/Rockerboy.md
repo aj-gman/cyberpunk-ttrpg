@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/cpred/roles/rockerboy/","tags":["#role"],"dg-note-properties":{"tags":["#role"]}}
+{"dg-publish":true,"permalink":"/rules/cpred/roles/rockerboy/","dg-note-properties":{}}
 ---
 
 #role

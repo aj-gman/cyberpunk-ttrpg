@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Rules/NCOverdrive (HUB).md","permalink":"/rules/nc-overdrive-hub/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"NCOverdrive (HUB).md","permalink":"/nc-overdrive-hub/","dg-note-properties":{}}
 ---
 
 > [!abstract]- Why [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|NCOverdrive]]?

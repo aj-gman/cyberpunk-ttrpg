@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/beliefs/insurrectionism/","tags":["#ideology","#corporation"],"dg-note-properties":{"tags":["#ideology","#corporation"]}}
+{"dg-publish":true,"permalink":"/night-city/beliefs/insurrectionism/","tags":["ideology"],"dg-note-properties":{"tags":["ideology"]}}
 ---
 
 Insurrectionism in the [[Rules/Cyberpunk Universe\|Cyberpunk Universe]] refers to the belief that all #corporation s are doomed to succumb to human greed and lust for power.

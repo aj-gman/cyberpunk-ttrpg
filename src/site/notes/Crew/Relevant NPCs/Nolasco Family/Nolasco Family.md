@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/crew/relevant-np-cs/nolasco-family/nolasco-family/","tags":["#family"],"dg-note-properties":{"tags":["#family"]}}
+{"dg-publish":true,"permalink":"/crew/relevant-np-cs/nolasco-family/nolasco-family/","dg-note-properties":{}}
 ---
 
 #family
