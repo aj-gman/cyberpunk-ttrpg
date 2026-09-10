@@ -220,8 +220,6 @@
   }
 
   function setupListeners(linkElement) {
-    if (linkElement.closest('.site-resource-nav')) return;
-
     linkElement.addEventListener('mouseleave', function (_event) {
       hideTooltip();
     });

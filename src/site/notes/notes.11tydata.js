@@ -21,7 +21,7 @@ module.exports = {
     },
     permalink: (data) => {
       if (data.tags.indexOf("gardenEntry") != -1) {
-        return data["dg-path"] === "Homepage.md" ? "/homepage/" : "/";
+        return "/";
       }
       return data.permalink || undefined;
     },
