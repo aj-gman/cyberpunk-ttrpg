@@ -1,5 +1,5 @@
 ---
-Title: Homepage
+{"dg-publish":true,"dg-path":"Homepage.md","permalink":"/homepage/","tags":["gardenEntry"],"dg-note-properties":{}}
 ---
 
 Welcome to [G-man](https://gmantabletops.miraheze.org/wiki/User:AidenJacks)'s Cyberpunk [Digital Garden](https://docs.forestry.md/)! [^1]

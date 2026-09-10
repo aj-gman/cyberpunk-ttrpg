@@ -18,9 +18,9 @@ The severity of the symptom is proportional to this result: higher values indica
 - decreased quickly & cheaply by [[Rules/CPRED/Drugs/Wireheading\|Wireheading]]
 
 ##### Increasing
-Oftentimes, you'll find yourself pushed over the edge not by the usage of [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] as outlined in the <mark style="background: #fee801;">Main Rule</mark>, but through the experience of trauma, mental afflictions or drugs.
+Oftentimes, you'll find yourself pushed over the edge not by the usage of [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] as outlined in the <mark style="background: #fee801;">Main Rule</mark>, but through the experience of trauma, mental afflictions or drugs.
 
-- using [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]], increased by +[[Rules/CPRED/Quality\|Quality]]
-- installing certain [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] increased by +[[Rules/CPRED/Quality\|Quality]][^24]
+- using [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]], increased by +[[Rules/CPRED/Quality\|Quality]]
+- installing certain [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] increased by +[[Rules/CPRED/Quality\|Quality]][^24]
 - taking [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]] and experiencing dehumanizing symptoms (like Paranoia for [[Rules/CPRED/Drugs/SynthCoke\|SynthCoke]])
 - experiencing incredibly stressful/traumatic situations, like war, betrayal, losing a limb, losing a loved one etc.

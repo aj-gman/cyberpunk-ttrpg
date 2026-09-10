@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/adventures/2-european-graffiti/","tags":["#gig","#eurotour"],"dg-note-properties":{"tags":["#gig","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/adventures/2-european-graffiti/","dg-note-properties":{}}
 ---
 
 #gig #eurotour 
@@ -9,7 +9,7 @@ Major gangs include the Datajackers, a bunch of [[Rules/CPRED/Roles/Netrunner\|N
 
 ## Prepping
 ### Theme
-- **ULTIMATE CAPITALISM** - Corporate heaven - buy everything at horribly low costs as long as you're also a corpo. Everybody else? Fuck 'em. Except for the fact that people across classes have adopted the same lifestyle and are selling and buying everything they want or think they need. Stories, information, dreams, [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] - everything's for sale.
+- **ULTIMATE CAPITALISM** - Corporate heaven - buy everything at horribly low costs as long as you're also a corpo. Everybody else? Fuck 'em. Except for the fact that people across classes have adopted the same lifestyle and are selling and buying everything they want or think they need. Stories, information, dreams, [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] - everything's for sale.
 - **OF SHINING TOWERS** - Beacons of greed and success, the towers hang around wherever you go, symbols of the success, of the triumph. Everywhere, news about [[Eurotour/The Crew\|The Crew]]'s affectations in the [[Eurotour/Locations/United Kingdom\|United Kingdom]] doesn't go unnoticed - in fact, politicos are mobilizing to ban American Rockerboys from performing in the [[Eurotour/Organizations/EEC\|EEC]] - that and "good riddance" to [[Eurotour/Locations/United Kingdom\|The British]].
 - **BEHIND TALL WALLS** - Everything is neatly sectioned off into digestible chunks - no personal cars (ridesharing!), no travelling in zones without good reason and definitely no getting into the [[Eurotour/Locations/EC Enclave\|EC Enclave]], the [[Eurotour/Organizations/EEC\|EEC]]'s own Vatican;
 ### Motifs

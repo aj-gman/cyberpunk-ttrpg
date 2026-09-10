@@ -4,7 +4,7 @@
 
 [[Rules/Homebrew\|Homebrewed]] completely from the ground up.
 
-<mark style="background: #fee801;">MAIN RULE:</mark> [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] **is activated**. When doing so, it exponentially lowers the [[Rules/CPRED/Difficulty Rating\|Difficulty Rating]] of a relevant roll. Each [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] has a [[Rules/CPRED/Quality\|Quality]] value (from 1 to 5) that determines how much the [[Rules/CPRED/Difficulty Rating\|DR]] is lowered by, in [[Rules/CPRED/Difficulty Rating\|DR bands]][^3][^5]. 
+<mark style="background: #fee801;">MAIN RULE:</mark> [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] **is activated**. When doing so, it exponentially lowers the [[Rules/CPRED/Difficulty Rating\|Difficulty Rating]] of a relevant roll. Each [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] has a [[Rules/CPRED/Quality\|Quality]] value (from 1 to 5) that determines how much the [[Rules/CPRED/Difficulty Rating\|DR]] is lowered by, in [[Rules/CPRED/Difficulty Rating\|DR bands]][^3][^5]. 
 
 Before resolving the check, the player adds **+[[Rules/CPRED/Quality\|Quality]]**[^8] to his [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis tracker]], (mark down under Addiction category in Character Sheet).
 If the [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis final value]] is higher than the player's current [[Rules/CPRED/Cyberware/Humanity\|Humanity]] (=WILL+EMP), they experience [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|Cyberpsychosis Symptoms]].
@@ -15,19 +15,19 @@ If the [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis final value]] is h
 
 ### Acquiring Cyberware
 - **From a [[Rules/CPRED/Roles/Medtechie\|Ripperdoc]]**
-- **From corpses:** raises [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis]] and requires [[Rules/CPRED/Difficulty Rating\|a succesful Paramedic check]] relative to the [[Rules/CPRED/Quality\|Quality]] of the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]]
+- **From corpses:** raises [[Rules/CPRED/Cyberware/Cyberpsychosis\|Cyberpsychosis]] and requires [[Rules/CPRED/Difficulty Rating\|a succesful Paramedic check]] relative to the [[Rules/CPRED/Quality\|Quality]] of the [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]]
 
 ##### Starting Cyberware
-New characters may buy as many individual pieces of [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] as they desire, up to their starting eurodollars. **For the starting [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]],** use the minimum price in the desired [[Rules/CPRED/Quality\|Quality band]] to value each implant based on the number of points spent in class, from **50eb (Costly) for [[Rules/CPRED/Quality\|Quality]] 1** to **5000 eb (Luxury) for [[Rules/CPRED/Quality\|Quality]] 5.** 
+New characters may buy as many individual pieces of [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] as they desire, up to their starting eurodollars. **For the starting [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]],** use the minimum price in the desired [[Rules/CPRED/Quality\|Quality band]] to value each implant based on the number of points spent in class, from **50eb (Costly) for [[Rules/CPRED/Quality\|Quality]] 1** to **5000 eb (Luxury) for [[Rules/CPRED/Quality\|Quality]] 5.** 
 
 ##### Upgrading Cyberware
 **Upgrading Cyberware** requires going to a proficient [[Rules/CPRED/Roles/Medtechie\|Ripperdoc]] and paying a sum equal to the minimum cost of the [[Rules/CPRED/Quality\|next price band]]. Some [[Rules/CPRED/Roles/Medtechie\|Ripperdocs]] may be specialized in certain types of surgeries, so finding the right one for your needs may be difficult in some places.
 
 ### Disabling Cyberware
-- Physically sever the connection between the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] and the brain
+- Physically sever the connection between the [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] and the brain
 - Temporarily, through the use of [[Restraint Chip\|Restraint Chips]]
 - Disabling it via [[Rules/CPRED/Netrunning/Quickhacks\|Quickhacks]]
-- Destroying the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]]'s functionality
+- Destroying the [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]]'s functionality
 
 ### Theoretical Foundations
 *this is game design philosophy. useful for prospecting storytellers*

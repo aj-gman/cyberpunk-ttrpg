@@ -15,4 +15,4 @@ Armor is a **TAG**, which means it gives [[Rules/NCOverdrive/Dice Mechanics/Dice
 - [[Rules/NCOverdrive/Drugs\|Drugs]]
 - **First Aid.** Characters can attempt to heal hits, on themselves or someone else, by making a check with **1 Danger Die per trauma the target is currently suffering** (with any other applicable modifiers). Success/partial success clears 1 hit box and boons can clear additional boxes (one for one). A botch causes the character to suffer one additional hit.
 
-[^1]: More boxes can be gained with [[Rules/NCOverdrive/Drugs\|Rules/NCOverdrive/Drugs]] and [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]].
+[^1]: More boxes can be gained with [[Rules/NCOverdrive/Drugs\|Rules/NCOverdrive/Drugs]] and [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]].

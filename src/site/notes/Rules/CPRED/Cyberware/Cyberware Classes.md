@@ -19,7 +19,7 @@
 
 ## Physical, generally unnoticeable
 #### **Skeleton** 
-**raw physical superiority** - [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] in this section usually removes [[Rules/CPRED/Cyberware/Humanity\|Max Humanity]] upon installation instead of upon every use
+**raw physical superiority** - [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] in this section usually removes [[Rules/CPRED/Cyberware/Humanity\|Max Humanity]] upon installation instead of upon every use
 - **damage deniers** like scar tissue healers, kinetic conduit spine/joints that reduce the likelihood of critical injuries, hemorrhage stitcher for automatic stabilization, pain editors; bioelastic shock absorbers that disperse and reduce physical damage
 - **body improvement** such as increased total strength (lifting, brawling), increased health (by boosting the BODY stat) through the fusion of titanium or ceramic plates with major bones, as well as boosting skeletal muscle through the use of synthetic muscle fibers, enhanced mind-muscle connection through spine implants (better REF)
 #### **Circulatory System**
@@ -45,7 +45,7 @@
 **encourage a specific playstyle across all gameplay**
 - **[[Rules/CPRED/Cyberware/Speedware\|Speedware]]** - passive[^14] reflex boosters, active reflex boosters like Sandevistans, allowing the user to perceive reality at a slower pace than it actually is and react accordingly, dodging bullets, moving and reacting with incredible speed
 - **Cyberdeck** - often combined into [[Rules/CPRED/Cyberware/Cyberware Classes#Exotic Cyberware\|#Exotic Cyberware]] as part of a Netrunner suite, this OS offers the user the ability to perceive networked data[^15] visually and to deploy programs and executables at the speed of thought, something not possible with wired hardware; 
-- **Berserker** - upon activation, Berserker [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] puts the user into an enhanced state of fight-or-flight, a primal response opposite to the dissociative episode of Cy-Rage; in short, pumping up the user's metabolic usage, reducing consciousness to prioritize automatic reflexive actions and with the help of micro-endocrine injectors[^16], the user becomes a tool of destruction for a limited time (granting increased BODY, hand-to-hand damage, REF and DEX);
+- **Berserker** - upon activation, Berserker [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] puts the user into an enhanced state of fight-or-flight, a primal response opposite to the dissociative episode of Cy-Rage; in short, pumping up the user's metabolic usage, reducing consciousness to prioritize automatic reflexive actions and with the help of micro-endocrine injectors[^16], the user becomes a tool of destruction for a limited time (granting increased BODY, hand-to-hand damage, REF and DEX);
 - **Social Engines** - these vary relating to their intended effect, but usually are incredibly subtle and require physical social behavior to parse pheromones, identify microfacial expressions, stress indicators, voice inflexions and so on; 
 	- **standard models** function as lie detectors, tools for blending into your environment[^17] or psycho-social predictors of flaws and qualities; 
 	- **more advanced models** are able to interfere with brainwaves, influencing other people and triggering specific behavior (primal reactions, for example) 

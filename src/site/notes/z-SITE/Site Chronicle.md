@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#ideology","#stratum","#news","#role"],"dg-note-properties":{"tags":["#ideology","#stratum","#news","#role"]}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
 ---
 
 ### September 2026
@@ -10,7 +10,7 @@
 - Updated #ideology, changed up fashion association
 - Did initial write-up for the fashions: [[Night City/Beliefs/Fashion/Neomilitarism\|Neomilitarism]], [[Night City/Beliefs/Fashion/Neokitsch\|Neokitsch]], [[Night City/Beliefs/Fashion/Kitsch\|Kitsch]], [[Night City/Beliefs/Fashion/Entropism\|Entropism]]
 - Update [NCOverdrive Character Sheet](https://gman-cyberpunk.vercel.app/img/NCO-sheet.html) to 1.2.0.0 ([see GitHub repo for more info](https://github.com/aj-gman/cyberpunk-ttrpg/commit/6a83423e0d207666c4d65bcfd2b60a523d0c9ee5))
-- Introduced the rules for [[Rules/NCOverdrive/Cyberware (NCOverdrive)\|Cyberware (NCOverdrive)]], as well as sheet implementation
+- Introduced the rules for [[Rules/NCOverdrive/Cyberware\|Rules/NCOverdrive/Cyberware]], as well as sheet implementation
 #### 04.09
 - Added #ideology : full write-up for [[Night City/Beliefs/Idealism\|Idealism]], half-write-up for [[Night City/Beliefs/Insurrectionism\|Insurrectionism]], [[Night City/Beliefs/Parallelism\|Parallelism]], [[Night City/Beliefs/Realism\|Realism]]
 - Added #stratum : needs write-up for all
@@ -69,12 +69,12 @@
 #### *17.05*
 - **Updated the site with a clearer/readable Theme.** Adjusted the sidebars to be more useful (left sidebar has been cleaned up to remove redundant folders | right sidebar has been extended for easy graph navigation)
 - Added multiple [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]], including [[Rules/CPRED/Drugs/Wireheading\|Wireheading]].
-- Revamped the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] page to link into [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|Cyberpsychosis Symptoms]], [[Rules/CPRED/Cyberware/Cyberware Classes\|Cyberware Classes]] and [[Rules/CPRED/Cyberware/Humanity\|Humanity]] so you don't have to navigate
+- Revamped the [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] page to link into [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|Cyberpsychosis Symptoms]], [[Rules/CPRED/Cyberware/Cyberware Classes\|Cyberware Classes]] and [[Rules/CPRED/Cyberware/Humanity\|Humanity]] so you don't have to navigate
 - Updated the Site's CSS to match in colors and vibe to the Obsidian Vault
 #### *18.05*
 - Added a [[z-SITE/CPRED Sheet\|CPRED Sheet]] (Work in Progress)
 	Features:
-	- [[Rules/CPRED/Cyberware/Cyberware#Cyberpsychosis\|Cyberpsychosis ]]tracker, [[Rules/CPRED/Cyberware/Humanity\|Humanity]] calculator & full [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] rule implementation
+	- [[Rules/CPRED/Cyberware/Cyberware#Cyberpsychosis\|Cyberpsychosis ]]tracker, [[Rules/CPRED/Cyberware/Humanity\|Humanity]] calculator & full [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] rule implementation
 	- Multiple pages for easy navigation
 	- Armor & Seriously Wounded penalties applied automatically
 	- Damage tracker that ablates armor and removes HP
@@ -94,7 +94,7 @@
 #### *24.05*
 - Added [[Eurotour/Locations/Stockholm\|Stockholm]] and information on [[Eurotour/Adventures/5 Touring the Margin\|5 Touring the Margin]] (restricted access)
 - [[z-SITE/CPRED Sheet\|CPRED Sheet]] has been brought to a stable patch, v1.0.1.1.
-- Cleared up some more on the [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] webpage
+- Cleared up some more on the [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] webpage
 
 
 

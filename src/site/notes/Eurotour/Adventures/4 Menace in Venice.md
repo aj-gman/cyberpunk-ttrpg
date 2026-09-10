@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/adventures/4-menace-in-venice/","tags":["#gig","#eurotour"],"dg-note-properties":{"tags":["#gig","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/adventures/4-menace-in-venice/","dg-note-properties":{}}
 ---
 
 #gig #eurotour  

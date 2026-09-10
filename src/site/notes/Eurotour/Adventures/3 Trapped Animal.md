@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/adventures/3-trapped-animal/","tags":["#gig","#eurotour"],"dg-note-properties":{"tags":["#gig","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/adventures/3-trapped-animal/","dg-note-properties":{}}
 ---
 
 #gig #eurotour 
@@ -7,7 +7,7 @@ Quickly after leaving [[Eurotour/Locations/Brussels\|Brussels]] with a successfu
 
 Thick [[Eurotour/Characters/Claire Monet\|Interpol presence]], along with Metropolitain police assure that the arrival is uneventul (cordons, limos, all that jazz).
 
-First thing [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] does upon arriving is go out to get some [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]]. Those who would notice his disappearance could go to [[Eurotour/Characters/Core Crew/Tinker\|Tinker]], who has placed a tracker in his skin after [[Eurotour/Adventures/1 Paper Trail\|1 Paper Trail]].
+First thing [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] does upon arriving is go out to get some [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]]. Those who would notice his disappearance could go to [[Eurotour/Characters/Core Crew/Tinker\|Tinker]], who has placed a tracker in his skin after [[Eurotour/Adventures/1 Paper Trail\|1 Paper Trail]].
 
 
 ## Prologue

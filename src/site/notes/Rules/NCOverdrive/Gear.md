@@ -8,5 +8,5 @@
 **Specialised gear** has one or more tags listed after it, like ==sniper rifle (scope, silenced)==. A character can have a maximum **of four items of specialised gear.** Specialised gear may provide Action Dice.
 
 There are specific [[Rules/Homebrew\|Homebrew]] types of **Special Gear**:
-- [[Rules/NCOverdrive/Cyberware (NCOverdrive)\|Cyberware (NCOverdrive)]], which enables superhuman feats
+- [[Rules/NCOverdrive/Cyberware\|Rules/NCOverdrive/Cyberware]], which enables superhuman feats
 - ==Branded weapons==, which have specific [[Rules/NCOverdrive/Damage/Weapon Tags\|Weapon Tags]]

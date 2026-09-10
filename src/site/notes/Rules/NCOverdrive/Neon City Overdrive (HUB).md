@@ -16,8 +16,10 @@
 **=>** [[Rules/NCOverdrive/Trademarks/Triggers\|Triggers]], thematic guidelines that define when you can use specific [[Rules/NCOverdrive/Trademarks/Trademarks\|Trademarks]]
 **=>** [[Rules/NCOverdrive/Trademarks/Edges\|Edges]], specific [[Rules/NCOverdrive/Trademarks/Triggers\|Triggers]] where you gain **a mechanical bonus** (action dice) due to your skill, talent etc. in that field
 
+> [!danger]+
 [[Rules/NCOverdrive/Trademarks/Trademarks\|Trademarks]] also have associated [[Rules/NCOverdrive/Trademarks/Flaws\|Flaws]].
 
+> [!further-reading]
 > **Example:**
 > - Trademark: CYBER EYES
 > - Triggers: Notice, Aim Assist, Thermal Imaging, Camera, HUD, VR, Zoom In

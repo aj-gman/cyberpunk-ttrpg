@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/adventures/5-touring-the-margin/","tags":["#gig","#eurotour"],"dg-note-properties":{"tags":["#gig","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/adventures/5-touring-the-margin/","dg-note-properties":{}}
 ---
 
 #gig #eurotour 
@@ -56,7 +56,7 @@ In [[Eurotour/Locations/Stockholm\|Stockholm]], they'll find that [[Eurotour/Cha
 	- [x] The entire bar's atmosphere is easy-going, although Auken claims this is a dangerous, yet respectable establishment. Even [[Johnny Silverhand\|Silverhand]] sung here back when [[SAMURAI\|SAMURAI]] was together. You might get additional information about the [[Eurotour/Characters/Maddogs\|Maddogs]] being bad news from other patrons, but...
 - [x] [[Eurotour/The Crew\|The Crew]] learns of the [[Eurotour/Characters/Maddogs\|Maddogs]]' regular hideout, the basement of a seamy counterculture store, selling anything from [[Rules/CPRED/Roles/Medtechie\|tattoos]] to booze, niche CDs and drug paraphernalia. 
 	- [x] Guess what, they're not home! [[Eurotour/Characters/Lars-Olov Skeppsholm\|Lars' kidnapping]] has forced them out of the hideout.
-	- [x] 3 guards at the entrance, 1 is alone. Some [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]], max [[Rules/CPRED/Quality\|Quality]] 3
+	- [x] 3 guards at the entrance, 1 is alone. Some [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]], max [[Rules/CPRED/Quality\|Quality]] 3
 	- [x] **Den:** [[Rules/CPRED/Drugs/Vaporwave\|Vaporwave]] smell, backstreet brawl, 2d6 [[Rules/CPRED/Roles/Nomad\|Nomads]][^2]
 
 ### Turning Point

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/adventures/6-plundering-praha/","tags":["#gig","#eurotour"],"dg-note-properties":{"tags":["#gig","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/adventures/6-plundering-praha/","dg-note-properties":{}}
 ---
 
 #gig #eurotour 
@@ -97,7 +97,7 @@ After the heist is done, [[Eurotour/The Crew\|The Crew]] is immediately shipped 
 - [ ] Once General Skroup arrives, everything goes to shit. Sleeping gas at the exits to stop people from killing each other and shit like that.
 
 ### End
-GTFO-ing isn't very simple. You gotta move [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] from the stadium to the airport and you run a high risk of him going [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|'psycho]] for a variety of reasons. On the way, [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] finally snaps (...at [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine's]] [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] usage...) and tries to kill [[Eurotour/The Crew\|The Crew]] or [[Eurotour/Organizations/EEC\|EDF]] soldiers - this could be a good moment for [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]] to step back in, or for [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] to finally be humanized
+GTFO-ing isn't very simple. You gotta move [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] from the stadium to the airport and you run a high risk of him going [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|'psycho]] for a variety of reasons. On the way, [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] finally snaps (...at [[Eurotour/Characters/Core Crew/Catherine Clements\|Catherine's]] [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] usage...) and tries to kill [[Eurotour/The Crew\|The Crew]] or [[Eurotour/Organizations/EEC\|EDF]] soldiers - this could be a good moment for [[Eurotour/Characters/Core Crew/Angus Kessler\|Angus Kessler]] to step back in, or for [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]] to finally be humanized
 
 Once at the airport, you're greeted by [[Eurotour/Organizations/EEC\|EDF soldiers]] and escorted quickly to your airplane... Unfortunately, [[Eurotour/Characters/Col. Dr. Barcak\|Col. Dr. Barcak]] has managed to sneak in (now she's a war fugitive) and taken a hostage, as she wants to escape with you in the airplane... a shootout is imminent.
 #### Player Goals

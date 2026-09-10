@@ -15,4 +15,4 @@ A type of [[Rules/CPRED/Drugs/Drugs\|drug]] that comes in form of black pills us
 ### After effects
 - If the [[Rules/CPRED/Drugs/Omega Blockers#Side Effect\|Resist T/D]] is failed, suffer from **[[Rules/CPRED/Drugs/Drug Effects/Nerve Degeneration\|Nerve Degeneration]]** (+1). Once you reach Nerve Degeneration 5, reset it and lower INT, REF or DEX by -1.
 
-[^1]: See [[Rules/CPRED/Cyberware/Cyberware\|Cyberware]] for additional details.
+[^1]: See [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] for additional details.
