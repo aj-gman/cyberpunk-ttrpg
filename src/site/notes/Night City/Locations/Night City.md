@@ -10,9 +10,9 @@ It was originally known as **Coronado City**, before taking the name of its foun
 
 > [!info]- The NC Flag
 ![FLAG-NC.webp\|333](/img/user/Pictures/FLAG-NC.webp)
-The [[Night City/Locations/Night City\|Night City]] flag has three distinct colors: White, Yellow and Navy Blue, along with two five-pointed stars, one of which is reversed.
+>The [[Night City/Locations/Night City\|Night City]] flag has three distinct colors: White, Yellow and Navy Blue, along with two five-pointed stars, one of which is reversed.
 >
-There are multiple interpretations for the color scheme: some say that it represents day-sunset-night (the never-ending cycle), while others argue it could be a stylized view of Coronado Bay: the sky, white, the land, yellow, the ocean, navy. Others still argue the white represents peace, yellow wealth and the dark navy - near black, represents chaos, anarchy, opposing the white.
+>There are multiple interpretations for the color scheme: some say that it represents day-sunset-night (the never-ending cycle), while others argue it could be a stylized view of Coronado Bay: the sky, white, the land, yellow, the ocean, navy. Others still argue the white represents peace, yellow wealth and the dark navy - near black, represents chaos, anarchy, opposing the white.
 >
 >The symbolism of the stars is once again debated: [[Night City/Locations/Night City\|Night City]] is at the border of [NorCal](https://cyberpunk.fandom.com/wiki/North_California) and [SoCal](https://cyberpunk.fandom.com/wiki/South_California), both Free States; otherwise, the reversed star, in black, could represent anarchy, chaos and the tendency for the human nature to stray in that direction, while the white star represents lawfulness and order. Both being present on the flag could suggest the city's acceptance that one comes with the other, like [Yin and Yang](https://en.wikipedia.org/wiki/Yin_and_yang).
 #### History
@@ -20,6 +20,12 @@ There are multiple interpretations for the color scheme: some say that it repres
 #### Demographics
 #### Education
 #### Sports
+Most officially-sanctioned sports events take place in [McCartney Stadium](https://cyberpunk.fandom.com/wiki/McCartney_Stadium) in the [[Night City/Locations/Districts (2020)/Nightlife District\|Nightlife District]]. Oftentimes, security at these events needs to be tight, so [[Night City/Organizations/Corporations/Lazarus PMC\|Lazarus PMC]] or [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] are deployed by the local government.
+>[!info]- Local Teams
+>- [Night City Rangers](https://cyberpunk.fandom.com/wiki/Night_City_Rangers) (American football)
+>- [Night City Death-Dealers](https://cyberpunk.fandom.com/wiki/Night_City_Death_Dealers) (Combat-Soccer)
+>- [Night City Heat](https://cyberpunk.fandom.com/wiki/Night_City_Heat) (Basketball)
+>- [Night City Slammers](https://cyberpunk.fandom.com/wiki/Night_City_Slammers) (Baseball)
 #### Economy
 Technical, light industry, international trade, information services, electronic technologies
 #### Law Enforcement & Crime
@@ -30,11 +36,11 @@ Technical, light industry, international trade, information services, electronic
 The government is **a New City Democratic Mayorality**, having a corporate-controlled city council that proposes and passes new legislation. Votes by the general population are cast via DataTerm, using [[Night City/Organizations/Corporations/EBM\|IdentiCard]] registration software. The City Council is composed of representatives chosen by the ten largest corporate investors (via taxes, donations, job opportunity creation etc.) in [[Night City/Locations/Night City\|Night City]].
 
 The City is split between 6 internal districts and a [[Combat Zone\|Combat Zone]], with a City Manager assigned to protect and serve the area's best interest. In 2021, **all City Managers** were Corporate [[Rules/CPRED/Roles/Exec\|Executives]], nominated by majority vote from the **City Council**.
-- [[Night City/Locations/Districts (2020)/City Center\|City Center]], managed by [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] [[Rules/CPRED/Roles/Exec\|Exec]] [[Iwasao Koremichi\|Iwasao Koremichi]]
+- [[Night City/Locations/Districts (2020)/City Center\|City Center]], managed by [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] [[Rules/CPRED/Roles/Exec\|Exec]] [[Night City/Characters/Iwasao Koremichi\|Iwasao Koremichi]]
 - [[Night City/Locations/Districts (2020)/Little Asia\|Little Asia]], managed by [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] [[Rules/CPRED/Roles/Exec\|Exec]] [[Oburo Tatsunaga\|Oburo Tatsunaga]]
 - [[Night City/Locations/Districts (2020)/Little Europe\|Little Europe]], managed by [[Halsey, Ferris & Skiv\|Halsey, Ferris & Skiv]] [[Rules/CPRED/Roles/Exec\|Exec]]
 - [[Night City/Locations/Districts (2020)/Nightlife District\|Nightlife District]], managed by [[Night City/Organizations/Corporations/EBM\|EBM]] [[Rules/CPRED/Roles/Exec\|Exec]]
 - [[Night City/Locations/Districts (2020)/University District\|University District]], managed by [[IEC\|IEC]] [[Rules/CPRED/Roles/Exec\|Exec]]
 - [[Night City/Locations/Districts (2020)/Westside\|Westside]], managed by [[Night City/Organizations/Corporations/Militech\|Militech]] [[Rules/CPRED/Roles/Exec\|Exec]]
-- [[Night City/Locations/Districts (2020)/South Night City\|South Night City]], managed by [[Night City/Organizations/Corporations/Petrochem\|Petrochem]] [[Rules/CPRED/Roles/Exec\|Exec]]
+- [[Night City/Locations/Districts (2020)/South Night City\|South Night City]] [[Combat Zone\|Combat Zone]], managed by [[Night City/Organizations/Corporations/Petrochem\|Petrochem]] [[Rules/CPRED/Roles/Exec\|Exec]]
 
