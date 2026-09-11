@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/corporations/arasaka/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/organizations/corporations/arasaka/","tags":["#corporation"],"dg-note-properties":{"tags":["#corporation"]}}
 ---
 
 #corporation 
@@ -10,3 +10,5 @@ The **Arasaka Corporation** (Japanese: **アラサカ社** or **荒坂社**), is
 The Arasaka Corporation maintains the largest and most powerful armed forces of any corporation in the world, with their guards renowned worldwide and feared by many. Most firms will look to licensing from Arasaka corporate security guards, couriers, or mercenaries to protect their assets. However, Arasaka assets take priority if they are at risk and the troops themselves are loyal to death to the Japanese conglomerate.
 
 Arasaka has made a habit of buying up other companies worldwide, and bleeding out the competition of other Japanese corporations. They also give a heavy amount of support to Japanese communities all over the globe, despite their business practices and overall history being considered unethical.
+
+https://cyberpunk.fandom.com/wiki/Yoru_Tomobiki

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/dependencies-2020/heywood/","tags":["#district","#location"],"dg-note-properties":{"tags":["#district","#location"]}}
+{"dg-publish":true,"permalink":"/night-city/locations/dependencies-2020/heywood/","tags":["district","location"],"dg-note-properties":{"tags":["district","location"]}}
 ---
 
 >[!info]- [Map of Night City](https://gman-cyberpunk.vercel.app/img/map-viewer/)

@@ -6,7 +6,7 @@
 #### 10.09
 - Implemented hero header to the website which makes it look like a real webpage;
 	- Achieved various bug fixes from 07.09 - 11.09 to bring it to a workable state
-- Reindexed the site so there are two "hubs" to navigate: [NCOverdrive](https://gman-cyberpunk.vercel.app/nc-overdrive-hub/) & [CPRED](https://gman-cyberpunk.vercel.app/nc-overdrive-hub/)=
+- Reindexed the site so there are two "hubs" to navigate: [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|NCOverdrive]] + [[Rules/CPRED/Cyberpunk RED (HUB)\|CPRed]]
 	- these are pages that contain all of the rules of the specific system in an ordered fashion for quick navigation
 - Removed redundant pages (just privately existing in my Obsidian vault now)
 - Published all #district of [[Night City/Locations/Night City\|Night City]]
