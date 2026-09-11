@@ -3,6 +3,9 @@
 ---
 
 ### September 2026
+#### 11.09
+- Added initial rules for [[Rules/NCOverdrive/Basebuilding\|Basebuilding]] (still requires details for Contacts & Personnel)
+- Updated [[Night City/Locations/Night City\|Night City]] webpage with a few more details
 #### 10.09
 - Implemented hero header to the website which makes it look like a real webpage;
 	- Achieved various bug fixes from 07.09 - 11.09 to bring it to a workable state

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/news/czechoslovakian-unrest-continues/","tags":["#news","#eurotour"],"dg-note-properties":{"tags":["#news","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/news/czechoslovakian-unrest-continues/","dg-note-properties":{}}
 ---
 
 #news [[Prague\|Prague]], [[Eurotour/Organizations/EEC\|EEC]], #eurotour 

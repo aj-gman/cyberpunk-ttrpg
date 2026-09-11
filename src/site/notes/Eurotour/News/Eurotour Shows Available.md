@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/eurotour/news/eurotour-shows-available/","tags":["#news","#eurotour"],"dg-note-properties":{"tags":["#news","#eurotour"]}}
+{"dg-publish":true,"permalink":"/eurotour/news/eurotour-shows-available/","dg-note-properties":{}}
 ---
 
 #news [[Eurotour/Characters/Core Crew/Jack Entropy\|Jack Entropy]], [[Eurotour/Organizations/EEC\|EEC]], #eurotour 

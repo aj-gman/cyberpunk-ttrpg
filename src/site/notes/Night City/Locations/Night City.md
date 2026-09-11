@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/night-city/","tags":["#location","#4cw"],"dg-note-properties":{"tags":["#location","#4cw"]}}
+{"dg-publish":true,"permalink":"/night-city/locations/night-city/","tags":["location","4cw"],"dg-note-properties":{"tags":["location","4cw"]}}
 ---
 
 >[!warning] THIS PAGE severely lacks information.

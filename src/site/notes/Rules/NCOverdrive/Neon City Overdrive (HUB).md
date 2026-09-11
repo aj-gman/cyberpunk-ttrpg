@@ -10,6 +10,8 @@
 >[!note]- [NCOverdrive Character Sheet](https://gman-cyberpunk.vercel.app/img/NCO-sheet.html)
 ### For more about the mechanics, see here:
 
+> [!todo] [[Rules/NCOverdrive/Basebuilding\|Basebuilding]] (Homebrew)
+
 > [!danger]- Combat
 > - [[Rules/NCOverdrive/Damage/Combat\|Combat]]
 > - [[Rules/NCOverdrive/Damage/Hits\|Hits]]
@@ -32,4 +34,3 @@
 > [!tip]- leveling up
 > - [[Rules/NCOverdrive/Drive\|Drive]]
 > - [[Rules/NCOverdrive/XP\|XP]]
-
