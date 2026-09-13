@@ -29,10 +29,7 @@ module.exports = {
   layout: "layouts/index.njk",
   eleventyExcludeFromCollections: true,
   isFallbackIndex: true,
-  // The fallback index no longer claims "/" — glitch-header.njk owns it.
-  // Any note with the gardenEntry tag should be given a different permalink
-  // (e.g. /homepage/) since the root is now the glitch landing page.
-  permalink: false,
+  permalink: hasHomePage ? false : "/",
   eleventyComputed: {
     title: (data) => (data.meta && data.meta.siteName) || "Notes",
     // Notes get their per-page settings from notes/notes.11tydata.js; this
