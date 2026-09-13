@@ -4,20 +4,20 @@ const matter = require("gray-matter");
 const matterOptions = require("./matterOptions");
 
 const HOME_TAG = "gardenEntry";
-const HOME_PROP = "dg-home";
 
 /**
- * Whether a note's frontmatter marks it as the garden's home page.
+ * Whether a note's frontmatter marks it as the garden's home page. The
+ * Obsidian plugin turns `dg-home: true` into the `gardenEntry` tag, which is
+ * what the rest of the build keys on (see notes/notes.11tydata.js).
  */
 function frontmatterIsHomePage(data) {
   const tags = data && data.tags;
   if (Array.isArray(tags)) {
-    if (tags.includes(HOME_TAG)) return true;
+    return tags.includes(HOME_TAG);
   }
   if (typeof tags === "string") {
-    if (tags.split(/[,\s]+/).includes(HOME_TAG)) return true;
+    return tags.split(/[,\s]+/).includes(HOME_TAG);
   }
-  if (data && data[HOME_PROP] === true) return true;
   return false;
 }
 
@@ -28,15 +28,17 @@ function fileIsHomePage(filePath) {
   } catch {
     return false;
   }
-  if (path.basename(filePath) === "Homepage.md") {
-    return true;
-  }
-  if (!raw.includes(HOME_TAG) && !raw.includes('"dg-home"')) {
+  // Cheap pre-check: the tag has to appear literally for the note to be home.
+  if (!raw.includes(HOME_TAG)) {
     return false;
   }
   try {
     return frontmatterIsHomePage(matter(raw, matterOptions).data);
   } catch {
+    // Unparseable frontmatter that mentions the tag. Assume it is the home
+    // page: a wrong "yes" only keeps the fallback front page off, while a
+    // wrong "no" would make two templates write `/index.html` and fail the
+    // whole build.
     return true;
   }
 }
@@ -58,6 +60,13 @@ function* walkMarkdownFiles(dir) {
   }
 }
 
+/**
+ * True when any note under `notesDir` is tagged as the garden's home page.
+ *
+ * Read straight from disk rather than from Eleventy collections: the fallback
+ * front page needs this to decide its permalink, and Eleventy resolves
+ * permalinks before collections exist.
+ */
 function hasHomePageNote(notesDir) {
   for (const file of walkMarkdownFiles(notesDir)) {
     if (fileIsHomePage(file)) {

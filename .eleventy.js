@@ -252,7 +252,6 @@ module.exports = function(eleventyConfig) {
     })
     .use(require("markdown-it-mark"))
     .use(require("markdown-it-footnote"))
-    .use(require("./src/helpers/multiColumnMarkdown"))
     .use(function(md) {
       md.renderer.rules.hashtag_open = function(tokens, idx) {
         return '<a class="tag">';
@@ -847,9 +846,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/site/img");
   eleventyConfig.addPassthroughCopy("src/site/scripts");
   eleventyConfig.addPassthroughCopy("src/site/styles/_theme.*.css");
-  eleventyConfig.addPassthroughCopy({ "src/site/favicon.svg": "favicon.svg" });
   eleventyConfig.addPassthroughCopy({ "src/site/logo.*": "/" });
-  // glitch-header.njk now owns "/" as a proper template — no passthrough needed.
   eleventyConfig.on("eleventy.before", () => {
     normalizeFavicon(FAVICON_SOURCE, FAVICON_NORMALIZED);
     anchorAttributesCache.clear();
