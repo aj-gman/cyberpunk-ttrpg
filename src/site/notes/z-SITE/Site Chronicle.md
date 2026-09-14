@@ -1,8 +1,12 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#stratum","#district","#ideology","#news","#role"],"dg-note-properties":{"tags":["#stratum","#district","#ideology","#news","#role"]}}
 ---
 
 ### September 2026
+#### 14.09
+- Made public the #stratum, with a relevant description for [[Night City/Strata/Powerdealer\|Powerdealer]];
+- Added Demographics to [[Night City/Locations/Night City\|Night City]] page;
+- Added Dependencies ([[Night City/Locations/Dependencies (2020)/Pacifica\|Pacifica]] etc.) to the [[Night City/Locations/Night City\|Night City]] page;
 #### 11.09
 - Added initial rules for [[Rules/NCOverdrive/Basebuilding\|Basebuilding]] (still requires details for Contacts & Personnel)
 - Updated [[Night City/Locations/Night City\|Night City]] webpage with a few more details
