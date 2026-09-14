@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rules/nc-overdrive/basebuilding/","tags":["#district","#family"],"dg-note-properties":{"tags":["#district","#family"]}}
+{"dg-publish":true,"permalink":"/rules/nc-overdrive/basebuilding/","dg-note-properties":{}}
 ---
 
 [[Rules/Homebrew\|Homebrew]][^1]
@@ -16,7 +16,7 @@
 ## Development Levels
 Are required in order to initiate new [[Rules/NCOverdrive/Basebuilding#Upgrades\|upgrades]] and are split into 4 categories, depending on domain and required skills.
 ### Supplies (SUP)
-...the ability of [[Player Characters/The Gang\|The Gang]] to maintain current expenditures, meaning project, personnel, food, recurring transactions etc.
+...the capability of [[Player Characters/The Gang\|The Gang]] to maintain current expenditures, meaning project, personnel, food, recurring transactions etc.
 >[!danger]- If Supplies reaches 0...
 >[[Player Characters/The Gang\|The Gang]] disbands due to lack of operational resources. Personnel is scattered to the wind and the HQ will be attacked by various factions until it is eventually scrapped.
 

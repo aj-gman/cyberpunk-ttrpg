@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/fourth-corporate-war/","tags":["#campaign","#4cw","#ideology"],"dg-note-properties":{"tags":["#campaign","#4cw","#ideology"]}}
+{"dg-publish":true,"permalink":"/night-city/fourth-corporate-war/","dg-note-properties":{}}
 ---
 
 #campaign #4cw
@@ -20,4 +20,7 @@ Survive the [[Night City/Fourth Corporate War\|Fourth Corporate War]] from its b
 
 > [!abstract] [[Night City/Locations/Night City\|Learn about Night City]]
 
+>[!example]- See past adventures
+>1. [[Night City/Gigs/2021/Plastic Euphoria\|Plastic Euphoria]]
+>2. [[Night City/Gigs/2021/Free Reign\|Free Reign]]
 
