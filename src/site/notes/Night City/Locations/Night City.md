@@ -17,7 +17,17 @@ It was originally known as **Coronado City**, before taking the name of its foun
 >The symbolism of the stars is once again debated: [[Night City/Locations/Night City\|Night City]] is at the border of [NorCal](https://cyberpunk.fandom.com/wiki/North_California) and [SoCal](https://cyberpunk.fandom.com/wiki/South_California), both Free States; otherwise, the reversed star, in black, could represent anarchy, chaos and the tendency for the human nature to stray in that direction, while the white star represents lawfulness and order. Both being present on the flag could suggest the city's acceptance that one comes with the other, like [Yin and Yang](https://en.wikipedia.org/wiki/Yin_and_yang).
 #### History
 [[Night City/Locations/Night City\|Night City]] came about in [[Night City/Characters/Richard Night\|Richard Night]]'s mind in the early 1990s. A successful development mogul thanks to the advanced techniques him and his colleagues at [Halsey, Ferris and Night](https://cyberpunk.fandom.com/wiki/Halsey,_Ferris_and_Night?redirect=no "Halsey, Ferris and Night"), he rightfully predicted the impending [Collapse](https://cyberpunk.fandom.com/wiki/The_Collapse_of_the_United_States). With this solid corporate-backed portofolio, [[Night City/Characters/Richard Night\|Night]] settled on a piece of land north of [Los Angeles](https://en.wikipedia.org/wiki/Los_Angeles)
+
+See [[Night City/Locations/Night City History\|Night City History]].
 #### Demographics
+See #stratum.
+- [[Night City/Strata/Powerdealer\|Powerdealers]], the true elite in the shadows, making up at most 0.1% of the city's population;
+- [[Night City/Strata/Corpzoner\|Corpzoners]], the [[Rules/CPRED/Roles/Exec\|Execs]] and high-brow politicos, making up 3% of the population;
+- [[Night City/Strata/Beaver\|Beavers]], the middle-managers and lower [[Rules/CPRED/Roles/Exec\|Execs]] who prefer the "calmer" suburban life, making up 7% of the population;
+- [[Night City/Strata/Mover\|Movers]], the bottom of the corporate ladder, but still climbing, making up ~20% of the population;
+- [[Night City/Strata/Edgerunner\|Edgerunners]], the glorious mercenaries that drink from the pot of autonomy, making up a bit over 10% of the population;
+- [[Night City/Strata/Mallplexer\|Mallplexers]], low-wage workers clustered up in arcologies, making up another 30% of the population;
+- [[Night City/Strata/Streetscum\|Streetscum]], urban homeless, temporary employees and gangers who can't afford anything better, at a steep 30% of the population;
 #### Education
 #### Sports
 Most officially-sanctioned sports events take place in [McCartney Stadium](https://cyberpunk.fandom.com/wiki/McCartney_Stadium) in the [[Night City/Locations/Districts (2020)/Nightlife District\|Nightlife District]]. Oftentimes, security at these events needs to be tight, so [[Night City/Organizations/Corporations/Lazarus PMC\|Lazarus PMC]] or [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] are deployed by the local government.
@@ -43,4 +53,11 @@ The City is split between 6 internal districts and a [[Combat Zone\|Combat Zone]
 - [[Night City/Locations/Districts (2020)/University District\|University District]], managed by [[IEC\|IEC]] [[Rules/CPRED/Roles/Exec\|Exec]]
 - [[Night City/Locations/Districts (2020)/Westside\|Westside]], managed by [[Night City/Organizations/Corporations/Militech\|Militech]] [[Rules/CPRED/Roles/Exec\|Exec]]
 - [[Night City/Locations/Districts (2020)/South Night City\|South Night City]] [[Combat Zone\|Combat Zone]], managed by [[Night City/Organizations/Corporations/Petrochem\|Petrochem]] [[Rules/CPRED/Roles/Exec\|Exec]]
+
+[[Night City/Locations/Night City\|Night City]] also has dependencies, smaller cities or regions that have developed around it and belong to the [[Night City/Locations/Night City\|Greater NC Metropolitan Area]].
+- [[Night City/Locations/Dependencies (2020)/Heywood\|Heywood]], a light-industrial zone
+- [[Night City/Locations/Dependencies (2020)/NorthOak\|NorthOak]], the surrounding city of [[NorCal Military Base\|NorCal Military Base]]
+- [[Night City/Locations/Dependencies (2020)/Pacifica\|Pacifica]], a successful tourist resort
+- [[Night City/Locations/Dependencies (2020)/Rancho Coronado\|Rancho Coronado]], a [[Night City/Strata/Beaver\|Beaverville]]
+- [[Night City/Locations/Dependencies (2020)/Westbrook\|Westbrook]], a gated community for only the most exclusive of [[Night City/Strata/Corpzoner\|Corpzoners]]
 
