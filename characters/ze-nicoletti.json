@@ -1,0 +1,100 @@
+{
+  "_version": "1.0.1.1",
+  "_game": "Neon City Overdrive",
+  "nickname": "Azelia 'Ze' Nicoletti",
+  "appearance": "Ze is an Italian-American woman of average height and build, with short black hair and dark emerald eyes. Her typical outfit is comprised of a flannels, cargo pants, and combat boots.",
+  "personality": "Ze is level headed and can be incredibly cynical, it's only natural in a city like this. But with those lucky few, she can be a wam presence.",
+  "money": 0,
+  "eddies": 0,
+  "trademarks": [
+    {
+      "name": "Mob Daughter",
+      "triggers": [],
+      "edges": [
+        "Omerta",
+        "Family Name"
+      ]
+    },
+    {
+      "name": "Street Reporter",
+      "triggers": [],
+      "edges": [
+        "Worth a Thousand Words",
+        "Nightcrawler"
+      ]
+    },
+    {
+      "name": "Night City Native",
+      "triggers": [],
+      "edges": [
+        "Word on the Street",
+        "Face in the Crowd"
+      ]
+    },
+    {
+      "name": "",
+      "triggers": [],
+      "edges": []
+    }
+  ],
+  "gear": [],
+  "cyberware": [],
+  "hitsCount": 3,
+  "hits": [
+    false,
+    false,
+    false
+  ],
+  "trackers": {
+    "cyberpsy": 0,
+    "humanity": 10
+  },
+  "conditions": {
+    "custom": []
+  },
+  "traumas": [
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    }
+  ],
+  "flaws": [],
+  "flaw1": "",
+  "flaw2": "",
+  "stuntPoints": 0,
+  "stash": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "drive": {
+    "text": "",
+    "pips": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "experiencePoints": 0
+}
