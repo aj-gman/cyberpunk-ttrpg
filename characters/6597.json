@@ -4,8 +4,8 @@
   "nickname": "Hex",
   "appearance": "Tall muscular, orange pink mohawk",
   "personality": "",
-  "money": 12260,
-  "eddies": 12260,
+  "money": 6460,
+  "eddies": 6460,
   "trademarks": [
     {
       "name": "Prodigal Son",
@@ -218,13 +218,13 @@
   ],
   "hitsCount": 4,
   "hits": [
-    true,
+    false,
     false,
     false,
     false
   ],
   "trackers": {
-    "cyberpsy": 6,
+    "cyberpsy": 5,
     "humanity": 6,
     "nerve": 0
   },
@@ -235,41 +235,12 @@
     "scared": false,
     "restrained": false,
     "weakened": false,
-    "custom": [
-      {
-        "checked": false,
-        "text": "satieated "
-      },
-      {
-        "checked": false,
-        "text": "sleepy"
-      },
-      {
-        "checked": false,
-        "text": "euphoreic "
-      },
-      {
-        "checked": false,
-        "text": "delusions of invuln"
-      },
-      {
-        "checked": false,
-        "text": "Concentrator 2"
-      },
-      {
-        "checked": false,
-        "text": "speed 2"
-      },
-      {
-        "checked": false,
-        "text": "stimulant 2"
-      }
-    ]
+    "custom": []
   },
   "traumas": [
     {
       "marked": false,
-      "text": "Deep lac on the back of neck"
+      "text": ""
     }
   ],
   "flaws": [
@@ -280,21 +251,13 @@
     {
       "marked": false,
       "text": "Arrogant"
-    },
-    {
-      "marked": false,
-      "text": "Paranoid"
-    },
-    {
-      "marked": false,
-      "text": "black outs"
     }
   ],
   "flaw1": "Exile",
   "flaw2": "Arrogant",
   "marked1": false,
   "marked2": false,
-  "stuntPoints": 2,
+  "stuntPoints": 0,
   "stash": [
     false,
     false,
@@ -317,5 +280,5 @@
       false
     ]
   },
-  "experiencePoints": 0
+  "experiencePoints": 4
 }
