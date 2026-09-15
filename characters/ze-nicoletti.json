@@ -4,8 +4,8 @@
   "nickname": "Azelia 'Ze' Nicoletti",
   "appearance": "Ze is an Italian-American woman of average height and build, with short black hair and dark emerald eyes. Her typical outfit is comprised of a flannels, cargo pants, and combat boots.",
   "personality": "Ze is level headed and can be incredibly cynical, it's only natural in a city like this. But with those lucky few, she can be a wam presence.",
-  "money": 0,
-  "eddies": 0,
+  "money": 1100,
+  "eddies": 1100,
   "trademarks": [
     {
       "name": "Mob Daughter",
@@ -56,24 +56,19 @@
     {
       "marked": false,
       "text": ""
-    },
-    {
-      "marked": false,
-      "text": ""
-    },
-    {
-      "marked": false,
-      "text": ""
-    },
-    {
-      "marked": false,
-      "text": ""
     }
   ],
-  "flaws": [],
-  "flaw1": "",
-  "flaw2": "",
-  "stuntPoints": 0,
+  "flaws": [
+    {
+      "text": "Obvious Mark"
+    },
+    {
+      "text": "Enemies in low places"
+    }
+  ],
+  "flaw1": "Obvious Mark",
+  "flaw2": "Enemies in low places",
+  "stuntPoints": 3,
   "stash": [
     false,
     false,
@@ -96,5 +91,5 @@
       false
     ]
   },
-  "experiencePoints": 0
+  "experiencePoints": 1
 }
