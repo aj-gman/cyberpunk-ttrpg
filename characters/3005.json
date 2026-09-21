@@ -47,21 +47,21 @@
   "gear": [
     {
       "type": "special",
-      "title": "AV",
-      "tags": "",
-      "notes": "Flies, Fast, \nArmored, \nBig, Cargo space, Room for 6, \nConcealed compartment.\nThumbprint Lock, whoever puts in the wrong print gets hit by a stun baton-like electrocution.\nCan tow up to 10 tons, has the tow cable for it.\nHas 2 weapons: Rhinemetall EMG-86 Railgun: Armor piercing;       Militech Mk.27 LMG: Burst fire, Collateral damage, Intimidating, Messy"
+      "title": "Zetatech Asclepius AV-4",
+      "tags": "Fast, Armored, Concealed Compartment, Tow Cable",
+      "notes": "Flying vehicle, Big, Cargo space, Room for 6, \nThumbprint Lock, whoever puts in the wrong print gets hit by a stun baton-like electrocution.\nCan tow up to 10 tons;\nHas 2 weapons: Rhinemetall EMG-86 Railgun: Armor piercing;       \nMilitech Mk.27 LMG: Burst fire, Collateral damage, Intimidating, Messy"
     },
     {
       "type": "special",
       "title": "M71 Liberator",
-      "tags": "Militech, Modular",
-      "notes": "Heavy bullet\nBullpup\nRecoil compensation system, excelent design and balancing. \nThe bullet retains a flat trajectory, controllability, and is light (scope)\nACIA muzzle brake\nSuppressed"
+      "tags": "Militech, Modular, Bullpup, Scoped, Zero Recoil, Suppresed",
+      "notes": "Recoil compensation system, excellent design and balancing. \nThe bullet retains a flat trajectory, and is light (scope)\nACIA muzzle brake"
     },
     {
       "type": "special",
       "title": "Spiked Knuckles",
-      "tags": "",
-      "notes": "Quick, \nInflict bleeding, Deadly,\nConcealed, Small\nIntimidating, Messy\nQuiet"
+      "tags": "Quick, Concealable, Intimidating, Messy",
+      "notes": "Quiet, inflicts bleeding."
     },
     {
       "type": "basic",
