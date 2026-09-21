@@ -1,8 +1,16 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#npc","#stratum","#district","#ideology","#news","#role"],"dg-note-properties":{"tags":["#npc","#stratum","#district","#ideology","#news","#role"]}}
 ---
 
 ### September 2026
+#### 22.09
+- Updated [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.2.1.0
+	- New Inventory System;
+	- [[Rules/NCOverdrive/Cyberware\|Cyberware]] Quality introduced;
+	- Fixed minor issues
+- Updated player's sheets to match [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|NCO]] rules on [[Rules/NCOverdrive/Tags\|Tags]] and [[Rules/NCOverdrive/Gear\|Gear]] (backup files still exist)
+- Finalized [[Night City/Locations/Night City\|Night City]]'s History chapter
+- Made some more #npc public (that [[Player Characters/The Gang\|The Gang]] have met)
 #### 14.09
 - Made public the #stratum, with a relevant description for [[Night City/Strata/Powerdealer\|Powerdealer]];
 - Added Demographics to [[Night City/Locations/Night City\|Night City]] page;
