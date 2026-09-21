@@ -444,6 +444,20 @@
       gap: 4px;
       margin-left: auto;
     }
+    .gear-drag-handle {
+      color: #444;
+      font-size: 13px;
+      line-height: 1;
+      cursor: grab;
+      user-select: none;
+      flex-shrink: 0;
+      padding: 0 2px;
+      transition: color 0.15s;
+    }
+    .gear-drag-handle:hover { color: var(--neon-cyan); }
+    .gear-block.dragging { opacity: 0.6; }
+    .gear-block.dragging .gear-drag-handle { cursor: grabbing; }
+
     .gear-order-btn {
       min-width: 22px;
       padding: 2px 5px;
@@ -667,8 +681,8 @@
   <div class="storage-dialog">
     <h2 id="storage-modal-title">Storage</h2>
     <div class="storage-options">
-      <button class="btn btn-yellow" type="button" onclick="chooseStorageOption('cloud')">☁ From Cloud</button>
-      <button class="btn" type="button" onclick="chooseStorageOption('json')">▣ From JSON</button>
+      <button id="storage-cloud-btn" class="btn btn-yellow" type="button" onclick="chooseStorageOption('cloud')">☁ From Cloud</button>
+      <button id="storage-json-btn" class="btn" type="button" onclick="chooseStorageOption('json')">▣ From JSON</button>
       <button class="btn btn-danger" type="button" onclick="closeStorageModal()">Cancel</button>
     </div>
   </div>
@@ -994,7 +1008,7 @@
     const div = document.createElement('div');
     div.className = 'gear-block';
     div.id = 'gear-block-' + id;
-    div.draggable = true;
+    makeListBlockReorderable(div);
     div.dataset.kind = 'gear';
 
     const isSpecial = data.type === 'special';
@@ -1010,6 +1024,7 @@
       '<button class="btn btn-danger btn-small" type="button" onclick="event.stopPropagation(); removeGear(' + id + ')">&#10005;</button>';
 
     header.innerHTML =
+      '<span class="gear-drag-handle" title="Drag to reorder" aria-hidden="true">&#10303;</span>' +
       '<span class="gear-type-tag ' + typeClass + '">' + typeLabel + '</span>' +
       '<input type="text" class="gear-title-input gear-title" placeholder="Gear name&#8230;" value="' + escHtml(data.title || '') + '">';
     header.appendChild(controls);
@@ -1101,6 +1116,26 @@
     const level = Number(container.dataset.compactLevel || 2);
     return Math.max(1, Math.min(3, level));
   }
+
+  // Only a mousedown on the .gear-drag-handle grip arms dragging: a draggable
+  // ancestor stops the browser from placing the caret / selecting text inside
+  // the block's inputs and textarea.
+  function makeListBlockReorderable(block) {
+    block.draggable = false;
+    block.addEventListener('mousedown', function (event) {
+      const target = event.target;
+      block.draggable = !!(target && target.closest && target.closest('.gear-drag-handle'));
+    });
+  }
+
+  function disarmListBlockDrag() {
+    document.querySelectorAll('.gear-block[draggable="true"]').forEach(function (block) {
+      block.draggable = false;
+    });
+  }
+
+  document.addEventListener('mouseup', disarmListBlockDrag);
+  document.addEventListener('dragend', disarmListBlockDrag);
 
   function handleListDragStart(event) {
     const item = event.currentTarget;
@@ -1365,7 +1400,11 @@
   // HELPERS
   // ═══════════════════════════════════════════════════════
   function escHtml(str) {
-    return String(str).replace(/&/g,'&').replace(/"/g,'"').replace(/</g,'<').replace(/>/g,'>');
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
   }
 
   function val(id) {
@@ -1500,7 +1539,7 @@
     const div = document.createElement('div');
     div.className = 'gear-block';
     div.id = 'cyberware-block-' + id;
-    div.draggable = true;
+    makeListBlockReorderable(div);
     div.dataset.kind = 'cyberware';
 
     const header = document.createElement('div');
@@ -1512,6 +1551,7 @@
       '<button class="btn btn-danger btn-small" type="button" onclick="event.stopPropagation(); removeCyberware(' + id + ')">&#10005;</button>';
 
     header.innerHTML =
+      '<span class="gear-drag-handle" title="Drag to reorder" aria-hidden="true">&#10303;</span>' +
       '<span class="gear-type-tag" style="color:var(--purple);border-color:var(--purple);">Cyber</span>' +
       '<input type="text" class="gear-title-input gear-title" placeholder="Cyberware name&#8230;" value="' + escHtml(data.title || '') + '">';
     header.appendChild(controls);
@@ -1727,7 +1767,10 @@
 
   function openStorageModal(action) {
     storageAction = action;
-    document.getElementById('storage-modal-title').textContent = action === 'load' ? 'Load Character' : 'Save Character';
+    const loadMode = action === 'load';
+    document.getElementById('storage-modal-title').textContent = loadMode ? 'Load Character' : 'Save Character';
+    document.getElementById('storage-cloud-btn').textContent = loadMode ? '\u2601 From Cloud' : '\u2601 To Cloud';
+    document.getElementById('storage-json-btn').textContent = loadMode ? '\u25A3 From JSON' : '\u25A3 To JSON';
     document.getElementById('storage-modal').classList.add('visible');
   }
 
