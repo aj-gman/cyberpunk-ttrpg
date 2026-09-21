@@ -131,31 +131,31 @@
   },
   "cyberware": [
     {
-      "title": "Cyberhand",
+      "title": "Militech \"Entrepeneur\" Cyberhand",
       "tags": "MonoWire, Tool Hand, Tactile Boost",
-      "notes": "- can be used at close range and melee, Causes Trauma easily \n- \n- sense movement within 20m",
+      "notes": "- can be used at close range and melee, Causes Trauma easily \n- contains tools to repair and maintain most electronics\n- sense movement within 20m",
       "value": 2
     },
     {
-      "title": "CyberEyes",
+      "title": "Kiroshi \"Milspec 2\" CyberEyes",
       "tags": "Thermal, NV, Anti-Dazzle, Dart Gun",
       "notes": "EMP hardened \nConcealed Dartgun in Eye",
       "value": 1
     },
     {
-      "title": "CyberBody",
-      "tags": "Cyberbody",
-      "notes": "Pain Editor, Subdurmal armor, Trauma response matrix, Muscle and Bone lace, Sandevistan",
+      "title": "Sycust Subdermal Armor",
+      "tags": "Invisible, Kinetic-Absorbing, EMP-proof",
+      "notes": "Protects against up to heavy pistol calibers.\nUpgrade: Trauma Response Nanomatrix (stops VHP)",
       "value": 1
     },
     {
-      "title": "Grafted Muscle and Bone lace",
+      "title": "Biotehnica Grafted Muscle and Bone Lace",
       "tags": "Reinforced Skeleton, Superhuman Strength",
       "notes": "Gives me  very high strength, lift a car with effort",
       "value": 1
     },
     {
-      "title": "Neuroport",
+      "title": "Kiroshi Neuroport",
       "tags": "Interface Plugs, IEC Chip Archiver",
       "notes": "",
       "value": 1
@@ -173,13 +173,7 @@
       "value": 1
     },
     {
-      "title": "Sycust Subdermal Armor",
-      "tags": "Invisible, Kinetic-Absorbing, EMP-proof",
-      "notes": "Protects against up to heavy pistol calibers.\nUpgrade: Trauma Response Nanomatrix (stops VHP)",
-      "value": 1
-    },
-    {
-      "title": "Pain Editor",
+      "title": "Militech Pain Editor",
       "tags": "Ignore Trauma, Bypass Condition",
       "notes": "Activate to ignore Danger Dice from a Trauma/Condition.",
       "value": 1
@@ -200,10 +194,6 @@
     "custom": []
   },
   "traumas": [
-    {
-      "marked": false,
-      "text": ""
-    },
     {
       "marked": false,
       "text": ""
