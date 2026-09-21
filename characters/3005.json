@@ -109,42 +109,42 @@
   "cyberware": [
     {
       "title": "Ubermensch Speedware",
-      "tags": "",
+      "tags": "Hyper-Reflexes, Burst of Speed",
       "notes": "Dodge gunfire.\nMore difficult to hit by semiautomatic weapons.\nDash, Reaction speed, Dodge, Run."
     },
     {
       "title": "IEC Language Archiver",
-      "tags": "",
-      "notes": "Speak foreign languages using language chips. Inventory: Fluent French, North Italian, German, Swedish, Russian."
+      "tags": "French, North Italian, German, Swedish, Russian (Fluent, Default)",
+      "notes": "Speak foreign languages using language chips. "
     },
     {
       "title": "Sycust Faceplate",
-      "tags": "",
-      "notes": "Can cosmetically alter my face in as low as 1 minute."
+      "tags": "Quick (1min), Disguise, Biometric Spoof",
+      "notes": "Can cosmetically alter my face in as low as 1 minute.\nRequires an imprint to mimic."
     },
     {
-      "title": "Subdermal Armor",
-      "tags": "",
-      "notes": "Armor under the skin.\nProtects against up to heavy pistol calibers.\nKinetic absorption, energy absorption."
+      "title": "Sycust Subdermal Armor",
+      "tags": "Invisible, Kinetic-Absorbing, EMP-proof",
+      "notes": "Armor under the skin.\nProtects against up to heavy pistol calibers."
     },
     {
-      "title": "Bioware Storage",
-      "tags": "",
-      "notes": "Can hide something the size of an AR inside my torso.\nPocket."
+      "title": "Biotehnica Bioware Storage",
+      "tags": "Scanproof, Quick Access, Concealed",
+      "notes": "Can hide something the size of an AR inside my torso. Bioware/Organic Pocket."
     },
     {
       "title": "Biomonitor",
-      "tags": "",
+      "tags": "Drug Alerts, Trauma Detection, Vitals Tracking",
       "notes": "Monitors my vital signs."
     },
     {
       "title": "IEC Interface Plugs",
-      "tags": "",
+      "tags": "Neural Link, Dual Control",
       "notes": "Can act while controlling something the user is plugged into (E.g: Use the AV weapons while piloting it)."
     },
     {
-      "title": "Heavy Weapons Skill Chip",
-      "tags": "",
+      "title": "Militech Skill Chip",
+      "tags": "Heavy Weapons",
       "notes": ""
     }
   ],
