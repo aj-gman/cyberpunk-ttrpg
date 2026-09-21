@@ -328,7 +328,7 @@
       color: #000;
     }
 
-    /* STASH / DRIVE PIPS */
+    /* DRIVE PIPS */
     .pip-row { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 6px; }
     .pip {
       width: 20px; height: 20px;
@@ -339,9 +339,6 @@
       transition: all 0.15s;
     }
     .pip.marked { background: var(--neon-cyan); box-shadow: 0 0 6px var(--neon-cyan); border-color: var(--neon-cyan); }
-    .pip.yellow { border-color: var(--accent-yellow); }
-    .pip.yellow.marked { background: var(--accent-yellow); box-shadow: 0 0 6px var(--accent-yellow); }
-
     /* EXP PIPS */
     .exp-section { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
     .exp-group { display: flex; gap: 4px; }
@@ -504,6 +501,23 @@
       border-radius: 2px;
     }
     .gear-type-tag.special { color: var(--neon-pink); border-color: var(--neon-pink); }
+    /* Cyberware value chip (cycles 1-3), sits right of the purple CYBER tag */
+    .cyberware-value {
+      color: var(--purple);
+      border: 1px solid var(--purple);
+      background: transparent;
+      border-radius: 2px;
+      min-width: 18px;
+      padding: 2px 5px;
+      font-family: 'Lexend', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .cyberware-value:hover { background: var(--purple); color: #000; box-shadow: 0 0 8px var(--purple); }
     .gear-notes {
       width: 100%;
       background: #0a0c1a;
@@ -554,9 +568,6 @@
     .panel.yellow-border { border-color: var(--accent-yellow); }
     .panel.red-border { border-color: var(--danger-red); }
     .panel.purple-border { border-color: var(--purple); }
-
-    /* STASH SEPARATOR */
-    .stash-sep { color: var(--dim); font-size: 14px; font-weight: 300; margin: 0 2px; }
 
     /* TRACKERS MODULE */
     .tracker-row {
@@ -702,7 +713,7 @@
     <button class="btn btn-small" onclick="showPage(1)" id="btn-page1" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Core</button>
     <button class="btn btn-small" onclick="showPage(2)" id="btn-page2" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Gear & Cyberware</button>
     <button class="btn btn-small" onclick="showPage(3)" id="btn-page3" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Stash</button>
-    <button class="btn btn-small" onclick="showPage(4)" id="btn-page4" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">VTT</button>
+    <a class="btn btn-small" href="https://www.owlbear.rodeo/room/KwPt706YcZQ_/The%20Afoot%20Doom" target="_blank" rel="noopener" style="border-color:var(--accent-yellow);color:var(--accent-yellow);text-decoration:none;display:inline-block;">OPEN OWLBEAR VTT</a>
     <button class="btn btn-small" onclick="showPage(5)" id="btn-page5" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">Wiki</button>
   </div>
   <div class="top-bar-actions">
@@ -847,9 +858,6 @@
     <div class="gear-section compact-2" id="gear-container">
       <!-- Gear items are built by JavaScript -->
     </div>
-    <div class="divider"></div>
-    <h3>Stash</h3>
-    <div class="pip-row" id="stash-pips"></div>
   </div>
 
   <!-- CYBERWARE -->
@@ -907,26 +915,6 @@
   </div>
 
 </div><!-- end sheet-page3 -->
-
-<!-- PAGE 4 -->
-<div id="sheet-page4" style="max-width:1200px;margin:0 auto;">
-
-  <div class="page-break"></div>
-
-  <!-- VTT (OWLBEAR RODEO - opens in new tab, cannot embed) -->
-  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:calc(100vh - 120px);min-height:500px;gap:16px;">
-    <p style="color:var(--dim);font-size:12px;text-align:center;max-width:400px;">
-      Owlbear Rodeo cannot be embedded in an iframe.<br>Open it in a new tab to play.
-    </p>
-    <a href="https://www.owlbear.rodeo/room/KwPt706YcZQ_/The%20Afoot%20Doom"
-       target="_blank"
-       class="btn btn-pink"
-       style="font-size:16px;padding:14px 32px;text-decoration:none;display:inline-block;">
-      ▶ Open VTT
-    </a>
-  </div>
-
-</div><!-- end sheet-page4 -->
 
 <!-- PAGE 5 -->
 <div id="sheet-page5" style="max-width:1200px;margin:0 auto;">
@@ -1304,20 +1292,7 @@
     }
   }
 
-  // ═══════════════════════════════════════════════════════
-  // STASH PIPS (5 pips)
-  // ═══════════════════════════════════════════════════════
-  function buildStashPips() {
-    const container = document.getElementById('stash-pips');
-    for (let i = 0; i < 5; i++) {
-      const pip = document.createElement('div');
-      pip.className = 'pip yellow';
-      pip.dataset.index = i;
-      pip.addEventListener('click', function () { this.classList.toggle('marked'); });
-      container.appendChild(pip);
-    }
-  }
-  buildStashPips();
+  // (Stash pips removed — the Stash module no longer exists on page 2)
 
   // ═══════════════════════════════════════════════════════
   // DRIVE PIPS (10 pips)
@@ -1457,7 +1432,9 @@
       const title = block.querySelector('.gear-title') ? block.querySelector('.gear-title').value : '';
       const notes = block.querySelector('.gear-notes') ? block.querySelector('.gear-notes').value : '';
       const tags = block.querySelector('.cyberware-tags') ? block.querySelector('.cyberware-tags').value : '';
-      cyberware.push({ title: title, tags: tags, notes: notes });
+      const valueBtn = block.querySelector('.cyberware-value');
+      const value = Math.min(3, Math.max(1, parseInt(valueBtn ? valueBtn.dataset.value : 1, 10) || 1));
+      cyberware.push({ title: title, tags: tags, notes: notes, value: value });
     });
 
     // Hits
@@ -1468,9 +1445,6 @@
       cyberpsy: parseInt(document.getElementById('cyberpsy-value').textContent) || 0,
       humanity: parseInt(document.getElementById('humanity-value').textContent) || 0
     };
-
-    // Stash
-    const stash = Array.from(document.querySelectorAll('#stash-pips .pip')).map(function (p) { return p.classList.contains('marked'); });
 
     // Drive
     const drivePips = Array.from(document.querySelectorAll('#drive-pips .pip')).map(function (p) { return p.classList.contains('marked'); });
@@ -1495,7 +1469,7 @@
     const eddies = Number(String(document.getElementById('eddies-value').value || '0').replace(/[^0-9-]/g, '')) || 0;
 
     return {
-      _version: '1.0.1.1',
+      _version: '1.0.1.2',
       _game: 'Neon City Overdrive',
       nickname: val('nickname'),
       appearance: val('appearance'),
@@ -1519,7 +1493,6 @@
       flaw1: flaws[0] ? flaws[0].text : '',
       flaw2: flaws[1] ? flaws[1].text : '',
       stuntPoints: parseInt(document.getElementById('stunt-value').textContent) || 0,
-      stash: stash,
       drive: { text: val('drive-text'), pips: drivePips },
       experiencePoints: parseInt(document.getElementById('exp-value').textContent) || 0
     };
@@ -1533,6 +1506,7 @@
 
   function addCyberware(data) {
     if (!data) data = {};
+    const cwValue = Math.min(3, Math.max(1, parseInt(data.value, 10) || 1));
     cyberwareCount++;
     const id = cyberwareCount;
     const container = document.getElementById('cyberware-container');
@@ -1553,6 +1527,8 @@
     header.innerHTML =
       '<span class="gear-drag-handle" title="Drag to reorder" aria-hidden="true">&#10303;</span>' +
       '<span class="gear-type-tag" style="color:var(--purple);border-color:var(--purple);">Cyber</span>' +
+      '<button type="button" class="cyberware-value" data-value="' + cwValue + '" title="Cyberware value (1-3)"' +
+      ' onclick="event.stopPropagation(); cycleCyberwareValue(this)">' + cwValue + '</button>' +
       '<input type="text" class="gear-title-input gear-title" placeholder="Cyberware name&#8230;" value="' + escHtml(data.title || '') + '">';
     header.appendChild(controls);
     div.appendChild(header);
@@ -1592,6 +1568,14 @@
   function removeCyberware(id) {
     const el = document.getElementById('cyberware-block-' + id);
     if (el) el.remove();
+  }
+
+  // Value chip in each cyberware header: click cycles 1 -> 2 -> 3 -> 1.
+  function cycleCyberwareValue(btn) {
+    var v = parseInt(btn.dataset.value, 10) || 1;
+    v = v >= 3 ? 1 : v + 1;
+    btn.dataset.value = v;
+    btn.textContent = v;
   }
 
   // Start with no cyberware items (players add via + buttons)
@@ -1731,11 +1715,6 @@
       // Backward compat with old {base, current}
       document.getElementById('stunt-value').textContent = Math.max(0, Math.min(99, parseInt(data.stuntPoints.current) || 0));
     }
-
-    // Stash
-    document.querySelectorAll('#stash-pips .pip').forEach(function (pip, i) {
-      pip.classList.toggle('marked', !!(data.stash || [])[i]);
-    });
 
     // Drive
     set('drive-text', (data.drive || {}).text || '');
@@ -1877,22 +1856,18 @@
     var p1 = document.getElementById('sheet-wrapper');
     var p2 = document.getElementById('sheet-page2');
     var p3 = document.getElementById('sheet-page3');
-    var p4 = document.getElementById('sheet-page4');
     var p5 = document.getElementById('sheet-page5');
     var b1 = document.getElementById('btn-page1');
     var b2 = document.getElementById('btn-page2');
     var b3 = document.getElementById('btn-page3');
-    var b4 = document.getElementById('btn-page4');
     var b5 = document.getElementById('btn-page5');
     p1.style.display = 'none';
     p2.style.display = 'none';
     p3.style.display = 'none';
-    p4.style.display = 'none';
     p5.style.display = 'none';
     if (b1) b1.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
     if (b2) b2.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
     if (b3) b3.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
-    if (b4) b4.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
     if (b5) b5.style.cssText = 'border-color:var(--accent-yellow);color:var(--accent-yellow);background:transparent;';
     if (num === 1) {
       p1.style.display = 'block';
@@ -1903,19 +1878,15 @@
     } else if (num === 3) {
       p3.style.display = 'block';
       if (b3) b3.style.cssText = 'border-color:var(--accent-yellow);color:#000;background:var(--accent-yellow);';
-    } else if (num === 4) {
-      p4.style.display = 'block';
-      if (b4) b4.style.cssText = 'border-color:var(--accent-yellow);color:#000;background:var(--accent-yellow);';
     } else if (num === 5) {
       p5.style.display = 'block';
       if (b5) b5.style.cssText = 'border-color:var(--accent-yellow);color:#000;background:var(--accent-yellow);';
     }
   }
 
-  // Init: show page 1, hide pages 2-5
+  // Init: show page 1, hide the other pages
   document.getElementById('sheet-page2').style.display = 'none';
   document.getElementById('sheet-page3').style.display = 'none';
-  document.getElementById('sheet-page4').style.display = 'none';
   document.getElementById('sheet-page5').style.display = 'none';
   showPage(1);
 
