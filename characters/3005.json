@@ -1,5 +1,5 @@
 {
-  "_version": "1.0.1.1",
+  "_version": "1.0.1.2",
   "_game": "Neon City Overdrive",
   "nickname": "Ray Null",
   "appearance": "Latin complexion, Bohemian clothing style, long and ratty hair. His outfit consists of the Nolasco Family gang colors. He has ritual scars on the inside of his palms - the mark that he is able to pilot a vehicle while wounded.",
@@ -110,42 +110,50 @@
     {
       "title": "Ubermensch Speedware",
       "tags": "Hyper-Reflexes, Burst of Speed",
-      "notes": "Dodge gunfire.\nMore difficult to hit by semiautomatic weapons.\nDash, Reaction speed, Dodge, Run."
+      "notes": "Dodge gunfire.\nMore difficult to hit by semiautomatic weapons.\nDash, Reaction speed, Dodge, Run.",
+      "value": 2
     },
     {
       "title": "IEC Language Archiver",
       "tags": "French, North Italian, German, Swedish, Russian (Fluent, Default)",
-      "notes": "Speak foreign languages using language chips. "
+      "notes": "Speak foreign languages using language chips. ",
+      "value": 2
     },
     {
       "title": "Sycust Faceplate",
       "tags": "Quick (1min), Disguise, Biometric Spoof",
-      "notes": "Can cosmetically alter my face in as low as 1 minute.\nRequires an imprint to mimic."
+      "notes": "Can cosmetically alter my face in as low as 1 minute.\nRequires an imprint to mimic.",
+      "value": 3
     },
     {
       "title": "Sycust Subdermal Armor",
       "tags": "Invisible, Kinetic-Absorbing, EMP-proof",
-      "notes": "Armor under the skin.\nProtects against up to heavy pistol calibers."
+      "notes": "Armor under the skin.\nProtects against up to heavy pistol calibers.",
+      "value": 1
     },
     {
       "title": "Biotehnica Bioware Storage",
       "tags": "Scanproof, Quick Access, Concealed",
-      "notes": "Can hide something the size of an AR inside my torso. Bioware/Organic Pocket."
+      "notes": "Can hide something the size of an AR inside my torso. Bioware/Organic Pocket.",
+      "value": 3
     },
     {
       "title": "Biomonitor",
       "tags": "Drug Alerts, Trauma Detection, Vitals Tracking",
-      "notes": "Monitors my vital signs."
+      "notes": "Monitors my vital signs.",
+      "value": 1
     },
     {
       "title": "IEC Interface Plugs",
       "tags": "Neural Link, Dual Control",
-      "notes": "Can act while controlling something the user is plugged into (E.g: Use the AV weapons while piloting it)."
+      "notes": "Can act while controlling something the user is plugged into (E.g: Use the AV weapons while piloting it).",
+      "value": 1
     },
     {
       "title": "Militech Skill Chip",
       "tags": "Heavy Weapons",
-      "notes": ""
+      "notes": "",
+      "value": 2
     }
   ],
   "hitsCount": 3,
@@ -190,13 +198,6 @@
   "flaw1": "Family ties (Camorra)",
   "flaw2": "Infamous",
   "stuntPoints": 3,
-  "stash": [
-    false,
-    false,
-    false,
-    false,
-    false
-  ],
   "drive": {
     "text": "Values vengeance against the corps. He wants to start a revolution.",
     "pips": [
