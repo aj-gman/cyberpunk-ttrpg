@@ -413,6 +413,27 @@
       min-width: 0;
       width: 100%;
     }
+    /* INVENTORY MODULE */
+    .inv-cap-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .inv-cap-btn.selected { background: var(--accent-yellow); color: #000; border-color: var(--accent-yellow); }
+    .inv-cap-btn.selected:hover { background: var(--accent-yellow); color: #000; box-shadow: 0 0 10px var(--accent-yellow); }
+    .inv-cap-btn.misc-on { background: var(--purple); color: #000; border-color: var(--purple); }
+    .inv-cap-btn.misc-on:hover { background: var(--purple); color: #000; box-shadow: 0 0 10px var(--purple); }
+    #inv-misc-value {
+      width: 46px;
+      background: #0a0c1a;
+      border: 1px solid var(--purple);
+      color: var(--accent-yellow);
+      font-family: 'Lexend', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 4px;
+      text-align: center;
+    }
+    .inv-counter-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .inv-counter-label { color: var(--neon-cyan); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .inv-counter { font-size: 16px; font-weight: 700; color: var(--accent-yellow); }
+    .inv-counter.over { color: var(--danger-red); text-shadow: 0 0 10px rgba(242,72,72,0.6); }
     .panel-header-row {
       display: flex;
       align-items: center;
@@ -518,6 +539,28 @@
       transition: all 0.2s;
     }
     .cyberware-value:hover { background: var(--purple); color: #000; box-shadow: 0 0 8px var(--purple); }
+    /* Gear size chip (cycles 1-3), sits right of the Basic/Special tag */
+    .gear-size {
+      color: var(--neon-cyan);
+      border: 1px solid var(--neon-cyan);
+      background: transparent;
+      border-radius: 2px;
+      min-width: 18px;
+      padding: 2px 5px;
+      font-family: 'Lexend', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .gear-size:hover { background: var(--neon-cyan); color: #000; box-shadow: 0 0 8px var(--neon-cyan); }
+    /* Move between Gear (Stashed) and Inventory */
+    .btn-move { color: var(--net-green); border-color: var(--net-green); }
+    .btn-move:hover { background: var(--net-green); color: #000; box-shadow: 0 0 10px var(--net-green); }
+    .btn-move:disabled { opacity: 0.3; cursor: not-allowed; }
+    .btn-move:disabled:hover { background: transparent; color: var(--net-green); box-shadow: none; }
     .gear-notes {
       width: 100%;
       background: #0a0c1a;
@@ -623,7 +666,8 @@
     .tracker-bar-fill.danger {
       background: var(--danger-red);
     }
-    .cyberpsy-warning {
+    .cyberpsy-warning,
+    .inv-warning {
       display: none;
       background: rgba(255, 0, 85, 0.15);
       border: 1px solid var(--danger-red);
@@ -638,7 +682,8 @@
       margin-top: 6px;
       animation: flashRed 0.8s ease-in-out infinite alternate;
     }
-    .cyberpsy-warning.visible { display: block; }
+    .cyberpsy-warning.visible,
+    .inv-warning.visible { display: block; }
     @keyframes flashRed {
       from { background: rgba(255, 0, 85, 0.08); text-shadow: 0 0 6px rgba(255,0,85,0.3); }
       to { background: rgba(255, 0, 85, 0.3); text-shadow: 0 0 14px rgba(255,0,85,0.8); }
@@ -832,6 +877,25 @@
       </div>
       </div>
 
+      <!-- INVENTORY -->
+      <div class="panel">
+        <h2>Inventory</h2>
+        <div class="inv-cap-row">
+          <button class="btn btn-small inv-cap-btn selected" type="button" data-base="5" onclick="setInvContainer(this)">Jacket (5)</button>
+          <button class="btn btn-small inv-cap-btn" type="button" data-base="8" onclick="setInvContainer(this)">Carryall (8)</button>
+          <button class="btn btn-small inv-cap-btn" type="button" id="inv-misc-toggle" onclick="toggleInvMisc()">Misc</button>
+          <input type="number" id="inv-misc-value" min="1" max="5" step="1" value="1" style="display:none;" aria-label="Misc bonus slots" oninput="onInvMiscInput(this)">
+        </div>
+        <div class="inv-counter-row">
+          <span class="inv-counter-label">Slots</span>
+          <span class="inv-counter" id="inv-counter"><span id="inv-used">0</span> / <span id="inv-total">5</span></span>
+        </div>
+        <div class="inv-warning" id="inv-warning">⚠ OVERENCUMBERED</div>
+        <div class="gear-section" id="inventory-container" data-compact-level="1">
+          <!-- Gear moved here from Gear (Stashed) -->
+        </div>
+      </div>
+
       <!-- (STUNTS & XP moved to Handle row) -->
 
     </div>
@@ -848,7 +912,7 @@
   <!-- GEAR -->
   <div class="panel">
     <div class="panel-header-row">
-      <h2 class="dynamic-header" data-path="rules/nc-overdrive/">Gear</h2>
+      <h2 class="dynamic-header" data-path="rules/nc-overdrive/" data-url-text="Gear">Gear (Stashed)</h2>
       <div class="compact-controls">
         <button class="btn btn-small" type="button" onclick="setListCompact('gear-container', 1)">1 row</button>
         <button class="btn btn-small" type="button" onclick="setListCompact('gear-container', 2)">2 rows</button>
@@ -988,11 +1052,11 @@
 
   let gearCount = 0;
 
-  function addGear(data) {
+  function addGear(data, containerId) {
     if (!data) data = {};
     gearCount++;
     const id = gearCount;
-    const container = document.getElementById('gear-container');
+    const container = document.getElementById(containerId || 'gear-container');
     const div = document.createElement('div');
     div.className = 'gear-block';
     div.id = 'gear-block-' + id;
@@ -1000,8 +1064,10 @@
     div.dataset.kind = 'gear';
 
     const isSpecial = data.type === 'special';
+    const isInventory = container.id === 'inventory-container';
     const typeLabel = isSpecial ? 'Special' : 'Basic';
     const typeClass = isSpecial ? 'special' : '';
+    const gSize = Math.min(3, Math.max(1, parseInt(data.size, 10) || 1));
 
     const header = document.createElement('div');
     header.className = 'gear-header';
@@ -1009,11 +1075,14 @@
     const controls = document.createElement('div');
     controls.className = 'gear-item-actions';
     controls.innerHTML =
-      '<button class="btn btn-danger btn-small" type="button" onclick="event.stopPropagation(); removeGear(' + id + ')">&#10005;</button>';
+      '<button class="btn btn-danger btn-small" type="button" onclick="event.stopPropagation(); removeGear(' + id + ')">&#10005;</button>' +
+      '<button class="btn btn-move btn-small" type="button" title="' + (isInventory ? 'Move back to Gear (Stashed)' : 'Move to Inventory') + '" onclick="event.stopPropagation(); moveGearItem(this)">' + (isInventory ? '&#8592;' : '&#8594;') + '</button>';
 
     header.innerHTML =
       '<span class="gear-drag-handle" title="Drag to reorder" aria-hidden="true">&#10303;</span>' +
       '<span class="gear-type-tag ' + typeClass + '">' + typeLabel + '</span>' +
+      '<button type="button" class="gear-size" data-value="' + gSize + '" title="Gear size (1-3)"' +
+      ' onclick="event.stopPropagation(); cycleGearSize(this)">' + gSize + '</button>' +
       '<input type="text" class="gear-title-input gear-title" placeholder="Gear name&#8230;" value="' + escHtml(data.title || '') + '">';
     header.appendChild(controls);
     div.appendChild(header);
@@ -1062,6 +1131,7 @@
   function removeGear(id) {
     const el = document.getElementById('gear-block-' + id);
     if (el) el.remove();
+    updateInventoryCounts();
   }
 
   function setListCompact(containerId, rows) {
@@ -1159,6 +1229,176 @@
   }
 
   // Start with no gear items (players add via + buttons)
+
+  // ═══════════════════════════════════════════════════════
+  // INVENTORY (gear carried out of Gear (Stashed))
+  // Slots: Jacket 5 / Carryall 8, plus an optional Misc bonus (1-5).
+  // Used slots = sum of gear Size across the items in Inventory.
+  // Going over capacity is allowed — the module just flags it.
+  // ═══════════════════════════════════════════════════════
+
+  function getInvContainerKey() {
+    var btn = document.querySelector('.inv-cap-btn.selected[data-base]');
+    return btn && btn.dataset.base === '8' ? 'carryall' : 'jacket';
+  }
+
+  function getInvMiscEnabled() {
+    var toggle = document.getElementById('inv-misc-toggle');
+    return !!(toggle && toggle.classList.contains('misc-on'));
+  }
+
+  function getInvMiscValue() {
+    var input = document.getElementById('inv-misc-value');
+    return input ? Math.max(1, Math.min(5, parseInt(input.value, 10) || 1)) : 1;
+  }
+
+  function getInvTotal() {
+    var btn = document.querySelector('.inv-cap-btn.selected[data-base]');
+    var base = btn ? (parseInt(btn.dataset.base, 10) || 0) : 0;
+    var bonus = getInvMiscEnabled() ? getInvMiscValue() : 0;
+    return Math.max(0, base + bonus);
+  }
+
+  function getGearSize(block) {
+    var chip = block ? block.querySelector('.gear-size') : null;
+    return Math.min(3, Math.max(1, parseInt(chip ? chip.dataset.value : 1, 10) || 1));
+  }
+
+  function getInvUsed() {
+    var used = 0;
+    document.querySelectorAll('#inventory-container .gear-block').forEach(function (block) {
+      used += getGearSize(block);
+    });
+    return used;
+  }
+
+  function updateInventoryCounts() {
+    var used = getInvUsed();
+    var total = getInvTotal();
+    var over = used > total;
+    var usedEl = document.getElementById('inv-used');
+    var totalEl = document.getElementById('inv-total');
+    var counter = document.getElementById('inv-counter');
+    var warning = document.getElementById('inv-warning');
+    if (usedEl) usedEl.textContent = used;
+    if (totalEl) totalEl.textContent = total;
+    if (counter) counter.classList.toggle('over', over);
+    if (warning) warning.classList.toggle('visible', over);
+    refreshGearMoveButtons(used, total);
+  }
+
+  // A stashed item can only move in while it still fits; the button is
+  // disabled (and the handler re-checks) when it would overflow.
+  function refreshGearMoveButtons(used, total) {
+    document.querySelectorAll('#gear-container .gear-move-btn').forEach(function (btn) {
+      var size = getGearSize(btn.closest('.gear-block'));
+      var fits = used + size <= total;
+      btn.disabled = !fits;
+      btn.title = fits ? 'Move to Inventory' : 'Not enough slots (needs ' + size + ')';
+    });
+  }
+
+  function cycleGearSize(btn) {
+    var v = parseInt(btn.dataset.value, 10) || 1;
+    v = v >= 3 ? 1 : v + 1;
+    btn.dataset.value = v;
+    btn.textContent = v;
+    updateInventoryCounts();
+  }
+
+  function setInvContainer(btn) {
+    document.querySelectorAll('.inv-cap-btn[data-base]').forEach(function (b) {
+      b.classList.toggle('selected', b === btn);
+    });
+    updateInventoryCounts();
+  }
+
+  function toggleInvMisc() {
+    var toggle = document.getElementById('inv-misc-toggle');
+    var input = document.getElementById('inv-misc-value');
+    if (!toggle || !input) return;
+    var on = !toggle.classList.contains('misc-on');
+    toggle.classList.toggle('misc-on', on);
+    // The value itself is kept while hidden, so re-enabling restores it.
+    input.style.display = on ? '' : 'none';
+    updateInventoryCounts();
+  }
+
+  function onInvMiscInput(input) {
+    var v = parseInt(input.value, 10);
+    if (isNaN(v)) return;
+    input.value = Math.max(1, Math.min(5, v));
+    updateInventoryCounts();
+  }
+
+  // The button that sits next to each gear row's X: direction depends on
+  // which list the block currently lives in.
+  function moveGearItem(btn) {
+    var block = btn.closest('.gear-block');
+    if (!block) return;
+    var inInventory = block.parentNode && block.parentNode.id === 'inventory-container';
+    var target = document.getElementById(inInventory ? 'gear-container' : 'inventory-container');
+    if (!target) return;
+    if (!inInventory && getInvUsed() + getGearSize(block) > getInvTotal()) {
+      updateInventoryCounts();
+      return;
+    }
+    setGearBlockList(block, target);
+    updateInventoryCounts();
+  }
+
+  // Moving a gear item reparents the block itself, so its title, type, tags,
+  // notes and Size travel with it and it can never sit in both lists at once.
+  // Drag-reorder resolves its container from parentNode at drop time, so it
+  // keeps working in the new list; only the arrow and compact layout change.
+  function setGearBlockList(block, target) {
+    var toInventory = target.id === 'inventory-container';
+    var btn = block.querySelector('.gear-move-btn');
+    if (btn) {
+      btn.innerHTML = toInventory ? '&#8592;' : '&#8594;';
+      btn.title = toInventory ? 'Move back to Gear (Stashed)' : 'Move to Inventory';
+      btn.disabled = false;
+    }
+    target.appendChild(block);
+    setListCompact(target.id, getListCompactLevel(target.id));
+  }
+
+  function readGearBlocks(containerId) {
+    var container = document.getElementById(containerId);
+    if (!container) return [];
+    return Array.from(container.querySelectorAll('.gear-block')).map(function (block) {
+      var title = block.querySelector('.gear-title') ? block.querySelector('.gear-title').value : '';
+      var notes = block.querySelector('.gear-notes') ? block.querySelector('.gear-notes').value : '';
+      var tag = block.querySelector('.gear-type-tag');
+      var type = tag && tag.textContent.toLowerCase() === 'special' ? 'special' : 'basic';
+      var tags = block.querySelector('.gear-tags') ? block.querySelector('.gear-tags').value : '';
+      return { type: type, title: title, tags: tags, notes: notes, size: getGearSize(block) };
+    });
+  }
+
+  // Rebuild the Stash/Inventory split and its capacity controls from a save.
+  function applyInventory(inv) {
+    var data = inv && typeof inv === 'object' ? inv : {};
+    var container = document.getElementById('inventory-container');
+    if (container) container.innerHTML = '';
+    var base = data.container === 'carryall' ? '8' : '5';
+    document.querySelectorAll('.inv-cap-btn[data-base]').forEach(function (b) {
+      b.classList.toggle('selected', b.dataset.base === base);
+    });
+    var enabled = !!(data.misc && data.misc.enabled);
+    var value = data.misc && data.misc.value ? Math.max(1, Math.min(5, parseInt(data.misc.value, 10) || 1)) : 1;
+    var toggle = document.getElementById('inv-misc-toggle');
+    var input = document.getElementById('inv-misc-value');
+    if (toggle) toggle.classList.toggle('misc-on', enabled);
+    if (input) {
+      input.value = value;
+      input.style.display = enabled ? '' : 'none';
+    }
+    if (data.items && data.items.length) {
+      data.items.forEach(function (g) { addGear(g, 'inventory-container'); });
+    }
+    updateInventoryCounts();
+  }
 
   // ═══════════════════════════════════════════════════════
   // CONDITIONS SYSTEM
@@ -1415,16 +1655,8 @@
       trademarks.push({ name: name, triggers: triggers, edges: edges });
     });
 
-    // Gear
-    const gear = [];
-    document.querySelectorAll('#gear-container .gear-block').forEach(function (block) {
-      const title = block.querySelector('.gear-title') ? block.querySelector('.gear-title').value : '';
-      const notes = block.querySelector('.gear-notes') ? block.querySelector('.gear-notes').value : '';
-      const tag = block.querySelector('.gear-type-tag');
-      const type = tag && tag.textContent.toLowerCase() === 'special' ? 'special' : 'basic';
-      const tags = block.querySelector('.gear-tags') ? block.querySelector('.gear-tags').value : '';
-      gear.push({ type: type, title: title, tags: tags, notes: notes });
-    });
+    // Gear (stashed) + Inventory
+    const gear = readGearBlocks('gear-container');
 
     // Cyberware
     const cyberware = [];
@@ -1469,7 +1701,7 @@
     const eddies = Number(String(document.getElementById('eddies-value').value || '0').replace(/[^0-9-]/g, '')) || 0;
 
     return {
-      _version: '1.0.1.2',
+      _version: '1.0.1.3',
       _game: 'Neon City Overdrive',
       nickname: val('nickname'),
       appearance: val('appearance'),
@@ -1478,6 +1710,11 @@
       eddies: eddies,
       trademarks: trademarks,
       gear: gear,
+      inventory: {
+        container: getInvContainerKey(),
+        misc: { enabled: getInvMiscEnabled(), value: getInvMiscValue() },
+        items: readGearBlocks('inventory-container')
+      },
       cyberware: cyberware,
       hitsCount: hitsCount,
       hits: hits,
@@ -1619,6 +1856,9 @@
       if (data.gear_basic) addGear({ type: 'basic', title: data.gear_basic });
       if (data.gear_special) addGear({ type: 'special', title: data.gear_special });
     }
+
+    // Inventory (carried gear + capacity controls)
+    applyInventory(data.inventory);
 
     // Cyberware
     document.getElementById('cyberware-container').innerHTML = '';
@@ -1926,6 +2166,9 @@
     container.parentNode.insertBefore(btnWrap, container.nextSibling);
   })();
 
+  // Init: render the Inventory counter (Jacket 5 by default)
+  updateInventoryCounts();
+
   function setupSplitDivider(gridSelector, dividerId, minLeft, minRight) {
     var grid = document.querySelector(gridSelector);
     var divider = document.getElementById(dividerId);
@@ -1988,7 +2231,7 @@
   const domain = "https://gman-cyberpunk.vercel.app/";
   
   document.querySelectorAll('.dynamic-header').forEach(element => {
-    const title = element.textContent.trim().toLowerCase();
+    const title = (element.getAttribute('data-url-text') || element.textContent).trim().toLowerCase();
     const folderPath = element.getAttribute('data-path');
     const fullUrl = `${domain}${folderPath}/${encodeURIComponent(title)}/`;
     
