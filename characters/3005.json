@@ -1,5 +1,5 @@
 {
-  "_version": "1.0.1.2",
+  "_version": "1.0.1.3",
   "_game": "Neon City Overdrive",
   "nickname": "Ray Null",
   "appearance": "Latin complexion, Bohemian clothing style, long and ratty hair. His outfit consists of the Nolasco Family gang colors. He has ritual scars on the inside of his palms - the mark that he is able to pilot a vehicle while wounded.",
@@ -49,63 +49,81 @@
       "type": "special",
       "title": "Zetatech Asclepius AV-4",
       "tags": "Fast, Armored, Concealed Compartment, Tow Cable",
-      "notes": "Flying vehicle, Big, Cargo space, Room for 6, \nThumbprint Lock, whoever puts in the wrong print gets hit by a stun baton-like electrocution.\nCan tow up to 10 tons;\nHas 2 weapons: Rhinemetall EMG-86 Railgun: Armor piercing;       \nMilitech Mk.27 LMG: Burst fire, Collateral damage, Intimidating, Messy"
+      "notes": "Flying vehicle, Big, Cargo space, Room for 6, \nThumbprint Lock, whoever puts in the wrong print gets hit by a stun baton-like electrocution.\nCan tow up to 10 tons;\nHas 2 weapons: Rhinemetall EMG-86 Railgun: Armor piercing;       \nMilitech Mk.27 LMG: Burst fire, Collateral damage, Intimidating, Messy",
+      "size": 1
     },
     {
       "type": "special",
       "title": "M71 Liberator",
       "tags": "Militech, Modular, Bullpup, Scoped, Zero Recoil, Suppresed",
-      "notes": "Recoil compensation system, excellent design and balancing. \nThe bullet retains a flat trajectory, and is light (scope)\nACIA muzzle brake"
+      "notes": "Recoil compensation system, excellent design and balancing. \nThe bullet retains a flat trajectory, and is light (scope)\nACIA muzzle brake",
+      "size": 2
     },
     {
       "type": "special",
       "title": "Spiked Knuckles",
       "tags": "Quick, Concealable, Intimidating, Messy",
-      "notes": "Quiet, inflicts bleeding."
+      "notes": "Quiet, inflicts bleeding.",
+      "size": 1
     },
     {
       "type": "basic",
       "title": "Grapple Gun",
       "tags": "",
-      "notes": "Range of 30 m."
+      "notes": "Range of 30 m.",
+      "size": 1
     },
     {
       "type": "basic",
       "title": "Binoculars",
       "tags": "",
-      "notes": "Up to to x3 magnification."
+      "notes": "Up to to x3 magnification.",
+      "size": 1
     },
     {
       "type": "basic",
       "title": "Gas mask",
       "tags": "",
-      "notes": "Immune to inhalable dangers."
-    },
-    {
-      "type": "basic",
-      "title": "NVG's",
-      "tags": "",
-      "notes": "Made by Zeiss."
-    },
-    {
-      "type": "basic",
-      "title": "Agent",
-      "tags": "",
-      "notes": "AI powered smartphone."
+      "notes": "Immune to inhalable dangers.",
+      "size": 1
     },
     {
       "type": "basic",
       "title": "Carryall",
       "tags": "",
-      "notes": "Heavy ripstop nylon bags."
+      "notes": "Heavy ripstop nylon bags.",
+      "size": 1
     },
     {
       "type": "basic",
       "title": "Radio comms earpiece",
       "tags": "",
-      "notes": "1-mile range."
+      "notes": "1-mile range.",
+      "size": 1
+    },
+    {
+      "type": "basic",
+      "title": "NVG's",
+      "tags": "",
+      "notes": "Made by Zeiss.",
+      "size": 1
+    },
+    {
+      "type": "basic",
+      "title": "Agent",
+      "tags": "",
+      "notes": "AI powered smartphone.",
+      "size": 1
     }
   ],
+  "inventory": {
+    "container": "jacket",
+    "misc": {
+      "enabled": false,
+      "value": 1
+    },
+    "items": []
+  },
   "cyberware": [
     {
       "title": "Ubermensch Speedware",
@@ -152,7 +170,7 @@
     {
       "title": "Militech Skill Chip",
       "tags": "Heavy Weapons",
-      "notes": "",
+      "notes": "Provides the user with enhanced knowledge of maintaining and operating heavy weapons.",
       "value": 2
     }
   ],
