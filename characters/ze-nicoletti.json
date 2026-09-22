@@ -1,11 +1,11 @@
 {
-  "_version": "1.0.1.1",
+  "_version": "1.0.1.3",
   "_game": "Neon City Overdrive",
   "nickname": "Azelia 'Ze' Nicoletti",
   "appearance": "Ze is an Italian-American woman of average height and build, with short black hair and dark emerald eyes. Her typical outfit is comprised of a flannels, cargo pants, and combat boots.",
   "personality": "Ze is level headed and can be incredibly cynical, it's only natural in a city like this. But with those lucky few, she can be a wam presence.",
-  "money": 1100,
-  "eddies": 1100,
+  "money": 700,
+  "eddies": 700,
   "trademarks": [
     {
       "name": "Mob Daughter",
@@ -40,17 +40,35 @@
   "gear": [
     {
       "type": "basic",
-      "title": "Arasaka \"Shinobi\" 45",
+      "title": "Punknaught footage",
       "tags": "",
-      "notes": "Precise, Silenced, Concealed"
-    },
-    {
-      "type": "basic",
-      "title": "Kevlar T-shirt",
-      "tags": "",
-      "notes": "Lightweight, Bulletproof"
+      "notes": "",
+      "size": 1
     }
   ],
+  "inventory": {
+    "container": "jacket",
+    "misc": {
+      "enabled": true,
+      "value": 1
+    },
+    "items": [
+      {
+        "type": "basic",
+        "title": "Arasaka \"Shinobi\" 45",
+        "tags": "",
+        "notes": "Precise, Silenced, Concealed",
+        "size": 1
+      },
+      {
+        "type": "basic",
+        "title": "Kevlar T-shirt",
+        "tags": "",
+        "notes": "Lightweight, Bulletproof",
+        "size": 1
+      }
+    ]
+  },
   "cyberware": [],
   "hitsCount": 3,
   "hits": [
@@ -63,7 +81,12 @@
     "humanity": 10
   },
   "conditions": {
-    "custom": []
+    "custom": [
+      {
+        "text": "Glitching Cybereye",
+        "state": "off"
+      }
+    ]
   },
   "traumas": [
     {
@@ -93,14 +116,7 @@
   ],
   "flaw1": "Obvious Mark",
   "flaw2": "Enemies in low places",
-  "stuntPoints": 3,
-  "stash": [
-    false,
-    false,
-    false,
-    false,
-    false
-  ],
+  "stuntPoints": 2,
   "drive": {
     "text": "",
     "pips": [
@@ -116,5 +132,5 @@
       false
     ]
   },
-  "experiencePoints": 1
+  "experiencePoints": 4
 }
