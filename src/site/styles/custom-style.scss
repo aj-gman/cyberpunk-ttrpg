@@ -39,12 +39,19 @@ body {
     color: var(--text-normal) !important;
 }
 
-/* No literal panel colour here: the right page panel (TOC/graph/backlinks),
-   the mobile bottom sheet and the left filetree all inherit
-   --background-secondary from the theme (see body.theme-dark above), which is
-   what keeps the sidebars consistent with the rest of the page. Re-adding a
-   hardcoded panel colour (e.g. the old navy #171A39) is what made the sidebar
-   look like it belonged to a different site. */
+/* No literal panel colour here: the right page panel (TOC/graph/backlinks) and
+   the mobile bottom sheet inherit --background-secondary from the theme (see
+   body.theme-dark above), which keeps them consistent with the rest of the page.
+   Re-adding a hardcoded panel colour (e.g. the old navy #171A39) is what made
+   the sidebar look like it belonged to a different site. */
+
+/* Left filetree: no panel fill either — the template paints .filetree-wrapper
+   with --background-secondary, which would leave the left column a shade
+   lighter than the page. (The mobile bottom sheet keeps it on purpose: an
+   opened sheet needs a fill to sit above the page.) */
+.filetree-wrapper {
+    background-color: transparent !important;
+}
 
 /* SIDEBAR TEXT FIX: Hyper-targeted classes to overwrite themes */
 .sidebar a,
