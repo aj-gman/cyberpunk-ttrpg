@@ -2,41 +2,36 @@
    DIGITAL GARDEN CUSTOM CYBERPUNK THEME 
    ========================================================================== */
 
-:root {
+/* Palette overrides belong on body.theme-dark — NOT :root.
+   The cybrcore theme fetched by src/site/get-theme.js declares these same
+   Obsidian variables in a `.theme-dark {}` block that matches <body>, and
+   obsidian-base.scss declares them in a `body {}` block. A custom property set
+   on <body> beats one inherited from <html>, so :root values are shadowed for
+   everything inside <body> (which is everything visible).
+   body.theme-dark (0,1,1) beats the theme's .theme-dark (0,1,0) and wins on
+   source order against obsidian-base.scss. Requires BASE_THEME=dark (.env).
+   Anything this block does not set falls through to the cybrcore theme — that
+   is deliberate: template components (graph, sidebars, toc) read these vars
+   and should follow the theme, not be pinned to literals. */
+body.theme-dark {
     /* Main Backgrounds */
-    --background-primary: #000000;              /* Pure Dark */
-    --background-secondary: #171A39;            /* Deep Cyber Navy */
-    --background-container: #171A39;
+    --background-primary: var(--cybr-no0);                   /* theme near-black */
+    --background-secondary: var(--background-secondary-alt); /* theme dark panels */
 
-    /* GRAPH VIEW FIXES */
-    --dg-graph-width: 250px;         
-    --dg-graph-height: 500px;        
-    --dg-graph-label-color: #FEE801 !important;
-    --graph-node: #54C1E6;
-    --graph-line: #2E7381;                       /* Muted Teal lines */
-
-    /* Layout Engine Structural Overrides */
-    --dg-sidebar-bg: #171A39 !important;             /* Deep Cyber Navy for sidebar background */
-    --dg-background-primary: #000000 !important;     /* Pure Dark for main body */
-    --dg-background-secondary: #171A39 !important;   /* Deep Cyber Navy for secondary panels */
-    
     /* Typography & Accents */
     --text-normal: #E2E8F0;                      /* Crisp off-white for readability */
     --text-muted: #9A9F17;                       /* Muted Olive/Yellow-Green from your tags */
     --text-accent: #FEE801;                      /* High-Voltage Yellow */
     --text-accent-hover: #54C1E6;                /* Neon Cyan */
-    
+
     /* Interactive Elements & UI */
     --interactive-accent: #FEE801;
     --links: #54C1E6;                            /* Cyan links */
     --links-hover: #FEE801;
-    --nav-item-background-hover: #FEE801;
-    
+
     /* Code Blocks & Tables */
-    --code-background: #171A39;
-    --code-text: #FEE801;
+    --code-background: var(--cybr-no1);          /* theme near-black (was navy) */
     --table-header-background: #9A9F17;
-    --table-header-text: #FEE801;
 }
 
 body {
@@ -44,16 +39,12 @@ body {
     color: var(--text-normal) !important;
 }
 
-/* Force the sidebar containers and navigation headers to drop the default blue */
-.sidebar, 
-.nav-view, 
-.site-nav,
-.sidebar-container,
-.nav-header {
-    background-color: #171A39 !important;
-    background: #171A39 !important;
-    border-right: 1px solid #39C4B6 !important;     /* Teal structural border */
-}
+/* No literal panel colour here: the right page panel (TOC/graph/backlinks),
+   the mobile bottom sheet and the left filetree all inherit
+   --background-secondary from the theme (see body.theme-dark above), which is
+   what keeps the sidebars consistent with the rest of the page. Re-adding a
+   hardcoded panel colour (e.g. the old navy #171A39) is what made the sidebar
+   look like it belonged to a different site. */
 
 /* SIDEBAR TEXT FIX: Hyper-targeted classes to overwrite themes */
 .sidebar a,
@@ -82,6 +73,12 @@ body {
     color: #FEE801 !important; 
     text-shadow: 0 0 8px #FEE801;
     background-color: transparent !important; /* Prevents default blue hover blocks */
+}
+
+/* Active TOC entry: the .sidebar a rule above is !important, so without this the
+   current heading is flattened to the same cyan as every other panel link. */
+.toc-container li a.toc-active {
+    color: var(--text-accent) !important;
 }
 
 /* Folder Titles and Icons (Yellow) */
