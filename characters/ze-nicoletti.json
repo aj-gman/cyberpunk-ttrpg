@@ -37,7 +37,20 @@
       "edges": []
     }
   ],
-  "gear": [],
+  "gear": [
+    {
+      "type": "basic",
+      "title": "Arasaka \"Shinobi\" 45",
+      "tags": "",
+      "notes": "Precise, Silenced, Concealed"
+    },
+    {
+      "type": "basic",
+      "title": "Kevlar T-shirt",
+      "tags": "",
+      "notes": "Lightweight, Bulletproof"
+    }
+  ],
   "cyberware": [],
   "hitsCount": 3,
   "hits": [
@@ -53,6 +66,18 @@
     "custom": []
   },
   "traumas": [
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
     {
       "marked": false,
       "text": ""
