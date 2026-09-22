@@ -4,8 +4,8 @@
   "nickname": "Ray Null",
   "appearance": "Latin complexion, Bohemian clothing style, long and ratty hair. His outfit consists of the Nolasco Family gang colors. He has ritual scars on the inside of his palms - the mark that he is able to pilot a vehicle while wounded.",
   "personality": "Rebellious, antisocial, violent. He uses people for his goals, but is loyal to the end for his proven friends.",
-  "money": 2898,
-  "eddies": 2898,
+  "money": 2498,
+  "eddies": 2498,
   "trademarks": [
     {
       "name": "Nomad",
@@ -53,38 +53,10 @@
       "size": 1
     },
     {
-      "type": "special",
-      "title": "M71 Liberator",
-      "tags": "Militech, Modular, Bullpup, Scoped, Zero Recoil, Suppresed",
-      "notes": "Recoil compensation system, excellent design and balancing. \nThe bullet retains a flat trajectory, and is light (scope)\nACIA muzzle brake",
-      "size": 2
-    },
-    {
-      "type": "special",
-      "title": "Spiked Knuckles",
-      "tags": "Quick, Concealable, Intimidating, Messy",
-      "notes": "Quiet, inflicts bleeding.",
-      "size": 1
-    },
-    {
       "type": "basic",
       "title": "Grapple Gun",
       "tags": "",
       "notes": "Range of 30 m.",
-      "size": 1
-    },
-    {
-      "type": "basic",
-      "title": "Binoculars",
-      "tags": "",
-      "notes": "Up to to x3 magnification.",
-      "size": 1
-    },
-    {
-      "type": "basic",
-      "title": "Gas mask",
-      "tags": "",
-      "notes": "Immune to inhalable dangers.",
       "size": 1
     },
     {
@@ -103,13 +75,6 @@
     },
     {
       "type": "basic",
-      "title": "NVG's",
-      "tags": "",
-      "notes": "Made by Zeiss.",
-      "size": 1
-    },
-    {
-      "type": "basic",
       "title": "Agent",
       "tags": "",
       "notes": "AI powered smartphone.",
@@ -117,12 +82,48 @@
     }
   ],
   "inventory": {
-    "container": "jacket",
+    "container": "carryall",
     "misc": {
       "enabled": false,
       "value": 1
     },
-    "items": []
+    "items": [
+      {
+        "type": "special",
+        "title": "M71 Liberator",
+        "tags": "Militech, Modular, Bullpup, Scoped, Zero Recoil, Suppresed",
+        "notes": "Recoil compensation system, excellent design and balancing. \nThe bullet retains a flat trajectory, and is light (scope)\nACIA muzzle brake",
+        "size": 2
+      },
+      {
+        "type": "special",
+        "title": "Spiked Knuckles",
+        "tags": "Quick, Concealable, Intimidating, Messy",
+        "notes": "Quiet, inflicts bleeding.",
+        "size": 1
+      },
+      {
+        "type": "basic",
+        "title": "Binoculars",
+        "tags": "",
+        "notes": "Up to to x3 magnification.",
+        "size": 1
+      },
+      {
+        "type": "basic",
+        "title": "Gas mask",
+        "tags": "",
+        "notes": "Immune to inhalable dangers.",
+        "size": 1
+      },
+      {
+        "type": "basic",
+        "title": "NVG's",
+        "tags": "",
+        "notes": "Made by Zeiss.",
+        "size": 1
+      }
+    ]
   },
   "cyberware": [
     {
@@ -181,25 +182,13 @@
     false
   ],
   "trackers": {
-    "cyberpsy": 0,
+    "cyberpsy": 1,
     "humanity": 7
   },
   "conditions": {
     "custom": []
   },
   "traumas": [
-    {
-      "marked": false,
-      "text": ""
-    },
-    {
-      "marked": false,
-      "text": ""
-    },
-    {
-      "marked": false,
-      "text": ""
-    },
     {
       "marked": false,
       "text": ""
@@ -231,5 +220,5 @@
       false
     ]
   },
-  "experiencePoints": 4
+  "experiencePoints": 8
 }
