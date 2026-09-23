@@ -6,6 +6,7 @@
 
 District in the western part of [[Night City/Locations/Night City\|Night City]]. Contains **the following zones:**
 - West Hill Gardens
+![Pasted image 20260923123953.png\|312](/img/user/Pasted%20image%2020260923123953.png)
 - Old Downtown
 
 >[!danger]- Gang Activity

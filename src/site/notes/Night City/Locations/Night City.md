@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/night-city/","tags":["#location","#4cw","#stratum"],"dg-note-properties":{"tags":["#location","#4cw","#stratum"]}}
+{"dg-publish":true,"permalink":"/night-city/locations/night-city/","tags":["location","4cw"],"dg-note-properties":{"tags":["location","4cw"]}}
 ---
 
 >[!warning] THIS PAGE severely lacks information.
@@ -24,7 +24,7 @@ By 1998, most of the construction had finished, but [[Night City/Characters/Rich
 
 By 2000, [[Night City/Locations/Districts (2020)/South Night City\|South Night City]] is declared a [[Combat Zone\|Combat Zone]]. [[Night City/Organizations/Gangs/Boostergangs of Night City\|Gangs]] became proeminent actors both in [[Night City/Locations/Districts (2020)/South Night City\|the Zone]] and outside of it. Corporations started dividing the land how they saw fit and the construction companies, bankrolled and controlled by organized crime, began expanding into the services industries.
 
-The years since the new millennium saw Corporate [[Night City/Locations/Night City\|NC]] retreating into its own few zones - [[Night City/Locations/Districts (2020)/City Center\|City Center]], [[Night City/Locations/Dependencies (2020)/Rancho Coronado\|Rancho Coronado]], [[Night City/Locations/Districts (2020)/Westside\|Westside]] - and maintaining a strict security detail in and around them. Transportation was done via [[NCART\|NCART]], armored buses or [[Night City/Others/AV\|AVs]].
+The years since the new millennium saw Corporate [[Night City/Locations/Night City\|NC]] retreating into its own few zones - [[Night City/Locations/Districts (2020)/City Center\|City Center]], [[Night City/Locations/Dependencies (2020)/Rancho Coronado\|Rancho Coronado]], [[Night City/Locations/Districts (2020)/Westside\|Westside]] - and maintaining a strict security detail in and around them. Transportation was done via [[Night City/Others/NCART\|NCART]], armored buses or [[Night City/Others/AV\|AVs]].
 
 By 2009, [[Night City/Locations/Night City\|Night City]] became renowned for its violence come sundown - drugs, prostitution, racketeering, random violence and cybernetic terrorism were all commonplace occurrences, to the point that [[Night City/Organizations/Gangs/The Mob\|The Mob]] seized on this by bankrolling a betting company that would become the [[Body Lotto\|Body Lotto]]. The [[Night City/Locations/Night City#Government & Politics\|City Council]] was controlled by organized crime and everything was going to shit.
 
@@ -61,18 +61,18 @@ Technical, light industry, international trade, information services, electronic
 - [[Night City/Organizations/Gangs/Boostergangs of Night City\|Boostergangs]]
 #### Transportation
 - Taxis
-- [[NCART\|NCART]] (maglev)
+- [[Night City/Others/NCART\|NCART]] (maglev)
 
 #### Government & Politics
 The government is **a New City Democratic Mayorality**, having a corporate-controlled city council that proposes and passes new legislation. Votes by the general population are cast via DataTerm, using [[Night City/Organizations/Corporations/EBM\|IdentiCard]] registration software. The City Council is composed of representatives chosen by the ten largest corporate investors (via taxes, donations, job opportunity creation etc.) in [[Night City/Locations/Night City\|Night City]].
 
 The City is split between 6 internal districts and a [[Combat Zone\|Combat Zone]], with a City Manager assigned to protect and serve the area's best interest. In 2021, **all City Managers** were Corporate [[Rules/CPRED/Roles/Exec\|Executives]], nominated by majority vote from the **City Council**.
-- [[Night City/Locations/Districts (2020)/City Center\|City Center]], managed by [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] [[Rules/CPRED/Roles/Exec\|Exec]] [[Night City/Characters/2021/Iwasao Koremichi\|Iwasao Koremichi]]
+- [[Night City/Locations/Districts (2020)/City Center\|City Center]], managed by [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] [[Rules/CPRED/Roles/Exec\|Exec]] [[Night City/Characters/2021/corpos/Iwasao Koremichi\|Iwasao Koremichi]]
 - [[Night City/Locations/Districts (2020)/Little Asia\|Little Asia]], managed by [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] [[Rules/CPRED/Roles/Exec\|Exec]] [[Oburo Tatsunaga\|Oburo Tatsunaga]]
 - [[Night City/Locations/Districts (2020)/Little Europe\|Little Europe]], managed by [[Halsey, Ferris & Skiv\|Halsey, Ferris & Skiv]] [[Rules/CPRED/Roles/Exec\|Exec]]
 - [[Night City/Locations/Districts (2020)/Nightlife District\|Nightlife District]], managed by [[Night City/Organizations/Corporations/EBM\|EBM]] [[Rules/CPRED/Roles/Exec\|Exec]]
 - [[Night City/Locations/Districts (2020)/University District\|University District]], managed by [[IEC\|IEC]] [[Rules/CPRED/Roles/Exec\|Exec]]
-- [[Night City/Locations/Districts (2020)/Westside\|Westside]], managed by [[Night City/Organizations/Corporations/Militech\|Militech]] [[Rules/CPRED/Roles/Exec\|Exec]]
+- [[Night City/Locations/Districts (2020)/Westside\|Westside]], managed by [[Night City/Organizations/Corporations/Militech\|Militech]] [[Rules/CPRED/Roles/Exec\|Exec]] [[Night City/Characters/2021/corpos/Militech Exec\|Militech Exec]]
 - [[Night City/Locations/Districts (2020)/South Night City\|South Night City]] [[Combat Zone\|Combat Zone]], managed by [[Night City/Organizations/Corporations/Petrochem\|Petrochem]] [[Rules/CPRED/Roles/Exec\|Exec]]
 
 ##### Dependencies

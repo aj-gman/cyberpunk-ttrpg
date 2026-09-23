@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#npc","#stratum","#district","#ideology","#news","#role"],"dg-note-properties":{"tags":["#npc","#stratum","#district","#ideology","#news","#role"]}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
 ---
 
 ### September 2026
@@ -40,7 +40,7 @@
 - Added #ideology : full write-up for [[Night City/Beliefs/Idealism\|Idealism]], half-write-up for [[Night City/Beliefs/Insurrectionism\|Insurrectionism]], [[Night City/Beliefs/Parallelism\|Parallelism]], [[Night City/Beliefs/Realism\|Realism]]
 - Added #stratum : needs write-up for all
 - Added fashion folder, as each #ideology  is associated with an aesthetic
-- Published character profiles for [[Night City/Characters/2021/Big Wu\|Big Wu]], [[Night City/Characters/2021/Theresa Valentino\|Theresa Valentino]], [[Night City/Characters/2021/Victor Campbell\|Victor Campbell]], [[Night City/Characters/2021/Corpse Reviver\|Corpse Reviver]].
+- Published character profiles for [[Night City/Characters/2021/edgerunners/Big Wu\|Big Wu]], [[Night City/Characters/2021/edgerunners/Theresa Valentino\|Theresa Valentino]], [[Night City/Characters/2021/corpos/Victor Campbell\|Victor Campbell]], [[Night City/Characters/2021/gangers/Corpse Reviver\|Corpse Reviver]].
 - Added permanent Header & Footer on webpages (shouldn't break on Digital Garden template update)
 - Reorganized folders & webpages for clearer navigation
 #### 02.09
@@ -127,7 +127,4 @@
 - [ ] **[[z-SITE/CPRED Sheet\|CPRED Sheet]] needs:**
 	- [ ] Page for Notes, Backstory, Lore etc.
 	- [ ] Links to the wiki when inserting: role abilities, skills, stats
-- [x] Recalibrate mobile interface for the site (very buggy atm)
-- [ ] **[[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] needs:**
-	- [x] Rewriting of description placeholder text (bug fixes)
 - [ ] Update [[Rules/CPRED/Drugs/Omega Blockers\|Omega Blockers]], [[Rules/CPRED/Drugs/Weed\|Weed]], [[Rules/CPRED/Drugs/Regen 21\|Regen 21]] & [[Rules/CPRED/Drugs/Speedheal\|Speedheal]] with rules for [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]]

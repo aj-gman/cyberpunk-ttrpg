@@ -6,6 +6,9 @@
 
 District in western [[Night City/Locations/Night City\|Night City]]. Contains **the following zones:**
 - NCU Campus
+![Pasted image 20260923130509.png\|429](/img/user/Pasted%20image%2020260923130509.png)
+![Pasted image 20260923130011.png\|424](/img/user/Pasted%20image%2020260923130011.png)
+![Pasted image 20260923130023.png\|428](/img/user/Pasted%20image%2020260923130023.png)
 - Lake Park
 
 >[!danger]- Gang Activity
