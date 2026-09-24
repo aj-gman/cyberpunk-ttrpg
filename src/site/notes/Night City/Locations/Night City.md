@@ -1,14 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/night-city/","tags":["#location","#4cw","#stratum"],"dg-note-properties":{"tags":["#location","#4cw","#stratum"]}}
+{"dg-publish":true,"permalink":"/night-city/locations/night-city/","tags":["#location","#4cw"],"dg-note-properties":{"tags":["#location","#4cw"]}}
 ---
 
 The **Free City of Night City (NC)** is an autonomous city-state founded on the shores of [Del Coronado Bay](https://cyberpunk.fandom.com/wiki/Del_Coronado_Bay) by [[Night City/Characters/Richard Night\|Richard Night]] in the 1990s, before and during [The Collapse](https://cyberpunk.fandom.com/wiki/The_Collapse_of_the_United_States). Formally located in [Northern California](https://cyberpunk.fandom.com/wiki/North_California), **Night City** functions without interference from **NorCal**, although the [[Night City/Organizations/NUSA\|NUSA]] built the [[NorCal Military Base\|NorCal Military Base]] in [[Night City/Locations/Dependencies (2020)/NorthOak\|NorthOak]] in 2016.
 
-It was originally known as **Coronado City**, before taking the name of its founder after [his unfortunate death in 1998](https://cyberpunk.fandom.com/wiki/Richard_Night#Night_Falls).
-
-> [!tldr]- Table of Contents
-> <div class="toc-container" style="padding: 0.5em 0px;"><span></span><ul style="list-style: none; padding-left: 0px; margin: 0px;"><li style="margin: 0.25em 0px;"><a href="#History" style="text-decoration: none; cursor: pointer;">History</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"><li style="margin: 0.25em 0px;"><a href="#Inception" style="text-decoration: none; cursor: pointer;">Inception</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"></ul></li><li style="margin: 0.25em 0px;"><a href="#Decadence" style="text-decoration: none; cursor: pointer;">Decadence</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"></ul></li><li style="margin: 0.25em 0px;"><a href="#Resurgence" style="text-decoration: none; cursor: pointer;">Resurgence</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"></ul></li></ul></li><li style="margin: 0.25em 0px;"><a href="#Government_&amp;_Politics" style="text-decoration: none; cursor: pointer;">Government &amp; Politics</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"><li style="margin: 0.25em 0px;"><a href="#Districts" style="text-decoration: none; cursor: pointer;">Districts</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"></ul></li><li style="margin: 0.25em 0px;"><a href="#Dependencies" style="text-decoration: none; cursor: pointer;">Dependencies</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"></ul></li></ul></li><li style="margin: 0.25em 0px;"><a href="#Demographics" style="text-decoration: none; cursor: pointer;">Demographics</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"></ul></li><li style="margin: 0.25em 0px;"><a href="#Law_Enforcement_&amp;_Crime" style="text-decoration: none; cursor: pointer;">Law Enforcement &amp; Crime</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"></ul></li><li style="margin: 0.25em 0px;"><a href="#Education" style="text-decoration: none; cursor: pointer;">Education</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"></ul></li><li style="margin: 0.25em 0px;"><a href="#Transportation" style="text-decoration: none; cursor: pointer;">Transportation</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"></ul></li><li style="margin: 0.25em 0px;"><a href="#Economy" style="text-decoration: none; cursor: pointer;">Economy</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"><li style="margin: 0.25em 0px;"><a href="#Sports" style="text-decoration: none; cursor: pointer;">Sports</a><ul style="list-style: none; padding-left: 1.2em; margin: 0px;"></ul></li></ul></li></ul></div>
-
+It was originally known as **Coronado City**, before taking the name of its founder after [his unfortunate death in 1998](https://cyberpunk.fandom.com/wiki/Richard_Night#Night_Falls)
 ## History
 ### Inception
 [[Night City/Locations/Night City\|Night City]] came about in [[Night City/Characters/Richard Night\|Richard Night]]'s mind in the early 1990s. A successful development mogul thanks to the advanced techniques him and his colleagues at [Halsey, Ferris and Night](https://cyberpunk.fandom.com/wiki/Halsey,_Ferris_and_Night?redirect=no "Halsey, Ferris and Night"), he rightfully predicted the impending [Collapse](https://cyberpunk.fandom.com/wiki/The_Collapse_of_the_United_States). With this solid portofolio, [[Night City/Characters/Richard Night\|Night]] settled on a piece of land north of [Los Angeles](https://en.wikipedia.org/wiki/Los_Angeles) and got some highbrow angel investors to fund his venture in what came to be known as the **Coronado Partnership**[^1].
@@ -26,64 +22,89 @@ It was originally known as **Coronado City**, before taking the name of its foun
 ### Decadence
 By 1998, most of the construction had finished, but [[Night City/Characters/Richard Night\|Richard Night]] wouldn't live to see his city rise to the top, as he was assassinated on the 20th of September of that year in his penthouse in Parkview Tower. That's when the City Council renamed Coronado City in his honor.
 
-By 2000, [[Night City/Locations/Districts (2020)/South Night City\|South Night City]] is declared a [[Combat Zone\|Combat Zone]]. [[Night City/Organizations/Gangs/Boostergangs of Night City\|Gangs]] became proeminent actors both in [[Night City/Locations/Districts (2020)/South Night City\|the Zone]] and outside of it. Corporations started dividing the land how they saw fit and the construction companies, bankrolled and controlled by organized crime, began expanding into the services industries.
+By 2000, [[Night City/Locations/Districts (2020)/South Night City\|South Night City]] is declared a [[Night City/Others/Combat Zone\|Combat Zone]]. [[Night City/Organizations/Gangs/Boostergangs of Night City\|Gangs]] became proeminent actors both in [[Night City/Locations/Districts (2020)/South Night City\|the Zone]] and outside of it. Corporations started dividing the land how they saw fit and the construction companies, bankrolled and controlled by organized crime, began expanding into the services industries.
 
-The years since the new millennium saw Corporate [[Night City/Locations/Night City\|NC]] retreating into its own few zones - [[Night City/Locations/Districts (2020)/City Center\|City Center]], [[Night City/Locations/Dependencies (2020)/Rancho Coronado\|Rancho Coronado]], [[Night City/Locations/Districts (2020)/Westside\|Westside]] - and maintaining a strict security detail in and around them. Transportation was done via [[Night City/Others/NCART\|NCART]], armored buses or [[Night City/Others/AV\|AVs]].
+The years since the new millennium saw Corporate [[Night City/Locations/Night City\|NC]] retreating into its own few zones - [[Night City/Locations/Districts (2020)/City Center\|City Center]], [[Night City/Locations/Dependencies (2020)/Rancho Coronado\|Rancho Coronado]], [[Night City/Locations/Districts (2020)/Westside\|Westside]] - and maintaining a strict security detail in and around them. Transportation was done via [[Night City/Others/Vehicles/NCART\|NCART]], armored buses or [[Night City/Others/Vehicles/AV\|AVs]].
 
 By 2009, [[Night City/Locations/Night City\|Night City]] became renowned for its violence come sundown - drugs, prostitution, racketeering, random violence and cybernetic terrorism were all commonplace occurrences, to the point that [[Night City/Organizations/Gangs/The Mob\|The Mob]] seized on this by bankrolling a betting company that would become the [[Body Lotto\|Body Lotto]]. The [[Night City/Locations/Night City#Government & Politics\|City Council]] was controlled by organized crime and everything was going to shit.
 
 ### Resurgence
-In May of 2009, [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] had had enough. [[Night City/Locations/Night City\|Night City]] was a project they'd invested quite a hefty sum in and, backed by [[Merill, Asukaga & Finch\|Merill, Asukaga & Finch]] and [[Night City/Organizations/Corporations/EBM\|EBM]], they initiated an extensive counterattack against [[Night City/Organizations/Gangs/The Mob\|The Mob]] in what is known as [the Mob War](https://cyberpunk.fandom.com/wiki/Night_City/History#Mob_War_(2009_-_2011)). This meant tanks in the streets, hired mercenaries, paramilitary troops coming down in [[Night City/Others/AV\|Aerodynes]] and even strategic bombings.
+In May of 2009, [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] had had enough. [[Night City/Locations/Night City\|Night City]] was a project they'd invested quite a hefty sum in and, backed by [[Merill, Asukaga & Finch\|Merill, Asukaga & Finch]] and [[Night City/Organizations/Corporations/EBM\|EBM]], they initiated an extensive counterattack against [[Night City/Organizations/Gangs/The Mob\|The Mob]] in what is known as [the Mob War](https://cyberpunk.fandom.com/wiki/Night_City/History#Mob_War_(2009_-_2011)). This meant tanks in the streets, hired mercenaries, paramilitary troops coming down in [[Night City/Others/Vehicles/AV\|Aerodynes]] and even strategic bombings.
 
 Since the end of the Mob War in 2011, [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] has been largely seen as the guardian angel of [[Night City/Locations/Night City\|Night City]], taking a guiding role in both politics and business. 
 ## Government & Politics
 The government is **a New City Democratic Mayorality**, having a corporate-controlled city council that proposes and passes new legislation. Votes by the general population are cast via DataTerm, using [[Night City/Organizations/Corporations/EBM\|IdentiCard]] registration software. The City Council is composed of representatives chosen by the ten largest corporate investors (via taxes, donations, job opportunity creation etc.) in [[Night City/Locations/Night City\|Night City]].
 ### Districts
-The City is split between 6 internal districts and a [[Combat Zone\|Combat Zone]], with a City Manager assigned to protect and serve the area's best interest. In 2021, **all City Managers** were Corporate [[Rules/CPRED/Roles/Exec\|Executives]], nominated by majority vote from the **City Council**.
+The City is split between 6 internal districts and a [[Night City/Others/Combat Zone\|Combat Zone]], with a City Manager assigned to protect and serve the area's best interest. In 2021, **all City Managers** were Corporate [[Rules/CPRED/Roles/Exec\|Executives]], nominated by majority vote from the **City Council**.
 - [[Night City/Locations/Districts (2020)/City Center\|City Center]], managed by [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] [[Rules/CPRED/Roles/Exec\|Exec]] [[Night City/Characters/2021/corpos/Iwasao Koremichi\|Iwasao Koremichi]]
 - [[Night City/Locations/Districts (2020)/Little Asia\|Little Asia]], managed by [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] [[Rules/CPRED/Roles/Exec\|Exec]] [[Oburo Tatsunaga\|Oburo Tatsunaga]]
 - [[Night City/Locations/Districts (2020)/Little Europe\|Little Europe]], managed by [[Halsey, Ferris & Skiv\|Halsey, Ferris & Skiv]] [[Rules/CPRED/Roles/Exec\|Exec]]
 - [[Night City/Locations/Districts (2020)/Nightlife District\|Nightlife District]], managed by [[Night City/Organizations/Corporations/EBM\|EBM]] [[Rules/CPRED/Roles/Exec\|Exec]]
 - [[Night City/Locations/Districts (2020)/University District\|University District]], managed by [[IEC\|IEC]] [[Rules/CPRED/Roles/Exec\|Exec]]
 - [[Night City/Locations/Districts (2020)/Westside\|Westside]], managed by [[Night City/Organizations/Corporations/Militech\|Militech]] [[Rules/CPRED/Roles/Exec\|Exec]] [[Night City/Characters/2021/corpos/Militech Exec\|Militech Exec]]
-- [[Night City/Locations/Districts (2020)/South Night City\|South Night City]] [[Combat Zone\|Combat Zone]], managed by [[Night City/Organizations/Corporations/Petrochem\|Petrochem]] [[Rules/CPRED/Roles/Exec\|Exec]]
+- [[Night City/Locations/Districts (2020)/South Night City\|South Night City]] [[Night City/Others/Combat Zone\|Combat Zone]], managed by [[Night City/Organizations/Corporations/Petrochem\|Petrochem]] [[Rules/CPRED/Roles/Exec\|Exec]]
 
 ### Dependencies
 Smaller cities or regions that have developed around [[Night City/Locations/Night City\|Night City]] and belong to the [[Night City/Locations/Night City\|Greater NC Metropolitan Area]] are known as dependencies. In 2021, there are 5 known dependencies (excluding the [[Night City/Locations/Dependencies (2020)/Badlands\|Badlands]]):
-- [[Night City/Locations/Dependencies (2020)/Heywood\|Heywood]], a light-industrial zone
-- [[Night City/Locations/Dependencies (2020)/NorthOak\|NorthOak]], the surrounding city of [[NorCal Military Base\|NorCal Military Base]]
-- [[Night City/Locations/Dependencies (2020)/Pacifica\|Pacifica]], a successful tourist resort
-- [[Night City/Locations/Dependencies (2020)/Rancho Coronado\|Rancho Coronado]], a [[Night City/Strata/Beaver\|Beaverville]]
-- [[Night City/Locations/Dependencies (2020)/Westbrook\|Westbrook]], a gated community for only the most exclusive of [[Night City/Strata/Corpzoner\|Corpzoners]]
+- [[Night City/Locations/Dependencies (2020)/Heywood\|Heywood]], a light-industrial zone home to most of [[Night City/Locations/Night City#Economy\|NC's manufacturing and industry]], as well as the surround shantytown of [[Night City/Strata/Streetscum\|Streetscum]] & [[Night City/Strata/Movers\|Movers]].
+- [[Night City/Locations/Dependencies (2020)/NorthOak\|NorthOak]], the surrounding city of [[NorCal Military Base\|NorCal Military Base]], inhabited by [[Night City/Organizations/NUSA\|NUSA]] soldiers and their families, as well as [[Night City/Strata/Movers\|Movers]] who can't yet afford [[Night City/Locations/Dependencies (2020)/Rancho Coronado\|Rancho Coronado]] or [[Night City/Locations/Dependencies (2020)/Westbrook\|Westbrook]].
+- [[Night City/Locations/Dependencies (2020)/Pacifica\|Pacifica]], a successful tourist resort with an attached arcology for the [[Night City/Strata/Mallplexers\|Mallplexers]] maintaining the resort-town
+- [[Night City/Locations/Dependencies (2020)/Rancho Coronado\|Rancho Coronado]], the largest [[Night City/Strata/Beavers\|Beaverville]] of the West Coast, a rather secure gated community with residents from across the corporate spectrum
+- [[Night City/Locations/Dependencies (2020)/Westbrook\|Westbrook]], a gated community for only the most exclusive of [[Night City/Strata/Corpzoners\|Corpzoners]] and [[Night City/Strata/Powerdealers\|Powerdealers]]
+
+
 ## Demographics
-See #stratum.
-- [[Night City/Strata/Powerdealer\|Powerdealers]], the true elite in the shadows, making up at most 0.1% of the city's population;
-- [[Night City/Strata/Corpzoner\|Corpzoners]], the [[Rules/CPRED/Roles/Exec\|Execs]] and high-brow politicos, making up 3% of the population;
-- [[Night City/Strata/Beaver\|Beavers]], the middle-managers and lower [[Rules/CPRED/Roles/Exec\|Execs]] who prefer the "calmer" suburban life, making up 7% of the population;
-- [[Night City/Strata/Mover\|Movers]], the bottom of the corporate ladder, but still climbing, making up ~20% of the population;
-- [[Night City/Strata/Edgerunner\|Edgerunners]], the glorious mercenaries that drink from the pot of autonomy, making up a bit over 10% of the population;
-- [[Night City/Strata/Mallplexer\|Mallplexers]], low-wage workers clustered up in arcologies, making up another 30% of the population;
-- [[Night City/Strata/Streetscum\|Streetscum]], urban homeless, temporary employees and gangers who can't afford anything better, at a steep 30% of the population;
+
+> [!bug]- ~30% [[Night City/Strata/Streetscum\|Streetscum]]
+> Urban homeless, temporary employees and gangers who can't afford anything better. Their home field is in [[Night City/Locations/Districts (2020)/South Night City\|South Night City]], but also reside all across town wherever they manage to make a living.
+
+> [!info]- ~30% [[Night City/Strata/Mallplexers\|Mallplexers]]
+> Low-wage workers clustered up in arcologies across [[Night City/Locations/Night City\|Night City]], but especially [[Night City/Locations/Districts (2020)/Nightlife District#New Harbor Area\|in the Mallplex]], in [[Night City/Locations/Dependencies (2020)/Pacifica\|Pacifica]]'s mini-arcology and in [[Night City/Locations/Dependencies (2020)/NorthOak\|NorthOak]]'s arcology.
+
+> [!tip]- ~10% [[Night City/Strata/Edgerunners\|Edgerunners]]
+> The glorious mercenaries that drink from the pot of autonomy; can be found wherever there are gigs that need doing, but often concentrated around hotspots like bars.
+
+> [!info]- ~20% [[Night City/Strata/Movers\|Movers]]
+> Not [[Night City/Strata/Mallplexers\|Mallplexers]], but people with enough motivation (generated by a modicum of education or wealth) to try their hand at the corporate life. At the bottom of the ladder, but trying to climb.
+
+> [!info]- ~7% [[Night City/Strata/Beavers\|Beavers]]
+> The middle-managers and lower [[Rules/CPRED/Roles/Exec\|Execs]] who prefer the "calmer" suburban life. These are the cogs that keep the machine well-oiled and working despite it all.
+
+> [!info]- ~3% [[Night City/Strata/Corpzoners\|Corpzoners]]
+> Those who've "made it", [[Rules/CPRED/Roles/Exec\|Execs]], Politicos and influential people that have pleased the powers that be. They live lavish lifestyles, although they are forced to show their loyalty ever-so-often.
+
+> [!danger]- ~0.1% [[Night City/Strata/Powerdealers\|Powerdealers]]
+> The true elite, residing only in the shadows. Whether they are a secret cabal or as chaotic as the Street, their word rings across the city every single time.
 
 ## Law Enforcement & Crime
->[!warning] THIS section severely lacks information.
-- [[NCPD\|NCPD]]
-- [[Night City/Organizations/Gangs/Boostergangs of Night City\|Boostergangs]]
+[[Night City/Locations/Night City\|Night City]] has multiple institutions enforcing the law. 
+**In the Corporate Zone** ([[Night City/Locations/Districts (2020)/City Center\|most of the City Center]] and [[Night City/Locations/Districts (2020)/Westside\|Westside]]), hired security firms[^2] have been deputized by the [[Night City/Locations/Night City#Government & Politics\|City Council]] to carry out the investigation and punishment of unlawful activity.
+
+**In the Controlled Zones** ([[Night City/Locations/Districts (2020)/Little Asia\|Little Asia]], [[Night City/Locations/Districts (2020)/Little Europe\|Little Europe]], [[Night City/Locations/Districts (2020)/Nightlife District\|Nightlife District]], [[Night City/Locations/Districts (2020)/University District\|University District]]), crime is kept in check by security sweeps and surveillance by the [[Night City/Organizations/NCPD\|NCPD]]. The institution is chronically understaffed (thanks to the high deathrate on the job compared to the decent pay), which oftentimes means that zones of urban decay begin forming.
+
+**In the [[Night City/Others/Combat Zone\|Combat Zone]]** ([[Night City/Locations/Districts (2020)/South Night City\|South Night City]]), crime is rampant and the [[Night City/Locations/Night City#Government & Politics\|City Council]] holds a moratorium on government funding in the region until the rate of violent crime subsides. As such, although crime **isn't legal** in [[Night City/Locations/Districts (2020)/South Night City\|South Night City]], there are no [[Night City/Organizations/NCPD\|cops]] to enforce it. Thankfully, some security firms act as deputized bounty hunters, going in [[Night City/Others/Combat Zone\|the Zone]] to extract high-value targets and bring them to justice.
+
+>[!info] Explore [[Night City/Organizations/NCPD\|the NCPD's]] structure
+
+>[!bug] Learn about [[Night City/Organizations/Gangs/Boostergangs of Night City\|the Boostergangs of Night City]]
+
 ## Education
 >[!warning] THIS section severely lacks information.
+
 Night City University
+
 ## Transportation
 >[!warning] THIS section severely lacks information.
 - Taxis
-- [[Night City/Others/NCART\|NCART]] (maglev)
-
+- [[Night City/Others/Vehicles/NCART\|NCART]] (maglev)
 
 ## Economy
 >[!warning] THIS section severely lacks information.
 
-Technical, light industry, international trade, information services, electronic technologies
+Technical, light industry, international trade, information services, electronic technologies, tourism
 ### Sports
 Most officially-sanctioned sports events take place in [McCartney Stadium](https://cyberpunk.fandom.com/wiki/McCartney_Stadium) in the [[Night City/Locations/Districts (2020)/Nightlife District\|Nightlife District]]. Oftentimes, security at these events needs to be tight, so [[Night City/Organizations/Corporations/Lazarus PMC\|Lazarus PMC]] or [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] are deployed by the local government.
+
 >[!info]- Local Teams
 >- [Night City Rangers](https://cyberpunk.fandom.com/wiki/Night_City_Rangers) (American football)
 >- [Night City Death-Dealers](https://cyberpunk.fandom.com/wiki/Night_City_Death_Dealers) (Combat-Soccer)
@@ -95,3 +116,5 @@ Most officially-sanctioned sports events take place in [McCartney Stadium](https
 
 
 [^1]: [[Night City/Organizations/Corporations/Arasaka\|Arasaka]], [[Merill, Asukaga & Finch\|Merill, Asukaga & Finch]], [[Night City/Organizations/Corporations/EBM\|EBM]], [[Night City/Organizations/Corporations/Night Corp\|Night Corp]], [[Night City/Organizations/Corporations/Petrochem\|Petrochem]].
+
+[^2]: Currently, [[Night City/Organizations/Corporations/Arasaka\|Arasaka]] holds a chokehold on government contracts in the area.

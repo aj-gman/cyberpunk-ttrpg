@@ -16,4 +16,4 @@ The light industrial area of [[Night City/Locations/Night City\|Night City]], si
 
 [[Night City/Organizations/Gangs/El Norte Cartel\|El Norte Cartel]] has a strong presence in the neighborhood thanks to the numerous packaging warehouses they own in order to supply their product.
 
-![Pasted image 20260924161450.png\|502](/img/user/Pasted%20image%2020260924161450.png)
+![LOC-HEYWOOD1.png\|502](/img/user/Pictures/LOC-HEYWOOD1.png)

@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/night-city/organizations/gangs/maelstrom/","tags":["boostergang"],"dg-note-properties":{"tags":["boostergang"]}}
 ---
 
->[!info] [[NCPD\|NCPD]] DATA
+>[!info] [[Night City/Organizations/NCPD\|NCPD]] DATA
 **Noun:** Maelstromite
 **Symbols:** Skulls, Spiders, Hammers
 >**Structure:** Kratocratic Feudalism[^1]

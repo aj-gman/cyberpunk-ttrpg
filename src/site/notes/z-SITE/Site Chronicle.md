@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#npc","#stratum","#district","#ideology","#news","#role"],"dg-note-properties":{"tags":["#npc","#stratum","#district","#ideology","#news","#role"]}}
 ---
 
 ### September 2026
@@ -12,7 +12,7 @@
 - Finalized [[Night City/Locations/Night City\|Night City]]'s History chapter
 - Made some more #npc public (that [[Player Characters/The Gang\|The Gang]] have met)
 #### 14.09
-- Made public the #stratum, with a relevant description for [[Night City/Strata/Powerdealer\|Powerdealer]];
+- Made public the #stratum, with a relevant description for [[Night City/Strata/Powerdealers\|Powerdealers]];
 - Added Demographics to [[Night City/Locations/Night City\|Night City]] page;
 - Added Dependencies ([[Night City/Locations/Dependencies (2020)/Pacifica\|Pacifica]] etc.) to the [[Night City/Locations/Night City\|Night City]] page;
 #### 11.09
