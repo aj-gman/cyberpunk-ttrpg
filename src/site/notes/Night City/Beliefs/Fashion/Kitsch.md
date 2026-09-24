@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/beliefs/fashion/kitsch/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/beliefs/fashion/kitsch/","tags":["#fashion"],"dg-note-properties":{"tags":["#fashion"]}}
 ---
 
 Closely associated with [[Night City/Beliefs/Insurrectionism\|Insurrectionism]].

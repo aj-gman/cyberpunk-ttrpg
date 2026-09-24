@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/districts-2020/south-night-city/","tags":["district","location"],"dg-note-properties":{"tags":["district","location"]}}
+{"dg-publish":true,"permalink":"/night-city/locations/districts-2020/south-night-city/","tags":["#district","#location"],"dg-note-properties":{"tags":["#district","#location"]}}
 ---
 
 >[!info]- [Map of Night City](https://gman-cyberpunk.vercel.app/img/map-viewer/)
@@ -12,4 +12,9 @@ The [[Combat Zone\|Combat Zone]] of [[Night City/Locations/Night City\|Night Cit
 >- [[Night City/Organizations/Gangs/Piranhas\|Piranhas]]
 >- [[Night City/Organizations/Gangs/Red Chrome Legion\|Red Chrome Legion]]
 >- D6 other gangs
+
+![Pasted image 20260924161216.png\|490](/img/user/Pasted%20image%2020260924161216.png)
+![Pasted image 20260924161800.png\|490](/img/user/Pasted%20image%2020260924161800.png)
+![Pasted image 20260924161816.png\|491](/img/user/Pasted%20image%2020260924161816.png)
+![Pasted image 20260924161851.png\|491](/img/user/Pasted%20image%2020260924161851.png)
 
