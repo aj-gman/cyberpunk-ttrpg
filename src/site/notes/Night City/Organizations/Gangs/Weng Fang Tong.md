@@ -4,7 +4,7 @@
 
 #boostergang [[Night City/Locations/Night City\|Night City]], part of the [[Triads\|Triads]]
 
-**Leader:** David Ling Po, which also serves as District Manager for [[Night City/Locations/Districts (2020)/Little Asia\|Little Asia]].
+**Leader:** David Ling Po, which also serves as District Manager for [[Night City/Locations/Districts/Little Asia\|Little Asia]].
 
 - one of the strongest criminal organizations in Night City, with their influence expanding over much of the metropolis.
 - large presence everywhere in the city thanks to their sway in gambling and sex work businesses, being affiliated with a number of establishments, like those in [the Ascension](https://cyberpunk.fandom.com/wiki/The_Ascension "The Ascension") or the secretive [Diplomatic Immunity](https://cyberpunk.fandom.com/wiki/Diplomatic_Immunity "Diplomatic Immunity") club.

@@ -9,9 +9,9 @@
 >**Activities:** Scavenging, Trade of [[Rules/NCOverdrive/Drugs\|Illegal Substances]] and [[Rules/NCOverdrive/Cyberware\|Cyberware]], [Nihilistic violent extremism](https://en.wikipedia.org/wiki/Nihilistic_violent_extremism), Neo-Satanism[^2]
 
 >[!warning] Areas of operations
->- [[Night City/Locations/Districts (2020)/Little Asia\|Japantown]] - encroaching presence in western part;
->- [[Night City/Locations/Districts (2020)/Nightlife District\|Studio City]] - spotty presence alongside [[Night City/Organizations/Gangs/Red Chrome Legion\|Red Chrome Legion]] members;
->- [[Night City/Locations/Districts (2020)/South Night City\|South Night City]] - multiple strongholds of influence; so-called "home turf";
+>- [[Night City/Locations/Districts/Little Asia\|Japantown]] - encroaching presence in western part;
+>- [[Night City/Locations/Districts/Nightlife District\|Studio City]] - spotty presence alongside [[Night City/Organizations/Gangs/Red Chrome Legion\|Red Chrome Legion]] members;
+>- [[Night City/Locations/Districts/South Night City\|South Night City]] - multiple strongholds of influence; so-called "home turf";
 
 ![FAC-Maelstrom.png](/img/user/Pictures/FAC-Maelstrom.png)
 

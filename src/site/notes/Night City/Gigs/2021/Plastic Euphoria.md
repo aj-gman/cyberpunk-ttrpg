@@ -18,7 +18,7 @@
 
 [[Night City/Characters/2021/edgerunners/Big Wu\|Big Wu]] asks you to hold out until the [[Night City/Organizations/Gangs/Piranhas\|Piranhas]] arrive.
 
-The [[Night City/Organizations/Gangs/Piranhas\|Piranhas]] have multiple sites where they produce drugs, but one of them is located in [[Night City/Locations/Dependencies (2020)/Rancho Coronado\|Rancho Coronado]] and the [[Night City/Characters/2021/corpos/Victor Campbell\|Corpo]] in whose house the thing's going on in has been quiet. He's trying to screw over the [[Night City/Organizations/Gangs/Piranhas\|Piranhas]] and start his own side gig.
+The [[Night City/Organizations/Gangs/Piranhas\|Piranhas]] have multiple sites where they produce drugs, but one of them is located in [[Night City/Locations/Dependencies/Rancho Coronado\|Rancho Coronado]] and the [[Night City/Characters/2021/corpos/Victor Campbell\|Corpo]] in whose house the thing's going on in has been quiet. He's trying to screw over the [[Night City/Organizations/Gangs/Piranhas\|Piranhas]] and start his own side gig.
 
 Just make sure he can't do that. He's got friends in high places, enough so that [[Night City/Organizations/Gangs/Piranhas\|Piranhas]] can't get to him and just *break his limbs*.
 

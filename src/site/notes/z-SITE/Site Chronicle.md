@@ -21,7 +21,7 @@
 #### 14.09
 - Made public the #stratum, with a relevant description for [[Night City/Strata/Powerdealers\|Powerdealers]];
 - Added Demographics to [[Night City/Locations/Night City\|Night City]] page;
-- Added Dependencies ([[Night City/Locations/Dependencies (2020)/Pacifica\|Pacifica]] etc.) to the [[Night City/Locations/Night City\|Night City]] page;
+- Added Dependencies ([[Night City/Locations/Dependencies/Pacifica\|Pacifica]] etc.) to the [[Night City/Locations/Night City\|Night City]] page;
 #### 11.09
 - Added initial rules for [[Rules/NCOverdrive/Basebuilding\|Basebuilding]] (still requires details for Contacts & Personnel)
 - Updated [[Night City/Locations/Night City\|Night City]] webpage with a few more details

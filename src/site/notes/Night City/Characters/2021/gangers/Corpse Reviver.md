@@ -6,7 +6,7 @@
 Defender (Power, Alert) | Proactive, Cautionary, Strong-Willed
 
 Leader of the [[Night City/Organizations/Gangs/Piranhas\|Piranhas]] boostergang.
-Raised in [[Night City/Locations/Districts (2020)/South Night City\|South Night City]], grew up to lead the [[Night City/Organizations/Gangs/Piranhas\|Piranhas]] out of being a loser party gang into a real beast.
+Raised in [[Night City/Locations/Districts/South Night City\|South Night City]], grew up to lead the [[Night City/Organizations/Gangs/Piranhas\|Piranhas]] out of being a loser party gang into a real beast.
 
 Identified [[Night City/Characters/!pc/Hex\|Hex]] as having just consumed [[Rules/CPRED/Drugs/Coca\|Coca]] and gave him seductive whispers.
 

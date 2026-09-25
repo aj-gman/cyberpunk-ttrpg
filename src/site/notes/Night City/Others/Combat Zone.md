@@ -10,4 +10,4 @@ Usually, these neighborhoods are quite volatile, with residents dying on the dai
 
 [Detroit's Combat Zone](https://cyberpunk.fandom.com/wiki/Detroit) was the first to be walled off completely and turned into a de jure minimum security prison.
 
-[[Night City/Locations/Districts (2020)/South Night City\|South Night City]] is [[Night City/Locations/Night City\|Night City]]'s own [[Night City/Others/Combat Zone\|Combat Zone]], spanning a large portion of the peninsula and even bordering the [[Night City/Locations/Districts (2020)/City Center\|City Center]].
+[[Night City/Locations/Districts/South Night City\|South Night City]] is [[Night City/Locations/Night City\|Night City]]'s own [[Night City/Others/Combat Zone\|Combat Zone]], spanning a large portion of the peninsula and even bordering the [[Night City/Locations/Districts/City Center\|City Center]].
