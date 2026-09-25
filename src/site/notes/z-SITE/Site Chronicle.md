@@ -1,8 +1,15 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#district","#dependency","#stratum","#boostergang","#npc","#ideology","#news","#role"],"dg-note-properties":{"tags":["#district","#dependency","#stratum","#boostergang","#npc","#ideology","#news","#role"]}}
 ---
 
 ### September 2026
+#### 25.09
+- Finished most of the [[Night City/Locations/Night City\|Night City]] page; still needs writing: Education, Transportation, Economy
+	- Added pictures to most of the #district and #dependency, giving a good visual identity to them.
+- Added secondary pages that explain extra info from the [[Rules/Cyberpunk Universe\|Cyberpunk Universe]]: [[Night City/Others/Vehicles/AV\|AV]], [[Night City/Others/Vehicles/Drones\|Drones]], [[Night City/Others/Vehicles/NCART\|NCART]], [[Night City/Others/Combat Zone\|Combat Zone]]
+- Added basic information to all #stratum, cross-copied via [[Night City/Locations/Night City#Demographics\|Night City#Demographics]]
+- Updated [[z-SITE/AI Policy\|AI Policy]]
+- Added pages for [[Night City/Organizations/NCPD\|NCPD]] and [[Night City/Organizations/Gangs/Maelstrom\|Maelstrom]], marking the first detailed view on a #boostergang;
 #### 22.09
 - Updated [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.2.1.0
 	- New Inventory System;
