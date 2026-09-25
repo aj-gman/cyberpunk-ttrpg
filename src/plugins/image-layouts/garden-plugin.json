@@ -1,0 +1,9 @@
+{
+  "id": "image-layouts",
+  "name": "Image Layouts",
+  "version": "1.0.0",
+  "description": "Renders Obsidian image-layout code blocks as CSS image grids and masonry.",
+  "author": "AJ",
+  "hooks": "index.js",
+  "styles": ["styles/image-layouts.scss"]
+}

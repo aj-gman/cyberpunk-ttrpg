@@ -1,0 +1,230 @@
+/* Image Layouts plugin
+ * Renders Obsidian `image-layout` code blocks (grids a-i / single, and
+ * masonry-2..6). Layout definitions are ported from
+ * vertis/obsidian-image-layouts (LegacyImageLayout.svelte) so blocks look the
+ * same as they do in Obsidian.
+ *
+ * The <picture> rules are garden-specific: this site's obsidian-html transform
+ * rewrites every site-local <img> into a <picture> + <img>, which the original
+ * plugin never has to account for.
+ *
+ * Override the gap from custom-style.css with --dg-image-layouts-gap.
+ */
+
+.image-layouts-align {
+    &.align-left {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &.align-center {
+        display: flex;
+        justify-content: center;
+    }
+    &.align-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.image-layouts-grid {
+    display: grid;
+    gap: var(--dg-image-layouts-gap, 0.5rem);
+}
+
+/* Image sizing: fill the cell in grids, keep the intrinsic ratio in masonry. */
+.image-layouts-grid img,
+.image-layouts-masonry img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+}
+
+.image-layouts-grid picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.image-layouts-grid img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Natural fit keeps each image's intrinsic aspect ratio. */
+.image-layouts-grid.fit-natural {
+    align-items: start;
+}
+.image-layouts-grid.fit-natural picture {
+    height: auto;
+}
+.image-layouts-grid.fit-natural img {
+    height: auto;
+    object-fit: unset;
+}
+
+.image-layouts-image {
+    position: relative;
+    min-width: 0;
+}
+
+.image-layouts-image.fit-contain img {
+    object-fit: contain;
+}
+
+/* Grid layouts (ported 1:1 from the plugin). */
+.image-layouts-layout-a {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image-0 image-1";
+}
+
+.image-layouts-layout-b {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "image-0 image-1";
+}
+
+.image-layouts-layout-c {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "image-1 image-0";
+}
+
+.image-layouts-layout-d {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "image-0 image-1"
+        "image-0 image-2";
+}
+
+.image-layouts-layout-e {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "image-1 image-0"
+        "image-2 image-0";
+}
+
+.image-layouts-layout-f {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "image-0 image-1"
+        "image-0 image-2"
+        "image-0 image-3";
+}
+
+.image-layouts-layout-g {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "image-1 image-0"
+        "image-2 image-0"
+        "image-3 image-0";
+}
+
+.image-layouts-layout-h {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "image-0 image-1 image-2";
+}
+
+.image-layouts-layout-i {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "image-0 image-1 image-2 image-3";
+}
+
+.image-layouts-layout-single {
+    grid-template-columns: 1fr;
+    grid-template-areas: "image-0";
+}
+
+/* Cell placement (grid only — masonry columns are flex). */
+.image-layouts-grid .image-layouts-image-0 {
+    grid-area: image-0;
+}
+.image-layouts-grid .image-layouts-image-1 {
+    grid-area: image-1;
+}
+.image-layouts-grid .image-layouts-image-2 {
+    grid-area: image-2;
+}
+.image-layouts-grid .image-layouts-image-3 {
+    grid-area: image-3;
+}
+.image-layouts-grid .image-layouts-image-4 {
+    grid-area: image-4;
+}
+.image-layouts-grid .image-layouts-image-5 {
+    grid-area: image-5;
+}
+.image-layouts-grid .image-layouts-image-6 {
+    grid-area: image-6;
+}
+
+/* Masonry layouts. */
+.image-layouts-masonry {
+    display: grid;
+    gap: var(--dg-image-layouts-gap, 0.5rem);
+}
+
+@for $columns from 2 through 6 {
+    .image-layouts-masonry-grid-#{$columns} {
+        grid-template-columns: repeat(#{$columns}, minmax(0, 1fr));
+    }
+}
+
+.image-layouts-masonry-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dg-image-layouts-gap, 0.5rem);
+    min-width: 0;
+}
+
+/* Caption under the whole layout. */
+.image-layouts-caption {
+    color: var(--text-muted, #888);
+    text-align: center;
+    font-size: var(--font-ui-smaller, 0.75rem);
+    margin: 0.5rem 0;
+}
+
+/* Per-image overlay captions. */
+.image-layouts-overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+}
+
+.image-layouts-overlay.is-always {
+    opacity: 1;
+}
+
+.image-layouts-image:hover .image-layouts-overlay {
+    opacity: 1;
+}
+
+.image-layouts-overlay-inner {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.75);
+    color: #111;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    backdrop-filter: blur(4px);
+}
+
+/* Stack multi-column grids on narrow screens. */
+@media (max-width: 640px) {
+    .image-layouts-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+    }
+
+    .image-layouts-grid .image-layouts-image {
+        grid-area: auto;
+    }
+}
