@@ -11,6 +11,6 @@ The Arasaka Corporation maintains the largest and most powerful armed forces of 
 
 Arasaka has made a habit of buying up other companies worldwide, and bleeding out the competition of other Japanese corporations. They also give a heavy amount of support to Japanese communities all over the globe, despite their business practices and overall history being considered unethical.
 
-![Pasted image 20260924235038.png\|354](/img/user/Pasted%20image%2020260924235038.png)
+![LOC-ARASAKAHQNC.png\|354](/img/user/Pictures/LOC-ARASAKAHQNC.png)
 
 https://cyberpunk.fandom.com/wiki/Yoru_Tomobiki

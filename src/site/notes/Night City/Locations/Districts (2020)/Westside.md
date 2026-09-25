@@ -11,11 +11,23 @@
 
 District in the western part of [[Night City/Locations/Night City\|Night City]]. Contains **the following zones:**
 ## West Hill Gardens
-![Pasted image 20260925000914.png\|414](/img/user/Pasted%20image%2020260925000914.png)
-![LOC-WESTHILLGARDENS.png\|412](/img/user/Pictures/LOC-WESTHILLGARDENS.png)
+```image-layout
+---
+layout: b
+---
+![[LOC-WESTSIDE2.png|414]]
+![[LOC-WESTHILLGARDENS.png|412]]
+```
+
 
 ## Old Downtown
-![LOC-OLDDOWNTOWN2.png\|417](/img/user/Pictures/LOC-OLDDOWNTOWN2.png)
-![LOC-OLDDOWNTOWN.png\|414](/img/user/Pictures/LOC-OLDDOWNTOWN.png)
+```image-layout
+---
+layout: a
+---
+![[LOC-OLDDOWNTOWN2.png|417]]
+![[LOC-OLDDOWNTOWN.png|414]]
+```
+
 
 

@@ -13,9 +13,15 @@
 
 The [[Night City/Others/Combat Zone\|Combat Zone]] of [[Night City/Locations/Night City\|Night City]]. Synonymous with the phrase "[[Night City/Others/Combat Zone\|Combat Zone]]" as it was the first and still grows to this day.
 
+```image-layout
+---
+layout: masonry-2
+carouselShowThumbnails: true
+---
+![[PIC-SNC4.png|490]]
+![[LOC-SNC3.png|490]]
+![[LOC-SNC2.png|491]]
+![[LOC-SNC1.png|491]]
+```
 
-![PIC-SNC4.png\|490](/img/user/Pictures/PIC-SNC4.png)
-![LOC-SNC3.png\|490](/img/user/Pictures/LOC-SNC3.png)
-![LOC-SNC2.png\|491](/img/user/Pictures/LOC-SNC2.png)
-![LOC-SNC1.png\|491](/img/user/Pictures/LOC-SNC1.png)
 

@@ -11,16 +11,27 @@
 
 District representing the downtown of [[Night City/Locations/Night City\|Night City]]. Contains **the following zones:**
 ## Bank Block
-![LOC-BANKBLOCK2.png\|531](/img/user/Pictures/LOC-BANKBLOCK2.png)
-![LOC-BANKBLOCK.png\|524](/img/user/Pictures/LOC-BANKBLOCK.png)
+```image-layout
+---
+layout: b
+---
+![[LOC-BANKBLOCK.png|524]]
+![[LOC-BANKBLOCK2.png|531]]
+```
+
 
 ## Civic Center
-![Pasted image 20260925000556.png\|534](/img/user/Pasted%20image%2020260925000556.png)
+![LOC-CIVICENTER.png\|534](/img/user/Pictures/LOC-CIVICENTER.png)
 
 ## Corporate Center
-![Pasted image 20260924235131.png\|531](/img/user/Pasted%20image%2020260924235131.png)
-![Pasted image 20260924234939.png\|526](/img/user/Pasted%20image%2020260924234939.png)
-![LOC-CORPCENTER1.png\|396](/img/user/Pictures/LOC-CORPCENTER1.png)
+```image-layout
+---
+layout: h
+---
+![[LOC-CORPCENTER2.png|531]]
+![[LOC-CORPCENTER1 1.png|526]]
+![[Pictures/LOC-CORPCENTER1.png|396]]
+```
 
 ## Medical Center
 ![LOC-MEDCENTER.png\|402](/img/user/Pictures/LOC-MEDCENTER.png)

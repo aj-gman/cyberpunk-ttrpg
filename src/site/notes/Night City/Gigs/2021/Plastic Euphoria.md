@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/gigs/2021/plastic-euphoria/","tags":["#gig","#4cw"],"dg-note-properties":{"tags":["#gig","#4cw"]}}
+{"dg-publish":true,"permalink":"/night-city/gigs/2021/plastic-euphoria/","dg-note-properties":{}}
 ---
 
 #gig #4cw [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]]
 ## Prepping
-**Premise:** [[Eurotour/The Crew\|The Crew]] finally arrive into [[Night City/Locations/Night City\|Night City]] Immediately, they are contacted by a local [[Rules/CPRED/Roles/Fixer\|Fixer]], [[Night City/Characters/2021/edgerunners/Big Wu\|Big Wu]]. He offers shelter and food, "[[Player Characters/Relevant NPCs/Natalie Michaels\|Nattie]] told me you were in town".
+**Premise:** [[Eurotour/The Crew\|The Crew]] finally arrive into [[Night City/Locations/Night City\|Night City]] Immediately, they are contacted by a local [[Rules/CPRED/Roles/Fixer\|Fixer]], [[Night City/Characters/2021/edgerunners/Big Wu\|Big Wu]]. He offers shelter and food, "[[Night City/Characters/!pc/Relevant NPCs/Natalie Michaels\|Nattie]] told me you were in town".
 ### Theme
 - **Do we wake up troubled or does trouble find us along the way?**
 ### Mood

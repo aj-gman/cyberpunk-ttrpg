@@ -13,24 +13,48 @@
 District in the northern part of the [[Night City/Locations/Night City\|Night City]] peninsula. Contains **the following zones:**
 
 ## Little Italy
-![LOC-LITTLEITALY2.png\|418](/img/user/Pictures/LOC-LITTLEITALY2.png)
-![LOC-LITTLEITALY.png\|414](/img/user/Pictures/LOC-LITTLEITALY.png)
-![LOC-LILITALY.png\|409](/img/user/Pictures/LOC-LILITALY.png)
+```image-layout
+---
+layout: e
+---
+![[LOC-LILITALY.png|409]]
+![[LOC-LITTLEITALY2.png|418]]
+![[LOC-LITTLEITALY.png|414]]
+```
+
 
 ## Northside
-![LOC-NORTHSIDE3.png\|435](/img/user/Pictures/LOC-NORTHSIDE3.png)
-![LOC-NORTHSIDE2.png\|432](/img/user/Pictures/LOC-NORTHSIDE2.png)
-![LOC-NORTHSIDE.png\|426](/img/user/Pictures/LOC-NORTHSIDE.png)
+```image-layout
+---
+layout: d
+---
+![[LOC-NORTHSIDE3.png|435]]
+![[LOC-NORTHSIDE2.png|432]]
+![[LOC-NORTHSIDE.png|426]]
+```
+
 
 
 ## Upper Marina
-![Pasted image 20260925001846.png\|441](/img/user/Pasted%20image%2020260925001846.png)
-![Pasted image 20260925001834.png\|434](/img/user/Pasted%20image%2020260925001834.png)
-![LOC-UPPERMARINA.png\|432](/img/user/Pictures/LOC-UPPERMARINA.png)
+```image-layout
+---
+layout: e
+---
+![[LOC-UPPERMARINA3.png|441]]
+![[LOC-UPPERMARINA2.png|434]]
+![[LOC-UPPERMARINA.png|432]]
+```
+
 
 ## East Marina
-![LOC-EASTMARINA2.png\|438](/img/user/Pictures/LOC-EASTMARINA2.png)
-![LOC-EASTMARINA1.png\|434](/img/user/Pictures/LOC-EASTMARINA1.png)
-![LOC-MARINA.png\|435](/img/user/Pictures/LOC-MARINA.png)
+```image-layout
+---
+layout: d
+---
+![[LOC-EASTMARINA2.png|438]]
+![[LOC-EASTMARINA1.png|434]]
+![[LOC-MARINA.png|435]]
+```
+
 
 

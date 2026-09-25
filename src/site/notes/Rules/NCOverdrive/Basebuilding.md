@@ -16,23 +16,23 @@
 ## Development Levels
 Are required in order to initiate new [[Rules/NCOverdrive/Basebuilding#Upgrades\|upgrades]] and are split into 4 categories, depending on domain and required skills.
 ### Supplies (SUP)
-...the capability of [[Player Characters/The Gang\|The Gang]] to maintain current expenditures, meaning project, personnel, food, recurring transactions etc.
+...the capability of [[Night City/Characters/!pc/The Gang\|The Gang]] to maintain current expenditures, meaning project, personnel, food, recurring transactions etc.
 >[!danger]- If Supplies reaches 0...
->[[Player Characters/The Gang\|The Gang]] disbands due to lack of operational resources. Personnel is scattered to the wind and the HQ will be attacked by various factions until it is eventually scrapped.
+>[[Night City/Characters/!pc/The Gang\|The Gang]] disbands due to lack of operational resources. Personnel is scattered to the wind and the HQ will be attacked by various factions until it is eventually scrapped.
 
 >[!warning]- If Supplies goes over 5...
 >Local factions, especially [[Night City/Organizations/Gangs/Boostergangs of Night City\|boostergangs]], take notice of your fat stacks and start planning smarter and more dangerous attack against you.
 
 ### Culture (CULT)
-...the ability of [[Player Characters/The Gang\|The Gang]] to make a lasting impact on [[Night City/Locations/Night City\|Night City]] through their influence, unique ideas and the expression of said ideas via actions (from drug production to graffiti or music production)
+...the ability of [[Night City/Characters/!pc/The Gang\|The Gang]] to make a lasting impact on [[Night City/Locations/Night City\|Night City]] through their influence, unique ideas and the expression of said ideas via actions (from drug production to graffiti or music production)
 >[!danger]- If Culture reaches 0...
->[[Player Characters/The Gang\|The Gang]] loses sight of what's really important and it descends into a mad fight for power. Law of the jungle takes initiative and [[Player Characters/The Gang\|The Gang]] becomes a [[Night City/Organizations/Gangs/Boostergangs of Night City\|boostergang]] under one tribal leader with a clear agenda.
+>[[Night City/Characters/!pc/The Gang\|The Gang]] loses sight of what's really important and it descends into a mad fight for power. Law of the jungle takes initiative and [[Night City/Characters/!pc/The Gang\|The Gang]] becomes a [[Night City/Organizations/Gangs/Boostergangs of Night City\|boostergang]] under one tribal leader with a clear agenda.
 
 >[!warning]- If Culture goes over 5...
->Some of the more significant voices inside [[Player Characters/The Gang\|The Gang]] want to democratize the decision-making process. They want a seat at the table and they are willing to use both the carrot and the stick to get what they want.
+>Some of the more significant voices inside [[Night City/Characters/!pc/The Gang\|The Gang]] want to democratize the decision-making process. They want a seat at the table and they are willing to use both the carrot and the stick to get what they want.
 
 ### Technology (TECH)
-...the access of [[Player Characters/The Gang\|The Gang]] to cutting edge technology and their knowledge and how to utilize that tech for their own interests and innovations.
+...the access of [[Night City/Characters/!pc/The Gang\|The Gang]] to cutting edge technology and their knowledge and how to utilize that tech for their own interests and innovations.
 >[!danger]- If Technology reaches 0...
 >You have to drain your SUP in order to keep all of your gear up-to-date, not to mention outfitting your crews with ammo and guns. Otherwise, lose access to [[Rules/CPRED/Netrunning/Netrunning\|Netrunning]] and say hello to a lot of scavenged junk gear.
 
@@ -40,27 +40,27 @@ Are required in order to initiate new [[Rules/NCOverdrive/Basebuilding#Upgrades\
 >You catch the attention of some Corpo [[Rules/CPRED/Roles/Exec\|Exec]] (possibly more than just one) trying to reach the next floor. He'll start cooking up ways to take you down and recover the tech you have, one piece at a time (or perhaps all at once?)
 
 ### Security (SEC)
-...the ability of [[Player Characters/The Gang\|The Gang]] to hold their own against rival factions (on the outside) and brewing tensions (from within), both through actual defense protocols (watchtowers, guards, CCTV) and cultural impressions (respect, honor, customs)
+...the ability of [[Night City/Characters/!pc/The Gang\|The Gang]] to hold their own against rival factions (on the outside) and brewing tensions (from within), both through actual defense protocols (watchtowers, guards, CCTV) and cultural impressions (respect, honor, customs)
 >[!danger]- If Security reaches 0...
-> An attack is imminent (internally or externally) and the security forces of [[Player Characters/The Gang\|The Gang]] aren't able to stop it. Whatever the reason, [[Player Characters/The Gang\|The Gang]] might lose something precious in the scuffle if they don't play their cards right.
+> An attack is imminent (internally or externally) and the security forces of [[Night City/Characters/!pc/The Gang\|The Gang]] aren't able to stop it. Whatever the reason, [[Night City/Characters/!pc/The Gang\|The Gang]] might lose something precious in the scuffle if they don't play their cards right.
 
 >[!warning]- If Security goes over 5...
-> Local [[Rules/CPRED/Roles/Solo\|Solos]] and those working security for [[Player Characters/The Gang\|The Gang]] start acting like wise guys. They stage an officer's coup or something similar, holding [[Player Characters/The Gang\|The Gang]] at gunpoint unless their demands are met - or even if they are.
+> Local [[Rules/CPRED/Roles/Solo\|Solos]] and those working security for [[Night City/Characters/!pc/The Gang\|The Gang]] start acting like wise guys. They stage an officer's coup or something similar, holding [[Night City/Characters/!pc/The Gang\|The Gang]] at gunpoint unless their demands are met - or even if they are.
 
 
 ## Upgrades
 
-In order to buy new Upgrades, [[Player Characters/The Gang\|The Gang]] must spend enough DEV points from the relevant category (SUP/CULT/TECH/SEC). Mark that new Upgrade and write from which Development Category the DEV points were taken from.
+In order to buy new Upgrades, [[Night City/Characters/!pc/The Gang\|The Gang]] must spend enough DEV points from the relevant category (SUP/CULT/TECH/SEC). Mark that new Upgrade and write from which Development Category the DEV points were taken from.
 ### Facilities
 
 | Facility      | Description                                                                                                                                                          | Effect                                                                                                                              | Cost                           |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | Evidence Wall | Portion of a room dedicated to evidence - chips, laptops, hard-drives. Perhaps even a conspiracy board.                                                              | [[Rules/NCOverdrive/Trademarks/Edges\|Edge]] when investigating something you've previously encountered.                            | 1DEV (TECH)                    |
-| Garage        | Section of the building walled off to serve as a one-stop-shop for repairing, maintaining and protecting [[Player Characters/The Gang\|The Gang]]'s vehicles.                                    | Vehicles cannot be stolen. [[Rules/NCOverdrive/Trademarks/Edges\|Edge]] when doing maintenance on the vehicle.                      | 1-2 DEV per vehicle (SEC/TECH) |
+| Garage        | Section of the building walled off to serve as a one-stop-shop for repairing, maintaining and protecting [[Night City/Characters/!pc/The Gang\|The Gang]]'s vehicles.                                    | Vehicles cannot be stolen. [[Rules/NCOverdrive/Trademarks/Edges\|Edge]] when doing maintenance on the vehicle.                      | 1-2 DEV per vehicle (SEC/TECH) |
 | Lockup        | A room that makes it incredibly difficult for prisoners to escape.                                                                                                   | Can house up to 2 prisoners (must be fed).                                                                                          | 1DEV (SEC)                     |
 | Lounge        | A forward-facing area designed to stimulate the senses. Great for throwing parties.                                                                                  | [[Rules/NCOverdrive/Trademarks/Edges\|Edge]] when interacting with [[Rules/NCOverdrive/Basebuilding#Contacts\|Contacts]] who see the decor favorably. | 1DEV (CULT)                    |
 | Medbay        | A specialized room containing medical gear, from a surgery robot to enough [[Rules/CPRED/Drugs/Speedheal\|Speedheal]] to bring an elephant back to life.                                          | [[Rules/NCOverdrive/Trademarks/Edges\|Edge]] when doing medical-grade actions in the base.                                          | 1DEV (SUP/TECH)                |
-| Server Room   | The [[Rules/CPRED/Roles/Netrunner\|Netrunner]]'s paradise, including a DEEPNET ice bath. Wires, servers, monitors and computers. [[Player Characters/The Gang\|The Gang]] now has a NET presence and centralized security.    | Can attempt to hack into DataFortresses across [[Night City/Locations/Night City\|Night City]].                                                                      | 1DEV (TECH/SEC)                |
+| Server Room   | The [[Rules/CPRED/Roles/Netrunner\|Netrunner]]'s paradise, including a DEEPNET ice bath. Wires, servers, monitors and computers. [[Night City/Characters/!pc/The Gang\|The Gang]] now has a NET presence and centralized security.    | Can attempt to hack into DataFortresses across [[Night City/Locations/Night City\|Night City]].                                                                      | 1DEV (TECH/SEC)                |
 | Studio        | An entire setup for a [[Rules/CPRED/Roles/Rockerboy\|Rockerboy]] to get started - amps, microphones, a few guitars and synths, as well as a perfectly soundproof booth.                           | [[Rules/NCOverdrive/Trademarks/Edges\|Edge]] when producing artistic content of any kind.                                           | 1DEV (CULT/TECH)               |
 | Training Area | A gymnasium, a few obstacle courses, maybe a shooting range. Go a bit further and count some AR simulations in and you're set for a lifetime of pre-combat training. | Grants [[Rules/NCOverdrive/Conditions\|Condition]] Warmed Up (1-3) for a specific set of combat skills.                                               | 1DEV (SUP/SEC)                 |
 | Workshop      | A workbench, a saw, some 3D printers and some hologram injectors so you can see what you're doing in real-time. Some classic tools and some new tech.                | [[Rules/CPRED/Roles/Techie\|Techie]] can work towards 2 Projects in parallel.                                                                                 | 1DEV (TECH)                    |

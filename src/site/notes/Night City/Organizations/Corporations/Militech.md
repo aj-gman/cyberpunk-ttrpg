@@ -11,4 +11,4 @@ Militech provides equipment for numerous nations as well as both private and gov
 
 An alternate branch of the corporation provides private military forces ostensibly for the purposes of defense, peacekeeping and nation-building missions, however these forces have been used to aid terrorist organizations and military coups in the past.
 
-![Pasted image 20260924235053.png\|469](/img/user/Pasted%20image%2020260924235053.png)
+![LOC-MILITECHHQNC.png\|469](/img/user/Pictures/LOC-MILITECHHQNC.png)

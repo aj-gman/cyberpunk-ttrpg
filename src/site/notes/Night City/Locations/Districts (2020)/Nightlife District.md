@@ -13,8 +13,14 @@
 District in eastern part of [[Night City/Locations/Night City\|Night City]]. Contains **the following zones:**
 
 ## Upper Eastside
-![LOC-UPPEREASTSIDE2.png\|407](/img/user/Pictures/LOC-UPPEREASTSIDE2.png)
-![LOC-UPPEREASTSIDE1.png\|405](/img/user/Pictures/LOC-UPPEREASTSIDE1.png)
+```image-layout
+---
+layout: b
+---
+![[LOC-UPPEREASTSIDE2.png|407]]
+![[LOC-UPPEREASTSIDE1.png|405]]
+```
+
 
 ## New Harbor Area
 ![LOC-NEWHARBORAREA.png\|422](/img/user/Pictures/LOC-NEWHARBORAREA.png)
@@ -22,7 +28,13 @@ District in eastern part of [[Night City/Locations/Night City\|Night City]]. Con
 ## Studio City
 
 ## Charter Hill
-![LOC-CHARTERHILL1.png\|416](/img/user/Pictures/LOC-CHARTERHILL1.png)
-![LOC-CHARTERHILL.png\|408](/img/user/Pictures/LOC-CHARTERHILL.png)
+```image-layout
+---
+layout: c
+---
+![[LOC-CHARTERHILL1.png|416]]
+![[LOC-CHARTERHILL.png|408]]
+```
+
 
 

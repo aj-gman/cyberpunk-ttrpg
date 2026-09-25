@@ -12,13 +12,26 @@
 
 District in western [[Night City/Locations/Night City\|Night City]]. Contains **the following zones:**
 ## NCU Campus
-![LOC-UNIV3.png\|427](/img/user/Pictures/LOC-UNIV3.png)
-![LOC-UNIVDISTRICT.png\|424](/img/user/Pictures/LOC-UNIVDISTRICT.png)
-![LOC-UNIVDISTRICT2.png\|428](/img/user/Pictures/LOC-UNIVDISTRICT2.png)
+
+```image-layout
+---
+layout: d
+---
+![[LOC-UNIV3.png|427]]
+![[LOC-UNIVDISTRICT.png|424]]
+![[LOC-UNIVDISTRICT2.png|428]]
+```
+
 
 ## Lake Park
-![LOC-LAKEPARK.png\|445](/img/user/Pictures/LOC-LAKEPARK.png)
-![LOC-LAKEPARK2.png\|440](/img/user/Pictures/LOC-LAKEPARK2.png)
-![LOC-LAKEPARK3.png\|435](/img/user/Pictures/LOC-LAKEPARK3.png)
-![LOC-LAKEPARK4.png\|432](/img/user/Pictures/LOC-LAKEPARK4.png)
+```image-layout
+---
+layout: masonry-2
+---
+![[LOC-LAKEPARK.png|445]]
+![[LOC-LAKEPARK2.png|440]]
+![[LOC-LAKEPARK3.png|435]]
+![[LOC-LAKEPARK4.png|432]]
+```
+
 

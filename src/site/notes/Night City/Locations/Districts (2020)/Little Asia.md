@@ -14,15 +14,27 @@
 District in the southern part of [[Night City/Locations/Night City\|Night City]]. Contains **the following zones:**
 
 ## Japantown
-![LOC-JAPANTOWN1.png\|451](/img/user/Pictures/LOC-JAPANTOWN1.png)
-![LOC-JAPANTOWN2.png\|450](/img/user/Pictures/LOC-JAPANTOWN2.png)
-![LOC-JAPANTOWN3 1.png\|449](/img/user/Pictures/LOC-JAPANTOWN3%201.png)
-![Pictures/LOC-JAPANTOWN3.png\|448](/img/user/Pictures/LOC-JAPANTOWN3.png)
+```image-layout
+---
+layout: i
+---
+![[LOC-JAPANTOWN1.png|451]]
+![[LOC-JAPANTOWN2.png|450]]
+![[LOC-JAPANTOWN3 1.png|449]]
+![[Pictures/LOC-JAPANTOWN3.png|448]]
+```
+
 
 ## Little China
-![LOC-LITTLECHINA3.png\|462](/img/user/Pictures/LOC-LITTLECHINA3.png)
-![Pictures/LOC-LITTLECHINA2.png\|458](/img/user/Pictures/LOC-LITTLECHINA2.png)
-![LOC-LITTLECHINA2 1.png\|455](/img/user/Pictures/LOC-LITTLECHINA2%201.png)
-![LOC-CHINATOWN2.png\|452](/img/user/Pictures/LOC-CHINATOWN2.png)
+```image-layout
+---
+layout: masonry-2
+---
+![[LOC-LITTLECHINA3.png|462]]
+![[Pictures/LOC-LITTLECHINA2.png|458]]
+![[LOC-LITTLECHINA2 1.png|455]]
+![[LOC-CHINATOWN2.png|452]]
+```
+
 
 
