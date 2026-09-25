@@ -23,9 +23,23 @@ layout: b
 
 
 ## New Harbor Area
-![LOC-NEWHARBORAREA.png\|422](/img/user/Pictures/LOC-NEWHARBORAREA.png)
+```image-layout
+---
+layout: c
+---
+![[203883~1.jpg]]
+![[LOC-NEWHARBORAREA.png|422]]
+```
+
 
 ## Studio City
+```image-layout
+---
+layout: b
+---
+![[202388~1.jpg|474]]
+![[20C410~1.jpg|508]]
+```
 
 ## Charter Hill
 ```image-layout

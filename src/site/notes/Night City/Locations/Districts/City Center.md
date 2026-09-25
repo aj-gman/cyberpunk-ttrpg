@@ -21,7 +21,15 @@ layout: b
 
 
 ## Civic Center
-![LOC-CIVICENTER.png\|534](/img/user/Pictures/LOC-CIVICENTER.png)
+```image-layout
+---
+layout: c
+---
+![[202609~3.jpg]]
+![[200331~1.jpg]]
+```
+
+
 
 ## Corporate Center
 ```image-layout
@@ -34,7 +42,7 @@ layout: h
 ```
 
 ## Medical Center
-![LOC-MEDCENTER.png\|402](/img/user/Pictures/LOC-MEDCENTER.png)
+![LOC-MEDCENTER.png\|467](/img/user/Pictures/LOC-MEDCENTER.png)
 
 
 
