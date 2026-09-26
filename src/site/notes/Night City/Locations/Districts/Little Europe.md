@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/districts/little-europe/","tags":["district","location"],"dg-note-properties":{"tags":["district","location"]}}
+{"dg-publish":true,"permalink":"/night-city/locations/districts/little-europe/","tags":["#district","#location"],"dg-note-properties":{"tags":["#district","#location"]}}
 ---
 
 >[!info]- [Map of Night City](https://gman-cyberpunk.vercel.app/img/map-viewer/)
@@ -26,7 +26,7 @@ layout: e
 ## Northside
 ```image-layout
 ---
-layout: d
+layout: e
 ---
 ![[LOC-NORTHSIDE3.png|435]]
 ![[LOC-NORTHSIDE2.png|432]]
@@ -49,7 +49,7 @@ layout: e
 ## East Marina
 ```image-layout
 ---
-layout: d
+layout: e
 ---
 ![[LOC-EASTMARINA2.png|438]]
 ![[LOC-EASTMARINA1.png|434]]

@@ -3,6 +3,9 @@
 ---
 
 ### September 2026
+#### 26.09
+- Changed glitch-header.njk
+- Finished write-up of [[Night City/Beliefs/Insurrectionism\|Insurrectionism]]
 #### 25.09
 - Finished most of the [[Night City/Locations/Night City\|Night City]] page; still needs writing: Education, Transportation, Economy
 	- Added pictures to most of the #district and #dependency, giving a good visual identity to them.
