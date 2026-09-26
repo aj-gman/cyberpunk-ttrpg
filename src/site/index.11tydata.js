@@ -29,7 +29,7 @@ module.exports = {
   layout: "layouts/index.njk",
   eleventyExcludeFromCollections: true,
   isFallbackIndex: true,
-  permalink: hasHomePage ? false : "/",
+  permalink: false,
   eleventyComputed: {
     title: (data) => (data.meta && data.meta.siteName) || "Notes",
     // Notes get their per-page settings from notes/notes.11tydata.js; this
