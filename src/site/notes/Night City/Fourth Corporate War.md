@@ -6,7 +6,7 @@
 >[!tip]- Want to join?
 >Sign up via startplaying.games. Play every [Tuesday](https://startplaying.games/adventure/cmtt29g6501lykw04vcbwv149?ref=clerck8md0001mo08536kc22s).
 
-The [[Night City/Fourth Corporate War\|Fourth Corporate War]] is the current campaign ran by [[!SITE/G-man\|G-man]] following the end of the [[Eurotour/Eurotour\|Eurotour]].
+The [[Night City/Fourth Corporate War\|Fourth Corporate War]] is the current campaign ran by [[z-SITE/G-man\|G-man]] following the end of the [[Eurotour/Eurotour\|Eurotour]].
 
 Settle into the Free State of [[Night City/Locations/Night City\|Night City]], home to both the world's first [[Night City/Others/Combat Zone\|Combat Zone]] and [[Night City/Organizations/Corporations/Arasaka\|it's largest Corporate HQ]]. Start your [[Night City/Characters/!pc/The Gang\|own faction]] from the ground up and choose between one of four #ideology. 
 
