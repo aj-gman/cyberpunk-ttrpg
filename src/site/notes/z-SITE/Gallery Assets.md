@@ -9,7 +9,13 @@ tags:
 ---
 # Gallery Assets Registry
 
-%% This note registers gallery images so Digital Garden retains and uploads them, preventing pruning of code-block images. %%
+%% This note registers location gallery images so Digital Garden retains and uploads them, preventing pruning of code-block images. %%
+![[200331~1.jpg]]
+![[202388~1.jpg]]
+![[202609~3.jpg]]
+![[203883~1.jpg]]
+![[20C410~1.jpg]]
+![[FLAG-NC.webp]]
 ![[LOC-BANKBLOCK.png]]
 ![[LOC-BANKBLOCK2.png]]
 ![[LOC-CHARTERHILL.png]]
@@ -20,6 +26,7 @@ tags:
 ![[LOC-CORPCENTER2.png]]
 ![[LOC-EASTMARINA1.png]]
 ![[LOC-EASTMARINA2.png]]
+![[LOC-HEYWOOD1.png]]
 ![[LOC-JAPANTOWN1.png]]
 ![[LOC-JAPANTOWN2.png]]
 ![[LOC-JAPANTOWN3 1.png]]
@@ -35,6 +42,8 @@ tags:
 ![[LOC-LITTLEITALY.png]]
 ![[LOC-LITTLEITALY2.png]]
 ![[LOC-MARINA.png]]
+![[LOC-MEDCENTER.png]]
+![[LOC-NEWHARBORAREA.png]]
 ![[LOC-NORTHSIDE.png]]
 ![[LOC-NORTHSIDE2.png]]
 ![[LOC-NORTHSIDE3.png]]
@@ -59,4 +68,5 @@ tags:
 ![[LOC-WESTBROOK4.png]]
 ![[LOC-WESTHILLGARDENS.png]]
 ![[LOC-WESTSIDE2.png]]
+![[PIC-Pacifica.webp]]
 ![[PIC-SNC4.png]]
