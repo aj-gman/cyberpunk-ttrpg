@@ -84,6 +84,8 @@ body{background:var(--bg);font-family:'Chakra Petch',sans-serif;overflow-x:hidde
 .about-more{display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.5rem;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan-accent);text-decoration:none;transition:color 0.2s;}
 .about-more:hover{color:var(--yellow);}
 .site-footer{text-align:center;padding:2rem;font-size:0.75rem;color:rgba(255,255,255,0.2);}
+.site-footer a{color:inherit;text-decoration:underline;text-underline-offset:2px;transition:color 0.2s;}
+.site-footer a:hover{color:var(--cyan-accent);}
 @media(max-width:600px){.hero{padding:3rem 1.5rem;}.section{padding:2.5rem 1.2rem;}.campaign-title{font-size:1.05rem;}.campaign-arrow{display:none;}.about-section{padding:2.5rem 1.2rem 3rem;}}
 @media(prefers-reduced-motion:reduce){.glitch-title,.glitch-title::before,.glitch-title::after,.glitch-title .line2::before,.glitch-title .line2::after{animation:none;}.scroll-chevron{animation:none;}.reveal{transition:none;opacity:1;transform:none;}}
 </style>
@@ -111,7 +113,7 @@ body{background:var(--bg);font-family:'Chakra Petch',sans-serif;overflow-x:hidde
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
         Active Campaign
       </p>
-      <p class="campaign-title">Fourth Corporate War — <em>Night City</em></p>
+      <p class="campaign-title"><span style="color:var(--yellow)">Fourth Corporate War</span> — <span style="color:var(--text-primary)">Night City</span></p>
       <span class="campaign-arrow">→</span>
     </a>
   </div>
@@ -120,21 +122,6 @@ body{background:var(--bg);font-family:'Chakra Petch',sans-serif;overflow-x:hidde
 <div class="section" style="padding-top:0">
   <p class="section-label reveal" style="transition-delay:0.1s">Navigate</p>
   <div class="reveal" style="transition-delay:0.15s">
-    <div class="nav-group">
-      <p class="nav-group-label">Character Sheets</p>
-      <div class="nav-group-buttons">
-        <a class="nav-bar" href="/img/sheet.html" style="--bar-color:var(--red);--bar-bg:rgba(242,72,72,0.06);--bar-hover-bg:rgba(242,72,72,0.14);--bar-hover-color:var(--red);">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 12h4"/><path d="M10 16h4"/></svg>
-          <span class="nav-bar-label">CyberpunkRED</span>
-          <span class="nav-bar-arrow">→</span>
-        </a>
-        <a class="nav-bar" href="/img/NCO-sheet.html" style="--bar-color:var(--pink-accent);--bar-bg:rgba(242,48,178,0.06);--bar-hover-bg:rgba(242,48,178,0.14);--bar-hover-color:var(--pink-accent);">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 12h4"/><path d="M10 16h4"/></svg>
-          <span class="nav-bar-label">NCOverdrive</span>
-          <span class="nav-bar-arrow">→</span>
-        </a>
-      </div>
-    </div>
     <div class="nav-group">
       <p class="nav-group-label">Rules Hub</p>
       <div class="nav-group-buttons">
@@ -162,6 +149,18 @@ body{background:var(--bg);font-family:'Chakra Petch',sans-serif;overflow-x:hidde
           <a class="nav-bar" href="/night-city/fourth-corporate-war/" style="--bar-color:var(--purple);--bar-bg:rgba(161,48,242,0.06);--bar-hover-bg:rgba(161,48,242,0.14);--bar-hover-color:var(--purple);">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12"/><path d="M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
             <span class="nav-bar-label">Fourth Corp. War</span>
+            <span class="nav-bar-arrow">→</span>
+          </a>
+        </div>
+        <div class="nav-group-row">
+          <a class="nav-bar" href="https://gman-cyberpunk.vercel.app/img/map-viewer/" style="--bar-color:var(--green);--bar-bg:rgba(48,242,145,0.06);--bar-hover-bg:rgba(48,242,145,0.14);--bar-hover-color:var(--green);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+            <span class="nav-bar-label">Explore Night City</span>
+            <span class="nav-bar-arrow">→</span>
+          </a>
+          <a class="nav-bar" href="/night-city/locations/night-city/" style="--bar-color:var(--yellow);--bar-bg:rgba(254,232,1,0.06);--bar-hover-bg:rgba(254,232,1,0.14);--bar-hover-color:var(--yellow);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="6" x2="9" y2="6.01"/><line x1="15" y1="6" x2="15" y2="6.01"/><line x1="9" y1="10" x2="9" y2="10.01"/><line x1="15" y1="10" x2="15" y2="10.01"/><line x1="9" y1="14" x2="9" y2="14.01"/><line x1="15" y1="14" x2="15" y2="14.01"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+            <span class="nav-bar-label">Learn about Night City</span>
             <span class="nav-bar-arrow">→</span>
           </a>
         </div>
@@ -194,12 +193,13 @@ body{background:var(--bg);font-family:'Chakra Petch',sans-serif;overflow-x:hidde
 
 <div class="about-section reveal">
   <p class="section-label" style="margin-bottom:1rem">About This Garden</p>
-  <p>Welcome to G-man's Cyberpunk Digital Garden — a living wiki built with <a href="https://obsidian.md/">Obsidian</a> and published via <a href="https://www.11ty.dev/">Eleventy</a>. From early 2026, this archive grew out of TTRPG sessions spanning the <a href="/eurotour/eurotour/">Eurotour</a> campaign (Cyberpunk RED) and the ongoing <a href="/night-city/fourth-corporate-war/">Fourth Corporate War</a> in Night City (NCOverdrive).</p>
-  <p>Rules, lore, character sheets, and session chronicles — all sourced from the table, edited, and published here for players and anyone who wants to peek behind the GM screen.</p>
-  <a class="about-more" href="/home/">Read more <span>→</span></a>
+  <p>G-man's Cyberpunk encompasses all relevant content that has been made public for players and visitors. It spawned out of the Obsidian Vault used to prepare for sessions and keep track of the overarching universe.</p>
+  <p>We already have the <a href="/eurotour/eurotour/">Eurotour Campaign</a> in high detail and we're slowly building the content for the <a href="/night-city/fourth-corporate-war/">Fourth Corp War</a> in <a href="/night-city/locations/night-city/">Night City</a>.</p>
+  <p>In addition to the universe, we also showcase TTRPG rules: <a href="/cpred-hub/">Cyberpunk RED</a>, <a href="/nc-overdrive-hub/">Neon City Overdrive</a> + Homebrew (for both/either)</p>
+  <p>This site wouldn't have been possible without <a href="https://obsidian.md/" target="_blank" rel="noopener">Obsidian</a> and the <a href="https://github.com/oleeskild/obsidian-digital-garden" target="_blank" rel="noopener">Digital Garden plugin</a>. <a href="https://vaults.obsidian-community.com/" target="_blank" rel="noopener">Click here to explore other Digital Gardens as well.</a></p>
 </div>
 
-<div class="site-footer">G-man's Cyberpunk &middot; Built with Obsidian, Digital Garden Plugin, Eleventy and Vercel &middot; AI was used for coding.</div>
+<div class="site-footer">G-man's Cyberpunk &middot; Built with Obsidian, Digital Garden Plugin, Eleventy and Vercel &middot; <a href="/ai-policy/">AI was used for coding</a>.</div>
 
 <script>
 (function(){
