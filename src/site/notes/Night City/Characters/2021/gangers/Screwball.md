@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/characters/2021/gangers/screwball/","tags":["#npc","#4cw"],"dg-note-properties":{"tags":["#npc","#4cw"]}}
+{"dg-publish":true,"permalink":"/night-city/characters/2021/gangers/screwball/","dg-note-properties":{}}
 ---
 
 #npc #4cw [[Night City/Organizations/Gangs/Raffen Shiv\|Raffen Shiv]] [[Rules/CPRED/Roles/Nomad\|Nomad]]

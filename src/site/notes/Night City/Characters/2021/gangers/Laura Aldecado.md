@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/characters/2021/gangers/laura-aldecado/","tags":["#npc"],"dg-note-properties":{"tags":["#npc"]}}
+{"dg-publish":true,"permalink":"/night-city/characters/2021/gangers/laura-aldecado/","dg-note-properties":{}}
 ---
 
 #npc [[Night City/Organizations/Gangs/Aldecaldos\|Aldecaldos]] [[Rules/CPRED/Roles/Medtechie\|Medtechie]]

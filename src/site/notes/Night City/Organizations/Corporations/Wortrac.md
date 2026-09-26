@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/corporations/wortrac/","tags":["#organization","#eurotour"],"dg-note-properties":{"tags":["#organization","#eurotour"]}}
+{"dg-publish":true,"permalink":"/night-city/organizations/corporations/wortrac/","dg-note-properties":{}}
 ---
 
 #organization #eurotour 

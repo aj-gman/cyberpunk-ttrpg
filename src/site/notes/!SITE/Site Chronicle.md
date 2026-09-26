@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/site/site-chronicle/","tags":["#district","#dependency","#stratum","#boostergang","#npc","#ideology","#news","#role"],"dg-note-properties":{"tags":["#district","#dependency","#stratum","#boostergang","#npc","#ideology","#news","#role"]}}
+{"dg-publish":true,"permalink":"/site/site-chronicle/","dg-note-properties":{}}
 ---
 
 ### September 2026

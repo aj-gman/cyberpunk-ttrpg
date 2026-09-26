@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/dependencies/heywood/","tags":["#dependency","#location"],"dg-note-properties":{"tags":["#dependency","#location"]}}
+{"dg-publish":true,"permalink":"/night-city/locations/dependencies/heywood/","tags":["dependency","location"],"dg-note-properties":{"tags":["dependency","location"]}}
 ---
 
 >[!info]- [Map of Night City](https://gman-cyberpunk.vercel.app/img/map-viewer/)

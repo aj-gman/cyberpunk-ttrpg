@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/strata/mallplexers/","tags":["#stratum"],"dg-note-properties":{"tags":["#stratum"]}}
+{"dg-publish":true,"permalink":"/night-city/strata/mallplexers/","dg-note-properties":{}}
 ---
 
 #stratum 
