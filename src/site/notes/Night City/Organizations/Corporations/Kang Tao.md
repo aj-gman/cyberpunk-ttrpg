@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/corporations/kang-tao/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/organizations/corporations/kang-tao/","tags":["#corporation"],"dg-note-properties":{"tags":["#corporation"]}}
 ---
 
 #corporation 

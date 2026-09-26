@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/beliefs/fashion/neokitsch/","tags":["fashion"],"dg-note-properties":{"tags":["fashion"]}}
+{"dg-publish":true,"permalink":"/night-city/beliefs/fashion/neokitsch/","tags":["#fashion"],"dg-note-properties":{"tags":["#fashion"]}}
 ---
 
 Closely associated with [[Night City/Beliefs/Idealism\|Idealism]].

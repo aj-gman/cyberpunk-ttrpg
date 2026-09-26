@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/corporations/kendachi/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/organizations/corporations/kendachi/","tags":["#corporation"],"dg-note-properties":{"tags":["#corporation"]}}
 ---
 
 #corporation 

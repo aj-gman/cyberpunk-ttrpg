@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/corporations/cino/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/organizations/corporations/cino/","tags":["#organization","#eurotour"],"dg-note-properties":{"tags":["#organization","#eurotour"]}}
 ---
 
 #organization #eurotour 

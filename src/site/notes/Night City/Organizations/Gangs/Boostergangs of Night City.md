@@ -27,11 +27,11 @@ See them in [the Map](https://gman-cyberpunk.vercel.app/img/map-viewer/), under 
 - [[Night City/Organizations/Gangs/The Pack\|The Pack]] in Lake Park
 - [[Night City/Organizations/Gangs/Voodoo Boys\|Voodoo Boys]] in University District
 - [[Night City/Organizations/Gangs/Blood Razors\|Blood Razors]] in University District
-- [[Night City/Organizations/Gangs/Bozos\|Bozos]] in University Districts
+- [[Night City/Organizations/Gangs/Bozos\|Bozos]] in University District
 ### [[Night City/Locations/Districts/Westside\|Westside]]
-- [[Night City/Organizations/Gangs/Voodoo Boys\|Voodoo Boys]]
-- [[Night City/Organizations/Gangs/Bozos\|Bozos]]
-- [[Night City/Organizations/Gangs/The Enhanced\|The Enhanced]]
+- [[Night City/Organizations/Gangs/Voodoo Boys\|Voodoo Boys]] in West Hill Gardens
+- [[Night City/Organizations/Gangs/Bozos\|Bozos]] in Old Downtown
+- [[Night City/Organizations/Gangs/The Enhanced\|The Enhanced]] in Old Downtown
 ### [[Night City/Locations/Districts/South Night City\|South Night City]]
 - [[Night City/Organizations/Gangs/Blood Razors\|Blood Razors]]
 - [[Night City/Organizations/Gangs/Maelstrom\|Maelstrom]]

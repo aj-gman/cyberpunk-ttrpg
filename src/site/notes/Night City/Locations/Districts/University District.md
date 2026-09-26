@@ -30,7 +30,7 @@ layout: masonry-2
 ---
 ![[LOC-LAKEPARK.png|445]]
 ![[LOC-LAKEPARK2.png|440]]
-![[LOC-LAKEPARK3.png|435]]
+![[LOC-LAKEPARK5.png]]
 ![[LOC-LAKEPARK4.png|432]]
 ```
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/site/site-chronicle/","tags":["#district","#dependency","#stratum","#boostergang","#npc","#ideology","#news","#role"],"dg-note-properties":{"tags":["#district","#dependency","#stratum","#boostergang","#npc","#ideology","#news","#role"]}}
 ---
 
 ### September 2026
@@ -8,10 +8,10 @@
 	- Added pictures to most of the #district and #dependency, giving a good visual identity to them.
 - Added secondary pages that explain extra info from the [[Rules/Cyberpunk Universe\|Cyberpunk Universe]]: [[Night City/Others/Vehicles/AV\|AV]], [[Night City/Others/Vehicles/Drones\|Drones]], [[Night City/Others/Vehicles/NCART\|NCART]], [[Night City/Others/Combat Zone\|Combat Zone]]
 - Added basic information to all #stratum, cross-copied via [[Night City/Locations/Night City#Demographics\|Night City#Demographics]]
-- Updated [[z-SITE/AI Policy\|AI Policy]]
+- Updated [[!SITE/AI Policy\|AI Policy]]
 - Added pages for [[Night City/Organizations/NCPD\|NCPD]] and [[Night City/Organizations/Gangs/Maelstrom\|Maelstrom]], marking the first detailed view on a #boostergang;
 #### 22.09
-- Updated [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.2.1.0
+- Updated [[!SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.2.1.0
 	- New Inventory System;
 	- [[Rules/NCOverdrive/Cyberware\|Cyberware]] Quality introduced;
 	- Fixed minor issues
@@ -60,14 +60,14 @@
 - Published information regarding [[Eurotour/Locations/St. Petersburg\|St. Petersburg]].
 - Updated and corrected minor details regarding [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]] rules.
 #### 20.08
-- Brought [[z-SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.1.0.0. 
+- Brought [[!SITE/NCOverdrive Sheet\|NCOverdrive Sheet]] to 1.1.0.0. 
 	**Key new features:**
 	- Fixed a bug with Eurodollars & Flaws not saving in .json format
 	- Added GitHub-connected save via Character ID
 	- Adjusted Gear & Cyberware (Page 2) to have adjustable widths via row formatting (1, 2 or 3 rows);
 	- Added drag & drop feature to Gear & Cyberware for more efficient listing.
 #### 25.08
-- [[z-SITE/NCOverdrive Sheet\|Updated NCOverdrive Sheet to 1.1.1.0]]
+- [[!SITE/NCOverdrive Sheet\|Updated NCOverdrive Sheet to 1.1.1.0]]
 	- Added load/save modal that asks for local or cloud sync
 	- Changed page naming to clearly state what it is
 	- Removed export-to-pdf functionality
@@ -81,7 +81,7 @@
 		- [ ] +++ Core Ideologies: **Corpo Realism** (its not the best, but it's the best we got), **Corpo Idealism** (you CAN make it big if you try hard enough), **Anti-Corpo** (burn it all to the ground), **Parallelism** (inspired by [Parallel Polis](https://en.wikipedia.org/wiki/Parallel_Polis), with communities evolving without the need of corporations to supply them with goods)
 ### June 2026
 #### *03.06*
-- Updated [[z-SITE/CPRED Sheet\|CPRED Sheet]] with features (Still work in progress):
+- Updated [[!SITE/CPRED Sheet\|CPRED Sheet]] with features (Still work in progress):
 	- ~~Added Cloud Sync feature (save in-browser to the site's Repo and load from there)~~
 		Currently broken. No idea why.
 	- Added Nerve Degeneration, Rep & IP trackers.
@@ -104,7 +104,7 @@
 - Revamped the [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] page to link into [[Rules/CPRED/Cyberware/Cyberpsychosis Symptoms\|Cyberpsychosis Symptoms]], [[Rules/CPRED/Cyberware/Cyberware Classes\|Cyberware Classes]] and [[Rules/CPRED/Cyberware/Humanity\|Humanity]] so you don't have to navigate
 - Updated the Site's CSS to match in colors and vibe to the Obsidian Vault
 #### *18.05*
-- Added a [[z-SITE/CPRED Sheet\|CPRED Sheet]] (Work in Progress)
+- Added a [[!SITE/CPRED Sheet\|CPRED Sheet]] (Work in Progress)
 	Features:
 	- [[Rules/CPRED/Cyberware/Cyberware#Cyberpsychosis\|Cyberpsychosis ]]tracker, [[Rules/CPRED/Cyberware/Humanity\|Humanity]] calculator & full [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] rule implementation
 	- Multiple pages for easy navigation
@@ -117,21 +117,21 @@
 - Added a common price for all [[Rules/CPRED/Drugs/Drugs\|Rules/CPRED/Drugs/Drugs]]
 - Cleaned up webpages
 - Added two news articles, [[Eurotour/News/Who let Entropy have a CHAINSAW!\|Who let Entropy have a CHAINSAW!]] & [[Eurotour/News/Executive Executions on Rhin-Ruhr Rooftops\|Executive Executions on Rhin-Ruhr Rooftops]]
-- Brought the [[z-SITE/CPRED Sheet\|CPRED Sheet]] to a stable 1.0.1.1 version
-- Added an [[z-SITE/AI Policy\|AI disclaimer]] in the footer of all webpages (except, for some reason, the [[QuickNav\|QuickNav]]?)
+- Brought the [[!SITE/CPRED Sheet\|CPRED Sheet]] to a stable 1.0.1.1 version
+- Added an [[!SITE/AI Policy\|AI disclaimer]] in the footer of all webpages (except, for some reason, the [[QuickNav\|QuickNav]]?)
 - Added descriptions for all of the main [[Eurotour/Eurotour\|Eurotour]] locations: [[Eurotour/Locations/Liverpool\|Liverpool]], [[Eurotour/Locations/Brussels\|Brussels]], [[Eurotour/Locations/Paris\|Paris]], [[Eurotour/Locations/Venice\|Venice]], [[Eurotour/Locations/Rhine-Ruhr Conurb\|Rhine-Ruhr Conurb]], [[Eurotour/Locations/Stockholm\|Stockholm]], [[Prague\|Prague]]
 - Added initial descriptions for the #role s, as well as their Role Abilities
 - Added public webpages for [[Eurotour/The Crew\|The Crew]]
 - Broke down [[Rules/CPRED/Combat/Combat\|Rules/CPRED/Combat/Combat]] into [[Rules/CPRED/Combat/Combat\|Rules/CPRED/Combat/Combat]], [[Rules/CPRED/Combat/Critical Injuries\|Critical Injuries]] & [[Rules/CPRED/Combat/Firearms of Cyberpunk\|Firearms of Cyberpunk]]
 #### *24.05*
 - Added [[Eurotour/Locations/Stockholm\|Stockholm]] and information on [[Eurotour/Adventures/5 Touring the Margin\|5 Touring the Margin]] (restricted access)
-- [[z-SITE/CPRED Sheet\|CPRED Sheet]] has been brought to a stable patch, v1.0.1.1.
+- [[!SITE/CPRED Sheet\|CPRED Sheet]] has been brought to a stable patch, v1.0.1.1.
 - Cleared up some more on the [[Rules/CPRED/Cyberware/Cyberware\|Rules/CPRED/Cyberware/Cyberware]] webpage
 
 
 
 ## TO DO
-- [ ] **[[z-SITE/CPRED Sheet\|CPRED Sheet]] needs:**
+- [ ] **[[!SITE/CPRED Sheet\|CPRED Sheet]] needs:**
 	- [ ] Page for Notes, Backstory, Lore etc.
 	- [ ] Links to the wiki when inserting: role abilities, skills, stats
 - [ ] Update [[Rules/CPRED/Drugs/Omega Blockers\|Omega Blockers]], [[Rules/CPRED/Drugs/Weed\|Weed]], [[Rules/CPRED/Drugs/Regen 21\|Regen 21]] & [[Rules/CPRED/Drugs/Speedheal\|Speedheal]] with rules for [[Rules/NCOverdrive/Neon City Overdrive (HUB)\|Neon City Overdrive (HUB)]]

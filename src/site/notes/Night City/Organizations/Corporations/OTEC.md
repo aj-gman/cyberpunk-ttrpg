@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/organizations/corporations/otec/","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/night-city/organizations/corporations/otec/","tags":["#organization","#eurotour"],"dg-note-properties":{"tags":["#organization","#eurotour"]}}
 ---
 
 #organization #eurotour 
