@@ -1,8 +1,24 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#ideology","#fashion","#district","#dependency","#stratum","#boostergang","#npc","#news","#role"],"dg-note-properties":{"tags":["#ideology","#fashion","#district","#dependency","#stratum","#boostergang","#npc","#news","#role"]}}
 ---
 
+### To-Do
+- [ ] Finish write-up for #ideology and their respective fashions:
+	- [x] [[Night City/Beliefs/Insurrectionism\|Insurrectionism]]
+	- [ ] [[Night City/Beliefs/Parallelism\|Parallelism]]
+	- [ ] [[Night City/Beliefs/Realism\|Realism]]
+	- [ ] #fashion
+- [ ] Briefly write the most important details of [[Night City/Locations/Night City\|Night City]]
+	- [ ] Education
+	- [x] Law Enforcement & Crime
+	- [ ] Economy
+	- [ ] Transportation
+
+
 ### September 2026
+#### 28.09
+- Completed image-gathering process for all dependencies and districts. Happy hunting!
+- Implemented [Working with the garage door up mindset](https://notes.andymatuschak.org/zCMhncA1iSE74MKKYQS5PBZ)
 #### 26.09
 - Changed glitch-header.njk
 - Finished write-up of [[Night City/Beliefs/Insurrectionism\|Insurrectionism]]
