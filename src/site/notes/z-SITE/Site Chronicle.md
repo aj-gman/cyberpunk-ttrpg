@@ -1,11 +1,13 @@
 ---
-{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","tags":["#district","#dependency","#stratum","#boostergang","#npc","#ideology","#news","#role"],"dg-note-properties":{"tags":["#district","#dependency","#stratum","#boostergang","#npc","#ideology","#news","#role"]}}
+{"dg-publish":true,"dg-path":"Site Chronicle.md","permalink":"/site-chronicle/","dg-note-properties":{}}
 ---
 
 ### September 2026
 #### 26.09
 - Changed glitch-header.njk
 - Finished write-up of [[Night City/Beliefs/Insurrectionism\|Insurrectionism]]
+- Opened NPC pages for all of the [[Night City/Locations/Night City#Government & Politics\|District Managers]]
+- Created a few new pages for corporations
 #### 25.09
 - Finished most of the [[Night City/Locations/Night City\|Night City]] page; still needs writing: Education, Transportation, Economy
 	- Added pictures to most of the #district and #dependency, giving a good visual identity to them.

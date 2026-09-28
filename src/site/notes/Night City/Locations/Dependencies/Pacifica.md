@@ -1,6 +1,14 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/dependencies/pacifica/","tags":["dependency","location"],"dg-note-properties":{"tags":["dependency","location"]}}
+{"dg-publish":true,"permalink":"/night-city/locations/dependencies/pacifica/","tags":["#dependency","#location"],"dg-note-properties":{"tags":["#dependency","#location"]}}
 ---
 
 
-![PIC-Pacifica.webp](/img/user/Pictures/PIC-Pacifica.webp)
+
+```image-layout
+---
+layout: masonry-2
+---
+![[PIC-Pacifica.webp]]
+![[loc-pacifica2.png|385]]
+![[loc-pacifica3.png]]
+```

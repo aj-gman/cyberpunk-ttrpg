@@ -38,8 +38,9 @@ layout: e
 ## Upper Marina
 ```image-layout
 ---
-layout: e
+layout: masonry-2
 ---
+![[LOC-uppermarina5.png]]
 ![[LOC-UPPERMARINA3.png|441]]
 ![[LOC-UPPERMARINA2.png|434]]
 ![[LOC-UPPERMARINA.png|432]]

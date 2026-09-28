@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/strata/corpzoners/","tags":["#stratum"],"dg-note-properties":{"tags":["#stratum"]}}
+{"dg-publish":true,"permalink":"/night-city/strata/corpzoners/","dg-note-properties":{}}
 ---
 
 #stratum

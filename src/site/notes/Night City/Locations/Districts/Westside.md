@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/districts/westside/","tags":["district","location"],"dg-note-properties":{"tags":["district","location"]}}
+{"dg-publish":true,"permalink":"/night-city/locations/districts/westside/","tags":["#district","#location"],"dg-note-properties":{"tags":["#district","#location"]}}
 ---
 
 >[!info]- [Map of Night City](https://gman-cyberpunk.vercel.app/img/map-viewer/)
@@ -11,10 +11,12 @@
 
 District in the western part of [[Night City/Locations/Night City\|Night City]]. Contains **the following zones:**
 ## West Hill Gardens
+
 ```image-layout
 ---
-layout: b
+layout: d
 ---
+![[loc-westside3.png]]
 ![[LOC-WESTSIDE2.png|414]]
 ![[LOC-WESTHILLGARDENS.png|412]]
 ```

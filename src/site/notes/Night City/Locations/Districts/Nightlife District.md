@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/districts/nightlife-district/","tags":["district","location"],"dg-note-properties":{"tags":["district","location"]}}
+{"dg-publish":true,"permalink":"/night-city/locations/districts/nightlife-district/","tags":["#district","#location"],"dg-note-properties":{"tags":["#district","#location"]}}
 ---
 
 >[!info]- [Map of Night City](https://gman-cyberpunk.vercel.app/img/map-viewer/)
@@ -15,30 +15,36 @@ District in eastern part of [[Night City/Locations/Night City\|Night City]]. Con
 ## Upper Eastside
 ```image-layout
 ---
-layout: b
+layout: d
 ---
+![[LOC-UPPEREASTSIDE4.png]]
+
 ![[LOC-UPPEREASTSIDE2.png|407]]
 ![[LOC-UPPEREASTSIDE1.png|405]]
 ```
 
 
 ## New Harbor Area
+
 ```image-layout
 ---
-layout: c
+layout: h
 ---
+![[loc-newharborarea3.png]]
 ![[203883~1.jpg]]
 ![[LOC-NEWHARBORAREA.png|422]]
 ```
 
 
 ## Studio City
+
 ```image-layout
 ---
-layout: b
+layout: d
 ---
 ![[202388~1.jpg|474]]
 ![[20C410~1.jpg|508]]
+![[loc-studiocity3.png]]
 ```
 
 ## Charter Hill

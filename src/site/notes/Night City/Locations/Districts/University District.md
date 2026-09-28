@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/locations/districts/university-district/","tags":["district","location"],"dg-note-properties":{"tags":["district","location"]}}
+{"dg-publish":true,"permalink":"/night-city/locations/districts/university-district/","tags":["#district","#location"],"dg-note-properties":{"tags":["#district","#location"]}}
 ---
 
 >[!info]- [Map of Night City](https://gman-cyberpunk.vercel.app/img/map-viewer/)
@@ -31,7 +31,7 @@ layout: masonry-2
 ![[LOC-LAKEPARK.png|445]]
 ![[LOC-LAKEPARK2.png|440]]
 ![[LOC-LAKEPARK5.png]]
-![[LOC-LAKEPARK4.png|432]]
+![[loc-lakepark6.png]]
 ```
 
 

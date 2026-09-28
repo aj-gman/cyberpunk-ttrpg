@@ -1,0 +1,7 @@
+---
+{"dg-publish":true,"permalink":"/night-city/characters/2021/corpos/romano-skiv/","dg-note-properties":{}}
+---
+
+#npc #4cw [[Night City/Organizations/Gangs/The Mob\|The Mob]] [[Rules/CPRED/Roles/Fixer\|Fixer]]
+Member of the Skiv family. Nephew of [[Bruce Skiv\|The Don]]
+Operates in [[Halsey, Ferris & Skiv\|Halsey, Ferris & Skiv]].
