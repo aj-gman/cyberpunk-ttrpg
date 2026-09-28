@@ -1,3 +1,18 @@
 {
-  "plugins": {}
+  "version": 1,
+  "plugins": {
+    "image-lightbox": {
+      "repo": "oleeskild/garden-plugin-image-lightbox",
+      "installedVersion": "1.1.0",
+      "installedRef": "v1.1.0",
+      "installedAt": "2026-09-28T18:50:50.442Z",
+      "enabled": true,
+      "files": [
+        "src/plugins/image-lightbox/README.md",
+        "src/plugins/image-lightbox/garden-plugin.json",
+        "src/plugins/image-lightbox/styles/lightbox.scss",
+        "src/plugins/image-lightbox/templates/lightbox.njk"
+      ]
+    }
+  }
 }
