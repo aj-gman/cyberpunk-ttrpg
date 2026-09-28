@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/night-city/characters/2021/corpos/romano-skiv/","tags":["#npc","#4cw"],"dg-note-properties":{"tags":["#npc","#4cw"]}}
+{"dg-publish":true,"permalink":"/night-city/characters/2021/corpos/romano-skiv/","dg-note-properties":{}}
 ---
 
 #npc #4cw [[Night City/Organizations/Gangs/The Mob\|The Mob]] [[Rules/CPRED/Roles/Fixer\|Fixer]]
