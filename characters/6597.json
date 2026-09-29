@@ -4,8 +4,8 @@
   "nickname": "Hex",
   "appearance": "Tall muscular, orange pink mohawk",
   "personality": "",
-  "money": 6060,
-  "eddies": 6060,
+  "money": 5550,
+  "eddies": 5550,
   "trademarks": [
     {
       "name": "Prodigal Son",
@@ -70,6 +70,41 @@
       "tags": "",
       "notes": "",
       "size": 1
+    },
+    {
+      "type": "basic",
+      "title": "Frag",
+      "tags": "",
+      "notes": "1=2",
+      "size": 1
+    },
+    {
+      "type": "basic",
+      "title": "Flash",
+      "tags": "",
+      "notes": "1=2",
+      "size": 1
+    },
+    {
+      "type": "basic",
+      "title": "Smoke",
+      "tags": "",
+      "notes": "1=2",
+      "size": 1
+    },
+    {
+      "type": "special",
+      "title": "Monowakizashi",
+      "tags": "monowire",
+      "notes": "",
+      "size": 1
+    },
+    {
+      "type": "special",
+      "title": "Militech comm gear",
+      "tags": "",
+      "notes": "",
+      "size": 1
     }
   ],
   "inventory": {
@@ -88,30 +123,9 @@
       },
       {
         "type": "basic",
-        "title": "Flash Grenade",
-        "tags": "",
-        "notes": "2x = 1 Size",
-        "size": 1
-      },
-      {
-        "type": "basic",
         "title": "Agent",
         "tags": "",
         "notes": "",
-        "size": 1
-      },
-      {
-        "type": "basic",
-        "title": "Frag Grenade",
-        "tags": "",
-        "notes": "2x =1",
-        "size": 1
-      },
-      {
-        "type": "basic",
-        "title": "Smoke Grenade",
-        "tags": "",
-        "notes": "2x = 1 Size",
         "size": 1
       }
     ]
@@ -169,12 +183,12 @@
   "hitsCount": 4,
   "hits": [
     true,
-    false,
-    false,
+    true,
+    true,
     false
   ],
   "trackers": {
-    "cyberpsy": 7,
+    "cyberpsy": 10,
     "humanity": 6
   },
   "conditions": {
@@ -184,6 +198,10 @@
     {
       "marked": false,
       "text": "withdrawl"
+    },
+    {
+      "marked": false,
+      "text": "muscle spasms "
     }
   ],
   "flaws": [
@@ -212,5 +230,5 @@
       false
     ]
   },
-  "experiencePoints": 9
+  "experiencePoints": 11
 }
