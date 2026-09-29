@@ -58,7 +58,7 @@
       "type": "special",
       "title": "Zetatech Asclepius AV-4",
       "tags": "Fast, Armored, Concealed Compartment, Tow Cable",
-      "notes": "Flying vehicle, Big, Cargo space, Room for 6, \nThumbprint Lock, whoever puts in the wrong print gets hit by a stun baton-like electrocution.\nCan tow up to 10 tons;\nHas 2 weapons: Rhinemetall EMG-86 Railgun: Armor piercing;       \nMilitech Mk.27 LMG: Burst fire, Collateral damage, Intimidating, Messy",
+      "notes": "Flying vehicle, Big, Cargo space, Room for 6, \nThumbprint Lock, whoever puts in the wrong print gets hit by a stun baton-like electrocution.\nCan tow up to 10 tons;\nHas 2 weapons: Rhinemetall EMG-86 Railgun: Armor piercing;       \nMilitech Mk.27 LMG: Burst fire, Collateral damage, Intimidating, Messy\n9/10 HP",
       "size": 1
     },
     {
@@ -191,14 +191,13 @@
       "value": 2
     }
   ],
-  "hitsCount": 3,
+  "hitsCount": 2,
   "hits": [
-    false,
     false,
     false
   ],
   "trackers": {
-    "cyberpsy": 0,
+    "cyberpsy": 1,
     "humanity": 7
   },
   "conditions": {
@@ -232,7 +231,7 @@
   ],
   "flaw1": "Family ties (Camorra)",
   "flaw2": "Infamous",
-  "stuntPoints": 3,
+  "stuntPoints": 1,
   "drive": {
     "text": "Values vengeance against the corps. He wants to start a revolution.",
     "pips": [
@@ -248,5 +247,5 @@
       false
     ]
   },
-  "experiencePoints": 3
+  "experiencePoints": 4
 }
