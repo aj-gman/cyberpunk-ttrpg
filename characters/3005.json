@@ -191,8 +191,9 @@
       "value": 2
     }
   ],
-  "hitsCount": 2,
+  "hitsCount": 3,
   "hits": [
+    false,
     false,
     false
   ],
@@ -231,7 +232,7 @@
   ],
   "flaw1": "Family ties (Camorra)",
   "flaw2": "Infamous",
-  "stuntPoints": 1,
+  "stuntPoints": 3,
   "drive": {
     "text": "Values vengeance against the corps. He wants to start a revolution.",
     "pips": [
