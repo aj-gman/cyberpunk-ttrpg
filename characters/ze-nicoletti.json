@@ -49,7 +49,7 @@
   "inventory": {
     "container": "jacket",
     "misc": {
-      "enabled": true,
+      "enabled": false,
       "value": 1
     },
     "items": [
@@ -77,7 +77,7 @@
     false
   ],
   "trackers": {
-    "cyberpsy": 0,
+    "cyberpsy": 1,
     "humanity": 10
   },
   "conditions": {
@@ -116,7 +116,7 @@
   ],
   "flaw1": "Obvious Mark",
   "flaw2": "Enemies in low places",
-  "stuntPoints": 2,
+  "stuntPoints": 3,
   "drive": {
     "text": "",
     "pips": [
@@ -132,5 +132,5 @@
       false
     ]
   },
-  "experiencePoints": 4
+  "experiencePoints": 7
 }
