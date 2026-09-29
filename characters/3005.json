@@ -42,6 +42,15 @@
       "edges": [
         "Improvised explosives, Firebrand"
       ]
+    },
+    {
+      "name": "Infiltrator",
+      "triggers": [
+        "Stealthy, Quick, Hide, Alarms, Awareness, Locks, Concealed weapon, Agile, Climb, Traps, Silent takedown, Escape"
+      ],
+      "edges": [
+        "Disguises, Blending in"
+      ]
     }
   ],
   "gear": [
@@ -182,13 +191,25 @@
     false
   ],
   "trackers": {
-    "cyberpsy": 1,
+    "cyberpsy": 0,
     "humanity": 7
   },
   "conditions": {
     "custom": []
   },
   "traumas": [
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
+    {
+      "marked": false,
+      "text": ""
+    },
     {
       "marked": false,
       "text": ""
@@ -220,5 +241,5 @@
       false
     ]
   },
-  "experiencePoints": 8
+  "experiencePoints": 3
 }
