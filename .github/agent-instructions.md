@@ -7,6 +7,10 @@
 - Build output directory: /dist (do not read or edit — it's generated)
 - Do not re-explain this structure in responses unless it has changed.
 
+## Content ownership (creative)
+- Do not modify user-facing creative content — prose, lore, notes, character sheets/data, names, flavor text, artwork, or any other authored material — unless explicitly asked to.
+- If you have a suggestion touching such content, propose it and ask first. Never implement creative/content changes unprompted, whether in source notes or generated output.
+
 ## Context scope
 - Never read dist/, node_modules/, .vercel/, or .cache/ — these are generated/dependency folders.
 - Never scan the full /src directory unless the task explicitly requires it (e.g. bulk find/replace across notes, site-wide tag audit). For single-note edits, only open the specific file mentioned.

@@ -750,7 +750,7 @@
     <div class="nco-logo">
       <span><span class="logo-neon">NIGHT </span><span class="logo-city">CITY</span></span>
       <span class="logo-over">OVERDRIVE</span>
-      <span class="logo-version">v1.2.1.0</span>
+      <span class="logo-version">v1.2.1.1</span>
     </div>
     <span style="color:#444;font-size:20px;">|</span>
     <span style="color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:1px;">Character Sheet</span>
@@ -1074,9 +1074,13 @@
 
     const controls = document.createElement('div');
     controls.className = 'gear-item-actions';
+    // Inventory rows: X returns the item to Gear (Stashed) so it can never be
+    // destroyed from the Jacket/Carryall by mistake. Stash rows: X deletes
+    // (after a confirm). The gear-move-btn arrow always moves the row between
+    // the two lists and is what refreshGearMoveButtons/setGearBlockList target.
     controls.innerHTML =
-      '<button class="btn btn-danger btn-small" type="button" onclick="event.stopPropagation(); removeGear(' + id + ')">&#10005;</button>' +
-      '<button class="btn btn-move btn-small" type="button" title="' + (isInventory ? 'Move back to Gear (Stashed)' : 'Move to Inventory') + '" onclick="event.stopPropagation(); moveGearItem(this)">' + (isInventory ? '&#8592;' : '&#8594;') + '</button>';
+      '<button class="btn btn-danger btn-small" type="button" title="' + (isInventory ? 'Return to Gear (Stashed)' : 'Delete gear') + '" onclick="event.stopPropagation(); ' + (isInventory ? 'returnGearToStash(this)' : 'removeGear(' + id + ')') + '">&#10005;</button>' +
+      '<button class="btn btn-move btn-small gear-move-btn" type="button" title="' + (isInventory ? 'Move back to Gear (Stashed)' : 'Move to Inventory') + '" onclick="event.stopPropagation(); moveGearItem(this)">' + (isInventory ? '&#8592;' : '&#8594;') + '</button>';
 
     header.innerHTML =
       '<span class="gear-drag-handle" title="Drag to reorder" aria-hidden="true">&#10303;</span>' +
@@ -1130,7 +1134,11 @@
 
   function removeGear(id) {
     const el = document.getElementById('gear-block-' + id);
-    if (el) el.remove();
+    if (!el) return;
+    const titleEl = el.querySelector('.gear-title');
+    const name = titleEl && titleEl.value.trim() ? titleEl.value.trim() : 'this gear item';
+    if (!window.confirm('Delete "' + name + '" from Gear (Stashed)?')) return;
+    el.remove();
     updateInventoryCounts();
   }
 
@@ -1272,6 +1280,23 @@
     return used;
   }
 
+  var INVENTORY_WARNING_TEXT = '\u26A0 OVERENCUMBERED';
+  var invFlashTimer = null;
+
+  // Briefly show a one-off message in the inventory warning banner (e.g. a
+  // rejected move), then fall back to the persistent over-capacity state.
+  function flashInvWarning(msg) {
+    var warning = document.getElementById('inv-warning');
+    if (!warning) return;
+    if (invFlashTimer) clearTimeout(invFlashTimer);
+    warning.textContent = msg;
+    warning.classList.add('visible');
+    invFlashTimer = setTimeout(function () {
+      invFlashTimer = null;
+      updateInventoryCounts();
+    }, 1500);
+  }
+
   function updateInventoryCounts() {
     var used = getInvUsed();
     var total = getInvTotal();
@@ -1283,7 +1308,10 @@
     if (usedEl) usedEl.textContent = used;
     if (totalEl) totalEl.textContent = total;
     if (counter) counter.classList.toggle('over', over);
-    if (warning) warning.classList.toggle('visible', over);
+    if (warning) {
+      if (!invFlashTimer) warning.textContent = INVENTORY_WARNING_TEXT;
+      warning.classList.toggle('visible', over || !!invFlashTimer);
+    }
     refreshGearMoveButtons(used, total);
   }
 
@@ -1319,14 +1347,16 @@
     if (!toggle || !input) return;
     var on = !toggle.classList.contains('misc-on');
     toggle.classList.toggle('misc-on', on);
-    // The value itself is kept while hidden, so re-enabling restores it.
+    // The value itself is kept while hidden, so re-enabling restores it — and
+    // re-clamping here keeps the field and getInvMiscValue() in agreement.
     input.style.display = on ? '' : 'none';
+    input.value = getInvMiscValue();
     updateInventoryCounts();
   }
 
   function onInvMiscInput(input) {
     var v = parseInt(input.value, 10);
-    if (isNaN(v)) return;
+    if (isNaN(v)) v = 1;
     input.value = Math.max(1, Math.min(5, v));
     updateInventoryCounts();
   }
@@ -1340,9 +1370,21 @@
     var target = document.getElementById(inInventory ? 'gear-container' : 'inventory-container');
     if (!target) return;
     if (!inInventory && getInvUsed() + getGearSize(block) > getInvTotal()) {
+      flashInvWarning('\u26A0 NOT ENOUGH SLOTS (needs ' + getGearSize(block) + ')');
       updateInventoryCounts();
       return;
     }
+    setGearBlockList(block, target);
+    updateInventoryCounts();
+  }
+
+  // The Inventory's X: instead of destroying the row, send it back to Gear
+  // (Stashed) so an item can never be lost by accident from the Jacket/Carryall.
+  function returnGearToStash(btn) {
+    var block = btn.closest('.gear-block');
+    if (!block) return;
+    var target = document.getElementById('gear-container');
+    if (!target) return;
     setGearBlockList(block, target);
     updateInventoryCounts();
   }
