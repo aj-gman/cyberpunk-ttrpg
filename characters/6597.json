@@ -4,8 +4,8 @@
   "nickname": "Hex",
   "appearance": "Tall muscular, orange pink mohawk",
   "personality": "",
-  "money": 5550,
-  "eddies": 5550,
+  "money": 4450,
+  "eddies": 4450,
   "trademarks": [
     {
       "name": "Prodigal Son",
@@ -13,7 +13,7 @@
         "Educated, Corpo Politics, Militech Connections, institutional wealth, "
       ],
       "edges": [
-        "Education"
+        "Education, Militech Connections "
       ]
     },
     {
@@ -182,13 +182,13 @@
   ],
   "hitsCount": 4,
   "hits": [
-    true,
-    true,
-    true,
+    false,
+    false,
+    false,
     false
   ],
   "trackers": {
-    "cyberpsy": 10,
+    "cyberpsy": 5,
     "humanity": 6
   },
   "conditions": {
@@ -198,10 +198,6 @@
     {
       "marked": false,
       "text": "withdrawl"
-    },
-    {
-      "marked": false,
-      "text": "muscle spasms "
     }
   ],
   "flaws": [
@@ -214,7 +210,7 @@
   ],
   "flaw1": "Exile",
   "flaw2": "Arrogant",
-  "stuntPoints": 0,
+  "stuntPoints": 2,
   "drive": {
     "text": "A desire to be free.",
     "pips": [
@@ -230,5 +226,5 @@
       false
     ]
   },
-  "experiencePoints": 11
+  "experiencePoints": 9
 }
