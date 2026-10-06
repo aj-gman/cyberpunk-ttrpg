@@ -8,14 +8,23 @@
   "eddies": 0,
   "trademarks": [
     {
-      "name": "",
+      "name": "Cultured Background",
       "triggers": [],
-      "edges": []
+      "edges": [
+        "Refined",
+        "Educated",
+        "Strong Principles",
+        "Detached"
+      ]
     },
     {
-      "name": "",
+      "name": "Corporate Negotiator",
       "triggers": [],
-      "edges": []
+      "edges": [
+        "Jack of all trades",
+        "Incite stress",
+        "War within"
+      ]
     },
     {
       "name": "",
@@ -79,7 +88,7 @@
   "flaw2": "",
   "stuntPoints": 0,
   "drive": {
-    "text": "",
+    "text": "Raised as the younger brother of a diplomat family, John Michael Yang-Zho did everything right, except be born first.\n\nEventually, however, his older brother died in a shooting with some Yakuza. Yang-Zho took up the mantle of household leader, ascended and joined Arasaka.\n\nTen years later, he's negotiated Arasaka into having the lion's share of Night City profits. He participates at all of the banquets. He donates to all of the starving children in Africa.",
     "pips": [
       false,
       false,
