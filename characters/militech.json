@@ -8,14 +8,22 @@
   "eddies": 0,
   "trademarks": [
     {
-      "name": "",
+      "name": "Corporate Lawyer",
       "triggers": [],
-      "edges": []
+      "edges": [
+        "Tactful Negotiation",
+        "Identifying Problems",
+        "Mediating Conflict"
+      ]
     },
     {
-      "name": "",
+      "name": "Militech Representative",
       "triggers": [],
-      "edges": []
+      "edges": [
+        "Harsh Deals",
+        "Intimidation",
+        "Double or Nothing"
+      ]
     },
     {
       "name": "",
@@ -79,7 +87,7 @@
   "flaw2": "",
   "stuntPoints": 0,
   "drive": {
-    "text": "",
+    "text": "Corporate Lawyer. Ex-Merill, Asukaga & Finch. \n\nHigh profile cases like the presumed hiring of death squads by Petrochem in South Africa to intimidate SovOil after the 2CW.\n\nCurrently single. Joined Militech once his ME&F contract expired as an advisor on *sensitive* matters, around 5 years ago.",
     "pips": [
       false,
       false,
