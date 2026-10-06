@@ -4,8 +4,8 @@
   "nickname": "Ray Null",
   "appearance": "Latin complexion, Bohemian clothing style, long and ratty hair. His outfit consists of the Nolasco Family gang colors. He has ritual scars on the inside of his palms - the mark that he is able to pilot a vehicle while wounded.",
   "personality": "Rebellious, antisocial, violent. He uses people for his goals, but is loyal to the end for his proven friends.",
-  "money": 2338,
-  "eddies": 2338,
+  "money": 198,
+  "eddies": 198,
   "trademarks": [
     {
       "name": "Nomad",
@@ -95,6 +95,13 @@
       "tags": "",
       "notes": "Black and red tracksuit.",
       "size": 1
+    },
+    {
+      "type": "basic",
+      "title": "Businesswear Outfit",
+      "tags": "",
+      "notes": "Black suit with red motifs. Neomilitarist.",
+      "size": 1
     }
   ],
   "inventory": {
@@ -150,7 +157,7 @@
     },
     {
       "title": "IEC Language Archiver",
-      "tags": "French, North Italian, German, Swedish, Russian (Fluent, Default)",
+      "tags": "French, North Italian, German, Swedish, Russian, Street Japanese (Fluent, Default)",
       "notes": "Speak foreign languages using language chips. ",
       "value": 2
     },
@@ -198,7 +205,7 @@
     false
   ],
   "trackers": {
-    "cyberpsy": 1,
+    "cyberpsy": 2,
     "humanity": 7
   },
   "conditions": {
@@ -232,7 +239,7 @@
   ],
   "flaw1": "Family ties (Camorra)",
   "flaw2": "Infamous",
-  "stuntPoints": 3,
+  "stuntPoints": 2,
   "drive": {
     "text": "Values vengeance against the corps. He wants to start a revolution.",
     "pips": [
@@ -248,5 +255,5 @@
       false
     ]
   },
-  "experiencePoints": 1
+  "experiencePoints": 4
 }
