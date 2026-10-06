@@ -8,14 +8,22 @@
   "eddies": 0,
   "trademarks": [
     {
-      "name": "",
+      "name": "Self-made Woman",
       "triggers": [],
-      "edges": []
+      "edges": [
+        "Ignore and Deject",
+        "Rise and Grind",
+        "Analyze and Calculate"
+      ]
     },
     {
-      "name": "",
+      "name": "Sound Investor",
       "triggers": [],
-      "edges": []
+      "edges": [
+        "Careful & Planned",
+        "Educated",
+        "High Risk, High Reward"
+      ]
     },
     {
       "name": "",
@@ -79,7 +87,7 @@
   "flaw2": "",
   "stuntPoints": 0,
   "drive": {
-    "text": "",
+    "text": "It was hard to get to where you are. You had to do everything by yourself. You were born in a lowly Beaverville for some small-time European corp. Your parents were content with that lifestyle. You weren't.\n\nSchool wasn't going to help you. You joined up with the UN, then with the EEC, then eventually ended up at the bottom level of a megacorp. Then, you began your rise to the top. Ten years ago, you became Eurobank's securities investor. They send you somewhere and you come out bearing shares, profits and more.",
     "pips": [
       false,
       false,
