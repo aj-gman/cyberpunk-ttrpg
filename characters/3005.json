@@ -31,7 +31,7 @@
         "Quick draw, Targeter, Steel-eyed stare, Dodge, Flashy tricks, Sneak, Athletic, Endurance, Chase, Intimidate, Awareness, Disarm, Subdue, Resistance to drugs"
       ],
       "edges": [
-        "AR's, Grenades, Cover tactics"
+        "AR's, Grenades, Cover tactics, Tactical movement"
       ]
     },
     {
@@ -248,5 +248,5 @@
       false
     ]
   },
-  "experiencePoints": 6
+  "experiencePoints": 1
 }
