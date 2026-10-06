@@ -44,6 +44,13 @@
       "tags": "",
       "notes": "",
       "size": 1
+    },
+    {
+      "type": "basic",
+      "title": "$1 million",
+      "tags": "",
+      "notes": "Basically Fuck You money",
+      "size": 1
     }
   ],
   "inventory": {
@@ -77,7 +84,7 @@
     false
   ],
   "trackers": {
-    "cyberpsy": 1,
+    "cyberpsy": 0,
     "humanity": 10
   },
   "conditions": {
@@ -116,7 +123,7 @@
   ],
   "flaw1": "Obvious Mark",
   "flaw2": "Enemies in low places",
-  "stuntPoints": 3,
+  "stuntPoints": 1,
   "drive": {
     "text": "",
     "pips": [
@@ -132,5 +139,5 @@
       false
     ]
   },
-  "experiencePoints": 7
+  "experiencePoints": 10
 }
